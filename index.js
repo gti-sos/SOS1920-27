@@ -15,4 +15,4 @@ app.get("/cool", (request, response) => {
 
 app.listen(port, () => {
     console.log("Servidor listo ",cool())
-});
+})
