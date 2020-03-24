@@ -2,8 +2,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 var app = express();
-
+//para la pagina inicio
 app.use(bodyParser.json());
+app.use("/",express.static("./public"));
 
 var port = process.env.PORT || 80;
 
@@ -613,6 +614,6 @@ app.delete(BASE_API_URL+"/poverty-stats/:country", (req, res)=>{
 app.listen(port, () => {
 	console.log("Server ready");
 });
-
-//Inicio server
+//aaaaaa
+//Inicio serv
 console.log("Starting server...");
