@@ -13,4 +13,4 @@
     - [https://sos1920-00.herokuapp.com/api/v1/my-awesome-resource-1/docs](https://sos1920-00.herokuapp.com/api/v1/my-awesome-resource-1/docs) (developed by [José Manuel Pérez Álvarez](https://github.com/JMPere))
 
 - **URLs**
-    -[https://documenter.getpostman.com/view/10794870/SzYT52HL?version=latest](spc-rate) (developed by [Belén Domínguez Domínguez](https://github.com/sensatte))
+    -[spc-rate](https://documenter.getpostman.com/view/10794870/SzYT52HL?version=latest) (developed by [Belén Domínguez Domínguez](https://github.com/sensatte))
