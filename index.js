@@ -7,181 +7,210 @@ app.use(bodyParser.json());
 
 var port = process.env.PORT || 80;
 
-var spc_stats = [
-	{ 
-		country: "guyana",
-		both_sex: 30.2,
-		male_rank: 3,
-		male_number: 46.6,
-		female_rank: 5,
-		female_number: 14.2,
-		ratio: 3.28,
-		year: 2013,
-		continent: "south america"	
-	},
-	{ 
-		country: "lesotho",
-		both_sex: 28.9,
-		male_rank: 25,
-		male_number: 22.7,
-		female_rank: 1,
-		female_number: 32.6,
-		ratio: 0.7,
-		year: 2013,
-		continent: "africa"	
-	},
-	{ 
-		country: "russia",
-		both_sex: 26.5,
-		male_rank: 1,
-		male_number: 48.3,
-		female_rank: 31,
-		female_number: 7.5,
-		ratio: 6.44,
-		year: 2013,
-		continent: "europe"	
-	},
-	{ 
-		country: "lithuania",
-		both_sex: 25.7,
-		male_rank: 2,
-		male_number: 47.5,
-		female_rank: 37,
-		female_number: 6.7,
-		ratio: 7.09,
-		year: 2013,
-		continent: "europe"	
-	},
-	{ 
-		country: "suriname",
-		both_sex: 23.2,
-		male_rank: 6,
-		male_number: 36.1,
-		female_rank: 13,
-		female_number: 10.9,
-		ratio: 3.31,
-		year: 2013,
-		continent: "south america"	
-	}
-];
-
-var lq_stats = [
-	{ 
-		rank: 1,
-		country: "australia",
-		stability: 90,
-		right: 100,
-		health: 87,
-		security: 97,
-		climate: 90,
-		costs: 24,
-		popularity: 69,
-		total: 80,
-		year: 2016,
-		continent: "oceania"
-	},
-	{ 
-		rank: 2,
-		country: "macao",
-		stability: 93,
-		right: 73,
-		health: 80,
-		security: 100,
-		climate: 49,
-		costs: 68,
-		popularity: 92,
-		total: 79,
-		year: 2016,
-		continent: "africa"	
-	},
-	{ 
-		rank: 3,
-		country: "hong kong",
-		stability: 86,
-		right: 94,
-		health: 77,
-		security: 100,
-		climate: 58,
-		costs: 44,
-		popularity: 85,
-		total: 77,
-		year: 2016,
-		continent: "asia"
-	},
-	{ 
-		rank: 4,
-		country: "portugal",
-		stability: 85,
-		right: 86,
-		health: 82,
-		security: 100,
-		climate: 70,
-		costs: 47,
-		popularity: 63,
-		total: 77,
-		year: 2016,
-		continent: "europe"
-	},
-	{ 
-		rank: 5,
-		country: "malta",
-		stability: 89,
-		right: 83,
-		health: 93,
-		security: 99,
-		climate: 78,
-		costs: 36,
-		popularity: 45,
-		total: 77,
-		year: 2016,
-		continent: "europe"
-	}
-];
-
-var poverty_stats = [   
-	{ 
-	    country:"albania",
-		under_190: 0.011,
-		under_320:0.077,
-		under_550:0.391,
-		year:2012,
-		content:"europe"
-	},
-	{ 
-		country:"algeria",
-		under_190: 0.005,
-		under_320:0.039,
-		under_550:0.292,
-		year:2011,
-		content:"africa"	
-	},
-	{ 
-		country:"angola",
-		under_190: 0.301,
-		under_320:0.557,
-		under_550:0.794,
-		year:2008,
-		content:"africa"	
-	},
-	{ 
-		country:"argentina",
-		under_190: 0.004,
-		under_320:0.02,
-		under_550:0.071,
-		year:2017,
-		content:"south america"	
-	},
-	{ 
-		country:"armenia",
-		under_190: 0.014,
-		under_320:0.123,
-		under_550:0.5,
-		year:2017,
-		content:"europe"	
-	}
-];
+spc_stats = [];
+lq_stats = [];
+poverty_stats = [];
 
 const BASE_API_URL = "/api/v1";
+
+// --------------- LOAD INITIAL DATA
+	// SUICIDE
+
+		app.get(BASE_API_URL+"/spc-stats/loadInitialData",(req,res) =>{
+			var ejemplos_spc = [
+				{ 
+					country: "guyana",
+					both_sex: 30.2,
+					male_rank: 3,
+					male_number: 46.6,
+					female_rank: 5,
+					female_number: 14.2,
+					ratio: 3.28,
+					year: 2013,
+					continent: "south america"	
+				},
+				{ 
+					country: "lesotho",
+					both_sex: 28.9,
+					male_rank: 25,
+					male_number: 22.7,
+					female_rank: 1,
+					female_number: 32.6,
+					ratio: 0.7,
+					year: 2013,
+					continent: "africa"	
+				},
+				{ 
+					country: "russia",
+					both_sex: 26.5,
+					male_rank: 1,
+					male_number: 48.3,
+					female_rank: 31,
+					female_number: 7.5,
+					ratio: 6.44,
+					year: 2013,
+					continent: "europe"	
+				},
+				{ 
+					country: "lithuania",
+					both_sex: 25.7,
+					male_rank: 2,
+					male_number: 47.5,
+					female_rank: 37,
+					female_number: 6.7,
+					ratio: 7.09,
+					year: 2013,
+					continent: "europe"	
+				},
+				{ 
+					country: "suriname",
+					both_sex: 23.2,
+					male_rank: 6,
+					male_number: 36.1,
+					female_rank: 13,
+					female_number: 10.9,
+					ratio: 3.31,
+					year: 2013,
+					continent: "south america"	
+				}
+			];
+
+			spc_stats = ejemplos_spc;
+			res.send(JSON.stringify(spc_stats,null,2));
+			res.sendStatus(201,"DATA CREATED");
+		});
+
+// LQ-STATS
+
+		app.get(BASE_API_URL+"/lq-stats/loadInitialData",(req,res) =>{
+			var ejemplos_lq = [
+				{ 
+					rank: 1,
+					country: "australia",
+					stability: 90,
+					right: 100,
+					health: 87,
+					security: 97,
+					climate: 90,
+					costs: 24,
+					popularity: 69,
+					total: 80,
+					year: 2016,
+					continent: "oceania"
+				},
+				{ 
+					rank: 2,
+					country: "macao",
+					stability: 93,
+					right: 73,
+					health: 80,
+					security: 100,
+					climate: 49,
+					costs: 68,
+					popularity: 92,
+					total: 79,
+					year: 2016,
+					continent: "africa"	
+				},
+				{ 
+					rank: 3,
+					country: "hong kong",
+					stability: 86,
+					right: 94,
+					health: 77,
+					security: 100,
+					climate: 58,
+					costs: 44,
+					popularity: 85,
+					total: 77,
+					year: 2016,
+					continent: "asia"
+				},
+				{ 
+					rank: 4,
+					country: "portugal",
+					stability: 85,
+					right: 86,
+					health: 82,
+					security: 100,
+					climate: 70,
+					costs: 47,
+					popularity: 63,
+					total: 77,
+					year: 2016,
+					continent: "europe"
+				},
+				{ 
+					rank: 5,
+					country: "malta",
+					stability: 89,
+					right: 83,
+					health: 93,
+					security: 99,
+					climate: 78,
+					costs: 36,
+					popularity: 45,
+					total: 77,
+					year: 2016,
+					continent: "europe"
+				}
+			];
+
+			lq_stats = ejemplos_lq;
+			res.send(JSON.stringify(lq_stats,null,2));
+			res.sendStatus(201,"DATA CREATED");
+		});
+
+// POVERTY
+
+		app.get(BASE_API_URL+"/poverty-stats/loadInitialData",(req,res) =>{
+			var ejemplos_poverty = [   
+				{ 
+					country:"albania",
+					under_190: 0.011,
+					under_320:0.077,
+					under_550:0.391,
+					year:2012,
+					content:"europe"
+				},
+				{ 
+					country:"algeria",
+					under_190: 0.005,
+					under_320:0.039,
+					under_550:0.292,
+					year:2011,
+					content:"africa"	
+				},
+				{ 
+					country:"angola",
+					under_190: 0.301,
+					under_320:0.557,
+					under_550:0.794,
+					year:2008,
+					content:"africa"	
+				},
+				{ 
+					country:"argentina",
+					under_190: 0.004,
+					under_320:0.02,
+					under_550:0.071,
+					year:2017,
+					content:"south america"	
+				},
+				{ 
+					country:"armenia",
+					under_190: 0.014,
+					under_320:0.123,
+					under_550:0.5,
+					year:2017,
+					content:"europe"	
+				}
+			];
+
+			poverty_stats = ejemplos_poverty;
+			res.send(JSON.stringify(poverty_stats,null,2));
+			res.sendStatus(201,"DATA CREATED");
+		});
 
 
 // ---------------SUICIDE
