@@ -509,6 +509,7 @@ app.delete(BASE_API_URL+"/poverty-stats",(req, res)=>{
 	var poverty_stats_empty=[];
 	poverty_stats=poverty_stats_empty;
 	console.log("Data poverty_stats empty");
+	res.sendStatus(200);
 });
 
 //GET /poverty_stats/country
