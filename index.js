@@ -18,7 +18,7 @@ const BASE_API_URL = "/api/v1";
 
 		app.get(BASE_API_URL+"/spc-stats/loadInitialData",(req,res) =>{
 			var ejemplos_spc = [
-				{ 
+				{
 					country: "guyana",
 					both_sex: 30.2,
 					male_rank: 3,
