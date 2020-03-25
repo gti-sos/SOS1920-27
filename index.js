@@ -2,8 +2,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 var app = express();
-
+//para la pagina inicio
 app.use(bodyParser.json());
+app.use("/",express.static("./public"));
 
 var port = process.env.PORT || 80;
 
@@ -248,6 +249,7 @@ const BASE_API_URL = "/api/v1";
     
     	spc_stats = [];
     	console.log("spc_stats empty");
+		res.sendStatus(200,"OK");
 
     });
     
@@ -349,7 +351,16 @@ const BASE_API_URL = "/api/v1";
     		res.sendStatus(404,"SUICIDE NOT FOUND");
     	}
     });
-    
+
+	//No permitidos
+	
+     app.post(BASE_API_URL+"/spc-stats/:country",(req,res) =>{
+    	res.sendStatus(405,"Method Not Allowed");
+    });
+
+	app.put(BASE_API_URL+"/spc-stats", (req, res)=>{
+		res.sendStatus(405,"Method Not Allowed");
+	});
 // ---------------LIFE_QUALITY
 
     // GET LIFE_QUALITY
@@ -386,6 +397,7 @@ const BASE_API_URL = "/api/v1";
     
     	lq_stats = [];
     	console.log("lq-stats empty");
+		res.sendStatus(200,"OK");
 
     });
 
@@ -602,5 +614,6 @@ app.delete(BASE_API_URL+"/poverty-stats/:country", (req, res)=>{
 app.listen(port, () => {
 	console.log("Server ready");
 });
-
+//aaaaaa
+//Inicio serv
 console.log("Starting server...");
