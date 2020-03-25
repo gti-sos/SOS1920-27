@@ -115,7 +115,7 @@ const BASE_API_URL = "/api/v1";
 				},
 				{ 
 					rank: 3,
-					country: "hong kong",
+					country: "hongkong",
 					stability: 86,
 					right: 94,
 					health: 77,
@@ -375,7 +375,7 @@ const BASE_API_URL = "/api/v1";
     		return ((c.country == newLQ.country) && (c.year == newLQ.year));
     	});
     	
-    	if((newLQ == "") || (newLQ.country == null) ||(newLQ.year == null)){
+    	if((newLQ === "") || (newLQ.country === null) ||(newLQ.year === null)){
     		res.sendStatus(400,"BAD REQUEST");
     	} else if(filteredLQ.length > 0){
     	    res.sendStatus(409,"This data already exits");
@@ -448,7 +448,7 @@ const BASE_API_URL = "/api/v1";
         }else{
                  var newLQ = req.body;
                     
-                if((newLQ == "") || (newLQ.country == null) || (newLQ.year == null)){
+                if((newLQ === "") || (newLQ.country === null) || (newLQ.year === null)){
                 	res.sendStatus(400,"BAD REQUEST");
                 } else {
 					lq_stats = filteredLq_stats;
@@ -497,6 +497,17 @@ const BASE_API_URL = "/api/v1";
     		res.sendStatus(404,"LIFE-QUALITY NOT FOUND");
     	}
     });
+
+
+	// Métodos no permitidos
+
+     app.post(BASE_API_URL+"/lq-stats/:country",(req,res) =>{
+    	res.sendStatus(405,"Method Not Allowed");
+    });
+
+	app.put(BASE_API_URL+"/lq-stats", (req, res)=>{
+		res.sendStatus(405,"Method Not Allowed");
+	});
 
 
 // ---------------POVERTY
