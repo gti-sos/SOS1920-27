@@ -497,6 +497,14 @@ const BASE_API_URL = "/api/v1";
     		res.sendStatus(404,"LIFE-QUALITY NOT FOUND");
     	}
     });
+	//No permitidos
+	
+     app.post(BASE_API_URL+"/lq-stats/:country",(req,res) =>{
+    	res.sendStatus(405,"Method Not Allowed");
+    });
+
+	app.put(BASE_API_URL+"/lq-stats", (req, res)=>{
+		res.sendStatus(405,"Method Not Allowed");
 
 
 // ---------------POVERTY
