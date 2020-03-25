@@ -115,7 +115,7 @@ const BASE_API_URL = "/api/v1";
 				},
 				{ 
 					rank: 3,
-					country: "hong kong",
+					country: "hongkong",
 					stability: 86,
 					right: 94,
 					health: 77,
