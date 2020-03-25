@@ -183,12 +183,7 @@ const BASE_API_URL = "/api/v1";
 					content:"africa"	
 				},
 				{ 
-					country:"angola",
-					under_190: 0.301,
-					under_320:0.557,
-					under_550:0.794,
-					year:2008,
-					content:"africa"	
+						
 				},
 				{ 
 					country:"argentina",
@@ -305,6 +300,7 @@ const BASE_API_URL = "/api/v1";
                     if((newSuicide == "") || (newSuicide.country == null) || (newSuicide.year == null)){
                 		res.sendStatus(400,"BAD REQUEST");
                 	} else {
+						spc_stats = filteredSpc_stats;
                 		spc_stats.push(newSuicide); 	
                 		res.sendStatus(201,"CREATED");
                 	}
@@ -455,6 +451,7 @@ const BASE_API_URL = "/api/v1";
                 if((newLQ == "") || (newLQ.country == null) || (newLQ.year == null)){
                 	res.sendStatus(400,"BAD REQUEST");
                 } else {
+					lq_stats = filteredLq_stats;
                 	lq_stats.push(newLQ); 	
                 	res.sendStatus(201,"CREATED");
                 }
@@ -516,7 +513,12 @@ app.post(BASE_API_URL+"/poverty-stats", (req, res)=>{
 	res.sendStatus(201, "CREATED");
 });
 
-//DELETE //poverty_stats
+//PUT /poverty_stats
+app.put(BASE_API_URL+"/poverty-stats",(req, res)=>{
+	res.sendStatus(405, "METHOD NOT ALLOWED");
+})
+
+//DELETE /poverty_stats
 app.delete(BASE_API_URL+"/poverty-stats",(req, res)=>{
 	var poverty_stats_empty=[];
 	poverty_stats=poverty_stats_empty;
@@ -558,11 +560,12 @@ app.get(BASE_API_URL+"/poverty-stats/:country/:year", (req, res)=>{
 //PUT /poverty_stats/country
  app.put(BASE_API_URL+"/poverty-stats/:country/:year", (req, res)=>{
         var country = req.params.country;
+	 	var year = req.params.year;
         var filtered_poverty_stats = poverty_stats.filter((c)=>{
             return ((c.country != country)&&(c.year!=year));
         })
         
-        if(filteredpoverty_stats.length == poverty_stats.length){
+        if(filtered_poverty_stats.length == poverty_stats.length){
             res.sendStatus(404,"POVERTY NOT FOUND");
         }else{
                 var newResource = req.body;
@@ -570,12 +573,17 @@ app.get(BASE_API_URL+"/poverty-stats/:country/:year", (req, res)=>{
                 if((newResource == "") || (newResource.country == null)){
             		res.sendStatus(400,"BAD REQUEST");
             	} else {
-            		poverty_stats.push(newResource); 	
+					poverty_stats = filtered_poverty_stats;
+            		poverty_stats.push(newResource);
             		res.sendStatus(201,"CREATED");
             	}
         }
     });
 
+//POST /poverty_stats/country (ERROR)
+app.post(BASE_API_URL+"/poverty-stats/:country", (req, res)=>{
+	res.sendStatus(405,"METHOD NOT ALLOWED");
+})
 
 //DELETE /poverty_stats/country/year
 app.delete(BASE_API_URL+"/poverty-stats/:country/:year", (req, res)=>{
