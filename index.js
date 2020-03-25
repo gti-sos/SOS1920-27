@@ -4,7 +4,7 @@ asd
 
 var app = express();
 //para la pagina inicio
-app.use(bodyParser.json());
+
 app.use("/",express.static("./public"));
 
 var port = process.env.PORT || 80;
