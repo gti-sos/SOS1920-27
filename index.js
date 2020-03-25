@@ -562,7 +562,7 @@ app.get(BASE_API_URL+"/poverty-stats/:country/:year", (req, res)=>{
         var country = req.params.country;
 	 	var year = req.params.year;
         var filtered_poverty_stats = poverty_stats.filter((c)=>{
-            return ((c.country != country)&&(c.year!=year));
+            return ((c.country != country) || (c.year!=year));
         })
         
         if(filtered_poverty_stats.length == poverty_stats.length){
@@ -591,7 +591,7 @@ app.delete(BASE_API_URL+"/poverty-stats/:country/:year", (req, res)=>{
 	var year = req.params.year;
 	
 	var filtered_poverty_stats = poverty_stats.filter((c)=>{
-		return ((c.country != country)&&(c.year != year));
+		return ((c.country != country ) || (c.year != year));
 	});
 	
 	if(filtered_poverty_stats.length==poverty_stats.length){
