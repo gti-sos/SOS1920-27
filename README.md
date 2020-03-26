@@ -12,4 +12,9 @@
 	- [poverty-rate](https://documenter.getpostman.com/view/10838721/SzYT5MmE?version=latest#569d199a-a751-485e-b15f-e77f5152e448)((developed by [José Manuel Pérez Álvarez](https://github.com/JMPere)))	
     - [lq-stats](https://documenter.getpostman.com/view/10696673/SzYT5hPv) (developed by [Juan Luis Aguilera Rivero](https://github.com/juanluidos))
 
+-  **Documentación Postman**:
+    - [spc-rate](https://documenter.getpostman.com/view/10794870/SzYT52HL?version=latest) (developed by [Belén Domínguez Domínguez](https://github.com/sensatte))
+	- [poverty-rate](https://documenter.getpostman.com/view/10838721/SzYT5MmE?version=latest#569d199a-a751-485e-b15f-e77f5152e448)((developed by [José Manuel Pérez Álvarez](https://github.com/JMPere)))	
+    - [lq-stats](https://documenter.getpostman.com/view/10696673/SzYT5hPv) (developed by [Juan Luis Aguilera Rivero](https://github.com/juanluidos))
+
 	
