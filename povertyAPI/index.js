@@ -14,64 +14,68 @@ module.exports = function (app) {
                 autoload: true
                 });
     
-    var poverty_stats = [];
+    var poverty_statsInit = [   
+		{ 
+			country:"albania",
+			under_190: 0.011,
+			under_320:0.077,
+			under_550:0.391,
+			year:2012,
+			content:"europe"
+		},
+		{ 
+			country:"algeria",
+			under_190: 0.005,
+			under_320:0.039,
+			under_550:0.292,
+			year:2011,
+			content:"africa"	
+		},
+		{ 
+				
+		},
+		{ 
+			country:"argentina",
+			under_190: 0.004,
+			under_320:0.02,
+			under_550:0.071,
+			year:2017,
+			content:"south america"	
+		},
+		{ 
+			country:"armenia",
+			under_190: 0.014,
+			under_320:0.123,
+			under_550:0.5,
+			year:2017,
+			content:"europe"	
+		}
+	];
 
 
     //LOADINITIALDATA
     app.get(BASE_API_URL+"/poverty-stats/loadInitialData",(req,res) =>{
-			var ejemplos_poverty = [   
-				{ 
-					country:"albania",
-					under_190: 0.011,
-					under_320:0.077,
-					under_550:0.391,
-					year:2012,
-					content:"europe"
-				},
-				{ 
-					country:"algeria",
-					under_190: 0.005,
-					under_320:0.039,
-					under_550:0.292,
-					year:2011,
-					content:"africa"	
-				},
-				{ 
-						
-				},
-				{ 
-					country:"argentina",
-					under_190: 0.004,
-					under_320:0.02,
-					under_550:0.071,
-					year:2017,
-					content:"south america"	
-				},
-				{ 
-					country:"armenia",
-					under_190: 0.014,
-					under_320:0.123,
-					under_550:0.5,
-					year:2017,
-					content:"europe"	
-				}
-			];
-
-			poverty_stats = ejemplos_poverty;
-			res.send(JSON.stringify(poverty_stats,null,2));
-			res.sendStatus(201,"DATA CREATED");
+			db.remove({},{multi:true}, function (err, doc){});
+			db.insert(poverty_statsInit);
+		//	res.sendStatus(201,"DATA CREATED");
+			res.send(JSON.stringify(poverty_statsInit,null,2));
+			
 		});
 
 
     //GET /poverty_stats
 	app.get(BASE_API_URL+"/poverty-stats", (req,res) =>{
+	
+		db.find({}, (err, poverty_stats)=>{
 			res.send(JSON.stringify(poverty_stats,null,2));
 			console.log("Data sent:"+JSON.stringify(poverty_stats,null,2));
 		});
+	});
 
 	//POST /poverty_stats
 	app.post(BASE_API_URL+"/poverty-stats", (req, res)=>{
-		poverty_stats.push(req.body);
+		//poverty_stats.push(req.body);
+		
 		res.sendStatus(201, "CREATED");
 	});
 
@@ -82,8 +86,7 @@ module.exports = function (app) {
 
 	//DELETE /poverty_stats
 	app.delete(BASE_API_URL+"/poverty-stats",(req, res)=>{
-		var poverty_stats_empty=[];
-		poverty_stats=poverty_stats_empty;
+		db.remove({},{multi:true}, function (err, doc){});
 		console.log("Data poverty_stats empty");
 		res.sendStatus(200);
 	});
