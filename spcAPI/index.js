@@ -85,7 +85,25 @@ module.exports = function (app) {
 		});
 
 
-    // GET SUICIDE	
+	//GET /spc-stats con paginacion
+	app.get(BASE_API_URL+"/spc-stats", (req,res) =>{
+		const limit = req.query.limit;
+		const offset = req.query.offset;
+		const startIndex = (offset - 1)* limit;				//comienzo del primer objeto de la pagina
+		const endIndex = offset * limit;					//ultimo objeto de la pagina
+		
+		var array = db.getAllData()
+		array.forEach( (c) => {delete c._id;}); //borramos id
+
+		if(limit==null || offset == null){
+            res.send(JSON.stringify(array,null,2));
+        }else{
+            res.send(array.slice(startIndex, endIndex));
+        }
+	});
+
+
+/*    // GET SUICIDE	
     app.get(BASE_API_URL+"/spc-stats", (req,res) =>{
 		console.log("New GET .../spc-stats");
 		
@@ -99,7 +117,7 @@ module.exports = function (app) {
             console.log("Data sent:"+JSON.stringify(spc_stats,null,2));
 			
         });
-    });
+    }); */
     
     // POST SUICIDE
     
