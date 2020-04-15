@@ -80,7 +80,7 @@ module.exports = function (app) {
 		console.log("New GET .../loadInitialData");
 		
 		db.insert(ejemplos_spc);
-		res.sendStatus(200);
+		res.send(JSON.stringify(ejemplos_spc,null,2));
         console.log("Initial spc loaded:"+JSON.stringify(ejemplos_spc,null,2));
 		});
 
@@ -137,7 +137,8 @@ module.exports = function (app) {
   		  	} else {
     			db.insert(newSuicide); 	
 				console.log("Data created:"+JSON.stringify(newSuicide,null,2));
-   		 		res.sendStatus(201,"CREATED");
+				newSuicide = "["+newSuicide+"]";
+				res.send(JSON.stringify(newSuicide,null,2));
     	}
         });
     	
@@ -186,19 +187,21 @@ module.exports = function (app) {
     app.get(BASE_API_URL+"/spc-stats/:country/:year", (req,res)=>{
     	console.log("New GET .../spc-stats/:country/:year");
 		var countryparam = req.params.country;
-    	var yearparam = req.params.year;
+		var yearparam = req.params.year;
+		var encontrado = false;
         db.find({country: countryparam}, (err, spc_stats) =>{
             spc_stats.forEach( (c) => {
 				delete c._id;
 				if(c.year==yearparam){
+					encontrado=true;
 					res.send(JSON.stringify(c,null,2));
 					//res.sendStatus(200,"OK");
 					console.log("Data sent:"+JSON.stringify(c,null,2));
-				}else{
-					res.sendStatus(404,"SUICIDE NOT FOUND");
 				}
-
-            });
+			});
+			if (encontrado==false) {
+				res.sendStatus(404,"SUICIDE NOT FOUND");
+			}
 
         });
     	
@@ -254,9 +257,9 @@ module.exports = function (app) {
     	var yearparam = req.params.year;
     	var countryparam = req.params.country;
 		
-		db.remove({country: countryparam, year: countryparam},{multi:true}, function (err, doc){
-		if(doc!=0){
-			res.sendStatus(200,"SUCCESFULLY DELETED");
+		db.remove({country: countryparam}, {year: countryparam}, function (err, doc){
+			if(doc!=0){
+				res.sendStatus(200,"SUCCESFULLY DELETED");
 			}else{
 				res.sendStatus(404,"SUICIDE NOT FOUND");
 			}
