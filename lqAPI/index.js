@@ -106,8 +106,8 @@ module.exports = function (app) {
 	app.get(BASE_API_URL+"/lq-stats", (req,res) =>{
 		console.log("New GET .../lq-stats");
 		
-        db.find({}, (err, spc_stats) =>{
-            spc_stats.forEach( (c) => {
+        db.find({}, (err, lq_stats) =>{
+            lq_stats.forEach( (c) => {
                 delete c._id;
             });
 
