@@ -71,20 +71,36 @@ module.exports = function (app) {
 	//GET /poverty_stats con paginacion
     app.get(BASE_API_URL+"/poverty-stats", (req,res) =>{
         const limit = req.query.limit;
-        const offset = req.query.offset;
+		const offset = req.query.offset;
+		const countryQuery = req.query.country;
+		const yearQuery = req.query.year;
+
         const startIndex = (offset - 1)* limit;                //comienzo del primer objeto de la pagina
-        const endIndex = offset * limit;                    //ultimo objeto de la pagina
+		const endIndex = offset * limit;                    //ultimo objeto de la pagina
+		
 
         db.find({}, (err, poverty_stats) =>{
             poverty_stats.forEach( (c) => {
                 delete c._id;
             });
-
-            if(limit==null || offset == null){
+			//console.log('limit:'+ limit+'\noffset: '+offset+'\ncountry: '+countryQuery+ '\nyear: '+yearQuery);
+            if((limit==null && offset == null) && (yearQuery==null && countryQuery==null)){
                 res.send(JSON.stringify(poverty_stats,null,2));
-            }else{
-                res.send(poverty_stats.slice(startIndex, endIndex));
-            }
+            }else if(yearQuery!=null && countryQuery!=null){
+                db.find({country: countryQuery},(err, array)=>{
+
+
+
+
+					if(array[0].year==yearQuery){
+						res.send(JSON.stringify(array[0],null,2));
+					}else{
+						res.sendStatus(404);
+					}
+				})
+            }else if(limit!=null && offset != null){
+				res.send(JSON.stringify(poverty_stats.slice(startIndex,endIndex),null,2));
+			}
         });
     });
 
@@ -133,13 +149,13 @@ module.exports = function (app) {
 	//GET /poverty_stats/country/year
 	app.get(BASE_API_URL+"/poverty-stats/:country/:year", (req, res)=>{
         var countryparam = req.params.country;
-        var yearparam = req.params.year;
+		var yearparam = req.params.year;
         db.find({country: countryparam},{year: yearparam}, (err, poverty_stats) =>{
 			poverty_stats.forEach((c)=>{
 				delete c._id;
 			})
              if(poverty_stats.length>0){
-				 res.send(JSON.stringify(poverty_stats,null,2));
+				 res.send(JSON.stringify(poverty_stats[0],null,2));
 			 }else{
 				 res.sendStatus(404,"DATA NOT FOUND");
 			 }
