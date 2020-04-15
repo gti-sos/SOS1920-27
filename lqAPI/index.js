@@ -102,8 +102,9 @@ module.exports = function (app) {
 		});
 	
 	
-    // GET LIFE_QUALITY
+    /* GET LIFE_QUALITY
 	app.get(BASE_API_URL+"/lq-stats", (req,res) =>{
+		
 		console.log("New GET .../lq-stats");
 		
         db.find({}, (err, lq_stats) =>{
@@ -116,7 +117,27 @@ module.exports = function (app) {
             console.log("Data sent:"+JSON.stringify(lq_stats,null,2));
 			
         });
-    });
+    });*/
+	
+	//GET /poverty_stats
+	app.get(BASE_API_URL+"/lq-stats", (req,res) =>{
+		const limit = req.query.limit;
+		const offset = req.query.offset;
+		const startIndex = (offset - 1)* limit;		//comienzo del primer objeto de la pagina
+		const endIndex = offset * limit				//ultimo objeto de la pagina
+		
+		var array = db.getAllData();
+		array.forEach((c)=>{
+			console.log(c._id);
+		})
+		if(limit==null || offset == null){
+			res.send(JSON.stringify(array,null,2));
+		}else{
+			res.send(array.slice(startIndex, endIndex));
+		}
+		
+		
+	});
     
 	
     // POST LIFE-QUALITY		
@@ -240,18 +261,27 @@ module.exports = function (app) {
     });
     
     // DELETE LQ/XXX/YYY
-    
-    app.delete(BASE_API_URL+"/lq-stats/:country/:year", (req,res)=>{
-    	var yearparam = req.params.year;
-    	var countryparam = req.params.country;
-		
-		db.remove({country: countryparam, year: countryparam},{multi:true}, function (err, doc){
-		if(doc!=0){
-			res.sendStatus(200,"SUCCESFULLY DELETED");
-			}else{
-				res.sendStatus(404,"LIFE QUALITY NOT FOUND");
-			}
-		});
+    app.get(BASE_API_URL+"/lq-stats/:country/:year", (req,res)=>{
+        console.log("New GET .../lq-stats/:country/:year");
+        var countryparam = req.params.country;
+        var yearparam = req.params.year;
+        var encontrado = false;
+        db.find({country: countryparam}, (err, lq_stats) =>{
+            lq_stats.forEach( (c) => {
+                delete c._id;
+                if(c.year==yearparam){
+                    encontrado=true;
+                    res.send(JSON.stringify(c,null,2));
+                    //res.sendStatus(200,"OK");
+                    console.log("Data sent:"+JSON.stringify(c,null,2));
+                }
+            });
+            if (encontrado==false) {
+                res.sendStatus(404,"LIFE QUALITY NOT FOUND");
+            }
+
+        });
+
     });
 
 	// Métodos no permitidos
