@@ -32,7 +32,12 @@ module.exports = function (app) {
 			content:"africa"	
 		},
 		{ 
-				
+			country:"angola",
+			under_190: 0.301,
+			under_320:0.557,
+			under_550:0.794,
+			year:2008,
+			content:"south america"	
 		},
 		{ 
 			country:"argentina",
@@ -65,11 +70,17 @@ module.exports = function (app) {
 
     //GET /poverty_stats
 	app.get(BASE_API_URL+"/poverty-stats", (req,res) =>{
-	
-		db.find({}, (err, poverty_stats)=>{
-			res.send(JSON.stringify(poverty_stats,null,2));
-			console.log("Data sent:"+JSON.stringify(poverty_stats,null,2));
-		});
+		const limit = req.query.limit;
+		const offset = req.query.offset;
+ 
+		const startIndex = (offset - 1)* limit;
+		const endIndex = offset * limit;
+
+		var a = db.getAllData();
+		//console.log('start: '+startIndex+'\nEnd: '+endIndex);
+		res.send(a.slice(startIndex, endIndex));
+		//res.sendStatus(200);
+
 	});
 
 	//POST /poverty_stats
