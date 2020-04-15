@@ -3,3 +3,13 @@
 {"rank":5,"country":"malta","stability":89,"right":83,"health":93,"security":99,"climate":78,"costs":36,"popularity":45,"total":77,"year":2016,"continent":"europe","_id":"UzXo460Kkt3wHkjQ"}
 {"rank":4,"country":"portugal","stability":85,"right":86,"health":82,"security":100,"climate":70,"costs":47,"popularity":63,"total":77,"year":2016,"continent":"europe","_id":"arlOo3gh4Hkqv0Kn"}
 {"rank":3,"country":"hongkong","stability":86,"right":94,"health":77,"security":100,"climate":58,"costs":44,"popularity":85,"total":77,"year":2016,"continent":"asia","_id":"x5gunZaKCbeQ3pUi"}
+{"$$deleted":true,"_id":"BM6lAiLQt5m6J9OK"}
+{"$$deleted":true,"_id":"Mh6z8wLPaxHs1Rzu"}
+{"$$deleted":true,"_id":"UzXo460Kkt3wHkjQ"}
+{"$$deleted":true,"_id":"arlOo3gh4Hkqv0Kn"}
+{"$$deleted":true,"_id":"x5gunZaKCbeQ3pUi"}
+{"rank":1,"country":"australia","stability":90,"right":100,"health":87,"security":97,"climate":90,"costs":24,"popularity":69,"total":80,"year":2016,"continent":"oceania","_id":"zcPzZZeaDVhxwsr9"}
+{"rank":2,"country":"macao","stability":93,"right":73,"health":80,"security":100,"climate":49,"costs":68,"popularity":92,"total":79,"year":2016,"continent":"africa","_id":"FyAh3qYH9hvoUB5K"}
+{"rank":3,"country":"hongkong","stability":86,"right":94,"health":77,"security":100,"climate":58,"costs":44,"popularity":85,"total":77,"year":2016,"continent":"asia","_id":"mSFukq1fl51yTrwD"}
+{"rank":4,"country":"portugal","stability":85,"right":86,"health":82,"security":100,"climate":70,"costs":47,"popularity":63,"total":77,"year":2016,"continent":"europe","_id":"IpwSRfxTUQuonw32"}
+{"rank":5,"country":"malta","stability":89,"right":83,"health":93,"security":99,"climate":78,"costs":36,"popularity":45,"total":77,"year":2016,"continent":"europe","_id":"X6n0PZS4fTAaAFO4"}
