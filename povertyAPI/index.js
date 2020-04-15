@@ -191,35 +191,37 @@ module.exports = function (app) {
 
 	//DELETE /poverty_stats/country/year
 	app.delete(BASE_API_URL+"/poverty-stats/:country/:year", (req, res)=>{
-		var country= req.params.country;
-		var year = req.params.year;
+		var countryParam= req.params.country;
+		var yearParam = req.params.year;
 
-		var filtered_poverty_stats = poverty_stats.filter((c)=>{
-			return ((c.country != country ) || (c.year != year));
-		});
+		db.find({country: countryParam},{year: yearParam},(err,poverty_stats)=>{
 
-		if(filtered_poverty_stats.length==poverty_stats.length){
-			res.sendStatus(404,"NOT FOUND");
-		}else{
-			poverty_stats=filtered_poverty_stats;
-			res.sendStatus(200);
-		}
+			if(poverty_stats.length>0){
+				poverty_stats.forEach((c)=>{
+					db.remove(c);
+				})
+				res.sendStatus(200);
+			}else{
+				res.sendStatus(404,"DATA NOT FOUND");
+			}
+		})
 	});
 
 	//DELETE /poverty_stats/country
 	app.delete(BASE_API_URL+"/poverty-stats/:country", (req, res)=>{
-		var country= req.params.country;
+		var countryParam= req.params.country;
 
-		var filtered_poverty_stats = poverty_stats.filter((c)=>{
-			return (c.country != country);
-		});
+		db.find({country: countryParam},(err,poverty_stats)=>{
 
-		if(filtered_poverty_stats.length==poverty_stats.length){
-			res.sendStatus(404,"NOT FOUND");
-		}else{
-			poverty_stats=filtered_poverty_stats;
-			res.sendStatus(200);
-		}
+			if(poverty_stats.length>0){
+				poverty_stats.forEach((c)=>{
+					db.remove(c);
+				})
+				res.sendStatus(200);
+			}else{
+				res.sendStatus(404,"DATA NOT FOUND");
+			}
+		})
 	});
 	
 	console.log("POVERTY OK");
