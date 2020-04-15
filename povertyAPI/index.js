@@ -67,6 +67,11 @@ module.exports = function (app) {
 			
 		});
 
+	/*GET /poverty_stats
+	app.get(BASE_API_URL+"/poverty-stats", (req,res) =>{
+		var array = db.getAllData();
+		res.send(JSON.stringify(array,null,2));
+	});*/
 
     //GET /poverty_stats
 	app.get(BASE_API_URL+"/poverty-stats", (req,res) =>{
