@@ -88,7 +88,7 @@ module.exports = function (app) {
     // GET SUICIDE	
     app.get(BASE_API_URL+"/spc-stats", (req,res) =>{
 		console.log("New GET .../spc-stats");
-
+		
         db.find({}, (err, spc_stats) =>{
             spc_stats.forEach( (c) => {
                 delete c._id;
@@ -97,6 +97,7 @@ module.exports = function (app) {
             res.send(JSON.stringify(spc_stats,null,2));
 			//res.sendStatus(200,"OK");
             console.log("Data sent:"+JSON.stringify(spc_stats,null,2));
+			
         });
     });
     
@@ -180,29 +181,27 @@ module.exports = function (app) {
 	app.put(BASE_API_URL+"/spc-stats/:country/:year", (req, res)=>{
 		var countryparam = req.params.country;
 		var yearparam = req.params.year;
-
-		db.find({country:countryparam}, (err, spc_stats) =>{
-			//para ver si encuentro el bicho (no funcionaba el filtro)
-			var encontrado = false;
-			spc_stats.forEach( (c) => {
-				if(c.year==yearparam){
-					encontrado = true;
-					var newSuicide = req.body;
-					//una vez encontrado vemos que no sean nulos
-					if((newSuicide == "") || (newSuicide.country == null) || (newSuicide.year == null)){
-						res.sendStatus(400,"BAD REQUEST");
-					} else {
-						db.remove(c);
-						db.insert(newSuicide); 	
-						res.sendStatus(201,"UPDATED");
-					}
+		
+		//para ver si encuentro el bicho (no funcionaba el filtro)
+		var encontrado = false;
+		db.getAllData().forEach( (c) => {
+			if(c.year==yearparam && c.country==countryparam){
+				encontrado = true;
+				var newSuicide = req.body;
+				//una vez encontrado vemos que no sean nulos
+				if((newSuicide == "") || (newSuicide.country == null) || (newSuicide.year == null)){
+					res.sendStatus(400,"BAD REQUEST");
+				} else {
+					db.remove(c);
+					db.insert(newSuicide); 	
+					res.sendStatus(201,"UPDATED");
 				}
-			})
-			//si no hemos encontrado que coincida el año
-			if (encontrado==false){
-				res.sendStatus(404,"SUICIDE NOT FOUND");
 			}
-		});
+		})
+		//si no hemos encontrado que coincida el año
+		if (encontrado==false){
+			res.sendStatus(404,"SUICIDE NOT FOUND");
+		}
 	});
     
     // DELETE SUICIDE/XXX
