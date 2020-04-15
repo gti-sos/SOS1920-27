@@ -72,15 +72,11 @@ module.exports = function (app) {
 	app.get(BASE_API_URL+"/poverty-stats", (req,res) =>{
 		const limit = req.query.limit;
 		const offset = req.query.offset;
- 
-		const startIndex = (offset - 1)* limit;
-		const endIndex = offset * limit;
+		const startIndex = (offset - 1)* limit;				//comienzo del primer objeto de la pagina
+		const endIndex = offset * limit;					//ultimo objeto de la pagina
 
-		var a = db.getAllData();
-		//console.log('start: '+startIndex+'\nEnd: '+endIndex);
-		res.send(a.slice(startIndex, endIndex));
-		//res.sendStatus(200);
-
+		var array = db.getAllData();
+		res.send(array.slice(startIndex, endIndex));
 	});
 
 	//POST /poverty_stats
