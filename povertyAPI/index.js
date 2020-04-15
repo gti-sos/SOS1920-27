@@ -78,10 +78,17 @@ module.exports = function (app) {
 		const limit = req.query.limit;
 		const offset = req.query.offset;
 		const startIndex = (offset - 1)* limit;				//comienzo del primer objeto de la pagina
-		const endIndex = offset * limit;					//ultimo objeto de la pagina
-
+		const endIndex = offset * limit						//ultimo objeto de la pagina
+		
 		var array = db.getAllData();
-		res.send(array.slice(startIndex, endIndex));
+
+		if(limit==null || offset == null){
+			res.send(JSON.stringify(array,null,2));
+		}else{
+			res.send(array.slice(startIndex, endIndex));
+		}
+		
+		
 	});
 
 	//POST /poverty_stats
