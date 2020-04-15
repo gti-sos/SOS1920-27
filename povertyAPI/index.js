@@ -83,22 +83,27 @@ module.exports = function (app) {
             poverty_stats.forEach( (c) => {
                 delete c._id;
             });
-			//console.log('limit:'+ limit+'\noffset: '+offset+'\ncountry: '+countryQuery+ '\nyear: '+yearQuery);
-            if((limit==null && offset == null) && (yearQuery==null && countryQuery==null)){
-                res.send(JSON.stringify(poverty_stats,null,2));
-            }else if(yearQuery!=null && countryQuery!=null){
+			
+            if((limit==null && offset == null) && (yearQuery==null && countryQuery==null)){ //Get /poverty_stats sin querys por defecto
+				res.send(JSON.stringify(poverty_stats,null,2));
+				
+            }else if(yearQuery!=null && countryQuery!=null){				//Get /poverty_stats Busquedas
                 db.find({country: countryQuery},(err, array)=>{
-
-
-
-
-					if(array[0].year==yearQuery){
-						res.send(JSON.stringify(array[0],null,2));
+					var arrayGet=[];
+					for(var i=0;i<array.length;i++){
+						if(array[i].year==yearQuery){
+							arrayGet.push(array[i]);
+						}
+					}
+					
+					if(arrayGet.length>0){
+						res.send(JSON.stringify(arrayGet[0],null,2));
 					}else{
-						res.sendStatus(404);
+						res.sendStatus(400);
 					}
 				})
-            }else if(limit!=null && offset != null){
+
+            }else if(limit!=null && offset != null){						//Get /poverty_stats Paginacion
 				res.send(JSON.stringify(poverty_stats.slice(startIndex,endIndex),null,2));
 			}
         });
