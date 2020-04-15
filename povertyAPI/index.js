@@ -81,7 +81,9 @@ module.exports = function (app) {
 		const endIndex = offset * limit						//ultimo objeto de la pagina
 		
 		var array = db.getAllData();
-
+		array.forEach((c)=>{
+			console.log(c._id);
+		})
 		if(limit==null || offset == null){
 			res.send(JSON.stringify(array,null,2));
 		}else{
@@ -93,8 +95,8 @@ module.exports = function (app) {
 
 	//POST /poverty_stats
 	app.post(BASE_API_URL+"/poverty-stats", (req, res)=>{
-		//poverty_stats.push(req.body);
-		
+	
+		db.insert(req.body);
 		res.sendStatus(201, "CREATED");
 	});
 
@@ -113,7 +115,8 @@ module.exports = function (app) {
 	//GET /poverty_stats/country
 	app.get(BASE_API_URL+"/poverty-stats/:country", (req, res)=>{
 		var country = req.params.country;
-		var filtered_poverty_stats= poverty_stats.filter((c)=>{
+		var dbCopy = db.getAllData();
+		var filtered_poverty_stats= dbCopy.filter((c)=>{
 			return (c.country == country);
 		})
 		if(filtered_poverty_stats.length>=1){
@@ -129,7 +132,9 @@ module.exports = function (app) {
 		var country = req.params.country;
 		var year = req.params.year;	
 
-		var filtered_poverty_stats= poverty_stats.filter((c)=>{
+		var dbCopy = db.getAllData();
+
+		var filtered_poverty_stats= dbCopy.filter((c)=>{
 			return ((c.country == country)&&(c.year==year));
 		})
 
@@ -141,10 +146,11 @@ module.exports = function (app) {
 
 	});
 
-	//PUT /poverty_stats/country
+	//PUT /poverty_stats/country				db.remove({},{multi:true}, function (err, doc){});
 	 app.put(BASE_API_URL+"/poverty-stats/:country/:year", (req, res)=>{
 			var country = req.params.country;
 			var year = req.params.year;
+			
 			var filtered_poverty_stats = poverty_stats.filter((c)=>{
 				return ((c.country != country) || (c.year!=year));
 			})
