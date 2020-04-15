@@ -189,18 +189,14 @@ module.exports = function (app) {
 		var countryparam = req.params.country;
 		var yearparam = req.params.year;
 		var encontrado = false;
-        db.find({country: countryparam}, (err, spc_stats) =>{
+        db.find({country: countryparam}, {year: yearparam}, (err, spc_stats) =>{
             spc_stats.forEach( (c) => {
-				delete c._id;
-				if(c.year==yearparam){
-					encontrado=true;
-					res.send(JSON.stringify(c,null,2));
-					//res.sendStatus(200,"OK");
-					console.log("Data sent:"+JSON.stringify(c,null,2));
-				}
-			});
-			if (encontrado==false) {
-				res.sendStatus(404,"SUICIDE NOT FOUND");
+				delete c._id;});
+			
+			if(spc_stats.length>0){
+				res.send(JSON.stringify(spc_stats,null,2));
+			}else{
+				res.sendStatus(404,"DATA NOT FOUND");
 			}
 
         });
