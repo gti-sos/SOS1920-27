@@ -67,12 +67,6 @@ module.exports = function (app) {
 			
 		});
 
-	/*GET /poverty_stats
-	app.get(BASE_API_URL+"/poverty-stats", (req,res) =>{
-		var array = db.getAllData();
-		res.send(JSON.stringify(array,null,2));
-	});*/
-
     //GET /poverty_stats
 	//GET /poverty_stats con paginacion
     app.get(BASE_API_URL+"/poverty-stats", (req,res) =>{
@@ -140,16 +134,15 @@ module.exports = function (app) {
 	app.get(BASE_API_URL+"/poverty-stats/:country/:year", (req, res)=>{
         var countryparam = req.params.country;
         var yearparam = req.params.year;
-        db.find({country: countryparam}, (err, poverty_stats) =>{
-            poverty_stats.forEach( (c) => {
-                delete c._id;
-                if(c.year==yearparam){
-                    res.send(JSON.stringify(c,null,2));
-                    console.log("Data sent:"+JSON.stringify(c,null,2));
-                }else{
-                    res.sendStatus(404,"SUICIDE NOT FOUND");
-                }
-            });
+        db.find({country: countryparam},{year: yearparam}, (err, poverty_stats) =>{
+			poverty_stats.forEach((c)=>{
+				delete c._id;
+			})
+             if(poverty_stats.length>0){
+				 res.send(JSON.stringify(poverty_stats,null,2));
+			 }else{
+				 res.sendStatus(404,"DATA NOT FOUND");
+			 }
         });
     });
 
