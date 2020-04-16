@@ -119,26 +119,8 @@ module.exports = function (app) {
         });
     });*/
 	
-	//GET /poverty_stats
-	app.get(BASE_API_URL+"/lq-stats", (req,res) =>{
-		const limit = req.query.limit;
-		const offset = req.query.offset;
-		const startIndex = (offset - 1)* limit;		//comienzo del primer objeto de la pagina
-		const endIndex = offset * limit				//ultimo objeto de la pagina
-		
-		var array = db.getAllData();
-		array.forEach((c)=>{
-			console.log(c._id);
-		})
-		if(limit==null || offset == null){
-			res.send(JSON.stringify(array,null,2));
-		}else{
-			res.send(array.slice(startIndex, endIndex));
-		}
-		
-		
-	});
-    
+	
+	
 	
     // POST LIFE-QUALITY		
 	
