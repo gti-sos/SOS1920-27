@@ -116,9 +116,17 @@ module.exports = function (app) {
 
 	//POST /poverty_stats
 	app.post(BASE_API_URL+"/poverty-stats", (req, res)=>{
-	
-		db.insert(req.body);
-		res.send(JSON.stringify(req.body));
+		
+		db.find(req.body,(err, array)=>{
+			if(array.length==0){
+				db.insert(req.body);
+				res.send(JSON.stringify(Array(req.body), null, 2));
+			}else{
+				res.sendStatus(400);
+			}
+		})
+
+		
 	});
 
 	//PUT /poverty_stats
