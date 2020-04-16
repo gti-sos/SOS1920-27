@@ -5,7 +5,7 @@ module.exports = function (app) {
     const path = require("path");
 
 
-    const dbFileName = path.join(__dirname, "spc.db");
+    const dbFileName = path.join(__dirname, "poverty.db");
 
     const BASE_API_URL="/api/v1";
 
