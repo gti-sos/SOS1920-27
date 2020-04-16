@@ -21,7 +21,7 @@ module.exports = function (app) {
 			under_320:0.077,
 			under_550:0.391,
 			year:2012,
-			content:"europe"
+			continent:"europe"
 		},
 		{ 
 			country:"algeria",
@@ -29,7 +29,7 @@ module.exports = function (app) {
 			under_320:0.039,
 			under_550:0.292,
 			year:2011,
-			content:"africa"	
+			continent:"africa"	
 		},
 		{ 
 			country:"angola",
@@ -37,7 +37,7 @@ module.exports = function (app) {
 			under_320:0.557,
 			under_550:0.794,
 			year:2008,
-			content:"south america"	
+			continent:"south america"	
 		},
 		{ 
 			country:"argentina",
@@ -45,7 +45,7 @@ module.exports = function (app) {
 			under_320:0.02,
 			under_550:0.071,
 			year:2017,
-			content:"south america"	
+			continent:"south america"	
 		},
 		{ 
 			country:"armenia",
@@ -53,11 +53,11 @@ module.exports = function (app) {
 			under_320:0.123,
 			under_550:0.5,
 			year:2017,
-			content:"europe"	
+			continent:"europe"	
 		}
 	];
 
-
+	
     //LOADINITIALDATA
     app.get(BASE_API_URL+"/poverty-stats/loadInitialData",(req,res) =>{
 			db.remove({},{multi:true}, function (err, doc){});
@@ -77,7 +77,6 @@ module.exports = function (app) {
 
         const startObject = offset-1;                //comienzo del primer objeto de la pagina
 		const endObject =parseInt(offset)+parseInt(limit) - 1;                    //ultimo objeto de la pagina
-		console.log(startObject+ ' '+ endObject);
 
         db.find({}, (err, poverty_stats) =>{
             poverty_stats.forEach( (c) => {
@@ -116,17 +115,22 @@ module.exports = function (app) {
 
 	//POST /poverty_stats
 	app.post(BASE_API_URL+"/poverty-stats", (req, res)=>{
-		
-		db.find(req.body,(err, array)=>{
-			if(array.length==0){
-				db.insert(req.body);
-				res.send(JSON.stringify(Array(req.body), null, 2));
-			}else{
-				res.sendStatus(400);
-			}
-		})
 
-		
+		db.find(req.body,(err, array)=>{
+			var body=req.body;
+			
+			if(body.country!=null || body.under_190!=null || body.under_320!=null || body.under_550!=null || body.continent!=null || body.year!=null){
+				
+				if(array.length==0){
+					db.insert(req.body);
+					res.send(JSON.stringify(Array(req.body), null, 2));
+				}else{
+					res.sendStatus(400);
+				}
+			}else{
+				sendStatus(400);
+			}	
+		})	
 	});
 
 	//PUT /poverty_stats
@@ -185,30 +189,51 @@ module.exports = function (app) {
 	//PUT /poverty_stats/country				db.remove({},{multi:true}, function (err, doc){});
 	 app.put(BASE_API_URL+"/poverty-stats/:country/:year", (req, res)=>{
 		var countryparam = req.params.country;
-        var yearparam = req.params.year;
+		var yearparam = req.params.year;
+		
+		///////////////////
 
-        //para ver si encuentro el bicho (no funcionaba el filtro)
-        var encontrado = false;
-        db.find({}, (err, poverty_stats) =>{
-            poverty_stats.forEach( (c) => {
-                if(c.year==yearparam && c.country==countryparam){
-                    encontrado = true;
-                    var newPoverty = req.body;
-                    //una vez encontrado vemos que no sean nulos
-                    if((newPoverty == "") || (newPoverty.country == null) || (newPoverty.year == null)){
-                        res.sendStatus(400,"BAD REQUEST");
-                    } else {
-                        db.remove(c);
-                        db.insert(newPoverty);
-                        res.sendStatus(201);
-                    }
-                }
-            });
-        //si no hemos encontrado que coincida el año
-        if (encontrado==false){
-            res.sendStatus(404,"SUICIDE NOT FOUND");
-        }
-        });
+		db.find(req.body,(err, array)=>{
+			var body=req.body;
+
+			
+			if(body.country!=null || body.under_190!=null || body.under_320!=null || body.under_550!=null || body.continent!=null || body.year!=null){
+				
+				if(array.length==0){
+
+					///////////////////
+					//para ver si encuentro el bicho (no funcionaba el filtro)
+					var encontrado = false;
+					db.find({}, (err, poverty_stats) =>{
+						poverty_stats.forEach( (c) => {
+							if(c.year==yearparam && c.country==countryparam){
+								encontrado = true;
+								var newPoverty = req.body;
+								//una vez encontrado vemos que no sean nulos
+								if((newPoverty == "") || (newPoverty.country == null) || (newPoverty.year == null)){
+									res.sendStatus(400,"BAD REQUEST");
+								} else {
+									db.remove(c);
+									db.insert(newPoverty);
+									res.sendStatus(201);
+								}
+							}
+						});
+							//si no hemos encontrado que coincida el año
+						if (encontrado==false){
+							res.sendStatus(404,"SUICIDE NOT FOUND");
+						}
+					});
+					
+				}else{
+					res.sendStatus(400);
+				}
+			}else{
+				sendStatus(400);
+			}	
+		})
+
+		
     });
 
 	//POST /poverty_stats/country (ERROR)
