@@ -67,30 +67,45 @@ module.exports = function (app) {
 			
 		});
 
-	/*GET /poverty_stats
-	app.get(BASE_API_URL+"/poverty-stats", (req,res) =>{
-		var array = db.getAllData();
-		res.send(JSON.stringify(array,null,2));
-	});*/
-
     //GET /poverty_stats
 	//GET /poverty_stats con paginacion
     app.get(BASE_API_URL+"/poverty-stats", (req,res) =>{
         const limit = req.query.limit;
-        const offset = req.query.offset;
+		const offset = req.query.offset;
+		const countryQuery = req.query.country;
+		const yearQuery = req.query.year;
+
         const startIndex = (offset - 1)* limit;                //comienzo del primer objeto de la pagina
-        const endIndex = offset * limit;                    //ultimo objeto de la pagina
+		const endIndex = offset * limit;                    //ultimo objeto de la pagina
+		
 
         db.find({}, (err, poverty_stats) =>{
             poverty_stats.forEach( (c) => {
                 delete c._id;
             });
+			
+            if((limit==null && offset == null) && (yearQuery==null && countryQuery==null)){ //Get /poverty_stats sin querys por defecto
+				res.send(JSON.stringify(poverty_stats,null,2));
+				
+            }else if(yearQuery!=null && countryQuery!=null){				//Get /poverty_stats Busquedas
+                db.find({country: countryQuery},(err, array)=>{
+					var arrayGet=[];
+					for(var i=0;i<array.length;i++){
+						if(array[i].year==yearQuery){
+							arrayGet.push(array[i]);
+						}
+					}
+					
+					if(arrayGet.length>0){
+						res.send(JSON.stringify(arrayGet[0],null,2));
+					}else{
+						res.sendStatus(400);
+					}
+				})
 
-            if(limit==null || offset == null){
-                res.send(JSON.stringify(poverty_stats,null,2));
-            }else{
-                res.send(poverty_stats.slice(startIndex, endIndex));
-            }
+            }else if(limit!=null && offset != null){						//Get /poverty_stats Paginacion
+				res.send(JSON.stringify(poverty_stats.slice(startIndex,endIndex),null,2));
+			}
         });
     });
 
@@ -139,17 +154,16 @@ module.exports = function (app) {
 	//GET /poverty_stats/country/year
 	app.get(BASE_API_URL+"/poverty-stats/:country/:year", (req, res)=>{
         var countryparam = req.params.country;
-        var yearparam = req.params.year;
-        db.find({country: countryparam}, (err, poverty_stats) =>{
-            poverty_stats.forEach( (c) => {
-                delete c._id;
-                if(c.year==yearparam){
-                    res.send(JSON.stringify(c,null,2));
-                    console.log("Data sent:"+JSON.stringify(c,null,2));
-                }else{
-                    res.sendStatus(404,"SUICIDE NOT FOUND");
-                }
-            });
+		var yearparam = req.params.year;
+        db.find({country: countryparam},{year: yearparam}, (err, poverty_stats) =>{
+			poverty_stats.forEach((c)=>{
+				delete c._id;
+			})
+             if(poverty_stats.length>0){
+				 res.send(JSON.stringify(poverty_stats[0],null,2));
+			 }else{
+				 res.sendStatus(404,"DATA NOT FOUND");
+			 }
         });
     });
 

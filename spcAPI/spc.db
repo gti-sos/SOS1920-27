@@ -4,6 +4,7 @@
 {"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"eYV3qDdKumP09SaV"}
 {"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"sDiSUPKVRVDOBbiU"}
 {"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"yRobu955Eb15gJ3X"}
+<<<<<<< HEAD
 {"$$deleted":true,"_id":"3ICNQV18BkaIM9Mx"}
 {"$$deleted":true,"_id":"BRuzAzYhC969CdFF"}
 {"$$deleted":true,"_id":"HwhOwnkqmoimRFYq"}
@@ -16,3 +17,5 @@
 {"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"y69yrq6kiJ2I8JJH"}
 {"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"Z6EOKsMBcNhLkPMM"}
 {"country":"francia","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"PBcW3Q9PFePLPcRb"}
+=======
+>>>>>>> ba35a29b817b0ff7d997957f9cd97f59e31dd13b
