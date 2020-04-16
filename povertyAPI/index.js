@@ -111,9 +111,14 @@ module.exports = function (app) {
 
 	//POST /poverty_stats
 	app.post(BASE_API_URL+"/poverty-stats", (req, res)=>{
-	
-		db.insert(req.body);
-		res.sendStatus(201, "CREATED");
+		var body=req.body;
+		if(body.country && body.year && body.under_190 && body.under_320 && body.under_550 && body.content){
+			db.insert(req.body);
+			res.sendStatus(201, "CREATED");
+		}else{
+			res.sendStatus(400);
+		}
+		
 	});
 
 	//PUT /poverty_stats
