@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {"country":"brasil","under_190":0.03,"under_320":0.34,"under_550":0.067,"year":2016,"continent":"south america","_id":"81D1d5GgDj8SoHnZ"}
 {"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"content":"africa","_id":"9KnfyIGgJ5O9yzjH"}
 {"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"content":"europe","_id":"Bbxyqen8f6tXxfhW"}
@@ -82,3 +83,5 @@
 {"$$deleted":true,"_id":"Pyt7L0G3Tk3rjXyb"}
 {"$$deleted":true,"_id":"bg70RQU3FWjWdXaB"}
 {"$$deleted":true,"_id":"un6jKgpUGV1epoBy"}
+=======
+>>>>>>> a1fe0ffb93620273abd47865c42862d39a5ca6ec

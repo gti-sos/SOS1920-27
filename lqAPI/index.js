@@ -97,7 +97,7 @@ module.exports = function (app) {
 		console.log("New GET .../loadInitialData");
 		
 		db.insert(ejemplos_lq);
-		res.sendStatus(200);
+		res.send(JSON.stringify(ejemplos_lq,null,2));
         console.log("Initial lq loaded:"+JSON.stringify(ejemplos_lq,null,2));
 		});
 	
@@ -119,34 +119,76 @@ module.exports = function (app) {
         });
     });*/
 	
-	//GET LIFE_QUALITY
+	
+	//GET /LIFE QUALITY
 	app.get(BASE_API_URL+"/lq-stats", (req,res) =>{
+		function arrayRemove(arr, value) { return arr.filter(function(ele){ return ele != value; });}
 		const limit = req.query.limit;
 		const offset = req.query.offset;
-		const startIndex = (offset - 1)* limit;				//comienzo del primer objeto de la pagina
-		const endIndex = offset * limit						//ultimo objeto de la pagina
-		
-		var array = db.getAllData();
-		array.forEach((c)=>{
-			console.log(c._id);
-		})
-		if(limit==null || offset == null){
-			res.send(JSON.stringify(array,null,2));
-		}else{
-			res.send(array.slice(startIndex, endIndex));
-		}
+		const countryQuery = req.query.country;
+		const yearQuery = req.query.year;
+
+		const startObject = offset-1;                //comienzo del primer objeto de la pagina
+		const endObject = parseInt(startObject) + parseInt(limit);                    //ultimo objeto de la pagina
 		
 		
+		db.find({}, (err, lq_stats) =>{
+			lq_stats.forEach( (c) => {
+				delete c._id;
+			});
+			var copiadb = lq_stats;
+
+
+			if(limit!=null && offset != null && countryQuery==null && yearQuery==null){						//Get /lq_stats Paginacion
+				res.send(JSON.stringify(lq_stats.slice(startObject,endObject),null,2));
+			}
+
+
+			if (countryQuery==null && yearQuery==null && limit==null && offset == null) { //get normal
+				res.send(JSON.stringify(lq_stats,null,2));
+
+
+
+			} if (countryQuery!=null || yearQuery!=null) { //busquedas
+				if (countryQuery!=null) {
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].country!=countryQuery) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				} 
+				if (yearQuery!=null) {
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].year!=parseInt(yearQuery)) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				} 
+				if (copiadb.length==0) {
+					res.sendStatus(404, "Data not found");
+				}if (copiadb.length>0) {
+					console.log("Data: "+JSON.stringify(copiadb,null,2));
+					res.send(JSON.stringify(copiadb,null,2));
+				}
+
+				
+			}
+
+			
+			
+		});
 	});
-    
+	
 	
     // POST LIFE-QUALITY		
 	
-	app.post(BASE_API_URL+"/lq-stats",(req,res) =>{
+    app.post(BASE_API_URL+"/lq-stats",(req,res) =>{
     	
     	var newLQ = req.body;
     	
-		db.find({country:newLQ.country, year: newLQ.year}, (err, lq_stats) =>{
+		db.find({country:newLQ.country},{ year: newLQ.year}, (err, lq_stats) =>{
 			
 			if((newLQ == "") || (newLQ.country == null) || (newLQ.year == null)){
     			res.sendStatus(400,"BAD REQUEST");
@@ -155,11 +197,12 @@ module.exports = function (app) {
   		  	} else {
     			db.insert(newLQ); 	
 				console.log("Data created:"+JSON.stringify(newLQ,null,2));
-   		 		res.sendStatus(201,"CREATED");
+				newLQ = "["+newLQ+"]";
+				res.send(JSON.stringify(newLQ,null,2));
     	}
         });
     	
-    	
+
     });
     
     
@@ -168,9 +211,15 @@ module.exports = function (app) {
     
     app.delete(BASE_API_URL+"/lq-stats", (req,res)=>{
     
-        db.remove({},{multi:true}, function (err, doc){});
-        console.log("Data lq-stats empty");
-        res.sendStatus(200);
+		db.remove({},{multi:true}, function (err, doc){});
+		db.find({}, (err, lq_stats) =>{
+			if (lq_stats.length==0){
+				console.log("Data lq-stats empty");
+				res.sendStatus(200);
+			} else {
+				res.sendStatus(400,"BAD REQUEST");
+			};
+		});
     });
 
     // GET LQ-STATS/XXX
@@ -218,32 +267,33 @@ module.exports = function (app) {
     	
     });
     
-    // PUT LQ/XXX/YYY
-    
+    // PUT LQ/XXX/YYY                                         
 	app.put(BASE_API_URL+"/lq-stats/:country/:year", (req, res)=>{
 		var countryparam = req.params.country;
 		var yearparam = req.params.year;
 		
-		//para ver si encuentro el bicho (no funcionaba el filtro)
 		var encontrado = false;
-		db.getAllData().forEach( (c) => {
-			if(c.year==yearparam && c.country==countryparam){
-				encontrado = true;
-				var newLQ = req.body;
-				//una vez encontrado vemos que no sean nulos
-				if((newLQ == "") || (newLQ.country == null) || (newLQ.year == null)){
-					res.sendStatus(400,"BAD REQUEST");
-				} else {
-					db.remove(c);
-					db.insert(newLQ); 	
-					res.sendStatus(201,"UPDATED");
+		db.find({}, (err, lq_stats) =>{
+			lq_stats.forEach( (c) => {
+                if(c.year==yearparam && c.country==countryparam){
+					encontrado = true;
+					var newLQ = req.body;
+					//una vez encontrado vemos que no sean nulos
+					if((newLQ == "") || (newLQ.country == null) || (newLQ.year == null)){
+						res.sendStatus(400,"BAD REQUEST");
+					} else {
+						db.remove(c);
+						db.insert(newLQ); 	
+						res.sendStatus(201);
+						console.log("Data updated: ", newLQ);
+					}
 				}
-			}
-		})
+            });	
 		//si no hemos encontrado que coincida el año
 		if (encontrado==false){
 			res.sendStatus(404,"LIFE QUALITY NOT FOUND");
 		}
+		});
 	});
         
     // DELETE LQ/XXX
