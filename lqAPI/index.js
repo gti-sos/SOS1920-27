@@ -125,8 +125,19 @@ module.exports = function (app) {
 		function arrayRemove(arr, value) { return arr.filter(function(ele){ return ele != value; });}
 		const limit = req.query.limit;
 		const offset = req.query.offset;
+		
+		const rankQuery = req.query.rank;
 		const countryQuery = req.query.country;
+		const stabilityQuery = req.query.stability;
+		const rightQuery = req.query.query;
+		const healthQuery = req.query.health;
+		const securityQuery = req.query.security;
+		const climateQuery = req.query.climate;
+		const costsQuery = req.query.costs;
+		const popularityQuery = req.query.popularity;
+		const totalQuery = req.query.total;
 		const yearQuery = req.query.year;
+		const continentQuery = req.query.continent;
 
 		const startObject = offset-1;                //comienzo del primer objeto de la pagina
 		const endObject = parseInt(startObject) + parseInt(limit);                    //ultimo objeto de la pagina
@@ -139,17 +150,18 @@ module.exports = function (app) {
 			var copiadb = lq_stats;
 
 
-			if(limit!=null && offset != null && countryQuery==null && yearQuery==null){						//Get /lq_stats Paginacion
+			if(limit!=null && offset != null && countryQuery==null && yearQuery==null && rankQuery ==null && stabilityQuery ==null && rightQuery ==null && healthQuery ==null && securityQuery ==null && climateQuery ==null && costsQuery ==null && popularityQuery ==null && totalQuery ==null && continentQuery ==null){						//Get /lq_stats Paginacion
 				res.send(JSON.stringify(lq_stats.slice(startObject,endObject),null,2));
 			}
 
 
-			if (countryQuery==null && yearQuery==null && limit==null && offset == null) { //get normal
+			if (limit==null && offset == null && countryQuery==null && yearQuery==null && rankQuery ==null && stabilityQuery ==null && rightQuery ==null && healthQuery ==null && securityQuery ==null && climateQuery ==null && costsQuery ==null && popularityQuery ==null && totalQuery ==null && continentQuery ==null) { //get normal
 				res.send(JSON.stringify(lq_stats,null,2));
 
 
 
-			} if (countryQuery!=null || yearQuery!=null) { //busquedas
+			} if (countryQuery!=null || yearQuery!=null || rankQuery !=null || stabilityQuery !=null || rightQuery !=null || healthQuery !=null || securityQuery !=null || climateQuery !=null || costsQuery !=null || popularityQuery !=null || totalQuery !=null || continentQuery !=null) { //busquedas
+				
 				if (countryQuery!=null) {
 					for(var i=0;i<copiadb.length;i++){
 						if (copiadb[i].country!=countryQuery) {
@@ -165,7 +177,88 @@ module.exports = function (app) {
 							i--;
 						}
 					}
-				} 
+				}
+				
+				if (rankQuery!=null) {
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].rank!=rankQuery) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				}
+				if (stabilityQuery!=null) {
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].stability!=parseInt(stabilityQuery)) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				}
+				if (rightQuery!=null) {
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].right!=parseInt(rightQuery)) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				}
+				if (healthQuery!=null) {
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].health!=parseInt(healthQuery)) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				}
+				if (securityQuery!=null) {
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].security!=parseInt(securityQuery)) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				}
+				if (climateQuery!=null) {
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].climate!=parseInt(climateQuery)) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				}
+				if (costsQuery!=null) {
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].costs!=parseInt(costsQuery)) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				}
+				if (popularityQuery!=null) {
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].popularity!=parseInt(popularityQuery)) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				}
+				if (totalQuery!=null) {
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].total!=parseInt(totalQuery)) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				}
+				if (continentQuery!=null) {
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].continent!=continentQuery) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				}
 				if (copiadb.length==0) {
 					res.sendStatus(404, "Data not found");
 				}if (copiadb.length>0) {
@@ -175,8 +268,6 @@ module.exports = function (app) {
 
 				
 			}
-
-			
 			
 		});
 	});
@@ -197,8 +288,7 @@ module.exports = function (app) {
   		  	} else {
     			db.insert(newLQ); 	
 				console.log("Data created:"+JSON.stringify(newLQ,null,2));
-				newLQ = "["+newLQ+"]";
-				res.send(JSON.stringify(newLQ,null,2));
+				res.send(JSON.stringify(Array(newLQ),null,2));
     	}
         });
     	
