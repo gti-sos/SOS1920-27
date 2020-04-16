@@ -194,7 +194,7 @@ module.exports = function (app) {
 				delete c._id;});
 			
 			if(spc_stats.length>0){
-				res.send(JSON.stringify(spc_stats,null,2));
+				res.send(JSON.stringify(spc_stats[0],null,2));
 			}else{
 				res.sendStatus(404,"DATA NOT FOUND");
 			}
