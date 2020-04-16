@@ -75,9 +75,8 @@ module.exports = function (app) {
 		const countryQuery = req.query.country;
 		const yearQuery = req.query.year;
 
-        const startIndex = (offset - 1)* limit;                //comienzo del primer objeto de la pagina
-		const endIndex = offset * limit;                    //ultimo objeto de la pagina
-		
+        const startObject = offset-1;                									//comienzo del primer objeto de la pagina
+        const endObject = parseInt(startObject) + parseInt(limit);                      //ultimo objeto de la pagina
 
         db.find({}, (err, poverty_stats) =>{
             poverty_stats.forEach( (c) => {
@@ -104,7 +103,7 @@ module.exports = function (app) {
 				})
 
             }else if(limit!=null && offset != null){						//Get /poverty_stats Paginacion
-				res.send(JSON.stringify(poverty_stats.slice(startIndex,endIndex),null,2));
+				res.send(JSON.stringify(poverty_stats.slice(startObject,endObject),null,2));
 			}
         });
     });
