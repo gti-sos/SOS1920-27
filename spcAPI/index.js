@@ -86,16 +86,22 @@ module.exports = function (app) {
 
 	//GET /spc_stats con paginacion
 	app.get(BASE_API_URL+"/spc-stats", (req,res) =>{
-		function arrayRemove(arr, value) { return arr.filter(function(ele){ return ele != value; });}
 		const limit = req.query.limit;
 		const offset = req.query.offset;
+
 		const countryQuery = req.query.country;
 		const yearQuery = req.query.year;
+		const continenteQuery = req.query.continent;
+		const female_rank_Query = req.query.female_rank;
+		const male_rank_Query = req.query.male_rank;
+		const both_sex_Query = req.query.both_sex;
+		const female_number_Query = req.query.female_number;
+		const male_number_Query = req.query.male_number;
+		const ratio_Query = req.query.ratio;
 
 		const startObject = offset-1;                //comienzo del primer objeto de la pagina
 		const endObject = parseInt(startObject) + parseInt(limit);                    //ultimo objeto de la pagina
-		
-		
+
 		db.find({}, (err, spc_stats) =>{
 			spc_stats.forEach( (c) => {
 				delete c._id;
@@ -103,18 +109,20 @@ module.exports = function (app) {
 			var copiadb = spc_stats;
 
 
-			if(limit!=null && offset != null && countryQuery==null && yearQuery==null){						//Get /spc_stats Paginacion
+			if(limit!=null && offset != null && countryQuery==null && continenteQuery==null && yearQuery==null && female_rank_Query==null && male_rank_Query==null
+				 && both_sex_Query==null && female_number_Query==null && male_number_Query==null && ratio_Query==null){	//Get /spc_stats Paginacion
 				res.send(JSON.stringify(spc_stats.slice(startObject,endObject),null,2));
 			}
 
 
-			if (countryQuery==null && yearQuery==null && limit==null && offset == null) { //get normal
+			if (countryQuery==null && yearQuery==null && continenteQuery==null && female_rank_Query==null && male_rank_Query==null && both_sex_Query==null 
+				&& female_number_Query==null && male_number_Query==null && ratio_Query==null && limit==null && offset == null) { //get normal
 				res.send(JSON.stringify(spc_stats,null,2));
 
+			} if (countryQuery!=null || yearQuery!=null || continenteQuery!=null || female_rank_Query!=null || male_rank_Query!=null || both_sex_Query!=null
+				|| female_number_Query!=null || male_number_Query!=null || ratio_Query!=null) { //busquedas
 
-
-			} if (countryQuery!=null || yearQuery!=null) { //busquedas
-				if (countryQuery!=null) {
+				if (countryQuery!=null) {			//country
 					for(var i=0;i<copiadb.length;i++){
 						if (copiadb[i].country!=countryQuery) {
 							copiadb.splice(i,1)
@@ -122,14 +130,79 @@ module.exports = function (app) {
 						}
 					}
 				} 
-				if (yearQuery!=null) {
+				if (yearQuery!=null) {			//year
 					for(var i=0;i<copiadb.length;i++){
-						if (copiadb[i].year!=yearQuery) {
+						if (copiadb[i].year!=parseInt(yearQuery)) {
 							copiadb.splice(i,1)
 							i--;
 						}
 					}
 				} 
+
+				if (continenteQuery!=null) {			//continente
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].continent!=continenteQuery) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				} 
+
+				if (female_rank_Query!=null) {			//female_rank
+					for(var i=0;i<copiadb.length;i++){
+						console.log(parseInt(female_rank_Query))
+						if (copiadb[i].female_rank!=parseInt(female_rank_Query)) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				} 
+
+				if (both_sex_Query!=null) {			//male_rank
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].both_sex>parseInt(both_sex_Query)) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				} 
+
+				if (male_rank_Query!=null) {			//male_rank
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].male_rank!=parseInt(male_rank_Query)) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				} 
+
+				if (female_number_Query!=null) {			//male_rank
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].female_number>parseInt(female_number_Query)) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				} 
+
+				if (male_number_Query!=null) {			//male_rank
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].male_number_Query>parseInt(male_number_Query)) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				} 
+
+				if (ratio_Query!=null) {			//male_rank
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].ratio>parseInt(ratio_Query)) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				} 
+
 				if (copiadb.length==0) {
 					res.sendStatus(404, "Data not found");
 				}if (copiadb.length>0) {
@@ -152,7 +225,7 @@ module.exports = function (app) {
     	
     	var newSuicide = req.body;
     	
-		db.find({country:newSuicide.country, year: newSuicide.year}, (err, spc_stats) =>{
+		db.find({country:newSuicide.country},{ year: newSuicide.year}, (err, spc_stats) =>{
 			
 			if((newSuicide == "") || (newSuicide.country == null) || (newSuicide.year == null)){
     			res.sendStatus(400,"BAD REQUEST");
@@ -161,8 +234,8 @@ module.exports = function (app) {
   		  	} else {
     			db.insert(newSuicide); 	
 				console.log("Data created:"+JSON.stringify(newSuicide,null,2));
-				newSuicide = "["+newSuicide+"]";
-				res.send(JSON.stringify(newSuicide,null,2));
+				var array = Array(newSuicide);
+				res.send(JSON.stringify(array,null,2));
     	}
         });
     	
