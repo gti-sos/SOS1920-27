@@ -21,7 +21,7 @@ module.exports = function (app) {
 			under_320:0.077,
 			under_550:0.391,
 			year:2012,
-			content:"europe"
+			continent:"europe"
 		},
 		{ 
 			country:"algeria",
@@ -29,7 +29,7 @@ module.exports = function (app) {
 			under_320:0.039,
 			under_550:0.292,
 			year:2011,
-			content:"africa"	
+			continent:"africa"	
 		},
 		{ 
 			country:"angola",
@@ -37,7 +37,7 @@ module.exports = function (app) {
 			under_320:0.557,
 			under_550:0.794,
 			year:2008,
-			content:"south america"	
+			continent:"south america"	
 		},
 		{ 
 			country:"argentina",
@@ -45,7 +45,7 @@ module.exports = function (app) {
 			under_320:0.02,
 			under_550:0.071,
 			year:2017,
-			content:"south america"	
+			continent:"south america"	
 		},
 		{ 
 			country:"armenia",
@@ -53,7 +53,7 @@ module.exports = function (app) {
 			under_320:0.123,
 			under_550:0.5,
 			year:2017,
-			content:"europe"	
+			continent:"europe"	
 		}
 	];
 
@@ -73,18 +73,60 @@ module.exports = function (app) {
         const limit = req.query.limit;
 		const offset = req.query.offset;
 		const countryQuery = req.query.country;
+		const under190Query = req.query.under190;
+		const under320Query = req.query.under320;
+		const under550Query = req.query.under550;
 		const yearQuery = req.query.year;
+		const continentQuery = req.query.continent;
 
-        const startIndex = (offset - 1)* limit;                //comienzo del primer objeto de la pagina
-		const endIndex = offset * limit;                    //ultimo objeto de la pagina
+		
+		var params=[];
+		var propiedadesArray=['country','under190','under320','under550','year','continent'];
+		var propiedadesValoresArray=[countryQuery,under190Query,under320Query,under550Query,yearQuery,continentQuery];
+
+		//params[propiedadesArray[0]]=propiedadesValoresArray[0];
+
+		var j=0;
+		for(var i=0;i<propiedadesValoresArray.length;i++){
+			if(propiedadesValoresArray[i]!=null){
+				params.push('params'+j);
+				j++;
+			}
+		}
+		console.log(params);
+		if(j<6 && j>1){
+			var result=[];
+			for(let i=0;i<propiedadesArray.length;i++){
+				if(propiedadesValoresArray[i]!==null && propiedadesValoresArray[i]=='countryQuery'){
+					db.find({countryQuery: countryQuery},(err,dbCopya)=>{
+
+					});
+				}
+			}
+			
+		}
+			
+
+
+
+		
+		
+		
+		
+		
+
+        const startObject = offset-1;                //comienzo del primer objeto de la pagina
+		const endObject = parseInt(startObject) + parseInt(limit);                    //ultimo objeto de la pagina
 		
 
         db.find({}, (err, poverty_stats) =>{
             poverty_stats.forEach( (c) => {
                 delete c._id;
-            });
+			});
 			
-            if((limit==null && offset == null) && (yearQuery==null && countryQuery==null)){ //Get /poverty_stats sin querys por defecto
+			res.sendStatus(200);
+			
+            /*if((limit==null && offset == null) && (yearQuery==null && countryQuery==null)){ //Get /poverty_stats sin querys por defecto
 				res.send(JSON.stringify(poverty_stats,null,2));
 				
             }else if(yearQuery!=null && countryQuery!=null){				//Get /poverty_stats Busquedas
@@ -104,8 +146,8 @@ module.exports = function (app) {
 				})
 
             }else if(limit!=null && offset != null){						//Get /poverty_stats Paginacion
-				res.send(JSON.stringify(poverty_stats.slice(startIndex,endIndex),null,2));
-			}
+				res.send(JSON.stringify(poverty_stats.slice(startObject,endObject),null,2));
+			}*/
         });
     });
 

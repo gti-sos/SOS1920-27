@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 {"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"content":"europe","_id":"9rvbo3rJ3kg9xMrv"}
@@ -10,3 +11,10 @@
 {"country":"brasil","under_190":0.03,"under_320":0.34,"under_550":0.067,"year":2016,"content":"south america","_id":"vQCsyWHMvvg7WPC6"}
 {"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"content":"south america","_id":"zwZhOp70jSyQBI3x"}
 >>>>>>> 97f9db0b208c7f5fcc3288682e2c131413e7f59f
+=======
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"DRTdohshJ75q04HY"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"ElsCtT4UE4WJG1BR"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"YUSLg1aW0PUwZcjN"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"fhfNN5CX1RaTLIC4"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"kSAorAqk2e0ngdkL"}
+>>>>>>> c2ece9827cb62fd172bb185c2f1b987e0da5c591
