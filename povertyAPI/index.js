@@ -93,7 +93,7 @@ module.exports = function (app) {
 				j++;
 			}
 		}
-		
+		console.log(params);
 		if(j<6 && j>1){
 			var result=[];
 			for(let i=0;i<propiedadesArray.length;i++){
