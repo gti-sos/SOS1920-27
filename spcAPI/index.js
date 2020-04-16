@@ -85,62 +85,6 @@ module.exports = function (app) {
 		});
 
 	//GET /spc_stats con paginacion
-	/*app.get(BASE_API_URL+"/spc-stats", (req,res) =>{
-		const limit = req.query.limit;
-		const offset = req.query.offset;
-		const countryQuery = req.query.country;
-		const yearQuery = req.query.year;
-
-		const startIndex = (offset - 1)* limit;                //comienzo del primer objeto de la pagina
-		const endIndex = offset * limit;                    //ultimo objeto de la pagina
-		
-		var copiadb = [];
-		db.find({}, (err, spc_stats) =>{
-			spc_stats.forEach( (c) => {
-				delete c._id;
-			});
-			if(limit==null && offset == null){ //Get /spc_stats sin querys por defecto
-				console.log("111")
-				console.log(copiadb);	
-				if (yearQuery==null && countryQuery==null) {
-					res.send(JSON.stringify(spc_stats,null,2));
-
-				} else if (yearQuery!=null) {
-					db.find({year: yearQuery}, (err, years) =>{
-						years.forEach((c) => {
-							copiadb.push(c);
-						})
-						console.log("yearss")
-						console.log(copiadb);	
-					});
-
-				}else if (countryQuery!=null) {
-						db.find({country: countryQuery}, (err, countries) =>{
-							countries.forEach((c) => {
-								copiadb.push(c);
-							})
-							console.log("countries")
-							console.log(copiadb);
-						});
-				}
-		
-				if(copiadb.length>0){
-					res.send(JSON.stringify(copiadb,null,2));
-				}else{
-					console.log("nbnnbnb");
-					res.sendStatus(400);
-				}
-
-			}
-			if(limit!=null && offset != null){						//Get /spc_stats Paginacion
-				res.send(JSON.stringify(spc_stats.slice(startIndex,endIndex),null,2));
-			}else{
-				console.log("aaaaa");
-				res.sendStatus(400);
-			}
-		});
-	});*/
-//GET /spc_stats con paginacion
 	app.get(BASE_API_URL+"/spc-stats", (req,res) =>{
 		function arrayRemove(arr, value) { return arr.filter(function(ele){ return ele != value; });}
 		const limit = req.query.limit;
@@ -148,8 +92,8 @@ module.exports = function (app) {
 		const countryQuery = req.query.country;
 		const yearQuery = req.query.year;
 
-		const startIndex = (offset - 1)* limit;                //comienzo del primer objeto de la pagina
-		const endIndex = offset * limit;                    //ultimo objeto de la pagina
+		const startObject = offset-1;                //comienzo del primer objeto de la pagina
+		const endObject = parseInt(startObject) + parseInt(limit);                    //ultimo objeto de la pagina
 		
 		
 		db.find({}, (err, spc_stats) =>{
@@ -157,9 +101,19 @@ module.exports = function (app) {
 				delete c._id;
 			});
 			var copiadb = spc_stats;
-			if (countryQuery==null && yearQuery==null) {
+
+
+			if(limit!=null && offset != null && countryQuery==null && yearQuery==null){						//Get /spc_stats Paginacion
+				res.send(JSON.stringify(spc_stats.slice(startObject,endObject),null,2));
+			}
+
+
+			if (countryQuery==null && yearQuery==null && limit==null && offset == null) { //get normal
 				res.send(JSON.stringify(spc_stats,null,2));
-			} else {
+
+
+
+			} if (countryQuery!=null || yearQuery!=null) { //busquedas
 				if (countryQuery!=null) {
 					for(var i=0;i<copiadb.length;i++){
 						if (copiadb[i].country!=countryQuery) {
@@ -183,15 +137,14 @@ module.exports = function (app) {
 					res.send(JSON.stringify(copiadb,null,2));
 				}
 
-				if(limit!=null && offset != null){						//Get /spc_stats Paginacion
-					res.send(JSON.stringify(spc_stats.slice(startIndex,endIndex),null,2));
-				}
+				
 			}
 
 			
 			
 		});
 	});
+
 
     // POST SUICIDE
     
