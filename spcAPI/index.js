@@ -84,43 +84,115 @@ module.exports = function (app) {
         console.log("Initial spc loaded:"+JSON.stringify(ejemplos_spc,null,2));
 		});
 
-
-	//GET /spc-stats con paginacion
-	app.get(BASE_API_URL+"/spc-stats", (req,res) =>{
+	//GET /spc_stats con paginacion
+	/*app.get(BASE_API_URL+"/spc-stats", (req,res) =>{
 		const limit = req.query.limit;
 		const offset = req.query.offset;
-		const startIndex = (offset - 1)* limit;				//comienzo del primer objeto de la pagina
-		const endIndex = offset * limit;					//ultimo objeto de la pagina
+		const countryQuery = req.query.country;
+		const yearQuery = req.query.year;
+
+		const startIndex = (offset - 1)* limit;                //comienzo del primer objeto de la pagina
+		const endIndex = offset * limit;                    //ultimo objeto de la pagina
+		
+		var copiadb = [];
+		db.find({}, (err, spc_stats) =>{
+			spc_stats.forEach( (c) => {
+				delete c._id;
+			});
+			if(limit==null && offset == null){ //Get /spc_stats sin querys por defecto
+				console.log("111")
+				console.log(copiadb);	
+				if (yearQuery==null && countryQuery==null) {
+					res.send(JSON.stringify(spc_stats,null,2));
+
+				} else if (yearQuery!=null) {
+					db.find({year: yearQuery}, (err, years) =>{
+						years.forEach((c) => {
+							copiadb.push(c);
+						})
+						console.log("yearss")
+						console.log(copiadb);	
+					});
+
+				}else if (countryQuery!=null) {
+						db.find({country: countryQuery}, (err, countries) =>{
+							countries.forEach((c) => {
+								copiadb.push(c);
+							})
+							console.log("countries")
+							console.log(copiadb);
+						});
+				}
+		
+				if(copiadb.length>0){
+					res.send(JSON.stringify(copiadb,null,2));
+				}else{
+					console.log("nbnnbnb");
+					res.sendStatus(400);
+				}
+
+			}
+			if(limit!=null && offset != null){						//Get /spc_stats Paginacion
+				res.send(JSON.stringify(spc_stats.slice(startIndex,endIndex),null,2));
+			}else{
+				console.log("aaaaa");
+				res.sendStatus(400);
+			}
+		});
+	});*/
+//GET /spc_stats con paginacion
+	app.get(BASE_API_URL+"/spc-stats", (req,res) =>{
+		function arrayRemove(arr, value) { return arr.filter(function(ele){ return ele != value; });}
+		const limit = req.query.limit;
+		const offset = req.query.offset;
+		const countryQuery = req.query.country;
+		const yearQuery = req.query.year;
+
+		const startIndex = (offset - 1)* limit;                //comienzo del primer objeto de la pagina
+		const endIndex = offset * limit;                    //ultimo objeto de la pagina
+		
 		
 		db.find({}, (err, spc_stats) =>{
-            spc_stats.forEach( (c) => {
-                delete c._id;
+			spc_stats.forEach( (c) => {
+				delete c._id;
 			});
-			
-			if(limit==null || offset == null){
+			var copiadb = spc_stats;
+			if (countryQuery==null && yearQuery==null) {
 				res.send(JSON.stringify(spc_stats,null,2));
-			}else{
-				res.send(spc_stats.slice(startIndex, endIndex));
+			} else {
+				if (countryQuery!=null) {
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].country!=countryQuery) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				} 
+				if (yearQuery!=null) {
+					for(var i=0;i<copiadb.length;i++){
+						if (copiadb[i].year!=yearQuery) {
+							copiadb.splice(i,1)
+							i--;
+						}
+					}
+				} 
+				if (copiadb.length==0) {
+					res.sendStatus(404, "Data not found");
+				}if (copiadb.length>0) {
+					console.log("Data: "+JSON.stringify(copiadb,null,2));
+					res.send(JSON.stringify(copiadb,null,2));
+				}
+
+				if(limit!=null && offset != null){						//Get /spc_stats Paginacion
+					res.send(JSON.stringify(spc_stats.slice(startIndex,endIndex),null,2));
+				}
 			}
+
+			
+			
 		});
 	});
 
-
-/*    // GET SUICIDE	
-    app.get(BASE_API_URL+"/spc-stats", (req,res) =>{
-		console.log("New GET .../spc-stats");
-		
-        db.find({}, (err, spc_stats) =>{
-            spc_stats.forEach( (c) => {
-                delete c._id;
-            });
-            res.send(JSON.stringify(spc_stats,null,2));
-			//res.sendStatus(200,"OK");
-            console.log("Data sent:"+JSON.stringify(spc_stats,null,2));
-			
-        });
-    }); */
-    
     // POST SUICIDE
     
     app.post(BASE_API_URL+"/spc-stats",(req,res) =>{
@@ -193,7 +265,7 @@ module.exports = function (app) {
 				delete c._id;});
 			
 			if(spc_stats.length>0){
-				res.send(JSON.stringify(spc_stats,null,2));
+				res.send(JSON.stringify(spc_stats[0],null,2));
 			}else{
 				res.sendStatus(404,"DATA NOT FOUND");
 			}
