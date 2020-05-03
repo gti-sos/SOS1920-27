@@ -2706,7 +2706,7 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[8] = list[i];
+    	child_ctx[9] = list[i];
     	return child_ctx;
     }
 
@@ -2732,7 +2732,7 @@ var app = (function () {
     	return block;
     }
 
-    // (61:4) {:then contacts}
+    // (62:4) {:then contacts}
     function create_then_block(ctx) {
     	let current;
 
@@ -2756,7 +2756,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const table_changes = {};
 
-    			if (dirty & /*$$scope, contacts, newContact*/ 2051) {
+    			if (dirty & /*$$scope, contacts, newContact*/ 4099) {
     				table_changes.$$scope = { dirty, ctx };
     			}
 
@@ -2780,14 +2780,14 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(61:4) {:then contacts}",
+    		source: "(62:4) {:then contacts}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (76:25) <Button outline  color="primary" on:click={insertContact}>
+    // (77:25) <Button outline  color="primary" on:click={insertContact}>
     function create_default_slot_2(ctx) {
     	let t;
 
@@ -2807,14 +2807,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(76:25) <Button outline  color=\\\"primary\\\" on:click={insertContact}>",
+    		source: "(77:25) <Button outline  color=\\\"primary\\\" on:click={insertContact}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (84:28) <Button outline color="danger" on:click="{deleteContact(contact.name)}">
+    // (85:28) <Button outline color="danger" on:click="{deleteContact(contact.name)}">
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -2834,28 +2834,28 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(84:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteContact(contact.name)}\\\">",
+    		source: "(85:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteContact(contact.name)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (79:16) {#each contacts as contact}
+    // (80:16) {#each contacts as contact}
     function create_each_block(ctx) {
     	let tr;
     	let td0;
     	let a;
-    	let t0_value = /*contact*/ ctx[8].name + "";
+    	let t0_value = /*contact*/ ctx[9].name + "";
     	let t0;
     	let a_href_value;
     	let t1;
     	let td1;
-    	let t2_value = /*contact*/ ctx[8].email + "";
+    	let t2_value = /*contact*/ ctx[9].email + "";
     	let t2;
     	let t3;
     	let td2;
-    	let t4_value = /*contact*/ ctx[8].phone + "";
+    	let t4_value = /*contact*/ ctx[9].phone + "";
     	let t4;
     	let t5;
     	let td3;
@@ -2873,7 +2873,7 @@ var app = (function () {
     		});
 
     	button.$on("click", function () {
-    		if (is_function(/*deleteContact*/ ctx[3](/*contact*/ ctx[8].name))) /*deleteContact*/ ctx[3](/*contact*/ ctx[8].name).apply(this, arguments);
+    		if (is_function(/*deleteContact*/ ctx[3](/*contact*/ ctx[9].name))) /*deleteContact*/ ctx[3](/*contact*/ ctx[9].name).apply(this, arguments);
     	});
 
     	const block = {
@@ -2892,13 +2892,13 @@ var app = (function () {
     			td3 = element("td");
     			create_component(button.$$.fragment);
     			t6 = space();
-    			attr_dev(a, "href", a_href_value = "#/contact/" + /*contact*/ ctx[8].name);
-    			add_location(a, file$2, 80, 28, 2151);
-    			add_location(td0, file$2, 80, 24, 2147);
-    			add_location(td1, file$2, 81, 24, 2234);
-    			add_location(td2, file$2, 82, 24, 2283);
-    			add_location(td3, file$2, 83, 24, 2332);
-    			add_location(tr, file$2, 79, 20, 2118);
+    			attr_dev(a, "href", a_href_value = "#/contact/" + /*contact*/ ctx[9].name);
+    			add_location(a, file$2, 81, 28, 2174);
+    			add_location(td0, file$2, 81, 24, 2170);
+    			add_location(td1, file$2, 82, 24, 2257);
+    			add_location(td2, file$2, 83, 24, 2306);
+    			add_location(td3, file$2, 84, 24, 2355);
+    			add_location(tr, file$2, 80, 20, 2141);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -2919,17 +2919,17 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if ((!current || dirty & /*contacts*/ 2) && t0_value !== (t0_value = /*contact*/ ctx[8].name + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty & /*contacts*/ 2) && t0_value !== (t0_value = /*contact*/ ctx[9].name + "")) set_data_dev(t0, t0_value);
 
-    			if (!current || dirty & /*contacts*/ 2 && a_href_value !== (a_href_value = "#/contact/" + /*contact*/ ctx[8].name)) {
+    			if (!current || dirty & /*contacts*/ 2 && a_href_value !== (a_href_value = "#/contact/" + /*contact*/ ctx[9].name)) {
     				attr_dev(a, "href", a_href_value);
     			}
 
-    			if ((!current || dirty & /*contacts*/ 2) && t2_value !== (t2_value = /*contact*/ ctx[8].email + "")) set_data_dev(t2, t2_value);
-    			if ((!current || dirty & /*contacts*/ 2) && t4_value !== (t4_value = /*contact*/ ctx[8].phone + "")) set_data_dev(t4, t4_value);
+    			if ((!current || dirty & /*contacts*/ 2) && t2_value !== (t2_value = /*contact*/ ctx[9].email + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*contacts*/ 2) && t4_value !== (t4_value = /*contact*/ ctx[9].phone + "")) set_data_dev(t4, t4_value);
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 2048) {
+    			if (dirty & /*$$scope*/ 4096) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -2954,14 +2954,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(79:16) {#each contacts as contact}",
+    		source: "(80:16) {#each contacts as contact}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (62:8) <Table bordered>
+    // (63:8) <Table bordered>
     function create_default_slot(ctx) {
     	let thead;
     	let tr0;
@@ -3047,21 +3047,21 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$2, 64, 20, 1514);
-    			add_location(th1, file$2, 65, 20, 1548);
-    			add_location(th2, file$2, 66, 20, 1583);
-    			add_location(th3, file$2, 67, 20, 1618);
-    			add_location(tr0, file$2, 63, 16, 1489);
-    			add_location(thead, file$2, 62, 12, 1465);
-    			add_location(input0, file$2, 72, 24, 1743);
-    			add_location(td0, file$2, 72, 20, 1739);
-    			add_location(input1, file$2, 73, 24, 1811);
-    			add_location(td1, file$2, 73, 20, 1807);
-    			add_location(input2, file$2, 74, 24, 1880);
-    			add_location(td2, file$2, 74, 20, 1876);
-    			add_location(td3, file$2, 75, 20, 1945);
-    			add_location(tr1, file$2, 71, 16, 1714);
-    			add_location(tbody, file$2, 70, 12, 1690);
+    			add_location(th0, file$2, 65, 20, 1537);
+    			add_location(th1, file$2, 66, 20, 1571);
+    			add_location(th2, file$2, 67, 20, 1606);
+    			add_location(th3, file$2, 68, 20, 1641);
+    			add_location(tr0, file$2, 64, 16, 1512);
+    			add_location(thead, file$2, 63, 12, 1488);
+    			add_location(input0, file$2, 73, 24, 1766);
+    			add_location(td0, file$2, 73, 20, 1762);
+    			add_location(input1, file$2, 74, 24, 1834);
+    			add_location(td1, file$2, 74, 20, 1830);
+    			add_location(input2, file$2, 75, 24, 1903);
+    			add_location(td2, file$2, 75, 20, 1899);
+    			add_location(td3, file$2, 76, 20, 1968);
+    			add_location(tr1, file$2, 72, 16, 1737);
+    			add_location(tbody, file$2, 71, 12, 1713);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -3100,9 +3100,9 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[5]),
-    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[6]),
-    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[7])
+    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[6]),
+    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[7]),
+    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[8])
     			];
     		},
     		p: function update(ctx, dirty) {
@@ -3120,7 +3120,7 @@ var app = (function () {
 
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 2048) {
+    			if (dirty & /*$$scope*/ 4096) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -3188,14 +3188,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(62:8) <Table bordered>",
+    		source: "(63:8) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (59:21)          Loading contacts...     {:then contacts}
+    // (60:21)          Loading contacts...     {:then contacts}
     function create_pending_block(ctx) {
     	let t;
 
@@ -3218,7 +3218,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(59:21)          Loading contacts...     {:then contacts}",
+    		source: "(60:21)          Loading contacts...     {:then contacts}",
     		ctx
     	});
 
@@ -3247,7 +3247,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			info.block.c();
-    			add_location(main, file$2, 56, 0, 1348);
+    			add_location(main, file$2, 57, 0, 1371);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3304,6 +3304,7 @@ var app = (function () {
     function instance$3($$self, $$props, $$invalidate) {
     	let contacts = [];
     	let newContact = { name: "", phone: "", email: "" };
+    	let errorMSG = "";
     	onMount(getContacts);
 
     	async function getContacts() {
@@ -3368,6 +3369,7 @@ var app = (function () {
     		Button,
     		contacts,
     		newContact,
+    		errorMSG,
     		getContacts,
     		insertContact,
     		deleteContact
@@ -3376,6 +3378,7 @@ var app = (function () {
     	$$self.$inject_state = $$props => {
     		if ("contacts" in $$props) $$invalidate(1, contacts = $$props.contacts);
     		if ("newContact" in $$props) $$invalidate(0, newContact = $$props.newContact);
+    		if ("errorMSG" in $$props) errorMSG = $$props.errorMSG;
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -3387,6 +3390,7 @@ var app = (function () {
     		contacts,
     		insertContact,
     		deleteContact,
+    		errorMSG,
     		getContacts,
     		input0_input_handler,
     		input1_input_handler,
@@ -4118,13 +4122,2355 @@ var app = (function () {
     	}
     }
 
-    /* src\front\App.svelte generated by Svelte v3.20.1 */
-    const file$5 = "src\\front\\App.svelte";
+    /* src\front\Home.svelte generated by Svelte v3.20.1 */
+
+    const file$5 = "src\\front\\Home.svelte";
 
     function create_fragment$6(ctx) {
     	let main;
+    	let a0;
+    	let t1;
+    	let a1;
+    	let t3;
+    	let a2;
+
+    	const block = {
+    		c: function create() {
+    			main = element("main");
+    			a0 = element("a");
+    			a0.textContent = "GUI spc";
+    			t1 = space();
+    			a1 = element("a");
+    			a1.textContent = "GUI poberty";
+    			t3 = space();
+    			a2 = element("a");
+    			a2.textContent = "GUI lq";
+    			attr_dev(a0, "href", "#/gui1SPC");
+    			add_location(a0, file$5, 0, 6, 6);
+    			attr_dev(a1, "href", "#/gui2poverty");
+    			add_location(a1, file$5, 1, 0, 40);
+    			attr_dev(a2, "href", "#/gui3lq");
+    			add_location(a2, file$5, 2, 0, 82);
+    			add_location(main, file$5, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, main, anchor);
+    			append_dev(main, a0);
+    			append_dev(main, t1);
+    			append_dev(main, a1);
+    			append_dev(main, t3);
+    			append_dev(main, a2);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(main);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$6.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$6($$self, $$props) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Home> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Home", $$slots, []);
+    	return [];
+    }
+
+    class Home extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Home",
+    			options,
+    			id: create_fragment$6.name
+    		});
+    	}
+    }
+
+    /* src\front\GUI1SPC\Home.svelte generated by Svelte v3.20.1 */
+
+    const { console: console_1$3 } = globals;
+    const file$6 = "src\\front\\GUI1SPC\\Home.svelte";
+
+    function get_each_context$1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[17] = list[i];
+    	return child_ctx;
+    }
+
+    // (1:0) <script>      import {          onMount      }
+    function create_catch_block$2(ctx) {
+    	const block = {
+    		c: noop,
+    		m: noop,
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: noop
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_catch_block$2.name,
+    		type: "catch",
+    		source: "(1:0) <script>      import {          onMount      }",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (114:4) {:then spc}
+    function create_then_block$2(ctx) {
+    	let t0;
+    	let t1;
+    	let current;
+
+    	const table = new Table({
+    			props: {
+    				bordered: true,
+    				$$slots: { default: [create_default_slot_3] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const button0 = new Button({
+    			props: {
+    				outline: true,
+    				color: "primary",
+    				$$slots: { default: [create_default_slot_2$2] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button0.$on("click", /*getSPCLoadInitialData*/ ctx[3]);
+
+    	const button1 = new Button({
+    			props: {
+    				outline: true,
+    				color: "danger",
+    				$$slots: { default: [create_default_slot_1$2] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button1.$on("click", /*deleteSPCALL*/ ctx[6]);
+
+    	const block = {
+    		c: function create() {
+    			create_component(table.$$.fragment);
+    			t0 = space();
+    			create_component(button0.$$.fragment);
+    			t1 = space();
+    			create_component(button1.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(table, target, anchor);
+    			insert_dev(target, t0, anchor);
+    			mount_component(button0, target, anchor);
+    			insert_dev(target, t1, anchor);
+    			mount_component(button1, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const table_changes = {};
+
+    			if (dirty & /*$$scope, spc, newSpc*/ 1048581) {
+    				table_changes.$$scope = { dirty, ctx };
+    			}
+
+    			table.$set(table_changes);
+    			const button0_changes = {};
+
+    			if (dirty & /*$$scope*/ 1048576) {
+    				button0_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button0.$set(button0_changes);
+    			const button1_changes = {};
+
+    			if (dirty & /*$$scope*/ 1048576) {
+    				button1_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button1.$set(button1_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(table.$$.fragment, local);
+    			transition_in(button0.$$.fragment, local);
+    			transition_in(button1.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(table.$$.fragment, local);
+    			transition_out(button0.$$.fragment, local);
+    			transition_out(button1.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(table, detaching);
+    			if (detaching) detach_dev(t0);
+    			destroy_component(button0, detaching);
+    			if (detaching) detach_dev(t1);
+    			destroy_component(button1, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_then_block$2.name,
+    		type: "then",
+    		source: "(114:4) {:then spc}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (142:25) <Button outline  color="primary" on:click={insertSPC}>
+    function create_default_slot_5(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Insert");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_5.name,
+    		type: "slot",
+    		source: "(142:25) <Button outline  color=\\\"primary\\\" on:click={insertSPC}>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (156:28) <Button outline color="danger" on:click="{deleteSPC(suicide.country)}">
+    function create_default_slot_4(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Delete");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_4.name,
+    		type: "slot",
+    		source: "(156:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPC(suicide.country)}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (145:16) {#each spc as suicide}
+    function create_each_block$1(ctx) {
+    	let tr;
+    	let td0;
+    	let a;
+    	let t0_value = /*suicide*/ ctx[17].country + "";
+    	let t0;
+    	let a_href_value;
+    	let t1;
+    	let td1;
+    	let t2_value = /*suicide*/ ctx[17].both_sex + "";
+    	let t2;
+    	let t3;
+    	let td2;
+    	let t4_value = /*suicide*/ ctx[17].male_rank + "";
+    	let t4;
+    	let t5;
+    	let td3;
+    	let t6_value = /*suicide*/ ctx[17].male_number + "";
+    	let t6;
+    	let t7;
+    	let td4;
+    	let t8_value = /*suicide*/ ctx[17].female_rank + "";
+    	let t8;
+    	let t9;
+    	let td5;
+    	let t10_value = /*suicide*/ ctx[17].female_number + "";
+    	let t10;
+    	let t11;
+    	let td6;
+    	let t12_value = /*suicide*/ ctx[17].ratio + "";
+    	let t12;
+    	let t13;
+    	let td7;
+    	let t14_value = /*suicide*/ ctx[17].year + "";
+    	let t14;
+    	let t15;
+    	let td8;
+    	let t16_value = /*suicide*/ ctx[17].continent + "";
+    	let t16;
+    	let t17;
+    	let td9;
+    	let t18;
+    	let current;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "danger",
+    				$$slots: { default: [create_default_slot_4] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", function () {
+    		if (is_function(/*deleteSPC*/ ctx[5](/*suicide*/ ctx[17].country))) /*deleteSPC*/ ctx[5](/*suicide*/ ctx[17].country).apply(this, arguments);
+    	});
+
+    	const block = {
+    		c: function create() {
+    			tr = element("tr");
+    			td0 = element("td");
+    			a = element("a");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			td1 = element("td");
+    			t2 = text(t2_value);
+    			t3 = space();
+    			td2 = element("td");
+    			t4 = text(t4_value);
+    			t5 = space();
+    			td3 = element("td");
+    			t6 = text(t6_value);
+    			t7 = space();
+    			td4 = element("td");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			td5 = element("td");
+    			t10 = text(t10_value);
+    			t11 = space();
+    			td6 = element("td");
+    			t12 = text(t12_value);
+    			t13 = space();
+    			td7 = element("td");
+    			t14 = text(t14_value);
+    			t15 = space();
+    			td8 = element("td");
+    			t16 = text(t16_value);
+    			t17 = space();
+    			td9 = element("td");
+    			create_component(button.$$.fragment);
+    			t18 = space();
+    			attr_dev(a, "href", a_href_value = "#/spc-stats/" + /*suicide*/ ctx[17].country + "/" + /*suicide*/ ctx[17].year);
+    			add_location(a, file$6, 146, 28, 4471);
+    			add_location(td0, file$6, 146, 24, 4467);
+    			add_location(td1, file$6, 147, 24, 4578);
+    			add_location(td2, file$6, 148, 24, 4631);
+    			add_location(td3, file$6, 149, 24, 4685);
+    			add_location(td4, file$6, 150, 24, 4741);
+    			add_location(td5, file$6, 151, 24, 4797);
+    			add_location(td6, file$6, 152, 24, 4855);
+    			add_location(td7, file$6, 153, 24, 4905);
+    			add_location(td8, file$6, 154, 24, 4954);
+    			add_location(td9, file$6, 155, 24, 5008);
+    			add_location(tr, file$6, 145, 20, 4437);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, tr, anchor);
+    			append_dev(tr, td0);
+    			append_dev(td0, a);
+    			append_dev(a, t0);
+    			append_dev(tr, t1);
+    			append_dev(tr, td1);
+    			append_dev(td1, t2);
+    			append_dev(tr, t3);
+    			append_dev(tr, td2);
+    			append_dev(td2, t4);
+    			append_dev(tr, t5);
+    			append_dev(tr, td3);
+    			append_dev(td3, t6);
+    			append_dev(tr, t7);
+    			append_dev(tr, td4);
+    			append_dev(td4, t8);
+    			append_dev(tr, t9);
+    			append_dev(tr, td5);
+    			append_dev(td5, t10);
+    			append_dev(tr, t11);
+    			append_dev(tr, td6);
+    			append_dev(td6, t12);
+    			append_dev(tr, t13);
+    			append_dev(tr, td7);
+    			append_dev(td7, t14);
+    			append_dev(tr, t15);
+    			append_dev(tr, td8);
+    			append_dev(td8, t16);
+    			append_dev(tr, t17);
+    			append_dev(tr, td9);
+    			mount_component(button, td9, null);
+    			append_dev(tr, t18);
+    			current = true;
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if ((!current || dirty & /*spc*/ 4) && t0_value !== (t0_value = /*suicide*/ ctx[17].country + "")) set_data_dev(t0, t0_value);
+
+    			if (!current || dirty & /*spc*/ 4 && a_href_value !== (a_href_value = "#/spc-stats/" + /*suicide*/ ctx[17].country + "/" + /*suicide*/ ctx[17].year)) {
+    				attr_dev(a, "href", a_href_value);
+    			}
+
+    			if ((!current || dirty & /*spc*/ 4) && t2_value !== (t2_value = /*suicide*/ ctx[17].both_sex + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*spc*/ 4) && t4_value !== (t4_value = /*suicide*/ ctx[17].male_rank + "")) set_data_dev(t4, t4_value);
+    			if ((!current || dirty & /*spc*/ 4) && t6_value !== (t6_value = /*suicide*/ ctx[17].male_number + "")) set_data_dev(t6, t6_value);
+    			if ((!current || dirty & /*spc*/ 4) && t8_value !== (t8_value = /*suicide*/ ctx[17].female_rank + "")) set_data_dev(t8, t8_value);
+    			if ((!current || dirty & /*spc*/ 4) && t10_value !== (t10_value = /*suicide*/ ctx[17].female_number + "")) set_data_dev(t10, t10_value);
+    			if ((!current || dirty & /*spc*/ 4) && t12_value !== (t12_value = /*suicide*/ ctx[17].ratio + "")) set_data_dev(t12, t12_value);
+    			if ((!current || dirty & /*spc*/ 4) && t14_value !== (t14_value = /*suicide*/ ctx[17].year + "")) set_data_dev(t14, t14_value);
+    			if ((!current || dirty & /*spc*/ 4) && t16_value !== (t16_value = /*suicide*/ ctx[17].continent + "")) set_data_dev(t16, t16_value);
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1048576) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(tr);
+    			destroy_component(button);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$1.name,
+    		type: "each",
+    		source: "(145:16) {#each spc as suicide}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (116:8) <Table bordered>
+    function create_default_slot_3(ctx) {
+    	let thead;
+    	let tr0;
+    	let th0;
+    	let t1;
+    	let th1;
+    	let t3;
+    	let th2;
+    	let t5;
+    	let th3;
+    	let t7;
+    	let th4;
+    	let t9;
+    	let th5;
+    	let t11;
+    	let th6;
+    	let t13;
+    	let th7;
+    	let t15;
+    	let th8;
+    	let t17;
+    	let th9;
+    	let t19;
+    	let tbody;
+    	let tr1;
+    	let td0;
+    	let input0;
+    	let t20;
+    	let td1;
+    	let input1;
+    	let t21;
+    	let td2;
+    	let input2;
+    	let t22;
+    	let td3;
+    	let input3;
+    	let t23;
+    	let td4;
+    	let input4;
+    	let t24;
+    	let td5;
+    	let input5;
+    	let t25;
+    	let td6;
+    	let input6;
+    	let t26;
+    	let td7;
+    	let input7;
+    	let t27;
+    	let td8;
+    	let input8;
+    	let t28;
+    	let td9;
+    	let t29;
+    	let current;
+    	let dispose;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "primary",
+    				$$slots: { default: [create_default_slot_5] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", /*insertSPC*/ ctx[4]);
+    	let each_value = /*spc*/ ctx[2];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	const block = {
+    		c: function create() {
+    			thead = element("thead");
+    			tr0 = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "Country";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Both_sex";
+    			t3 = space();
+    			th2 = element("th");
+    			th2.textContent = "Male_rank";
+    			t5 = space();
+    			th3 = element("th");
+    			th3.textContent = "Male_number";
+    			t7 = space();
+    			th4 = element("th");
+    			th4.textContent = "Female_rank";
+    			t9 = space();
+    			th5 = element("th");
+    			th5.textContent = "Female_number";
+    			t11 = space();
+    			th6 = element("th");
+    			th6.textContent = "Ratio";
+    			t13 = space();
+    			th7 = element("th");
+    			th7.textContent = "Year";
+    			t15 = space();
+    			th8 = element("th");
+    			th8.textContent = "Continent";
+    			t17 = space();
+    			th9 = element("th");
+    			th9.textContent = "Actions";
+    			t19 = space();
+    			tbody = element("tbody");
+    			tr1 = element("tr");
+    			td0 = element("td");
+    			input0 = element("input");
+    			t20 = space();
+    			td1 = element("td");
+    			input1 = element("input");
+    			t21 = space();
+    			td2 = element("td");
+    			input2 = element("input");
+    			t22 = space();
+    			td3 = element("td");
+    			input3 = element("input");
+    			t23 = space();
+    			td4 = element("td");
+    			input4 = element("input");
+    			t24 = space();
+    			td5 = element("td");
+    			input5 = element("input");
+    			t25 = space();
+    			td6 = element("td");
+    			input6 = element("input");
+    			t26 = space();
+    			td7 = element("td");
+    			input7 = element("input");
+    			t27 = space();
+    			td8 = element("td");
+    			input8 = element("input");
+    			t28 = space();
+    			td9 = element("td");
+    			create_component(button.$$.fragment);
+    			t29 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			add_location(th0, file$6, 118, 20, 3161);
+    			add_location(th1, file$6, 119, 20, 3199);
+    			add_location(th2, file$6, 120, 20, 3238);
+    			add_location(th3, file$6, 121, 20, 3278);
+    			add_location(th4, file$6, 122, 20, 3320);
+    			add_location(th5, file$6, 123, 20, 3362);
+    			add_location(th6, file$6, 124, 20, 3406);
+    			add_location(th7, file$6, 125, 20, 3442);
+    			add_location(th8, file$6, 126, 20, 3477);
+    			add_location(th9, file$6, 127, 20, 3517);
+    			add_location(tr0, file$6, 117, 16, 3135);
+    			add_location(thead, file$6, 116, 12, 3110);
+    			add_location(input0, file$6, 132, 24, 3647);
+    			add_location(td0, file$6, 132, 20, 3643);
+    			add_location(input1, file$6, 133, 24, 3715);
+    			add_location(td1, file$6, 133, 20, 3711);
+    			add_location(input2, file$6, 134, 24, 3784);
+    			add_location(td2, file$6, 134, 20, 3780);
+    			add_location(input3, file$6, 135, 24, 3854);
+    			add_location(td3, file$6, 135, 20, 3850);
+    			add_location(input4, file$6, 136, 24, 3926);
+    			add_location(td4, file$6, 136, 20, 3922);
+    			add_location(input5, file$6, 137, 24, 3998);
+    			add_location(td5, file$6, 137, 20, 3994);
+    			add_location(input6, file$6, 138, 24, 4072);
+    			add_location(td6, file$6, 138, 20, 4068);
+    			add_location(input7, file$6, 139, 24, 4138);
+    			add_location(td7, file$6, 139, 20, 4134);
+    			add_location(input8, file$6, 140, 24, 4203);
+    			add_location(td8, file$6, 140, 20, 4199);
+    			add_location(td9, file$6, 141, 20, 4269);
+    			add_location(tr1, file$6, 131, 16, 3617);
+    			add_location(tbody, file$6, 130, 12, 3592);
+    		},
+    		m: function mount(target, anchor, remount) {
+    			insert_dev(target, thead, anchor);
+    			append_dev(thead, tr0);
+    			append_dev(tr0, th0);
+    			append_dev(tr0, t1);
+    			append_dev(tr0, th1);
+    			append_dev(tr0, t3);
+    			append_dev(tr0, th2);
+    			append_dev(tr0, t5);
+    			append_dev(tr0, th3);
+    			append_dev(tr0, t7);
+    			append_dev(tr0, th4);
+    			append_dev(tr0, t9);
+    			append_dev(tr0, th5);
+    			append_dev(tr0, t11);
+    			append_dev(tr0, th6);
+    			append_dev(tr0, t13);
+    			append_dev(tr0, th7);
+    			append_dev(tr0, t15);
+    			append_dev(tr0, th8);
+    			append_dev(tr0, t17);
+    			append_dev(tr0, th9);
+    			insert_dev(target, t19, anchor);
+    			insert_dev(target, tbody, anchor);
+    			append_dev(tbody, tr1);
+    			append_dev(tr1, td0);
+    			append_dev(td0, input0);
+    			set_input_value(input0, /*newSpc*/ ctx[0].country);
+    			append_dev(tr1, t20);
+    			append_dev(tr1, td1);
+    			append_dev(td1, input1);
+    			set_input_value(input1, /*newSpc*/ ctx[0].both_sex);
+    			append_dev(tr1, t21);
+    			append_dev(tr1, td2);
+    			append_dev(td2, input2);
+    			set_input_value(input2, /*newSpc*/ ctx[0].male_rank);
+    			append_dev(tr1, t22);
+    			append_dev(tr1, td3);
+    			append_dev(td3, input3);
+    			set_input_value(input3, /*newSpc*/ ctx[0].male_number);
+    			append_dev(tr1, t23);
+    			append_dev(tr1, td4);
+    			append_dev(td4, input4);
+    			set_input_value(input4, /*newSpc*/ ctx[0].female_rank);
+    			append_dev(tr1, t24);
+    			append_dev(tr1, td5);
+    			append_dev(td5, input5);
+    			set_input_value(input5, /*newSpc*/ ctx[0].female_number);
+    			append_dev(tr1, t25);
+    			append_dev(tr1, td6);
+    			append_dev(td6, input6);
+    			set_input_value(input6, /*newSpc*/ ctx[0].ratio);
+    			append_dev(tr1, t26);
+    			append_dev(tr1, td7);
+    			append_dev(td7, input7);
+    			set_input_value(input7, /*newSpc*/ ctx[0].year);
+    			append_dev(tr1, t27);
+    			append_dev(tr1, td8);
+    			append_dev(td8, input8);
+    			set_input_value(input8, /*newSpc*/ ctx[0].continent);
+    			append_dev(tr1, t28);
+    			append_dev(tr1, td9);
+    			mount_component(button, td9, null);
+    			append_dev(tbody, t29);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(tbody, null);
+    			}
+
+    			current = true;
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[8]),
+    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[9]),
+    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[10]),
+    				listen_dev(input3, "input", /*input3_input_handler*/ ctx[11]),
+    				listen_dev(input4, "input", /*input4_input_handler*/ ctx[12]),
+    				listen_dev(input5, "input", /*input5_input_handler*/ ctx[13]),
+    				listen_dev(input6, "input", /*input6_input_handler*/ ctx[14]),
+    				listen_dev(input7, "input", /*input7_input_handler*/ ctx[15]),
+    				listen_dev(input8, "input", /*input8_input_handler*/ ctx[16])
+    			];
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*newSpc*/ 1 && input0.value !== /*newSpc*/ ctx[0].country) {
+    				set_input_value(input0, /*newSpc*/ ctx[0].country);
+    			}
+
+    			if (dirty & /*newSpc*/ 1 && input1.value !== /*newSpc*/ ctx[0].both_sex) {
+    				set_input_value(input1, /*newSpc*/ ctx[0].both_sex);
+    			}
+
+    			if (dirty & /*newSpc*/ 1 && input2.value !== /*newSpc*/ ctx[0].male_rank) {
+    				set_input_value(input2, /*newSpc*/ ctx[0].male_rank);
+    			}
+
+    			if (dirty & /*newSpc*/ 1 && input3.value !== /*newSpc*/ ctx[0].male_number) {
+    				set_input_value(input3, /*newSpc*/ ctx[0].male_number);
+    			}
+
+    			if (dirty & /*newSpc*/ 1 && input4.value !== /*newSpc*/ ctx[0].female_rank) {
+    				set_input_value(input4, /*newSpc*/ ctx[0].female_rank);
+    			}
+
+    			if (dirty & /*newSpc*/ 1 && input5.value !== /*newSpc*/ ctx[0].female_number) {
+    				set_input_value(input5, /*newSpc*/ ctx[0].female_number);
+    			}
+
+    			if (dirty & /*newSpc*/ 1 && input6.value !== /*newSpc*/ ctx[0].ratio) {
+    				set_input_value(input6, /*newSpc*/ ctx[0].ratio);
+    			}
+
+    			if (dirty & /*newSpc*/ 1 && input7.value !== /*newSpc*/ ctx[0].year) {
+    				set_input_value(input7, /*newSpc*/ ctx[0].year);
+    			}
+
+    			if (dirty & /*newSpc*/ 1 && input8.value !== /*newSpc*/ ctx[0].continent) {
+    				set_input_value(input8, /*newSpc*/ ctx[0].continent);
+    			}
+
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1048576) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+
+    			if (dirty & /*deleteSPC, spc*/ 36) {
+    				each_value = /*spc*/ ctx[2];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$1(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$1(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(tbody, null);
+    					}
+    				}
+
+    				group_outros();
+
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+
+    				check_outros();
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			each_blocks = each_blocks.filter(Boolean);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(thead);
+    			if (detaching) detach_dev(t19);
+    			if (detaching) detach_dev(tbody);
+    			destroy_component(button);
+    			destroy_each(each_blocks, detaching);
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_3.name,
+    		type: "slot",
+    		source: "(116:8) <Table bordered>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (161:8) <Button outline color="primary" on:click="{getSPCLoadInitialData}">
+    function create_default_slot_2$2(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Reiniciar ejemplos iniciales");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_2$2.name,
+    		type: "slot",
+    		source: "(161:8) <Button outline color=\\\"primary\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (164:8) <Button outline color="danger" on:click="{deleteSPCALL}">
+    function create_default_slot_1$2(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Borrar todo");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_1$2.name,
+    		type: "slot",
+    		source: "(164:8) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (112:16)           Loading spc...      {:then spc}
+    function create_pending_block$2(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Loading spc...");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_pending_block$2.name,
+    		type: "pending",
+    		source: "(112:16)           Loading spc...      {:then spc}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (168:4) {#if errorMSG}
+    function create_if_block$4(ctx) {
+    	let p;
+    	let t0;
+    	let t1;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t0 = text("STATUS: ");
+    			t1 = text(/*errorMSG*/ ctx[1]);
+    			set_style(p, "color", "red");
+    			add_location(p, file$6, 168, 4, 5484);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t0);
+    			append_dev(p, t1);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*errorMSG*/ 2) set_data_dev(t1, /*errorMSG*/ ctx[1]);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$4.name,
+    		type: "if",
+    		source: "(168:4) {#if errorMSG}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (173:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$2(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Back");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$2.name,
+    		type: "slot",
+    		source: "(173:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$7(ctx) {
+    	let main;
     	let h1;
     	let t1;
+    	let promise;
+    	let t2;
+    	let t3;
+    	let br0;
+    	let t4;
+    	let br1;
+    	let t5;
+    	let current;
+
+    	let info = {
+    		ctx,
+    		current: null,
+    		token: null,
+    		pending: create_pending_block$2,
+    		then: create_then_block$2,
+    		catch: create_catch_block$2,
+    		value: 2,
+    		blocks: [,,,]
+    	};
+
+    	handle_promise(promise = /*spc*/ ctx[2], info);
+    	let if_block = /*errorMSG*/ ctx[1] && create_if_block$4(ctx);
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$2] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			main = element("main");
+    			h1 = element("h1");
+    			h1.textContent = "SPC Manager";
+    			t1 = space();
+    			info.block.c();
+    			t2 = space();
+    			if (if_block) if_block.c();
+    			t3 = space();
+    			br0 = element("br");
+    			t4 = space();
+    			br1 = element("br");
+    			t5 = space();
+    			create_component(button.$$.fragment);
+    			add_location(h1, file$6, 110, 4, 2981);
+    			add_location(br0, file$6, 170, 4, 5545);
+    			add_location(br1, file$6, 171, 4, 5555);
+    			add_location(main, file$6, 109, 0, 2969);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, main, anchor);
+    			append_dev(main, h1);
+    			append_dev(main, t1);
+    			info.block.m(main, info.anchor = null);
+    			info.mount = () => main;
+    			info.anchor = t2;
+    			append_dev(main, t2);
+    			if (if_block) if_block.m(main, null);
+    			append_dev(main, t3);
+    			append_dev(main, br0);
+    			append_dev(main, t4);
+    			append_dev(main, br1);
+    			append_dev(main, t5);
+    			mount_component(button, main, null);
+    			current = true;
+    		},
+    		p: function update(new_ctx, [dirty]) {
+    			ctx = new_ctx;
+    			info.ctx = ctx;
+
+    			if (dirty & /*spc*/ 4 && promise !== (promise = /*spc*/ ctx[2]) && handle_promise(promise, info)) ; else {
+    				const child_ctx = ctx.slice();
+    				child_ctx[2] = info.resolved;
+    				info.block.p(child_ctx, dirty);
+    			}
+
+    			if (/*errorMSG*/ ctx[1]) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block$4(ctx);
+    					if_block.c();
+    					if_block.m(main, t3);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1048576) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(info.block);
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			for (let i = 0; i < 3; i += 1) {
+    				const block = info.blocks[i];
+    				transition_out(block);
+    			}
+
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(main);
+    			info.block.d();
+    			info.token = null;
+    			info = null;
+    			if (if_block) if_block.d();
+    			destroy_component(button);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$7.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$7($$self, $$props, $$invalidate) {
+    	let spc = [];
+
+    	let newSpc = {
+    		country: "",
+    		both_sex: "",
+    		male_rank: "",
+    		male_number: "",
+    		female_rank: "",
+    		female_number: "",
+    		ratio: "",
+    		year: "",
+    		continent: ""
+    	};
+
+    	let errorMSG = "";
+    	onMount(getSPC);
+
+    	//GET
+    	async function getSPC() {
+    		console.log("Fetching spc...");
+    		const res = await fetch("/api/v1/spc-stats");
+
+    		if (res.ok) {
+    			console.log("Ok:");
+    			const json = await res.json();
+    			$$invalidate(2, spc = json);
+    			console.log("Received " + spc.length + " spc.");
+    		} else {
+    			$$invalidate(1, errorMSG = res.status + ": " + res.statusText);
+    			console.log("ERROR!");
+    		}
+    	}
+
+    	//GET INITIALDATA
+    	async function getSPCLoadInitialData() {
+    		console.log("Fetching spc...");
+    		const res = await fetch("/api/v1/spc-stats/loadInitialData");
+
+    		if (res.ok) {
+    			console.log("Ok:");
+    			const json = await res.json();
+    			$$invalidate(2, spc = json);
+    			console.log("Received " + spc.length + " spc.");
+    		} else {
+    			$$invalidate(1, errorMSG = res.status + ": " + res.statusText);
+    			console.log("ERROR!");
+    		}
+    	}
+
+    	//INSERT
+    	async function insertSPC() {
+    		console.log("Inserting spc..." + JSON.stringify(newSpc));
+    		const longitud = spc.length;
+
+    		const res = await fetch("/api/v1/spc-stats", {
+    			method: "POST",
+    			body: JSON.stringify(newSpc),
+    			headers: { "Content-Type": "application/json" }
+    		}).then(function (res) {
+    			console.log(longitud);
+    			console.log(spc.length);
+    			getSPC();
+
+    			if (spc.length > longitud) {
+    				$$invalidate(1, errorMSG = "");
+    				console.log("Inserted 1 spc.");
+    			} else {
+    				$$invalidate(1, errorMSG = res.status + ": " + res.statusText);
+    				console.log("ERROR!");
+    			}
+    		});
+    	}
+
+    	//DELETE SPECIFIC
+    	async function deleteSPC(name) {
+    		const res = await fetch("/api/v1/spc-stats/" + name, { method: "DELETE" }).then(function (res) {
+    			$$invalidate(1, errorMSG = "");
+    			getSPC();
+    			console.log("Deleted 1 spc.");
+    		});
+    	}
+
+    	//DELETE ALL
+    	async function deleteSPCALL() {
+    		const res = await fetch("/api/v1/spc-stats/", { method: "DELETE" }).then(function (res) {
+    			$$invalidate(1, errorMSG = "");
+    			getSPC();
+    			console.log("Deleted all spc.");
+    		});
+    	}
+
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$3.warn(`<Home> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Home", $$slots, []);
+
+    	function input0_input_handler() {
+    		newSpc.country = this.value;
+    		$$invalidate(0, newSpc);
+    	}
+
+    	function input1_input_handler() {
+    		newSpc.both_sex = this.value;
+    		$$invalidate(0, newSpc);
+    	}
+
+    	function input2_input_handler() {
+    		newSpc.male_rank = this.value;
+    		$$invalidate(0, newSpc);
+    	}
+
+    	function input3_input_handler() {
+    		newSpc.male_number = this.value;
+    		$$invalidate(0, newSpc);
+    	}
+
+    	function input4_input_handler() {
+    		newSpc.female_rank = this.value;
+    		$$invalidate(0, newSpc);
+    	}
+
+    	function input5_input_handler() {
+    		newSpc.female_number = this.value;
+    		$$invalidate(0, newSpc);
+    	}
+
+    	function input6_input_handler() {
+    		newSpc.ratio = this.value;
+    		$$invalidate(0, newSpc);
+    	}
+
+    	function input7_input_handler() {
+    		newSpc.year = this.value;
+    		$$invalidate(0, newSpc);
+    	}
+
+    	function input8_input_handler() {
+    		newSpc.continent = this.value;
+    		$$invalidate(0, newSpc);
+    	}
+
+    	$$self.$capture_state = () => ({
+    		onMount,
+    		pop,
+    		Table,
+    		Button,
+    		spc,
+    		newSpc,
+    		errorMSG,
+    		getSPC,
+    		getSPCLoadInitialData,
+    		insertSPC,
+    		deleteSPC,
+    		deleteSPCALL
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ("spc" in $$props) $$invalidate(2, spc = $$props.spc);
+    		if ("newSpc" in $$props) $$invalidate(0, newSpc = $$props.newSpc);
+    		if ("errorMSG" in $$props) $$invalidate(1, errorMSG = $$props.errorMSG);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		newSpc,
+    		errorMSG,
+    		spc,
+    		getSPCLoadInitialData,
+    		insertSPC,
+    		deleteSPC,
+    		deleteSPCALL,
+    		getSPC,
+    		input0_input_handler,
+    		input1_input_handler,
+    		input2_input_handler,
+    		input3_input_handler,
+    		input4_input_handler,
+    		input5_input_handler,
+    		input6_input_handler,
+    		input7_input_handler,
+    		input8_input_handler
+    	];
+    }
+
+    class Home$1 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Home",
+    			options,
+    			id: create_fragment$7.name
+    		});
+    	}
+    }
+
+    /* src\front\GUI1SPC\EditSpc.svelte generated by Svelte v3.20.1 */
+
+    const { console: console_1$4 } = globals;
+    const file$7 = "src\\front\\GUI1SPC\\EditSpc.svelte";
+
+    // (1:0) <script>      import {          onMount      }
+    function create_catch_block$3(ctx) {
+    	const block = {
+    		c: noop,
+    		m: noop,
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: noop
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_catch_block$3.name,
+    		type: "catch",
+    		source: "(1:0) <script>      import {          onMount      }",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (85:4) {:then spc}
+    function create_then_block$3(ctx) {
+    	let current;
+
+    	const table = new Table({
+    			props: {
+    				bordered: true,
+    				$$slots: { default: [create_default_slot_1$3] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(table.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(table, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const table_changes = {};
+
+    			if (dirty & /*$$scope, updatedContinent, updatedYear, updatedRatio, updatedFemaleNumber, updatedFemaleRank, updatedMaleNumber, updatedMaleRank, updatedBothSex, updatedCountry*/ 2098174) {
+    				table_changes.$$scope = { dirty, ctx };
+    			}
+
+    			table.$set(table_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(table.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(table.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(table, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_then_block$3.name,
+    		type: "then",
+    		source: "(85:4) {:then spc}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (112:25) <Button outline  color="primary" on:click={updateSpc}>
+    function create_default_slot_2$3(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Update");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_2$3.name,
+    		type: "slot",
+    		source: "(112:25) <Button outline  color=\\\"primary\\\" on:click={updateSpc}>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (86:8) <Table bordered>
+    function create_default_slot_1$3(ctx) {
+    	let thead;
+    	let tr0;
+    	let th0;
+    	let t1;
+    	let th1;
+    	let t3;
+    	let th2;
+    	let t5;
+    	let th3;
+    	let t7;
+    	let th4;
+    	let t9;
+    	let th5;
+    	let t11;
+    	let th6;
+    	let t13;
+    	let th7;
+    	let t15;
+    	let th8;
+    	let t17;
+    	let th9;
+    	let t19;
+    	let tbody;
+    	let tr1;
+    	let td0;
+    	let t20;
+    	let t21;
+    	let td1;
+    	let input0;
+    	let t22;
+    	let td2;
+    	let input1;
+    	let t23;
+    	let td3;
+    	let input2;
+    	let t24;
+    	let td4;
+    	let input3;
+    	let t25;
+    	let td5;
+    	let input4;
+    	let t26;
+    	let td6;
+    	let input5;
+    	let t27;
+    	let td7;
+    	let t28;
+    	let t29;
+    	let td8;
+    	let input6;
+    	let t30;
+    	let td9;
+    	let current;
+    	let dispose;
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "primary",
+    				$$slots: { default: [create_default_slot_2$3] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", /*updateSpc*/ ctx[12]);
+
+    	const block = {
+    		c: function create() {
+    			thead = element("thead");
+    			tr0 = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "Country";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Both_sex";
+    			t3 = space();
+    			th2 = element("th");
+    			th2.textContent = "Male_rank";
+    			t5 = space();
+    			th3 = element("th");
+    			th3.textContent = "Male_number";
+    			t7 = space();
+    			th4 = element("th");
+    			th4.textContent = "Female_rank";
+    			t9 = space();
+    			th5 = element("th");
+    			th5.textContent = "Female_number";
+    			t11 = space();
+    			th6 = element("th");
+    			th6.textContent = "Ratio";
+    			t13 = space();
+    			th7 = element("th");
+    			th7.textContent = "Year";
+    			t15 = space();
+    			th8 = element("th");
+    			th8.textContent = "Continent";
+    			t17 = space();
+    			th9 = element("th");
+    			th9.textContent = "Actions";
+    			t19 = space();
+    			tbody = element("tbody");
+    			tr1 = element("tr");
+    			td0 = element("td");
+    			t20 = text(/*updatedCountry*/ ctx[1]);
+    			t21 = space();
+    			td1 = element("td");
+    			input0 = element("input");
+    			t22 = space();
+    			td2 = element("td");
+    			input1 = element("input");
+    			t23 = space();
+    			td3 = element("td");
+    			input2 = element("input");
+    			t24 = space();
+    			td4 = element("td");
+    			input3 = element("input");
+    			t25 = space();
+    			td5 = element("td");
+    			input4 = element("input");
+    			t26 = space();
+    			td6 = element("td");
+    			input5 = element("input");
+    			t27 = space();
+    			td7 = element("td");
+    			t28 = text(/*updatedYear*/ ctx[2]);
+    			t29 = space();
+    			td8 = element("td");
+    			input6 = element("input");
+    			t30 = space();
+    			td9 = element("td");
+    			create_component(button.$$.fragment);
+    			add_location(th0, file$7, 88, 20, 2605);
+    			add_location(th1, file$7, 89, 20, 2643);
+    			add_location(th2, file$7, 90, 20, 2682);
+    			add_location(th3, file$7, 91, 20, 2722);
+    			add_location(th4, file$7, 92, 20, 2764);
+    			add_location(th5, file$7, 93, 20, 2806);
+    			add_location(th6, file$7, 94, 20, 2850);
+    			add_location(th7, file$7, 95, 20, 2886);
+    			add_location(th8, file$7, 96, 20, 2921);
+    			add_location(th9, file$7, 97, 20, 2961);
+    			add_location(tr0, file$7, 87, 16, 2579);
+    			add_location(thead, file$7, 86, 12, 2554);
+    			add_location(td0, file$7, 102, 20, 3087);
+    			add_location(input0, file$7, 103, 24, 3138);
+    			add_location(td1, file$7, 103, 20, 3134);
+    			add_location(input1, file$7, 104, 24, 3206);
+    			add_location(td2, file$7, 104, 20, 3202);
+    			add_location(input2, file$7, 105, 24, 3275);
+    			add_location(td3, file$7, 105, 20, 3271);
+    			add_location(input3, file$7, 106, 24, 3346);
+    			add_location(td4, file$7, 106, 20, 3342);
+    			add_location(input4, file$7, 107, 24, 3417);
+    			add_location(td5, file$7, 107, 20, 3413);
+    			add_location(input5, file$7, 108, 24, 3490);
+    			add_location(td6, file$7, 108, 20, 3486);
+    			add_location(td7, file$7, 109, 20, 3552);
+    			add_location(input6, file$7, 110, 24, 3600);
+    			add_location(td8, file$7, 110, 20, 3596);
+    			add_location(td9, file$7, 111, 20, 3666);
+    			add_location(tr1, file$7, 101, 16, 3061);
+    			add_location(tbody, file$7, 100, 12, 3036);
+    		},
+    		m: function mount(target, anchor, remount) {
+    			insert_dev(target, thead, anchor);
+    			append_dev(thead, tr0);
+    			append_dev(tr0, th0);
+    			append_dev(tr0, t1);
+    			append_dev(tr0, th1);
+    			append_dev(tr0, t3);
+    			append_dev(tr0, th2);
+    			append_dev(tr0, t5);
+    			append_dev(tr0, th3);
+    			append_dev(tr0, t7);
+    			append_dev(tr0, th4);
+    			append_dev(tr0, t9);
+    			append_dev(tr0, th5);
+    			append_dev(tr0, t11);
+    			append_dev(tr0, th6);
+    			append_dev(tr0, t13);
+    			append_dev(tr0, th7);
+    			append_dev(tr0, t15);
+    			append_dev(tr0, th8);
+    			append_dev(tr0, t17);
+    			append_dev(tr0, th9);
+    			insert_dev(target, t19, anchor);
+    			insert_dev(target, tbody, anchor);
+    			append_dev(tbody, tr1);
+    			append_dev(tr1, td0);
+    			append_dev(td0, t20);
+    			append_dev(tr1, t21);
+    			append_dev(tr1, td1);
+    			append_dev(td1, input0);
+    			set_input_value(input0, /*updatedBothSex*/ ctx[6]);
+    			append_dev(tr1, t22);
+    			append_dev(tr1, td2);
+    			append_dev(td2, input1);
+    			set_input_value(input1, /*updatedMaleRank*/ ctx[5]);
+    			append_dev(tr1, t23);
+    			append_dev(tr1, td3);
+    			append_dev(td3, input2);
+    			set_input_value(input2, /*updatedMaleNumber*/ ctx[8]);
+    			append_dev(tr1, t24);
+    			append_dev(tr1, td4);
+    			append_dev(td4, input3);
+    			set_input_value(input3, /*updatedFemaleRank*/ ctx[4]);
+    			append_dev(tr1, t25);
+    			append_dev(tr1, td5);
+    			append_dev(td5, input4);
+    			set_input_value(input4, /*updatedFemaleNumber*/ ctx[7]);
+    			append_dev(tr1, t26);
+    			append_dev(tr1, td6);
+    			append_dev(td6, input5);
+    			set_input_value(input5, /*updatedRatio*/ ctx[9]);
+    			append_dev(tr1, t27);
+    			append_dev(tr1, td7);
+    			append_dev(td7, t28);
+    			append_dev(tr1, t29);
+    			append_dev(tr1, td8);
+    			append_dev(td8, input6);
+    			set_input_value(input6, /*updatedContinent*/ ctx[3]);
+    			append_dev(tr1, t30);
+    			append_dev(tr1, td9);
+    			mount_component(button, td9, null);
+    			current = true;
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[14]),
+    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[15]),
+    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[16]),
+    				listen_dev(input3, "input", /*input3_input_handler*/ ctx[17]),
+    				listen_dev(input4, "input", /*input4_input_handler*/ ctx[18]),
+    				listen_dev(input5, "input", /*input5_input_handler*/ ctx[19]),
+    				listen_dev(input6, "input", /*input6_input_handler*/ ctx[20])
+    			];
+    		},
+    		p: function update(ctx, dirty) {
+    			if (!current || dirty & /*updatedCountry*/ 2) set_data_dev(t20, /*updatedCountry*/ ctx[1]);
+
+    			if (dirty & /*updatedBothSex*/ 64 && input0.value !== /*updatedBothSex*/ ctx[6]) {
+    				set_input_value(input0, /*updatedBothSex*/ ctx[6]);
+    			}
+
+    			if (dirty & /*updatedMaleRank*/ 32 && input1.value !== /*updatedMaleRank*/ ctx[5]) {
+    				set_input_value(input1, /*updatedMaleRank*/ ctx[5]);
+    			}
+
+    			if (dirty & /*updatedMaleNumber*/ 256 && input2.value !== /*updatedMaleNumber*/ ctx[8]) {
+    				set_input_value(input2, /*updatedMaleNumber*/ ctx[8]);
+    			}
+
+    			if (dirty & /*updatedFemaleRank*/ 16 && input3.value !== /*updatedFemaleRank*/ ctx[4]) {
+    				set_input_value(input3, /*updatedFemaleRank*/ ctx[4]);
+    			}
+
+    			if (dirty & /*updatedFemaleNumber*/ 128 && input4.value !== /*updatedFemaleNumber*/ ctx[7]) {
+    				set_input_value(input4, /*updatedFemaleNumber*/ ctx[7]);
+    			}
+
+    			if (dirty & /*updatedRatio*/ 512 && input5.value !== /*updatedRatio*/ ctx[9]) {
+    				set_input_value(input5, /*updatedRatio*/ ctx[9]);
+    			}
+
+    			if (!current || dirty & /*updatedYear*/ 4) set_data_dev(t28, /*updatedYear*/ ctx[2]);
+
+    			if (dirty & /*updatedContinent*/ 8 && input6.value !== /*updatedContinent*/ ctx[3]) {
+    				set_input_value(input6, /*updatedContinent*/ ctx[3]);
+    			}
+
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 2097152) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(thead);
+    			if (detaching) detach_dev(t19);
+    			if (detaching) detach_dev(tbody);
+    			destroy_component(button);
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_1$3.name,
+    		type: "slot",
+    		source: "(86:8) <Table bordered>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (83:16)           Loading spc...      {:then spc}
+    function create_pending_block$3(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Loading spc...");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_pending_block$3.name,
+    		type: "pending",
+    		source: "(83:16)           Loading spc...      {:then spc}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (117:4) {#if errorMSG}
+    function create_if_block$5(ctx) {
+    	let p;
+    	let t0;
+    	let t1;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t0 = text("ERROR: ");
+    			t1 = text(/*errorMSG*/ ctx[10]);
+    			set_style(p, "color", "red");
+    			add_location(p, file$7, 117, 8, 3854);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t0);
+    			append_dev(p, t1);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*errorMSG*/ 1024) set_data_dev(t1, /*errorMSG*/ ctx[10]);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$5.name,
+    		type: "if",
+    		source: "(117:4) {#if errorMSG}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (120:4) <Button outline color="secondary" on:click="{pop}">
+    function create_default_slot$3(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Back");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$3.name,
+    		type: "slot",
+    		source: "(120:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$8(ctx) {
+    	let main;
+    	let h1;
+    	let t1;
+    	let h3;
+    	let t2;
+    	let strong;
+    	let t3_value = /*params*/ ctx[0].suicideCountry + "";
+    	let t3;
+    	let t4;
+    	let promise;
+    	let t5;
+    	let t6;
+    	let current;
+
+    	let info = {
+    		ctx,
+    		current: null,
+    		token: null,
+    		pending: create_pending_block$3,
+    		then: create_then_block$3,
+    		catch: create_catch_block$3,
+    		value: 11,
+    		blocks: [,,,]
+    	};
+
+    	handle_promise(promise = /*spc*/ ctx[11], info);
+    	let if_block = /*errorMSG*/ ctx[10] && create_if_block$5(ctx);
+
+    	const button = new Button({
+    			props: {
+    				outline: true,
+    				color: "secondary",
+    				$$slots: { default: [create_default_slot$3] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", pop);
+
+    	const block = {
+    		c: function create() {
+    			main = element("main");
+    			h1 = element("h1");
+    			h1.textContent = "SPC Manager";
+    			t1 = space();
+    			h3 = element("h3");
+    			t2 = text("Edit SPC ");
+    			strong = element("strong");
+    			t3 = text(t3_value);
+    			t4 = space();
+    			info.block.c();
+    			t5 = space();
+    			if (if_block) if_block.c();
+    			t6 = space();
+    			create_component(button.$$.fragment);
+    			add_location(h1, file$7, 80, 4, 2371);
+    			add_location(strong, file$7, 81, 17, 2410);
+    			add_location(h3, file$7, 81, 4, 2397);
+    			add_location(main, file$7, 79, 0, 2359);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, main, anchor);
+    			append_dev(main, h1);
+    			append_dev(main, t1);
+    			append_dev(main, h3);
+    			append_dev(h3, t2);
+    			append_dev(h3, strong);
+    			append_dev(strong, t3);
+    			append_dev(main, t4);
+    			info.block.m(main, info.anchor = null);
+    			info.mount = () => main;
+    			info.anchor = t5;
+    			append_dev(main, t5);
+    			if (if_block) if_block.m(main, null);
+    			append_dev(main, t6);
+    			mount_component(button, main, null);
+    			current = true;
+    		},
+    		p: function update(new_ctx, [dirty]) {
+    			ctx = new_ctx;
+    			if ((!current || dirty & /*params*/ 1) && t3_value !== (t3_value = /*params*/ ctx[0].suicideCountry + "")) set_data_dev(t3, t3_value);
+    			info.ctx = ctx;
+
+    			if (dirty & /*spc*/ 2048 && promise !== (promise = /*spc*/ ctx[11]) && handle_promise(promise, info)) ; else {
+    				const child_ctx = ctx.slice();
+    				child_ctx[11] = info.resolved;
+    				info.block.p(child_ctx, dirty);
+    			}
+
+    			if (/*errorMSG*/ ctx[10]) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block$5(ctx);
+    					if_block.c();
+    					if_block.m(main, t6);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 2097152) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(info.block);
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			for (let i = 0; i < 3; i += 1) {
+    				const block = info.blocks[i];
+    				transition_out(block);
+    			}
+
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(main);
+    			info.block.d();
+    			info.token = null;
+    			info = null;
+    			if (if_block) if_block.d();
+    			destroy_component(button);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$8.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$8($$self, $$props, $$invalidate) {
+    	let { params = {} } = $$props;
+    	let spc = {};
+    	let updatedCountry = "";
+    	let updatedYear = "";
+    	let updatedContinent = "";
+    	let updatedFemaleRank = "";
+    	let updatedMaleRank = "";
+    	let updatedBothSex = "";
+    	let updatedFemaleNumber = "";
+    	let updatedMaleNumber = "";
+    	let updatedRatio = "";
+    	let errorMSG = "";
+    	onMount(getSPC1);
+
+    	//GET
+    	async function getSPC1() {
+    		console.log("Fetching spc...");
+    		const res = await fetch("/api/v1/spc-stats/" + params.suicideCountry + "/" + params.suicideYear);
+
+    		if (res.ok) {
+    			console.log("Ok:");
+    			const json = await res.json();
+    			$$invalidate(11, spc = json);
+    			$$invalidate(1, updatedCountry = params.suicideCountry);
+    			$$invalidate(6, updatedBothSex = spc.both_sex);
+    			$$invalidate(5, updatedMaleRank = spc.male_rank);
+    			$$invalidate(8, updatedMaleNumber = spc.male_number);
+    			$$invalidate(4, updatedFemaleRank = spc.female_rank);
+    			$$invalidate(7, updatedFemaleNumber = spc.female_number);
+    			$$invalidate(9, updatedRatio = spc.ratio);
+    			$$invalidate(2, updatedYear = params.suicideYear);
+    			$$invalidate(3, updatedContinent = spc.continent);
+    			console.log("Received " + spc.length + " spc.");
+    		} else {
+    			$$invalidate(10, errorMSG = res.status + ": " + res.statusText);
+    			console.log("ERROR!");
+    		}
+    	}
+
+    	async function updateSpc() {
+    		console.log("Inserting spc..." + JSON.stringify(params.suicideCountry));
+
+    		const res = await fetch("/api/v1/spc-stats/" + params.suicideCountry + "/" + params.suicideYear, {
+    			method: "PUT",
+    			body: JSON.stringify({
+    				country: params.suicideCountry,
+    				both_sex: updatedBothSex,
+    				male_rank: updatedMaleRank,
+    				male_number: updatedMaleNumber,
+    				female_rank: updatedFemaleRank,
+    				female_number: updatedFemaleNumber,
+    				ratio: updatedRatio,
+    				year: params.suicideYear,
+    				continent: updatedContinent
+    			}),
+    			headers: { "Content-Type": "application/json" }
+    		}).then(function (res) {
+    			getSPC1();
+    		});
+    	}
+
+    	const writable_props = ["params"];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$4.warn(`<EditSpc> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("EditSpc", $$slots, []);
+
+    	function input0_input_handler() {
+    		updatedBothSex = this.value;
+    		$$invalidate(6, updatedBothSex);
+    	}
+
+    	function input1_input_handler() {
+    		updatedMaleRank = this.value;
+    		$$invalidate(5, updatedMaleRank);
+    	}
+
+    	function input2_input_handler() {
+    		updatedMaleNumber = this.value;
+    		$$invalidate(8, updatedMaleNumber);
+    	}
+
+    	function input3_input_handler() {
+    		updatedFemaleRank = this.value;
+    		$$invalidate(4, updatedFemaleRank);
+    	}
+
+    	function input4_input_handler() {
+    		updatedFemaleNumber = this.value;
+    		$$invalidate(7, updatedFemaleNumber);
+    	}
+
+    	function input5_input_handler() {
+    		updatedRatio = this.value;
+    		$$invalidate(9, updatedRatio);
+    	}
+
+    	function input6_input_handler() {
+    		updatedContinent = this.value;
+    		$$invalidate(3, updatedContinent);
+    	}
+
+    	$$self.$set = $$props => {
+    		if ("params" in $$props) $$invalidate(0, params = $$props.params);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		onMount,
+    		pop,
+    		Table,
+    		Button,
+    		params,
+    		spc,
+    		updatedCountry,
+    		updatedYear,
+    		updatedContinent,
+    		updatedFemaleRank,
+    		updatedMaleRank,
+    		updatedBothSex,
+    		updatedFemaleNumber,
+    		updatedMaleNumber,
+    		updatedRatio,
+    		errorMSG,
+    		getSPC1,
+    		updateSpc
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ("params" in $$props) $$invalidate(0, params = $$props.params);
+    		if ("spc" in $$props) $$invalidate(11, spc = $$props.spc);
+    		if ("updatedCountry" in $$props) $$invalidate(1, updatedCountry = $$props.updatedCountry);
+    		if ("updatedYear" in $$props) $$invalidate(2, updatedYear = $$props.updatedYear);
+    		if ("updatedContinent" in $$props) $$invalidate(3, updatedContinent = $$props.updatedContinent);
+    		if ("updatedFemaleRank" in $$props) $$invalidate(4, updatedFemaleRank = $$props.updatedFemaleRank);
+    		if ("updatedMaleRank" in $$props) $$invalidate(5, updatedMaleRank = $$props.updatedMaleRank);
+    		if ("updatedBothSex" in $$props) $$invalidate(6, updatedBothSex = $$props.updatedBothSex);
+    		if ("updatedFemaleNumber" in $$props) $$invalidate(7, updatedFemaleNumber = $$props.updatedFemaleNumber);
+    		if ("updatedMaleNumber" in $$props) $$invalidate(8, updatedMaleNumber = $$props.updatedMaleNumber);
+    		if ("updatedRatio" in $$props) $$invalidate(9, updatedRatio = $$props.updatedRatio);
+    		if ("errorMSG" in $$props) $$invalidate(10, errorMSG = $$props.errorMSG);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		params,
+    		updatedCountry,
+    		updatedYear,
+    		updatedContinent,
+    		updatedFemaleRank,
+    		updatedMaleRank,
+    		updatedBothSex,
+    		updatedFemaleNumber,
+    		updatedMaleNumber,
+    		updatedRatio,
+    		errorMSG,
+    		spc,
+    		updateSpc,
+    		getSPC1,
+    		input0_input_handler,
+    		input1_input_handler,
+    		input2_input_handler,
+    		input3_input_handler,
+    		input4_input_handler,
+    		input5_input_handler,
+    		input6_input_handler
+    	];
+    }
+
+    class EditSpc extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$8, create_fragment$8, safe_not_equal, { params: 0 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "EditSpc",
+    			options,
+    			id: create_fragment$8.name
+    		});
+    	}
+
+    	get params() {
+    		throw new Error("<EditSpc>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set params(value) {
+    		throw new Error("<EditSpc>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\front\GUI2POVERTY\Home.svelte generated by Svelte v3.20.1 */
+
+    function create_fragment$9(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("fdgdfgdfgdg");
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$9.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$9($$self, $$props) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Home> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Home", $$slots, []);
+    	return [];
+    }
+
+    class Home$2 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$9, create_fragment$9, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Home",
+    			options,
+    			id: create_fragment$9.name
+    		});
+    	}
+    }
+
+    /* src\front\GUI3LQ\Home.svelte generated by Svelte v3.20.1 */
+
+    function create_fragment$a(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("fdgdfgdfgdg");
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$a.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$a($$self, $$props) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Home> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Home", $$slots, []);
+    	return [];
+    }
+
+    class Home$3 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$a, create_fragment$a, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Home",
+    			options,
+    			id: create_fragment$a.name
+    		});
+    	}
+    }
+
+    /* src\front\App.svelte generated by Svelte v3.20.1 */
+    const file$8 = "src\\front\\App.svelte";
+
+    function create_fragment$b(ctx) {
+    	let main;
     	let current;
 
     	const router = new Router({
@@ -4135,20 +6481,14 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			main = element("main");
-    			h1 = element("h1");
-    			h1.textContent = "Contact Manager";
-    			t1 = space();
     			create_component(router.$$.fragment);
-    			add_location(h1, file$5, 15, 1, 318);
-    			add_location(main, file$5, 14, 0, 310);
+    			add_location(main, file$8, 28, 0, 665);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, h1);
-    			append_dev(main, t1);
     			mount_component(router, main, null);
     			current = true;
     		},
@@ -4170,7 +6510,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$6.name,
+    		id: create_fragment$b.name,
     		type: "component",
     		source: "",
     		ctx
@@ -4179,9 +6519,13 @@ var app = (function () {
     	return block;
     }
 
-    function instance$6($$self, $$props, $$invalidate) {
+    function instance$b($$self, $$props, $$invalidate) {
     	const routes = {
-    		"/": ContactsTable,
+    		"/": Home,
+    		"/gui1spc": Home$1,
+    		"/spc-stats/:suicideCountry/:suicideYear": EditSpc,
+    		"/gui2poverty": Home$2,
+    		"/gui3lq": Home$3,
     		"/contact/:contactName": EditContact,
     		"*": NotFound
     	};
@@ -4200,6 +6544,11 @@ var app = (function () {
     		ContactsTable,
     		EditContact,
     		NotFound,
+    		Home,
+    		GUI1SPC: Home$1,
+    		EditSpc,
+    		GUI2POVERTY: Home$2,
+    		GUI3LQ: Home$3,
     		routes
     	});
 
@@ -4209,13 +6558,13 @@ var app = (function () {
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$6, create_fragment$6, safe_not_equal, {});
+    		init(this, options, instance$b, create_fragment$b, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "App",
     			options,
-    			id: create_fragment$6.name
+    			id: create_fragment$b.name
     		});
     	}
     }

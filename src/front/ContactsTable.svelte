@@ -12,6 +12,7 @@
         phone: "",
         email: ""
     };
+    let errorMSG = "";
  
     onMount(getContacts);
  

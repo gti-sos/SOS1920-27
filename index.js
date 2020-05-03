@@ -1,28 +1,24 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const back = require("./src/back");
-const app = express();
+const spcStats = require("./src/back/spcAPI");
+const lqStats = require("./src/back/lqAPI");
+const povertyStats = require("./src/back/povertyAPI");
+var app = express();
 
-const path = require("path");
-const spcAPI = require(path.join(__dirname,'spcAPI'));
-const lqAPI = require(path.join(__dirname,'lqAPI'));
-const povertyAPI = require(path.join(__dirname,'povertyAPI'));
-
-const port = process.env.PORT || 80;
-
-//para la pagina inicio
 app.use(bodyParser.json());
-app.use("/",express.static("./public"));
 
 back(app);
-spcAPI(app);
-lqAPI(app);
-povertyAPI(app);
+spcStats(app);
+lqStats(app);
+povertyStats(app);
 
+var port = process.env.PORT || 9999;
+
+app.use("/", express.static("./public"));
 
 app.listen(port, () => {
-	console.log("Server ready");
+    console.log("Server ready on port " + port);
 });
-//aaaaaa
-//Inicio serv
 
+console.log("Starting server...");
