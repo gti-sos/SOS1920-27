@@ -17,6 +17,7 @@
 	
 	const routes = {
 		"/" : Home,
+		"/public/index.html" : Home,
 		"/gui1spc": GUI1SPC,
 		"/spc-stats/:suicideCountry/:suicideYear": EditSpc,
 		"/gui2poverty": GUI2POVERTY,

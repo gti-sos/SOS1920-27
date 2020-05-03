@@ -89,16 +89,6 @@ module.exports = function (app) {
 				}
 			];
 
-	/////////////INICIAR CON LOS EJEMPLOS
-	db.find({}, (err, lq_stats) => {
-		if (lq_stats.length == 0) {
-			db.insert(ejemplos_lq);
-			console.log("EMPTY DB! Inserted 5 default lq_stats");
-		} else {
-			console.log("Loaded DB with " + lq_stats.length + " lq");
-		}
-	});
-
 	//loadInitialData	
 	app.get(BASE_API_URL+"/lq-stats/loadInitialData",(req,res) =>{
 		//borrar lo que había

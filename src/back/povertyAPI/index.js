@@ -57,16 +57,6 @@ module.exports = function (app) {
 		}
 	];
 
-	/////////////INICIAR CON LOS EJEMPLOS
-	db.find({}, (err, poverty_stats) => {
-		if (poverty_stats.length == 0) {
-			db.insert(poverty_statsInit);
-			console.log("EMPTY DB! Inserted 5 default poverty_stats");
-		} else {
-			console.log("Loaded DB with " + poverty_stats.length + " poverty-stats");
-		}
-	});
-
     //LOADINITIALDATA
     app.get(BASE_API_URL+"/poverty-stats/loadInitialData",(req,res) =>{
 			db.remove({},{multi:true}, function (err, doc){});
