@@ -1478,7 +1478,7 @@ var app = (function () {
     			table = element("table");
     			if (default_slot) default_slot.c();
     			set_attributes(table, table_data);
-    			add_location(table, file, 38, 2, 908);
+    			add_location(table, file, 38, 2, 946);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, table, anchor);
@@ -1547,9 +1547,9 @@ var app = (function () {
     			table = element("table");
     			if (default_slot) default_slot.c();
     			set_attributes(table, table_data);
-    			add_location(table, file, 33, 4, 826);
+    			add_location(table, file, 33, 4, 859);
     			attr_dev(div, "class", /*responsiveClassName*/ ctx[2]);
-    			add_location(div, file, 32, 2, 788);
+    			add_location(div, file, 32, 2, 820);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1901,7 +1901,7 @@ var app = (function () {
     			button = element("button");
     			if (default_slot_or_fallback) default_slot_or_fallback.c();
     			set_attributes(button, button_data);
-    			add_location(button, file$1, 53, 2, 1061);
+    			add_location(button, file$1, 53, 2, 1114);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, button, anchor);
@@ -2005,7 +2005,7 @@ var app = (function () {
     			a = element("a");
     			if_block.c();
     			set_attributes(a, a_data);
-    			add_location(a, file$1, 37, 2, 825);
+    			add_location(a, file$1, 37, 2, 862);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, a, anchor);
@@ -2168,7 +2168,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "×";
     			attr_dev(span, "aria-hidden", "true");
-    			add_location(span, file$1, 64, 8, 1250);
+    			add_location(span, file$1, 64, 8, 1314);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -2192,7 +2192,7 @@ var app = (function () {
     	return block_1;
     }
 
-    // (63:10)        
+    // (63:10)         
     function fallback_block(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -2264,7 +2264,7 @@ var app = (function () {
     		block: block_1,
     		id: fallback_block.name,
     		type: "fallback",
-    		source: "(63:10)        ",
+    		source: "(63:10)         ",
     		ctx
     	});
 
@@ -2710,7 +2710,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (1:0) <script>     import {         onMount     }
+    // (1:0) <script>      import {          onMount      }
     function create_catch_block(ctx) {
     	const block = {
     		c: noop,
@@ -2725,7 +2725,7 @@ var app = (function () {
     		block,
     		id: create_catch_block.name,
     		type: "catch",
-    		source: "(1:0) <script>     import {         onMount     }",
+    		source: "(1:0) <script>      import {          onMount      }",
     		ctx
     	});
 
@@ -2893,12 +2893,12 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t6 = space();
     			attr_dev(a, "href", a_href_value = "#/contact/" + /*contact*/ ctx[9].name);
-    			add_location(a, file$2, 81, 28, 2174);
-    			add_location(td0, file$2, 81, 24, 2170);
-    			add_location(td1, file$2, 82, 24, 2257);
-    			add_location(td2, file$2, 83, 24, 2306);
-    			add_location(td3, file$2, 84, 24, 2355);
-    			add_location(tr, file$2, 80, 20, 2141);
+    			add_location(a, file$2, 81, 28, 2255);
+    			add_location(td0, file$2, 81, 24, 2251);
+    			add_location(td1, file$2, 82, 24, 2339);
+    			add_location(td2, file$2, 83, 24, 2389);
+    			add_location(td3, file$2, 84, 24, 2439);
+    			add_location(tr, file$2, 80, 20, 2221);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -3047,21 +3047,21 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$2, 65, 20, 1537);
-    			add_location(th1, file$2, 66, 20, 1571);
-    			add_location(th2, file$2, 67, 20, 1606);
-    			add_location(th3, file$2, 68, 20, 1641);
-    			add_location(tr0, file$2, 64, 16, 1512);
-    			add_location(thead, file$2, 63, 12, 1488);
-    			add_location(input0, file$2, 73, 24, 1766);
-    			add_location(td0, file$2, 73, 20, 1762);
-    			add_location(input1, file$2, 74, 24, 1834);
-    			add_location(td1, file$2, 74, 20, 1830);
-    			add_location(input2, file$2, 75, 24, 1903);
-    			add_location(td2, file$2, 75, 20, 1899);
-    			add_location(td3, file$2, 76, 20, 1968);
-    			add_location(tr1, file$2, 72, 16, 1737);
-    			add_location(tbody, file$2, 71, 12, 1713);
+    			add_location(th0, file$2, 65, 20, 1602);
+    			add_location(th1, file$2, 66, 20, 1637);
+    			add_location(th2, file$2, 67, 20, 1673);
+    			add_location(th3, file$2, 68, 20, 1709);
+    			add_location(tr0, file$2, 64, 16, 1576);
+    			add_location(thead, file$2, 63, 12, 1551);
+    			add_location(input0, file$2, 73, 24, 1839);
+    			add_location(td0, file$2, 73, 20, 1835);
+    			add_location(input1, file$2, 74, 24, 1908);
+    			add_location(td1, file$2, 74, 20, 1904);
+    			add_location(input2, file$2, 75, 24, 1978);
+    			add_location(td2, file$2, 75, 20, 1974);
+    			add_location(td3, file$2, 76, 20, 2044);
+    			add_location(tr1, file$2, 72, 16, 1809);
+    			add_location(tbody, file$2, 71, 12, 1784);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -3195,7 +3195,7 @@ var app = (function () {
     	return block;
     }
 
-    // (60:21)          Loading contacts...     {:then contacts}
+    // (60:21)           Loading contacts...      {:then contacts}
     function create_pending_block(ctx) {
     	let t;
 
@@ -3218,7 +3218,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(60:21)          Loading contacts...     {:then contacts}",
+    		source: "(60:21)           Loading contacts...      {:then contacts}",
     		ctx
     	});
 
@@ -3247,7 +3247,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			info.block.c();
-    			add_location(main, file$2, 57, 0, 1371);
+    			add_location(main, file$2, 57, 0, 1428);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6482,7 +6482,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			create_component(router.$$.fragment);
-    			add_location(main, file$8, 28, 0, 665);
+    			add_location(main, file$8, 28, 0, 693);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
