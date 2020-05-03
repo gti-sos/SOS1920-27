@@ -69,6 +69,83 @@ module.exports = function (app) {
 				ratio: 3.31,
 				year: 2013,
 				continent: "south america"	
+			},
+			{ 
+				country: "ivory coast",
+				both_sex: 23,
+				male_rank: 8,
+				male_number: 32,
+				female_rank: 8,
+				female_number: 13,
+				ratio: 2.46,
+				year: 2013,
+				continent: "africa"	
+			},
+			{ 
+				country: "kazakhstan",
+				both_sex: 22.8,
+				male_rank: 4,
+				male_number: 40.1,
+				female_rank: 28,
+				female_number: 7.7,
+				ratio: 5.21,
+				year: 2013,
+				continent: "asia"	
+			},
+			{ 
+				country: "equatorial guinea",
+				both_sex: 22,
+				male_rank: 9,
+				male_number: 31.3,
+				female_rank: 15,
+				female_number: 10.8,
+				ratio: 2.9,
+				year: 2013,
+				continent: "africa"	
+			},
+			{ 
+				country: "belarus",
+				both_sex: 21.4,
+				male_rank: 5,
+				male_number: 39.3,
+				female_rank: 45,
+				female_number: 6.2,
+				ratio: 6.34,
+				year: 2013,
+				continent: "europe"	
+			},
+			{ 
+				country: "south korea",
+				both_sex: 20.2,
+				male_rank: 11,
+				male_number: 29.6,
+				female_rank: 11,
+				female_number: 11.6,
+				ratio: 2.55,
+				year: 2013,
+				continent: "asia"	
+			},
+			{ 
+				country: "uganda",
+				both_sex: 20,
+				male_rank: 37,
+				male_number: 21.2,
+				female_rank: 2,
+				female_number: 18.7,
+				ratio: 1.13,
+				year: 2013,
+				continent: "africa"	
+			},
+			{ 
+				country: "cameroon",
+				both_sex: 19.5,
+				male_rank: 13,
+				male_number: 26.9,
+				female_rank: 10,
+				female_number: 12.5,
+				ratio: 2.15,
+				year: 2013,
+				continent: "africa"	
 			}
 		];
 /////////////INICIAR CON LOS EJEMPLOS

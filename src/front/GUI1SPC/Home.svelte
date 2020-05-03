@@ -9,6 +9,8 @@
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
  
+    let page = 1;
+    let totaldata = 12;
     let spc = [];
     let newSpc = {
         country: "",
@@ -28,7 +30,7 @@
     async function getSPC() {
  
         console.log("Fetching spc...");
-        const res = await fetch("/api/v1/spc-stats");
+        const res = await fetch("/api/v1/spc-stats?limit=10&offset=1");
  
         if (res.ok) {
             console.log("Ok:");
@@ -51,6 +53,7 @@
             console.log("Ok:");
             const json = await res.json();
             spc = json;
+            totaldata = spc.length;
             console.log("Received " + spc.length + " spc.");
         } else {
             errorMSG= res.status + ": " + res.statusText;
@@ -62,7 +65,6 @@
     async function insertSPC() {
  
         console.log("Inserting spc..." + JSON.stringify(newSpc));
-        const longitud = spc.length;
         const res = await fetch("/api/v1/spc-stats", {
             method: "POST",
             body: JSON.stringify(newSpc),
@@ -70,10 +72,11 @@
                 "Content-Type": "application/json"
             }
         }).then(function (res) {
-            console.log(longitud);
-            console.log(spc.length);
             getSPC();
-            if (spc.length>longitud) {
+            console.log(totaldata);
+            console.log(spc.length);
+            totaldata++;
+            if (spc.length>totaldata) {
                 errorMSG = ""
                 console.log("Inserted 1 spc.");            
             } else {
@@ -89,6 +92,7 @@
         const res = await fetch("/api/v1/spc-stats/" + name, {
             method: "DELETE"
         }).then(function (res) {
+            totaldata--;
             errorMSG = ""
             getSPC();      
             console.log("Deleted 1 spc.");        
@@ -100,10 +104,54 @@
         const res = await fetch("/api/v1/spc-stats/", {
             method: "DELETE"
         }).then(function (res) {
+            totaldata=0;
             errorMSG = ""
             getSPC();         
             console.log("Deleted all spc.");     
         });
+    }
+
+    //getNextPage
+    async function getNextPage() {
+ 
+        console.log(totaldata);
+        if (page+10 > totaldata) {
+            page = 1
+        } else {
+            page+=10
+        }
+        console.log("Charging page " +page);
+        const res = await fetch("/api/v1/spc-stats?limit=10&offset="+page);
+
+        if (res.ok) {
+            console.log("Ok:");
+            const json = await res.json();
+            spc = json;
+            console.log("Received " + spc.length + " spc.");
+        } else {
+            errorMSG= res.status + ": " + res.statusText;
+            console.log("ERROR!");
+        }
+    }
+
+    //getPreviewPage
+    async function getPreviewPage() {
+ 
+        if (page-10>=1) {
+            page-=10; 
+        } else page = 1
+        console.log("Charging page " +page);
+        const res = await fetch("/api/v1/spc-stats?limit=10&offset="+page);
+
+        if (res.ok) {
+            console.log("Ok:");
+            const json = await res.json();
+            spc = json;
+            console.log("Received " + spc.length + " spc.");
+        } else {
+            errorMSG= res.status + ": " + res.statusText;
+            console.log("ERROR!");
+        }
     }
 </script>
  
@@ -158,14 +206,21 @@
                 {/each}
             </tbody>
         </Table>
-        <Button outline color="primary" on:click="{getSPCLoadInitialData}">
+        <Button color="primary" on:click="{getSPCLoadInitialData}">
             Reiniciar ejemplos iniciales
         </Button>
-        <Button outline color="danger" on:click="{deleteSPCALL}">
+        <Button color="danger" on:click="{deleteSPCALL}">
             Borrar todo
+        </Button>
+        <Button outline color="success" on:click="{getPreviewPage}">
+           Atras
+        </Button>
+        <Button outline color="success" on:click="{getNextPage}">
+           Siguiente
         </Button>
     {/await}
     {#if errorMSG}
+    <br>
     <p style="color: red">STATUS: {errorMSG}</p>
     {/if}
     <br>
