@@ -45,7 +45,7 @@
         page=1;
         totalObj = jsonElements.length;
         console.log("ELEMENTOS: "+ totalObj);
-        const res = await fetch("/api/v1/poverty-stats?limit=5&offset=1");
+        const res = await fetch("/api/v1/poverty-stats?limit=10&offset=1");
 
         if (res.ok) {
             console.log("Ok:");
@@ -99,13 +99,32 @@
     
     // Next Page
     async function getNextPage(){
-        if(page<=totalObj){
-            page+=5;
+        page+=10;
+        if(page>totalObj){
+            page-=10;
         }
-        console.log(page);
+        await console.log(page);
         console.log("Fetching poverty...");
-        const res = await fetch("/api/v1/poverty-stats?limit=5&offset="+page);
- 
+        const res = await fetch("/api/v1/poverty-stats?limit=10&offset="+page);
+        
+        if (res.ok) {
+            console.log("Ok:");
+            const json = await res.json();
+            poverty = json;
+            console.log("Received " + poverty.length + " poverty.");
+        } else {
+            console.log("ERROR!");
+        }
+    }
+    //Previus Page
+    async function getPreviousPage(){
+        if(page-10>=0){
+            page-=10;
+        }
+        await console.log(page);
+        console.log("Fetching poverty...");
+        const res = await fetch("/api/v1/poverty-stats?limit=10&offset="+page);
+        
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
@@ -123,6 +142,7 @@
     {#await poverty}
         Loading poverty...
     {:then poverty}
+    
         <Table bordered>
             <thead>
                 <tr>
@@ -162,9 +182,19 @@
         <Button color="primary" on:click="{getPovertyLoadInitialData}">
             Reiniciar ejemplos iniciales
         </Button>
-        <Button outline color="success" on:click="{getNextPage}">
-            Next
+        <Button color="danger" on:click="{deletePovertyAll}">
+            Borrar todo
+        </Button>
+        {#if page!=1}
+        <Button outline color="success" on:click="{getPreviousPage}">
+            Atras
          </Button>
+         {/if}
+         {#if (page+10) < totalObj}
+        <Button outline color="success" on:click="{getNextPage}">
+            Siguiente
+         </Button>
+         {/if}
     {/await}
  
     
