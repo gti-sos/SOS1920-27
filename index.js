@@ -13,7 +13,7 @@ spcStats(app);
 lqStats(app);
 povertyStats(app);
 
-var port = process.env.PORT || 9999;
+var port = process.env.PORT || 80;
 
 app.use("/", express.static("./public"));
 
