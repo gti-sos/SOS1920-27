@@ -142,6 +142,7 @@
     {#await poverty}
         Loading poverty...
     {:then poverty}
+    
         <Table bordered>
             <thead>
                 <tr>
