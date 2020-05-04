@@ -54,6 +54,86 @@ module.exports = function (app) {
 			under_550:0.5,
 			year:2017,
 			continent:"europe"	
+		}, //5
+		{ 
+			country:"australia",
+			under_190: 0.007,
+			under_320: 0.01,
+			under_550: 0.012,
+			year: 2014,
+			continent:"oceania"	
+		}, 
+		{ 
+			country:"austria",
+			under_190: 0.007,
+			under_320: 0.007,
+			under_550: 0.009,
+			year: 2015,
+			continent:"europe"	
+		}, 
+		{ 
+			country:"azerbaijan",
+			under_190: 0,
+			under_320: 0,
+			under_550: 0.082,
+			year: 2005,
+			continent:"europe"	
+		}, 
+		{ 
+			country:"bangladesh",
+			under_190: 0.148,
+			under_320: 0.529,
+			under_550: 0.845,
+			year: 2016,
+			continent:"asia"	
+		}, 
+		{ 
+			country:"belarus",
+			under_190: 0,
+			under_320: 0,
+			under_550: 0.008,
+			year: 2017,
+			continent:"europe"	
+		}, //10
+		{ 
+			country:"belgium",
+			under_190: 0,
+			under_320: 0.002,
+			under_550: 0.002,
+			year: 2015,
+			continent:"europe"	
+		}, 
+		{ 
+			country:"belize",
+			under_190: 0.139,
+			under_320: 0.281,
+			under_550: 0.53,
+			year: 1999,
+			continent:"north america"	
+		}, 
+		{ 
+			country:"benin",
+			under_190: 0.495,
+			under_320: 0.762,
+			under_550: 0.906,
+			year: 2015,
+			continent:"africa"	
+		}, 
+		{ 
+			country:"bhutan",
+			under_190: 0.015,
+			under_320: 0.12,
+			under_550: 0.386,
+			year: 2017,
+			continent:"asia"	
+		}, 
+		{ 
+			country:"bolivia",
+			under_190: 0.058,
+			under_320: 0.118,
+			under_550: 0.247,
+			year: 2017,
+			continent:"south america"	
 		}
 	];
 
