@@ -309,13 +309,27 @@ module.exports = function (app) {
     app.post(BASE_API_URL+"/spc-stats",(req,res) =>{
     	
     	var newSuicide = req.body;
-    	
-		db.find({country:newSuicide.country},{ year: newSuicide.year}, (err, spc_stats) =>{
+    	var repetido=false;
+		db.find({country:newSuicide.country}, (err, spc_stats) =>{
 			
 			if((newSuicide == "") || (newSuicide.country == null) || (newSuicide.country == "") ||(newSuicide.year == null) || (newSuicide.year == "")){
     			res.sendStatus(400,"BAD REQUEST");
     		} else if (spc_stats.length > 0){
-    		    res.sendStatus(409,"This data already exits");
+				for (let index = 0; index < spc_stats.length; index++) {
+					if (spc_stats[index].year==newSuicide.year) {
+						repetido=true;
+						break;	
+					} 					
+				}
+				if (repetido==false) {
+					db.insert(newSuicide); 	
+					console.log("Data created:"+JSON.stringify(newSuicide,null,2));
+					var array = Array(newSuicide);
+					res.send(JSON.stringify(array,null,2));
+				} else {
+					
+					res.sendStatus(409,"This data already exits");
+				}
   		  	} else {
     			db.insert(newSuicide); 	
 				console.log("Data created:"+JSON.stringify(newSuicide,null,2));

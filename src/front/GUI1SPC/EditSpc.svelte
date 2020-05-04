@@ -7,6 +7,11 @@
     } from "svelte-spa-router";
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
+    import { Alert } from "sveltestrap";
+
+    //ALERTAS
+    let visible = false;
+    let color = "danger";
 
     export let params = {};
 
@@ -71,7 +76,25 @@
                 "Content-Type": "application/json"
             }
         }).then(function (res) {
+            visible = true;
             getSPC1();
+            if (res.status==200) {
+                color = "success";
+                errorMSG = params.suicideCountry + " actualizado correctamente";
+                console.log(params.suicideCountry + " updated");            
+            }else if (res.status==201) {
+                errorMSG = params.suicideCountry + " actualizado correctamente";
+                color = "success";
+                console.log(params.suicideCountry + " updated");            
+            }else if (res.status==404) {
+                color = "danger";
+                errorMSG = params.suicideCountry + " no ha sido encontrado";
+                console.log("SUICIDE NOT FOUND");            
+            } else {
+                color = "danger";
+                errorMSG= "Formato incorrecto, compruebe que Country y Year estén rellenos.";
+                console.log("BAD REQUEST");
+            }
         });
  
     }
@@ -83,6 +106,11 @@
     {#await spc}
         Loading spc...
     {:then spc}
+    <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
+        {#if errorMSG}
+            STATUS: {errorMSG}
+        {/if}
+    </Alert>
         <Table bordered>
             <thead>
                 <tr>
@@ -114,8 +142,5 @@
              </tbody>
         </Table>
     {/await}
-    {#if errorMSG}
-        <p style="color: red">ERROR: {errorMSG}</p>
-    {/if}
     <Button outline color="secondary" on:click="{pop}">Back</Button>
 </main>
