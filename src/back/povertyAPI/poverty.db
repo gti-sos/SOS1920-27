@@ -1,0 +1,1035 @@
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"2kr9xcrD0ZW0kMUy"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"BYq45uCpyctAx5eZ"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"C4UpwJAHRyLSycel"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"D0pUJFPWGsk3eL46"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"O2AcqldUsojjS5Jk"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"ZHFQVLv34opjKH07"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"bc7VNxPEMcgSel2e"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"dOjJGPKu01rpU006"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"gjxn2SxL8jF2HMUO"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"hAmZYrwsTIVc9jZ2"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"joJxPiS7fvjHRMVh"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"lMtJBJug8EhvnBzA"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"lYzkFuqIeAWwjtUF"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"whIIrBma2uwebnkP"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"yvK6IZJiCqdipEa3"}
+{"$$deleted":true,"_id":"2kr9xcrD0ZW0kMUy"}
+{"$$deleted":true,"_id":"BYq45uCpyctAx5eZ"}
+{"$$deleted":true,"_id":"C4UpwJAHRyLSycel"}
+{"$$deleted":true,"_id":"D0pUJFPWGsk3eL46"}
+{"$$deleted":true,"_id":"O2AcqldUsojjS5Jk"}
+{"$$deleted":true,"_id":"ZHFQVLv34opjKH07"}
+{"$$deleted":true,"_id":"bc7VNxPEMcgSel2e"}
+{"$$deleted":true,"_id":"dOjJGPKu01rpU006"}
+{"$$deleted":true,"_id":"gjxn2SxL8jF2HMUO"}
+{"$$deleted":true,"_id":"hAmZYrwsTIVc9jZ2"}
+{"$$deleted":true,"_id":"joJxPiS7fvjHRMVh"}
+{"$$deleted":true,"_id":"lMtJBJug8EhvnBzA"}
+{"$$deleted":true,"_id":"lYzkFuqIeAWwjtUF"}
+{"$$deleted":true,"_id":"whIIrBma2uwebnkP"}
+{"$$deleted":true,"_id":"yvK6IZJiCqdipEa3"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"TnimgZ7ervZ2koL9"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"V9heX090MIA7hnq9"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"pEGcd8qeYE7YCZg2"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"zQm3f3CzuOF4MIQR"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"jQPtwaMTYRxwnq2u"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"zo5Y6aBUO5l1OKk4"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"PRUqSoN1LBppVMAV"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"My6afg6UAXQQIcvD"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"hHjSPjLxtv4J1BQT"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"xiLws8hBkVNEtpun"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"gzVzyCuJcbkw9cNy"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"gtKP2BJGrgkTrHZZ"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"dUdT8AmdAlIWledv"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"GtxQ0W3sM752DW4V"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"F7F0PT5GrJQvYukW"}
+{"$$deleted":true,"_id":"F7F0PT5GrJQvYukW"}
+{"$$deleted":true,"_id":"GtxQ0W3sM752DW4V"}
+{"$$deleted":true,"_id":"My6afg6UAXQQIcvD"}
+{"$$deleted":true,"_id":"PRUqSoN1LBppVMAV"}
+{"$$deleted":true,"_id":"TnimgZ7ervZ2koL9"}
+{"$$deleted":true,"_id":"V9heX090MIA7hnq9"}
+{"$$deleted":true,"_id":"dUdT8AmdAlIWledv"}
+{"$$deleted":true,"_id":"gtKP2BJGrgkTrHZZ"}
+{"$$deleted":true,"_id":"gzVzyCuJcbkw9cNy"}
+{"$$deleted":true,"_id":"hHjSPjLxtv4J1BQT"}
+{"$$deleted":true,"_id":"jQPtwaMTYRxwnq2u"}
+{"$$deleted":true,"_id":"pEGcd8qeYE7YCZg2"}
+{"$$deleted":true,"_id":"xiLws8hBkVNEtpun"}
+{"$$deleted":true,"_id":"zQm3f3CzuOF4MIQR"}
+{"$$deleted":true,"_id":"zo5Y6aBUO5l1OKk4"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"KVat5nwvU0hzVzc0"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"6oYwkG5yKa9Ir7RC"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"QrXGkkYtpvXXNXri"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"WVMafmwcVc9pSem6"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"CIZt1nyaOzrCy78L"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"i351oTnCEhyBxPFw"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"WweTJsSHq4YgbB2L"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"E32RaPzF8yBUVehF"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"JmVicUesQkbYRSB5"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"qhuC2yrRbMBMDBc9"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"N9JGK2sbgsM3yP7b"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"5bsFewbixOVj1fdI"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"f9gBmsifJC9AHFLp"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"ZdcfSz9hXBsVxtHA"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"AaSb1YdxTt0i6jyf"}
+{"$$deleted":true,"_id":"5bsFewbixOVj1fdI"}
+{"$$deleted":true,"_id":"6oYwkG5yKa9Ir7RC"}
+{"$$deleted":true,"_id":"AaSb1YdxTt0i6jyf"}
+{"$$deleted":true,"_id":"CIZt1nyaOzrCy78L"}
+{"$$deleted":true,"_id":"E32RaPzF8yBUVehF"}
+{"$$deleted":true,"_id":"JmVicUesQkbYRSB5"}
+{"$$deleted":true,"_id":"KVat5nwvU0hzVzc0"}
+{"$$deleted":true,"_id":"N9JGK2sbgsM3yP7b"}
+{"$$deleted":true,"_id":"QrXGkkYtpvXXNXri"}
+{"$$deleted":true,"_id":"WVMafmwcVc9pSem6"}
+{"$$deleted":true,"_id":"WweTJsSHq4YgbB2L"}
+{"$$deleted":true,"_id":"ZdcfSz9hXBsVxtHA"}
+{"$$deleted":true,"_id":"f9gBmsifJC9AHFLp"}
+{"$$deleted":true,"_id":"i351oTnCEhyBxPFw"}
+{"$$deleted":true,"_id":"qhuC2yrRbMBMDBc9"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"EZWxfAOhj5Jbl9Zl"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"m6tYL0WockjiKX5c"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"wIYWWnjtcaN5atOv"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"XNu0mGXWd6tpPEOe"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"9aLZi6r2avjv5Ub1"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"stCua2iPaz8inEtE"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"uAxl89i9F1B5mSLm"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"KhsuIN9hWaf5RwMt"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"BCSdLRkjzHCdRv3H"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"Hs3RNhZCEQmW2sbv"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"SI4IcKdRy0WKTvrY"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"FMJ8vzKs3sGkYmPI"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"TIng6HKyt6Adw0lN"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"xh39SfYCa2ubEpfn"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"vywxSBGaE3Nto56X"}
+{"$$deleted":true,"_id":"9aLZi6r2avjv5Ub1"}
+{"$$deleted":true,"_id":"BCSdLRkjzHCdRv3H"}
+{"$$deleted":true,"_id":"EZWxfAOhj5Jbl9Zl"}
+{"$$deleted":true,"_id":"FMJ8vzKs3sGkYmPI"}
+{"$$deleted":true,"_id":"Hs3RNhZCEQmW2sbv"}
+{"$$deleted":true,"_id":"KhsuIN9hWaf5RwMt"}
+{"$$deleted":true,"_id":"SI4IcKdRy0WKTvrY"}
+{"$$deleted":true,"_id":"TIng6HKyt6Adw0lN"}
+{"$$deleted":true,"_id":"XNu0mGXWd6tpPEOe"}
+{"$$deleted":true,"_id":"m6tYL0WockjiKX5c"}
+{"$$deleted":true,"_id":"stCua2iPaz8inEtE"}
+{"$$deleted":true,"_id":"uAxl89i9F1B5mSLm"}
+{"$$deleted":true,"_id":"vywxSBGaE3Nto56X"}
+{"$$deleted":true,"_id":"wIYWWnjtcaN5atOv"}
+{"$$deleted":true,"_id":"xh39SfYCa2ubEpfn"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"ctLyv5o2DPwjpSFx"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"4TyaHyazK9uHqDVg"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"5BVY6Kzlebajqdbe"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"2wHw8rgwpfKEDTep"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"yBeFQTpEfENxyClp"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"FSiFf5EViZwPXz1d"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"3Vs0lV2RczCA818r"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"crn8AwgYao3Icu9p"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"yLCLGK0nrlRjO7gn"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"39bCo2P05B0bRfWa"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"IYG256SI5rk1AzQR"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"Ow2ikJdwdeMgmNz6"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"uru2Hi6zy8HWYGcp"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"DOAskGYrE7MrTnLH"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"gcISWxRKCMBtzzgb"}
+{"$$deleted":true,"_id":"2wHw8rgwpfKEDTep"}
+{"$$deleted":true,"_id":"39bCo2P05B0bRfWa"}
+{"$$deleted":true,"_id":"3Vs0lV2RczCA818r"}
+{"$$deleted":true,"_id":"4TyaHyazK9uHqDVg"}
+{"$$deleted":true,"_id":"5BVY6Kzlebajqdbe"}
+{"$$deleted":true,"_id":"DOAskGYrE7MrTnLH"}
+{"$$deleted":true,"_id":"FSiFf5EViZwPXz1d"}
+{"$$deleted":true,"_id":"IYG256SI5rk1AzQR"}
+{"$$deleted":true,"_id":"Ow2ikJdwdeMgmNz6"}
+{"$$deleted":true,"_id":"crn8AwgYao3Icu9p"}
+{"$$deleted":true,"_id":"ctLyv5o2DPwjpSFx"}
+{"$$deleted":true,"_id":"gcISWxRKCMBtzzgb"}
+{"$$deleted":true,"_id":"uru2Hi6zy8HWYGcp"}
+{"$$deleted":true,"_id":"yBeFQTpEfENxyClp"}
+{"$$deleted":true,"_id":"yLCLGK0nrlRjO7gn"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"5akhm0qdsEsfCzAm"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"mlJa0ODZ4qEf8Hea"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"oxnPPlTbNzimp9t1"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"Hsi5lkRHJIMz6M0K"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"rodNg6gww0WqWdCr"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"4QZaCijOvv4Ne32U"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"q6BmGLQcs3zXCMNE"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"otFVxXtk1oZmUcag"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"fhgcx3rzpAMDcsFG"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"GWBjNSnnW2rl2sVK"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"RnSMkvd57fpydLMq"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"KnTuJBzQFKtBNKhF"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"ODBKQP2hinB6eLBU"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"NwuDFHYeRNAeQ95D"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"4PJVPQo5kF5MTbKV"}
+{"$$deleted":true,"_id":"4PJVPQo5kF5MTbKV"}
+{"$$deleted":true,"_id":"4QZaCijOvv4Ne32U"}
+{"$$deleted":true,"_id":"5akhm0qdsEsfCzAm"}
+{"$$deleted":true,"_id":"GWBjNSnnW2rl2sVK"}
+{"$$deleted":true,"_id":"Hsi5lkRHJIMz6M0K"}
+{"$$deleted":true,"_id":"KnTuJBzQFKtBNKhF"}
+{"$$deleted":true,"_id":"NwuDFHYeRNAeQ95D"}
+{"$$deleted":true,"_id":"ODBKQP2hinB6eLBU"}
+{"$$deleted":true,"_id":"RnSMkvd57fpydLMq"}
+{"$$deleted":true,"_id":"fhgcx3rzpAMDcsFG"}
+{"$$deleted":true,"_id":"mlJa0ODZ4qEf8Hea"}
+{"$$deleted":true,"_id":"otFVxXtk1oZmUcag"}
+{"$$deleted":true,"_id":"oxnPPlTbNzimp9t1"}
+{"$$deleted":true,"_id":"q6BmGLQcs3zXCMNE"}
+{"$$deleted":true,"_id":"rodNg6gww0WqWdCr"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"yKm7ssWThZddESKb"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"b6Vmfvq7IaMZm2oN"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"rfvwds4jauCaiOlS"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"KFPevBla3LSbnKrm"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"ZqxHjOXbewIqRR7d"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"qTL1ewwq2TXc0mAi"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"PfV6V6gPtFumH7GJ"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"6E3a7GFAlMdDAU4h"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"zXTKVJP1ShLRgVA9"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"MOIBfSgw0LM9jXBd"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"8w2YXAtaV19LoXw0"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"j0PRnNqKjDYG66mj"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"LCrXKmqhVZZdGZaE"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"apjqTkZ2o5Mtu8Yj"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"BC6TXdw1k23fbjNi"}
+{"$$deleted":true,"_id":"6E3a7GFAlMdDAU4h"}
+{"$$deleted":true,"_id":"8w2YXAtaV19LoXw0"}
+{"$$deleted":true,"_id":"BC6TXdw1k23fbjNi"}
+{"$$deleted":true,"_id":"KFPevBla3LSbnKrm"}
+{"$$deleted":true,"_id":"LCrXKmqhVZZdGZaE"}
+{"$$deleted":true,"_id":"MOIBfSgw0LM9jXBd"}
+{"$$deleted":true,"_id":"PfV6V6gPtFumH7GJ"}
+{"$$deleted":true,"_id":"ZqxHjOXbewIqRR7d"}
+{"$$deleted":true,"_id":"apjqTkZ2o5Mtu8Yj"}
+{"$$deleted":true,"_id":"b6Vmfvq7IaMZm2oN"}
+{"$$deleted":true,"_id":"j0PRnNqKjDYG66mj"}
+{"$$deleted":true,"_id":"qTL1ewwq2TXc0mAi"}
+{"$$deleted":true,"_id":"rfvwds4jauCaiOlS"}
+{"$$deleted":true,"_id":"yKm7ssWThZddESKb"}
+{"$$deleted":true,"_id":"zXTKVJP1ShLRgVA9"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"sGbnnSiiMMqamluW"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"dw91cEagCSYeN98W"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"7Pf4QgXcBQFSF8yJ"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"YmskHPe9xfLmgtWn"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"PMuX4DDwPotmA48o"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"L757cOHurZsM28Yh"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"8Q10pQqj23Iwuscy"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"q8yzFNCbmoXuL3XM"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"Q30VAODcZDv4cnBy"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"11Pp7Xk7vvdFZXeq"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"qCMD9JGwTFTlY3UO"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"3ELrX0VDvWy3PDD9"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"SCeoVxpWQlrO2NcN"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"rqiuPXt8Hh9l6XjI"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"yixSnwSfS8DZhzzw"}
+{"$$deleted":true,"_id":"11Pp7Xk7vvdFZXeq"}
+{"$$deleted":true,"_id":"3ELrX0VDvWy3PDD9"}
+{"$$deleted":true,"_id":"7Pf4QgXcBQFSF8yJ"}
+{"$$deleted":true,"_id":"8Q10pQqj23Iwuscy"}
+{"$$deleted":true,"_id":"L757cOHurZsM28Yh"}
+{"$$deleted":true,"_id":"PMuX4DDwPotmA48o"}
+{"$$deleted":true,"_id":"Q30VAODcZDv4cnBy"}
+{"$$deleted":true,"_id":"SCeoVxpWQlrO2NcN"}
+{"$$deleted":true,"_id":"YmskHPe9xfLmgtWn"}
+{"$$deleted":true,"_id":"dw91cEagCSYeN98W"}
+{"$$deleted":true,"_id":"q8yzFNCbmoXuL3XM"}
+{"$$deleted":true,"_id":"qCMD9JGwTFTlY3UO"}
+{"$$deleted":true,"_id":"rqiuPXt8Hh9l6XjI"}
+{"$$deleted":true,"_id":"sGbnnSiiMMqamluW"}
+{"$$deleted":true,"_id":"yixSnwSfS8DZhzzw"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"wCCQI1LWBmHNYJzK"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"lfpf89LNAME0rX24"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"7DsBgX97m0VR2hht"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"LUnIqOJloBbQqzgX"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"HWieAxpOzsKc0cu9"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"nzJXMIo05lVfUFE2"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"hyRbuo8hZz8JsBz2"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"uJAkJJk5p547X3qY"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"ZSvppakIxmDGnabu"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"0l6XcK2DLrL1lSoA"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"rhFtwynP3kixLNoj"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"nXIlaPIrkTCOksWe"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"o6AedEgyqgURvwrH"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"0I6bhUaF0gx1dc2t"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"Q9BFZMekSAur2HCM"}
+{"$$deleted":true,"_id":"0I6bhUaF0gx1dc2t"}
+{"$$deleted":true,"_id":"0l6XcK2DLrL1lSoA"}
+{"$$deleted":true,"_id":"7DsBgX97m0VR2hht"}
+{"$$deleted":true,"_id":"HWieAxpOzsKc0cu9"}
+{"$$deleted":true,"_id":"LUnIqOJloBbQqzgX"}
+{"$$deleted":true,"_id":"Q9BFZMekSAur2HCM"}
+{"$$deleted":true,"_id":"ZSvppakIxmDGnabu"}
+{"$$deleted":true,"_id":"hyRbuo8hZz8JsBz2"}
+{"$$deleted":true,"_id":"lfpf89LNAME0rX24"}
+{"$$deleted":true,"_id":"nXIlaPIrkTCOksWe"}
+{"$$deleted":true,"_id":"nzJXMIo05lVfUFE2"}
+{"$$deleted":true,"_id":"o6AedEgyqgURvwrH"}
+{"$$deleted":true,"_id":"rhFtwynP3kixLNoj"}
+{"$$deleted":true,"_id":"uJAkJJk5p547X3qY"}
+{"$$deleted":true,"_id":"wCCQI1LWBmHNYJzK"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"gmoxAvHqyNwbYwRZ"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"0t6nxtIBU2bld58U"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"7lCt530bghCHN2XX"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"tWrJVNgljrBn8dX8"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"sAqFD31Ku2UGz35M"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"OUszxDzpPRZ6K4c3"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"MARJKv9k1Muy1vGV"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"isJiiMHwZzatXOf7"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"ExfJpq6ijFYjxuOi"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"brzGj3ZfWppB3YsQ"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"gdTYdm9QfSaHCLSS"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"wsE778WeWwOfEKq3"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"Wmmer3Nv31gu7Vau"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"9O1GI3bVtu6dUuw1"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"8NM8kyKd5OPfp30m"}
+{"$$deleted":true,"_id":"0t6nxtIBU2bld58U"}
+{"$$deleted":true,"_id":"7lCt530bghCHN2XX"}
+{"$$deleted":true,"_id":"8NM8kyKd5OPfp30m"}
+{"$$deleted":true,"_id":"9O1GI3bVtu6dUuw1"}
+{"$$deleted":true,"_id":"ExfJpq6ijFYjxuOi"}
+{"$$deleted":true,"_id":"MARJKv9k1Muy1vGV"}
+{"$$deleted":true,"_id":"OUszxDzpPRZ6K4c3"}
+{"$$deleted":true,"_id":"Wmmer3Nv31gu7Vau"}
+{"$$deleted":true,"_id":"brzGj3ZfWppB3YsQ"}
+{"$$deleted":true,"_id":"gdTYdm9QfSaHCLSS"}
+{"$$deleted":true,"_id":"gmoxAvHqyNwbYwRZ"}
+{"$$deleted":true,"_id":"isJiiMHwZzatXOf7"}
+{"$$deleted":true,"_id":"sAqFD31Ku2UGz35M"}
+{"$$deleted":true,"_id":"tWrJVNgljrBn8dX8"}
+{"$$deleted":true,"_id":"wsE778WeWwOfEKq3"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"PB0hlYqLcY0LQq4v"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"XfDgNRMgJkPImrhr"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"KqWdT6NqSUvwXsxR"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"NUMcXsL9FqlNs0ie"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"nXP6NLB9YKYShQDw"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"5bJ2AmghFdQpTxZu"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"HEcEciWpnCkJDn9y"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"peAHJctZOW2HFrEu"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"EvdumKpgDJpXOF6T"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"3CIB0DbNg7FYJkOd"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"lgJ48YaTCen0XPvH"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"d9MwvNl4Rlnt42sd"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"v3kdz8zKuFmJPyls"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"ALIxXJCB2Fojpmne"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"mGZk1l9TuWCGpKwt"}
+{"$$deleted":true,"_id":"3CIB0DbNg7FYJkOd"}
+{"$$deleted":true,"_id":"5bJ2AmghFdQpTxZu"}
+{"$$deleted":true,"_id":"ALIxXJCB2Fojpmne"}
+{"$$deleted":true,"_id":"EvdumKpgDJpXOF6T"}
+{"$$deleted":true,"_id":"HEcEciWpnCkJDn9y"}
+{"$$deleted":true,"_id":"KqWdT6NqSUvwXsxR"}
+{"$$deleted":true,"_id":"NUMcXsL9FqlNs0ie"}
+{"$$deleted":true,"_id":"PB0hlYqLcY0LQq4v"}
+{"$$deleted":true,"_id":"XfDgNRMgJkPImrhr"}
+{"$$deleted":true,"_id":"d9MwvNl4Rlnt42sd"}
+{"$$deleted":true,"_id":"lgJ48YaTCen0XPvH"}
+{"$$deleted":true,"_id":"mGZk1l9TuWCGpKwt"}
+{"$$deleted":true,"_id":"nXP6NLB9YKYShQDw"}
+{"$$deleted":true,"_id":"peAHJctZOW2HFrEu"}
+{"$$deleted":true,"_id":"v3kdz8zKuFmJPyls"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"g59VKNL54kkFC4Gw"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"hqhtmhuh5g2YwFWj"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"OGMxhl8rEkx0L1mo"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"mXBgeLuEcKZufd5V"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"kgUbp4kLHLPft3YS"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"Il1XbRoexnX4aURX"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"rWzzhV2gMIybYeSb"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"ucOuCj4nC0X3boF4"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"eTeDsHrTOChGeSbx"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"n8TC7WdM66HTIPxN"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"DTjamSCDJ5982zal"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"IVQvtXJy9LPwZXJa"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"FiXzqOk5mIqoUfjT"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"UVpIdRqX3nMJXDIi"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"KSadm5YL1LPsvxJE"}
+{"$$deleted":true,"_id":"DTjamSCDJ5982zal"}
+{"$$deleted":true,"_id":"FiXzqOk5mIqoUfjT"}
+{"$$deleted":true,"_id":"IVQvtXJy9LPwZXJa"}
+{"$$deleted":true,"_id":"Il1XbRoexnX4aURX"}
+{"$$deleted":true,"_id":"KSadm5YL1LPsvxJE"}
+{"$$deleted":true,"_id":"OGMxhl8rEkx0L1mo"}
+{"$$deleted":true,"_id":"UVpIdRqX3nMJXDIi"}
+{"$$deleted":true,"_id":"eTeDsHrTOChGeSbx"}
+{"$$deleted":true,"_id":"g59VKNL54kkFC4Gw"}
+{"$$deleted":true,"_id":"hqhtmhuh5g2YwFWj"}
+{"$$deleted":true,"_id":"kgUbp4kLHLPft3YS"}
+{"$$deleted":true,"_id":"mXBgeLuEcKZufd5V"}
+{"$$deleted":true,"_id":"n8TC7WdM66HTIPxN"}
+{"$$deleted":true,"_id":"rWzzhV2gMIybYeSb"}
+{"$$deleted":true,"_id":"ucOuCj4nC0X3boF4"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"g3zRTaMzdoNSJRpS"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"qgFlv72Q2n01gLTS"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"y8lexl5enQ0JL1Ko"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"z0R7mZY33WQgHZAq"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"Hy5qmA2lLdg2StFe"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"NOYsHwyybRh7J9OY"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"ZR6QKWGrORIJMGrC"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"5DBRuckqP1cWxOh8"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"NhV1KaxC6fo1NhKQ"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"2LbUWdbUnmzlVGVO"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"yHVAG9bNGqwWUXOK"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"a7vjmNwmZhVpNgS8"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"CuGGdbINsAHECItK"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"OoLEyoQL07bmfzk1"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"rm44wBnmBtFaL0hw"}
+{"$$deleted":true,"_id":"2LbUWdbUnmzlVGVO"}
+{"$$deleted":true,"_id":"5DBRuckqP1cWxOh8"}
+{"$$deleted":true,"_id":"CuGGdbINsAHECItK"}
+{"$$deleted":true,"_id":"Hy5qmA2lLdg2StFe"}
+{"$$deleted":true,"_id":"NOYsHwyybRh7J9OY"}
+{"$$deleted":true,"_id":"NhV1KaxC6fo1NhKQ"}
+{"$$deleted":true,"_id":"OoLEyoQL07bmfzk1"}
+{"$$deleted":true,"_id":"ZR6QKWGrORIJMGrC"}
+{"$$deleted":true,"_id":"a7vjmNwmZhVpNgS8"}
+{"$$deleted":true,"_id":"g3zRTaMzdoNSJRpS"}
+{"$$deleted":true,"_id":"qgFlv72Q2n01gLTS"}
+{"$$deleted":true,"_id":"rm44wBnmBtFaL0hw"}
+{"$$deleted":true,"_id":"y8lexl5enQ0JL1Ko"}
+{"$$deleted":true,"_id":"yHVAG9bNGqwWUXOK"}
+{"$$deleted":true,"_id":"z0R7mZY33WQgHZAq"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"oFzXfZklQYa1C6QW"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"Exkp1anryi7xVNJi"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"W9IltLrjVGAdbm0M"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"48Nv3MwQsJBVVG3N"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"3oBWo0rqyeXzosD8"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"w2WkQMpd3zvf0vih"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"StUIFpfJMGii0tt1"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"cTNzagg0Wrfmfibl"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"EExj6F02mpeUgG08"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"tQ9iGeO6FAPOgnxI"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"wmndlE8piu42glBw"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"rubwI3w7O4cT8hiE"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"Ed8q31f3y8sDQ1rQ"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"tTK2SUvHVndEqYU8"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"fTqa2DL1AGXtIncj"}
+{"$$deleted":true,"_id":"3oBWo0rqyeXzosD8"}
+{"$$deleted":true,"_id":"48Nv3MwQsJBVVG3N"}
+{"$$deleted":true,"_id":"EExj6F02mpeUgG08"}
+{"$$deleted":true,"_id":"Ed8q31f3y8sDQ1rQ"}
+{"$$deleted":true,"_id":"Exkp1anryi7xVNJi"}
+{"$$deleted":true,"_id":"StUIFpfJMGii0tt1"}
+{"$$deleted":true,"_id":"W9IltLrjVGAdbm0M"}
+{"$$deleted":true,"_id":"cTNzagg0Wrfmfibl"}
+{"$$deleted":true,"_id":"fTqa2DL1AGXtIncj"}
+{"$$deleted":true,"_id":"oFzXfZklQYa1C6QW"}
+{"$$deleted":true,"_id":"rubwI3w7O4cT8hiE"}
+{"$$deleted":true,"_id":"tQ9iGeO6FAPOgnxI"}
+{"$$deleted":true,"_id":"tTK2SUvHVndEqYU8"}
+{"$$deleted":true,"_id":"w2WkQMpd3zvf0vih"}
+{"$$deleted":true,"_id":"wmndlE8piu42glBw"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"Bakkse7zZQSJb3BG"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"zXrDlRv5rwg49vqP"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"PsSJV9hnNv0qrjqq"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"9Qc0nXIWyCr9jFVp"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"0VMPNdtqmKM54Lui"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"fhrZ6ol1qWuFRSAE"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"BrWR8PkF5RMoNDsZ"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"5ygjYhNZK8QhKyuQ"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"gn2V74FMU28t9n8n"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"Oqj1JlI5lg1xEBfa"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"dyCPVyR8nQ66MXyp"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"HvJzgyqS6n1MU7Tc"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"b1saTQZL4txoiEIQ"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"ENJfd4uxHDrHBHmH"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"3wvwNp6zADcHAAvm"}
+{"$$deleted":true,"_id":"0VMPNdtqmKM54Lui"}
+{"$$deleted":true,"_id":"3wvwNp6zADcHAAvm"}
+{"$$deleted":true,"_id":"5ygjYhNZK8QhKyuQ"}
+{"$$deleted":true,"_id":"9Qc0nXIWyCr9jFVp"}
+{"$$deleted":true,"_id":"Bakkse7zZQSJb3BG"}
+{"$$deleted":true,"_id":"BrWR8PkF5RMoNDsZ"}
+{"$$deleted":true,"_id":"ENJfd4uxHDrHBHmH"}
+{"$$deleted":true,"_id":"HvJzgyqS6n1MU7Tc"}
+{"$$deleted":true,"_id":"Oqj1JlI5lg1xEBfa"}
+{"$$deleted":true,"_id":"PsSJV9hnNv0qrjqq"}
+{"$$deleted":true,"_id":"b1saTQZL4txoiEIQ"}
+{"$$deleted":true,"_id":"dyCPVyR8nQ66MXyp"}
+{"$$deleted":true,"_id":"fhrZ6ol1qWuFRSAE"}
+{"$$deleted":true,"_id":"gn2V74FMU28t9n8n"}
+{"$$deleted":true,"_id":"zXrDlRv5rwg49vqP"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"uNyw4QgpCPPt9ZlE"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"GOmPW6nqv4dtNnZk"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"bHfWsNU0J13l7lHK"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"3rFYX0HmGs1numA0"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"LaWbULHr6wl4HVUn"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"LCie69R17uKnFli4"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"goyY3rY4FlqOGdzE"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"su1v1igK6ZJGzOdd"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"oqFIRxtdOoOExnAW"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"0yt4ibblT9kyEnk2"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"Dr5o8gzXJ1aHmDgJ"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"uhEcoJZnWf7ysBma"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"tjm4ul6xG00AZs1e"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"PZg6sKlITpZVyJpa"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"wUOWaL62HeA3JSzU"}
+{"$$deleted":true,"_id":"0yt4ibblT9kyEnk2"}
+{"$$deleted":true,"_id":"3rFYX0HmGs1numA0"}
+{"$$deleted":true,"_id":"Dr5o8gzXJ1aHmDgJ"}
+{"$$deleted":true,"_id":"GOmPW6nqv4dtNnZk"}
+{"$$deleted":true,"_id":"LCie69R17uKnFli4"}
+{"$$deleted":true,"_id":"LaWbULHr6wl4HVUn"}
+{"$$deleted":true,"_id":"PZg6sKlITpZVyJpa"}
+{"$$deleted":true,"_id":"bHfWsNU0J13l7lHK"}
+{"$$deleted":true,"_id":"goyY3rY4FlqOGdzE"}
+{"$$deleted":true,"_id":"oqFIRxtdOoOExnAW"}
+{"$$deleted":true,"_id":"su1v1igK6ZJGzOdd"}
+{"$$deleted":true,"_id":"tjm4ul6xG00AZs1e"}
+{"$$deleted":true,"_id":"uNyw4QgpCPPt9ZlE"}
+{"$$deleted":true,"_id":"uhEcoJZnWf7ysBma"}
+{"$$deleted":true,"_id":"wUOWaL62HeA3JSzU"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"jbtEXQVNfXOIY64I"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"RJl4BjgEfBAQ1nZq"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"UQjameGKke9lxmyI"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"XHI4VI3gWMaJU4Bu"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"u4spHWcywiXf2WV1"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"1jQi4Pis5JxErISa"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"ny62iYYOTB2n9uNE"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"3RrDWvkurtemkbQn"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"CReNxL06Iw34KLej"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"u5sDbkasufiKcR2b"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"LkLlQOcmzqaik3Oo"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"1TQSS48npc8Z0BvP"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"DG4xFLujJIPpKlOF"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"0ZS4PfBNm5cLR0RC"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"QZRpQWzuDUuby8uZ"}
+{"$$deleted":true,"_id":"0ZS4PfBNm5cLR0RC"}
+{"$$deleted":true,"_id":"1TQSS48npc8Z0BvP"}
+{"$$deleted":true,"_id":"1jQi4Pis5JxErISa"}
+{"$$deleted":true,"_id":"3RrDWvkurtemkbQn"}
+{"$$deleted":true,"_id":"CReNxL06Iw34KLej"}
+{"$$deleted":true,"_id":"DG4xFLujJIPpKlOF"}
+{"$$deleted":true,"_id":"LkLlQOcmzqaik3Oo"}
+{"$$deleted":true,"_id":"QZRpQWzuDUuby8uZ"}
+{"$$deleted":true,"_id":"RJl4BjgEfBAQ1nZq"}
+{"$$deleted":true,"_id":"UQjameGKke9lxmyI"}
+{"$$deleted":true,"_id":"XHI4VI3gWMaJU4Bu"}
+{"$$deleted":true,"_id":"jbtEXQVNfXOIY64I"}
+{"$$deleted":true,"_id":"ny62iYYOTB2n9uNE"}
+{"$$deleted":true,"_id":"u4spHWcywiXf2WV1"}
+{"$$deleted":true,"_id":"u5sDbkasufiKcR2b"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"fB9nYmjH5DjJEir0"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"r71jvcEG6kBNltVJ"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"vsbPYX7tliqR3Ipt"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"f6KgrNJYQXCn7gqx"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"1veChjU57Ps8OI9s"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"Sg5kM94TfFEzTVKe"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"QTCJPdUQwXFcdCCb"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"yIhZDGzTvAXYR33T"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"O6CM4nqdyt08p4m1"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"CpnRYgNuYbkAz5XU"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"B1bzBTSKApVmMPoV"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"KPy1Sk1tLcsFZhTA"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"IMtZC55IzKAc4dK1"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"KE0bZZf8KUF8gE2o"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"zWsMM3uHj9F0TT6H"}
+{"$$deleted":true,"_id":"1veChjU57Ps8OI9s"}
+{"$$deleted":true,"_id":"B1bzBTSKApVmMPoV"}
+{"$$deleted":true,"_id":"CpnRYgNuYbkAz5XU"}
+{"$$deleted":true,"_id":"IMtZC55IzKAc4dK1"}
+{"$$deleted":true,"_id":"KE0bZZf8KUF8gE2o"}
+{"$$deleted":true,"_id":"KPy1Sk1tLcsFZhTA"}
+{"$$deleted":true,"_id":"O6CM4nqdyt08p4m1"}
+{"$$deleted":true,"_id":"QTCJPdUQwXFcdCCb"}
+{"$$deleted":true,"_id":"Sg5kM94TfFEzTVKe"}
+{"$$deleted":true,"_id":"f6KgrNJYQXCn7gqx"}
+{"$$deleted":true,"_id":"fB9nYmjH5DjJEir0"}
+{"$$deleted":true,"_id":"r71jvcEG6kBNltVJ"}
+{"$$deleted":true,"_id":"vsbPYX7tliqR3Ipt"}
+{"$$deleted":true,"_id":"yIhZDGzTvAXYR33T"}
+{"$$deleted":true,"_id":"zWsMM3uHj9F0TT6H"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"QxyhBbxVBbUW4bKa"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"Ez8HgyKxd10ZGRn0"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"grktJ0KMRVWZPqsY"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"LgGjQNR5Yxpc3sP0"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"xGAgQQ1SyxEg0WB0"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"B8ulFJ0hpn0XC4qL"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"CbMs0B3gDod4wwRu"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"gWNxhPwuY2Tu2p2P"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"z15Xy3AM6IwRDCpW"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"jocTRO6GnmpieFnJ"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"CTluaq2mV0wtAGiS"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"Emvmfds6ZAUNOXub"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"QrRiiZONXRn2pQ1k"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"1tFjmljsMkmEb4Ga"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"iCTIuIeqwiYtdf1w"}
+{"$$deleted":true,"_id":"1tFjmljsMkmEb4Ga"}
+{"$$deleted":true,"_id":"B8ulFJ0hpn0XC4qL"}
+{"$$deleted":true,"_id":"CTluaq2mV0wtAGiS"}
+{"$$deleted":true,"_id":"CbMs0B3gDod4wwRu"}
+{"$$deleted":true,"_id":"Emvmfds6ZAUNOXub"}
+{"$$deleted":true,"_id":"Ez8HgyKxd10ZGRn0"}
+{"$$deleted":true,"_id":"LgGjQNR5Yxpc3sP0"}
+{"$$deleted":true,"_id":"QrRiiZONXRn2pQ1k"}
+{"$$deleted":true,"_id":"QxyhBbxVBbUW4bKa"}
+{"$$deleted":true,"_id":"gWNxhPwuY2Tu2p2P"}
+{"$$deleted":true,"_id":"grktJ0KMRVWZPqsY"}
+{"$$deleted":true,"_id":"iCTIuIeqwiYtdf1w"}
+{"$$deleted":true,"_id":"jocTRO6GnmpieFnJ"}
+{"$$deleted":true,"_id":"xGAgQQ1SyxEg0WB0"}
+{"$$deleted":true,"_id":"z15Xy3AM6IwRDCpW"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"xBQFI6wLqdDM9Kn1"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"qaULtyyK0pQic8XW"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"ADiCMZgzKl0b49Tn"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"IGWa1SOGyS3lUORb"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"5hdgoDa5NnU4gq5O"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"kd1NsCw9FqqNb6U2"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"8UrtvZEZ2rryPisJ"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"mw3HYqh1wxNzBMoS"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"3EwVUCQcI20Z1ih9"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"SGryDvDISh4gosdI"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"Lg1yust2bU5SiGC8"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"WwH4RsAWoR0Fei3W"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"SGKkM1rm4EtR8u4S"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"C5rXzc5s2EZUPk0q"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"gEZwfvoBO1gcPsTO"}
+{"$$deleted":true,"_id":"3EwVUCQcI20Z1ih9"}
+{"$$deleted":true,"_id":"5hdgoDa5NnU4gq5O"}
+{"$$deleted":true,"_id":"8UrtvZEZ2rryPisJ"}
+{"$$deleted":true,"_id":"ADiCMZgzKl0b49Tn"}
+{"$$deleted":true,"_id":"C5rXzc5s2EZUPk0q"}
+{"$$deleted":true,"_id":"IGWa1SOGyS3lUORb"}
+{"$$deleted":true,"_id":"Lg1yust2bU5SiGC8"}
+{"$$deleted":true,"_id":"SGKkM1rm4EtR8u4S"}
+{"$$deleted":true,"_id":"SGryDvDISh4gosdI"}
+{"$$deleted":true,"_id":"WwH4RsAWoR0Fei3W"}
+{"$$deleted":true,"_id":"gEZwfvoBO1gcPsTO"}
+{"$$deleted":true,"_id":"kd1NsCw9FqqNb6U2"}
+{"$$deleted":true,"_id":"mw3HYqh1wxNzBMoS"}
+{"$$deleted":true,"_id":"qaULtyyK0pQic8XW"}
+{"$$deleted":true,"_id":"xBQFI6wLqdDM9Kn1"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"qNBSGHXdU9ykayC7"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"HblcNAeEvSOxRT1I"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"pEoLktfQWgMD4jzQ"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"UWfzc5aSrlkfnnhi"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"DVuV2dTztLl7PHET"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"LmgYUh5dSYHeKPUI"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"ldHMtedalWKDJgIe"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"0pg5SdtWejBgC9lo"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"rtsFYhiXjaHIj1CE"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"dNbcWdORHErdVDMs"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"mgwYZu93XQHHmgVw"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"cMqh6liKzCwpQWRt"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"jNe6s1VwfHb8lX3h"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"1ulu8nFNLErhbagV"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"q57TJtkvmB9EeDms"}
+{"$$deleted":true,"_id":"0pg5SdtWejBgC9lo"}
+{"$$deleted":true,"_id":"1ulu8nFNLErhbagV"}
+{"$$deleted":true,"_id":"DVuV2dTztLl7PHET"}
+{"$$deleted":true,"_id":"HblcNAeEvSOxRT1I"}
+{"$$deleted":true,"_id":"LmgYUh5dSYHeKPUI"}
+{"$$deleted":true,"_id":"UWfzc5aSrlkfnnhi"}
+{"$$deleted":true,"_id":"cMqh6liKzCwpQWRt"}
+{"$$deleted":true,"_id":"dNbcWdORHErdVDMs"}
+{"$$deleted":true,"_id":"jNe6s1VwfHb8lX3h"}
+{"$$deleted":true,"_id":"ldHMtedalWKDJgIe"}
+{"$$deleted":true,"_id":"mgwYZu93XQHHmgVw"}
+{"$$deleted":true,"_id":"pEoLktfQWgMD4jzQ"}
+{"$$deleted":true,"_id":"q57TJtkvmB9EeDms"}
+{"$$deleted":true,"_id":"qNBSGHXdU9ykayC7"}
+{"$$deleted":true,"_id":"rtsFYhiXjaHIj1CE"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"yn8OqlAozfvGSxam"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"OCigoMjjRMAa5YTr"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"OfTjwmb9XnFLuhls"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"aO685TEyLyx9Rbve"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"NTl7v9UGEQVRCcE5"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"hDe4hJUveJ5aYi6u"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"5feBZV2YFkbcBBas"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"FF53OSc7XRqzaPfF"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"eETeZnkoq2yhiWIg"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"NXUVkpo6Lq12tRUR"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"ladT4yjoocUYookf"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"6tLQCSYkm7A4EZce"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"7p6330bvO4fg8ypN"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"vm1BG8SFR9hhXbTZ"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"UiUO9OT8Xg8Vyufi"}
+{"$$deleted":true,"_id":"5feBZV2YFkbcBBas"}
+{"$$deleted":true,"_id":"6tLQCSYkm7A4EZce"}
+{"$$deleted":true,"_id":"7p6330bvO4fg8ypN"}
+{"$$deleted":true,"_id":"FF53OSc7XRqzaPfF"}
+{"$$deleted":true,"_id":"NTl7v9UGEQVRCcE5"}
+{"$$deleted":true,"_id":"NXUVkpo6Lq12tRUR"}
+{"$$deleted":true,"_id":"OCigoMjjRMAa5YTr"}
+{"$$deleted":true,"_id":"OfTjwmb9XnFLuhls"}
+{"$$deleted":true,"_id":"UiUO9OT8Xg8Vyufi"}
+{"$$deleted":true,"_id":"aO685TEyLyx9Rbve"}
+{"$$deleted":true,"_id":"eETeZnkoq2yhiWIg"}
+{"$$deleted":true,"_id":"hDe4hJUveJ5aYi6u"}
+{"$$deleted":true,"_id":"ladT4yjoocUYookf"}
+{"$$deleted":true,"_id":"vm1BG8SFR9hhXbTZ"}
+{"$$deleted":true,"_id":"yn8OqlAozfvGSxam"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"0AhRNUTwIgvagdUP"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"kUakjG0KzWIul1qb"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"DFM5Uif4L4cZsMwq"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"gHrBJH21hOr1UBmI"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"DY1KesovQnVJt7BL"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"ekkv0tgaJAbraYuO"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"0IyKYzbd5cJx1agM"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"bhEQiZ3xD4iyshec"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"P9SCWAec93nG6UUy"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"dKHKQN5hTtBFmmXv"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"u9b4mN7qWdv9nZKR"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"agZ1jzcxeZmwyHUD"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"C4NUBOBnlMmG7yQm"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"fYzgfL6Gp91BN8wL"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"nw1ttljDzCE25jkL"}
+{"$$deleted":true,"_id":"0AhRNUTwIgvagdUP"}
+{"$$deleted":true,"_id":"0IyKYzbd5cJx1agM"}
+{"$$deleted":true,"_id":"C4NUBOBnlMmG7yQm"}
+{"$$deleted":true,"_id":"DFM5Uif4L4cZsMwq"}
+{"$$deleted":true,"_id":"DY1KesovQnVJt7BL"}
+{"$$deleted":true,"_id":"P9SCWAec93nG6UUy"}
+{"$$deleted":true,"_id":"agZ1jzcxeZmwyHUD"}
+{"$$deleted":true,"_id":"bhEQiZ3xD4iyshec"}
+{"$$deleted":true,"_id":"dKHKQN5hTtBFmmXv"}
+{"$$deleted":true,"_id":"ekkv0tgaJAbraYuO"}
+{"$$deleted":true,"_id":"fYzgfL6Gp91BN8wL"}
+{"$$deleted":true,"_id":"gHrBJH21hOr1UBmI"}
+{"$$deleted":true,"_id":"kUakjG0KzWIul1qb"}
+{"$$deleted":true,"_id":"nw1ttljDzCE25jkL"}
+{"$$deleted":true,"_id":"u9b4mN7qWdv9nZKR"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"vwwf3HnP080IXZeA"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"zEc8MNiacHtBKJZp"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"nWzdofYTTHTEseNA"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"nAszvWQpezMYkf1q"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"5lGwcRygvdRWJRAg"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"22fZgNQd72QCCucS"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"qoAuHnZD9NK4dbV1"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"g8BNWRojkYacoCqm"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"0GsIFBNgKKEXTqiS"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"OnXOc5yuGT7nCkvq"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"GZdhqW9NK5YVracT"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"k8JRv96KAX4xb7al"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"CW80LUrG0G7P0zMR"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"QP5VV0TL4XpRHESH"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"SpUGKk3sZoDQ9lP8"}
+{"$$deleted":true,"_id":"0GsIFBNgKKEXTqiS"}
+{"$$deleted":true,"_id":"22fZgNQd72QCCucS"}
+{"$$deleted":true,"_id":"5lGwcRygvdRWJRAg"}
+{"$$deleted":true,"_id":"CW80LUrG0G7P0zMR"}
+{"$$deleted":true,"_id":"GZdhqW9NK5YVracT"}
+{"$$deleted":true,"_id":"OnXOc5yuGT7nCkvq"}
+{"$$deleted":true,"_id":"QP5VV0TL4XpRHESH"}
+{"$$deleted":true,"_id":"SpUGKk3sZoDQ9lP8"}
+{"$$deleted":true,"_id":"g8BNWRojkYacoCqm"}
+{"$$deleted":true,"_id":"k8JRv96KAX4xb7al"}
+{"$$deleted":true,"_id":"nAszvWQpezMYkf1q"}
+{"$$deleted":true,"_id":"nWzdofYTTHTEseNA"}
+{"$$deleted":true,"_id":"qoAuHnZD9NK4dbV1"}
+{"$$deleted":true,"_id":"vwwf3HnP080IXZeA"}
+{"$$deleted":true,"_id":"zEc8MNiacHtBKJZp"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"iSi2Wn9b9sLXCW2c"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"ESDn2C6CchC8UJfP"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"8efPY5r2FKodvWVZ"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"tALftzocZ4YZe3Zm"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"P26eu2WAcwDhUyVN"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"cZPW99q0UCB9jmoi"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"9bzI9FruNaSCIPGP"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"J8E3YF9I4NljRv2w"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"bb5p4pPkkRuo7vCt"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"9d4VeCxdbZdk3ITr"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"sY5HGEzeRR7pFdIS"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"OOt643FqF5NeqGkv"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"OfMX9M8E3zNVrMBM"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"5KGGFCldeXauTcuM"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"q9UKGT3ynUvXijGU"}
+{"$$deleted":true,"_id":"5KGGFCldeXauTcuM"}
+{"$$deleted":true,"_id":"8efPY5r2FKodvWVZ"}
+{"$$deleted":true,"_id":"9bzI9FruNaSCIPGP"}
+{"$$deleted":true,"_id":"9d4VeCxdbZdk3ITr"}
+{"$$deleted":true,"_id":"ESDn2C6CchC8UJfP"}
+{"$$deleted":true,"_id":"J8E3YF9I4NljRv2w"}
+{"$$deleted":true,"_id":"OOt643FqF5NeqGkv"}
+{"$$deleted":true,"_id":"OfMX9M8E3zNVrMBM"}
+{"$$deleted":true,"_id":"P26eu2WAcwDhUyVN"}
+{"$$deleted":true,"_id":"bb5p4pPkkRuo7vCt"}
+{"$$deleted":true,"_id":"cZPW99q0UCB9jmoi"}
+{"$$deleted":true,"_id":"iSi2Wn9b9sLXCW2c"}
+{"$$deleted":true,"_id":"q9UKGT3ynUvXijGU"}
+{"$$deleted":true,"_id":"sY5HGEzeRR7pFdIS"}
+{"$$deleted":true,"_id":"tALftzocZ4YZe3Zm"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"9Um4Bk6qM8iPya4I"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"dnaEVVoNcZL3tyhy"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"5kbQ9UmRWpib5mYI"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"mc6EBRgT5tZgXhA8"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"rXQVF7Xy7SoonMyF"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"f6HUyTXiEsneseOp"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"TB6fHeTrHSVWhxGj"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"guqcAotClSLqjY2U"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"Jwnh5uXJdQazepAJ"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"h6P7473kDtcBwsbg"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"FWtVYOcFuxQ5Mgcw"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"xPUL1GW2Hn42oofY"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"p1dfRoLbF7uqmo8J"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"srp1xhlVWhgoaJlo"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"bQc0GNApiD5dTW9R"}
+{"$$deleted":true,"_id":"5kbQ9UmRWpib5mYI"}
+{"$$deleted":true,"_id":"9Um4Bk6qM8iPya4I"}
+{"$$deleted":true,"_id":"FWtVYOcFuxQ5Mgcw"}
+{"$$deleted":true,"_id":"Jwnh5uXJdQazepAJ"}
+{"$$deleted":true,"_id":"TB6fHeTrHSVWhxGj"}
+{"$$deleted":true,"_id":"bQc0GNApiD5dTW9R"}
+{"$$deleted":true,"_id":"dnaEVVoNcZL3tyhy"}
+{"$$deleted":true,"_id":"f6HUyTXiEsneseOp"}
+{"$$deleted":true,"_id":"guqcAotClSLqjY2U"}
+{"$$deleted":true,"_id":"h6P7473kDtcBwsbg"}
+{"$$deleted":true,"_id":"mc6EBRgT5tZgXhA8"}
+{"$$deleted":true,"_id":"p1dfRoLbF7uqmo8J"}
+{"$$deleted":true,"_id":"rXQVF7Xy7SoonMyF"}
+{"$$deleted":true,"_id":"srp1xhlVWhgoaJlo"}
+{"$$deleted":true,"_id":"xPUL1GW2Hn42oofY"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"0WPEjOrSysA0NcxZ"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"DohvvGoLvQi7XrW5"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"fUCJ6TAZnu20dk3r"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"QB8uH2CUAjO2SYxT"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"E8m07lg4BxOtQcsM"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"sGvZLTSUWhiA7Tm6"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"F28D3gKC9Pn6kfQb"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"kIApNulA3hgndeRx"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"Lt1jHZ4UkRdJBSWf"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"wCYNQDBVcLw6PW38"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"ntBDRyoCF2yQcNEW"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"sT2gLqwi4Mkxh4l2"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"tlfogbyjCGwwHmE7"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"MSly5y5K4ez3x7Hm"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"fSKqtLV8f31pWLRU"}
+{"$$deleted":true,"_id":"0WPEjOrSysA0NcxZ"}
+{"$$deleted":true,"_id":"DohvvGoLvQi7XrW5"}
+{"$$deleted":true,"_id":"E8m07lg4BxOtQcsM"}
+{"$$deleted":true,"_id":"F28D3gKC9Pn6kfQb"}
+{"$$deleted":true,"_id":"Lt1jHZ4UkRdJBSWf"}
+{"$$deleted":true,"_id":"MSly5y5K4ez3x7Hm"}
+{"$$deleted":true,"_id":"QB8uH2CUAjO2SYxT"}
+{"$$deleted":true,"_id":"fSKqtLV8f31pWLRU"}
+{"$$deleted":true,"_id":"fUCJ6TAZnu20dk3r"}
+{"$$deleted":true,"_id":"kIApNulA3hgndeRx"}
+{"$$deleted":true,"_id":"ntBDRyoCF2yQcNEW"}
+{"$$deleted":true,"_id":"sGvZLTSUWhiA7Tm6"}
+{"$$deleted":true,"_id":"sT2gLqwi4Mkxh4l2"}
+{"$$deleted":true,"_id":"tlfogbyjCGwwHmE7"}
+{"$$deleted":true,"_id":"wCYNQDBVcLw6PW38"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"sFZ3ufnWy9xcdpFW"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"fB0Fy17lkSz0irNl"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"dVBTcZYsYWQ9GDBE"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"QQk8swJKZLjdZnGI"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"6hMAqlsN5cbcsUkk"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"E2Eq0fGigt0BqwYb"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"HNaJudii1uX5lGUP"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"JV1joHLMXMnrJwaS"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"4y0Wqw1XQs9Fdidr"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"Q8yv7QJA199zgv5l"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"VZZgTK233CoJFIF1"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"VvccFsx8KXopepXJ"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"gNbDsGxXQazHYHqM"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"IMuYuS3CPcd7YOUK"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"zsVuRBXWTdFw5Z64"}
+{"$$deleted":true,"_id":"4y0Wqw1XQs9Fdidr"}
+{"$$deleted":true,"_id":"6hMAqlsN5cbcsUkk"}
+{"$$deleted":true,"_id":"E2Eq0fGigt0BqwYb"}
+{"$$deleted":true,"_id":"HNaJudii1uX5lGUP"}
+{"$$deleted":true,"_id":"IMuYuS3CPcd7YOUK"}
+{"$$deleted":true,"_id":"JV1joHLMXMnrJwaS"}
+{"$$deleted":true,"_id":"Q8yv7QJA199zgv5l"}
+{"$$deleted":true,"_id":"QQk8swJKZLjdZnGI"}
+{"$$deleted":true,"_id":"VZZgTK233CoJFIF1"}
+{"$$deleted":true,"_id":"VvccFsx8KXopepXJ"}
+{"$$deleted":true,"_id":"dVBTcZYsYWQ9GDBE"}
+{"$$deleted":true,"_id":"fB0Fy17lkSz0irNl"}
+{"$$deleted":true,"_id":"gNbDsGxXQazHYHqM"}
+{"$$deleted":true,"_id":"sFZ3ufnWy9xcdpFW"}
+{"$$deleted":true,"_id":"zsVuRBXWTdFw5Z64"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"yZroCKaGlXiwtoSG"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"Zc39mJUsex02O2Fe"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"M2B2rKZ8ratolmlV"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"J6lAyYxDxWjZw86i"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"3osvUOBFiJZrgezX"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"VRrvsvMnHLCYWb7d"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"xakRwKQdf4kTpG89"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"wpUAwuGDJpMPYsVa"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"NHJJ6txwCDppJj68"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"ziigllUwvCYj2Umi"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"Q9yDktUUAk9NFWbj"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"3Hxki0iU4MNGhOXp"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"HOV5a5OwmLm0c4cj"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"KH1FthV01UoR2MRI"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"tG8mfdn9b8ts8dEv"}
+{"$$deleted":true,"_id":"3Hxki0iU4MNGhOXp"}
+{"$$deleted":true,"_id":"3osvUOBFiJZrgezX"}
+{"$$deleted":true,"_id":"HOV5a5OwmLm0c4cj"}
+{"$$deleted":true,"_id":"J6lAyYxDxWjZw86i"}
+{"$$deleted":true,"_id":"KH1FthV01UoR2MRI"}
+{"$$deleted":true,"_id":"M2B2rKZ8ratolmlV"}
+{"$$deleted":true,"_id":"NHJJ6txwCDppJj68"}
+{"$$deleted":true,"_id":"Q9yDktUUAk9NFWbj"}
+{"$$deleted":true,"_id":"VRrvsvMnHLCYWb7d"}
+{"$$deleted":true,"_id":"Zc39mJUsex02O2Fe"}
+{"$$deleted":true,"_id":"tG8mfdn9b8ts8dEv"}
+{"$$deleted":true,"_id":"wpUAwuGDJpMPYsVa"}
+{"$$deleted":true,"_id":"xakRwKQdf4kTpG89"}
+{"$$deleted":true,"_id":"yZroCKaGlXiwtoSG"}
+{"$$deleted":true,"_id":"ziigllUwvCYj2Umi"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"qi37wdT0uZMNZUAH"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"D5cBLyktPcljPcEg"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"h2HSJbsBBT0YZnld"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"3vsdUomuODoGgy1x"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"OIdCglHvjwPlI010"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"qdqUSvmiw0DM147C"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"vmrMjRoH8lVQ3YGp"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"FbvzB8USjjvzry2o"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"G6ZVDOz9p9ePoTfL"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"RQxn5gA8Cb23mKLJ"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"UFVzqouREuoSus7G"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"dvyNFQs1luvT1Ctq"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"C4Jd7ucbv3c2XxK9"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"RtQndnNM4cBVLlVN"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"avQeOWGSc3BFlC0I"}
+{"$$deleted":true,"_id":"3vsdUomuODoGgy1x"}
+{"$$deleted":true,"_id":"C4Jd7ucbv3c2XxK9"}
+{"$$deleted":true,"_id":"D5cBLyktPcljPcEg"}
+{"$$deleted":true,"_id":"FbvzB8USjjvzry2o"}
+{"$$deleted":true,"_id":"G6ZVDOz9p9ePoTfL"}
+{"$$deleted":true,"_id":"OIdCglHvjwPlI010"}
+{"$$deleted":true,"_id":"RQxn5gA8Cb23mKLJ"}
+{"$$deleted":true,"_id":"RtQndnNM4cBVLlVN"}
+{"$$deleted":true,"_id":"UFVzqouREuoSus7G"}
+{"$$deleted":true,"_id":"avQeOWGSc3BFlC0I"}
+{"$$deleted":true,"_id":"dvyNFQs1luvT1Ctq"}
+{"$$deleted":true,"_id":"h2HSJbsBBT0YZnld"}
+{"$$deleted":true,"_id":"qdqUSvmiw0DM147C"}
+{"$$deleted":true,"_id":"qi37wdT0uZMNZUAH"}
+{"$$deleted":true,"_id":"vmrMjRoH8lVQ3YGp"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"SECDGeAGNELnHjho"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"7xh6uBZhSrS1rh7n"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"jgPMhrBaZlYJrXpX"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"xxo3t5QPZ1g5FR7k"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"Sp7fRyqswD5qUwi1"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"5psTLtwRCU2wynOm"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"XQKn28Lb0Cb1J1TF"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"fYP4tS788beO662n"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"jFRwCh9Ep7mreD4r"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"RdMZURmTu59mdQXw"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"8BUPLgOCSqQ4W1Ub"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"O4mHQcfP4xdRYFSf"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"xajMqWE71rwY4mx2"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"4BqJcrBAF0pCcpuR"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"lQiSXkDWx3IG8OpL"}
+{"$$deleted":true,"_id":"4BqJcrBAF0pCcpuR"}
+{"$$deleted":true,"_id":"5psTLtwRCU2wynOm"}
+{"$$deleted":true,"_id":"7xh6uBZhSrS1rh7n"}
+{"$$deleted":true,"_id":"8BUPLgOCSqQ4W1Ub"}
+{"$$deleted":true,"_id":"O4mHQcfP4xdRYFSf"}
+{"$$deleted":true,"_id":"RdMZURmTu59mdQXw"}
+{"$$deleted":true,"_id":"SECDGeAGNELnHjho"}
+{"$$deleted":true,"_id":"Sp7fRyqswD5qUwi1"}
+{"$$deleted":true,"_id":"XQKn28Lb0Cb1J1TF"}
+{"$$deleted":true,"_id":"fYP4tS788beO662n"}
+{"$$deleted":true,"_id":"jFRwCh9Ep7mreD4r"}
+{"$$deleted":true,"_id":"jgPMhrBaZlYJrXpX"}
+{"$$deleted":true,"_id":"lQiSXkDWx3IG8OpL"}
+{"$$deleted":true,"_id":"xajMqWE71rwY4mx2"}
+{"$$deleted":true,"_id":"xxo3t5QPZ1g5FR7k"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"lHAcjsPc9GwYDJzA"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"2svZ9YikA2fJOxGe"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"cYDnpStUF75c049I"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"ryaf5gembCCmWO1x"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"Wg5mlVlCnl3UxE8B"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"kXsTn1A15AAPWrEL"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"RZOp3sdmje5X1h5P"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"X3GV8M2Sco0voPrl"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"o1rilEehREI30K3z"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"kmDoIba2x7Yu6BmQ"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"pty6Hk7S3ssYPSI2"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"omXDUPVX4D6TkBGb"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"i6oDquGP4hlCbQuy"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"N9dWwQcH8JYI8FFO"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"i4QeplG76rcYuQeW"}
+{"$$deleted":true,"_id":"2svZ9YikA2fJOxGe"}
+{"$$deleted":true,"_id":"N9dWwQcH8JYI8FFO"}
+{"$$deleted":true,"_id":"RZOp3sdmje5X1h5P"}
+{"$$deleted":true,"_id":"Wg5mlVlCnl3UxE8B"}
+{"$$deleted":true,"_id":"X3GV8M2Sco0voPrl"}
+{"$$deleted":true,"_id":"cYDnpStUF75c049I"}
+{"$$deleted":true,"_id":"i4QeplG76rcYuQeW"}
+{"$$deleted":true,"_id":"i6oDquGP4hlCbQuy"}
+{"$$deleted":true,"_id":"kXsTn1A15AAPWrEL"}
+{"$$deleted":true,"_id":"kmDoIba2x7Yu6BmQ"}
+{"$$deleted":true,"_id":"lHAcjsPc9GwYDJzA"}
+{"$$deleted":true,"_id":"o1rilEehREI30K3z"}
+{"$$deleted":true,"_id":"omXDUPVX4D6TkBGb"}
+{"$$deleted":true,"_id":"pty6Hk7S3ssYPSI2"}
+{"$$deleted":true,"_id":"ryaf5gembCCmWO1x"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"pKskRtb2CO8NA4r0"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"9qPmrFofDSq65MBo"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"Kdr30QlKrk7VlBeI"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"gU1pcizXoxAf0g0O"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"QeXZB4YstqYOGLUa"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"ffd3ovS4qqT7AbMo"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"pAM2Omzsc9MBYXoF"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"Aul926APzXY3PKQ9"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"4pqkz9lCUPBwo35y"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"0Oqt21lC0OymVLmd"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"EZlDYkbgu5reVBHQ"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"NSiPqIl1ZEMdpyPp"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"cOmqSpnXDAixite2"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"QhfxiEtPv2SCYvZ2"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"ztfTgTdZDmpUfZaG"}
+{"$$deleted":true,"_id":"0Oqt21lC0OymVLmd"}
+{"$$deleted":true,"_id":"4pqkz9lCUPBwo35y"}
+{"$$deleted":true,"_id":"9qPmrFofDSq65MBo"}
+{"$$deleted":true,"_id":"Aul926APzXY3PKQ9"}
+{"$$deleted":true,"_id":"EZlDYkbgu5reVBHQ"}
+{"$$deleted":true,"_id":"Kdr30QlKrk7VlBeI"}
+{"$$deleted":true,"_id":"NSiPqIl1ZEMdpyPp"}
+{"$$deleted":true,"_id":"QeXZB4YstqYOGLUa"}
+{"$$deleted":true,"_id":"QhfxiEtPv2SCYvZ2"}
+{"$$deleted":true,"_id":"cOmqSpnXDAixite2"}
+{"$$deleted":true,"_id":"ffd3ovS4qqT7AbMo"}
+{"$$deleted":true,"_id":"gU1pcizXoxAf0g0O"}
+{"$$deleted":true,"_id":"pAM2Omzsc9MBYXoF"}
+{"$$deleted":true,"_id":"pKskRtb2CO8NA4r0"}
+{"$$deleted":true,"_id":"ztfTgTdZDmpUfZaG"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"l66oizekJT18Bmyg"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"iDvqdWxPHPWceCcu"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"x8ruy3rbTn7agS5i"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"vCvauwEP6qk93n9K"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"bGG4WXSMHm8FQFeA"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"SrsWeKrOLiEOm66Z"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"OQGvci22l7RfKKKC"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"RQuJZr9kEoIcKEc2"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"KnLowR68AtkDBwc4"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"MOZ5dXHqpYs44zCY"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"qd0Yc77dDVIpetHu"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"ge1cs7uPhVUx7i1n"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"Rp85zuTG8HL6hjKe"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"WoGAhoIQVLK2JhQP"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"zJoILBPqM8hAne97"}
+{"$$deleted":true,"_id":"KnLowR68AtkDBwc4"}
+{"$$deleted":true,"_id":"MOZ5dXHqpYs44zCY"}
+{"$$deleted":true,"_id":"OQGvci22l7RfKKKC"}
+{"$$deleted":true,"_id":"RQuJZr9kEoIcKEc2"}
+{"$$deleted":true,"_id":"Rp85zuTG8HL6hjKe"}
+{"$$deleted":true,"_id":"SrsWeKrOLiEOm66Z"}
+{"$$deleted":true,"_id":"WoGAhoIQVLK2JhQP"}
+{"$$deleted":true,"_id":"bGG4WXSMHm8FQFeA"}
+{"$$deleted":true,"_id":"ge1cs7uPhVUx7i1n"}
+{"$$deleted":true,"_id":"iDvqdWxPHPWceCcu"}
+{"$$deleted":true,"_id":"l66oizekJT18Bmyg"}
+{"$$deleted":true,"_id":"qd0Yc77dDVIpetHu"}
+{"$$deleted":true,"_id":"vCvauwEP6qk93n9K"}
+{"$$deleted":true,"_id":"x8ruy3rbTn7agS5i"}
+{"$$deleted":true,"_id":"zJoILBPqM8hAne97"}
+{"country":"albania","under_190":0.011,"under_320":0.077,"under_550":0.391,"year":2012,"continent":"europe","_id":"847G6HbKFUXsWhiq"}
+{"country":"algeria","under_190":0.005,"under_320":0.039,"under_550":0.292,"year":2011,"continent":"africa","_id":"pP0Q5ovxpXIsc03w"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2008,"continent":"south america","_id":"ubZfKm5x30gbYQTT"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"Zy9i4vjPenSt1QlV"}
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"70uN6DhrSViSG3Rl"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2014,"continent":"oceania","_id":"XTpmawcGrzWOWhly"}
+{"country":"austria","under_190":0.007,"under_320":0.007,"under_550":0.009,"year":2015,"continent":"europe","_id":"nqPoltw3xkSTvVAw"}
+{"country":"azerbaijan","under_190":0,"under_320":0,"under_550":0.082,"year":2005,"continent":"europe","_id":"YwpVnvPpzrZqk8yB"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.529,"under_550":0.845,"year":2016,"continent":"asia","_id":"Vjiwg9Vz0nJ0lfng"}
+{"country":"belarus","under_190":0,"under_320":0,"under_550":0.008,"year":2017,"continent":"europe","_id":"RoiooJ5JsvzQwkRU"}
+{"country":"belgium","under_190":0,"under_320":0.002,"under_550":0.002,"year":2015,"continent":"europe","_id":"yiBLAqMzov6if4My"}
+{"country":"belize","under_190":0.139,"under_320":0.281,"under_550":0.53,"year":1999,"continent":"north america","_id":"sQxGD5X9HEzQS4WO"}
+{"country":"benin","under_190":0.495,"under_320":0.762,"under_550":0.906,"year":2015,"continent":"africa","_id":"bydUswT9WI2JHsY1"}
+{"country":"bhutan","under_190":0.015,"under_320":0.12,"under_550":0.386,"year":2017,"continent":"asia","_id":"LDUhIuoBaHqDhBBC"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2017,"continent":"south america","_id":"F7N9OGz9jFYlrOP3"}

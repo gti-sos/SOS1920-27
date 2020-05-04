@@ -45,7 +45,7 @@
         page=1;
         totalObj = jsonElements.length;
         console.log("ELEMENTOS: "+ totalObj);
-        const res = await fetch("/api/v1/poverty-stats?limit=5&offset=1");
+        const res = await fetch("/api/v1/poverty-stats?limit=10&offset=1");
 
         if (res.ok) {
             console.log("Ok:");
@@ -99,13 +99,14 @@
     
     // Next Page
     async function getNextPage(){
-        if(page<=totalObj){
-            page+=5;
+        page+=10;
+        if(page>totalObj){
+            page-=10;
         }
-        console.log(page);
+        await console.log(page);
         console.log("Fetching poverty...");
-        const res = await fetch("/api/v1/poverty-stats?limit=5&offset="+page);
- 
+        const res = await fetch("/api/v1/poverty-stats?limit=10&offset="+page);
+        
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
