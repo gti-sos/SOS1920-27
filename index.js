@@ -13,11 +13,7 @@ spcStats(app);
 lqStats(app);
 povertyStats(app);
 
-<<<<<<< HEAD
-var port = process.env.PORT || 81;
-=======
 var port = process.env.PORT || 80;
->>>>>>> b7966b5698c96dc74c60d4a84ccb7a233c3391db
 
 app.use("/", express.static("./public"));
 
