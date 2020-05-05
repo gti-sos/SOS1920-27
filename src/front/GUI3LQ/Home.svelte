@@ -5,12 +5,19 @@
     import{
         pop
     } from "svelte-spa-router";
+    import{
+        Alert
+    } from "sveltestrap";
 
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
 
+    //ALERTAS
+    let visible = false;
+    let color = "danger";
+
     let page = 1;
-    let totaldata = 0;
+    let totaldata = 12;
     let lq =[];
     let newLQ = {
         rank: "",
@@ -49,6 +56,7 @@
     async function getLQLoadInitialData() {
 
         console.log("Fetching lq...");
+        await fetch("/api/v1/lq-stats/loadInitialData")
         const res = await fetch("/api/v1/lq-stats/loadInitialData");
 
         if (res.ok){
@@ -74,28 +82,48 @@
             }
         }).then(function (res){
             getLQ();
-            console.log(totaldata);
-            console.log(lq.length);
-            totaldata++;
-            if (spc.length>totaldata){
-                errorMSG = "";
-                console.log("Inserted 1 lq.");
+            visible = true;
+            if (res.status==200){
+                totaldata++;
+                color = "success";
+                errorMSG = newLQ.country +" creado correctamente"
+                console.log("Inserted" +newLQ.country +" lq.");
+            } else if(res.status==400){
+                color = "danger";
+                errorMSG = "Formato incorrecto, compruebe que 'Country' y 'Year' estén rellenos.";
+                console.log("BAD REQUEST");
+            }else if (res.status==409) {
+                color = "danger";
+                errorMSG = newLQ.country +" " +newLQ.year +"  ya existe, recuerde que 'Year' y 'Country' son exclusivos.";
+                console.log("This data already exits");
             }else{
-                errorMSG=res.status + ": " + res.statusText;
-                console.log("ERROR!");
+                color = "danger";
+                errorMSG = "Formato incorrecto, compruebe que 'Country' y 'Year' estén rellenos.";
             }
-        })
+        });     
     }
 
     //DELETE SPECIFIC
-    async function deleteLQ(name){
-        const res = await fetch("/api/v1/lq-stats/" + name, {
+    async function deleteLQ(name, year){
+        const res = await fetch("/api/v1/lq-stats/" + name + "/" + year, {
             method: "DELETE"
         }).then(function (res){
-            totaldata--;
-            errorMSG = "";
+            visible =true;
             getLQ();
-            console.log("Delete 1 lq.");
+            if (res.status==200) {
+                totaldata--;
+                color = "success";
+                errorMSG = name + " " + year + " borrado correctamente";
+                console.log("Deleted " + name);            
+            }else if (res.status==404) {
+                color = "danger";
+                errorMSG = "No se ha encontrado el objeto " + name;
+                console.log("LIFEQ NOT FOUND");            
+            } else {
+                color = "danger";
+                errorMSG= res.status + ": " + res.statusText;
+                console.log("ERROR!");
+            }      
         });
     }
 
@@ -141,13 +169,13 @@
             page-=10; 
         } else page = 1
         console.log("Charging page " +page);
-        const res = await fetch("/api/v1/spc-stats?limit=10&offset="+page);
+        const res = await fetch("/api/v1/lq-stats?limit=10&offset="+page);
 
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
-            spc = json;
-            console.log("Received " + spc.length + " spc.");
+            lq = json;
+            console.log("Received " + lq.length + " lq.");
         } else {
             errorMSG= res.status + ": " + res.statusText;
             console.log("ERROR!");
