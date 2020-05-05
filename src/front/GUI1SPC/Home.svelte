@@ -160,7 +160,7 @@
             page+=10
         }
         console.log("Charging page " +page);
-        const res = await fetch("/api/v1/spc-stats?limit=10&offset="+page);
+        const res = await fetch("/api/v1/poverty-stats?limit=10&offset="+page);
 
         if (res.ok) {
             console.log("Ok:");
