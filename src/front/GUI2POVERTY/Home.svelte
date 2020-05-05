@@ -2,11 +2,13 @@
     import {
         onMount
     } from "svelte";
- 
+    import {
+        pop
+    } from "svelte-spa-router";
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
  
-    let poverty = []; 
+    
     let newPoverty = {
         country:"",
 		under_190: "",
@@ -15,22 +17,31 @@
 		year:"",
 		continent:""
     };
-    let totalObj=0;
+    let poverty=[];
+    let totalObj=poverty.length;
+    
     let page=1;
     let errorMSG = "";
- 
-    onMount(getPoverty);
     
-    //GET
+    
+    onMount(getPoverty);
+
+    console.log("Tamaño tabla2: "+poverty.length);
+
+
+    //GET Limit
     async function getPoverty() {
  
         console.log("Fetching poverty...");
-        const res = await fetch("/api/v1/poverty-stats?limit=10&offset="+page);
- 
-        if (res.ok) {
+        const res = await fetch("/api/v1/poverty-stats?limit=10&offset="+page); //obtener limit y offset
+        const res2 = await fetch("/api/v1/poverty-stats");              //obtener datos
+
+        if (res.ok && res2.ok) {
             console.log("Ok:");
             const json = await res.json();
-            poverty = json;
+            const json2 = await res2.json();
+            poverty = json; //pagina
+            totalObj=json2.length; //datos
             console.log("Received " + poverty.length + " poverty.");
         } else {
             console.log("ERROR!");
@@ -134,7 +145,7 @@
             console.log("ERROR!");
         }
     }
-
+    console.log("page: "+page+" | totaldata: "+totalObj);
 </script>
  
 <main>
@@ -143,7 +154,7 @@
         Loading poverty...
     {:then poverty}
     
-        <Table bordered>
+        <Table responsive>
             <thead>
                 <tr>
                     <th>Country</th>
@@ -196,7 +207,10 @@
          </Button>
          {/if}
     {/await}
- 
-    
+    <br>
+    <br>
+    <Button outline color="secondary" on:click="{pop}">Back</Button>
+    <br>
+    <br>
  
 </main>
