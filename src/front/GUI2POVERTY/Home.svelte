@@ -26,10 +26,7 @@
     
     onMount(getPoverty);
 
-    console.log("Tamaño tabla2: "+poverty.length);
-
-
-    //GET Limit
+    //GET Limit ok
     async function getPoverty() {
  
         console.log("Fetching poverty...");
@@ -37,12 +34,11 @@
         const res2 = await fetch("/api/v1/poverty-stats");              //obtener datos
 
         if (res.ok && res2.ok) {
-            console.log("Ok:");
             const json = await res.json();
             const json2 = await res2.json();
             poverty = json; //pagina
             totalObj=json2.length; //datos
-            console.log("Received " + poverty.length + " poverty.");
+            console.log("Received " + poverty.length + " data poverty.");
         } else {
             console.log("ERROR!");
         }
@@ -145,7 +141,6 @@
             console.log("ERROR!");
         }
     }
-    console.log("page: "+page+" | totaldata: "+totalObj);
 </script>
  
 <main>

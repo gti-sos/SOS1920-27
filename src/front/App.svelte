@@ -12,6 +12,7 @@
 	import EditSpc from './GUI1SPC/EditSpc.svelte';
 
 	import GUI2POVERTY from './GUI2POVERTY/Home.svelte';
+	import EditPoverty from './GUI2POVERTY/EditPoverty.svelte';
 	
 	import GUI3LQ from './GUI3LQ/Home.svelte';
 	
@@ -21,6 +22,7 @@
 		"/gui1spc": GUI1SPC,
 		"/spc-stats/:suicideCountry/:suicideYear": EditSpc,
 		"/gui2poverty": GUI2POVERTY,
+		"/poverty-stats/:country/:year":EditPoverty,
 		"/gui3lq": GUI3LQ,
 		"/contact/:contactName": EditContact,
 		"*": NotFound

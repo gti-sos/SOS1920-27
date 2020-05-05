@@ -15,7 +15,6 @@
     let updatedUnder190 = "";
     let updatedUnder320 = "";
     let updatedUnder550 = "";
-    let updatedUnder320 = "";
     let updatedYear = "";
     let updatedContinent = "";
     let errorMSG = "";
@@ -24,8 +23,8 @@
 
     //GET OBJECT
     async function getPoverty() {
-        console.log("Fetching poverty...");
-        const res = await fetch("/api/v1/poverty-stats/"+params.country);
+        console.log("Fetching poverty..."+params.country);
+        const res = await fetch("/api/v1/poverty-stats?country="+params.country+"&year="+params.year);
  
         if (res.ok) {
             console.log("Ok:");
@@ -44,9 +43,9 @@
             errorMSG= res.status + ": " + res.statusText;
             console.log("ERROR!");
         }       
-     }
+    }
 
-     async function updatePoverty() {
+    async function updatePoverty() {
         console.log("Inserting poverty..." + JSON.stringify(params.country));
  
         const res = await fetch("/api/v1/poverty-stats/"+params.country+"/"+params.year, {
@@ -64,17 +63,16 @@
             }
         }).then(function (res) {
             getPoverty();
-        });//contact
+        });
  
     }
    
 </script>
 <main>
-    <h3>Edit Poverty <strong>{params.country}</strong></h3>
     {#await poverty}
         Loading poverty...
     {:then poverty}
-        <Table bordered>
+        <Table responsive>
             <thead>
                 <tr>
                     <th>Country</th>
@@ -87,11 +85,11 @@
             </thead>
             <tbody>
                 <tr>
-                    <th>updatedCountry</th>
+                    <th>{updatedCountry}</th>
                     <th><input bind:value="{updatedUnder190}"></th>
                     <th><input bind:value="{updatedUnder320}"></th>
                     <th><input bind:value="{updatedUnder550}"></th>
-                    <th>updatedYear</th>
+                    <th>{updatedYear}</th>
                     <th><input bind:value="{updatedContinent}"></th>
                     <td> <Button outline  color="primary" on:click={updatePoverty}>Update</Button> </td>
                 </tr>
