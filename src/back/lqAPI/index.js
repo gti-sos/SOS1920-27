@@ -247,13 +247,14 @@ module.exports = function (app) {
 			var copiadb = lq_stats;
 
 
-			if((limit!=null || offset != null) && countryQuery==null && yearQuery==null && rankQuery ==null && stabilityQuery ==null && rightQuery ==null && healthQuery ==null && securityQuery ==null && climateQuery ==null && costsQuery ==null && popularityQuery ==null && totalQuery ==null && continentQuery ==null){						//Get /lq_stats Paginacion
+			if((limit!=null || offset != null) && countryQuery==null && yearQuery==null && rankQuery ==null && stabilityQuery ==null && rightQuery ==null && healthQuery ==null && securityQuery ==null && climateQuery ==null
+			 && costsQuery ==null && popularityQuery ==null && totalQuery ==null && continentQuery ==null){						//Get /lq_stats Paginacion
 				if(limit!=null && offset != null){
 					res.send(JSON.stringify(lq_stats.slice(startObject, endObject),null,2));	
 				} else if (limit!=null && offset == null){
 					res.send(JSON.stringify(lq_stats.slice(0,parseInt(limit)),null,2));
 				} else if(limit==null && offset != null){
-					res.send(JSON.stringify(lq_stats.slice(startObject,spc_stats.length),null,2));
+					res.send(JSON.stringify(lq_stats.slice(startObject,lq_stats.length),null,2));
 				}
 				
 			}
