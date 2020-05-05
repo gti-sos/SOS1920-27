@@ -187,8 +187,31 @@ module.exports = function (app) {
 				})
 
             }else if(limit!=null && offset != null){						//Get /poverty_stats Paginacion
-				res.send(JSON.stringify(poverty_stats.slice(startObject,endObject),null,2));
-			}
+						
+				if(limit<=0 || offset <=0){
+					res.sendStatus(400);
+				}else{
+					res.send(JSON.stringify(poverty_stats.slice(startObject,endObject),null,2));
+				}
+				
+
+			}else if(offset!=null){
+
+						if(offset<=0){
+							res.sendStatus(400);
+						}else{
+								
+							res.send(JSON.stringify(poverty_stats.slice(parseInt(offset)-1,poverty_stats.length),null,2))
+							
+						}
+					}else if(limit!=null){
+						if(limit<=0){
+							res.sendStatus(400);
+						}else{
+							res.send(JSON.stringify(poverty_stats.slice(0,parseInt(limit)),null,2));
+						}
+								
+						}
         });
     });
 
