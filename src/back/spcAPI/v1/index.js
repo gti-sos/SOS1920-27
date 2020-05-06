@@ -1,13 +1,12 @@
 module.exports = function (app) {
-    console.log("Registering spc API....");
-    
+        
     const dataStore = require("nedb")
     const path = require("path");
 
 
     const dbFileName = path.join(__dirname, "spc.db");
 
-    const BASE_API_URL="/api/v2";
+    const BASE_API_URL="/api/v1";
 
     const db = new dataStore({
                 filename: dbFileName,
@@ -475,6 +474,6 @@ module.exports = function (app) {
 		res.sendStatus(405,"Method Not Allowed");
 	});
 	
-	console.log("SPC OK");
+	console.log("SPC v1 OK");
     
 };
