@@ -217,7 +217,20 @@
             STATUS: {errorMSG}
         {/if}
     </Alert>
-
+        <Table>
+            <thead>
+                <th>Búsquedas</th>
+            </thead>
+            <tbody>
+                <tr>
+                    Country: <input > Year: <input> 
+                    <Button outline color="info" on:click="{getPreviousPage}" style="margin-left: 2%;">
+                        Buscar
+                    </Button>
+                </tr>
+            </tbody>
+        </Table>
+        
         <Table responsive>
             <thead>
                 <tr>
