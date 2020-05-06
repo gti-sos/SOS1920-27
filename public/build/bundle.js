@@ -13432,7 +13432,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			create_component(router.$$.fragment);
-    			add_location(main, file$f, 31, 0, 835);
+    			add_location(main, file$f, 32, 0, 877);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13478,6 +13478,7 @@ var app = (function () {
     		"/gui2poverty": Home$2,
     		"/poverty-stats/:country/:year": EditPoverty,
     		"/gui3lq": Home$3,
+    		"/lq-stats/:lqcountry/:lqYear": EditLq,
     		"/contact/:contactName": EditContact,
     		"*": NotFound
     	};

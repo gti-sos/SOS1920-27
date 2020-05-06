@@ -549,6 +549,6 @@ module.exports = function (app) {
 		res.sendStatus(405,"Method Not Allowed");
 	});
 	
-	console.log("LQ OK");
+	console.log("LQ v2 OK");
 		
 };

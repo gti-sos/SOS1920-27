@@ -24,6 +24,7 @@
 		"/gui2poverty": GUI2POVERTY,
 		"/poverty-stats/:country/:year":EditPoverty,
 		"/gui3lq": GUI3LQ,
+		"/lq-stats/:lqcountry/:lqYear":EditLq,
 		"/contact/:contactName": EditContact,
 		"*": NotFound
 	};
