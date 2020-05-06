@@ -35,7 +35,7 @@
     async function getSPC() {
  
         console.log("Fetching spc...");
-        const res = await fetch("/api/v1/spc-stats?limit=10&offset=1");
+        const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
  
         if (res.ok) {
             console.log("Ok:");
@@ -52,8 +52,8 @@
     async function getSPCLoadInitialData() {
  
         console.log("Fetching spc...");
-        await fetch("/api/v1/spc-stats/loadInitialData");
-        const res = await fetch("/api/v1/spc-stats?limit=10&offset=1");
+        await fetch("/api/v2/spc-stats/loadInitialData");
+        const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
 
         if (res.ok) {
             console.log("Ok:");
@@ -71,7 +71,7 @@
     async function insertSPC() {
  
         console.log("Inserting spc..." + JSON.stringify(newSpc));
-        const res = await fetch("/api/v1/spc-stats", {
+        const res = await fetch("/api/v2/spc-stats", {
             method: "POST",
             body: JSON.stringify(newSpc),
             headers: {
@@ -104,7 +104,7 @@
 
     //DELETE SPECIFIC
     async function deleteSPC(name, year) {
-        const res = await fetch("/api/v1/spc-stats/" + name + "/" + year, {
+        const res = await fetch("/api/v2/spc-stats/" + name + "/" + year, {
             method: "DELETE"
         }).then(function (res) {
             visible = true;
@@ -128,7 +128,7 @@
 
     //DELETE ALL
     async function deleteSPCALL() {
-        const res = await fetch("/api/v1/spc-stats/", {
+        const res = await fetch("/api/v2/spc-stats/", {
             method: "DELETE"
         }).then(function (res) {
             getSPC();
@@ -160,7 +160,7 @@
             page+=10
         }
         console.log("Charging page " +page);
-        const res = await fetch("/api/v1/poverty-stats?limit=10&offset="+page);
+        const res = await fetch("/api/v2/spc-stats?limit=10&offset="+page);
 
         if (res.ok) {
             console.log("Ok:");
@@ -180,7 +180,7 @@
             page-=10; 
         } else page = 1
         console.log("Charging page " +page);
-        const res = await fetch("/api/v1/spc-stats?limit=10&offset="+page);
+        const res = await fetch("/api/v2/spc-stats?limit=10&offset="+page);
 
         if (res.ok) {
             console.log("Ok:");

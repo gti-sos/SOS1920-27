@@ -1,7 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const back = require("./src/back");
-const spcStats = require("./src/back/spcAPI");
+const spcStatsv1 = require("./src/back/spcAPI/v1");
+const spcStatsv2 = require("./src/back/spcAPI/v2");
 const lqStats = require("./src/back/lqAPI");
 const povertyStats = require("./src/back/povertyAPI");
 var app = express();
@@ -9,7 +10,10 @@ var app = express();
 app.use(bodyParser.json());
 
 back(app);
-spcStats(app);
+
+spcStatsv2(app);
+spcStatsv1(app);
+
 lqStats(app);
 povertyStats(app);
 

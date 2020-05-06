@@ -1,6 +1,5 @@
 module.exports = function (app) {
-    console.log("Registering spc API....");
-    
+        
     const dataStore = require("nedb")
     const path = require("path");
 
@@ -475,6 +474,6 @@ module.exports = function (app) {
 		res.sendStatus(405,"Method Not Allowed");
 	});
 	
-	console.log("SPC OK");
+	console.log("SPC v1 OK");
     
 };
