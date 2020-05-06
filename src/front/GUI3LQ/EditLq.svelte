@@ -12,6 +12,7 @@
     //ALERTAS
     let visible = false;
     let color = "danger";
+    let errorMSG = "";
 
     export let params = {};
 
