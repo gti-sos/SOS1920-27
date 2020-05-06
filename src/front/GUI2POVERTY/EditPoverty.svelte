@@ -7,8 +7,12 @@
     } from "svelte-spa-router";
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
+    import { Alert } from "sveltestrap";
 
     export let params = {};
+
+    let visible = false;
+    let color = "danger";
 
     let poverty = {}; 
     let updatedCountry = "";
@@ -23,14 +27,15 @@
 
     //GET OBJECT
     async function getPoverty() {
-        console.log("Fetching poverty..."+params.country);
+        console.log("Fetching poverty...");
         const res = await fetch("/api/v1/poverty-stats?country="+params.country+"&year="+params.year);
  
         if (res.ok) {
+
             console.log("Ok:");
+            console.log("data poverty of "+ params.country +" found");
             const json = await res.json();
             poverty = json;
-
             updatedCountry = poverty.country;
             updatedUnder190 = poverty.under_190;
             updatedUnder320 = poverty.under_320;
@@ -46,7 +51,7 @@
     }
 
     async function updatePoverty() {
-        console.log("Inserting poverty..." + JSON.stringify(params.country));
+        console.log("Updating poverty...");
  
         const res = await fetch("/api/v1/poverty-stats/"+params.country+"/"+params.year, {
             method: "PUT",
@@ -62,7 +67,25 @@
                 "Content-Type": "application/json"
             }
         }).then(function (res) {
+            visible=true;
             getPoverty();
+            if (res.status==200) {
+                color = "success";
+                errorMSG = params.country + " actualizado correctamente";
+                console.log(params.country + " updated");            
+            }else if (res.status==201) {
+                errorMSG = params.country + " actualizado correctamente";
+                color = "success";
+                console.log(params.country + " updated");            
+            }else if (res.status==404) {
+                color = "danger";
+                errorMSG = params.country + " no ha sido encontrado";
+                console.log("SUICIDE NOT FOUND");            
+            } else {
+                color = "danger";
+                errorMSG= "Formato incorrecto, compruebe que Country y Year estén rellenos.";
+                console.log("BAD REQUEST");
+            }
         });
  
     }
@@ -72,6 +95,13 @@
     {#await poverty}
         Loading poverty...
     {:then poverty}
+
+    <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
+        {#if errorMSG}
+            STATUS: {errorMSG}
+        {/if}
+    </Alert>
+
         <Table responsive>
             <thead>
                 <tr>
@@ -96,8 +126,5 @@
              </tbody>
         </Table>
     {/await}
-    {#if errorMSG}
-        <p style="color: red">ERROR: {errorMSG}</p>
-    {/if}
     <Button outline color="secondary" on:click="{pop}">Back</Button>
 </main>
