@@ -15,41 +15,46 @@
 
     export let params = {};
 
-    let spc = {};
+    let lq = {};
+    let updatedRank = "";
     let updatedCountry = "";
     let updatedYear = "";
     let updatedContinent = "";
-    let updatedFemaleRank = "";
-    let updatedMaleRank = "";
-    let updatedBothSex = "";
-    let updatedFemaleNumber = "";
-    let updatedMaleNumber = "";
-    let updatedRatio = "";
-    let errorMSG = "";
+    let updatedStability = "";
+    let updatedRight = "";
+    let updatedHealth = "";
+    let updatedSecurity = "";
+    let updatedClimate = "";
+    let updatedCosts = "";
+    let updatedPopularity = "";
+    let updatedTotal = "";
 
-    onMount(getSPC1);
+    onMount(getLQ1);
     //GET
-    async function getSPC1() {
+    async function getLQ1() {
  
-        console.log("Fetching spc...");
-        const res = await fetch("/api/v2/spc-stats/"+params.suicideCountry+"/"+params.suicideYear);
+        console.log("Fetching lq...");
+        const res = await fetch("/api/v2/lq-stats/"+params.lqCountry+"/"+params.lqYear);
 
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
             spc = json;
 
-            updatedCountry= spc.country;
-            updatedBothSex= spc.both_sex;
-            updatedMaleRank= spc.male_rank;
-            updatedMaleNumber= spc.male_number;
-            updatedFemaleRank= spc.female_rank;
-            updatedFemaleNumber= spc.female_number;
-            updatedRatio= spc.ratio;
+            updatedCountry= lq.country;
+            updatedRank = lq.rank;
             updatedYear= params.suicideYear;
+            updatedStability = lq.stability;
+            updatedRight = lq.right;
+            updatedHealth = health.right;
+            updatedSecurity = lq.security;
+            updatedClimate = lq.climate;
+            updatedCosts = lq.costs;
+            updatedPopularity = lq.popularity;
+            updatedTotal = lq.total;
             updatedContinent= spc.continent;
 
-            console.log("Received " + spc.country);
+            console.log("Received " + lq.country);
         } else {
             color = "danger";
             errorMSG= res.status + ": " + res.statusText;
@@ -57,21 +62,24 @@
         }
     }
 
-     async function updateSpc() {
-        console.log("Updating spc..." + JSON.stringify(params.suicideCountry));
+     async function updateLq() {
+        console.log("Updating lq..." + JSON.stringify(params.lqCountry));
  
-        const res = await fetch("/api/v2/spc-stats/"+params.suicideCountry+"/"+params.suicideYear, {
+        const res = await fetch("/api/v2/lq-stats/"+params.lqCountry+"/"+params.lqYear, {
             method: "PUT",
             body: JSON.stringify({
                 country: updatedCountry,
-				both_sex: updatedBothSex,
-				male_rank: updatedMaleRank,
-				male_number: updatedMaleNumber,
-				female_rank: updatedFemaleRank,
-				female_number: updatedFemaleNumber,
-				ratio: updatedRatio,
-				year: params.suicideYear,
-				continent: updatedContinent
+                rank: updatedRank,
+                right: updatedRight,
+                stability: updatedStability,
+                health: updatedHealth,
+                security: updatedSecurity,
+                climate: updatedClimate,
+                costs: updatedCosts,
+                popularity: updatedPopularity,
+                total: updatedTotal,
+                continent: updatedContinent,
+                year: params.lqYear
             }),
             headers: {
                 "Content-Type": "application/json"
@@ -103,42 +111,47 @@
 </script>
 <main>
     <h1>SPC Manager</h1>
-    <h3>Edit SPC <strong>{params.suicideCountry}</strong></h3>
-    {#await spc}
-        Loading spc...
-    {:then spc}
+    <h3>Edit SPC <strong>{params.lqCountry}</strong></h3>
+    {#await lq}
+        Loading lq...
+    {:then lq}
     <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
         {#if errorMSG}
             {errorMSG}
         {/if}
     </Alert>
-        <Table bordered responsive>
+        <Table bordered>
             <thead>
                 <tr>
+                    <th>Rank</th>
                     <th>Country</th>
-                    <th>Both_sex</th>
-                    <th>Male_rank</th>
-                    <th>Male_number</th>
-                    <th>Female_rank</th>
-                    <th>Female_number</th>
-                    <th>Ratio</th>
+                    <th>Stability</th>
+                    <th>Right</th>
+                    <th>Health</th>
+                    <th>Security</th>
+                    <th>Climate</th>
+                    <th>Costs</th>
+                    <th>Popularity</th>
+                    <th>Total</th>
                     <th>Year</th>
                     <th>Continent</th>
-                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <td><input bind:value="{updatedRank}"></td>
                     <td>{updatedCountry}</td>
-                    <td><input bind:value="{updatedBothSex}"></td>
-                    <td><input bind:value="{updatedMaleRank}"></td>
-                    <td><input bind:value="{updatedMaleNumber}"></td>
-                    <td><input bind:value="{updatedFemaleRank}"></td>
-                    <td><input bind:value="{updatedFemaleNumber}"></td>
-                    <td><input bind:value="{updatedRatio}"></td>
+                    <td><input bind:value="{updatedStability}"></td>
+                    <td><input bind:value="{updatedRight}"></td>
+                    <td><input bind:value="{updatedHealth}"></td>
+                    <td><input bind:value="{updatedSecurity}"></td>
+                    <td><input bind:value="{updatedClimate}"></td>
+                    <td><input bind:value="{updatedCosts}"></td>
+                    <td><input bind:value="{updatedPopularity}"></td>
+                    <td><input bind:value="{updatedTotal}"></td>
                     <td>{updatedYear}</td>
                     <td><input bind:value="{updatedContinent}"></td>
-                    <td> <Button outline  color="primary" on:click={updateSpc}>Update</Button> </td>
+                    <td> <Button outline  color="primary" on:click={updateLq}>Update</Button> </td>
                 </tr>
              </tbody>
         </Table>

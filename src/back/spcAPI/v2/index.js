@@ -148,6 +148,11 @@ module.exports = function (app) {
 				continent: "africa"	
 			}
 		];
+
+	//PARA RANGOS
+	function between(x, min, max) {
+		return x >= min && x <= max;
+		}
 /////////////INICIAR CON LOS EJEMPLOS
 /*	db.find({}, (err, spc_stats) => {
 		if (spc_stats.length == 0) {
@@ -261,9 +266,13 @@ module.exports = function (app) {
 					}
 				} 
 
-				if (both_sex_Query!=null) {			//male_rank
+				if (both_sex_Query!=null) {			//both_sex_Query
 					for(var i=0;i<copiadb.length;i++){
-						if (copiadb[i].both_sex>parseInt(both_sex_Query)) {
+						/*if (copiadb[i].both_sex!=parseInt(both_sex_Query)) {
+							copiadb.splice(i,1)
+							i--;
+						}*/
+						if (!between(copiadb[i].both_sex, parseInt(both_sex_Query)-1, parseInt(both_sex_Query)+1)) {
 							copiadb.splice(i,1)
 							i--;
 						}
@@ -279,27 +288,27 @@ module.exports = function (app) {
 					}
 				} 
 
-				if (female_number_Query!=null) {			//male_rank
+				if (female_number_Query!=null) {			//female_number_Query
 					for(var i=0;i<copiadb.length;i++){
-						if (copiadb[i].female_number>parseInt(female_number_Query)) {
+						if (!between(copiadb[i].female_number, parseInt(female_number_Query)-1, parseInt(female_number_Query)+1)) {
 							copiadb.splice(i,1)
 							i--;
 						}
 					}
 				} 
 
-				if (male_number_Query!=null) {			//male_rank
+				if (male_number_Query!=null) {			//male_number_Query
 					for(var i=0;i<copiadb.length;i++){
-						if (copiadb[i].male_number_Query>parseInt(male_number_Query)) {
+						if (!between(copiadb[i].male_number, parseInt(male_number_Query)-1, parseInt(male_number_Query)+1)) {
 							copiadb.splice(i,1)
 							i--;
 						}
 					}
 				} 
 
-				if (ratio_Query!=null) {			//male_rank
+				if (ratio_Query!=null) {			//ratio_Query
 					for(var i=0;i<copiadb.length;i++){
-						if (copiadb[i].ratio>parseInt(ratio_Query)) {
+						if (!between(copiadb[i].ratio, parseInt(ratio_Query)-1, parseInt(ratio_Query)+1)) {
 							copiadb.splice(i,1)
 							i--;
 						}
