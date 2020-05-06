@@ -7,7 +7,7 @@ module.exports = function (app) {
 
     const dbFileName = path.join(__dirname, "lq.db");
 
-    const BASE_API_URL="/api/v1";
+    const BASE_API_URL="/api/v2";
 
     const db = new dataStore({
                 filename: dbFileName,
@@ -250,7 +250,14 @@ module.exports = function (app) {
 			if((limit!=null || offset != null) && countryQuery==null && yearQuery==null && rankQuery ==null && stabilityQuery ==null && rightQuery ==null && healthQuery ==null && securityQuery ==null && climateQuery ==null
 			 && costsQuery ==null && popularityQuery ==null && totalQuery ==null && continentQuery ==null){						//Get /lq_stats Paginacion
 				if(limit!=null && offset != null){
-					res.send(JSON.stringify(lq_stats.slice(startObject, endObject),null,2));	
+					if(limit==1){
+						res.send(JSON.stringify(lq_stats.slice(startObject, endObject),null,2));	
+						console.log("Data: " +JSON.stringify(lq_stats.slice(startObject,endObject)[0],null,2));
+					}else{
+						res.send(JSON.stringify(lq_stats.slice(startObject, endObject),null,2));	
+					}
+				
+				
 				} else if (limit!=null && offset == null){
 					res.send(JSON.stringify(lq_stats.slice(0,parseInt(limit)),null,2));
 				} else if(limit==null && offset != null){

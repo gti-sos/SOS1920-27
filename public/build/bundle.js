@@ -9954,6 +9954,7 @@ var app = (function () {
 <<<<<<< HEAD
     			attr_dev(a, "href", a_href_value = "#/poverty-stats/" + /*poverty*/ ctx[6].country + "/" + /*poverty*/ ctx[6].year);
 <<<<<<< HEAD
+<<<<<<< HEAD
     			add_location(a, file$9, 244, 28, 8195);
     			add_location(td0, file$9, 244, 24, 8191);
     			add_location(td1, file$9, 245, 24, 8306);
@@ -9986,6 +9987,17 @@ var app = (function () {
     			add_location(td6, file$9, 307, 24, 10671);
     			add_location(tr, file$9, 300, 20, 10261);
 >>>>>>> ee5210654792f68d5ca1a3ddf10201ac78373e6a
+=======
+    			add_location(a, file$c, 244, 28, 8195);
+    			add_location(td0, file$c, 244, 24, 8191);
+    			add_location(td1, file$c, 245, 24, 8306);
+    			add_location(td2, file$c, 246, 24, 8360);
+    			add_location(td3, file$c, 247, 24, 8414);
+    			add_location(td4, file$c, 248, 24, 8468);
+    			add_location(td5, file$c, 249, 24, 8517);
+    			add_location(td6, file$c, 250, 24, 8571);
+    			add_location(tr, file$c, 243, 20, 8161);
+>>>>>>> ad8d815673536ed99f4224e5ccd1516f5c4a2d09
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -10124,6 +10136,7 @@ var app = (function () {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     			add_location(th0, file$9, 223, 20, 7227);
     			add_location(th1, file$9, 224, 20, 7265);
     			add_location(th2, file$9, 225, 20, 7305);
@@ -10183,6 +10196,31 @@ var app = (function () {
     			add_location(thead, file$9, 277, 12, 9217);
     			add_location(tbody, file$9, 287, 12, 9538);
 >>>>>>> ee5210654792f68d5ca1a3ddf10201ac78373e6a
+=======
+    			add_location(th0, file$c, 223, 20, 7227);
+    			add_location(th1, file$c, 224, 20, 7265);
+    			add_location(th2, file$c, 225, 20, 7305);
+    			add_location(th3, file$c, 226, 20, 7345);
+    			add_location(th4, file$c, 227, 20, 7385);
+    			add_location(th5, file$c, 228, 20, 7420);
+    			add_location(tr0, file$c, 222, 16, 7201);
+    			add_location(thead, file$c, 221, 12, 7176);
+    			add_location(input0, file$c, 233, 24, 7552);
+    			add_location(td0, file$c, 233, 20, 7548);
+    			add_location(input1, file$c, 234, 24, 7624);
+    			add_location(td1, file$c, 234, 20, 7620);
+    			add_location(input2, file$c, 235, 24, 7698);
+    			add_location(td2, file$c, 235, 20, 7694);
+    			add_location(input3, file$c, 236, 24, 7772);
+    			add_location(td3, file$c, 236, 20, 7768);
+    			add_location(input4, file$c, 237, 24, 7846);
+    			add_location(td4, file$c, 237, 20, 7842);
+    			add_location(input5, file$c, 238, 24, 7915);
+    			add_location(td5, file$c, 238, 20, 7911);
+    			add_location(td6, file$c, 239, 20, 7985);
+    			add_location(tr1, file$c, 232, 16, 7522);
+    			add_location(tbody, file$c, 231, 12, 7497);
+>>>>>>> ad8d815673536ed99f4224e5ccd1516f5c4a2d09
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -10439,6 +10477,7 @@ var app = (function () {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // (268:9) {#if (page+10) <= totalObj}
 =======
     // (325:9) {#if (page+10) <= totalObj && busqueda==false}
@@ -10446,8 +10485,10 @@ var app = (function () {
     function create_if_block$7(ctx) {
 =======
     // (222:9) {#if (page+10) <= totalObj}
+=======
+    // (268:9) {#if (page+10) <= totalObj}
+>>>>>>> ad8d815673536ed99f4224e5ccd1516f5c4a2d09
     function create_if_block$8(ctx) {
->>>>>>> b34071a812c0309d4df9e0c3dd88a14133147077
     	let current;
 
     	const button = new Button({
@@ -10643,6 +10684,7 @@ var app = (function () {
     			br3 = element("br");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     			add_location(br0, file$9, 273, 4, 9346);
     			add_location(br1, file$9, 274, 4, 9356);
     			add_location(br2, file$9, 276, 4, 9436);
@@ -10662,6 +10704,13 @@ var app = (function () {
     			add_location(br3, file$9, 334, 4, 11565);
     			add_location(main, file$9, 244, 0, 8102);
 >>>>>>> ee5210654792f68d5ca1a3ddf10201ac78373e6a
+=======
+    			add_location(br0, file$c, 273, 4, 9346);
+    			add_location(br1, file$c, 274, 4, 9356);
+    			add_location(br2, file$c, 276, 4, 9436);
+    			add_location(br3, file$c, 277, 4, 9446);
+    			add_location(main, file$c, 208, 0, 6888);
+>>>>>>> ad8d815673536ed99f4224e5ccd1516f5c4a2d09
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11418,6 +11467,7 @@ var app = (function () {
     			create_component(button.$$.fragment);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     			add_location(th0, file$a, 107, 20, 3447);
     			add_location(th1, file$a, 108, 20, 3486);
     			add_location(th2, file$a, 109, 20, 3526);
@@ -11442,14 +11492,17 @@ var app = (function () {
     			add_location(tr1, file$a, 116, 16, 3744);
     			add_location(tbody, file$a, 115, 12, 3719);
 =======
+=======
+>>>>>>> ad8d815673536ed99f4224e5ccd1516f5c4a2d09
     			add_location(th0, file$d, 107, 20, 3447);
-    			add_location(th1, file$d, 108, 20, 3485);
-    			add_location(th2, file$d, 109, 20, 3525);
-    			add_location(th3, file$d, 110, 20, 3565);
-    			add_location(th4, file$d, 111, 20, 3605);
-    			add_location(th5, file$d, 112, 20, 3640);
+    			add_location(th1, file$d, 108, 20, 3486);
+    			add_location(th2, file$d, 109, 20, 3526);
+    			add_location(th3, file$d, 110, 20, 3566);
+    			add_location(th4, file$d, 111, 20, 3606);
+    			add_location(th5, file$d, 112, 20, 3642);
     			add_location(tr0, file$d, 106, 16, 3421);
     			add_location(thead, file$d, 105, 12, 3396);
+<<<<<<< HEAD
     			add_location(th6, file$d, 117, 20, 3768);
     			add_location(input0, file$d, 118, 24, 3819);
     			add_location(th7, file$d, 118, 20, 3815);
@@ -11489,6 +11542,23 @@ var app = (function () {
     			add_location(tr1, file$a, 116, 16, 3752);
     			add_location(tbody, file$a, 115, 12, 3727);
 >>>>>>> ee5210654792f68d5ca1a3ddf10201ac78373e6a
+=======
+    			add_location(input0, file$d, 117, 24, 3774);
+    			add_location(th6, file$d, 117, 20, 3770);
+    			add_location(input1, file$d, 118, 24, 3842);
+    			add_location(th7, file$d, 118, 20, 3838);
+    			add_location(input2, file$d, 119, 24, 3911);
+    			add_location(th8, file$d, 119, 20, 3907);
+    			add_location(input3, file$d, 120, 24, 3980);
+    			add_location(th9, file$d, 120, 20, 3976);
+    			add_location(input4, file$d, 121, 24, 4049);
+    			add_location(th10, file$d, 121, 20, 4045);
+    			add_location(input5, file$d, 122, 24, 4114);
+    			add_location(th11, file$d, 122, 20, 4110);
+    			add_location(td, file$d, 123, 20, 4180);
+    			add_location(tr1, file$d, 116, 16, 3744);
+    			add_location(tbody, file$d, 115, 12, 3719);
+>>>>>>> ad8d815673536ed99f4224e5ccd1516f5c4a2d09
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -12005,7 +12075,7 @@ var app = (function () {
     	return block;
     }
 
-    // (190:4) {:then lq}
+    // (202:4) {:then lq}
     function create_then_block$6(ctx) {
     	let t0;
     	let t1;
@@ -12163,14 +12233,14 @@ var app = (function () {
     		block,
     		id: create_then_block$6.name,
     		type: "then",
-    		source: "(190:4) {:then lq}",
+    		source: "(202:4) {:then lq}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (224:28) <Button outline color="primary" on:click={insertLQ}>
+    // (236:28) <Button outline color="primary" on:click={insertLQ}>
     function create_default_slot_7$2(ctx) {
     	let t;
 
@@ -12190,14 +12260,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7$2.name,
     		type: "slot",
-    		source: "(224:28) <Button outline color=\\\"primary\\\" on:click={insertLQ}>",
+    		source: "(236:28) <Button outline color=\\\"primary\\\" on:click={insertLQ}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (239:28) <Button outline color="danger" on:click="{deleteLQ(lifeq.country)}">
+    // (251:28) <Button outline color="danger" on:click="{deleteLQ(lifeq.country)}">
     function create_default_slot_6$2(ctx) {
     	let t;
 
@@ -12217,14 +12287,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$2.name,
     		type: "slot",
-    		source: "(239:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteLQ(lifeq.country)}\\\">",
+    		source: "(251:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteLQ(lifeq.country)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (226:20) {#each lq as lifeq}
+    // (238:20) {#each lq as lifeq}
     function create_each_block$3(ctx) {
     	let tr;
     	let td0;
@@ -12334,23 +12404,23 @@ var app = (function () {
     			td11 = element("td");
     			create_component(button.$$.fragment);
     			t22 = space();
-    			add_location(td0, file$e, 227, 24, 7417);
+    			add_location(td0, file$e, 239, 24, 7921);
     			attr_dev(a0, "href", a0_href_value = "#/lq-stats/" + /*lifeq*/ ctx[26].country + "/" + /*lifeq*/ ctx[26].year);
-    			add_location(a0, file$e, 228, 28, 7468);
-    			add_location(td1, file$e, 228, 24, 7464);
-    			add_location(td2, file$e, 229, 24, 7568);
-    			add_location(td3, file$e, 230, 24, 7620);
-    			add_location(td4, file$e, 231, 24, 7668);
-    			add_location(td5, file$e, 232, 24, 7717);
-    			add_location(td6, file$e, 233, 24, 7768);
-    			add_location(td7, file$e, 234, 24, 7818);
-    			add_location(td8, file$e, 235, 24, 7866);
-    			add_location(td9, file$e, 236, 24, 7919);
+    			add_location(a0, file$e, 240, 28, 7972);
+    			add_location(td1, file$e, 240, 24, 7968);
+    			add_location(td2, file$e, 241, 24, 8072);
+    			add_location(td3, file$e, 242, 24, 8124);
+    			add_location(td4, file$e, 243, 24, 8172);
+    			add_location(td5, file$e, 244, 24, 8221);
+    			add_location(td6, file$e, 245, 24, 8272);
+    			add_location(td7, file$e, 246, 24, 8322);
+    			add_location(td8, file$e, 247, 24, 8370);
+    			add_location(td9, file$e, 248, 24, 8423);
     			attr_dev(a1, "href", a1_href_value = "#/lq-stats/" + /*lifeq*/ ctx[26].country + "/" + /*lifeq*/ ctx[26].year);
-    			add_location(a1, file$e, 237, 28, 7971);
-    			add_location(td10, file$e, 237, 24, 7967);
-    			add_location(td11, file$e, 238, 24, 8068);
-    			add_location(tr, file$e, 226, 20, 7387);
+    			add_location(a1, file$e, 249, 28, 8475);
+    			add_location(td10, file$e, 249, 24, 8471);
+    			add_location(td11, file$e, 250, 24, 8572);
+    			add_location(tr, file$e, 238, 20, 7891);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -12444,14 +12514,14 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(226:20) {#each lq as lifeq}",
+    		source: "(238:20) {#each lq as lifeq}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (192:8) <Table bordered>
+    // (204:8) <Table bordered>
     function create_default_slot_5$2(ctx) {
     	let thead;
     	let tr0;
@@ -12631,47 +12701,47 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$e, 194, 24, 5769);
-    			add_location(th1, file$e, 195, 24, 5808);
-    			add_location(th2, file$e, 196, 24, 5850);
-    			add_location(th3, file$e, 197, 24, 5894);
-    			add_location(th4, file$e, 198, 24, 5934);
-    			add_location(th5, file$e, 199, 24, 5975);
-    			add_location(th6, file$e, 200, 24, 6018);
-    			add_location(th7, file$e, 201, 24, 6060);
-    			add_location(th8, file$e, 202, 24, 6100);
-    			add_location(th9, file$e, 203, 24, 6145);
-    			add_location(th10, file$e, 204, 24, 6185);
-    			add_location(th11, file$e, 205, 24, 6224);
-    			add_location(tr0, file$e, 193, 20, 5739);
-    			add_location(thead, file$e, 192, 16, 5710);
-    			add_location(input0, file$e, 211, 28, 6378);
-    			add_location(td0, file$e, 211, 24, 6374);
-    			add_location(input1, file$e, 212, 28, 6446);
-    			add_location(td1, file$e, 212, 24, 6442);
-    			add_location(input2, file$e, 213, 28, 6517);
-    			add_location(td2, file$e, 213, 24, 6513);
-    			add_location(input3, file$e, 214, 28, 6590);
-    			add_location(td3, file$e, 214, 24, 6586);
-    			add_location(input4, file$e, 215, 28, 6659);
-    			add_location(td4, file$e, 215, 24, 6655);
-    			add_location(input5, file$e, 216, 28, 6729);
-    			add_location(td5, file$e, 216, 24, 6725);
-    			add_location(input6, file$e, 217, 28, 6801);
-    			add_location(td6, file$e, 217, 24, 6797);
-    			add_location(input7, file$e, 218, 28, 6872);
-    			add_location(td7, file$e, 218, 24, 6868);
-    			add_location(input8, file$e, 219, 28, 6941);
-    			add_location(td8, file$e, 219, 24, 6937);
-    			add_location(input9, file$e, 220, 28, 7015);
-    			add_location(td9, file$e, 220, 24, 7011);
-    			add_location(input10, file$e, 221, 28, 7084);
-    			add_location(td10, file$e, 221, 24, 7080);
-    			add_location(input11, file$e, 222, 28, 7152);
-    			add_location(td11, file$e, 222, 24, 7148);
-    			add_location(td12, file$e, 223, 24, 7221);
-    			add_location(tr1, file$e, 210, 20, 6344);
-    			add_location(tbody, file$e, 209, 16, 6315);
+    			add_location(th0, file$e, 206, 24, 6273);
+    			add_location(th1, file$e, 207, 24, 6312);
+    			add_location(th2, file$e, 208, 24, 6354);
+    			add_location(th3, file$e, 209, 24, 6398);
+    			add_location(th4, file$e, 210, 24, 6438);
+    			add_location(th5, file$e, 211, 24, 6479);
+    			add_location(th6, file$e, 212, 24, 6522);
+    			add_location(th7, file$e, 213, 24, 6564);
+    			add_location(th8, file$e, 214, 24, 6604);
+    			add_location(th9, file$e, 215, 24, 6649);
+    			add_location(th10, file$e, 216, 24, 6689);
+    			add_location(th11, file$e, 217, 24, 6728);
+    			add_location(tr0, file$e, 205, 20, 6243);
+    			add_location(thead, file$e, 204, 16, 6214);
+    			add_location(input0, file$e, 223, 28, 6882);
+    			add_location(td0, file$e, 223, 24, 6878);
+    			add_location(input1, file$e, 224, 28, 6950);
+    			add_location(td1, file$e, 224, 24, 6946);
+    			add_location(input2, file$e, 225, 28, 7021);
+    			add_location(td2, file$e, 225, 24, 7017);
+    			add_location(input3, file$e, 226, 28, 7094);
+    			add_location(td3, file$e, 226, 24, 7090);
+    			add_location(input4, file$e, 227, 28, 7163);
+    			add_location(td4, file$e, 227, 24, 7159);
+    			add_location(input5, file$e, 228, 28, 7233);
+    			add_location(td5, file$e, 228, 24, 7229);
+    			add_location(input6, file$e, 229, 28, 7305);
+    			add_location(td6, file$e, 229, 24, 7301);
+    			add_location(input7, file$e, 230, 28, 7376);
+    			add_location(td7, file$e, 230, 24, 7372);
+    			add_location(input8, file$e, 231, 28, 7445);
+    			add_location(td8, file$e, 231, 24, 7441);
+    			add_location(input9, file$e, 232, 28, 7519);
+    			add_location(td9, file$e, 232, 24, 7515);
+    			add_location(input10, file$e, 233, 28, 7588);
+    			add_location(td10, file$e, 233, 24, 7584);
+    			add_location(input11, file$e, 234, 28, 7656);
+    			add_location(td11, file$e, 234, 24, 7652);
+    			add_location(td12, file$e, 235, 24, 7725);
+    			add_location(tr1, file$e, 222, 20, 6848);
+    			add_location(tbody, file$e, 221, 16, 6819);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -12895,14 +12965,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$2.name,
     		type: "slot",
-    		source: "(192:8) <Table bordered>",
+    		source: "(204:8) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (244:8) <Button color="primary" on:click="{getLQLoadInitialData}">
+    // (256:8) <Button color="primary" on:click="{getLQLoadInitialData}">
     function create_default_slot_4$2(ctx) {
     	let t;
 
@@ -12922,14 +12992,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$2.name,
     		type: "slot",
-    		source: "(244:8) <Button color=\\\"primary\\\" on:click=\\\"{getLQLoadInitialData}\\\">",
+    		source: "(256:8) <Button color=\\\"primary\\\" on:click=\\\"{getLQLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (247:8) <Button color="danger" on:click="{deleteLQALL}">
+    // (259:8) <Button color="danger" on:click="{deleteLQALL}">
     function create_default_slot_3$5(ctx) {
     	let t;
 
@@ -12949,14 +13019,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$5.name,
     		type: "slot",
-    		source: "(247:8) <Button color=\\\"danger\\\" on:click=\\\"{deleteLQALL}\\\">",
+    		source: "(259:8) <Button color=\\\"danger\\\" on:click=\\\"{deleteLQALL}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (250:8) <Button outline color="success" on:click="{getPreviewPage}">
+    // (262:8) <Button outline color="success" on:click="{getPreviewPage}">
     function create_default_slot_2$7(ctx) {
     	let t;
 
@@ -12976,14 +13046,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$7.name,
     		type: "slot",
-    		source: "(250:8) <Button outline color=\\\"success\\\" on:click=\\\"{getPreviewPage}\\\">",
+    		source: "(262:8) <Button outline color=\\\"success\\\" on:click=\\\"{getPreviewPage}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (253:8) <Button outline color="success" on:click="{getNextPage}">
+    // (265:8) <Button outline color="success" on:click="{getNextPage}">
     function create_default_slot_1$7(ctx) {
     	let t;
 
@@ -13003,14 +13073,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$7.name,
     		type: "slot",
-    		source: "(253:8) <Button outline color=\\\"success\\\" on:click=\\\"{getNextPage}\\\">",
+    		source: "(265:8) <Button outline color=\\\"success\\\" on:click=\\\"{getNextPage}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (188:15)           Loading lq...      {:then lq}
+    // (200:15)           Loading lq...      {:then lq}
     function create_pending_block$6(ctx) {
     	let t;
 
@@ -13033,14 +13103,14 @@ var app = (function () {
     		block,
     		id: create_pending_block$6.name,
     		type: "pending",
-    		source: "(188:15)           Loading lq...      {:then lq}",
+    		source: "(200:15)           Loading lq...      {:then lq}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (257:4) {#if errorMSG}
+    // (269:4) {#if errorMSG}
     function create_if_block$a(ctx) {
     	let br;
     	let t0;
@@ -13055,9 +13125,9 @@ var app = (function () {
     			p = element("p");
     			t1 = text("STATUS: ");
     			t2 = text(/*errorMSG*/ ctx[1]);
-    			add_location(br, file$e, 257, 4, 8746);
+    			add_location(br, file$e, 269, 4, 9250);
     			set_style(p, "color", "red");
-    			add_location(p, file$e, 258, 4, 8756);
+    			add_location(p, file$e, 270, 4, 9260);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -13080,14 +13150,14 @@ var app = (function () {
     		block,
     		id: create_if_block$a.name,
     		type: "if",
-    		source: "(257:4) {#if errorMSG}",
+    		source: "(269:4) {#if errorMSG}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (263:4) <Button outline color="secondary" on:click="{pop}">
+    // (275:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$7(ctx) {
     	let t;
 
@@ -13107,7 +13177,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$7.name,
     		type: "slot",
-    		source: "(263:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(275:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -13168,10 +13238,10 @@ var app = (function () {
     			br1 = element("br");
     			t5 = space();
     			create_component(button.$$.fragment);
-    			add_location(h1, file$e, 186, 4, 5589);
-    			add_location(br0, file$e, 260, 4, 8817);
-    			add_location(br1, file$e, 261, 4, 8827);
-    			add_location(main, file$e, 185, 0, 5577);
+    			add_location(h1, file$e, 198, 4, 6093);
+    			add_location(br0, file$e, 272, 4, 9321);
+    			add_location(br1, file$e, 273, 4, 9331);
+    			add_location(main, file$e, 197, 0, 6081);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13288,7 +13358,7 @@ var app = (function () {
     	//GET
     	async function getLQ() {
     		console.log("Fetching lq...");
-    		const res = await fetch("api/v1/lq-stats?limit=10&offset=1");
+    		const res = await fetch("api/v1/lq-stats?limit=10&offset=" + page);
 
     		if (res.ok) {
     			console.log("Ok");
@@ -13301,11 +13371,12 @@ var app = (function () {
     		}
     	}
 
-    	//GET INITIALDATA
+    	//GET LoadInitialData
     	async function getLQLoadInitialData() {
     		console.log("Fetching lq...");
     		await fetch("/api/v1/lq-stats/loadInitialData");
-    		const res = await fetch("/api/v1/lq-stats/loadInitialData");
+    		page = 1;
+    		const res = await fetch("/api/v1/lq-stats?limit=10&offset=" + page);
 
     		if (res.ok) {
     			console.log("Ok");
@@ -13377,21 +13448,33 @@ var app = (function () {
     	//DELETE ALL
     	async function deleteLQALL() {
     		const res = await fetch("/api/v1/lq-stats", { method: "DELETE" }).then(function (res) {
-    			totaldata = 0;
-    			$$invalidate(1, errorMSG = "");
     			getLQ();
-    			console.log("Deleted all lq.");
+    			visible = true;
+
+    			if (res.status == 200) {
+    				totaldata = 0;
+    				color = "sucess";
+    				$$invalidate(1, errorMSG = "Objetos borrados correctamente");
+    				console.log("Deleted all lq.");
+    			} else if (res.status == 400) {
+    				color = "danger";
+    				$$invalidate(1, errorMSG = "Ha ocurrido un fallo");
+    				console.log("BAD REQUST");
+    			} else {
+    				color = "danger";
+    				$$invalidate(1, errorMSG = res.status + ": " + res.statusText);
+    				console.log("ERROR!");
+    			}
     		});
     	}
 
     	//getNextPage
     	async function getNextPage() {
     		console.log(totaldata);
+    		page += 10;
 
-    		if (page + 10 > totaldata) {
-    			page = 1;
-    		} else {
-    			page += 10;
+    		if (page > totaldata) {
+    			page -= 10;
     		}
 
     		console.log("Charging page " + page);
