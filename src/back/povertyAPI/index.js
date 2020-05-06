@@ -223,7 +223,8 @@ module.exports = function (app) {
 			
 			if(body.country!=null || body.under_190!=null || body.under_320!=null || body.under_550!=null || body.continent!=null || body.year!=null){
 				
-				if(array.length==0){
+				if(array.length==0 && body.country!=null && body.year!=null && body.country!="" && body.year!=""){
+					
 					db.insert(req.body);
 					res.send(JSON.stringify(Array(req.body), null, 2));
 				}else{

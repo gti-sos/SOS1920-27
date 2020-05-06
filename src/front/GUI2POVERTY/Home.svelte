@@ -7,7 +7,10 @@
     } from "svelte-spa-router";
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
- 
+    import { Alert } from "sveltestrap";
+    
+    let visible = false;
+    let color = "danger";
     
     let newPoverty = {
         country:"",
@@ -69,16 +72,28 @@
     async function insertPoverty() {
  
         console.log("Inserting poverty..." + JSON.stringify(newPoverty));
- 
+
         const res = await fetch("/api/v1/poverty-stats", {
             method: "POST",
             body: JSON.stringify(newPoverty),
             headers: {
                 "Content-Type": "application/json"
             }
-        }).then(function (res) { 
-            totalObj++;
-            getPoverty();
+        }).then(function (res) {
+            visible=true;
+            if (res.status==200) {
+                totalObj++;
+                console.log("ELEMENTOS: "+ totalObj);
+                color = "success";
+                errorMSG = newPoverty.country + " actualizado correctamente";
+                console.log(newPoverty.country + " updated");   
+                getPoverty();         
+            }else {
+                color = "danger";
+                errorMSG= "Formato incorrecto, compruebe que Country y Year estén rellenos o que no estén contenidos en la tabla.";
+                console.log("BAD REQUEST");
+            }
+            
         });
  
     }
@@ -89,6 +104,7 @@
             method: "DELETE"
         }).then(function (res) {
             totalObj--;
+            console.log("ELEMENTOS: "+ totalObj);
             getPoverty();
         });
     }
@@ -100,6 +116,7 @@
         }).then(function (res) {
             page=1;
             totalObj=0;
+            console.log("ELEMENTOS: "+ totalObj);
             getPoverty();
         });
     }
@@ -148,7 +165,13 @@
     {#await poverty}
         Loading poverty...
     {:then poverty}
-    
+
+    <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
+        {#if errorMSG}
+            STATUS: {errorMSG}
+        {/if}
+    </Alert>
+
         <Table responsive>
             <thead>
                 <tr>
@@ -196,7 +219,7 @@
             Atras
          </Button>
          {/if}
-         {#if (page+10) < totalObj}
+         {#if (page+10) <= totalObj}
         <Button outline color="success" on:click="{getNextPage}">
             Siguiente
          </Button>
