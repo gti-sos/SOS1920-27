@@ -249,18 +249,18 @@
                 {/each}
             </tbody>
         </Table>
-        <Button color="primary" on:click="{getSPCLoadInitialData}">
+        <Button color="success" on:click="{getSPCLoadInitialData}">
             Reiniciar ejemplos iniciales
         </Button>
         <Button color="danger" on:click="{deleteSPCALL}">
             Borrar todo
         </Button>
-        <Button outline color="success" on:click="{getPreviewPage}">
+        <Button outline color="primary" on:click="{getPreviewPage}">
            Atras
         </Button>
-        <Button outline color="success" on:click="{getNextPage}">
-           Siguiente
-        </Button>
+        <Button outline color="primary" on:click="{getNextPage}">
+            Siguiente
+         </Button>
         
     {/await}
     

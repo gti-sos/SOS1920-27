@@ -5250,7 +5250,7 @@ var app = (function () {
 
     	const button0 = new Button({
     			props: {
-    				color: "primary",
+    				color: "success",
     				$$slots: { default: [create_default_slot_4] },
     				$$scope: { ctx }
     			},
@@ -5273,7 +5273,7 @@ var app = (function () {
     	const button2 = new Button({
     			props: {
     				outline: true,
-    				color: "success",
+    				color: "primary",
     				$$slots: { default: [create_default_slot_2$3] },
     				$$scope: { ctx }
     			},
@@ -5285,7 +5285,7 @@ var app = (function () {
     	const button3 = new Button({
     			props: {
     				outline: true,
-    				color: "success",
+    				color: "primary",
     				$$slots: { default: [create_default_slot_1$3] },
     				$$scope: { ctx }
     			},
@@ -6119,7 +6119,7 @@ var app = (function () {
     	return block;
     }
 
-    // (252:8) <Button color="primary" on:click="{getSPCLoadInitialData}">
+    // (252:8) <Button color="success" on:click="{getSPCLoadInitialData}">
     function create_default_slot_4(ctx) {
     	let t;
 
@@ -6139,7 +6139,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(252:8) <Button color=\\\"primary\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
+    		source: "(252:8) <Button color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
     		ctx
     	});
 
@@ -6173,7 +6173,7 @@ var app = (function () {
     	return block;
     }
 
-    // (258:8) <Button outline color="success" on:click="{getPreviewPage}">
+    // (258:8) <Button outline color="primary" on:click="{getPreviewPage}">
     function create_default_slot_2$3(ctx) {
     	let t;
 
@@ -6193,14 +6193,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$3.name,
     		type: "slot",
-    		source: "(258:8) <Button outline color=\\\"success\\\" on:click=\\\"{getPreviewPage}\\\">",
+    		source: "(258:8) <Button outline color=\\\"primary\\\" on:click=\\\"{getPreviewPage}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (261:8) <Button outline color="success" on:click="{getNextPage}">
+    // (261:8) <Button outline color="primary" on:click="{getNextPage}">
     function create_default_slot_1$3(ctx) {
     	let t;
 
@@ -6220,7 +6220,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$3.name,
     		type: "slot",
-    		source: "(261:8) <Button outline color=\\\"success\\\" on:click=\\\"{getNextPage}\\\">",
+    		source: "(261:8) <Button outline color=\\\"primary\\\" on:click=\\\"{getNextPage}\\\">",
     		ctx
     	});
 
@@ -6335,8 +6335,8 @@ var app = (function () {
     			t4 = space();
     			create_component(button.$$.fragment);
     			add_location(h1, file$7, 197, 4, 6201);
-    			add_location(br0, file$7, 266, 4, 9057);
-    			add_location(br1, file$7, 267, 4, 9067);
+    			add_location(br0, file$7, 266, 4, 9059);
+    			add_location(br1, file$7, 267, 4, 9069);
     			add_location(main, file$7, 196, 0, 6189);
     		},
     		l: function claim(nodes) {
