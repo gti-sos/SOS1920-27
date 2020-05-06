@@ -23,12 +23,14 @@
     let updatedContinent = "";
     let errorMSG = "";
 
+    const BASE_API_URL="/api/v2";
+
     onMount(getPoverty);
 
     //GET OBJECT
     async function getPoverty() {
         console.log("Fetching poverty...");
-        const res = await fetch("/api/v1/poverty-stats?country="+params.country+"&year="+params.year);
+        const res = await fetch(BASE_API_URL+"/poverty-stats?country="+params.country+"&year="+params.year);
  
         if (res.ok) {
 
@@ -53,14 +55,14 @@
     async function updatePoverty() {
         console.log("Updating poverty...");
  
-        const res = await fetch("/api/v1/poverty-stats/"+params.country+"/"+params.year, {
+        const res = await fetch(BASE_API_URL+"/poverty-stats/"+updatedCountry+"/"+updatedYear, {
             method: "PUT",
             body: JSON.stringify({
-                country: params.country,
+                country: updatedCountry,
                 under_190: updatedUnder190,
                 under_320: updatedUnder320,
                 under_550: updatedUnder550,
-                year: params.year,
+                year: updatedYear,
                 continent: updatedContinent
             }),
             headers: {
@@ -115,12 +117,12 @@
             </thead>
             <tbody>
                 <tr>
-                    <th><input bind:value="{updatedCountry}"></th>
-                    <th><input bind:value="{updatedUnder190}"></th>
-                    <th><input bind:value="{updatedUnder320}"></th>
-                    <th><input bind:value="{updatedUnder550}"></th>
-                    <th><input bind:value="{updatedYear}"></th>
-                    <th><input bind:value="{updatedContinent}"></th>
+                    <td>{updatedCountry}</td>
+                    <td><input bind:value="{updatedUnder190}"></td>
+                    <td><input bind:value="{updatedUnder320}"></td>
+                    <td><input bind:value="{updatedUnder550}"></td>
+                    <td>{updatedYear}</td>
+                    <td><input bind:value="{updatedContinent}"></td>
                     <td> <Button outline  color="primary" on:click={updatePoverty}>Update</Button> </td>
                 </tr>
              </tbody>
