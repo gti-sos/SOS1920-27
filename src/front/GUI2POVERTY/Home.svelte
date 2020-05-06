@@ -29,15 +29,16 @@
     let page=1;
     let errorMSG = "";
     
-    
+    const BASE_API_URL="/api/v2";
+
     onMount(getPoverty);
 
     //GET Limit ok
     async function getPoverty() {
  
         console.log("Fetching poverty...");
-        const res = await fetch("/api/v1/poverty-stats?limit=10&offset="+page); //obtener limit y offset
-        const res2 = await fetch("/api/v1/poverty-stats");              //obtener datos
+        const res = await fetch(BASE_API_URL+"/poverty-stats?limit=10&offset="+page); //obtener limit y offset
+        const res2 = await fetch(BASE_API_URL+"/poverty-stats");              //obtener datos
         busqueda=false;
 
         if (res.ok && res2.ok) {
@@ -54,7 +55,7 @@
     //GET LoadInitialData
     async function getPovertyLoadInitialData() {
         console.log("Fetching poverty...");
-        const msg = await fetch("/api/v1/poverty-stats/loadInitialData").then(function(res){ //mensaje de alerta
+        const msg = await fetch(BASE_API_URL+"/poverty-stats/loadInitialData").then(function(res){ //mensaje de alerta
             visible = true;
             if (res.status==200) {
                 console.log("ELEMENTOS: "+ totalObj);
@@ -70,12 +71,12 @@
                 console.log("ERROR!");
             }
         });
-        const elements = await fetch("/api/v1/poverty-stats/loadInitialData"); //datos cargados
+        const elements = await fetch(BASE_API_URL+"/poverty-stats/loadInitialData"); //datos cargados
         const jsonElements = await elements.json();
         page=1;
         totalObj = jsonElements.length;
         console.log("ELEMENTOS: "+ totalObj);
-        const res = await fetch("/api/v1/poverty-stats?limit=10&offset=1"); //datos mostrados
+        const res = await fetch(BASE_API_URL+"/poverty-stats?limit=10&offset=1"); //datos mostrados
 
         if (res.ok) {
             console.log("Ok:");
@@ -93,7 +94,7 @@
  
         console.log("Inserting poverty..." + JSON.stringify(newPoverty));
 
-        const res = await fetch("/api/v1/poverty-stats", {
+        const res = await fetch(BASE_API_URL+"/poverty-stats", {
             method: "POST",
             body: JSON.stringify(newPoverty),
             headers: {
@@ -121,7 +122,7 @@
     //SEARCH
     async function searchPoverty(countryValue, yearValue){
         console.log("pais: "+countryValue+" año: "+yearValue);
-        const elements = await fetch("/api/v1/poverty-stats?country="+countryValue+"&year="+yearValue);
+        const elements = await fetch(BASE_API_URL+"/poverty-stats?country="+countryValue+"&year="+yearValue);
         visible = true;
         if(elements.ok){
             color = "success";
@@ -152,7 +153,7 @@
 
     //DELETE
     async function deletePoverty(country) {
-        const res = await fetch("/api/v1/poverty-stats/" + country, {
+        const res = await fetch(BASE_API_URL+"/poverty-stats/" + country, {
             method: "DELETE"
         }).then(function (res) {
 
@@ -178,7 +179,7 @@
 
     //DELETE ALL
     async function deletePovertyAll() {
-        const res = await fetch("/api/v1/poverty-stats/", {
+        const res = await fetch(BASE_API_URL+"/poverty-stats/", {
             method: "DELETE"
         }).then(function (res) {
             
@@ -211,7 +212,7 @@
         }
         await console.log(page);
         console.log("Fetching poverty...");
-        const res = await fetch("/api/v1/poverty-stats?limit=10&offset="+page);
+        const res = await fetch(BASE_API_URL+"/poverty-stats?limit=10&offset="+page);
         
         if (res.ok) {
             console.log("Ok:");
@@ -229,7 +230,7 @@
         }
         await console.log(page);
         console.log("Fetching poverty...");
-        const res = await fetch("/api/v1/poverty-stats?limit=10&offset="+page);
+        const res = await fetch(BASE_API_URL+"/poverty-stats?limit=10&offset="+page);
         
         if (res.ok) {
             console.log("Ok:");
