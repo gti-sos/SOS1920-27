@@ -219,7 +219,6 @@ module.exports = function (app) {
 	
 	//GET /LIFE QUALITY
 	app.get(BASE_API_URL+"/lq-stats", (req,res) =>{
-		function arrayRemove(arr, value) { return arr.filter(function(ele){ return ele != value; });}
 		const limit = req.query.limit;
 		const offset = req.query.offset;
 		
@@ -455,7 +454,7 @@ module.exports = function (app) {
     	console.log("New GET .../lq-stats/:country/:year");
 		var countryparam = req.params.country;
     	var yearparam = req.params.year;
-        db.find({country: countryparam, year: yearparam}, (err, lq_stats) =>{
+        db.find({country: countryparam}, {year: yearparam}, (err, lq_stats) =>{
             lq_stats.forEach( (c) => {
                 delete c._id;
             });
@@ -468,7 +467,8 @@ module.exports = function (app) {
     			res.sendStatus(404,"LIFE QUALITY NOT FOUND");
     		}
             
-        });
+		});
+		
     	
     });
     

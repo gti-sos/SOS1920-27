@@ -15,6 +15,7 @@
 	import EditPoverty from './GUI2POVERTY/EditPoverty.svelte';
 	
 	import GUI3LQ from './GUI3LQ/Home.svelte';
+	import EditLq from './GUI3LQ/EditLq.svelte';
 	
 	const routes = {
 		"/" : Home,
@@ -24,7 +25,7 @@
 		"/gui2poverty": GUI2POVERTY,
 		"/poverty-stats/:country/:year":EditPoverty,
 		"/gui3lq": GUI3LQ,
-		"/lq-stats/:lqcountry/:lqYear":EditLq,
+		"/lq-stats/:lqCountry/:lqYear":EditLq,
 		"/contact/:contactName": EditContact,
 		"*": NotFound
 	};

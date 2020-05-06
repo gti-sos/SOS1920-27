@@ -12,6 +12,7 @@
     //ALERTAS
     let visible = false;
     let color = "danger";
+    let errorMSG = "";
 
     export let params = {};
 
@@ -39,20 +40,20 @@
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
-            spc = json;
+            lq = json;
 
             updatedCountry= lq.country;
             updatedRank = lq.rank;
-            updatedYear= params.suicideYear;
+            updatedYear= params.lqYear;
             updatedStability = lq.stability;
             updatedRight = lq.right;
-            updatedHealth = health.right;
+            updatedHealth = lq.health;
             updatedSecurity = lq.security;
             updatedClimate = lq.climate;
             updatedCosts = lq.costs;
             updatedPopularity = lq.popularity;
             updatedTotal = lq.total;
-            updatedContinent= spc.continent;
+            updatedContinent= lq.continent;
 
             console.log("Received " + lq.country);
         } else {
@@ -86,7 +87,7 @@
             }
         }).then(function (res) {
             visible = true;
-            getSPC1();
+            getLQ1();
             if (res.status==200) {
                 color = "success";
                 errorMSG = updatedCountry + " actualizado correctamente";
@@ -98,7 +99,7 @@
             }else if (res.status==404) {
                 color = "danger";
                 errorMSG = updatedCountry + " no ha sido encontrado";
-                console.log("SUICIDE NOT FOUND");            
+                console.log("LIFEQUALITY NOT FOUND");            
             } else {
                 color = "danger";
                 errorMSG= "Formato incorrecto, compruebe que Country y Year estén rellenos.";
@@ -110,8 +111,8 @@
    
 </script>
 <main>
-    <h1>SPC Manager</h1>
-    <h3>Edit SPC <strong>{params.lqCountry}</strong></h3>
+    <h1>LQ Manager</h1>
+    <h3>Edit LQ <strong>{params.lqCountry}</strong></h3>
     {#await lq}
         Loading lq...
     {:then lq}
@@ -120,7 +121,7 @@
             {errorMSG}
         {/if}
     </Alert>
-        <Table bordered>
+        <Table responsive bordered>
             <thead>
                 <tr>
                     <th>Rank</th>
@@ -135,6 +136,7 @@
                     <th>Total</th>
                     <th>Year</th>
                     <th>Continent</th>
+                    <th>Acción</th>
                 </tr>
             </thead>
             <tbody>
