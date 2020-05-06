@@ -39,7 +39,7 @@
     //GET
     async function getLQ() {
         console.log("Fetching lq...");
-        const res = await fetch("api/v1/lq-stats?limit=10&offset="+ page);
+        const res = await fetch("api/v2/lq-stats?limit=10&offset="+ page);
 
         if(res.ok){
             console.log("Ok");
@@ -56,9 +56,9 @@
     async function getLQLoadInitialData() {
 
         console.log("Fetching lq...");
-        await fetch("/api/v1/lq-stats/loadInitialData")
+        await fetch("/api/v2/lq-stats/loadInitialData")
         page=1;
-        const res = await fetch("/api/v1/lq-stats?limit=10&offset="+page);
+        const res = await fetch("/api/v2/lq-stats?limit=10&offset="+page);
         
 
         if (res.ok){
@@ -76,7 +76,7 @@
     //INSERT
     async function insertLQ(){
         console.log("Inserting lq..." + JSON.stringify(newLQ));
-        const res = await fetch("/api/v1/lq-stats", {
+        const res = await fetch("/api/v2/lq-stats", {
             method: "POST",
             body: JSON.stringify(newLQ),
             headers:{
@@ -107,7 +107,7 @@
 
     //DELETE SPECIFIC
     async function deleteLQ(name, year){
-        const res = await fetch("/api/v1/lq-stats/" + name + "/" + year, {
+        const res = await fetch("/api/v2/lq-stats/" + name + "/" + year, {
             method: "DELETE"
         }).then(function (res){
             visible =true;
@@ -131,7 +131,7 @@
 
     //DELETE ALL
     async function deleteLQALL(){
-        const res = await fetch("/api/v1/lq-stats", {
+        const res = await fetch("/api/v2/lq-stats", {
             method: "DELETE"
         }).then(function (res){
             getLQ();
@@ -161,7 +161,7 @@
             page -= 10;
         }
         console.log("Charging page "+ page);
-        const res = await fetch("/api/v1/lq-stats?limit=10&offset="+page);
+        const res = await fetch("/api/v2/lq-stats?limit=10&offset="+page);
 
         if (res.ok){
             console.log("Ok");
@@ -181,7 +181,7 @@
             page-=10; 
         } else page = 1
         console.log("Charging page " +page);
-        const res = await fetch("/api/v1/lq-stats?limit=10&offset="+page);
+        const res = await fetch("/api/v2/lq-stats?limit=10&offset="+page);
 
         if (res.ok) {
             console.log("Ok:");
