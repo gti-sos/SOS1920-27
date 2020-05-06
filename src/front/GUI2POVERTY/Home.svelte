@@ -11,6 +11,9 @@
     
     let visible = false;
     let color = "danger";
+    let countryValue="";
+    let yearValue="";
+    let busqueda=false;
     
     let newPoverty = {
         country:"",
@@ -35,6 +38,7 @@
         console.log("Fetching poverty...");
         const res = await fetch("/api/v1/poverty-stats?limit=10&offset="+page); //obtener limit y offset
         const res2 = await fetch("/api/v1/poverty-stats");              //obtener datos
+        busqueda=false;
 
         if (res.ok && res2.ok) {
             const json = await res.json();
@@ -112,6 +116,38 @@
             
         });
  
+    }
+
+    //SEARCH
+    async function searchPoverty(countryValue, yearValue){
+        console.log("pais: "+countryValue+" año: "+yearValue);
+        const elements = await fetch("/api/v1/poverty-stats?country="+countryValue+"&year="+yearValue);
+        visible = true;
+        if(elements.ok){
+            color = "success";
+            errorMSG = "Se ha encontrado correctamente.";
+            const json = await elements.json();
+            busqueda=true;
+            poverty=[];
+            console.log(json);
+            poverty.push(json);
+
+            console.log("Busqueda realizada: "+JSON.stringify(poverty[0],null,2));
+            
+        }else{
+            console.log("ERROR!: "+countryValue==" ");
+            
+            if (elements.status==404) {
+                color = "danger";
+                errorMSG = "Elemento no encontrado.";
+                console.log("NOT FOUND");            
+            }else{
+                color = "danger";
+                errorMSG = "Ha ocurrido un fallo";
+                console.log("BAD REQUEST");  
+            }
+        }
+
     }
 
     //DELETE
@@ -217,7 +253,27 @@
             STATUS: {errorMSG}
         {/if}
     </Alert>
-
+        <Table responsive>
+            <thead>
+                <th>Búsquedas</th>
+            </thead>
+            <tbody>
+                <tr>
+                    
+                    Country: <input type="text" bind:value="{countryValue}"> Year: <input type="text" bind:value="{yearValue}">
+                    
+                    <Button outline color="info" on:click="{searchPoverty(countryValue, yearValue)}" style="margin-left: 2%;">
+                        Buscar
+                    </Button>
+                    {#if busqueda==true}
+                    <Button outline color="info" on:click="{getPoverty}" style="margin-left: 2%;">
+                        Reiniciar filtro
+                    </Button>
+                    {/if}
+                </tr>
+            </tbody>
+        </Table>
+        
         <Table responsive>
             <thead>
                 <tr>
@@ -230,6 +286,7 @@
                 </tr>
             </thead>
             <tbody>
+                {#if busqueda==false}
                 <tr>
                     <td><input bind:value="{newPoverty.country}"></td>
                     <td><input bind:value="{newPoverty.under_190}"></td>
@@ -239,7 +296,7 @@
                     <td><input bind:value="{newPoverty.continent}"></td>
                     <td> <Button outline  color="primary" on:click={insertPoverty}>Insert</Button> </td>
                 </tr>
- 
+                {/if}
                 {#each poverty as poverty}
                     <tr>
                         <td><a href="#/poverty-stats/{poverty.country}/{poverty.year}">{poverty.country}</a></td>
@@ -260,12 +317,12 @@
         <Button color="danger" on:click="{deletePovertyAll}">
             Borrar todo
         </Button>
-        {#if page!=1}
+        {#if page!=1 && busqueda==false}
         <Button outline color="success" on:click="{getPreviousPage}">
             Atras
          </Button>
          {/if}
-         {#if (page+10) <= totalObj}
+         {#if (page+10) <= totalObj && busqueda==false}
         <Button outline color="success" on:click="{getNextPage}">
             Siguiente
          </Button>

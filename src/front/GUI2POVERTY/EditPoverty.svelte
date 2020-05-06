@@ -101,7 +101,7 @@
             STATUS: {errorMSG}
         {/if}
     </Alert>
-
+        
         <Table responsive>
             <thead>
                 <tr>

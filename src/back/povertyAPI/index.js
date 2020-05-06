@@ -182,36 +182,40 @@ module.exports = function (app) {
 					if(arrayGet.length>0){
 						res.send(JSON.stringify(arrayGet[0],null,2));
 					}else{
-						res.sendStatus(400);
+						res.sendStatus(404);
 					}
 				})
 
-            }else if(limit!=null && offset != null){						//Get /poverty_stats Paginacion
+			}else if(limit!=null && offset != null){						//Get /poverty_stats Paginacion
 						
 				if(limit<=0 || offset <=0){
 					res.sendStatus(400);
 				}else{
-					res.send(JSON.stringify(poverty_stats.slice(startObject,endObject),null,2));
+					if(limit==1){
+						
+						res.send(JSON.stringify(poverty_stats[offset-1],null,2));
+					}else{
+						res.send(JSON.stringify(poverty_stats.slice(startObject,endObject),null,2));
+					}	
 				}
-				
+				 }else if(offset!=null){
 
-			}else if(offset!=null){
+							if(offset<=0){
+								res.sendStatus(400);
+							}else{
+									res.send(JSON.stringify(poverty_stats.slice(parseInt(offset)-1,poverty_stats.length),null,2));
+							}
+						}else if(limit!=null){
+									if(limit<=0){
+										res.sendStatus(400);
+									}else if(limit==1){
 
-						if(offset<=0){
-							res.sendStatus(400);
-						}else{
+												res.send(JSON.stringify(poverty_stats[0],null,2));
+											}else{
+												res.send(JSON.stringify(poverty_stats.slice(0,parseInt(limit)),null,2));
+											}
 								
-							res.send(JSON.stringify(poverty_stats.slice(parseInt(offset)-1,poverty_stats.length),null,2))
-							
-						}
-					}else if(limit!=null){
-						if(limit<=0){
-							res.sendStatus(400);
-						}else{
-							res.send(JSON.stringify(poverty_stats.slice(0,parseInt(limit)),null,2));
-						}
-								
-						}
+				}
         });
     });
 
@@ -271,7 +275,7 @@ module.exports = function (app) {
 
 		});
 	});
-	//GET /poverty_stats/country/year
+	//GET /poverty_stats/country/year 
 	app.get(BASE_API_URL+"/poverty-stats/:country/:year", (req, res)=>{
         var countryparam = req.params.country;
 		var yearparam = req.params.year;
