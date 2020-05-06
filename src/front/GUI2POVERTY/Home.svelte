@@ -317,12 +317,12 @@
         <Button color="danger" on:click="{deletePovertyAll}">
             Borrar todo
         </Button>
-        {#if page!=1}
+        {#if page!=1 && busqueda==false}
         <Button outline color="success" on:click="{getPreviousPage}">
             Atras
          </Button>
          {/if}
-         {#if (page+10) <= totalObj }
+         {#if (page+10) <= totalObj && busqueda==false}
         <Button outline color="success" on:click="{getNextPage}">
             Siguiente
          </Button>

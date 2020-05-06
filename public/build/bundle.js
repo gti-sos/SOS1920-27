@@ -7760,7 +7760,7 @@ var app = (function () {
 
     	button1.$on("click", /*deletePovertyAll*/ ctx[15]);
     	let if_block0 = /*page*/ ctx[7] != 1 && create_if_block_1$2(ctx);
-    	let if_block1 = /*page*/ ctx[7] + 10 <= /*totalObj*/ ctx[6] && create_if_block$7(ctx);
+    	let if_block1 = /*page*/ ctx[7] + 10 <= /*totalObj*/ ctx[6] && /*busqueda*/ ctx[4] == false && create_if_block$7(ctx);
 
     	const block = {
     		c: function create() {
@@ -7856,7 +7856,7 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*page*/ ctx[7] + 10 <= /*totalObj*/ ctx[6]) {
+    			if (/*page*/ ctx[7] + 10 <= /*totalObj*/ ctx[6] && /*busqueda*/ ctx[4] == false) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
     					transition_in(if_block1, 1);
@@ -8981,7 +8981,7 @@ var app = (function () {
     	return block;
     }
 
-    // (325:9) {#if (page+10) <= totalObj }
+    // (325:9) {#if (page+10) <= totalObj && busqueda==false}
     function create_if_block$7(ctx) {
     	let current;
 
@@ -9032,7 +9032,7 @@ var app = (function () {
     		block,
     		id: create_if_block$7.name,
     		type: "if",
-    		source: "(325:9) {#if (page+10) <= totalObj }",
+    		source: "(325:9) {#if (page+10) <= totalObj && busqueda==false}",
     		ctx
     	});
 
@@ -9176,10 +9176,10 @@ var app = (function () {
     			br2 = element("br");
     			t4 = space();
     			br3 = element("br");
-    			add_location(br0, file$9, 330, 4, 11447);
-    			add_location(br1, file$9, 331, 4, 11457);
-    			add_location(br2, file$9, 333, 4, 11537);
-    			add_location(br3, file$9, 334, 4, 11547);
+    			add_location(br0, file$9, 330, 4, 11465);
+    			add_location(br1, file$9, 331, 4, 11475);
+    			add_location(br2, file$9, 333, 4, 11555);
+    			add_location(br3, file$9, 334, 4, 11565);
     			add_location(main, file$9, 244, 0, 8102);
     		},
     		l: function claim(nodes) {
