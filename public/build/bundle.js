@@ -6068,11 +6068,11 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[37] = list[i];
+    	child_ctx[38] = list[i];
     	return child_ctx;
     }
 
-    // (234:4) <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
+    // (269:4) <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
     function create_default_slot_12(ctx) {
     	let t;
 
@@ -6092,14 +6092,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(234:4) <Button color=\\\"primary\\\" on:click={() => (isOpen = !isOpen)} class=\\\"mb-3\\\">",
+    		source: "(269:4) <Button color=\\\"primary\\\" on:click={() => (isOpen = !isOpen)} class=\\\"mb-3\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (250:25) <Button outline  color="primary" on:click={searchSPC}>
+    // (285:25) <Button outline  color="primary" on:click={searchSPC}>
     function create_default_slot_11(ctx) {
     	let t;
 
@@ -6119,14 +6119,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(250:25) <Button outline  color=\\\"primary\\\" on:click={searchSPC}>",
+    		source: "(285:25) <Button outline  color=\\\"primary\\\" on:click={searchSPC}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (238:8) <Table bordered>
+    // (273:8) <Table bordered responsive>
     function create_default_slot_10(ctx) {
     	let tbody;
     	let tr;
@@ -6207,35 +6207,35 @@ var app = (function () {
     			td9 = element("td");
     			create_component(button.$$.fragment);
     			attr_dev(input0, "placeholder", "País");
-    			add_location(input0, file$a, 240, 24, 7674);
-    			add_location(td0, file$a, 240, 20, 7670);
+    			add_location(input0, file$a, 275, 24, 8743);
+    			add_location(td0, file$a, 275, 20, 8739);
     			attr_dev(input1, "placeholder", "Ambos sexos");
-    			add_location(input1, file$a, 241, 24, 7764);
-    			add_location(td1, file$a, 241, 20, 7760);
-    			attr_dev(input2, "placeholder", "Rango hombres");
-    			add_location(input2, file$a, 242, 24, 7862);
-    			add_location(td2, file$a, 242, 20, 7858);
+    			add_location(input1, file$a, 276, 24, 8833);
+    			add_location(td1, file$a, 276, 20, 8829);
+    			attr_dev(input2, "placeholder", "Ranking hombres");
+    			add_location(input2, file$a, 277, 24, 8931);
+    			add_location(td2, file$a, 277, 20, 8927);
     			attr_dev(input3, "placeholder", "Número hombres (en miles)");
-    			add_location(input3, file$a, 243, 24, 7963);
-    			add_location(td3, file$a, 243, 20, 7959);
-    			attr_dev(input4, "placeholder", "Rango mujeres");
-    			add_location(input4, file$a, 244, 24, 8078);
-    			add_location(td4, file$a, 244, 20, 8074);
+    			add_location(input3, file$a, 278, 24, 9034);
+    			add_location(td3, file$a, 278, 20, 9030);
+    			attr_dev(input4, "placeholder", "Ranking mujeres");
+    			add_location(input4, file$a, 279, 24, 9149);
+    			add_location(td4, file$a, 279, 20, 9145);
     			attr_dev(input5, "placeholder", "Número mujeres (en miles)");
-    			add_location(input5, file$a, 245, 24, 8181);
-    			add_location(td5, file$a, 245, 20, 8177);
+    			add_location(input5, file$a, 280, 24, 9254);
+    			add_location(td5, file$a, 280, 20, 9250);
     			attr_dev(input6, "placeholder", "Ratio");
-    			add_location(input6, file$a, 246, 24, 8298);
-    			add_location(td6, file$a, 246, 20, 8294);
+    			add_location(input6, file$a, 281, 24, 9371);
+    			add_location(td6, file$a, 281, 20, 9367);
     			attr_dev(input7, "placeholder", "Año");
-    			add_location(input7, file$a, 247, 24, 8387);
-    			add_location(td7, file$a, 247, 20, 8383);
+    			add_location(input7, file$a, 282, 24, 9460);
+    			add_location(td7, file$a, 282, 20, 9456);
     			attr_dev(input8, "placeholder", "Continente");
-    			add_location(input8, file$a, 248, 24, 8473);
-    			add_location(td8, file$a, 248, 20, 8469);
-    			add_location(td9, file$a, 249, 20, 8567);
-    			add_location(tr, file$a, 239, 16, 7644);
-    			add_location(tbody, file$a, 238, 12, 7619);
+    			add_location(input8, file$a, 283, 24, 9546);
+    			add_location(td8, file$a, 283, 20, 9542);
+    			add_location(td9, file$a, 284, 20, 9640);
+    			add_location(tr, file$a, 274, 16, 8713);
+    			add_location(tbody, file$a, 273, 12, 8688);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, tbody, anchor);
@@ -6282,15 +6282,15 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[18]),
-    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[19]),
-    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[20]),
-    				listen_dev(input3, "input", /*input3_input_handler*/ ctx[21]),
-    				listen_dev(input4, "input", /*input4_input_handler*/ ctx[22]),
-    				listen_dev(input5, "input", /*input5_input_handler*/ ctx[23]),
-    				listen_dev(input6, "input", /*input6_input_handler*/ ctx[24]),
-    				listen_dev(input7, "input", /*input7_input_handler*/ ctx[25]),
-    				listen_dev(input8, "input", /*input8_input_handler*/ ctx[26])
+    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[19]),
+    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[20]),
+    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[21]),
+    				listen_dev(input3, "input", /*input3_input_handler*/ ctx[22]),
+    				listen_dev(input4, "input", /*input4_input_handler*/ ctx[23]),
+    				listen_dev(input5, "input", /*input5_input_handler*/ ctx[24]),
+    				listen_dev(input6, "input", /*input6_input_handler*/ ctx[25]),
+    				listen_dev(input7, "input", /*input7_input_handler*/ ctx[26]),
+    				listen_dev(input8, "input", /*input8_input_handler*/ ctx[27])
     			];
     		},
     		p: function update(ctx, dirty) {
@@ -6332,7 +6332,7 @@ var app = (function () {
 
     			const button_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 512) {
+    			if (dirty[1] & /*$$scope*/ 1024) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -6358,20 +6358,21 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(238:8) <Table bordered>",
+    		source: "(273:8) <Table bordered responsive>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (237:6) <Collapse {isOpen}>
+    // (272:6) <Collapse {isOpen}>
     function create_default_slot_9(ctx) {
     	let current;
 
     	const table = new Table({
     			props: {
     				bordered: true,
+    				responsive: true,
     				$$slots: { default: [create_default_slot_10] },
     				$$scope: { ctx }
     			},
@@ -6389,7 +6390,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const table_changes = {};
 
-    			if (dirty[0] & /*searchSpc*/ 16 | dirty[1] & /*$$scope*/ 512) {
+    			if (dirty[0] & /*searchSpc*/ 16 | dirty[1] & /*$$scope*/ 1024) {
     				table_changes.$$scope = { dirty, ctx };
     			}
 
@@ -6413,7 +6414,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(237:6) <Collapse {isOpen}>",
+    		source: "(272:6) <Collapse {isOpen}>",
     		ctx
     	});
 
@@ -6442,7 +6443,7 @@ var app = (function () {
     	return block;
     }
 
-    // (258:4) {:then spc}
+    // (293:4) {:then spc}
     function create_then_block$2(ctx) {
     	let t0;
     	let t1;
@@ -6455,7 +6456,7 @@ var app = (function () {
     			props: {
     				color: /*color*/ ctx[2],
     				isOpen: /*visible*/ ctx[1],
-    				toggle: /*func*/ ctx[27],
+    				toggle: /*func*/ ctx[28],
     				$$slots: { default: [create_default_slot_8] },
     				$$scope: { ctx }
     			},
@@ -6465,6 +6466,7 @@ var app = (function () {
     	const table = new Table({
     			props: {
     				bordered: true,
+    				responsive: true,
     				$$slots: { default: [create_default_slot_5] },
     				$$scope: { ctx }
     			},
@@ -6549,44 +6551,44 @@ var app = (function () {
     			const alert_changes = {};
     			if (dirty[0] & /*color*/ 4) alert_changes.color = /*color*/ ctx[2];
     			if (dirty[0] & /*visible*/ 2) alert_changes.isOpen = /*visible*/ ctx[1];
-    			if (dirty[0] & /*visible*/ 2) alert_changes.toggle = /*func*/ ctx[27];
+    			if (dirty[0] & /*visible*/ 2) alert_changes.toggle = /*func*/ ctx[28];
 
-    			if (dirty[0] & /*errorMSG*/ 32 | dirty[1] & /*$$scope*/ 512) {
+    			if (dirty[0] & /*errorMSG*/ 32 | dirty[1] & /*$$scope*/ 1024) {
     				alert_changes.$$scope = { dirty, ctx };
     			}
 
     			alert.$set(alert_changes);
     			const table_changes = {};
 
-    			if (dirty[0] & /*spc, newSpc*/ 72 | dirty[1] & /*$$scope*/ 512) {
+    			if (dirty[0] & /*spc, newSpc*/ 72 | dirty[1] & /*$$scope*/ 1024) {
     				table_changes.$$scope = { dirty, ctx };
     			}
 
     			table.$set(table_changes);
     			const button0_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 512) {
+    			if (dirty[1] & /*$$scope*/ 1024) {
     				button0_changes.$$scope = { dirty, ctx };
     			}
 
     			button0.$set(button0_changes);
     			const button1_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 512) {
+    			if (dirty[1] & /*$$scope*/ 1024) {
     				button1_changes.$$scope = { dirty, ctx };
     			}
 
     			button1.$set(button1_changes);
     			const button2_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 512) {
+    			if (dirty[1] & /*$$scope*/ 1024) {
     				button2_changes.$$scope = { dirty, ctx };
     			}
 
     			button2.$set(button2_changes);
     			const button3_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 512) {
+    			if (dirty[1] & /*$$scope*/ 1024) {
     				button3_changes.$$scope = { dirty, ctx };
     			}
 
@@ -6630,14 +6632,14 @@ var app = (function () {
     		block,
     		id: create_then_block$2.name,
     		type: "then",
-    		source: "(258:4) {:then spc}",
+    		source: "(293:4) {:then spc}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (260:8) {#if errorMSG}
+    // (295:8) {#if errorMSG}
     function create_if_block$6(ctx) {
     	let t;
 
@@ -6660,14 +6662,14 @@ var app = (function () {
     		block,
     		id: create_if_block$6.name,
     		type: "if",
-    		source: "(260:8) {#if errorMSG}",
+    		source: "(295:8) {#if errorMSG}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (259:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
+    // (294:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
     function create_default_slot_8(ctx) {
     	let if_block_anchor;
     	let if_block = /*errorMSG*/ ctx[5] && create_if_block$6(ctx);
@@ -6705,14 +6707,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(259:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>",
+    		source: "(294:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (290:25) <Button outline  color="primary" on:click={insertSPC}>
+    // (325:25) <Button outline  color="primary" on:click={insertSPC}>
     function create_default_slot_7(ctx) {
     	let t;
 
@@ -6732,14 +6734,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(290:25) <Button outline  color=\\\"primary\\\" on:click={insertSPC}>",
+    		source: "(325:25) <Button outline  color=\\\"primary\\\" on:click={insertSPC}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (304:28) <Button outline color="danger" on:click="{deleteSPC(suicide.country, suicide.year)}">
+    // (339:28) <Button outline color="danger" on:click="{deleteSPC(suicide.country, suicide.year)}">
     function create_default_slot_6(ctx) {
     	let t;
 
@@ -6759,52 +6761,52 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(304:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPC(suicide.country, suicide.year)}\\\">",
+    		source: "(339:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPC(suicide.country, suicide.year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (293:16) {#each spc as suicide}
+    // (328:16) {#each spc as suicide}
     function create_each_block$1(ctx) {
     	let tr;
     	let td0;
     	let a;
-    	let t0_value = /*suicide*/ ctx[37].country + "";
+    	let t0_value = /*suicide*/ ctx[38].country + "";
     	let t0;
     	let a_href_value;
     	let t1;
     	let td1;
-    	let t2_value = /*suicide*/ ctx[37].both_sex + "";
+    	let t2_value = /*suicide*/ ctx[38].both_sex + "";
     	let t2;
     	let t3;
     	let td2;
-    	let t4_value = /*suicide*/ ctx[37].male_rank + "";
+    	let t4_value = /*suicide*/ ctx[38].male_rank + "";
     	let t4;
     	let t5;
     	let td3;
-    	let t6_value = /*suicide*/ ctx[37].male_number + "";
+    	let t6_value = /*suicide*/ ctx[38].male_number + "";
     	let t6;
     	let t7;
     	let td4;
-    	let t8_value = /*suicide*/ ctx[37].female_rank + "";
+    	let t8_value = /*suicide*/ ctx[38].female_rank + "";
     	let t8;
     	let t9;
     	let td5;
-    	let t10_value = /*suicide*/ ctx[37].female_number + "";
+    	let t10_value = /*suicide*/ ctx[38].female_number + "";
     	let t10;
     	let t11;
     	let td6;
-    	let t12_value = /*suicide*/ ctx[37].ratio + "";
+    	let t12_value = /*suicide*/ ctx[38].ratio + "";
     	let t12;
     	let t13;
     	let td7;
-    	let t14_value = /*suicide*/ ctx[37].year + "";
+    	let t14_value = /*suicide*/ ctx[38].year + "";
     	let t14;
     	let t15;
     	let td8;
-    	let t16_value = /*suicide*/ ctx[37].continent + "";
+    	let t16_value = /*suicide*/ ctx[38].continent + "";
     	let t16;
     	let t17;
     	let td9;
@@ -6822,7 +6824,7 @@ var app = (function () {
     		});
 
     	button.$on("click", function () {
-    		if (is_function(/*deleteSPC*/ ctx[9](/*suicide*/ ctx[37].country, /*suicide*/ ctx[37].year))) /*deleteSPC*/ ctx[9](/*suicide*/ ctx[37].country, /*suicide*/ ctx[37].year).apply(this, arguments);
+    		if (is_function(/*deleteSPC*/ ctx[9](/*suicide*/ ctx[38].country, /*suicide*/ ctx[38].year))) /*deleteSPC*/ ctx[9](/*suicide*/ ctx[38].country, /*suicide*/ ctx[38].year).apply(this, arguments);
     	});
 
     	const block = {
@@ -6859,19 +6861,19 @@ var app = (function () {
     			td9 = element("td");
     			create_component(button.$$.fragment);
     			t18 = space();
-    			attr_dev(a, "href", a_href_value = "#/spc-stats/" + /*suicide*/ ctx[37].country + "/" + /*suicide*/ ctx[37].year);
-    			add_location(a, file$a, 294, 28, 10345);
-    			add_location(td0, file$a, 294, 24, 10341);
-    			add_location(td1, file$a, 295, 24, 10452);
-    			add_location(td2, file$a, 296, 24, 10505);
-    			add_location(td3, file$a, 297, 24, 10559);
-    			add_location(td4, file$a, 298, 24, 10615);
-    			add_location(td5, file$a, 299, 24, 10671);
-    			add_location(td6, file$a, 300, 24, 10729);
-    			add_location(td7, file$a, 301, 24, 10779);
-    			add_location(td8, file$a, 302, 24, 10828);
-    			add_location(td9, file$a, 303, 24, 10882);
-    			add_location(tr, file$a, 293, 20, 10311);
+    			attr_dev(a, "href", a_href_value = "#/spc-stats/" + /*suicide*/ ctx[38].country + "/" + /*suicide*/ ctx[38].year);
+    			add_location(a, file$a, 329, 28, 11429);
+    			add_location(td0, file$a, 329, 24, 11425);
+    			add_location(td1, file$a, 330, 24, 11536);
+    			add_location(td2, file$a, 331, 24, 11589);
+    			add_location(td3, file$a, 332, 24, 11643);
+    			add_location(td4, file$a, 333, 24, 11699);
+    			add_location(td5, file$a, 334, 24, 11755);
+    			add_location(td6, file$a, 335, 24, 11813);
+    			add_location(td7, file$a, 336, 24, 11863);
+    			add_location(td8, file$a, 337, 24, 11912);
+    			add_location(td9, file$a, 338, 24, 11966);
+    			add_location(tr, file$a, 328, 20, 11395);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -6910,23 +6912,23 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if ((!current || dirty[0] & /*spc*/ 64) && t0_value !== (t0_value = /*suicide*/ ctx[37].country + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty[0] & /*spc*/ 64) && t0_value !== (t0_value = /*suicide*/ ctx[38].country + "")) set_data_dev(t0, t0_value);
 
-    			if (!current || dirty[0] & /*spc*/ 64 && a_href_value !== (a_href_value = "#/spc-stats/" + /*suicide*/ ctx[37].country + "/" + /*suicide*/ ctx[37].year)) {
+    			if (!current || dirty[0] & /*spc*/ 64 && a_href_value !== (a_href_value = "#/spc-stats/" + /*suicide*/ ctx[38].country + "/" + /*suicide*/ ctx[38].year)) {
     				attr_dev(a, "href", a_href_value);
     			}
 
-    			if ((!current || dirty[0] & /*spc*/ 64) && t2_value !== (t2_value = /*suicide*/ ctx[37].both_sex + "")) set_data_dev(t2, t2_value);
-    			if ((!current || dirty[0] & /*spc*/ 64) && t4_value !== (t4_value = /*suicide*/ ctx[37].male_rank + "")) set_data_dev(t4, t4_value);
-    			if ((!current || dirty[0] & /*spc*/ 64) && t6_value !== (t6_value = /*suicide*/ ctx[37].male_number + "")) set_data_dev(t6, t6_value);
-    			if ((!current || dirty[0] & /*spc*/ 64) && t8_value !== (t8_value = /*suicide*/ ctx[37].female_rank + "")) set_data_dev(t8, t8_value);
-    			if ((!current || dirty[0] & /*spc*/ 64) && t10_value !== (t10_value = /*suicide*/ ctx[37].female_number + "")) set_data_dev(t10, t10_value);
-    			if ((!current || dirty[0] & /*spc*/ 64) && t12_value !== (t12_value = /*suicide*/ ctx[37].ratio + "")) set_data_dev(t12, t12_value);
-    			if ((!current || dirty[0] & /*spc*/ 64) && t14_value !== (t14_value = /*suicide*/ ctx[37].year + "")) set_data_dev(t14, t14_value);
-    			if ((!current || dirty[0] & /*spc*/ 64) && t16_value !== (t16_value = /*suicide*/ ctx[37].continent + "")) set_data_dev(t16, t16_value);
+    			if ((!current || dirty[0] & /*spc*/ 64) && t2_value !== (t2_value = /*suicide*/ ctx[38].both_sex + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty[0] & /*spc*/ 64) && t4_value !== (t4_value = /*suicide*/ ctx[38].male_rank + "")) set_data_dev(t4, t4_value);
+    			if ((!current || dirty[0] & /*spc*/ 64) && t6_value !== (t6_value = /*suicide*/ ctx[38].male_number + "")) set_data_dev(t6, t6_value);
+    			if ((!current || dirty[0] & /*spc*/ 64) && t8_value !== (t8_value = /*suicide*/ ctx[38].female_rank + "")) set_data_dev(t8, t8_value);
+    			if ((!current || dirty[0] & /*spc*/ 64) && t10_value !== (t10_value = /*suicide*/ ctx[38].female_number + "")) set_data_dev(t10, t10_value);
+    			if ((!current || dirty[0] & /*spc*/ 64) && t12_value !== (t12_value = /*suicide*/ ctx[38].ratio + "")) set_data_dev(t12, t12_value);
+    			if ((!current || dirty[0] & /*spc*/ 64) && t14_value !== (t14_value = /*suicide*/ ctx[38].year + "")) set_data_dev(t14, t14_value);
+    			if ((!current || dirty[0] & /*spc*/ 64) && t16_value !== (t16_value = /*suicide*/ ctx[38].continent + "")) set_data_dev(t16, t16_value);
     			const button_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 512) {
+    			if (dirty[1] & /*$$scope*/ 1024) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -6951,14 +6953,14 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(293:16) {#each spc as suicide}",
+    		source: "(328:16) {#each spc as suicide}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (264:8) <Table bordered>
+    // (299:8) <Table bordered responsive>
     function create_default_slot_5(ctx) {
     	let thead;
     	let tr0;
@@ -7110,39 +7112,39 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$a, 266, 20, 9035);
-    			add_location(th1, file$a, 267, 20, 9073);
-    			add_location(th2, file$a, 268, 20, 9112);
-    			add_location(th3, file$a, 269, 20, 9152);
-    			add_location(th4, file$a, 270, 20, 9194);
-    			add_location(th5, file$a, 271, 20, 9236);
-    			add_location(th6, file$a, 272, 20, 9280);
-    			add_location(th7, file$a, 273, 20, 9316);
-    			add_location(th8, file$a, 274, 20, 9351);
-    			add_location(th9, file$a, 275, 20, 9391);
-    			add_location(tr0, file$a, 265, 16, 9009);
-    			add_location(thead, file$a, 264, 12, 8984);
-    			add_location(input0, file$a, 280, 24, 9521);
-    			add_location(td0, file$a, 280, 20, 9517);
-    			add_location(input1, file$a, 281, 24, 9589);
-    			add_location(td1, file$a, 281, 20, 9585);
-    			add_location(input2, file$a, 282, 24, 9658);
-    			add_location(td2, file$a, 282, 20, 9654);
-    			add_location(input3, file$a, 283, 24, 9728);
-    			add_location(td3, file$a, 283, 20, 9724);
-    			add_location(input4, file$a, 284, 24, 9800);
-    			add_location(td4, file$a, 284, 20, 9796);
-    			add_location(input5, file$a, 285, 24, 9872);
-    			add_location(td5, file$a, 285, 20, 9868);
-    			add_location(input6, file$a, 286, 24, 9946);
-    			add_location(td6, file$a, 286, 20, 9942);
-    			add_location(input7, file$a, 287, 24, 10012);
-    			add_location(td7, file$a, 287, 20, 10008);
-    			add_location(input8, file$a, 288, 24, 10077);
-    			add_location(td8, file$a, 288, 20, 10073);
-    			add_location(td9, file$a, 289, 20, 10143);
-    			add_location(tr1, file$a, 279, 16, 9491);
-    			add_location(tbody, file$a, 278, 12, 9466);
+    			add_location(th0, file$a, 301, 20, 10119);
+    			add_location(th1, file$a, 302, 20, 10157);
+    			add_location(th2, file$a, 303, 20, 10196);
+    			add_location(th3, file$a, 304, 20, 10236);
+    			add_location(th4, file$a, 305, 20, 10278);
+    			add_location(th5, file$a, 306, 20, 10320);
+    			add_location(th6, file$a, 307, 20, 10364);
+    			add_location(th7, file$a, 308, 20, 10400);
+    			add_location(th8, file$a, 309, 20, 10435);
+    			add_location(th9, file$a, 310, 20, 10475);
+    			add_location(tr0, file$a, 300, 16, 10093);
+    			add_location(thead, file$a, 299, 12, 10068);
+    			add_location(input0, file$a, 315, 24, 10605);
+    			add_location(td0, file$a, 315, 20, 10601);
+    			add_location(input1, file$a, 316, 24, 10673);
+    			add_location(td1, file$a, 316, 20, 10669);
+    			add_location(input2, file$a, 317, 24, 10742);
+    			add_location(td2, file$a, 317, 20, 10738);
+    			add_location(input3, file$a, 318, 24, 10812);
+    			add_location(td3, file$a, 318, 20, 10808);
+    			add_location(input4, file$a, 319, 24, 10884);
+    			add_location(td4, file$a, 319, 20, 10880);
+    			add_location(input5, file$a, 320, 24, 10956);
+    			add_location(td5, file$a, 320, 20, 10952);
+    			add_location(input6, file$a, 321, 24, 11030);
+    			add_location(td6, file$a, 321, 20, 11026);
+    			add_location(input7, file$a, 322, 24, 11096);
+    			add_location(td7, file$a, 322, 20, 11092);
+    			add_location(input8, file$a, 323, 24, 11161);
+    			add_location(td8, file$a, 323, 20, 11157);
+    			add_location(td9, file$a, 324, 20, 11227);
+    			add_location(tr1, file$a, 314, 16, 10575);
+    			add_location(tbody, file$a, 313, 12, 10550);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -7217,15 +7219,15 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input0, "input", /*input0_input_handler_1*/ ctx[28]),
-    				listen_dev(input1, "input", /*input1_input_handler_1*/ ctx[29]),
-    				listen_dev(input2, "input", /*input2_input_handler_1*/ ctx[30]),
-    				listen_dev(input3, "input", /*input3_input_handler_1*/ ctx[31]),
-    				listen_dev(input4, "input", /*input4_input_handler_1*/ ctx[32]),
-    				listen_dev(input5, "input", /*input5_input_handler_1*/ ctx[33]),
-    				listen_dev(input6, "input", /*input6_input_handler_1*/ ctx[34]),
-    				listen_dev(input7, "input", /*input7_input_handler_1*/ ctx[35]),
-    				listen_dev(input8, "input", /*input8_input_handler_1*/ ctx[36])
+    				listen_dev(input0, "input", /*input0_input_handler_1*/ ctx[29]),
+    				listen_dev(input1, "input", /*input1_input_handler_1*/ ctx[30]),
+    				listen_dev(input2, "input", /*input2_input_handler_1*/ ctx[31]),
+    				listen_dev(input3, "input", /*input3_input_handler_1*/ ctx[32]),
+    				listen_dev(input4, "input", /*input4_input_handler_1*/ ctx[33]),
+    				listen_dev(input5, "input", /*input5_input_handler_1*/ ctx[34]),
+    				listen_dev(input6, "input", /*input6_input_handler_1*/ ctx[35]),
+    				listen_dev(input7, "input", /*input7_input_handler_1*/ ctx[36]),
+    				listen_dev(input8, "input", /*input8_input_handler_1*/ ctx[37])
     			];
     		},
     		p: function update(ctx, dirty) {
@@ -7267,7 +7269,7 @@ var app = (function () {
 
     			const button_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 512) {
+    			if (dirty[1] & /*$$scope*/ 1024) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -7335,14 +7337,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(264:8) <Table bordered>",
+    		source: "(299:8) <Table bordered responsive>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (309:10) <Button color="success" on:click="{getSPCLoadInitialData}">
+    // (344:10) <Button color="success" on:click="{getSPCLoadInitialData}">
     function create_default_slot_4(ctx) {
     	let t;
 
@@ -7362,14 +7364,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(309:10) <Button color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
+    		source: "(344:10) <Button color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (312:8) <Button color="danger" on:click="{deleteSPCALL}">
+    // (347:8) <Button color="danger" on:click="{deleteSPCALL}">
     function create_default_slot_3$1(ctx) {
     	let t;
 
@@ -7389,14 +7391,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$1.name,
     		type: "slot",
-    		source: "(312:8) <Button color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
+    		source: "(347:8) <Button color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (315:8) <Button outline color="primary" on:click="{getPreviewPage}">
+    // (350:8) <Button outline color="primary" on:click="{getPreviewPage}">
     function create_default_slot_2$3(ctx) {
     	let t;
 
@@ -7416,14 +7418,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$3.name,
     		type: "slot",
-    		source: "(315:8) <Button outline color=\\\"primary\\\" on:click=\\\"{getPreviewPage}\\\">",
+    		source: "(350:8) <Button outline color=\\\"primary\\\" on:click=\\\"{getPreviewPage}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (318:8) <Button outline color="primary" on:click="{getNextPage}">
+    // (353:8) <Button outline color="primary" on:click="{getNextPage}">
     function create_default_slot_1$3(ctx) {
     	let t;
 
@@ -7443,14 +7445,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$3.name,
     		type: "slot",
-    		source: "(318:8) <Button outline color=\\\"primary\\\" on:click=\\\"{getNextPage}\\\">",
+    		source: "(353:8) <Button outline color=\\\"primary\\\" on:click=\\\"{getNextPage}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (256:16)           Loading spc...      {:then spc}
+    // (291:16)           Loading spc...      {:then spc}
     function create_pending_block$2(ctx) {
     	let t;
 
@@ -7473,14 +7475,14 @@ var app = (function () {
     		block,
     		id: create_pending_block$2.name,
     		type: "pending",
-    		source: "(256:16)           Loading spc...      {:then spc}",
+    		source: "(291:16)           Loading spc...      {:then spc}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (327:4) <Button outline color="secondary" on:click="{pop}">
+    // (362:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$3(ctx) {
     	let t;
 
@@ -7500,7 +7502,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(327:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(362:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -7531,7 +7533,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	button0.$on("click", /*click_handler*/ ctx[17]);
+    	button0.$on("click", /*click_handler*/ ctx[18]);
 
     	const collapse = new Collapse({
     			props: {
@@ -7584,10 +7586,10 @@ var app = (function () {
     			br1 = element("br");
     			t6 = space();
     			create_component(button1.$$.fragment);
-    			add_location(h1, file$a, 231, 4, 7414);
-    			add_location(br0, file$a, 324, 4, 11582);
-    			add_location(br1, file$a, 325, 4, 11592);
-    			add_location(main, file$a, 230, 0, 7402);
+    			add_location(h1, file$a, 266, 4, 8472);
+    			add_location(br0, file$a, 359, 4, 12666);
+    			add_location(br1, file$a, 360, 4, 12676);
+    			add_location(main, file$a, 265, 0, 8460);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7615,7 +7617,7 @@ var app = (function () {
     			ctx = new_ctx;
     			const button0_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 512) {
+    			if (dirty[1] & /*$$scope*/ 1024) {
     				button0_changes.$$scope = { dirty, ctx };
     			}
 
@@ -7623,7 +7625,7 @@ var app = (function () {
     			const collapse_changes = {};
     			if (dirty[0] & /*isOpen*/ 1) collapse_changes.isOpen = /*isOpen*/ ctx[0];
 
-    			if (dirty[0] & /*searchSpc*/ 16 | dirty[1] & /*$$scope*/ 512) {
+    			if (dirty[0] & /*searchSpc*/ 16 | dirty[1] & /*$$scope*/ 1024) {
     				collapse_changes.$$scope = { dirty, ctx };
     			}
 
@@ -7638,7 +7640,7 @@ var app = (function () {
 
     			const button1_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 512) {
+    			if (dirty[1] & /*$$scope*/ 1024) {
     				button1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -7688,6 +7690,7 @@ var app = (function () {
 
     function instance$b($$self, $$props, $$invalidate) {
     	let isOpen = false;
+    	let busquedas = "/api/v2/spc-stats?";
 
     	//ALERTAS
     	let visible = false;
@@ -7710,15 +7713,15 @@ var app = (function () {
     	};
 
     	let searchSpc = {
-    		country: "",
-    		both_sex: "",
-    		male_rank: "",
-    		male_number: "",
-    		female_rank: "",
-    		female_number: "",
-    		ratio: "",
-    		year: "",
-    		continent: ""
+    		country: null,
+    		both_sex: null,
+    		male_rank: null,
+    		male_number: null,
+    		female_rank: null,
+    		female_number: null,
+    		ratio: null,
+    		year: null,
+    		continent: null
     	};
 
     	let errorMSG = "";
@@ -7837,19 +7840,72 @@ var app = (function () {
     		});
     	}
 
-    	//GET
+    	//SEARCH
     	async function searchSPC() {
-    		console.log("Fetching spc...");
-    		const res = await fetch("/api/v2/spc-stats?country=" + searchSpc.country + "&both_sex=" + searchSpc.both_sex + "&male_rank=" + searchSpc.male_rank + "&male_number=" + searchSpc.male_number + "&female_rank=" + searchSpc.female_rank + "&female_number=" + searchSpc.female_number + "&ratio=" + searchSpc.ratio + "&year=" + searchSpc.year + "&continent=" + searchSpc.continent);
+    		console.log("Searching spc...");
+
+    		if (searchSpc.country != null) {
+    			busquedas += "country=" + searchSpc.country + "&";
+    		}
+
+    		if (searchSpc.both_sex != null) {
+    			busquedas += "both_sex=" + searchSpc.both_sex + "&";
+    		}
+
+    		if (searchSpc.male_rank != null) {
+    			busquedas += "male_rank=" + searchSpc.male_rank + "&";
+    		}
+
+    		if (searchSpc.male_number != null) {
+    			busquedas += "male_number=" + searchSpc.male_number + "&";
+    		}
+
+    		if (searchSpc.female_rank != null) {
+    			busquedas += "female_rank=" + searchSpc.female_rank + "&";
+    		}
+
+    		if (searchSpc.female_number != null) {
+    			busquedas += "female_number=" + searchSpc.female_number + "&";
+    		}
+
+    		if (searchSpc.ratio != null) {
+    			busquedas += "ratio=" + searchSpc.ratio + "&";
+    		}
+
+    		if (searchSpc.year != null) {
+    			busquedas += "year=" + searchSpc.year + "&";
+    		}
+
+    		if (searchSpc.continent != null) {
+    			busquedas += "continent=" + searchSpc.continent + "&";
+    		}
+
+    		const res = await fetch(busquedas);
+    		busquedas = "/api/v2/spc-stats?";
+
+    		$$invalidate(4, searchSpc = {
+    			country: null,
+    			both_sex: null,
+    			male_rank: null,
+    			male_number: null,
+    			female_rank: null,
+    			female_number: null,
+    			ratio: null,
+    			year: null,
+    			continent: null
+    		});
 
     		if (res.ok) {
+    			$$invalidate(1, visible = false);
     			console.log("Ok:");
     			const json = await res.json();
     			$$invalidate(6, spc = json);
     			console.log("Received " + spc.length + " spc.");
     		} else {
-    			$$invalidate(5, errorMSG = res.status + ": " + res.statusText);
-    			console.log("ERROR!");
+    			$$invalidate(1, visible = true);
+    			$$invalidate(2, color = "danger");
+    			$$invalidate(5, errorMSG = "No se ha encontrado ningún objeto");
+    			console.log("Data not found!");
     		}
     	}
 
@@ -8009,6 +8065,7 @@ var app = (function () {
     		CardBody,
     		Card,
     		isOpen,
+    		busquedas,
     		visible,
     		color,
     		page,
@@ -8029,6 +8086,7 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ("isOpen" in $$props) $$invalidate(0, isOpen = $$props.isOpen);
+    		if ("busquedas" in $$props) busquedas = $$props.busquedas;
     		if ("visible" in $$props) $$invalidate(1, visible = $$props.visible);
     		if ("color" in $$props) $$invalidate(2, color = $$props.color);
     		if ("page" in $$props) page = $$props.page;
@@ -8058,6 +8116,7 @@ var app = (function () {
     		searchSPC,
     		getNextPage,
     		getPreviewPage,
+    		busquedas,
     		page,
     		totaldata,
     		getSPC,
@@ -8144,6 +8203,7 @@ var app = (function () {
     	const table = new Table({
     			props: {
     				bordered: true,
+    				responsive: true,
     				$$slots: { default: [create_default_slot_1$4] },
     				$$scope: { ctx }
     			},
@@ -8312,7 +8372,7 @@ var app = (function () {
     	return block;
     }
 
-    // (115:8) <Table bordered>
+    // (115:8) <Table bordered responsive>
     function create_default_slot_1$4(ctx) {
     	let thead;
     	let tr0;
@@ -8446,37 +8506,37 @@ var app = (function () {
     			t30 = space();
     			td9 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$b, 117, 20, 3769);
-    			add_location(th1, file$b, 118, 20, 3807);
-    			add_location(th2, file$b, 119, 20, 3846);
-    			add_location(th3, file$b, 120, 20, 3886);
-    			add_location(th4, file$b, 121, 20, 3928);
-    			add_location(th5, file$b, 122, 20, 3970);
-    			add_location(th6, file$b, 123, 20, 4014);
-    			add_location(th7, file$b, 124, 20, 4050);
-    			add_location(th8, file$b, 125, 20, 4085);
-    			add_location(th9, file$b, 126, 20, 4125);
-    			add_location(tr0, file$b, 116, 16, 3743);
-    			add_location(thead, file$b, 115, 12, 3718);
-    			add_location(td0, file$b, 131, 20, 4251);
-    			add_location(input0, file$b, 132, 24, 4302);
-    			add_location(td1, file$b, 132, 20, 4298);
-    			add_location(input1, file$b, 133, 24, 4370);
-    			add_location(td2, file$b, 133, 20, 4366);
-    			add_location(input2, file$b, 134, 24, 4439);
-    			add_location(td3, file$b, 134, 20, 4435);
-    			add_location(input3, file$b, 135, 24, 4510);
-    			add_location(td4, file$b, 135, 20, 4506);
-    			add_location(input4, file$b, 136, 24, 4581);
-    			add_location(td5, file$b, 136, 20, 4577);
-    			add_location(input5, file$b, 137, 24, 4654);
-    			add_location(td6, file$b, 137, 20, 4650);
-    			add_location(td7, file$b, 138, 20, 4716);
-    			add_location(input6, file$b, 139, 24, 4764);
-    			add_location(td8, file$b, 139, 20, 4760);
-    			add_location(td9, file$b, 140, 20, 4830);
-    			add_location(tr1, file$b, 130, 16, 4225);
-    			add_location(tbody, file$b, 129, 12, 4200);
+    			add_location(th0, file$b, 117, 20, 3780);
+    			add_location(th1, file$b, 118, 20, 3818);
+    			add_location(th2, file$b, 119, 20, 3857);
+    			add_location(th3, file$b, 120, 20, 3897);
+    			add_location(th4, file$b, 121, 20, 3939);
+    			add_location(th5, file$b, 122, 20, 3981);
+    			add_location(th6, file$b, 123, 20, 4025);
+    			add_location(th7, file$b, 124, 20, 4061);
+    			add_location(th8, file$b, 125, 20, 4096);
+    			add_location(th9, file$b, 126, 20, 4136);
+    			add_location(tr0, file$b, 116, 16, 3754);
+    			add_location(thead, file$b, 115, 12, 3729);
+    			add_location(td0, file$b, 131, 20, 4262);
+    			add_location(input0, file$b, 132, 24, 4313);
+    			add_location(td1, file$b, 132, 20, 4309);
+    			add_location(input1, file$b, 133, 24, 4381);
+    			add_location(td2, file$b, 133, 20, 4377);
+    			add_location(input2, file$b, 134, 24, 4450);
+    			add_location(td3, file$b, 134, 20, 4446);
+    			add_location(input3, file$b, 135, 24, 4521);
+    			add_location(td4, file$b, 135, 20, 4517);
+    			add_location(input4, file$b, 136, 24, 4592);
+    			add_location(td5, file$b, 136, 20, 4588);
+    			add_location(input5, file$b, 137, 24, 4665);
+    			add_location(td6, file$b, 137, 20, 4661);
+    			add_location(td7, file$b, 138, 20, 4727);
+    			add_location(input6, file$b, 139, 24, 4775);
+    			add_location(td8, file$b, 139, 20, 4771);
+    			add_location(td9, file$b, 140, 20, 4841);
+    			add_location(tr1, file$b, 130, 16, 4236);
+    			add_location(tbody, file$b, 129, 12, 4211);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -8615,7 +8675,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$4.name,
     		type: "slot",
-    		source: "(115:8) <Table bordered>",
+    		source: "(115:8) <Table bordered responsive>",
     		ctx
     	});
 
