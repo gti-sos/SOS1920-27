@@ -79,8 +79,8 @@ module.exports = function (app) {
 		console.log("New GET .../loadInitialData");
 		
 		db.insert(ejemplos_spc_v1);
-		res.send(JSON.stringify(ejemplos_spc,null,2));
-        console.log("Initial spc loaded:"+JSON.stringify(ejemplos_spc,null,2));
+		res.send(JSON.stringify(ejemplos_spc_v1,null,2));
+        console.log("Initial spc loaded:"+JSON.stringify(ejemplos_spc_v1,null,2));
 		});
 
 	//GET /spc_stats con paginacion
