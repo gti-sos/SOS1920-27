@@ -9087,7 +9087,7 @@ var app = (function () {
     				color: /*color*/ ctx[1],
     				isOpen: /*visible*/ ctx[0],
     				toggle: /*func*/ ctx[18],
-    				$$slots: { default: [create_default_slot_11] },
+    				$$slots: { default: [create_default_slot_11$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -9131,15 +9131,9 @@ var app = (function () {
     			$$inline: true
     		});
 
-<<<<<<< HEAD
-    	button1.$on("click", /*deletePovertyAll*/ ctx[10]);
-    	let if_block0 = /*page*/ ctx[4] != 1 && create_if_block_1$2(ctx);
-    	let if_block1 = /*page*/ ctx[4] + 10 <= /*totalObj*/ ctx[3] && create_if_block$8(ctx);
-=======
     	button1.$on("click", /*deletePovertyAll*/ ctx[15]);
-    	let if_block0 = /*page*/ ctx[7] != 1 && create_if_block_1$2(ctx);
-    	let if_block1 = /*page*/ ctx[7] + 10 <= /*totalObj*/ ctx[6] && /*busqueda*/ ctx[4] == false && create_if_block$7(ctx);
->>>>>>> ee5210654792f68d5ca1a3ddf10201ac78373e6a
+    	let if_block0 = /*page*/ ctx[7] != 1 && /*busqueda*/ ctx[4] == false && create_if_block_1$2(ctx);
+    	let if_block1 = /*page*/ ctx[7] + 10 <= /*totalObj*/ ctx[6] && /*busqueda*/ ctx[4] == false && create_if_block$8(ctx);
 
     	const block = {
     		c: function create() {
@@ -9215,7 +9209,7 @@ var app = (function () {
 
     			button1.$set(button1_changes);
 
-    			if (/*page*/ ctx[7] != 1) {
+    			if (/*page*/ ctx[7] != 1 && /*busqueda*/ ctx[4] == false) {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
     					transition_in(if_block0, 1);
@@ -9340,7 +9334,7 @@ var app = (function () {
     }
 
     // (251:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
-    function create_default_slot_11(ctx) {
+    function create_default_slot_11$1(ctx) {
     	let if_block_anchor;
     	let if_block = /*errorMSG*/ ctx[8] && create_if_block_4(ctx);
 
@@ -9375,7 +9369,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_11.name,
+    		id: create_default_slot_11$1.name,
     		type: "slot",
     		source: "(251:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>",
     		ctx
@@ -9385,7 +9379,7 @@ var app = (function () {
     }
 
     // (265:20) <Button outline color="info" on:click="{searchPoverty(countryValue, yearValue)}" style="margin-left: 2%;">
-    function create_default_slot_10(ctx) {
+    function create_default_slot_10$1(ctx) {
     	let t;
 
     	const block = {
@@ -9402,7 +9396,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_10.name,
+    		id: create_default_slot_10$1.name,
     		type: "slot",
     		source: "(265:20) <Button outline color=\\\"info\\\" on:click=\\\"{searchPoverty(countryValue, yearValue)}\\\" style=\\\"margin-left: 2%;\\\">",
     		ctx
@@ -9420,7 +9414,7 @@ var app = (function () {
     				outline: true,
     				color: "info",
     				style: "margin-left: 2%;",
-    				$$slots: { default: [create_default_slot_9] },
+    				$$slots: { default: [create_default_slot_9$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -9471,7 +9465,7 @@ var app = (function () {
     }
 
     // (269:20) <Button outline color="info" on:click="{getPoverty}" style="margin-left: 2%;">
-    function create_default_slot_9(ctx) {
+    function create_default_slot_9$1(ctx) {
     	let t;
 
     	const block = {
@@ -9488,7 +9482,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_9.name,
+    		id: create_default_slot_9$1.name,
     		type: "slot",
     		source: "(269:20) <Button outline color=\\\"info\\\" on:click=\\\"{getPoverty}\\\" style=\\\"margin-left: 2%;\\\">",
     		ctx
@@ -9518,7 +9512,7 @@ var app = (function () {
     				outline: true,
     				color: "info",
     				style: "margin-left: 2%;",
-    				$$slots: { default: [create_default_slot_10] },
+    				$$slots: { default: [create_default_slot_10$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -9546,14 +9540,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t5 = space();
     			if (if_block) if_block.c();
-    			add_location(th, file$9, 257, 16, 8413);
-    			add_location(thead, file$9, 256, 12, 8388);
+    			add_location(th, file$c, 257, 16, 8413);
+    			add_location(thead, file$c, 256, 12, 8388);
     			attr_dev(input0, "type", "text");
-    			add_location(input0, file$9, 262, 29, 8549);
+    			add_location(input0, file$c, 262, 29, 8549);
     			attr_dev(input1, "type", "text");
-    			add_location(input1, file$9, 262, 83, 8603);
-    			add_location(tr, file$9, 260, 16, 8492);
-    			add_location(tbody, file$9, 259, 12, 8467);
+    			add_location(input1, file$c, 262, 83, 8603);
+    			add_location(tr, file$c, 260, 16, 8492);
+    			add_location(tbody, file$c, 259, 12, 8467);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -9710,20 +9704,20 @@ var app = (function () {
     			t5 = space();
     			td6 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(input0, file$9, 290, 24, 9632);
-    			add_location(td0, file$9, 290, 20, 9628);
-    			add_location(input1, file$9, 291, 24, 9704);
-    			add_location(td1, file$9, 291, 20, 9700);
-    			add_location(input2, file$9, 292, 24, 9778);
-    			add_location(td2, file$9, 292, 20, 9774);
-    			add_location(input3, file$9, 293, 24, 9852);
-    			add_location(td3, file$9, 293, 20, 9848);
-    			add_location(input4, file$9, 294, 24, 9926);
-    			add_location(td4, file$9, 294, 20, 9922);
-    			add_location(input5, file$9, 295, 24, 9995);
-    			add_location(td5, file$9, 295, 20, 9991);
-    			add_location(td6, file$9, 296, 20, 10065);
-    			add_location(tr, file$9, 289, 16, 9602);
+    			add_location(input0, file$c, 290, 24, 9632);
+    			add_location(td0, file$c, 290, 20, 9628);
+    			add_location(input1, file$c, 291, 24, 9704);
+    			add_location(td1, file$c, 291, 20, 9700);
+    			add_location(input2, file$c, 292, 24, 9778);
+    			add_location(td2, file$c, 292, 20, 9774);
+    			add_location(input3, file$c, 293, 24, 9852);
+    			add_location(td3, file$c, 293, 20, 9848);
+    			add_location(input4, file$c, 294, 24, 9926);
+    			add_location(td4, file$c, 294, 20, 9922);
+    			add_location(input5, file$c, 295, 24, 9995);
+    			add_location(td5, file$c, 295, 20, 9991);
+    			add_location(td6, file$c, 296, 20, 10065);
+    			add_location(tr, file$c, 289, 16, 9602);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, tr, anchor);
@@ -9951,53 +9945,16 @@ var app = (function () {
     			td6 = element("td");
     			create_component(button.$$.fragment);
     			t12 = space();
-<<<<<<< HEAD
-    			attr_dev(a, "href", a_href_value = "#/poverty-stats/" + /*poverty*/ ctx[6].country + "/" + /*poverty*/ ctx[6].year);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    			add_location(a, file$9, 244, 28, 8195);
-    			add_location(td0, file$9, 244, 24, 8191);
-    			add_location(td1, file$9, 245, 24, 8306);
-    			add_location(td2, file$9, 246, 24, 8360);
-    			add_location(td3, file$9, 247, 24, 8414);
-    			add_location(td4, file$9, 248, 24, 8468);
-    			add_location(td5, file$9, 249, 24, 8517);
-    			add_location(td6, file$9, 250, 24, 8571);
-    			add_location(tr, file$9, 243, 20, 8161);
-=======
-    			add_location(a, file$c, 198, 28, 6209);
-    			add_location(td0, file$c, 198, 24, 6205);
-    			add_location(td1, file$c, 199, 24, 6320);
-    			add_location(td2, file$c, 200, 24, 6374);
-    			add_location(td3, file$c, 201, 24, 6428);
-    			add_location(td4, file$c, 202, 24, 6482);
-    			add_location(td5, file$c, 203, 24, 6531);
-    			add_location(td6, file$c, 204, 24, 6585);
-    			add_location(tr, file$c, 197, 20, 6175);
->>>>>>> b34071a812c0309d4df9e0c3dd88a14133147077
-=======
     			attr_dev(a, "href", a_href_value = "#/poverty-stats/" + /*poverty*/ ctx[9].country + "/" + /*poverty*/ ctx[9].year);
-    			add_location(a, file$9, 301, 28, 10295);
-    			add_location(td0, file$9, 301, 24, 10291);
-    			add_location(td1, file$9, 302, 24, 10406);
-    			add_location(td2, file$9, 303, 24, 10460);
-    			add_location(td3, file$9, 304, 24, 10514);
-    			add_location(td4, file$9, 305, 24, 10568);
-    			add_location(td5, file$9, 306, 24, 10617);
-    			add_location(td6, file$9, 307, 24, 10671);
-    			add_location(tr, file$9, 300, 20, 10261);
->>>>>>> ee5210654792f68d5ca1a3ddf10201ac78373e6a
-=======
-    			add_location(a, file$c, 244, 28, 8195);
-    			add_location(td0, file$c, 244, 24, 8191);
-    			add_location(td1, file$c, 245, 24, 8306);
-    			add_location(td2, file$c, 246, 24, 8360);
-    			add_location(td3, file$c, 247, 24, 8414);
-    			add_location(td4, file$c, 248, 24, 8468);
-    			add_location(td5, file$c, 249, 24, 8517);
-    			add_location(td6, file$c, 250, 24, 8571);
-    			add_location(tr, file$c, 243, 20, 8161);
->>>>>>> ad8d815673536ed99f4224e5ccd1516f5c4a2d09
+    			add_location(a, file$c, 301, 28, 10295);
+    			add_location(td0, file$c, 301, 24, 10291);
+    			add_location(td1, file$c, 302, 24, 10406);
+    			add_location(td2, file$c, 303, 24, 10460);
+    			add_location(td3, file$c, 304, 24, 10514);
+    			add_location(td4, file$c, 305, 24, 10568);
+    			add_location(td5, file$c, 306, 24, 10617);
+    			add_location(td6, file$c, 307, 24, 10671);
+    			add_location(tr, file$c, 300, 20, 10261);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -10134,93 +10091,15 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    			add_location(th0, file$9, 223, 20, 7227);
-    			add_location(th1, file$9, 224, 20, 7265);
-    			add_location(th2, file$9, 225, 20, 7305);
-    			add_location(th3, file$9, 226, 20, 7345);
-    			add_location(th4, file$9, 227, 20, 7385);
-    			add_location(th5, file$9, 228, 20, 7420);
-    			add_location(tr0, file$9, 222, 16, 7201);
-    			add_location(thead, file$9, 221, 12, 7176);
-    			add_location(input0, file$9, 233, 24, 7552);
-    			add_location(td0, file$9, 233, 20, 7548);
-    			add_location(input1, file$9, 234, 24, 7624);
-    			add_location(td1, file$9, 234, 20, 7620);
-    			add_location(input2, file$9, 235, 24, 7698);
-    			add_location(td2, file$9, 235, 20, 7694);
-    			add_location(input3, file$9, 236, 24, 7772);
-    			add_location(td3, file$9, 236, 20, 7768);
-    			add_location(input4, file$9, 237, 24, 7846);
-    			add_location(td4, file$9, 237, 20, 7842);
-    			add_location(input5, file$9, 238, 24, 7915);
-    			add_location(td5, file$9, 238, 20, 7911);
-    			add_location(td6, file$9, 239, 20, 7985);
-    			add_location(tr1, file$9, 232, 16, 7522);
-    			add_location(tbody, file$9, 231, 12, 7497);
-=======
-    			add_location(th0, file$c, 177, 20, 5241);
-    			add_location(th1, file$c, 178, 20, 5279);
-    			add_location(th2, file$c, 179, 20, 5319);
-    			add_location(th3, file$c, 180, 20, 5359);
-    			add_location(th4, file$c, 181, 20, 5399);
-    			add_location(th5, file$c, 182, 20, 5434);
-    			add_location(tr0, file$c, 176, 16, 5215);
-    			add_location(thead, file$c, 175, 12, 5190);
-    			add_location(input0, file$c, 187, 24, 5566);
-    			add_location(td0, file$c, 187, 20, 5562);
-    			add_location(input1, file$c, 188, 24, 5638);
-    			add_location(td1, file$c, 188, 20, 5634);
-    			add_location(input2, file$c, 189, 24, 5712);
-    			add_location(td2, file$c, 189, 20, 5708);
-    			add_location(input3, file$c, 190, 24, 5786);
-    			add_location(td3, file$c, 190, 20, 5782);
-    			add_location(input4, file$c, 191, 24, 5860);
-    			add_location(td4, file$c, 191, 20, 5856);
-    			add_location(input5, file$c, 192, 24, 5929);
-    			add_location(td5, file$c, 192, 20, 5925);
-    			add_location(td6, file$c, 193, 20, 5999);
-    			add_location(tr1, file$c, 186, 16, 5536);
-    			add_location(tbody, file$c, 185, 12, 5511);
->>>>>>> b34071a812c0309d4df9e0c3dd88a14133147077
-=======
-    			add_location(th0, file$9, 279, 20, 9268);
-    			add_location(th1, file$9, 280, 20, 9306);
-    			add_location(th2, file$9, 281, 20, 9346);
-    			add_location(th3, file$9, 282, 20, 9386);
-    			add_location(th4, file$9, 283, 20, 9426);
-    			add_location(th5, file$9, 284, 20, 9461);
-    			add_location(tr, file$9, 278, 16, 9242);
-    			add_location(thead, file$9, 277, 12, 9217);
-    			add_location(tbody, file$9, 287, 12, 9538);
->>>>>>> ee5210654792f68d5ca1a3ddf10201ac78373e6a
-=======
-    			add_location(th0, file$c, 223, 20, 7227);
-    			add_location(th1, file$c, 224, 20, 7265);
-    			add_location(th2, file$c, 225, 20, 7305);
-    			add_location(th3, file$c, 226, 20, 7345);
-    			add_location(th4, file$c, 227, 20, 7385);
-    			add_location(th5, file$c, 228, 20, 7420);
-    			add_location(tr0, file$c, 222, 16, 7201);
-    			add_location(thead, file$c, 221, 12, 7176);
-    			add_location(input0, file$c, 233, 24, 7552);
-    			add_location(td0, file$c, 233, 20, 7548);
-    			add_location(input1, file$c, 234, 24, 7624);
-    			add_location(td1, file$c, 234, 20, 7620);
-    			add_location(input2, file$c, 235, 24, 7698);
-    			add_location(td2, file$c, 235, 20, 7694);
-    			add_location(input3, file$c, 236, 24, 7772);
-    			add_location(td3, file$c, 236, 20, 7768);
-    			add_location(input4, file$c, 237, 24, 7846);
-    			add_location(td4, file$c, 237, 20, 7842);
-    			add_location(input5, file$c, 238, 24, 7915);
-    			add_location(td5, file$c, 238, 20, 7911);
-    			add_location(td6, file$c, 239, 20, 7985);
-    			add_location(tr1, file$c, 232, 16, 7522);
-    			add_location(tbody, file$c, 231, 12, 7497);
->>>>>>> ad8d815673536ed99f4224e5ccd1516f5c4a2d09
+    			add_location(th0, file$c, 279, 20, 9268);
+    			add_location(th1, file$c, 280, 20, 9306);
+    			add_location(th2, file$c, 281, 20, 9346);
+    			add_location(th3, file$c, 282, 20, 9386);
+    			add_location(th4, file$c, 283, 20, 9426);
+    			add_location(th5, file$c, 284, 20, 9461);
+    			add_location(tr, file$c, 278, 16, 9242);
+    			add_location(thead, file$c, 277, 12, 9217);
+    			add_location(tbody, file$c, 287, 12, 9538);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -10390,7 +10269,7 @@ var app = (function () {
     	return block;
     }
 
-    // (320:8) {#if page!=1}
+    // (320:8) {#if page!=1 && busqueda==false}
     function create_if_block_1$2(ctx) {
     	let current;
 
@@ -10441,7 +10320,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(320:8) {#if page!=1}",
+    		source: "(320:8) {#if page!=1 && busqueda==false}",
     		ctx
     	});
 
@@ -10475,19 +10354,7 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // (268:9) {#if (page+10) <= totalObj}
-=======
     // (325:9) {#if (page+10) <= totalObj && busqueda==false}
->>>>>>> ee5210654792f68d5ca1a3ddf10201ac78373e6a
-    function create_if_block$7(ctx) {
-=======
-    // (222:9) {#if (page+10) <= totalObj}
-=======
-    // (268:9) {#if (page+10) <= totalObj}
->>>>>>> ad8d815673536ed99f4224e5ccd1516f5c4a2d09
     function create_if_block$8(ctx) {
     	let current;
 
@@ -10682,35 +10549,11 @@ var app = (function () {
     			br2 = element("br");
     			t4 = space();
     			br3 = element("br");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    			add_location(br0, file$9, 273, 4, 9346);
-    			add_location(br1, file$9, 274, 4, 9356);
-    			add_location(br2, file$9, 276, 4, 9436);
-    			add_location(br3, file$9, 277, 4, 9446);
-    			add_location(main, file$9, 208, 0, 6888);
-=======
-    			add_location(br0, file$c, 227, 4, 7360);
-    			add_location(br1, file$c, 228, 4, 7370);
-    			add_location(br2, file$c, 230, 4, 7450);
-    			add_location(br3, file$c, 231, 4, 7460);
-    			add_location(main, file$c, 162, 0, 4902);
->>>>>>> b34071a812c0309d4df9e0c3dd88a14133147077
-=======
-    			add_location(br0, file$9, 330, 4, 11465);
-    			add_location(br1, file$9, 331, 4, 11475);
-    			add_location(br2, file$9, 333, 4, 11555);
-    			add_location(br3, file$9, 334, 4, 11565);
-    			add_location(main, file$9, 244, 0, 8102);
->>>>>>> ee5210654792f68d5ca1a3ddf10201ac78373e6a
-=======
-    			add_location(br0, file$c, 273, 4, 9346);
-    			add_location(br1, file$c, 274, 4, 9356);
-    			add_location(br2, file$c, 276, 4, 9436);
-    			add_location(br3, file$c, 277, 4, 9446);
-    			add_location(main, file$c, 208, 0, 6888);
->>>>>>> ad8d815673536ed99f4224e5ccd1516f5c4a2d09
+    			add_location(br0, file$c, 330, 4, 11484);
+    			add_location(br1, file$c, 331, 4, 11494);
+    			add_location(br2, file$c, 333, 4, 11574);
+    			add_location(br3, file$c, 334, 4, 11584);
+    			add_location(main, file$c, 244, 0, 8102);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11465,100 +11308,29 @@ var app = (function () {
     			t17 = space();
     			td = element("td");
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    			add_location(th0, file$a, 107, 20, 3447);
-    			add_location(th1, file$a, 108, 20, 3486);
-    			add_location(th2, file$a, 109, 20, 3526);
-    			add_location(th3, file$a, 110, 20, 3566);
-    			add_location(th4, file$a, 111, 20, 3606);
-    			add_location(th5, file$a, 112, 20, 3642);
-    			add_location(tr0, file$a, 106, 16, 3421);
-    			add_location(thead, file$a, 105, 12, 3396);
-    			add_location(input0, file$a, 117, 24, 3774);
-    			add_location(th6, file$a, 117, 20, 3770);
-    			add_location(input1, file$a, 118, 24, 3842);
-    			add_location(th7, file$a, 118, 20, 3838);
-    			add_location(input2, file$a, 119, 24, 3911);
-    			add_location(th8, file$a, 119, 20, 3907);
-    			add_location(input3, file$a, 120, 24, 3980);
-    			add_location(th9, file$a, 120, 20, 3976);
-    			add_location(input4, file$a, 121, 24, 4049);
-    			add_location(th10, file$a, 121, 20, 4045);
-    			add_location(input5, file$a, 122, 24, 4114);
-    			add_location(th11, file$a, 122, 20, 4110);
-    			add_location(td, file$a, 123, 20, 4180);
-    			add_location(tr1, file$a, 116, 16, 3744);
-    			add_location(tbody, file$a, 115, 12, 3719);
-=======
-=======
->>>>>>> ad8d815673536ed99f4224e5ccd1516f5c4a2d09
-    			add_location(th0, file$d, 107, 20, 3447);
-    			add_location(th1, file$d, 108, 20, 3486);
-    			add_location(th2, file$d, 109, 20, 3526);
-    			add_location(th3, file$d, 110, 20, 3566);
-    			add_location(th4, file$d, 111, 20, 3606);
-    			add_location(th5, file$d, 112, 20, 3642);
-    			add_location(tr0, file$d, 106, 16, 3421);
-    			add_location(thead, file$d, 105, 12, 3396);
-<<<<<<< HEAD
-    			add_location(th6, file$d, 117, 20, 3768);
-    			add_location(input0, file$d, 118, 24, 3819);
-    			add_location(th7, file$d, 118, 20, 3815);
-    			add_location(input1, file$d, 119, 24, 3888);
-    			add_location(th8, file$d, 119, 20, 3884);
-    			add_location(input2, file$d, 120, 24, 3957);
-    			add_location(th9, file$d, 120, 20, 3953);
-    			add_location(th10, file$d, 121, 20, 4022);
-    			add_location(input3, file$d, 122, 24, 4070);
-    			add_location(th11, file$d, 122, 20, 4066);
-    			add_location(td, file$d, 123, 20, 4136);
-    			add_location(tr1, file$d, 116, 16, 3742);
-    			add_location(tbody, file$d, 115, 12, 3717);
->>>>>>> b34071a812c0309d4df9e0c3dd88a14133147077
-=======
-    			add_location(th0, file$a, 107, 20, 3455);
-    			add_location(th1, file$a, 108, 20, 3494);
-    			add_location(th2, file$a, 109, 20, 3534);
-    			add_location(th3, file$a, 110, 20, 3574);
-    			add_location(th4, file$a, 111, 20, 3614);
-    			add_location(th5, file$a, 112, 20, 3650);
-    			add_location(tr0, file$a, 106, 16, 3429);
-    			add_location(thead, file$a, 105, 12, 3404);
-    			add_location(input0, file$a, 117, 24, 3782);
-    			add_location(th6, file$a, 117, 20, 3778);
-    			add_location(input1, file$a, 118, 24, 3850);
-    			add_location(th7, file$a, 118, 20, 3846);
-    			add_location(input2, file$a, 119, 24, 3919);
-    			add_location(th8, file$a, 119, 20, 3915);
-    			add_location(input3, file$a, 120, 24, 3988);
-    			add_location(th9, file$a, 120, 20, 3984);
-    			add_location(input4, file$a, 121, 24, 4057);
-    			add_location(th10, file$a, 121, 20, 4053);
-    			add_location(input5, file$a, 122, 24, 4122);
-    			add_location(th11, file$a, 122, 20, 4118);
-    			add_location(td, file$a, 123, 20, 4188);
-    			add_location(tr1, file$a, 116, 16, 3752);
-    			add_location(tbody, file$a, 115, 12, 3727);
->>>>>>> ee5210654792f68d5ca1a3ddf10201ac78373e6a
-=======
-    			add_location(input0, file$d, 117, 24, 3774);
-    			add_location(th6, file$d, 117, 20, 3770);
-    			add_location(input1, file$d, 118, 24, 3842);
-    			add_location(th7, file$d, 118, 20, 3838);
-    			add_location(input2, file$d, 119, 24, 3911);
-    			add_location(th8, file$d, 119, 20, 3907);
-    			add_location(input3, file$d, 120, 24, 3980);
-    			add_location(th9, file$d, 120, 20, 3976);
-    			add_location(input4, file$d, 121, 24, 4049);
-    			add_location(th10, file$d, 121, 20, 4045);
-    			add_location(input5, file$d, 122, 24, 4114);
-    			add_location(th11, file$d, 122, 20, 4110);
-    			add_location(td, file$d, 123, 20, 4180);
-    			add_location(tr1, file$d, 116, 16, 3744);
-    			add_location(tbody, file$d, 115, 12, 3719);
->>>>>>> ad8d815673536ed99f4224e5ccd1516f5c4a2d09
+    			add_location(th0, file$d, 107, 20, 3455);
+    			add_location(th1, file$d, 108, 20, 3494);
+    			add_location(th2, file$d, 109, 20, 3534);
+    			add_location(th3, file$d, 110, 20, 3574);
+    			add_location(th4, file$d, 111, 20, 3614);
+    			add_location(th5, file$d, 112, 20, 3650);
+    			add_location(tr0, file$d, 106, 16, 3429);
+    			add_location(thead, file$d, 105, 12, 3404);
+    			add_location(input0, file$d, 117, 24, 3782);
+    			add_location(th6, file$d, 117, 20, 3778);
+    			add_location(input1, file$d, 118, 24, 3850);
+    			add_location(th7, file$d, 118, 20, 3846);
+    			add_location(input2, file$d, 119, 24, 3919);
+    			add_location(th8, file$d, 119, 20, 3915);
+    			add_location(input3, file$d, 120, 24, 3988);
+    			add_location(th9, file$d, 120, 20, 3984);
+    			add_location(input4, file$d, 121, 24, 4057);
+    			add_location(th10, file$d, 121, 20, 4053);
+    			add_location(input5, file$d, 122, 24, 4122);
+    			add_location(th11, file$d, 122, 20, 4118);
+    			add_location(td, file$d, 123, 20, 4188);
+    			add_location(tr1, file$d, 116, 16, 3752);
+    			add_location(tbody, file$d, 115, 12, 3727);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
