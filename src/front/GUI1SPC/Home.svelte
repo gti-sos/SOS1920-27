@@ -9,6 +9,9 @@
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
     import { Alert } from "sveltestrap";
+    //Para busquedas
+    import { Collapse, CardBody, Card } from "sveltestrap";
+    let isOpen = false;
 
     //ALERTAS
     let visible = false;
@@ -18,6 +21,18 @@
     let totaldata=12;
     let spc = [];
     let newSpc = {
+        country: "",
+        both_sex: "",
+        male_rank: "",
+        male_number: "",
+        female_rank: "",
+        female_number: "",
+        ratio: "",
+        year: "",
+        continent: ""
+    };
+
+    let searchSpc = {
         country: "",
         both_sex: "",
         male_rank: "",
@@ -150,6 +165,25 @@
         });
     }
 
+    //GET
+    async function searchSPC() {
+ 
+        console.log("Fetching spc...");
+        const res = await fetch("/api/v2/spc-stats?country="+searchSpc.country + "&both_sex="+searchSpc.both_sex + "&male_rank="+searchSpc.male_rank + "&male_number="
+                                        +searchSpc.male_number + "&female_rank="+searchSpc.female_rank + "&female_number="+searchSpc.female_number + "&ratio="
+                                        +searchSpc.ratio + "&year="+searchSpc.year + "&continent="+searchSpc.continent);
+
+        if (res.ok) {
+            console.log("Ok:");
+            const json = await res.json();
+            spc = json;
+            console.log("Received " + spc.length + " spc.");
+        } else {
+            errorMSG= res.status + ": " + res.statusText;
+            console.log("ERROR!");
+        }
+    }
+
     //getNextPage
     async function getNextPage() {
  
@@ -196,6 +230,29 @@
  
 <main>
     <h1>SPC Manager</h1>
+
+    <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
+        Buscar spc
+      </Button>
+      <Collapse {isOpen}>
+        <Table bordered>
+            <tbody>
+                <tr>
+                    <td><input placeholder="País" bind:value="{searchSpc.country}"></td>
+                    <td><input placeholder="Ambos sexos" bind:value="{searchSpc.both_sex}"></td>
+                    <td><input placeholder="Rango hombres" bind:value="{searchSpc.male_rank}"></td>
+                    <td><input placeholder="Número hombres (en miles)" bind:value="{searchSpc.male_number}"></td>
+                    <td><input placeholder="Rango mujeres" bind:value="{searchSpc.female_rank}"></td>
+                    <td><input placeholder="Número mujeres (en miles)" bind:value="{searchSpc.female_number}"></td>
+                    <td><input placeholder="Ratio" bind:value="{searchSpc.ratio}"></td>
+                    <td><input placeholder="Año" bind:value="{searchSpc.year}"></td>
+                    <td><input placeholder="Continente" bind:value="{searchSpc.continent}"></td>
+                    <td> <Button outline  color="primary" on:click={searchSPC}>Buscar</Button> </td>
+                </tr>
+            </tbody>
+        </Table>
+      </Collapse>
+
     {#await spc}
         Loading spc...
     {:then spc}
@@ -249,7 +306,7 @@
                 {/each}
             </tbody>
         </Table>
-        <Button color="success" on:click="{getSPCLoadInitialData}">
+          <Button color="success" on:click="{getSPCLoadInitialData}">
             Reiniciar ejemplos iniciales
         </Button>
         <Button color="danger" on:click="{deleteSPCALL}">
@@ -261,6 +318,7 @@
         <Button outline color="primary" on:click="{getNextPage}">
             Siguiente
          </Button>
+         
         
     {/await}
     
