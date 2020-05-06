@@ -1,5 +1,6 @@
 module.exports = function (app) {
-        
+    console.log("Registering spc API....");
+    
     const dataStore = require("nedb")
     const path = require("path");
 
@@ -68,95 +69,10 @@ module.exports = function (app) {
 				ratio: 3.31,
 				year: 2013,
 				continent: "south america"	
-			},
-			{ 
-				country: "ivory coast",
-				both_sex: 23,
-				male_rank: 8,
-				male_number: 32,
-				female_rank: 8,
-				female_number: 13,
-				ratio: 2.46,
-				year: 2013,
-				continent: "africa"	
-			},
-			{ 
-				country: "kazakhstan",
-				both_sex: 22.8,
-				male_rank: 4,
-				male_number: 40.1,
-				female_rank: 28,
-				female_number: 7.7,
-				ratio: 5.21,
-				year: 2013,
-				continent: "asia"	
-			},
-			{ 
-				country: "equatorial guinea",
-				both_sex: 22,
-				male_rank: 9,
-				male_number: 31.3,
-				female_rank: 15,
-				female_number: 10.8,
-				ratio: 2.9,
-				year: 2013,
-				continent: "africa"	
-			},
-			{ 
-				country: "belarus",
-				both_sex: 21.4,
-				male_rank: 5,
-				male_number: 39.3,
-				female_rank: 45,
-				female_number: 6.2,
-				ratio: 6.34,
-				year: 2013,
-				continent: "europe"	
-			},
-			{ 
-				country: "south korea",
-				both_sex: 20.2,
-				male_rank: 11,
-				male_number: 29.6,
-				female_rank: 11,
-				female_number: 11.6,
-				ratio: 2.55,
-				year: 2013,
-				continent: "asia"	
-			},
-			{ 
-				country: "uganda",
-				both_sex: 20,
-				male_rank: 37,
-				male_number: 21.2,
-				female_rank: 2,
-				female_number: 18.7,
-				ratio: 1.13,
-				year: 2013,
-				continent: "africa"	
-			},
-			{ 
-				country: "cameroon",
-				both_sex: 19.5,
-				male_rank: 13,
-				male_number: 26.9,
-				female_rank: 10,
-				female_number: 12.5,
-				ratio: 2.15,
-				year: 2013,
-				continent: "africa"	
 			}
 		];
-/////////////INICIAR CON LOS EJEMPLOS
-/*	db.find({}, (err, spc_stats) => {
-		if (spc_stats.length == 0) {
-			db.insert(ejemplos_spc);
-			console.log("EMPTY DB! Inserted 5 default spc-stats");
-		} else {
-			console.log("Loaded DB with " + spc_stats.length + " spc");
-		}
-	});*/
 
+	
 	//loadInitialData
 	app.get(BASE_API_URL+"/spc-stats/loadInitialData",(req,res) =>{
 		//borrar lo que había
@@ -193,16 +109,9 @@ module.exports = function (app) {
 			var copiadb = spc_stats;
 
 
-			if((limit!=null || offset != null) && countryQuery==null && continenteQuery==null && yearQuery==null && female_rank_Query==null && male_rank_Query==null
+			if(limit!=null && offset != null && countryQuery==null && continenteQuery==null && yearQuery==null && female_rank_Query==null && male_rank_Query==null
 				 && both_sex_Query==null && female_number_Query==null && male_number_Query==null && ratio_Query==null){	//Get /spc_stats Paginacion
-				if (limit!=null && offset != null) {
-					res.send(JSON.stringify(spc_stats.slice(startObject,endObject),null,2));
-				} else if (limit!=null && offset == null){
-					res.send(JSON.stringify(spc_stats.slice(0,parseInt(limit)),null,2));
-				} else if(limit==null && offset != null){
-					res.send(JSON.stringify(spc_stats.slice(startObject,spc_stats.length),null,2));
-				}
-					
+				res.send(JSON.stringify(spc_stats.slice(startObject,endObject),null,2));
 			}
 
 
@@ -315,27 +224,13 @@ module.exports = function (app) {
     app.post(BASE_API_URL+"/spc-stats",(req,res) =>{
     	
     	var newSuicide = req.body;
-    	var repetido=false;
-		db.find({country:newSuicide.country}, (err, spc_stats) =>{
+    	
+		db.find({country:newSuicide.country},{ year: newSuicide.year}, (err, spc_stats) =>{
 			
-			if((newSuicide == "") || (newSuicide.country == null) || (newSuicide.country == "") ||(newSuicide.year == null) || (newSuicide.year == "")){
+			if((newSuicide == "") || (newSuicide.country == null) || (newSuicide.year == null)){
     			res.sendStatus(400,"BAD REQUEST");
     		} else if (spc_stats.length > 0){
-				for (let index = 0; index < spc_stats.length; index++) {
-					if (spc_stats[index].year==newSuicide.year) {
-						repetido=true;
-						break;	
-					} 					
-				}
-				if (repetido==false) {
-					db.insert(newSuicide); 	
-					console.log("Data created:"+JSON.stringify(newSuicide,null,2));
-					var array = Array(newSuicide);
-					res.send(JSON.stringify(array,null,2));
-				} else {
-					
-					res.sendStatus(409,"This data already exits");
-				}
+    		    res.sendStatus(409,"This data already exits");
   		  	} else {
     			db.insert(newSuicide); 	
 				console.log("Data created:"+JSON.stringify(newSuicide,null,2));
@@ -474,6 +369,6 @@ module.exports = function (app) {
 		res.sendStatus(405,"Method Not Allowed");
 	});
 	
-	console.log("SPC v1 OK");
+	console.log("SPC OK");
     
 };

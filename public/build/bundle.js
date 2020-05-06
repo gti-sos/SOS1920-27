@@ -6749,7 +6749,7 @@ var app = (function () {
     	return block;
     }
 
-    // (108:4) {:then spc}
+    // (109:4) {:then spc}
     function create_then_block$3(ctx) {
     	let t;
     	let current;
@@ -6827,33 +6827,29 @@ var app = (function () {
     		block,
     		id: create_then_block$3.name,
     		type: "then",
-    		source: "(108:4) {:then spc}",
+    		source: "(109:4) {:then spc}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (110:8) {#if errorMSG}
+    // (111:8) {#if errorMSG}
     function create_if_block$6(ctx) {
-    	let t0;
-    	let t1;
+    	let t;
 
     	const block = {
     		c: function create() {
-    			t0 = text("STATUS: ");
-    			t1 = text(/*errorMSG*/ ctx[12]);
+    			t = text(/*errorMSG*/ ctx[12]);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, t0, anchor);
-    			insert_dev(target, t1, anchor);
+    			insert_dev(target, t, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*errorMSG*/ 4096) set_data_dev(t1, /*errorMSG*/ ctx[12]);
+    			if (dirty & /*errorMSG*/ 4096) set_data_dev(t, /*errorMSG*/ ctx[12]);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(t);
     		}
     	};
 
@@ -6861,14 +6857,14 @@ var app = (function () {
     		block,
     		id: create_if_block$6.name,
     		type: "if",
-    		source: "(110:8) {#if errorMSG}",
+    		source: "(111:8) {#if errorMSG}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (109:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
+    // (110:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
     function create_default_slot_3$2(ctx) {
     	let if_block_anchor;
     	let if_block = /*errorMSG*/ ctx[12] && create_if_block$6(ctx);
@@ -6906,14 +6902,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$2.name,
     		type: "slot",
-    		source: "(109:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>",
+    		source: "(110:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (140:25) <Button outline  color="primary" on:click={updateSpc}>
+    // (141:25) <Button outline  color="primary" on:click={updateSpc}>
     function create_default_slot_2$4(ctx) {
     	let t;
 
@@ -6933,14 +6929,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$4.name,
     		type: "slot",
-    		source: "(140:25) <Button outline  color=\\\"primary\\\" on:click={updateSpc}>",
+    		source: "(141:25) <Button outline  color=\\\"primary\\\" on:click={updateSpc}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (114:8) <Table bordered>
+    // (115:8) <Table bordered>
     function create_default_slot_1$4(ctx) {
     	let thead;
     	let tr0;
@@ -7074,37 +7070,37 @@ var app = (function () {
     			t30 = space();
     			td9 = element("td");
     			create_component(button.$$.fragment);
-    			add_location(th0, file$8, 116, 20, 3808);
-    			add_location(th1, file$8, 117, 20, 3846);
-    			add_location(th2, file$8, 118, 20, 3885);
-    			add_location(th3, file$8, 119, 20, 3925);
-    			add_location(th4, file$8, 120, 20, 3967);
-    			add_location(th5, file$8, 121, 20, 4009);
-    			add_location(th6, file$8, 122, 20, 4053);
-    			add_location(th7, file$8, 123, 20, 4089);
-    			add_location(th8, file$8, 124, 20, 4124);
-    			add_location(th9, file$8, 125, 20, 4164);
-    			add_location(tr0, file$8, 115, 16, 3782);
-    			add_location(thead, file$8, 114, 12, 3757);
-    			add_location(td0, file$8, 130, 20, 4290);
-    			add_location(input0, file$8, 131, 24, 4341);
-    			add_location(td1, file$8, 131, 20, 4337);
-    			add_location(input1, file$8, 132, 24, 4409);
-    			add_location(td2, file$8, 132, 20, 4405);
-    			add_location(input2, file$8, 133, 24, 4478);
-    			add_location(td3, file$8, 133, 20, 4474);
-    			add_location(input3, file$8, 134, 24, 4549);
-    			add_location(td4, file$8, 134, 20, 4545);
-    			add_location(input4, file$8, 135, 24, 4620);
-    			add_location(td5, file$8, 135, 20, 4616);
-    			add_location(input5, file$8, 136, 24, 4693);
-    			add_location(td6, file$8, 136, 20, 4689);
-    			add_location(td7, file$8, 137, 20, 4755);
-    			add_location(input6, file$8, 138, 24, 4803);
-    			add_location(td8, file$8, 138, 20, 4799);
-    			add_location(td9, file$8, 139, 20, 4869);
-    			add_location(tr1, file$8, 129, 16, 4264);
-    			add_location(tbody, file$8, 128, 12, 4239);
+    			add_location(th0, file$8, 117, 20, 3769);
+    			add_location(th1, file$8, 118, 20, 3807);
+    			add_location(th2, file$8, 119, 20, 3846);
+    			add_location(th3, file$8, 120, 20, 3886);
+    			add_location(th4, file$8, 121, 20, 3928);
+    			add_location(th5, file$8, 122, 20, 3970);
+    			add_location(th6, file$8, 123, 20, 4014);
+    			add_location(th7, file$8, 124, 20, 4050);
+    			add_location(th8, file$8, 125, 20, 4085);
+    			add_location(th9, file$8, 126, 20, 4125);
+    			add_location(tr0, file$8, 116, 16, 3743);
+    			add_location(thead, file$8, 115, 12, 3718);
+    			add_location(td0, file$8, 131, 20, 4251);
+    			add_location(input0, file$8, 132, 24, 4302);
+    			add_location(td1, file$8, 132, 20, 4298);
+    			add_location(input1, file$8, 133, 24, 4370);
+    			add_location(td2, file$8, 133, 20, 4366);
+    			add_location(input2, file$8, 134, 24, 4439);
+    			add_location(td3, file$8, 134, 20, 4435);
+    			add_location(input3, file$8, 135, 24, 4510);
+    			add_location(td4, file$8, 135, 20, 4506);
+    			add_location(input4, file$8, 136, 24, 4581);
+    			add_location(td5, file$8, 136, 20, 4577);
+    			add_location(input5, file$8, 137, 24, 4654);
+    			add_location(td6, file$8, 137, 20, 4650);
+    			add_location(td7, file$8, 138, 20, 4716);
+    			add_location(input6, file$8, 139, 24, 4764);
+    			add_location(td8, file$8, 139, 20, 4760);
+    			add_location(td9, file$8, 140, 20, 4830);
+    			add_location(tr1, file$8, 130, 16, 4225);
+    			add_location(tbody, file$8, 129, 12, 4200);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -7243,14 +7239,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$4.name,
     		type: "slot",
-    		source: "(114:8) <Table bordered>",
+    		source: "(115:8) <Table bordered>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (106:16)           Loading spc...      {:then spc}
+    // (107:16)           Loading spc...      {:then spc}
     function create_pending_block$3(ctx) {
     	let t;
 
@@ -7273,14 +7269,14 @@ var app = (function () {
     		block,
     		id: create_pending_block$3.name,
     		type: "pending",
-    		source: "(106:16)           Loading spc...      {:then spc}",
+    		source: "(107:16)           Loading spc...      {:then spc}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (145:4) <Button outline color="secondary" on:click="{pop}">
+    // (146:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$4(ctx) {
     	let t;
 
@@ -7300,7 +7296,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$4.name,
     		type: "slot",
-    		source: "(145:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(146:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -7360,10 +7356,10 @@ var app = (function () {
     			info.block.c();
     			t5 = space();
     			create_component(button.$$.fragment);
-    			add_location(h1, file$8, 103, 4, 3412);
-    			add_location(strong, file$8, 104, 17, 3451);
-    			add_location(h3, file$8, 104, 4, 3438);
-    			add_location(main, file$8, 102, 0, 3400);
+    			add_location(h1, file$8, 104, 4, 3381);
+    			add_location(strong, file$8, 105, 17, 3420);
+    			add_location(h3, file$8, 105, 4, 3407);
+    			add_location(main, file$8, 103, 0, 3369);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7464,7 +7460,7 @@ var app = (function () {
     			console.log("Ok:");
     			const json = await res.json();
     			$$invalidate(13, spc = json);
-    			$$invalidate(3, updatedCountry = params.suicideCountry);
+    			$$invalidate(3, updatedCountry = spc.country);
     			$$invalidate(8, updatedBothSex = spc.both_sex);
     			$$invalidate(7, updatedMaleRank = spc.male_rank);
     			$$invalidate(10, updatedMaleNumber = spc.male_number);
@@ -7473,20 +7469,21 @@ var app = (function () {
     			$$invalidate(11, updatedRatio = spc.ratio);
     			$$invalidate(4, updatedYear = params.suicideYear);
     			$$invalidate(5, updatedContinent = spc.continent);
-    			console.log("Received " + spc.length + " spc.");
+    			console.log("Received " + spc.country);
     		} else {
+    			$$invalidate(2, color = "danger");
     			$$invalidate(12, errorMSG = res.status + ": " + res.statusText);
     			console.log("ERROR!");
     		}
     	}
 
     	async function updateSpc() {
-    		console.log("Inserting spc..." + JSON.stringify(params.suicideCountry));
+    		console.log("Updating spc..." + JSON.stringify(params.suicideCountry));
 
     		const res = await fetch("/api/v2/spc-stats/" + params.suicideCountry + "/" + params.suicideYear, {
     			method: "PUT",
     			body: JSON.stringify({
-    				country: params.suicideCountry,
+    				country: updatedCountry,
     				both_sex: updatedBothSex,
     				male_rank: updatedMaleRank,
     				male_number: updatedMaleNumber,
@@ -7503,15 +7500,15 @@ var app = (function () {
 
     			if (res.status == 200) {
     				$$invalidate(2, color = "success");
-    				$$invalidate(12, errorMSG = params.suicideCountry + " actualizado correctamente");
-    				console.log(params.suicideCountry + " updated");
+    				$$invalidate(12, errorMSG = updatedCountry + " actualizado correctamente");
+    				console.log(updatedCountry + " updated");
     			} else if (res.status == 201) {
-    				$$invalidate(12, errorMSG = params.suicideCountry + " actualizado correctamente");
+    				$$invalidate(12, errorMSG = updatedCountry + " actualizado correctamente");
     				$$invalidate(2, color = "success");
-    				console.log(params.suicideCountry + " updated");
+    				console.log(updatedCountry + " updated");
     			} else if (res.status == 404) {
     				$$invalidate(2, color = "danger");
-    				$$invalidate(12, errorMSG = params.suicideCountry + " no ha sido encontrado");
+    				$$invalidate(12, errorMSG = updatedCountry + " no ha sido encontrado");
     				console.log("SUICIDE NOT FOUND");
     			} else {
     				$$invalidate(2, color = "danger");
