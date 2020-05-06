@@ -39,7 +39,7 @@
     //GET
     async function getLQ() {
         console.log("Fetching lq...");
-        const res = await fetch("api/v1/lq-stats?limit=10&offset=1");
+        const res = await fetch("api/v1/lq-stats?limit=10&offset="+ page);
 
         if(res.ok){
             console.log("Ok");
@@ -52,12 +52,14 @@
         } 
     }
 
-    //GET INITIALDATA
+    //GET LoadInitialData
     async function getLQLoadInitialData() {
 
         console.log("Fetching lq...");
         await fetch("/api/v1/lq-stats/loadInitialData")
-        const res = await fetch("/api/v1/lq-stats/loadInitialData");
+        page=1;
+        const res = await fetch("/api/v1/lq-stats?limit=10&offset="+page);
+        
 
         if (res.ok){
             console.log("Ok");
@@ -132,21 +134,31 @@
         const res = await fetch("/api/v1/lq-stats", {
             method: "DELETE"
         }).then(function (res){
-            totaldata = 0;
-            errorMSG = "";
             getLQ();
-            console.log("Deleted all lq.");
-
+            visible = true;
+            if(res.status==200){
+                totaldata=0;
+                color = "sucess";
+                errorMSG = "Objetos borrados correctamente";
+                console.log("Deleted all lq.");
+            } else if(res.status==400){
+                color = "danger";
+                errorMSG = "Ha ocurrido un fallo";
+                console.log("BAD REQUST");
+            } else{
+                color = "danger";
+                errorMSG = res.status + ": " + res.statusText;
+                console.log("ERROR!");
+            }
         });
     }
 
     //getNextPage
     async function getNextPage(){
         console.log(totaldata);
-        if (page+10 >totaldata){
-            page = 1;
-        } else{
-            page+=10
+        page+=10;
+        if (page >totaldata){
+            page -= 10;
         }
         console.log("Charging page "+ page);
         const res = await fetch("/api/v1/lq-stats?limit=10&offset="+page);
