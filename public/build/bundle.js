@@ -7672,7 +7672,7 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[6] = list[i];
+    	child_ctx[8] = list[i];
     	return child_ctx;
     }
 
@@ -7698,7 +7698,7 @@ var app = (function () {
     	return block;
     }
 
-    // (213:4) {:then poverty}
+    // (220:4) {:then poverty}
     function create_then_block$4(ctx) {
     	let t0;
     	let t1;
@@ -7713,7 +7713,7 @@ var app = (function () {
     			props: {
     				color: /*color*/ ctx[1],
     				isOpen: /*visible*/ ctx[0],
-    				toggle: /*func*/ ctx[14],
+    				toggle: /*func*/ ctx[16],
     				$$slots: { default: [create_default_slot_10] },
     				$$scope: { ctx }
     			},
@@ -7722,6 +7722,7 @@ var app = (function () {
 
     	const table0 = new Table({
     			props: {
+    				responsive: true,
     				$$slots: { default: [create_default_slot_8$1] },
     				$$scope: { ctx }
     			},
@@ -7746,7 +7747,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	button0.$on("click", /*getPovertyLoadInitialData*/ ctx[7]);
+    	button0.$on("click", /*getPovertyLoadInitialData*/ ctx[9]);
 
     	const button1 = new Button({
     			props: {
@@ -7757,9 +7758,9 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	button1.$on("click", /*deletePovertyAll*/ ctx[10]);
-    	let if_block0 = /*page*/ ctx[4] != 1 && create_if_block_1$2(ctx);
-    	let if_block1 = /*page*/ ctx[4] + 10 <= /*totalObj*/ ctx[3] && create_if_block$7(ctx);
+    	button1.$on("click", /*deletePovertyAll*/ ctx[12]);
+    	let if_block0 = /*page*/ ctx[6] != 1 && create_if_block_1$2(ctx);
+    	let if_block1 = /*page*/ ctx[6] + 10 <= /*totalObj*/ ctx[5] && create_if_block$7(ctx);
 
     	const block = {
     		c: function create() {
@@ -7799,43 +7800,43 @@ var app = (function () {
     			const alert_changes = {};
     			if (dirty & /*color*/ 2) alert_changes.color = /*color*/ ctx[1];
     			if (dirty & /*visible*/ 1) alert_changes.isOpen = /*visible*/ ctx[0];
-    			if (dirty & /*visible*/ 1) alert_changes.toggle = /*func*/ ctx[14];
+    			if (dirty & /*visible*/ 1) alert_changes.toggle = /*func*/ ctx[16];
 
-    			if (dirty & /*$$scope, errorMSG*/ 8388640) {
+    			if (dirty & /*$$scope, errorMSG*/ 134217856) {
     				alert_changes.$$scope = { dirty, ctx };
     			}
 
     			alert.$set(alert_changes);
     			const table0_changes = {};
 
-    			if (dirty & /*$$scope*/ 8388608) {
+    			if (dirty & /*$$scope, countryValue, yearValue*/ 134217740) {
     				table0_changes.$$scope = { dirty, ctx };
     			}
 
     			table0.$set(table0_changes);
     			const table1_changes = {};
 
-    			if (dirty & /*$$scope, poverty, newPoverty*/ 8388676) {
+    			if (dirty & /*$$scope, poverty, newPoverty*/ 134218000) {
     				table1_changes.$$scope = { dirty, ctx };
     			}
 
     			table1.$set(table1_changes);
     			const button0_changes = {};
 
-    			if (dirty & /*$$scope*/ 8388608) {
+    			if (dirty & /*$$scope*/ 134217728) {
     				button0_changes.$$scope = { dirty, ctx };
     			}
 
     			button0.$set(button0_changes);
     			const button1_changes = {};
 
-    			if (dirty & /*$$scope*/ 8388608) {
+    			if (dirty & /*$$scope*/ 134217728) {
     				button1_changes.$$scope = { dirty, ctx };
     			}
 
     			button1.$set(button1_changes);
 
-    			if (/*page*/ ctx[4] != 1) {
+    			if (/*page*/ ctx[6] != 1) {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
     					transition_in(if_block0, 1);
@@ -7855,7 +7856,7 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*page*/ ctx[4] + 10 <= /*totalObj*/ ctx[3]) {
+    			if (/*page*/ ctx[6] + 10 <= /*totalObj*/ ctx[5]) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
     					transition_in(if_block1, 1);
@@ -7918,14 +7919,14 @@ var app = (function () {
     		block,
     		id: create_then_block$4.name,
     		type: "then",
-    		source: "(213:4) {:then poverty}",
+    		source: "(220:4) {:then poverty}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (216:8) {#if errorMSG}
+    // (223:8) {#if errorMSG}
     function create_if_block_2$2(ctx) {
     	let t0;
     	let t1;
@@ -7933,14 +7934,14 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			t0 = text("STATUS: ");
-    			t1 = text(/*errorMSG*/ ctx[5]);
+    			t1 = text(/*errorMSG*/ ctx[7]);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
     			insert_dev(target, t1, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*errorMSG*/ 32) set_data_dev(t1, /*errorMSG*/ ctx[5]);
+    			if (dirty & /*errorMSG*/ 128) set_data_dev(t1, /*errorMSG*/ ctx[7]);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(t0);
@@ -7952,17 +7953,17 @@ var app = (function () {
     		block,
     		id: create_if_block_2$2.name,
     		type: "if",
-    		source: "(216:8) {#if errorMSG}",
+    		source: "(223:8) {#if errorMSG}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (215:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
+    // (222:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
     function create_default_slot_10(ctx) {
     	let if_block_anchor;
-    	let if_block = /*errorMSG*/ ctx[5] && create_if_block_2$2(ctx);
+    	let if_block = /*errorMSG*/ ctx[7] && create_if_block_2$2(ctx);
 
     	const block = {
     		c: function create() {
@@ -7974,7 +7975,7 @@ var app = (function () {
     			insert_dev(target, if_block_anchor, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (/*errorMSG*/ ctx[5]) {
+    			if (/*errorMSG*/ ctx[7]) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
@@ -7997,14 +7998,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(215:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>",
+    		source: "(222:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (227:20) <Button outline color="info" on:click="{getPreviousPage}" style="margin-left: 2%;">
+    // (236:20) <Button outline color="info" on:click="{searchPoverty(countryValue, yearValue)}" style="margin-left: 2%;">
     function create_default_slot_9(ctx) {
     	let t;
 
@@ -8024,14 +8025,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(227:20) <Button outline color=\\\"info\\\" on:click=\\\"{getPreviousPage}\\\" style=\\\"margin-left: 2%;\\\">",
+    		source: "(236:20) <Button outline color=\\\"info\\\" on:click=\\\"{searchPoverty(countryValue, yearValue)}\\\" style=\\\"margin-left: 2%;\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (220:8) <Table>
+    // (227:8) <Table responsive>
     function create_default_slot_8$1(ctx) {
     	let thead;
     	let th;
@@ -8044,6 +8045,7 @@ var app = (function () {
     	let input1;
     	let t4;
     	let current;
+    	let dispose;
 
     	const button = new Button({
     			props: {
@@ -8056,7 +8058,9 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	button.$on("click", /*getPreviousPage*/ ctx[12]);
+    	button.$on("click", function () {
+    		if (is_function(searchPoverty(/*countryValue*/ ctx[2], /*yearValue*/ ctx[3]))) searchPoverty(/*countryValue*/ ctx[2], /*yearValue*/ ctx[3]).apply(this, arguments);
+    	});
 
     	const block = {
     		c: function create() {
@@ -8072,14 +8076,16 @@ var app = (function () {
     			input1 = element("input");
     			t4 = space();
     			create_component(button.$$.fragment);
-    			add_location(th, file$9, 221, 16, 7188);
-    			add_location(thead, file$9, 220, 12, 7163);
-    			add_location(input0, file$9, 225, 29, 7302);
-    			add_location(input1, file$9, 225, 44, 7317);
-    			add_location(tr, file$9, 224, 16, 7267);
-    			add_location(tbody, file$9, 223, 12, 7242);
+    			add_location(th, file$9, 228, 16, 7395);
+    			add_location(thead, file$9, 227, 12, 7370);
+    			attr_dev(input0, "type", "text");
+    			add_location(input0, file$9, 233, 29, 7531);
+    			attr_dev(input1, "type", "text");
+    			add_location(input1, file$9, 233, 83, 7585);
+    			add_location(tr, file$9, 231, 16, 7474);
+    			add_location(tbody, file$9, 230, 12, 7449);
     		},
-    		m: function mount(target, anchor) {
+    		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
     			append_dev(thead, th);
     			insert_dev(target, t1, anchor);
@@ -8087,16 +8093,34 @@ var app = (function () {
     			append_dev(tbody, tr);
     			append_dev(tr, t2);
     			append_dev(tr, input0);
+    			set_input_value(input0, /*countryValue*/ ctx[2]);
     			append_dev(tr, t3);
     			append_dev(tr, input1);
+    			set_input_value(input1, /*yearValue*/ ctx[3]);
     			append_dev(tr, t4);
     			mount_component(button, tr, null);
     			current = true;
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[17]),
+    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[18])
+    			];
     		},
-    		p: function update(ctx, dirty) {
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+
+    			if (dirty & /*countryValue*/ 4 && input0.value !== /*countryValue*/ ctx[2]) {
+    				set_input_value(input0, /*countryValue*/ ctx[2]);
+    			}
+
+    			if (dirty & /*yearValue*/ 8 && input1.value !== /*yearValue*/ ctx[3]) {
+    				set_input_value(input1, /*yearValue*/ ctx[3]);
+    			}
+
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 8388608) {
+    			if (dirty & /*$$scope*/ 134217728) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -8116,6 +8140,7 @@ var app = (function () {
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(tbody);
     			destroy_component(button);
+    			run_all(dispose);
     		}
     	};
 
@@ -8123,14 +8148,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8$1.name,
     		type: "slot",
-    		source: "(220:8) <Table>",
+    		source: "(227:8) <Table responsive>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (253:25) <Button outline  color="primary" on:click={insertPoverty}>
+    // (262:25) <Button outline  color="primary" on:click={insertPoverty}>
     function create_default_slot_7$1(ctx) {
     	let t;
 
@@ -8150,14 +8175,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7$1.name,
     		type: "slot",
-    		source: "(253:25) <Button outline  color=\\\"primary\\\" on:click={insertPoverty}>",
+    		source: "(262:25) <Button outline  color=\\\"primary\\\" on:click={insertPoverty}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (264:28) <Button outline color="danger" on:click="{deletePoverty(poverty.country)}">
+    // (273:28) <Button outline color="danger" on:click="{deletePoverty(poverty.country)}">
     function create_default_slot_6$1(ctx) {
     	let t;
 
@@ -8177,40 +8202,40 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$1.name,
     		type: "slot",
-    		source: "(264:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deletePoverty(poverty.country)}\\\">",
+    		source: "(273:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deletePoverty(poverty.country)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (256:16) {#each poverty as poverty}
+    // (265:16) {#each poverty as poverty}
     function create_each_block$2(ctx) {
     	let tr;
     	let td0;
     	let a;
-    	let t0_value = /*poverty*/ ctx[6].country + "";
+    	let t0_value = /*poverty*/ ctx[8].country + "";
     	let t0;
     	let a_href_value;
     	let t1;
     	let td1;
-    	let t2_value = /*poverty*/ ctx[6].under_190 + "";
+    	let t2_value = /*poverty*/ ctx[8].under_190 + "";
     	let t2;
     	let t3;
     	let td2;
-    	let t4_value = /*poverty*/ ctx[6].under_320 + "";
+    	let t4_value = /*poverty*/ ctx[8].under_320 + "";
     	let t4;
     	let t5;
     	let td3;
-    	let t6_value = /*poverty*/ ctx[6].under_550 + "";
+    	let t6_value = /*poverty*/ ctx[8].under_550 + "";
     	let t6;
     	let t7;
     	let td4;
-    	let t8_value = /*poverty*/ ctx[6].year + "";
+    	let t8_value = /*poverty*/ ctx[8].year + "";
     	let t8;
     	let t9;
     	let td5;
-    	let t10_value = /*poverty*/ ctx[6].continent + "";
+    	let t10_value = /*poverty*/ ctx[8].continent + "";
     	let t10;
     	let t11;
     	let td6;
@@ -8228,7 +8253,7 @@ var app = (function () {
     		});
 
     	button.$on("click", function () {
-    		if (is_function(/*deletePoverty*/ ctx[9](/*poverty*/ ctx[6].country))) /*deletePoverty*/ ctx[9](/*poverty*/ ctx[6].country).apply(this, arguments);
+    		if (is_function(/*deletePoverty*/ ctx[11](/*poverty*/ ctx[8].country))) /*deletePoverty*/ ctx[11](/*poverty*/ ctx[8].country).apply(this, arguments);
     	});
 
     	const block = {
@@ -8256,16 +8281,16 @@ var app = (function () {
     			td6 = element("td");
     			create_component(button.$$.fragment);
     			t12 = space();
-    			attr_dev(a, "href", a_href_value = "#/poverty-stats/" + /*poverty*/ ctx[6].country + "/" + /*poverty*/ ctx[6].year);
-    			add_location(a, file$9, 257, 28, 8627);
-    			add_location(td0, file$9, 257, 24, 8623);
-    			add_location(td1, file$9, 258, 24, 8738);
-    			add_location(td2, file$9, 259, 24, 8792);
-    			add_location(td3, file$9, 260, 24, 8846);
-    			add_location(td4, file$9, 261, 24, 8900);
-    			add_location(td5, file$9, 262, 24, 8949);
-    			add_location(td6, file$9, 263, 24, 9003);
-    			add_location(tr, file$9, 256, 20, 8593);
+    			attr_dev(a, "href", a_href_value = "#/poverty-stats/" + /*poverty*/ ctx[8].country + "/" + /*poverty*/ ctx[8].year);
+    			add_location(a, file$9, 266, 28, 8976);
+    			add_location(td0, file$9, 266, 24, 8972);
+    			add_location(td1, file$9, 267, 24, 9087);
+    			add_location(td2, file$9, 268, 24, 9141);
+    			add_location(td3, file$9, 269, 24, 9195);
+    			add_location(td4, file$9, 270, 24, 9249);
+    			add_location(td5, file$9, 271, 24, 9298);
+    			add_location(td6, file$9, 272, 24, 9352);
+    			add_location(tr, file$9, 265, 20, 8942);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -8295,20 +8320,20 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if ((!current || dirty & /*poverty*/ 64) && t0_value !== (t0_value = /*poverty*/ ctx[6].country + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty & /*poverty*/ 256) && t0_value !== (t0_value = /*poverty*/ ctx[8].country + "")) set_data_dev(t0, t0_value);
 
-    			if (!current || dirty & /*poverty*/ 64 && a_href_value !== (a_href_value = "#/poverty-stats/" + /*poverty*/ ctx[6].country + "/" + /*poverty*/ ctx[6].year)) {
+    			if (!current || dirty & /*poverty*/ 256 && a_href_value !== (a_href_value = "#/poverty-stats/" + /*poverty*/ ctx[8].country + "/" + /*poverty*/ ctx[8].year)) {
     				attr_dev(a, "href", a_href_value);
     			}
 
-    			if ((!current || dirty & /*poverty*/ 64) && t2_value !== (t2_value = /*poverty*/ ctx[6].under_190 + "")) set_data_dev(t2, t2_value);
-    			if ((!current || dirty & /*poverty*/ 64) && t4_value !== (t4_value = /*poverty*/ ctx[6].under_320 + "")) set_data_dev(t4, t4_value);
-    			if ((!current || dirty & /*poverty*/ 64) && t6_value !== (t6_value = /*poverty*/ ctx[6].under_550 + "")) set_data_dev(t6, t6_value);
-    			if ((!current || dirty & /*poverty*/ 64) && t8_value !== (t8_value = /*poverty*/ ctx[6].year + "")) set_data_dev(t8, t8_value);
-    			if ((!current || dirty & /*poverty*/ 64) && t10_value !== (t10_value = /*poverty*/ ctx[6].continent + "")) set_data_dev(t10, t10_value);
+    			if ((!current || dirty & /*poverty*/ 256) && t2_value !== (t2_value = /*poverty*/ ctx[8].under_190 + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*poverty*/ 256) && t4_value !== (t4_value = /*poverty*/ ctx[8].under_320 + "")) set_data_dev(t4, t4_value);
+    			if ((!current || dirty & /*poverty*/ 256) && t6_value !== (t6_value = /*poverty*/ ctx[8].under_550 + "")) set_data_dev(t6, t6_value);
+    			if ((!current || dirty & /*poverty*/ 256) && t8_value !== (t8_value = /*poverty*/ ctx[8].year + "")) set_data_dev(t8, t8_value);
+    			if ((!current || dirty & /*poverty*/ 256) && t10_value !== (t10_value = /*poverty*/ ctx[8].continent + "")) set_data_dev(t10, t10_value);
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 8388608) {
+    			if (dirty & /*$$scope*/ 134217728) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -8333,14 +8358,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(256:16) {#each poverty as poverty}",
+    		source: "(265:16) {#each poverty as poverty}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (234:8) <Table responsive>
+    // (243:8) <Table responsive>
     function create_default_slot_5$1(ctx) {
     	let thead;
     	let tr0;
@@ -8391,8 +8416,8 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	button.$on("click", /*insertPoverty*/ ctx[8]);
-    	let each_value = /*poverty*/ ctx[6];
+    	button.$on("click", /*insertPoverty*/ ctx[10]);
+    	let each_value = /*poverty*/ ctx[8];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -8454,29 +8479,29 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$9, 236, 20, 7659);
-    			add_location(th1, file$9, 237, 20, 7697);
-    			add_location(th2, file$9, 238, 20, 7737);
-    			add_location(th3, file$9, 239, 20, 7777);
-    			add_location(th4, file$9, 240, 20, 7817);
-    			add_location(th5, file$9, 241, 20, 7852);
-    			add_location(tr0, file$9, 235, 16, 7633);
-    			add_location(thead, file$9, 234, 12, 7608);
-    			add_location(input0, file$9, 246, 24, 7984);
-    			add_location(td0, file$9, 246, 20, 7980);
-    			add_location(input1, file$9, 247, 24, 8056);
-    			add_location(td1, file$9, 247, 20, 8052);
-    			add_location(input2, file$9, 248, 24, 8130);
-    			add_location(td2, file$9, 248, 20, 8126);
-    			add_location(input3, file$9, 249, 24, 8204);
-    			add_location(td3, file$9, 249, 20, 8200);
-    			add_location(input4, file$9, 250, 24, 8278);
-    			add_location(td4, file$9, 250, 20, 8274);
-    			add_location(input5, file$9, 251, 24, 8347);
-    			add_location(td5, file$9, 251, 20, 8343);
-    			add_location(td6, file$9, 252, 20, 8417);
-    			add_location(tr1, file$9, 245, 16, 7954);
-    			add_location(tbody, file$9, 244, 12, 7929);
+    			add_location(th0, file$9, 245, 20, 8008);
+    			add_location(th1, file$9, 246, 20, 8046);
+    			add_location(th2, file$9, 247, 20, 8086);
+    			add_location(th3, file$9, 248, 20, 8126);
+    			add_location(th4, file$9, 249, 20, 8166);
+    			add_location(th5, file$9, 250, 20, 8201);
+    			add_location(tr0, file$9, 244, 16, 7982);
+    			add_location(thead, file$9, 243, 12, 7957);
+    			add_location(input0, file$9, 255, 24, 8333);
+    			add_location(td0, file$9, 255, 20, 8329);
+    			add_location(input1, file$9, 256, 24, 8405);
+    			add_location(td1, file$9, 256, 20, 8401);
+    			add_location(input2, file$9, 257, 24, 8479);
+    			add_location(td2, file$9, 257, 20, 8475);
+    			add_location(input3, file$9, 258, 24, 8553);
+    			add_location(td3, file$9, 258, 20, 8549);
+    			add_location(input4, file$9, 259, 24, 8627);
+    			add_location(td4, file$9, 259, 20, 8623);
+    			add_location(input5, file$9, 260, 24, 8696);
+    			add_location(td5, file$9, 260, 20, 8692);
+    			add_location(td6, file$9, 261, 20, 8766);
+    			add_location(tr1, file$9, 254, 16, 8303);
+    			add_location(tbody, file$9, 253, 12, 8278);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -8497,27 +8522,27 @@ var app = (function () {
     			append_dev(tbody, tr1);
     			append_dev(tr1, td0);
     			append_dev(td0, input0);
-    			set_input_value(input0, /*newPoverty*/ ctx[2].country);
+    			set_input_value(input0, /*newPoverty*/ ctx[4].country);
     			append_dev(tr1, t12);
     			append_dev(tr1, td1);
     			append_dev(td1, input1);
-    			set_input_value(input1, /*newPoverty*/ ctx[2].under_190);
+    			set_input_value(input1, /*newPoverty*/ ctx[4].under_190);
     			append_dev(tr1, t13);
     			append_dev(tr1, td2);
     			append_dev(td2, input2);
-    			set_input_value(input2, /*newPoverty*/ ctx[2].under_320);
+    			set_input_value(input2, /*newPoverty*/ ctx[4].under_320);
     			append_dev(tr1, t14);
     			append_dev(tr1, td3);
     			append_dev(td3, input3);
-    			set_input_value(input3, /*newPoverty*/ ctx[2].under_550);
+    			set_input_value(input3, /*newPoverty*/ ctx[4].under_550);
     			append_dev(tr1, t15);
     			append_dev(tr1, td4);
     			append_dev(td4, input4);
-    			set_input_value(input4, /*newPoverty*/ ctx[2].year);
+    			set_input_value(input4, /*newPoverty*/ ctx[4].year);
     			append_dev(tr1, t16);
     			append_dev(tr1, td5);
     			append_dev(td5, input5);
-    			set_input_value(input5, /*newPoverty*/ ctx[2].continent);
+    			set_input_value(input5, /*newPoverty*/ ctx[4].continent);
     			append_dev(tr1, t17);
     			append_dev(tr1, td6);
     			mount_component(button, td6, null);
@@ -8531,49 +8556,49 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[15]),
-    				listen_dev(input1, "input", /*input1_input_handler*/ ctx[16]),
-    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[17]),
-    				listen_dev(input3, "input", /*input3_input_handler*/ ctx[18]),
-    				listen_dev(input4, "input", /*input4_input_handler*/ ctx[19]),
-    				listen_dev(input5, "input", /*input5_input_handler*/ ctx[20])
+    				listen_dev(input0, "input", /*input0_input_handler_1*/ ctx[19]),
+    				listen_dev(input1, "input", /*input1_input_handler_1*/ ctx[20]),
+    				listen_dev(input2, "input", /*input2_input_handler*/ ctx[21]),
+    				listen_dev(input3, "input", /*input3_input_handler*/ ctx[22]),
+    				listen_dev(input4, "input", /*input4_input_handler*/ ctx[23]),
+    				listen_dev(input5, "input", /*input5_input_handler*/ ctx[24])
     			];
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*newPoverty*/ 4 && input0.value !== /*newPoverty*/ ctx[2].country) {
-    				set_input_value(input0, /*newPoverty*/ ctx[2].country);
+    			if (dirty & /*newPoverty*/ 16 && input0.value !== /*newPoverty*/ ctx[4].country) {
+    				set_input_value(input0, /*newPoverty*/ ctx[4].country);
     			}
 
-    			if (dirty & /*newPoverty*/ 4 && input1.value !== /*newPoverty*/ ctx[2].under_190) {
-    				set_input_value(input1, /*newPoverty*/ ctx[2].under_190);
+    			if (dirty & /*newPoverty*/ 16 && input1.value !== /*newPoverty*/ ctx[4].under_190) {
+    				set_input_value(input1, /*newPoverty*/ ctx[4].under_190);
     			}
 
-    			if (dirty & /*newPoverty*/ 4 && input2.value !== /*newPoverty*/ ctx[2].under_320) {
-    				set_input_value(input2, /*newPoverty*/ ctx[2].under_320);
+    			if (dirty & /*newPoverty*/ 16 && input2.value !== /*newPoverty*/ ctx[4].under_320) {
+    				set_input_value(input2, /*newPoverty*/ ctx[4].under_320);
     			}
 
-    			if (dirty & /*newPoverty*/ 4 && input3.value !== /*newPoverty*/ ctx[2].under_550) {
-    				set_input_value(input3, /*newPoverty*/ ctx[2].under_550);
+    			if (dirty & /*newPoverty*/ 16 && input3.value !== /*newPoverty*/ ctx[4].under_550) {
+    				set_input_value(input3, /*newPoverty*/ ctx[4].under_550);
     			}
 
-    			if (dirty & /*newPoverty*/ 4 && input4.value !== /*newPoverty*/ ctx[2].year) {
-    				set_input_value(input4, /*newPoverty*/ ctx[2].year);
+    			if (dirty & /*newPoverty*/ 16 && input4.value !== /*newPoverty*/ ctx[4].year) {
+    				set_input_value(input4, /*newPoverty*/ ctx[4].year);
     			}
 
-    			if (dirty & /*newPoverty*/ 4 && input5.value !== /*newPoverty*/ ctx[2].continent) {
-    				set_input_value(input5, /*newPoverty*/ ctx[2].continent);
+    			if (dirty & /*newPoverty*/ 16 && input5.value !== /*newPoverty*/ ctx[4].continent) {
+    				set_input_value(input5, /*newPoverty*/ ctx[4].continent);
     			}
 
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 8388608) {
+    			if (dirty & /*$$scope*/ 134217728) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
     			button.$set(button_changes);
 
-    			if (dirty & /*deletePoverty, poverty*/ 576) {
-    				each_value = /*poverty*/ ctx[6];
+    			if (dirty & /*deletePoverty, poverty*/ 2304) {
+    				each_value = /*poverty*/ ctx[8];
     				validate_each_argument(each_value);
     				let i;
 
@@ -8634,14 +8659,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$1.name,
     		type: "slot",
-    		source: "(234:8) <Table responsive>",
+    		source: "(243:8) <Table responsive>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (270:8) <Button color="primary" on:click="{getPovertyLoadInitialData}">
+    // (279:8) <Button color="primary" on:click="{getPovertyLoadInitialData}">
     function create_default_slot_4$1(ctx) {
     	let t;
 
@@ -8661,14 +8686,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$1.name,
     		type: "slot",
-    		source: "(270:8) <Button color=\\\"primary\\\" on:click=\\\"{getPovertyLoadInitialData}\\\">",
+    		source: "(279:8) <Button color=\\\"primary\\\" on:click=\\\"{getPovertyLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (273:8) <Button color="danger" on:click="{deletePovertyAll}">
+    // (282:8) <Button color="danger" on:click="{deletePovertyAll}">
     function create_default_slot_3$3(ctx) {
     	let t;
 
@@ -8688,14 +8713,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$3.name,
     		type: "slot",
-    		source: "(273:8) <Button color=\\\"danger\\\" on:click=\\\"{deletePovertyAll}\\\">",
+    		source: "(282:8) <Button color=\\\"danger\\\" on:click=\\\"{deletePovertyAll}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (276:8) {#if page!=1}
+    // (285:8) {#if page!=1}
     function create_if_block_1$2(ctx) {
     	let current;
 
@@ -8709,7 +8734,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	button.$on("click", /*getPreviousPage*/ ctx[12]);
+    	button.$on("click", /*getPreviousPage*/ ctx[14]);
 
     	const block = {
     		c: function create() {
@@ -8722,7 +8747,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 8388608) {
+    			if (dirty & /*$$scope*/ 134217728) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -8746,14 +8771,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(276:8) {#if page!=1}",
+    		source: "(285:8) {#if page!=1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (277:8) <Button outline color="success" on:click="{getPreviousPage}">
+    // (286:8) <Button outline color="success" on:click="{getPreviousPage}">
     function create_default_slot_2$5(ctx) {
     	let t;
 
@@ -8773,14 +8798,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$5.name,
     		type: "slot",
-    		source: "(277:8) <Button outline color=\\\"success\\\" on:click=\\\"{getPreviousPage}\\\">",
+    		source: "(286:8) <Button outline color=\\\"success\\\" on:click=\\\"{getPreviousPage}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (281:9) {#if (page+10) <= totalObj}
+    // (290:9) {#if (page+10) <= totalObj}
     function create_if_block$7(ctx) {
     	let current;
 
@@ -8794,7 +8819,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	button.$on("click", /*getNextPage*/ ctx[11]);
+    	button.$on("click", /*getNextPage*/ ctx[13]);
 
     	const block = {
     		c: function create() {
@@ -8807,7 +8832,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 8388608) {
+    			if (dirty & /*$$scope*/ 134217728) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -8831,14 +8856,14 @@ var app = (function () {
     		block,
     		id: create_if_block$7.name,
     		type: "if",
-    		source: "(281:9) {#if (page+10) <= totalObj}",
+    		source: "(290:9) {#if (page+10) <= totalObj}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (282:8) <Button outline color="success" on:click="{getNextPage}">
+    // (291:8) <Button outline color="success" on:click="{getNextPage}">
     function create_default_slot_1$5(ctx) {
     	let t;
 
@@ -8858,14 +8883,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$5.name,
     		type: "slot",
-    		source: "(282:8) <Button outline color=\\\"success\\\" on:click=\\\"{getNextPage}\\\">",
+    		source: "(291:8) <Button outline color=\\\"success\\\" on:click=\\\"{getNextPage}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (211:20)           Loading poverty...      {:then poverty}
+    // (218:20)           Loading poverty...      {:then poverty}
     function create_pending_block$4(ctx) {
     	let t;
 
@@ -8888,14 +8913,14 @@ var app = (function () {
     		block,
     		id: create_pending_block$4.name,
     		type: "pending",
-    		source: "(211:20)           Loading poverty...      {:then poverty}",
+    		source: "(218:20)           Loading poverty...      {:then poverty}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (289:4) <Button outline color="secondary" on:click="{pop}">
+    // (298:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$5(ctx) {
     	let t;
 
@@ -8915,7 +8940,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$5.name,
     		type: "slot",
-    		source: "(289:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(298:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
@@ -8943,11 +8968,11 @@ var app = (function () {
     		pending: create_pending_block$4,
     		then: create_then_block$4,
     		catch: create_catch_block$4,
-    		value: 6,
+    		value: 8,
     		blocks: [,,,]
     	};
 
-    	handle_promise(promise = /*poverty*/ ctx[6], info);
+    	handle_promise(promise = /*poverty*/ ctx[8], info);
 
     	const button = new Button({
     			props: {
@@ -8975,11 +9000,11 @@ var app = (function () {
     			br2 = element("br");
     			t4 = space();
     			br3 = element("br");
-    			add_location(br0, file$9, 286, 4, 9778);
-    			add_location(br1, file$9, 287, 4, 9788);
-    			add_location(br2, file$9, 289, 4, 9868);
-    			add_location(br3, file$9, 290, 4, 9878);
-    			add_location(main, file$9, 208, 0, 6888);
+    			add_location(br0, file$9, 295, 4, 10127);
+    			add_location(br1, file$9, 296, 4, 10137);
+    			add_location(br2, file$9, 298, 4, 10217);
+    			add_location(br3, file$9, 299, 4, 10227);
+    			add_location(main, file$9, 215, 0, 7084);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9005,15 +9030,15 @@ var app = (function () {
     			ctx = new_ctx;
     			info.ctx = ctx;
 
-    			if (dirty & /*poverty*/ 64 && promise !== (promise = /*poverty*/ ctx[6]) && handle_promise(promise, info)) ; else {
+    			if (dirty & /*poverty*/ 256 && promise !== (promise = /*poverty*/ ctx[8]) && handle_promise(promise, info)) ; else {
     				const child_ctx = ctx.slice();
-    				child_ctx[6] = info.resolved;
+    				child_ctx[8] = info.resolved;
     				info.block.p(child_ctx, dirty);
     			}
 
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 8388608) {
+    			if (dirty & /*$$scope*/ 134217728) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9054,9 +9079,15 @@ var app = (function () {
     	return block;
     }
 
+    async function searchPoverty(countryValue, yearValue) {
+    	console.log("pais: " + countryValue + " año: " + yearValue);
+    }
+
     function instance$a($$self, $$props, $$invalidate) {
     	let visible = false;
     	let color = "danger";
+    	let countryValue = "";
+    	let yearValue = "";
 
     	let newPoverty = {
     		country: "",
@@ -9082,8 +9113,8 @@ var app = (function () {
     		if (res.ok && res2.ok) {
     			const json = await res.json();
     			const json2 = await res2.json();
-    			$$invalidate(6, poverty = json); //pagina
-    			$$invalidate(3, totalObj = json2.length); //datos
+    			$$invalidate(8, poverty = json); //pagina
+    			$$invalidate(5, totalObj = json2.length); //datos
     			console.log("Received " + poverty.length + " data poverty.");
     		} else {
     			console.log("ERROR!");
@@ -9101,29 +9132,29 @@ var app = (function () {
     			if (res.status == 200) {
     				console.log("ELEMENTOS: " + totalObj);
     				$$invalidate(1, color = "success");
-    				$$invalidate(5, errorMSG = "Objetos cargados correctamente");
+    				$$invalidate(7, errorMSG = "Objetos cargados correctamente");
     			} else if (res.status == 400) {
     				$$invalidate(1, color = "danger");
-    				$$invalidate(5, errorMSG = "Ha ocurrido un fallo");
+    				$$invalidate(7, errorMSG = "Ha ocurrido un fallo");
     				console.log("BAD REQUEST");
     			} else {
     				$$invalidate(1, color = "danger");
-    				$$invalidate(5, errorMSG = res.status + ": " + res.statusText);
+    				$$invalidate(7, errorMSG = res.status + ": " + res.statusText);
     				console.log("ERROR!");
     			}
     		});
 
     		const elements = await fetch("/api/v1/poverty-stats/loadInitialData"); //datos cargados
     		const jsonElements = await elements.json();
-    		$$invalidate(4, page = 1);
-    		$$invalidate(3, totalObj = jsonElements.length);
+    		$$invalidate(6, page = 1);
+    		$$invalidate(5, totalObj = jsonElements.length);
     		console.log("ELEMENTOS: " + totalObj);
     		const res = await fetch("/api/v1/poverty-stats?limit=10&offset=1"); //datos mostrados
 
     		if (res.ok) {
     			console.log("Ok:");
     			const json = await res.json();
-    			$$invalidate(6, poverty = json);
+    			$$invalidate(8, poverty = json);
     			console.log("Loading " + poverty.length + " objects");
     			console.log("Received " + poverty.length + " poverty.");
     		} else {
@@ -9143,15 +9174,15 @@ var app = (function () {
     			$$invalidate(0, visible = true);
 
     			if (res.status == 200) {
-    				$$invalidate(3, totalObj++, totalObj);
+    				$$invalidate(5, totalObj++, totalObj);
     				console.log("ELEMENTOS: " + totalObj);
     				$$invalidate(1, color = "success");
-    				$$invalidate(5, errorMSG = newPoverty.country + " insertado correctamente");
+    				$$invalidate(7, errorMSG = newPoverty.country + " insertado correctamente");
     				console.log(newPoverty.country + " updated");
     				getPoverty();
     			} else {
     				$$invalidate(1, color = "danger");
-    				$$invalidate(5, errorMSG = "Formato incorrecto, compruebe que Country y Year estén rellenos o que no estén contenidos en la tabla.");
+    				$$invalidate(7, errorMSG = "Formato incorrecto, compruebe que Country y Year estén rellenos o que no estén contenidos en la tabla.");
     				console.log("BAD REQUEST");
     			}
     		});
@@ -9164,18 +9195,18 @@ var app = (function () {
     			$$invalidate(0, visible = true);
 
     			if (res.status == 200) {
-    				$$invalidate(3, totalObj--, totalObj);
+    				$$invalidate(5, totalObj--, totalObj);
     				console.log("ELEMENTO: " + totalObj + " borrado.");
     				$$invalidate(1, color = "success");
-    				$$invalidate(5, errorMSG = "Objeto borrado correctamente.");
+    				$$invalidate(7, errorMSG = "Objeto borrado correctamente.");
     				console.log("Deleted " + country + " poverty.");
     			} else if (res.status == 400) {
     				$$invalidate(1, color = "danger");
-    				$$invalidate(5, errorMSG = "Ha ocurrido un fallo.");
+    				$$invalidate(7, errorMSG = "Ha ocurrido un fallo.");
     				console.log("BAD REQUEST");
     			} else {
     				$$invalidate(1, color = "danger");
-    				$$invalidate(5, errorMSG = res.status + ": " + res.statusText);
+    				$$invalidate(7, errorMSG = res.status + ": " + res.statusText);
     				console.log("ERROR!");
     			}
     		});
@@ -9188,19 +9219,19 @@ var app = (function () {
     			$$invalidate(0, visible = true);
 
     			if (res.status == 200) {
-    				$$invalidate(4, page = 1);
-    				$$invalidate(3, totalObj = 0);
+    				$$invalidate(6, page = 1);
+    				$$invalidate(5, totalObj = 0);
     				console.log("ELEMENTOS: " + totalObj);
     				$$invalidate(1, color = "success");
-    				$$invalidate(5, errorMSG = "Objetos borrados correctamente.");
+    				$$invalidate(7, errorMSG = "Objetos borrados correctamente.");
     				console.log("Deleted all poverty.");
     			} else if (res.status == 400) {
     				$$invalidate(1, color = "danger");
-    				$$invalidate(5, errorMSG = "Ha ocurrido un fallo.");
+    				$$invalidate(7, errorMSG = "Ha ocurrido un fallo.");
     				console.log("BAD REQUEST");
     			} else {
     				$$invalidate(1, color = "danger");
-    				$$invalidate(5, errorMSG = res.status + ": " + res.statusText);
+    				$$invalidate(7, errorMSG = res.status + ": " + res.statusText);
     				console.log("ERROR!");
     			}
     		});
@@ -9208,10 +9239,10 @@ var app = (function () {
 
     	// Next Page
     	async function getNextPage() {
-    		$$invalidate(4, page += 10);
+    		$$invalidate(6, page += 10);
 
     		if (page > totalObj) {
-    			$$invalidate(4, page -= 10);
+    			$$invalidate(6, page -= 10);
     		}
 
     		await console.log(page);
@@ -9221,7 +9252,7 @@ var app = (function () {
     		if (res.ok) {
     			console.log("Ok:");
     			const json = await res.json();
-    			$$invalidate(6, poverty = json);
+    			$$invalidate(8, poverty = json);
     			console.log("Received " + poverty.length + " poverty.");
     		} else {
     			console.log("ERROR!");
@@ -9231,7 +9262,7 @@ var app = (function () {
     	//Previus Page
     	async function getPreviousPage() {
     		if (page - 10 >= 0) {
-    			$$invalidate(4, page -= 10);
+    			$$invalidate(6, page -= 10);
     		}
 
     		await console.log(page);
@@ -9241,7 +9272,7 @@ var app = (function () {
     		if (res.ok) {
     			console.log("Ok:");
     			const json = await res.json();
-    			$$invalidate(6, poverty = json);
+    			$$invalidate(8, poverty = json);
     			console.log("Received " + poverty.length + " poverty.");
     		} else {
     			console.log("ERROR!");
@@ -9259,33 +9290,43 @@ var app = (function () {
     	const func = () => $$invalidate(0, visible = false);
 
     	function input0_input_handler() {
-    		newPoverty.country = this.value;
-    		$$invalidate(2, newPoverty);
+    		countryValue = this.value;
+    		$$invalidate(2, countryValue);
     	}
 
     	function input1_input_handler() {
+    		yearValue = this.value;
+    		$$invalidate(3, yearValue);
+    	}
+
+    	function input0_input_handler_1() {
+    		newPoverty.country = this.value;
+    		$$invalidate(4, newPoverty);
+    	}
+
+    	function input1_input_handler_1() {
     		newPoverty.under_190 = this.value;
-    		$$invalidate(2, newPoverty);
+    		$$invalidate(4, newPoverty);
     	}
 
     	function input2_input_handler() {
     		newPoverty.under_320 = this.value;
-    		$$invalidate(2, newPoverty);
+    		$$invalidate(4, newPoverty);
     	}
 
     	function input3_input_handler() {
     		newPoverty.under_550 = this.value;
-    		$$invalidate(2, newPoverty);
+    		$$invalidate(4, newPoverty);
     	}
 
     	function input4_input_handler() {
     		newPoverty.year = this.value;
-    		$$invalidate(2, newPoverty);
+    		$$invalidate(4, newPoverty);
     	}
 
     	function input5_input_handler() {
     		newPoverty.continent = this.value;
-    		$$invalidate(2, newPoverty);
+    		$$invalidate(4, newPoverty);
     	}
 
     	$$self.$capture_state = () => ({
@@ -9296,6 +9337,8 @@ var app = (function () {
     		Alert,
     		visible,
     		color,
+    		countryValue,
+    		yearValue,
     		newPoverty,
     		poverty,
     		totalObj,
@@ -9304,6 +9347,7 @@ var app = (function () {
     		getPoverty,
     		getPovertyLoadInitialData,
     		insertPoverty,
+    		searchPoverty,
     		deletePoverty,
     		deletePovertyAll,
     		getNextPage,
@@ -9313,11 +9357,13 @@ var app = (function () {
     	$$self.$inject_state = $$props => {
     		if ("visible" in $$props) $$invalidate(0, visible = $$props.visible);
     		if ("color" in $$props) $$invalidate(1, color = $$props.color);
-    		if ("newPoverty" in $$props) $$invalidate(2, newPoverty = $$props.newPoverty);
-    		if ("poverty" in $$props) $$invalidate(6, poverty = $$props.poverty);
-    		if ("totalObj" in $$props) $$invalidate(3, totalObj = $$props.totalObj);
-    		if ("page" in $$props) $$invalidate(4, page = $$props.page);
-    		if ("errorMSG" in $$props) $$invalidate(5, errorMSG = $$props.errorMSG);
+    		if ("countryValue" in $$props) $$invalidate(2, countryValue = $$props.countryValue);
+    		if ("yearValue" in $$props) $$invalidate(3, yearValue = $$props.yearValue);
+    		if ("newPoverty" in $$props) $$invalidate(4, newPoverty = $$props.newPoverty);
+    		if ("poverty" in $$props) $$invalidate(8, poverty = $$props.poverty);
+    		if ("totalObj" in $$props) $$invalidate(5, totalObj = $$props.totalObj);
+    		if ("page" in $$props) $$invalidate(6, page = $$props.page);
+    		if ("errorMSG" in $$props) $$invalidate(7, errorMSG = $$props.errorMSG);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -9327,6 +9373,8 @@ var app = (function () {
     	return [
     		visible,
     		color,
+    		countryValue,
+    		yearValue,
     		newPoverty,
     		totalObj,
     		page,
@@ -9342,6 +9390,8 @@ var app = (function () {
     		func,
     		input0_input_handler,
     		input1_input_handler,
+    		input0_input_handler_1,
+    		input1_input_handler_1,
     		input2_input_handler,
     		input3_input_handler,
     		input4_input_handler,

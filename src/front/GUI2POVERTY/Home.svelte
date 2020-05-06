@@ -11,6 +11,8 @@
     
     let visible = false;
     let color = "danger";
+    let countryValue="";
+    let yearValue="";
     
     let newPoverty = {
         country:"",
@@ -112,6 +114,11 @@
             
         });
  
+    }
+
+    //SEARCH
+    async function searchPoverty(countryValue, yearValue){
+        console.log("pais: "+countryValue+" año: "+yearValue);
     }
 
     //DELETE
@@ -217,14 +224,16 @@
             STATUS: {errorMSG}
         {/if}
     </Alert>
-        <Table>
+        <Table responsive>
             <thead>
                 <th>Búsquedas</th>
             </thead>
             <tbody>
                 <tr>
-                    Country: <input > Year: <input> 
-                    <Button outline color="info" on:click="{getPreviousPage}" style="margin-left: 2%;">
+                    
+                    Country: <input type="text" bind:value="{countryValue}"> Year: <input type="text" bind:value="{yearValue}">
+                    
+                    <Button outline color="info" on:click="{searchPoverty(countryValue, yearValue)}" style="margin-left: 2%;">
                         Buscar
                     </Button>
                 </tr>

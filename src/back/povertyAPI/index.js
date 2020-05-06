@@ -191,7 +191,13 @@ module.exports = function (app) {
 				if(limit<=0 || offset <=0){
 					res.sendStatus(400);
 				}else{
-					res.send(JSON.stringify(poverty_stats.slice(startObject,endObject),null,2));
+					if(limit==1){
+						
+						res.send(JSON.stringify(poverty_stats[offset-1],null,2));
+					}else{
+						res.send(JSON.stringify(poverty_stats.slice(startObject,endObject),null,2));
+					}
+					
 				}
 				
 
@@ -200,17 +206,18 @@ module.exports = function (app) {
 						if(offset<=0){
 							res.sendStatus(400);
 						}else{
-								
-							res.send(JSON.stringify(poverty_stats.slice(parseInt(offset)-1,poverty_stats.length),null,2))
-							
+								res.send(JSON.stringify(poverty_stats.slice(parseInt(offset)-1,poverty_stats.length),null,2));
 						}
 					}else if(limit!=null){
 						if(limit<=0){
 							res.sendStatus(400);
-						}else{
-							res.send(JSON.stringify(poverty_stats.slice(0,parseInt(limit)),null,2));
-						}
-								
+						}else if(limit==1){
+
+								res.send(JSON.stringify(poverty_stats[0],null,2));
+							}else{
+								res.send(JSON.stringify(poverty_stats.slice(0,parseInt(limit)),null,2));
+							}
+							
 						}
         });
     });
