@@ -9,6 +9,9 @@
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
     import { Alert } from "sveltestrap";
+    //Para busquedas
+    import { Collapse, CardBody, Card } from "sveltestrap";
+    let isOpen = false;
 
     //ALERTAS
     let visible = false;
@@ -28,6 +31,18 @@
         year: "",
         continent: ""
     };
+
+    let searchSpc = {
+        country: "",
+        both_sex: "",
+        male_rank: "",
+        male_number: "",
+        female_rank: "",
+        female_number: "",
+        ratio: "",
+        year: "",
+        continent: ""
+    };
     let errorMSG = "";
     onMount(getSPC);
  
@@ -35,7 +50,7 @@
     async function getSPC() {
  
         console.log("Fetching spc...");
-        const res = await fetch("/api/v1/spc-stats?limit=10&offset=1");
+        const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
  
         if (res.ok) {
             console.log("Ok:");
@@ -52,8 +67,8 @@
     async function getSPCLoadInitialData() {
  
         console.log("Fetching spc...");
-        await fetch("/api/v1/spc-stats/loadInitialData");
-        const res = await fetch("/api/v1/spc-stats?limit=10&offset=1");
+        await fetch("/api/v2/spc-stats/loadInitialData");
+        const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
 
         if (res.ok) {
             console.log("Ok:");
@@ -71,7 +86,7 @@
     async function insertSPC() {
  
         console.log("Inserting spc..." + JSON.stringify(newSpc));
-        const res = await fetch("/api/v1/spc-stats", {
+        const res = await fetch("/api/v2/spc-stats", {
             method: "POST",
             body: JSON.stringify(newSpc),
             headers: {
@@ -104,7 +119,7 @@
 
     //DELETE SPECIFIC
     async function deleteSPC(name, year) {
-        const res = await fetch("/api/v1/spc-stats/" + name + "/" + year, {
+        const res = await fetch("/api/v2/spc-stats/" + name + "/" + year, {
             method: "DELETE"
         }).then(function (res) {
             visible = true;
@@ -128,7 +143,7 @@
 
     //DELETE ALL
     async function deleteSPCALL() {
-        const res = await fetch("/api/v1/spc-stats/", {
+        const res = await fetch("/api/v2/spc-stats/", {
             method: "DELETE"
         }).then(function (res) {
             getSPC();
@@ -150,6 +165,25 @@
         });
     }
 
+    //GET
+    async function searchSPC() {
+ 
+        console.log("Fetching spc...");
+        const res = await fetch("/api/v2/spc-stats?country="+searchSpc.country + "&both_sex="+searchSpc.both_sex + "&male_rank="+searchSpc.male_rank + "&male_number="
+                                        +searchSpc.male_number + "&female_rank="+searchSpc.female_rank + "&female_number="+searchSpc.female_number + "&ratio="
+                                        +searchSpc.ratio + "&year="+searchSpc.year + "&continent="+searchSpc.continent);
+
+        if (res.ok) {
+            console.log("Ok:");
+            const json = await res.json();
+            spc = json;
+            console.log("Received " + spc.length + " spc.");
+        } else {
+            errorMSG= res.status + ": " + res.statusText;
+            console.log("ERROR!");
+        }
+    }
+
     //getNextPage
     async function getNextPage() {
  
@@ -160,7 +194,7 @@
             page+=10
         }
         console.log("Charging page " +page);
-        const res = await fetch("/api/v1/poverty-stats?limit=10&offset="+page);
+        const res = await fetch("/api/v2/spc-stats?limit=10&offset="+page);
 
         if (res.ok) {
             console.log("Ok:");
@@ -180,7 +214,7 @@
             page-=10; 
         } else page = 1
         console.log("Charging page " +page);
-        const res = await fetch("/api/v1/spc-stats?limit=10&offset="+page);
+        const res = await fetch("/api/v2/spc-stats?limit=10&offset="+page);
 
         if (res.ok) {
             console.log("Ok:");
@@ -196,6 +230,29 @@
  
 <main>
     <h1>SPC Manager</h1>
+
+    <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
+        Buscar spc
+      </Button>
+      <Collapse {isOpen}>
+        <Table bordered>
+            <tbody>
+                <tr>
+                    <td><input placeholder="País" bind:value="{searchSpc.country}"></td>
+                    <td><input placeholder="Ambos sexos" bind:value="{searchSpc.both_sex}"></td>
+                    <td><input placeholder="Rango hombres" bind:value="{searchSpc.male_rank}"></td>
+                    <td><input placeholder="Número hombres (en miles)" bind:value="{searchSpc.male_number}"></td>
+                    <td><input placeholder="Rango mujeres" bind:value="{searchSpc.female_rank}"></td>
+                    <td><input placeholder="Número mujeres (en miles)" bind:value="{searchSpc.female_number}"></td>
+                    <td><input placeholder="Ratio" bind:value="{searchSpc.ratio}"></td>
+                    <td><input placeholder="Año" bind:value="{searchSpc.year}"></td>
+                    <td><input placeholder="Continente" bind:value="{searchSpc.continent}"></td>
+                    <td> <Button outline  color="primary" on:click={searchSPC}>Buscar</Button> </td>
+                </tr>
+            </tbody>
+        </Table>
+      </Collapse>
+
     {#await spc}
         Loading spc...
     {:then spc}
@@ -249,18 +306,19 @@
                 {/each}
             </tbody>
         </Table>
-        <Button color="primary" on:click="{getSPCLoadInitialData}">
+          <Button color="success" on:click="{getSPCLoadInitialData}">
             Reiniciar ejemplos iniciales
         </Button>
         <Button color="danger" on:click="{deleteSPCALL}">
             Borrar todo
         </Button>
-        <Button outline color="success" on:click="{getPreviewPage}">
+        <Button outline color="primary" on:click="{getPreviewPage}">
            Atras
         </Button>
-        <Button outline color="success" on:click="{getNextPage}">
-           Siguiente
-        </Button>
+        <Button outline color="primary" on:click="{getNextPage}">
+            Siguiente
+         </Button>
+         
         
     {/await}
     

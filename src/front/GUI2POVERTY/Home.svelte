@@ -2,11 +2,16 @@
     import {
         onMount
     } from "svelte";
- 
+    import {
+        pop
+    } from "svelte-spa-router";
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
- 
-    let poverty = []; 
+    import { Alert } from "sveltestrap";
+    
+    let visible = false;
+    let color = "danger";
+    
     let newPoverty = {
         country:"",
 		under_190: "",
@@ -15,23 +20,28 @@
 		year:"",
 		continent:""
     };
-    let totalObj=0;
+    let poverty=[];
+    let totalObj=poverty.length;
+    
     let page=1;
     let errorMSG = "";
- 
-    onMount(getPoverty);
     
-    //GET
+    
+    onMount(getPoverty);
+
+    //GET Limit ok
     async function getPoverty() {
  
         console.log("Fetching poverty...");
-        const res = await fetch("/api/v1/poverty-stats?limit=10&offset="+page);
- 
-        if (res.ok) {
-            console.log("Ok:");
+        const res = await fetch("/api/v1/poverty-stats?limit=10&offset="+page); //obtener limit y offset
+        const res2 = await fetch("/api/v1/poverty-stats");              //obtener datos
+
+        if (res.ok && res2.ok) {
             const json = await res.json();
-            poverty = json;
-            console.log("Received " + poverty.length + " poverty.");
+            const json2 = await res2.json();
+            poverty = json; //pagina
+            totalObj=json2.length; //datos
+            console.log("Received " + poverty.length + " data poverty.");
         } else {
             console.log("ERROR!");
         }
@@ -40,12 +50,28 @@
     //GET LoadInitialData
     async function getPovertyLoadInitialData() {
         console.log("Fetching poverty...");
-        const elements = await fetch("/api/v1/poverty-stats/loadInitialData");
+        const msg = await fetch("/api/v1/poverty-stats/loadInitialData").then(function(res){ //mensaje de alerta
+            visible = true;
+            if (res.status==200) {
+                console.log("ELEMENTOS: "+ totalObj);
+                color = "success";
+                errorMSG = "Objetos cargados correctamente";           
+            }else if (res.status==400) {
+                color = "danger";
+                errorMSG = "Ha ocurrido un fallo";
+                console.log("BAD REQUEST");            
+            } else {
+                color = "danger";
+                errorMSG= res.status + ": " + res.statusText;
+                console.log("ERROR!");
+            }
+        });
+        const elements = await fetch("/api/v1/poverty-stats/loadInitialData"); //datos cargados
         const jsonElements = await elements.json();
         page=1;
         totalObj = jsonElements.length;
         console.log("ELEMENTOS: "+ totalObj);
-        const res = await fetch("/api/v1/poverty-stats?limit=10&offset=1");
+        const res = await fetch("/api/v1/poverty-stats?limit=10&offset=1"); //datos mostrados
 
         if (res.ok) {
             console.log("Ok:");
@@ -62,16 +88,28 @@
     async function insertPoverty() {
  
         console.log("Inserting poverty..." + JSON.stringify(newPoverty));
- 
+
         const res = await fetch("/api/v1/poverty-stats", {
             method: "POST",
             body: JSON.stringify(newPoverty),
             headers: {
                 "Content-Type": "application/json"
             }
-        }).then(function (res) { 
-            totalObj++;
-            getPoverty();
+        }).then(function (res) {
+            visible=true;
+            if (res.status==200) {
+                totalObj++;
+                console.log("ELEMENTOS: "+ totalObj);
+                color = "success";
+                errorMSG = newPoverty.country + " insertado correctamente";
+                console.log(newPoverty.country + " updated");   
+                getPoverty();         
+            }else {
+                color = "danger";
+                errorMSG= "Formato incorrecto, compruebe que Country y Year estén rellenos o que no estén contenidos en la tabla.";
+                console.log("BAD REQUEST");
+            }
+            
         });
  
     }
@@ -81,8 +119,24 @@
         const res = await fetch("/api/v1/poverty-stats/" + country, {
             method: "DELETE"
         }).then(function (res) {
-            totalObj--;
+
             getPoverty();
+            visible = true;
+            if (res.status==200) {
+               totalObj--;
+                console.log("ELEMENTO: "+ totalObj+" borrado.");
+                color = "success";
+                errorMSG = "Objeto borrado correctamente.";
+                console.log("Deleted "+country+" poverty.");            
+            }else if (res.status==400) {
+                color = "danger";
+                errorMSG = "Ha ocurrido un fallo.";
+                console.log("BAD REQUEST");            
+            } else {
+                color = "danger";
+                errorMSG= res.status + ": " + res.statusText;
+                console.log("ERROR!");
+            }
         });
     }
 
@@ -91,9 +145,25 @@
         const res = await fetch("/api/v1/poverty-stats/", {
             method: "DELETE"
         }).then(function (res) {
-            page=1;
-            totalObj=0;
+            
             getPoverty();
+            visible = true;
+            if (res.status==200) {
+                page=1;
+                totalObj=0;
+                console.log("ELEMENTOS: "+ totalObj);
+                color = "success";
+                errorMSG = "Objetos borrados correctamente.";
+                console.log("Deleted all poverty.");            
+            }else if (res.status==400) {
+                color = "danger";
+                errorMSG = "Ha ocurrido un fallo.";
+                console.log("BAD REQUEST");            
+            } else {
+                color = "danger";
+                errorMSG= res.status + ": " + res.statusText;
+                console.log("ERROR!");
+            }
         });
     }
     
@@ -134,7 +204,6 @@
             console.log("ERROR!");
         }
     }
-
 </script>
  
 <main>
@@ -142,8 +211,14 @@
     {#await poverty}
         Loading poverty...
     {:then poverty}
-    
-        <Table bordered>
+
+    <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
+        {#if errorMSG}
+            STATUS: {errorMSG}
+        {/if}
+    </Alert>
+
+        <Table responsive>
             <thead>
                 <tr>
                     <th>Country</th>
@@ -190,13 +265,16 @@
             Atras
          </Button>
          {/if}
-         {#if (page+10) < totalObj}
+         {#if (page+10) <= totalObj}
         <Button outline color="success" on:click="{getNextPage}">
             Siguiente
          </Button>
          {/if}
     {/await}
- 
-    
+    <br>
+    <br>
+    <Button outline color="secondary" on:click="{pop}">Back</Button>
+    <br>
+    <br>
  
 </main>

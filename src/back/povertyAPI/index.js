@@ -187,8 +187,31 @@ module.exports = function (app) {
 				})
 
             }else if(limit!=null && offset != null){						//Get /poverty_stats Paginacion
-				res.send(JSON.stringify(poverty_stats.slice(startObject,endObject),null,2));
-			}
+						
+				if(limit<=0 || offset <=0){
+					res.sendStatus(400);
+				}else{
+					res.send(JSON.stringify(poverty_stats.slice(startObject,endObject),null,2));
+				}
+				
+
+			}else if(offset!=null){
+
+						if(offset<=0){
+							res.sendStatus(400);
+						}else{
+								
+							res.send(JSON.stringify(poverty_stats.slice(parseInt(offset)-1,poverty_stats.length),null,2))
+							
+						}
+					}else if(limit!=null){
+						if(limit<=0){
+							res.sendStatus(400);
+						}else{
+							res.send(JSON.stringify(poverty_stats.slice(0,parseInt(limit)),null,2));
+						}
+								
+						}
         });
     });
 
@@ -200,7 +223,8 @@ module.exports = function (app) {
 			
 			if(body.country!=null || body.under_190!=null || body.under_320!=null || body.under_550!=null || body.continent!=null || body.year!=null){
 				
-				if(array.length==0){
+				if(array.length==0 && body.country!=null && body.year!=null && body.country!="" && body.year!=""){
+					
 					db.insert(req.body);
 					res.send(JSON.stringify(Array(req.body), null, 2));
 				}else{
@@ -300,7 +324,7 @@ module.exports = function (app) {
 						});
 							//si no hemos encontrado que coincida el año
 						if (encontrado==false){
-							res.sendStatus(404,"SUICIDE NOT FOUND");
+							res.sendStatus(404,"DATA NOT FOUND");
 						}
 					});
 					

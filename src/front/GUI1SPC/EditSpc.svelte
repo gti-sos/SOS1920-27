@@ -32,14 +32,14 @@
     async function getSPC1() {
  
         console.log("Fetching spc...");
-        const res = await fetch("/api/v1/spc-stats/"+params.suicideCountry+"/"+params.suicideYear);
+        const res = await fetch("/api/v2/spc-stats/"+params.suicideCountry+"/"+params.suicideYear);
 
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
             spc = json;
 
-            updatedCountry= params.suicideCountry;
+            updatedCountry= spc.country;
             updatedBothSex= spc.both_sex;
             updatedMaleRank= spc.male_rank;
             updatedMaleNumber= spc.male_number;
@@ -49,20 +49,21 @@
             updatedYear= params.suicideYear;
             updatedContinent= spc.continent;
 
-            console.log("Received " + spc.length + " spc.");
+            console.log("Received " + spc.country);
         } else {
+            color = "danger";
             errorMSG= res.status + ": " + res.statusText;
             console.log("ERROR!");
         }
     }
 
      async function updateSpc() {
-        console.log("Inserting spc..." + JSON.stringify(params.suicideCountry));
+        console.log("Updating spc..." + JSON.stringify(params.suicideCountry));
  
-        const res = await fetch("/api/v1/spc-stats/"+params.suicideCountry+"/"+params.suicideYear, {
+        const res = await fetch("/api/v2/spc-stats/"+params.suicideCountry+"/"+params.suicideYear, {
             method: "PUT",
             body: JSON.stringify({
-                country: params.suicideCountry,
+                country: updatedCountry,
 				both_sex: updatedBothSex,
 				male_rank: updatedMaleRank,
 				male_number: updatedMaleNumber,
@@ -80,15 +81,15 @@
             getSPC1();
             if (res.status==200) {
                 color = "success";
-                errorMSG = params.suicideCountry + " actualizado correctamente";
-                console.log(params.suicideCountry + " updated");            
+                errorMSG = updatedCountry + " actualizado correctamente";
+                console.log(updatedCountry + " updated");            
             }else if (res.status==201) {
-                errorMSG = params.suicideCountry + " actualizado correctamente";
+                errorMSG = updatedCountry + " actualizado correctamente";
                 color = "success";
-                console.log(params.suicideCountry + " updated");            
+                console.log(updatedCountry + " updated");            
             }else if (res.status==404) {
                 color = "danger";
-                errorMSG = params.suicideCountry + " no ha sido encontrado";
+                errorMSG = updatedCountry + " no ha sido encontrado";
                 console.log("SUICIDE NOT FOUND");            
             } else {
                 color = "danger";
@@ -108,7 +109,7 @@
     {:then spc}
     <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
         {#if errorMSG}
-            STATUS: {errorMSG}
+            {errorMSG}
         {/if}
     </Alert>
         <Table bordered>
