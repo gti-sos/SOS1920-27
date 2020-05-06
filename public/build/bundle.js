@@ -9333,11 +9333,7 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-    // (251:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
-=======
     // (252:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
->>>>>>> 1ed5bb22a836cfcd413f4e1a404d64d19df80902
     function create_default_slot_11$1(ctx) {
     	let if_block_anchor;
     	let if_block = /*errorMSG*/ ctx[8] && create_if_block_4(ctx);
@@ -9382,11 +9378,7 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-    // (265:20) <Button outline color="info" on:click="{searchPoverty(countryValue, yearValue)}" style="margin-left: 2%;">
-=======
     // (266:20) <Button outline color="info" on:click="{searchPoverty(countryValue, yearValue)}" style="margin-left: 2%;">
->>>>>>> 1ed5bb22a836cfcd413f4e1a404d64d19df80902
     function create_default_slot_10$1(ctx) {
     	let t;
 
@@ -9472,11 +9464,7 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-    // (269:20) <Button outline color="info" on:click="{getPoverty}" style="margin-left: 2%;">
-=======
     // (270:20) <Button outline color="info" on:click="{getPoverty}" style="margin-left: 2%;">
->>>>>>> 1ed5bb22a836cfcd413f4e1a404d64d19df80902
     function create_default_slot_9$1(ctx) {
     	let t;
 
@@ -9552,16 +9540,6 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t5 = space();
     			if (if_block) if_block.c();
-<<<<<<< HEAD
-    			add_location(th, file$c, 257, 16, 8413);
-    			add_location(thead, file$c, 256, 12, 8388);
-    			attr_dev(input0, "type", "text");
-    			add_location(input0, file$c, 262, 29, 8549);
-    			attr_dev(input1, "type", "text");
-    			add_location(input1, file$c, 262, 83, 8603);
-    			add_location(tr, file$c, 260, 16, 8492);
-    			add_location(tbody, file$c, 259, 12, 8467);
-=======
     			add_location(th, file$c, 258, 16, 8510);
     			add_location(thead, file$c, 257, 12, 8485);
     			attr_dev(input0, "type", "text");
@@ -9570,7 +9548,6 @@ var app = (function () {
     			add_location(input1, file$c, 263, 83, 8700);
     			add_location(tr, file$c, 261, 16, 8589);
     			add_location(tbody, file$c, 260, 12, 8564);
->>>>>>> 1ed5bb22a836cfcd413f4e1a404d64d19df80902
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -9727,22 +9704,6 @@ var app = (function () {
     			t5 = space();
     			td6 = element("td");
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-    			add_location(input0, file$c, 290, 24, 9632);
-    			add_location(td0, file$c, 290, 20, 9628);
-    			add_location(input1, file$c, 291, 24, 9704);
-    			add_location(td1, file$c, 291, 20, 9700);
-    			add_location(input2, file$c, 292, 24, 9778);
-    			add_location(td2, file$c, 292, 20, 9774);
-    			add_location(input3, file$c, 293, 24, 9852);
-    			add_location(td3, file$c, 293, 20, 9848);
-    			add_location(input4, file$c, 294, 24, 9926);
-    			add_location(td4, file$c, 294, 20, 9922);
-    			add_location(input5, file$c, 295, 24, 9995);
-    			add_location(td5, file$c, 295, 20, 9991);
-    			add_location(td6, file$c, 296, 20, 10065);
-    			add_location(tr, file$c, 289, 16, 9602);
-=======
     			add_location(input0, file$c, 291, 24, 9729);
     			add_location(td0, file$c, 291, 20, 9725);
     			add_location(input1, file$c, 292, 24, 9801);
@@ -9757,7 +9718,6 @@ var app = (function () {
     			add_location(td5, file$c, 296, 20, 10088);
     			add_location(td6, file$c, 297, 20, 10162);
     			add_location(tr, file$c, 290, 16, 9699);
->>>>>>> 1ed5bb22a836cfcd413f4e1a404d64d19df80902
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, tr, anchor);
@@ -9986,17 +9946,6 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t12 = space();
     			attr_dev(a, "href", a_href_value = "#/poverty-stats/" + /*poverty*/ ctx[9].country + "/" + /*poverty*/ ctx[9].year);
-<<<<<<< HEAD
-    			add_location(a, file$c, 301, 28, 10295);
-    			add_location(td0, file$c, 301, 24, 10291);
-    			add_location(td1, file$c, 302, 24, 10406);
-    			add_location(td2, file$c, 303, 24, 10460);
-    			add_location(td3, file$c, 304, 24, 10514);
-    			add_location(td4, file$c, 305, 24, 10568);
-    			add_location(td5, file$c, 306, 24, 10617);
-    			add_location(td6, file$c, 307, 24, 10671);
-    			add_location(tr, file$c, 300, 20, 10261);
-=======
     			add_location(a, file$c, 302, 28, 10392);
     			add_location(td0, file$c, 302, 24, 10388);
     			add_location(td1, file$c, 303, 24, 10503);
@@ -10006,7 +9955,6 @@ var app = (function () {
     			add_location(td5, file$c, 307, 24, 10714);
     			add_location(td6, file$c, 308, 24, 10768);
     			add_location(tr, file$c, 301, 20, 10358);
->>>>>>> 1ed5bb22a836cfcd413f4e1a404d64d19df80902
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -10143,17 +10091,6 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-<<<<<<< HEAD
-    			add_location(th0, file$c, 279, 20, 9268);
-    			add_location(th1, file$c, 280, 20, 9306);
-    			add_location(th2, file$c, 281, 20, 9346);
-    			add_location(th3, file$c, 282, 20, 9386);
-    			add_location(th4, file$c, 283, 20, 9426);
-    			add_location(th5, file$c, 284, 20, 9461);
-    			add_location(tr, file$c, 278, 16, 9242);
-    			add_location(thead, file$c, 277, 12, 9217);
-    			add_location(tbody, file$c, 287, 12, 9538);
-=======
     			add_location(th0, file$c, 280, 20, 9365);
     			add_location(th1, file$c, 281, 20, 9403);
     			add_location(th2, file$c, 282, 20, 9443);
@@ -10163,7 +10100,6 @@ var app = (function () {
     			add_location(tr, file$c, 279, 16, 9339);
     			add_location(thead, file$c, 278, 12, 9314);
     			add_location(tbody, file$c, 288, 12, 9635);
->>>>>>> 1ed5bb22a836cfcd413f4e1a404d64d19df80902
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -10333,11 +10269,7 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-    // (320:8) {#if page!=1 && busqueda==false}
-=======
     // (321:8) {#if page!=1 && busqueda==false}
->>>>>>> 1ed5bb22a836cfcd413f4e1a404d64d19df80902
     function create_if_block_1$2(ctx) {
     	let current;
 
@@ -10388,11 +10320,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-<<<<<<< HEAD
-    		source: "(320:8) {#if page!=1 && busqueda==false}",
-=======
     		source: "(321:8) {#if page!=1 && busqueda==false}",
->>>>>>> 1ed5bb22a836cfcd413f4e1a404d64d19df80902
     		ctx
     	});
 
@@ -10426,11 +10354,7 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-    // (325:9) {#if (page+10) <= totalObj && busqueda==false}
-=======
     // (326:9) {#if (page+10) <= totalObj && busqueda==false}
->>>>>>> 1ed5bb22a836cfcd413f4e1a404d64d19df80902
     function create_if_block$8(ctx) {
     	let current;
 
@@ -10625,19 +10549,11 @@ var app = (function () {
     			br2 = element("br");
     			t4 = space();
     			br3 = element("br");
-<<<<<<< HEAD
-    			add_location(br0, file$c, 330, 4, 11484);
-    			add_location(br1, file$c, 331, 4, 11494);
-    			add_location(br2, file$c, 333, 4, 11574);
-    			add_location(br3, file$c, 334, 4, 11584);
-    			add_location(main, file$c, 244, 0, 8102);
-=======
     			add_location(br0, file$c, 331, 4, 11581);
     			add_location(br1, file$c, 332, 4, 11591);
     			add_location(br2, file$c, 334, 4, 11671);
     			add_location(br3, file$c, 335, 4, 11681);
     			add_location(main, file$c, 245, 0, 8199);
->>>>>>> 1ed5bb22a836cfcd413f4e1a404d64d19df80902
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11395,31 +11311,6 @@ var app = (function () {
     			t19 = space();
     			td6 = element("td");
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-    			add_location(th0, file$d, 107, 20, 3455);
-    			add_location(th1, file$d, 108, 20, 3494);
-    			add_location(th2, file$d, 109, 20, 3534);
-    			add_location(th3, file$d, 110, 20, 3574);
-    			add_location(th4, file$d, 111, 20, 3614);
-    			add_location(th5, file$d, 112, 20, 3650);
-    			add_location(tr0, file$d, 106, 16, 3429);
-    			add_location(thead, file$d, 105, 12, 3404);
-    			add_location(input0, file$d, 117, 24, 3782);
-    			add_location(th6, file$d, 117, 20, 3778);
-    			add_location(input1, file$d, 118, 24, 3850);
-    			add_location(th7, file$d, 118, 20, 3846);
-    			add_location(input2, file$d, 119, 24, 3919);
-    			add_location(th8, file$d, 119, 20, 3915);
-    			add_location(input3, file$d, 120, 24, 3988);
-    			add_location(th9, file$d, 120, 20, 3984);
-    			add_location(input4, file$d, 121, 24, 4057);
-    			add_location(th10, file$d, 121, 20, 4053);
-    			add_location(input5, file$d, 122, 24, 4122);
-    			add_location(th11, file$d, 122, 20, 4118);
-    			add_location(td, file$d, 123, 20, 4188);
-    			add_location(tr1, file$d, 116, 16, 3752);
-    			add_location(tbody, file$d, 115, 12, 3727);
-=======
     			add_location(th0, file$d, 109, 20, 3504);
     			add_location(th1, file$d, 110, 20, 3543);
     			add_location(th2, file$d, 111, 20, 3583);
@@ -11441,7 +11332,6 @@ var app = (function () {
     			add_location(td6, file$d, 125, 20, 4195);
     			add_location(tr1, file$d, 118, 16, 3801);
     			add_location(tbody, file$d, 117, 12, 3776);
->>>>>>> 1ed5bb22a836cfcd413f4e1a404d64d19df80902
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
