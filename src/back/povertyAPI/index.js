@@ -324,7 +324,7 @@ module.exports = function (app) {
 						});
 							//si no hemos encontrado que coincida el año
 						if (encontrado==false){
-							res.sendStatus(404,"SUICIDE NOT FOUND");
+							res.sendStatus(404,"DATA NOT FOUND");
 						}
 					});
 					

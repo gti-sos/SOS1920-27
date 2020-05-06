@@ -50,12 +50,28 @@
     //GET LoadInitialData
     async function getPovertyLoadInitialData() {
         console.log("Fetching poverty...");
-        const elements = await fetch("/api/v1/poverty-stats/loadInitialData");
+        const msg = await fetch("/api/v1/poverty-stats/loadInitialData").then(function(res){ //mensaje de alerta
+            visible = true;
+            if (res.status==200) {
+                console.log("ELEMENTOS: "+ totalObj);
+                color = "success";
+                errorMSG = "Objetos cargados correctamente";           
+            }else if (res.status==400) {
+                color = "danger";
+                errorMSG = "Ha ocurrido un fallo";
+                console.log("BAD REQUEST");            
+            } else {
+                color = "danger";
+                errorMSG= res.status + ": " + res.statusText;
+                console.log("ERROR!");
+            }
+        });
+        const elements = await fetch("/api/v1/poverty-stats/loadInitialData"); //datos cargados
         const jsonElements = await elements.json();
         page=1;
         totalObj = jsonElements.length;
         console.log("ELEMENTOS: "+ totalObj);
-        const res = await fetch("/api/v1/poverty-stats?limit=10&offset=1");
+        const res = await fetch("/api/v1/poverty-stats?limit=10&offset=1"); //datos mostrados
 
         if (res.ok) {
             console.log("Ok:");
@@ -85,7 +101,7 @@
                 totalObj++;
                 console.log("ELEMENTOS: "+ totalObj);
                 color = "success";
-                errorMSG = newPoverty.country + " actualizado correctamente";
+                errorMSG = newPoverty.country + " insertado correctamente";
                 console.log(newPoverty.country + " updated");   
                 getPoverty();         
             }else {
@@ -103,9 +119,24 @@
         const res = await fetch("/api/v1/poverty-stats/" + country, {
             method: "DELETE"
         }).then(function (res) {
-            totalObj--;
-            console.log("ELEMENTOS: "+ totalObj);
+
             getPoverty();
+            visible = true;
+            if (res.status==200) {
+               totalObj--;
+                console.log("ELEMENTO: "+ totalObj+" borrado.");
+                color = "success";
+                errorMSG = "Objeto borrado correctamente.";
+                console.log("Deleted "+country+" poverty.");            
+            }else if (res.status==400) {
+                color = "danger";
+                errorMSG = "Ha ocurrido un fallo.";
+                console.log("BAD REQUEST");            
+            } else {
+                color = "danger";
+                errorMSG= res.status + ": " + res.statusText;
+                console.log("ERROR!");
+            }
         });
     }
 
@@ -114,10 +145,25 @@
         const res = await fetch("/api/v1/poverty-stats/", {
             method: "DELETE"
         }).then(function (res) {
-            page=1;
-            totalObj=0;
-            console.log("ELEMENTOS: "+ totalObj);
+            
             getPoverty();
+            visible = true;
+            if (res.status==200) {
+                page=1;
+                totalObj=0;
+                console.log("ELEMENTOS: "+ totalObj);
+                color = "success";
+                errorMSG = "Objetos borrados correctamente.";
+                console.log("Deleted all poverty.");            
+            }else if (res.status==400) {
+                color = "danger";
+                errorMSG = "Ha ocurrido un fallo.";
+                console.log("BAD REQUEST");            
+            } else {
+                color = "danger";
+                errorMSG= res.status + ": " + res.statusText;
+                console.log("ERROR!");
+            }
         });
     }
     

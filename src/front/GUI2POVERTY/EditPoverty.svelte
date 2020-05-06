@@ -105,21 +105,21 @@
         <Table responsive>
             <thead>
                 <tr>
-                    <th>Country</th>
+                    <th>Country*</th>
                     <th>Under_190</th>
                     <th>Under_320</th>
                     <th>Under_550</th>
-                    <th>Year</th>
+                    <th>Year*</th>
                     <th>Continent</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th>{updatedCountry}</th>
+                    <th><input bind:value="{updatedCountry}"></th>
                     <th><input bind:value="{updatedUnder190}"></th>
                     <th><input bind:value="{updatedUnder320}"></th>
                     <th><input bind:value="{updatedUnder550}"></th>
-                    <th>{updatedYear}</th>
+                    <th><input bind:value="{updatedYear}"></th>
                     <th><input bind:value="{updatedContinent}"></th>
                     <td> <Button outline  color="primary" on:click={updatePoverty}>Update</Button> </td>
                 </tr>
