@@ -156,16 +156,18 @@ module.exports = function (app) {
 
         const startObject = offset-1;                //comienzo del primer objeto de la pagina
 		const endObject =parseInt(offset)+parseInt(limit) - 1;                    //ultimo objeto de la pagina
-
+		console.log("empieza");
         db.find({}, (err, poverty_stats) =>{
             poverty_stats.forEach( (c) => {
                 delete c._id;
             });
 			
             if((limit==null && offset == null) && (yearQuery==null && countryQuery==null)){ //Get /poverty_stats sin querys por defecto
+				console.log("basico");
 				res.send(JSON.stringify(poverty_stats,null,2));
 				
-            }else if(yearQuery!=null && countryQuery!=null){				//Get /poverty_stats Busquedas
+            }else if(yearQuery!=null && countryQuery!=null){
+				console.log("yearQuery!=null && countryQuery!=null");				//Get /poverty_stats Busquedas
                 db.find({country: countryQuery},(err, array)=>{
 
 					array.forEach(c=>{
@@ -178,16 +180,65 @@ module.exports = function (app) {
 							arrayGet.push(array[i]);
 						}
 					}
-					
-					if(arrayGet.length>0){
+					/*if(arrayGet.length==1){
 						res.send(JSON.stringify(arrayGet[0],null,2));
+					}else */if(arrayGet.length>0){
+						res.send(JSON.stringify(arrayGet,null,2));
 					}else{
 						res.sendStatus(404);
 					}
 				})
 
+			}else if(yearQuery!=null){
+				console.log("yearQuery!=null");
+					console.log("year: "+yearQuery);
+
+					db.find({year: parseInt(yearQuery)},(err, array)=>{
+					var arrayGet=[];
+
+					console.log("array: "+JSON.stringify(array,null,2));
+					array.forEach(c=>{
+						delete c._id;
+					})
+					
+					for(var i=0;i<array.length;i++){
+						if(array[i].year==yearQuery){
+							arrayGet.push(array[i]);
+						}
+					}
+					/*if(arrayGet.length==1){
+						res.send(JSON.stringify(arrayGet[0],null,2));
+					}else */if(arrayGet.length>0){
+						res.send(JSON.stringify(arrayGet,null,2));
+					}else{
+						res.sendStatus(404);
+					}
+				})
+			}else if(countryQuery!=null){
+					console.log("countryQuery!=null");
+					db.find({country: countryQuery},(err, array)=>{
+					var arrayGet=[];
+
+					array.forEach(c=>{
+						delete c._id;
+					})
+					
+					for(var i=0;i<array.length;i++){
+						if(array[i].country==countryQuery){
+							arrayGet.push(array[i]);
+						}
+					}
+					/*if(arrayGet.length==1){
+						res.send(JSON.stringify(arrayGet[0],null,2));
+					}else */if(arrayGet.length>0){
+						res.send(JSON.stringify(arrayGet,null,2));
+					}else{
+						res.sendStatus(404);
+					}
+				})
+			
 			}else if(limit!=null && offset != null){						//Get /poverty_stats Paginacion
-						
+				console.log("limit!=null && offset != null");
 				if(limit<=0 || offset <=0){
 					res.sendStatus(400);
 				}else{
@@ -199,13 +250,14 @@ module.exports = function (app) {
 					}	
 				}
 				 }else if(offset!=null){
-
+					console.log("offset != null");
 							if(offset<=0){
 								res.sendStatus(400);
 							}else{
 									res.send(JSON.stringify(poverty_stats.slice(parseInt(offset)-1,poverty_stats.length),null,2));
 							}
 						}else if(limit!=null){
+							console.log("limit!=null");
 									if(limit<=0){
 										res.sendStatus(400);
 									}else if(limit==1){
@@ -275,6 +327,7 @@ module.exports = function (app) {
 
 		});
 	});
+
 	//GET /poverty_stats/country/year 
 	app.get(BASE_API_URL+"/poverty-stats/:country/:year", (req, res)=>{
         var countryparam = req.params.country;
