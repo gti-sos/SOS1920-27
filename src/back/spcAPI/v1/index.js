@@ -1,6 +1,5 @@
 module.exports = function (app) {
-    console.log("Registering spc API....");
-    
+   
     const dataStore = require("nedb")
     const path = require("path");
 
@@ -14,7 +13,7 @@ module.exports = function (app) {
                 autoload: true
                 });
 
-    var ejemplos_spc = [
+    var ejemplos_spc_v1 = [
 			{
 				country: "guyana",
 				both_sex: 30.2,
@@ -79,7 +78,7 @@ module.exports = function (app) {
 		db.remove({},{multi:true}, function (err, doc){});
 		console.log("New GET .../loadInitialData");
 		
-		db.insert(ejemplos_spc);
+		db.insert(ejemplos_spc_v1);
 		res.send(JSON.stringify(ejemplos_spc,null,2));
         console.log("Initial spc loaded:"+JSON.stringify(ejemplos_spc,null,2));
 		});
