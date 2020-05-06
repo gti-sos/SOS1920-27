@@ -12,6 +12,7 @@
     //Para busquedas
     import { Collapse, CardBody, Card } from "sveltestrap";
     let isOpen = false;
+    let busquedas = "/api/v2/spc-stats?";
 
     //ALERTAS
     let visible = false;
@@ -33,15 +34,15 @@
     };
 
     let searchSpc = {
-        country: "",
-        both_sex: "",
-        male_rank: "",
-        male_number: "",
-        female_rank: "",
-        female_number: "",
-        ratio: "",
-        year: "",
-        continent: ""
+        country: null,
+        both_sex: null,
+        male_rank: null,
+        male_number: null,
+        female_rank: null,
+        female_number: null,
+        ratio: null,
+        year: null,
+        continent: null
     };
     let errorMSG = "";
     onMount(getSPC);
@@ -165,22 +166,56 @@
         });
     }
 
-    //GET
+    //SEARCH
     async function searchSPC() {
  
-        console.log("Fetching spc...");
-        const res = await fetch("/api/v2/spc-stats?country="+searchSpc.country + "&both_sex="+searchSpc.both_sex + "&male_rank="+searchSpc.male_rank + "&male_number="
-                                        +searchSpc.male_number + "&female_rank="+searchSpc.female_rank + "&female_number="+searchSpc.female_number + "&ratio="
-                                        +searchSpc.ratio + "&year="+searchSpc.year + "&continent="+searchSpc.continent);
+        console.log("Searching spc...");
 
+
+        if (searchSpc.country!=null) {
+            busquedas+="country="+searchSpc.country +"&";
+        }if (searchSpc.both_sex!=null) {
+            busquedas+="both_sex="+searchSpc.both_sex +"&";
+        }if (searchSpc.male_rank!=null) {
+            busquedas+="male_rank="+searchSpc.male_rank +"&";
+        }if (searchSpc.male_number!=null) {
+            busquedas+="male_number="+searchSpc.male_number +"&";
+        }if (searchSpc.female_rank!=null) {
+            busquedas+="female_rank="+searchSpc.female_rank +"&";
+        }if (searchSpc.female_number!=null) {
+            busquedas+="female_number="+searchSpc.female_number +"&";
+        }if (searchSpc.ratio!=null) {
+            busquedas+="ratio="+searchSpc.ratio +"&";
+        }if (searchSpc.year!=null) {
+            busquedas+="year="+searchSpc.year +"&";
+        }if (searchSpc.continent!=null) {
+            busquedas+="continent="+searchSpc.continent +"&";
+        }
+
+        const res = await fetch(busquedas);
+        busquedas="/api/v2/spc-stats?";
+        searchSpc = {
+            country: null,
+            both_sex: null,
+            male_rank: null,
+            male_number: null,
+            female_rank: null,
+            female_number: null,
+            ratio: null,
+            year: null,
+            continent: null
+        };
         if (res.ok) {
+            visible = false;
             console.log("Ok:");
             const json = await res.json();
             spc = json;
             console.log("Received " + spc.length + " spc.");
         } else {
-            errorMSG= res.status + ": " + res.statusText;
-            console.log("ERROR!");
+            visible = true;
+            color = "danger";
+            errorMSG = "No se ha encontrado ningún objeto";
+            console.log("Data not found!");
         }
     }
 
@@ -235,14 +270,14 @@
         Buscar spc
       </Button>
       <Collapse {isOpen}>
-        <Table bordered>
+        <Table bordered responsive>
             <tbody>
                 <tr>
                     <td><input placeholder="País" bind:value="{searchSpc.country}"></td>
                     <td><input placeholder="Ambos sexos" bind:value="{searchSpc.both_sex}"></td>
-                    <td><input placeholder="Rango hombres" bind:value="{searchSpc.male_rank}"></td>
+                    <td><input placeholder="Ranking hombres" bind:value="{searchSpc.male_rank}"></td>
                     <td><input placeholder="Número hombres (en miles)" bind:value="{searchSpc.male_number}"></td>
-                    <td><input placeholder="Rango mujeres" bind:value="{searchSpc.female_rank}"></td>
+                    <td><input placeholder="Ranking mujeres" bind:value="{searchSpc.female_rank}"></td>
                     <td><input placeholder="Número mujeres (en miles)" bind:value="{searchSpc.female_number}"></td>
                     <td><input placeholder="Ratio" bind:value="{searchSpc.ratio}"></td>
                     <td><input placeholder="Año" bind:value="{searchSpc.year}"></td>
@@ -261,7 +296,7 @@
             {errorMSG}
         {/if}
     </Alert>
-        <Table bordered>
+        <Table bordered responsive>
             <thead>
                 <tr>
                     <th>Country</th>

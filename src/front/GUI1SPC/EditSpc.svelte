@@ -112,7 +112,7 @@
             {errorMSG}
         {/if}
     </Alert>
-        <Table bordered>
+        <Table bordered responsive>
             <thead>
                 <tr>
                     <th>Country</th>
