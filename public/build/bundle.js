@@ -5637,18 +5637,18 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t18 = space();
     			attr_dev(a, "href", a_href_value = "#/spc-stats/" + /*suicide*/ ctx[24].country + "/" + /*suicide*/ ctx[24].year);
-    			add_location(a, file$7, 237, 28, 7839);
-    			add_location(td0, file$7, 237, 24, 7835);
-    			add_location(td1, file$7, 238, 24, 7946);
-    			add_location(td2, file$7, 239, 24, 7999);
-    			add_location(td3, file$7, 240, 24, 8053);
-    			add_location(td4, file$7, 241, 24, 8109);
-    			add_location(td5, file$7, 242, 24, 8165);
-    			add_location(td6, file$7, 243, 24, 8223);
-    			add_location(td7, file$7, 244, 24, 8273);
-    			add_location(td8, file$7, 245, 24, 8322);
-    			add_location(td9, file$7, 246, 24, 8376);
-    			add_location(tr, file$7, 236, 20, 7805);
+    			add_location(a, file$7, 237, 28, 7835);
+    			add_location(td0, file$7, 237, 24, 7831);
+    			add_location(td1, file$7, 238, 24, 7942);
+    			add_location(td2, file$7, 239, 24, 7995);
+    			add_location(td3, file$7, 240, 24, 8049);
+    			add_location(td4, file$7, 241, 24, 8105);
+    			add_location(td5, file$7, 242, 24, 8161);
+    			add_location(td6, file$7, 243, 24, 8219);
+    			add_location(td7, file$7, 244, 24, 8269);
+    			add_location(td8, file$7, 245, 24, 8318);
+    			add_location(td9, file$7, 246, 24, 8372);
+    			add_location(tr, file$7, 236, 20, 7801);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -5887,39 +5887,39 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$7, 209, 20, 6529);
-    			add_location(th1, file$7, 210, 20, 6567);
-    			add_location(th2, file$7, 211, 20, 6606);
-    			add_location(th3, file$7, 212, 20, 6646);
-    			add_location(th4, file$7, 213, 20, 6688);
-    			add_location(th5, file$7, 214, 20, 6730);
-    			add_location(th6, file$7, 215, 20, 6774);
-    			add_location(th7, file$7, 216, 20, 6810);
-    			add_location(th8, file$7, 217, 20, 6845);
-    			add_location(th9, file$7, 218, 20, 6885);
-    			add_location(tr0, file$7, 208, 16, 6503);
-    			add_location(thead, file$7, 207, 12, 6478);
-    			add_location(input0, file$7, 223, 24, 7015);
-    			add_location(td0, file$7, 223, 20, 7011);
-    			add_location(input1, file$7, 224, 24, 7083);
-    			add_location(td1, file$7, 224, 20, 7079);
-    			add_location(input2, file$7, 225, 24, 7152);
-    			add_location(td2, file$7, 225, 20, 7148);
-    			add_location(input3, file$7, 226, 24, 7222);
-    			add_location(td3, file$7, 226, 20, 7218);
-    			add_location(input4, file$7, 227, 24, 7294);
-    			add_location(td4, file$7, 227, 20, 7290);
-    			add_location(input5, file$7, 228, 24, 7366);
-    			add_location(td5, file$7, 228, 20, 7362);
-    			add_location(input6, file$7, 229, 24, 7440);
-    			add_location(td6, file$7, 229, 20, 7436);
-    			add_location(input7, file$7, 230, 24, 7506);
-    			add_location(td7, file$7, 230, 20, 7502);
-    			add_location(input8, file$7, 231, 24, 7571);
-    			add_location(td8, file$7, 231, 20, 7567);
-    			add_location(td9, file$7, 232, 20, 7637);
-    			add_location(tr1, file$7, 222, 16, 6985);
-    			add_location(tbody, file$7, 221, 12, 6960);
+    			add_location(th0, file$7, 209, 20, 6525);
+    			add_location(th1, file$7, 210, 20, 6563);
+    			add_location(th2, file$7, 211, 20, 6602);
+    			add_location(th3, file$7, 212, 20, 6642);
+    			add_location(th4, file$7, 213, 20, 6684);
+    			add_location(th5, file$7, 214, 20, 6726);
+    			add_location(th6, file$7, 215, 20, 6770);
+    			add_location(th7, file$7, 216, 20, 6806);
+    			add_location(th8, file$7, 217, 20, 6841);
+    			add_location(th9, file$7, 218, 20, 6881);
+    			add_location(tr0, file$7, 208, 16, 6499);
+    			add_location(thead, file$7, 207, 12, 6474);
+    			add_location(input0, file$7, 223, 24, 7011);
+    			add_location(td0, file$7, 223, 20, 7007);
+    			add_location(input1, file$7, 224, 24, 7079);
+    			add_location(td1, file$7, 224, 20, 7075);
+    			add_location(input2, file$7, 225, 24, 7148);
+    			add_location(td2, file$7, 225, 20, 7144);
+    			add_location(input3, file$7, 226, 24, 7218);
+    			add_location(td3, file$7, 226, 20, 7214);
+    			add_location(input4, file$7, 227, 24, 7290);
+    			add_location(td4, file$7, 227, 20, 7286);
+    			add_location(input5, file$7, 228, 24, 7362);
+    			add_location(td5, file$7, 228, 20, 7358);
+    			add_location(input6, file$7, 229, 24, 7436);
+    			add_location(td6, file$7, 229, 20, 7432);
+    			add_location(input7, file$7, 230, 24, 7502);
+    			add_location(td7, file$7, 230, 20, 7498);
+    			add_location(input8, file$7, 231, 24, 7567);
+    			add_location(td8, file$7, 231, 20, 7563);
+    			add_location(td9, file$7, 232, 20, 7633);
+    			add_location(tr1, file$7, 222, 16, 6981);
+    			add_location(tbody, file$7, 221, 12, 6956);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -6334,10 +6334,10 @@ var app = (function () {
     			br1 = element("br");
     			t4 = space();
     			create_component(button.$$.fragment);
-    			add_location(h1, file$7, 197, 4, 6205);
-    			add_location(br0, file$7, 266, 4, 9061);
-    			add_location(br1, file$7, 267, 4, 9071);
-    			add_location(main, file$7, 196, 0, 6193);
+    			add_location(h1, file$7, 197, 4, 6201);
+    			add_location(br0, file$7, 266, 4, 9057);
+    			add_location(br1, file$7, 267, 4, 9067);
+    			add_location(main, file$7, 196, 0, 6189);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6435,7 +6435,7 @@ var app = (function () {
     	//GET
     	async function getSPC() {
     		console.log("Fetching spc...");
-    		const res = await fetch("/api/v1/spc-stats?limit=10&offset=1");
+    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -6451,8 +6451,8 @@ var app = (function () {
     	//GET INITIALDATA
     	async function getSPCLoadInitialData() {
     		console.log("Fetching spc...");
-    		await fetch("/api/v1/spc-stats/loadInitialData");
-    		const res = await fetch("/api/v1/spc-stats?limit=10&offset=1");
+    		await fetch("/api/v2/spc-stats/loadInitialData");
+    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -6470,7 +6470,7 @@ var app = (function () {
     	async function insertSPC() {
     		console.log("Inserting spc..." + JSON.stringify(newSpc));
 
-    		const res = await fetch("/api/v1/spc-stats", {
+    		const res = await fetch("/api/v2/spc-stats", {
     			method: "POST",
     			body: JSON.stringify(newSpc),
     			headers: { "Content-Type": "application/json" }
@@ -6501,7 +6501,7 @@ var app = (function () {
 
     	//DELETE SPECIFIC
     	async function deleteSPC(name, year) {
-    		const res = await fetch("/api/v1/spc-stats/" + name + "/" + year, { method: "DELETE" }).then(function (res) {
+    		const res = await fetch("/api/v2/spc-stats/" + name + "/" + year, { method: "DELETE" }).then(function (res) {
     			$$invalidate(0, visible = true);
     			getSPC();
 
@@ -6524,7 +6524,7 @@ var app = (function () {
 
     	//DELETE ALL
     	async function deleteSPCALL() {
-    		const res = await fetch("/api/v1/spc-stats/", { method: "DELETE" }).then(function (res) {
+    		const res = await fetch("/api/v2/spc-stats/", { method: "DELETE" }).then(function (res) {
     			getSPC();
     			$$invalidate(0, visible = true);
 
@@ -6556,7 +6556,7 @@ var app = (function () {
     		}
 
     		console.log("Charging page " + page);
-    		const res = await fetch("/api/v1/poverty-stats?limit=10&offset=" + page);
+    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=" + page);
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -6576,7 +6576,7 @@ var app = (function () {
     		} else page = 1;
 
     		console.log("Charging page " + page);
-    		const res = await fetch("/api/v1/spc-stats?limit=10&offset=" + page);
+    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=" + page);
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -7458,7 +7458,7 @@ var app = (function () {
     	//GET
     	async function getSPC1() {
     		console.log("Fetching spc...");
-    		const res = await fetch("/api/v1/spc-stats/" + params.suicideCountry + "/" + params.suicideYear);
+    		const res = await fetch("/api/v2/spc-stats/" + params.suicideCountry + "/" + params.suicideYear);
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -7483,7 +7483,7 @@ var app = (function () {
     	async function updateSpc() {
     		console.log("Inserting spc..." + JSON.stringify(params.suicideCountry));
 
-    		const res = await fetch("/api/v1/spc-stats/" + params.suicideCountry + "/" + params.suicideYear, {
+    		const res = await fetch("/api/v2/spc-stats/" + params.suicideCountry + "/" + params.suicideYear, {
     			method: "PUT",
     			body: JSON.stringify({
     				country: params.suicideCountry,
