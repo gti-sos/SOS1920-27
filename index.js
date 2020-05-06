@@ -3,7 +3,8 @@ const bodyParser = require("body-parser");
 const back = require("./src/back");
 const spcStatsv1 = require("./src/back/spcAPI/v1");
 const spcStatsv2 = require("./src/back/spcAPI/v2");
-const lqStats = require("./src/back/lqAPI");
+const lqStatsv1 = require("./src/back/lqAPI/v1");
+const lqStatsv2 = require("./src/back/lqAPI/v2");
 const povertyStats = require("./src/back/povertyAPI");
 var app = express();
 
@@ -14,7 +15,9 @@ back(app);
 spcStatsv2(app);
 spcStatsv1(app);
 
-lqStats(app);
+lqStatsv1(app);
+lqStatsv2(app);
+
 povertyStats(app);
 
 var port = process.env.PORT || 80;

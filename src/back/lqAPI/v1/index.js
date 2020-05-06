@@ -15,7 +15,7 @@ module.exports = function (app) {
                 });
 
     
-    var ejemplos_lq = [
+    var ejemplos_lq_v1 = [
 
 				{ 
 					rank: 1,
@@ -86,106 +86,9 @@ module.exports = function (app) {
 					total: 77,
 					year: 2016,
 					continent: "europe"
-				},
-				{ 
-					rank: 6,
-					country: "switzerland",
-					stability: 95,
-					right: 100,
-					health: 93,
-					security: 100,
-					climate: 25,
-					costs: 45,
-					popularity: 70,
-					total: 77,
-					year: 2016,
-					continent: "europe"
-				},
-				{ 
-					rank: 7,
-					country: "austria",
-					stability: 82,
-					right: 100,
-					health: 99,
-					security: 100,
-					climate: 25,
-					costs: 33,
-					popularity: 95,
-					total: 76,
-					year: 2016,
-					continent: "europe"
-				},
-				{ 
-					rank: 8,
-					country: "singapore",
-					stability: 90,
-					right: 90,
-					health: 72,
-					security: 100,
-					climate: 41,
-					costs: 49,
-					popularity: 93,
-					total: 76,
-					year: 2016,
-					continent: "asia"
-				},
-				{ 
-					rank: 9,
-					country: "japan",
-					stability: 89,
-					right: 98,
-					health: 91,
-					security: 99,
-					climate: 52,
-					costs: 24,
-					popularity: 72,
-					total: 75,
-					year: 2016,
-					continent: "asia"
-				},
-				{ 
-					rank: 10,
-					country: "germany",
-					stability: 82,
-					right: 100,
-					health: 98,
-					security: 94,
-					climate: 22,
-					costs: 43,
-					popularity: 87,
-					total: 75,
-					year: 2016,
-					continent: "europe"
-				},
-				{ 
-					rank: 11,
-					country: "czechia",
-					stability: 90,
-					right: 82,
-					health: 94,
-					security: 100,
-					climate: 22,
-					costs: 57,
-					popularity: 69,
-					total: 74,
-					year: 2016,
-					continent: "europe"
-				},
-				{ 
-					rank: 12,
-					country: "spain",
-					stability: 57,
-					right: 80,
-					health: 85,
-					security: 97,
-					climate: 75,
-					costs: 36,
-					popularity: 96,
-					total: 74,
-					year: 2016,
-					continent: "europe"
 				}
 			];
+
 
 	//loadInitialData	
 	app.get(BASE_API_URL+"/lq-stats/loadInitialData",(req,res) =>{
@@ -193,9 +96,9 @@ module.exports = function (app) {
 		db.remove({},{multi:true}, function (err, doc){});
 		console.log("New GET .../loadInitialData");
 		
-		db.insert(ejemplos_lq);
-		res.send(JSON.stringify(ejemplos_lq,null,2));
-        console.log("Initial lq loaded:"+JSON.stringify(ejemplos_lq,null,2));
+		db.insert(ejemplos_lq_v1);
+		res.send(JSON.stringify(ejemplos_lq_v1,null,2));
+        console.log("Initial lq loaded:"+JSON.stringify(ejemplos_lq_v1,null,2));
 		});
 	
 	
@@ -247,28 +150,17 @@ module.exports = function (app) {
 			var copiadb = lq_stats;
 
 
-			if((limit!=null || offset != null) && countryQuery==null && yearQuery==null && rankQuery ==null && stabilityQuery ==null && rightQuery ==null && healthQuery ==null && securityQuery ==null && climateQuery ==null
-			 && costsQuery ==null && popularityQuery ==null && totalQuery ==null && continentQuery ==null){						//Get /lq_stats Paginacion
-				if(limit!=null && offset != null){
-					res.send(JSON.stringify(lq_stats.slice(startObject, endObject),null,2));	
-				} else if (limit!=null && offset == null){
-					res.send(JSON.stringify(lq_stats.slice(0,parseInt(limit)),null,2));
-				} else if(limit==null && offset != null){
-					res.send(JSON.stringify(lq_stats.slice(startObject,lq_stats.length),null,2));
-				}
-				
+			if(limit!=null && offset != null && countryQuery==null && yearQuery==null && rankQuery ==null && stabilityQuery ==null && rightQuery ==null && healthQuery ==null && securityQuery ==null && climateQuery ==null && costsQuery ==null && popularityQuery ==null && totalQuery ==null && continentQuery ==null){						//Get /lq_stats Paginacion
+				res.send(JSON.stringify(lq_stats.slice(startObject,endObject),null,2));
 			}
 
 
-			if (countryQuery==null && yearQuery==null && rankQuery ==null && stabilityQuery ==null && rightQuery ==null && healthQuery ==null && securityQuery ==null
-				 && climateQuery ==null && costsQuery ==null && popularityQuery ==null && totalQuery ==null && continentQuery ==null && limit==null && offset == null) { //get normal
-				
+			if (limit==null && offset == null && countryQuery==null && yearQuery==null && rankQuery ==null && stabilityQuery ==null && rightQuery ==null && healthQuery ==null && securityQuery ==null && climateQuery ==null && costsQuery ==null && popularityQuery ==null && totalQuery ==null && continentQuery ==null) { //get normal
 				res.send(JSON.stringify(lq_stats,null,2));
 
 
 
-			} if (countryQuery!=null || yearQuery!=null || rankQuery !=null || stabilityQuery !=null || rightQuery !=null || healthQuery !=null || securityQuery !=null  
-				 || climateQuery !=null || costsQuery !=null || popularityQuery !=null || totalQuery !=null || continentQuery !=null) { //busquedas
+			} if (countryQuery!=null || yearQuery!=null || rankQuery !=null || stabilityQuery !=null || rightQuery !=null || healthQuery !=null || securityQuery !=null || climateQuery !=null || costsQuery !=null || popularityQuery !=null || totalQuery !=null || continentQuery !=null) { //busquedas
 				
 				if (countryQuery!=null) {
 					for(var i=0;i<copiadb.length;i++){
