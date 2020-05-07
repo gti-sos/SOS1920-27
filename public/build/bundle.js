@@ -9600,16 +9600,6 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t5 = space();
     			if (if_block) if_block.c();
-<<<<<<< HEAD
-    			add_location(th, file$c, 268, 16, 8675);
-    			add_location(thead, file$c, 267, 12, 8650);
-    			attr_dev(input0, "type", "text");
-    			add_location(input0, file$c, 273, 29, 8811);
-    			attr_dev(input1, "type", "text");
-    			add_location(input1, file$c, 273, 83, 8865);
-    			add_location(tr, file$c, 271, 16, 8754);
-    			add_location(tbody, file$c, 270, 12, 8729);
-=======
     			add_location(th, file$c, 269, 16, 8689);
     			add_location(thead, file$c, 268, 12, 8664);
     			attr_dev(input0, "type", "text");
@@ -9618,7 +9608,6 @@ var app = (function () {
     			add_location(input1, file$c, 274, 83, 8879);
     			add_location(tr, file$c, 272, 16, 8768);
     			add_location(tbody, file$c, 271, 12, 8743);
->>>>>>> a58fef89fd3dafe857779b1d671c882ddb1775aa
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -9775,22 +9764,6 @@ var app = (function () {
     			t5 = space();
     			td6 = element("td");
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-    			add_location(input0, file$c, 301, 24, 9894);
-    			add_location(td0, file$c, 301, 20, 9890);
-    			add_location(input1, file$c, 302, 24, 9966);
-    			add_location(td1, file$c, 302, 20, 9962);
-    			add_location(input2, file$c, 303, 24, 10040);
-    			add_location(td2, file$c, 303, 20, 10036);
-    			add_location(input3, file$c, 304, 24, 10114);
-    			add_location(td3, file$c, 304, 20, 10110);
-    			add_location(input4, file$c, 305, 24, 10188);
-    			add_location(td4, file$c, 305, 20, 10184);
-    			add_location(input5, file$c, 306, 24, 10257);
-    			add_location(td5, file$c, 306, 20, 10253);
-    			add_location(td6, file$c, 307, 20, 10327);
-    			add_location(tr, file$c, 300, 16, 9864);
-=======
     			add_location(input0, file$c, 302, 24, 9908);
     			add_location(td0, file$c, 302, 20, 9904);
     			add_location(input1, file$c, 303, 24, 9980);
@@ -9805,7 +9778,6 @@ var app = (function () {
     			add_location(td5, file$c, 307, 20, 10267);
     			add_location(td6, file$c, 308, 20, 10341);
     			add_location(tr, file$c, 301, 16, 9878);
->>>>>>> a58fef89fd3dafe857779b1d671c882ddb1775aa
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, tr, anchor);
@@ -10034,17 +10006,6 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t12 = space();
     			attr_dev(a, "href", a_href_value = "#/poverty-stats/" + /*poverty*/ ctx[9].country + "/" + /*poverty*/ ctx[9].year);
-<<<<<<< HEAD
-    			add_location(a, file$c, 312, 28, 10557);
-    			add_location(td0, file$c, 312, 24, 10553);
-    			add_location(td1, file$c, 313, 24, 10668);
-    			add_location(td2, file$c, 314, 24, 10722);
-    			add_location(td3, file$c, 315, 24, 10776);
-    			add_location(td4, file$c, 316, 24, 10830);
-    			add_location(td5, file$c, 317, 24, 10879);
-    			add_location(td6, file$c, 318, 24, 10933);
-    			add_location(tr, file$c, 311, 20, 10523);
-=======
     			add_location(a, file$c, 313, 28, 10571);
     			add_location(td0, file$c, 313, 24, 10567);
     			add_location(td1, file$c, 314, 24, 10682);
@@ -10054,7 +10015,6 @@ var app = (function () {
     			add_location(td5, file$c, 318, 24, 10893);
     			add_location(td6, file$c, 319, 24, 10947);
     			add_location(tr, file$c, 312, 20, 10537);
->>>>>>> a58fef89fd3dafe857779b1d671c882ddb1775aa
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -10191,17 +10151,6 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-<<<<<<< HEAD
-    			add_location(th0, file$c, 290, 20, 9530);
-    			add_location(th1, file$c, 291, 20, 9568);
-    			add_location(th2, file$c, 292, 20, 9608);
-    			add_location(th3, file$c, 293, 20, 9648);
-    			add_location(th4, file$c, 294, 20, 9688);
-    			add_location(th5, file$c, 295, 20, 9723);
-    			add_location(tr, file$c, 289, 16, 9504);
-    			add_location(thead, file$c, 288, 12, 9479);
-    			add_location(tbody, file$c, 298, 12, 9800);
-=======
     			add_location(th0, file$c, 291, 20, 9544);
     			add_location(th1, file$c, 292, 20, 9582);
     			add_location(th2, file$c, 293, 20, 9622);
@@ -10211,7 +10160,6 @@ var app = (function () {
     			add_location(tr, file$c, 290, 16, 9518);
     			add_location(thead, file$c, 289, 12, 9493);
     			add_location(tbody, file$c, 299, 12, 9814);
->>>>>>> a58fef89fd3dafe857779b1d671c882ddb1775aa
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -10551,11 +10499,7 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-    // (258:20)           Loading poverty...      {:then poverty}
-=======
     // (259:20)           Loading poverty...      {:then poverty}
->>>>>>> a58fef89fd3dafe857779b1d671c882ddb1775aa
     function create_pending_block$4(ctx) {
     	let t;
 
@@ -10578,11 +10522,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$4.name,
     		type: "pending",
-<<<<<<< HEAD
-    		source: "(258:20)           Loading poverty...      {:then poverty}",
-=======
     		source: "(259:20)           Loading poverty...      {:then poverty}",
->>>>>>> a58fef89fd3dafe857779b1d671c882ddb1775aa
     		ctx
     	});
 
@@ -10669,19 +10609,11 @@ var app = (function () {
     			br2 = element("br");
     			t4 = space();
     			br3 = element("br");
-<<<<<<< HEAD
-    			add_location(br0, file$c, 341, 4, 11746);
-    			add_location(br1, file$c, 342, 4, 11756);
-    			add_location(br2, file$c, 344, 4, 11836);
-    			add_location(br3, file$c, 345, 4, 11846);
-    			add_location(main, file$c, 255, 0, 8364);
-=======
     			add_location(br0, file$c, 342, 4, 11760);
     			add_location(br1, file$c, 343, 4, 11770);
     			add_location(br2, file$c, 345, 4, 11850);
     			add_location(br3, file$c, 346, 4, 11860);
     			add_location(main, file$c, 256, 0, 8378);
->>>>>>> a58fef89fd3dafe857779b1d671c882ddb1775aa
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12299,7 +12231,6 @@ var app = (function () {
     			td11 = element("td");
     			create_component(button.$$.fragment);
     			t22 = space();
-<<<<<<< HEAD
     			add_location(td0, file$e, 238, 24, 7905);
     			attr_dev(a0, "href", a0_href_value = "#/lq-stats/" + /*lifeq*/ ctx[26].country + "/" + /*lifeq*/ ctx[26].year);
     			add_location(a0, file$e, 239, 28, 7956);
@@ -12317,25 +12248,6 @@ var app = (function () {
     			add_location(td10, file$e, 248, 24, 8455);
     			add_location(td11, file$e, 249, 24, 8556);
     			add_location(tr, file$e, 237, 20, 7875);
-=======
-    			add_location(td0, file$e, 239, 24, 7921);
-    			attr_dev(a0, "href", a0_href_value = "#/lq-stats/" + /*lifeq*/ ctx[26].country + "/" + /*lifeq*/ ctx[26].year);
-    			add_location(a0, file$e, 240, 28, 7972);
-    			add_location(td1, file$e, 240, 24, 7968);
-    			add_location(td2, file$e, 241, 24, 8072);
-    			add_location(td3, file$e, 242, 24, 8124);
-    			add_location(td4, file$e, 243, 24, 8172);
-    			add_location(td5, file$e, 244, 24, 8221);
-    			add_location(td6, file$e, 245, 24, 8272);
-    			add_location(td7, file$e, 246, 24, 8322);
-    			add_location(td8, file$e, 247, 24, 8370);
-    			add_location(td9, file$e, 248, 24, 8423);
-    			attr_dev(a1, "href", a1_href_value = "#/lq-stats/" + /*lifeq*/ ctx[26].country + "/" + /*lifeq*/ ctx[26].year);
-    			add_location(a1, file$e, 249, 28, 8475);
-    			add_location(td10, file$e, 249, 24, 8471);
-    			add_location(td11, file$e, 250, 24, 8572);
-    			add_location(tr, file$e, 238, 20, 7891);
->>>>>>> a58fef89fd3dafe857779b1d671c882ddb1775aa
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -12616,7 +12528,6 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-<<<<<<< HEAD
     			add_location(th0, file$e, 205, 24, 6257);
     			add_location(th1, file$e, 206, 24, 6296);
     			add_location(th2, file$e, 207, 24, 6338);
@@ -12658,49 +12569,6 @@ var app = (function () {
     			add_location(td12, file$e, 234, 24, 7709);
     			add_location(tr1, file$e, 221, 20, 6832);
     			add_location(tbody, file$e, 220, 16, 6803);
-=======
-    			add_location(th0, file$e, 206, 24, 6273);
-    			add_location(th1, file$e, 207, 24, 6312);
-    			add_location(th2, file$e, 208, 24, 6354);
-    			add_location(th3, file$e, 209, 24, 6398);
-    			add_location(th4, file$e, 210, 24, 6438);
-    			add_location(th5, file$e, 211, 24, 6479);
-    			add_location(th6, file$e, 212, 24, 6522);
-    			add_location(th7, file$e, 213, 24, 6564);
-    			add_location(th8, file$e, 214, 24, 6604);
-    			add_location(th9, file$e, 215, 24, 6649);
-    			add_location(th10, file$e, 216, 24, 6689);
-    			add_location(th11, file$e, 217, 24, 6728);
-    			add_location(tr0, file$e, 205, 20, 6243);
-    			add_location(thead, file$e, 204, 16, 6214);
-    			add_location(input0, file$e, 223, 28, 6882);
-    			add_location(td0, file$e, 223, 24, 6878);
-    			add_location(input1, file$e, 224, 28, 6950);
-    			add_location(td1, file$e, 224, 24, 6946);
-    			add_location(input2, file$e, 225, 28, 7021);
-    			add_location(td2, file$e, 225, 24, 7017);
-    			add_location(input3, file$e, 226, 28, 7094);
-    			add_location(td3, file$e, 226, 24, 7090);
-    			add_location(input4, file$e, 227, 28, 7163);
-    			add_location(td4, file$e, 227, 24, 7159);
-    			add_location(input5, file$e, 228, 28, 7233);
-    			add_location(td5, file$e, 228, 24, 7229);
-    			add_location(input6, file$e, 229, 28, 7305);
-    			add_location(td6, file$e, 229, 24, 7301);
-    			add_location(input7, file$e, 230, 28, 7376);
-    			add_location(td7, file$e, 230, 24, 7372);
-    			add_location(input8, file$e, 231, 28, 7445);
-    			add_location(td8, file$e, 231, 24, 7441);
-    			add_location(input9, file$e, 232, 28, 7519);
-    			add_location(td9, file$e, 232, 24, 7515);
-    			add_location(input10, file$e, 233, 28, 7588);
-    			add_location(td10, file$e, 233, 24, 7584);
-    			add_location(input11, file$e, 234, 28, 7656);
-    			add_location(td11, file$e, 234, 24, 7652);
-    			add_location(td12, file$e, 235, 24, 7725);
-    			add_location(tr1, file$e, 222, 20, 6848);
-    			add_location(tbody, file$e, 221, 16, 6819);
->>>>>>> a58fef89fd3dafe857779b1d671c882ddb1775aa
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -13039,11 +12907,7 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
     // (199:15)           Loading lq...      {:then lq}
-=======
-    // (200:15)           Loading lq...      {:then lq}
->>>>>>> a58fef89fd3dafe857779b1d671c882ddb1775aa
     function create_pending_block$6(ctx) {
     	let t;
 
@@ -13066,58 +12930,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$6.name,
     		type: "pending",
-<<<<<<< HEAD
     		source: "(199:15)           Loading lq...      {:then lq}",
-=======
-    		source: "(200:15)           Loading lq...      {:then lq}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (269:4) {#if errorMSG}
-    function create_if_block$a(ctx) {
-    	let br;
-    	let t0;
-    	let p;
-    	let t1;
-    	let t2;
-
-    	const block = {
-    		c: function create() {
-    			br = element("br");
-    			t0 = space();
-    			p = element("p");
-    			t1 = text("STATUS: ");
-    			t2 = text(/*errorMSG*/ ctx[1]);
-    			add_location(br, file$e, 269, 4, 9250);
-    			set_style(p, "color", "red");
-    			add_location(p, file$e, 270, 4, 9260);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, br, anchor);
-    			insert_dev(target, t0, anchor);
-    			insert_dev(target, p, anchor);
-    			append_dev(p, t1);
-    			append_dev(p, t2);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*errorMSG*/ 2) set_data_dev(t2, /*errorMSG*/ ctx[1]);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(br);
-    			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(p);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block$a.name,
-    		type: "if",
-    		source: "(269:4) {#if errorMSG}",
->>>>>>> a58fef89fd3dafe857779b1d671c882ddb1775aa
     		ctx
     	});
 
@@ -13201,17 +13014,10 @@ var app = (function () {
     			br1 = element("br");
     			t4 = space();
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
     			add_location(h1, file$e, 197, 4, 6066);
     			add_location(br0, file$e, 267, 4, 9214);
     			add_location(br1, file$e, 268, 4, 9224);
     			add_location(main, file$e, 196, 0, 6054);
-=======
-    			add_location(h1, file$e, 198, 4, 6093);
-    			add_location(br0, file$e, 272, 4, 9321);
-    			add_location(br1, file$e, 273, 4, 9331);
-    			add_location(main, file$e, 197, 0, 6081);
->>>>>>> a58fef89fd3dafe857779b1d671c882ddb1775aa
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
