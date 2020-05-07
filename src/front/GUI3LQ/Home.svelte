@@ -57,15 +57,14 @@
 
         console.log("Fetching lq...");
         await fetch("/api/v2/lq-stats/loadInitialData")
-        page=1;
-        const res = await fetch("/api/v2/lq-stats?limit=10&offset="+page);
+        const res = await fetch("/api/v2/lq-stats?limit=10&offset="+1);
         
 
         if (res.ok){
             console.log("Ok");
             const json = await res.json();
             lq = json;
-            totaldata = lq.length;
+            totaldata = 12;
             console.log("Received " + lq.length + " lq.");
         } else {
             errorMSG = res.status + ": " + res.statusText;
@@ -201,7 +200,7 @@
         Loading lq...
     {:then lq}
 
-        <Table bordered>
+        <Table bordered responsive>
                 <thead>
                     <tr>
                         <th>Rank</th>
@@ -266,10 +265,6 @@
            Siguiente
         </Button>
     {/await}
-    {#if errorMSG}
-    <br>
-    <p style="color: red">STATUS: {errorMSG}</p>
-    {/if}
     <br>
     <br>
     <Button outline color="secondary" on:click="{pop}">Back</Button>
