@@ -386,6 +386,6 @@ module.exports = function (app) {
 		res.sendStatus(405,"Method Not Allowed");
 	});
 	
-	console.log("SPC OK");
+	console.log("SPC v1 OK");
     
 };

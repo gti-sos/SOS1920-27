@@ -473,12 +473,14 @@ module.exports = function (app) {
     // DELETE SUICIDE/XXX/YYY
     
     app.delete(BASE_API_URL+"/spc-stats/:country/:year", (req,res)=>{
+		console.log("New DELETE .../lq-stats/:country/:year");
     	var yearparam = req.params.year;
     	var countryparam = req.params.country;
 		
 		db.remove({country: countryparam}, {year: countryparam}, function (err, doc){
 			if(doc!=0){
 				res.sendStatus(200,"SUCCESFULLY DELETED");
+				console.log("Data deleted");
 			}else{
 				res.sendStatus(404,"SUICIDE NOT FOUND");
 			}

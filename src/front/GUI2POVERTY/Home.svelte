@@ -306,7 +306,7 @@
                     <td><input bind:value="{newPoverty.under_550}"></td>
                     <td><input bind:value="{newPoverty.year}"></td>
                     <td><input bind:value="{newPoverty.continent}"></td>
-                    <td> <Button outline  color="primary" on:click={insertPoverty}>Insert</Button> </td>
+                    <td> <Button outline  color="primary" on:click={insertPoverty}>Insertar</Button> </td>
                 </tr>
                 {/if}
                 {#each poverty as poverty}
@@ -317,7 +317,7 @@
                         <td>{poverty.under_550}</td>
                         <td>{poverty.year}</td>
                         <td>{poverty.continent}</td>
-                        <td><Button outline color="danger" on:click="{deletePoverty(poverty.country)}">Delete</Button></td>
+                        <td><Button outline color="danger" on:click="{deletePoverty(poverty.country)}">Eliminar</Button></td>
                     </tr>
                 {/each}
             </tbody>
@@ -342,7 +342,7 @@
     {/await}
     <br>
     <br>
-    <Button outline color="secondary" on:click="{pop}">Back</Button>
+    <Button outline color="secondary" on:click="{pop}">Volver</Button>
     <br>
     <br>
  

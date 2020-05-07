@@ -18,5 +18,5 @@
 
 <br>
 <br>
-<Button outline color="secondary" on:click="{pop}">Back</Button>
+<Button outline color="secondary" on:click="{pop}">Volver</Button>
 </main>
