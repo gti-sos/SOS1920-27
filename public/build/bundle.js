@@ -6720,7 +6720,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("Insert");
+    			t = text("Insertar");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -6747,7 +6747,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("Delete");
+    			t = text("Borrar");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -6862,18 +6862,18 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t18 = space();
     			attr_dev(a, "href", a_href_value = "#/spc-stats/" + /*suicide*/ ctx[38].country + "/" + /*suicide*/ ctx[38].year);
-    			add_location(a, file$a, 329, 28, 11429);
-    			add_location(td0, file$a, 329, 24, 11425);
-    			add_location(td1, file$a, 330, 24, 11536);
-    			add_location(td2, file$a, 331, 24, 11589);
-    			add_location(td3, file$a, 332, 24, 11643);
-    			add_location(td4, file$a, 333, 24, 11699);
-    			add_location(td5, file$a, 334, 24, 11755);
-    			add_location(td6, file$a, 335, 24, 11813);
-    			add_location(td7, file$a, 336, 24, 11863);
-    			add_location(td8, file$a, 337, 24, 11912);
-    			add_location(td9, file$a, 338, 24, 11966);
-    			add_location(tr, file$a, 328, 20, 11395);
+    			add_location(a, file$a, 329, 28, 11431);
+    			add_location(td0, file$a, 329, 24, 11427);
+    			add_location(td1, file$a, 330, 24, 11538);
+    			add_location(td2, file$a, 331, 24, 11591);
+    			add_location(td3, file$a, 332, 24, 11645);
+    			add_location(td4, file$a, 333, 24, 11701);
+    			add_location(td5, file$a, 334, 24, 11757);
+    			add_location(td6, file$a, 335, 24, 11815);
+    			add_location(td7, file$a, 336, 24, 11865);
+    			add_location(td8, file$a, 337, 24, 11914);
+    			add_location(td9, file$a, 338, 24, 11968);
+    			add_location(tr, file$a, 328, 20, 11397);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -7488,7 +7488,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("Back");
+    			t = text("Atrás");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -7587,8 +7587,8 @@ var app = (function () {
     			t6 = space();
     			create_component(button1.$$.fragment);
     			add_location(h1, file$a, 266, 4, 8472);
-    			add_location(br0, file$a, 359, 4, 12666);
-    			add_location(br1, file$a, 360, 4, 12676);
+    			add_location(br0, file$a, 359, 4, 12668);
+    			add_location(br1, file$a, 360, 4, 12678);
     			add_location(main, file$a, 265, 0, 8460);
     		},
     		l: function claim(nodes) {
