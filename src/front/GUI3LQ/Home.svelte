@@ -91,11 +91,11 @@
 
         const res = await fetch(url);
         visible = true;
+        busqueda=true;
         if(res.ok) {
-            color = "sucess";
+            color = "success";
             errorMSG = "Se ha encontrado el objeto correctamente";
             const json = await res.json();
-            busqueda=true
             lq = json;
             console.log(json);
 
@@ -117,6 +117,12 @@
             }
         }
 
+    }
+
+    //Reiniciar filtro search
+    async function resetLQ(){
+        country = "";
+        year = "";
     }
 
     //INSERT
@@ -263,7 +269,7 @@
                         Buscar
                     </Button>
                     {#if busqueda==true}
-                    <Button outline color="info" on:click="{getLQ}">
+                    <Button outline color="info" on:click="{resetLQ}">
                         Reiniciar filtro
                     </Button>
                     {/if}
@@ -313,7 +319,7 @@
                         <td><input bind:value="{newLQ.total}"></td>
                         <td><input bind:value="{newLQ.year}"></td>
                         <td><input bind:value="{newLQ.continent}"></td>
-                        <td><Button outline color="primary" on:click={insertLQ}>Insert</Button></td>
+                        <td><Button outline color="primary" on:click={insertLQ}>Insertar</Button></td>
                     </tr>
                     {#each lq as lifeq}
                     <tr>
@@ -328,7 +334,7 @@
                         <td>{lifeq.popularity}</td>
                         <td>{lifeq.total}</td>
                         <td><a href="#/lq-stats/{lifeq.country}/{lifeq.year}">{lifeq.year}</a></td>
-                        <td><Button outline color="danger" on:click="{deleteLQ(lifeq.country)}">Delete</Button></td>
+                        <td><Button outline color="danger" on:click="{deleteLQ(lifeq.country, lifeq.year)}">Borrar</Button></td>
                     </tr>
                     {/each}
                 </tbody>
