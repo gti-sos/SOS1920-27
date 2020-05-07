@@ -322,7 +322,7 @@
                     <td><input bind:value="{newSpc.ratio}"></td>
                     <td><input bind:value="{newSpc.year}"></td>
                     <td><input bind:value="{newSpc.continent}"></td>
-                    <td> <Button outline  color="primary" on:click={insertSPC}>Insert</Button> </td>
+                    <td> <Button outline  color="primary" on:click={insertSPC}>Insertar</Button> </td>
                 </tr>
  
                 {#each spc as suicide}
@@ -336,7 +336,7 @@
                         <td>{suicide.ratio}</td>
                         <td>{suicide.year}</td>
                         <td>{suicide.continent}</td>
-                        <td><Button outline color="danger" on:click="{deleteSPC(suicide.country, suicide.year)}">Delete</Button></td>
+                        <td><Button outline color="danger" on:click="{deleteSPC(suicide.country, suicide.year)}">Borrar</Button></td>
                     </tr>
                 {/each}
             </tbody>
@@ -359,6 +359,6 @@
     
     <br>
     <br>
-    <Button outline color="secondary" on:click="{pop}">Back</Button>
+    <Button outline color="secondary" on:click="{pop}">Atrás</Button>
  
 </main>
