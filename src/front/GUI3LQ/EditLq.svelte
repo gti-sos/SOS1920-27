@@ -153,10 +153,10 @@
                     <td><input bind:value="{updatedTotal}"></td>
                     <td>{updatedYear}</td>
                     <td><input bind:value="{updatedContinent}"></td>
-                    <td> <Button outline  color="primary" on:click={updateLq}>Update</Button> </td>
+                    <td> <Button outline  color="primary" on:click={updateLq}>Actualizar</Button> </td>
                 </tr>
              </tbody>
         </Table>
     {/await}
-    <Button outline color="secondary" on:click="{pop}">Back</Button>
+    <Button outline color="secondary" on:click="{pop}">Volver</Button>
 </main>

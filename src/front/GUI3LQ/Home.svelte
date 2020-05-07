@@ -158,8 +158,8 @@
     }
 
     //DELETE SPECIFIC
-    async function deleteLQ(name, year){
-        const res = await fetch("/api/v2/lq-stats/" + name + "/" + year, {
+    async function deleteLQ(country, year){
+        const res = await fetch("/api/v2/lq-stats/" + country + "/" + year, {
             method: "DELETE"
         }).then(function (res){
             visible =true;
@@ -167,11 +167,11 @@
             if (res.status==200) {
                 totaldata--;
                 color = "success";
-                errorMSG = name + " " + year + " borrado correctamente";
-                console.log("Deleted " + name);            
+                errorMSG = country + " " + year + " borrado correctamente";
+                console.log("Deleted " + country);            
             }else if (res.status==404) {
                 color = "danger";
-                errorMSG = "No se ha encontrado el objeto " + name;
+                errorMSG = "No se ha encontrado el objeto " + country;
                 console.log("LIFEQ NOT FOUND");            
             } else {
                 color = "danger";
@@ -289,7 +289,7 @@
 
         <Table bordered responsive>
                 <thead>
-                    <tr>
+                    <tr><th>Action</th>
                         <th>Rank</th>
                         <th>Country</th>
                         <th>Stability</th>
@@ -302,11 +302,12 @@
                         <th>Total</th>
                         <th>Year</th>
                         <th>Continent</th>
-
+                        
                     </tr>
                 </thead>
+                <!-- INSERTAR -->
                 <tbody>
-                    <tr>
+                    <tr><td><Button outline color="primary" on:click={insertLQ}>Insertar</Button></td>
                         <td><input bind:value="{newLQ.rank}"></td>
                         <td><input bind:value="{newLQ.country}"></td>
                         <td><input bind:value="{newLQ.stability}"></td>
@@ -319,10 +320,11 @@
                         <td><input bind:value="{newLQ.total}"></td>
                         <td><input bind:value="{newLQ.year}"></td>
                         <td><input bind:value="{newLQ.continent}"></td>
-                        <td><Button outline color="primary" on:click={insertLQ}>Insertar</Button></td>
+                        
                     </tr>
+                    <!-- GET -->
                     {#each lq as lifeq}
-                    <tr>
+                    <tr><td><Button outline color="danger" on:click="{deleteLQ(lifeq.country, lifeq.year)}">Borrar</Button></td>
                         <td>{lifeq.rank}</td>
                         <td><a href="#/lq-stats/{lifeq.country}/{lifeq.year}">{lifeq.country}</a></td>
                         <td>{lifeq.stability}</td>
@@ -334,7 +336,8 @@
                         <td>{lifeq.popularity}</td>
                         <td>{lifeq.total}</td>
                         <td><a href="#/lq-stats/{lifeq.country}/{lifeq.year}">{lifeq.year}</a></td>
-                        <td><Button outline color="danger" on:click="{deleteLQ(lifeq.country, lifeq.year)}">Borrar</Button></td>
+                        <td>{lifeq.continent}</td>
+                        
                     </tr>
                     {/each}
                 </tbody>
@@ -346,7 +349,7 @@
             Borrar todo
         </Button>
         <Button outline color="success" on:click="{getPreviewPage}">
-           Atrás
+           Volver
         </Button>
         <Button outline color="success" on:click="{getNextPage}">
            Siguiente
@@ -354,6 +357,6 @@
     {/await}
     <br>
     <br>
-    <Button outline color="secondary" on:click="{pop}">Back</Button>
+    <Button outline color="secondary" on:click="{pop}">Volver</Button>
  
 </main>

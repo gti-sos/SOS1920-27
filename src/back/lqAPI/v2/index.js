@@ -515,13 +515,14 @@ module.exports = function (app) {
     });
     
     // DELETE LQ/XXX/YYY
-    app.get(BASE_API_URL+"/lq-stats/:country/:year", (req,res)=>{
+    app.delete(BASE_API_URL+"/lq-stats/:country/:year", (req,res)=>{
         console.log("New DELETE .../lq-stats/:country/:year");
         var countryparam = req.params.country;
 		var yearparam = req.params.year;
-        db.remove({country: countryparam},{year: yearparam}, (err, lq_stats) =>{
+        db.remove({country: countryparam},{year: yearparam}, function (err, doc){
+			console.log(doc);
                 if(doc!=0){
-                    res.sendStatus(200,"SUCCESFULLY DELETED")
+                    res.sendStatus(200,"SUCCESFULLY DELETED");
                     //res.sendStatus(200,"OK");
                     console.log("Data deleted");
                 }else{
