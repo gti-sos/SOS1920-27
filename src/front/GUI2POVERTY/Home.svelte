@@ -122,7 +122,17 @@
     //SEARCH
     async function searchPoverty(countryValue, yearValue){
         console.log("pais: "+countryValue+" año: "+yearValue);
-        const elements = await fetch(BASE_API_URL+"/poverty-stats?country="+countryValue+"&year="+yearValue);
+        var url = BASE_API_URL+"/poverty-stats?";
+
+        if(countryValue.length!=0){
+            url=url+"&country="+countryValue;
+        }
+
+        if(yearValue.length!=0){
+            url=url+"&year="+yearValue;
+        }
+
+        const elements = await fetch(url);
         visible = true;
         if(elements.ok){
             color = "success";
@@ -130,8 +140,8 @@
             const json = await elements.json();
             busqueda=true;
             poverty=[];
+            poverty=json;
             console.log(json);
-            poverty.push(json);
 
             console.log("Busqueda realizada: "+JSON.stringify(poverty[0],null,2));
             

@@ -37,7 +37,7 @@
             console.log("Ok:");
             console.log("data poverty of "+ params.country +" found");
             const json = await res.json();
-            poverty = json;
+            poverty = json[0];
             updatedCountry = poverty.country;
             updatedUnder190 = poverty.under_190;
             updatedUnder320 = poverty.under_320;
