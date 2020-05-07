@@ -140,6 +140,7 @@
             const json = await elements.json();
             busqueda=true;
             poverty=[];
+            
             poverty=json;
             console.log(json);
 
