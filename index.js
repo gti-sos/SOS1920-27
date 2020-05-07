@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const back = require("./src/back");
+
 const spcStatsv1 = require("./src/back/spcAPI/v1");
 const spcStatsv2 = require("./src/back/spcAPI/v2");
 const lqStatsv1 = require("./src/back/lqAPI/v1");
@@ -12,7 +12,7 @@ var app = express();
 
 app.use(bodyParser.json());
 
-back(app);
+
 
 spcStatsv2(app);
 spcStatsv1(app);
