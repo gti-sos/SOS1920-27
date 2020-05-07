@@ -258,7 +258,12 @@ module.exports = function (app) {
 				
 				
 				} else if (limit!=null && offset == null){
-					res.send(JSON.stringify(lq_stats.slice(0,parseInt(limit)),null,2));
+					if(limit==1){
+						res.send(JSON.stringify(lq_stats.slice(0,parseInt(limit))[0],null,2));
+					} else{
+						res.send(JSON.stringify(lq_stats.slice(0,parseInt(limit)),null,2));
+					}
+					
 				} else if(limit==null && offset != null){
 					res.send(JSON.stringify(lq_stats.slice(startObject,lq_stats.length),null,2));
 				}
