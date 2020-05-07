@@ -11,6 +11,8 @@
 
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
+    import { Collapse, CardBody, Card } from "sveltestrap";
+    let isOpen = false;
 
     //ALERTAS
     let visible = false;
@@ -34,12 +36,15 @@
         continent: ""
     };
     let errorMSG = "";
+    let busqueda = false;
+    let country = "";
+    let year = "";
     onMount(getLQ);
 
     //GET
     async function getLQ() {
         console.log("Fetching lq...");
-        const res = await fetch("api/v2/lq-stats?limit=10&offset="+ page);
+        const res = await fetch("api/v2/lq-stats?limit=10&offset=1");
 
         if(res.ok){
             console.log("Ok");
@@ -70,6 +75,48 @@
             errorMSG = res.status + ": " + res.statusText;
             console.log("ERROR!");
         }
+    }
+
+    //SEARCH
+    async function searchLQ(country, year){
+        console.log ("país: "+ country + " año: "+year);
+        let url = "api/v2/lq-stats?";
+
+        if(country.length!=0){
+            url+="&country="+country;
+        }
+        if(year.length!=0){
+            url+="&year= "+year;
+        }
+
+        const res = await fetch(url);
+        visible = true;
+        if(res.ok) {
+            color = "sucess";
+            errorMSG = "Se ha encontrado el objeto correctamente";
+            const json = await res.json();
+            busqueda=true
+            lq = json;
+            console.log(json);
+
+            console.log("Búsqueda realizada: "+ JSON.stringify(lq[0],null,2));
+
+        }else{
+            console.log("ERROR!");
+            visible = true;
+            if(res.status==404){
+                color = "danger";
+                errorMSG = "Elemento no encontrado.";
+                console.log("NOT FOUND")
+                
+            }else{
+                color = "danger";
+                errorMSG = "Ha ocurrido un fallo de petición";
+                console.log("BAD REQUEST");
+               
+            }
+        }
+
     }
 
     //INSERT
@@ -199,6 +246,40 @@
     {#await lq}
         Loading lq...
     {:then lq}
+
+
+    <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
+        Buscar lq
+    </Button>
+    <Collapse {isOpen}>
+        <Table responsive>
+
+            <tbody>
+                <tr>
+                    
+                    Country: <input type="text" bind:value="{country}"> Year: <input type="text" bind:value="{year}">
+                    
+                    <Button outline color="info" on:click="{searchLQ(country, year)}">
+                        Buscar
+                    </Button>
+                    {#if busqueda==true}
+                    <Button outline color="info" on:click="{getLQ}">
+                        Reiniciar filtro
+                    </Button>
+                    {/if}
+
+                </tr>
+            </tbody>
+        </Table>
+    </Collapse>
+
+        <div>
+            <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
+                {#if errorMSG}
+                    {errorMSG}
+                {/if}
+            </Alert>
+        </div>
 
         <Table bordered responsive>
                 <thead>
