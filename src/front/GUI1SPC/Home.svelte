@@ -348,7 +348,7 @@
             Borrar todo
         </Button>
         <Button outline color="primary" on:click="{getPreviewPage}">
-           Atras
+           Atrás
         </Button>
         <Button outline color="primary" on:click="{getNextPage}">
             Siguiente
@@ -359,6 +359,6 @@
     
     <br>
     <br>
-    <Button outline color="secondary" on:click="{pop}">Atrás</Button>
+    <Button outline color="secondary" on:click="{pop}">Volver</Button>
  
 </main>
