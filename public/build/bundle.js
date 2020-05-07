@@ -4438,7 +4438,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("Back");
+    			t = text("Volver");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -7404,7 +7404,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("Atras");
+    			t = text("Atrás");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -7488,7 +7488,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("Atrás");
+    			t = text("Volver");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -8351,7 +8351,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("Update");
+    			t = text("Actualizar");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -8718,7 +8718,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("Back");
+    			t = text("Volver");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
