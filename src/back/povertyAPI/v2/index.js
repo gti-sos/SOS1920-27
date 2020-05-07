@@ -154,7 +154,7 @@ module.exports = function (app) {
 		const countryQuery = req.query.country;
 		const yearQuery = req.query.year;
 
-        const startObject = offset-1;                //comienzo del primer objeto de la pagina
+        const startObject = offset-1;                //comienzo del primer objeto de la pagina console
 		const endObject =parseInt(offset)+parseInt(limit) - 1;                    //ultimo objeto de la pagina
 
         db.find({}, (err, poverty_stats) =>{
@@ -180,12 +180,60 @@ module.exports = function (app) {
 					}
 					
 					if(arrayGet.length>0){
-						res.send(JSON.stringify(arrayGet[0],null,2));
+						res.send(JSON.stringify(arrayGet,null,2));
 					}else{
 						res.sendStatus(404);
 					}
 				})
 
+			}else if(yearQuery!=null){
+				console.log("yearQuery!=null");
+					console.log("year: "+yearQuery);
+
+					db.find({year: parseInt(yearQuery)},(err, array)=>{
+					var arrayGet=[];
+
+					console.log("array: "+JSON.stringify(array,null,2));
+					array.forEach(c=>{
+						delete c._id;
+					})
+					
+					for(var i=0;i<array.length;i++){
+						if(array[i].year==yearQuery){
+							arrayGet.push(array[i]);
+						}
+					}
+					/*if(arrayGet.length==1){
+						res.send(JSON.stringify(arrayGet[0],null,2));
+					}else */if(arrayGet.length>0){
+						res.send(JSON.stringify(arrayGet,null,2));
+					}else{
+						res.sendStatus(404);
+					}
+				})
+			}else if(countryQuery!=null){
+					console.log("countryQuery!=null");
+					db.find({country: countryQuery},(err, array)=>{
+					var arrayGet=[];
+
+					array.forEach(c=>{
+						delete c._id;
+					})
+					
+					for(var i=0;i<array.length;i++){
+						if(array[i].country==countryQuery){
+							arrayGet.push(array[i]);
+						}
+					}
+					/*if(arrayGet.length==1){
+						res.send(JSON.stringify(arrayGet[0],null,2));
+					}else */if(arrayGet.length>0){
+						res.send(JSON.stringify(arrayGet,null,2));
+					}else{
+						res.sendStatus(404);
+					}
+				})
+			
 			}else if(limit!=null && offset != null){						//Get /poverty_stats Paginacion
 						
 				if(limit<=0 || offset <=0){
@@ -302,7 +350,7 @@ module.exports = function (app) {
 
 		db.find(req.body,(err, array)=>{
 			var body=req.body;
-
+			
 			
 			if(body.country!=null || body.under_190!=null || body.under_320!=null || body.under_550!=null || body.continent!=null || body.year!=null){
 				
@@ -333,7 +381,7 @@ module.exports = function (app) {
 					});
 					
 				}else{
-					res.sendStatus(400);
+					res.sendStatus(404);
 				}
 			}else{
 				sendStatus(400);
