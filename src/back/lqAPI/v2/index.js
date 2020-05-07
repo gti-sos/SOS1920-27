@@ -505,7 +505,6 @@ module.exports = function (app) {
     
     app.delete(BASE_API_URL+"/lq-stats/:country", (req,res)=>{
 		var countryparam = req.params.country;
-		var copiadb=[];
 			db.remove({country: countryparam},{multi:true}, function (err, doc){
 			if(doc!=0){
 				res.sendStatus(200,"SUCCESFULLY DELETED");
@@ -517,27 +516,19 @@ module.exports = function (app) {
     
     // DELETE LQ/XXX/YYY
     app.get(BASE_API_URL+"/lq-stats/:country/:year", (req,res)=>{
-        console.log("New GET .../lq-stats/:country/:year");
+        console.log("New DELETE .../lq-stats/:country/:year");
         var countryparam = req.params.country;
-        var yearparam = req.params.year;
-        var encontrado = false;
-        db.find({country: countryparam}, (err, lq_stats) =>{
-            lq_stats.forEach( (c) => {
-                delete c._id;
-                if(c.year==yearparam){
-                    encontrado=true;
-                    res.send(JSON.stringify(c,null,2));
+		var yearparam = req.params.year;
+        db.remove({country: countryparam},{year: yearparam}, (err, lq_stats) =>{
+                if(doc!=0){
+                    res.sendStatus(200,"SUCCESFULLY DELETED")
                     //res.sendStatus(200,"OK");
-                    console.log("Data sent:"+JSON.stringify(c,null,2));
-                }
+                    console.log("Data deleted");
+                }else{
+					res.sendStatus(404,"LIFEQ NOT FOUND");
+				}
             });
-            if (encontrado==false) {
-                res.sendStatus(404,"LIFE QUALITY NOT FOUND");
-            }
-
         });
-
-    });
 
 	// Métodos no permitidos
 
