@@ -2,7 +2,6 @@
 	"info": {
 		"_postman_id": "58c11dbf-c895-4d8d-abea-9f4efcf7a7e1",
 		"name": "SOS1920-27-spc-stats-v2",
-		"BASE_URL": "http://localhost/api/v2/",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
