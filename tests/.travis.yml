@@ -1,6 +1,6 @@
-languaje: node_js
+language: node_js
 node_js:
-  - "12.16.3"
+  - "12.16.2"
 install:
   - "npm install"
 before_script:
