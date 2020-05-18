@@ -1,11 +1,10 @@
 language: node_js
 node_js:
   - "12.16.2"
-before_install:
-  - chmod +x build.sh
 install:
   - "npm install"
 before_script:
+  - "chmod 0555 ./node_modules/.bin/travis"
   - "npm run build"
   - "npm start &"
 script:
