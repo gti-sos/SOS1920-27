@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost/api/v2/spc-stats",
+			"name": "https://localhost:9999/api/v2/spc-stats",
 			"event": [
 				{
 					"listen": "test",
@@ -25,16 +25,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost/api/v2/spc-stats",
+					"raw": "https://localhost:9999/api/v2/spc-stats",
 					"host": [
-						"http://localhost/api/v2/spc-stats"
+						"https://localhost:9999/api/v2/spc-stats"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost/api/v2/spc-stats/loadInitialData",
+			"name": "https://localhost:9999/api/v2/spc-stats/loadInitialData",
 			"event": [
 				{
 					"listen": "test",
@@ -71,9 +71,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost/api/v2/spc-stats/loadInitialData",
+					"raw": "https://localhost:9999/api/v2/spc-stats/loadInitialData",
 					"host": [
-						"http://localhost/api/v2/spc-stats"
+						"https://localhost:9999/api/v2/spc-stats"
 					],
 					"path": [
 						"loadInitialData"
@@ -83,7 +83,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost/api/v2/spc-stats Ya iniciada",
+			"name": "https://localhost:9999/api/v2/spc-stats Ya iniciada",
 			"event": [
 				{
 					"listen": "test",
@@ -105,16 +105,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost/api/v2/spc-stats",
+					"raw": "https://localhost:9999/api/v2/spc-stats",
 					"host": [
-						"http://localhost/api/v2/spc-stats"
+						"https://localhost:9999/api/v2/spc-stats"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost/api/v2/spc-stats con limit y offset",
+			"name": "https://localhost:9999/api/v2/spc-stats con limit y offset",
 			"event": [
 				{
 					"listen": "test",
@@ -137,9 +137,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost/api/v2/spc-stats?limit=3&offset=1",
+					"raw": "https://localhost:9999/api/v2/spc-stats?limit=3&offset=1",
 					"host": [
-						"http://localhost/api/v2/spc-stats"
+						"https://localhost:9999/api/v2/spc-stats"
 					],
 					"query": [
 						{
@@ -156,7 +156,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost/api/v2/spc-stats/ busqueda both_sex",
+			"name": "https://localhost:9999/api/v2/spc-stats/ busqueda both_sex",
 			"event": [
 				{
 					"listen": "test",
@@ -191,9 +191,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost/api/v2/spc-stats?both_sex=20",
+					"raw": "https://localhost:9999/api/v2/spc-stats?both_sex=20",
 					"host": [
-						"http://localhost/api/v2/spc-stats"
+						"https://localhost:9999/api/v2/spc-stats"
 					],
 					"query": [
 						{
@@ -206,7 +206,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost/api/v2/spc-stats/ busqueda continent year female_rank",
+			"name": "https://localhost:9999/api/v2/spc-stats/ busqueda continent year female_rank",
 			"event": [
 				{
 					"listen": "test",
@@ -241,9 +241,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost/api/v2/spc-stats?continent=europe&year=2013&female_rank=37",
+					"raw": "https://localhost:9999/api/v2/spc-stats?continent=europe&year=2013&female_rank=37",
 					"host": [
-						"http://localhost/api/v2/spc-stats"
+						"https://localhost:9999/api/v2/spc-stats"
 					],
 					"query": [
 						{
@@ -264,7 +264,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost/api/v2/spc-stats/",
+			"name": "https://localhost:9999/api/v2/spc-stats/",
 			"event": [
 				{
 					"listen": "test",
@@ -297,9 +297,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost/api/v2/spc-stats/",
+					"raw": "https://localhost:9999/api/v2/spc-stats/",
 					"host": [
-						"http://localhost/api/v2/spc-stats"
+						"https://localhost:9999/api/v2/spc-stats"
 					],
 					"path": [
 						""
@@ -309,7 +309,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost/api/v2/spc-stats/guyana",
+			"name": "https://localhost:9999/api/v2/spc-stats/guyana",
 			"event": [
 				{
 					"listen": "test",
@@ -328,9 +328,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost/api/v2/spc-stats/guyana",
+					"raw": "https://localhost:9999/api/v2/spc-stats/guyana",
 					"host": [
-						"http://localhost/api/v2/spc-stats"
+						"https://localhost:9999/api/v2/spc-stats"
 					],
 					"path": [
 						"guyana"
@@ -340,7 +340,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost/api/v2/spc-stats/francia/2013",
+			"name": "https://localhost:9999/api/v2/spc-stats/francia/2013",
 			"event": [
 				{
 					"listen": "test",
@@ -359,9 +359,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost/api/v2/spc-stats/francia/2013",
+					"raw": "https://localhost:9999/api/v2/spc-stats/francia/2013",
 					"host": [
-						"http://localhost/api/v2/spc-stats"
+						"https://localhost:9999/api/v2/spc-stats"
 					],
 					"path": [
 						"francia",
@@ -372,7 +372,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost/api/v2/spc-stats/francia/2013",
+			"name": "https://localhost:9999/api/v2/spc-stats/francia/2013",
 			"event": [
 				{
 					"listen": "test",
@@ -400,9 +400,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost/api/v2/spc-stats/francia/2013",
+					"raw": "https://localhost:9999/api/v2/spc-stats/francia/2013",
 					"host": [
-						"http://localhost/api/v2/spc-stats"
+						"https://localhost:9999/api/v2/spc-stats"
 					],
 					"path": [
 						"francia",
@@ -413,7 +413,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost/api/v2/spc-stats/guyana/2013",
+			"name": "https://localhost:9999/api/v2/spc-stats/guyana/2013",
 			"event": [
 				{
 					"listen": "test",
@@ -441,9 +441,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost/api/v2/spc-stats/guyana/2013",
+					"raw": "https://localhost:9999/api/v2/spc-stats/guyana/2013",
 					"host": [
-						"http://localhost/api/v2/spc-stats"
+						"https://localhost:9999/api/v2/spc-stats"
 					],
 					"path": [
 						"guyana",
@@ -454,7 +454,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost/api/v2/spc-stats/francia",
+			"name": "https://localhost:9999/api/v2/spc-stats/francia",
 			"event": [
 				{
 					"listen": "test",
@@ -482,9 +482,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost/api/v2/spc-stats/francia",
+					"raw": "https://localhost:9999/api/v2/spc-stats/francia",
 					"host": [
-						"http://localhost/api/v2/spc-stats"
+						"https://localhost:9999/api/v2/spc-stats"
 					],
 					"path": [
 						"francia"
@@ -494,7 +494,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost/api/v2/spc-stats/francia",
+			"name": "https://localhost:9999/api/v2/spc-stats/francia",
 			"event": [
 				{
 					"listen": "test",
@@ -522,9 +522,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost/api/v2/spc-stats/francia",
+					"raw": "https://localhost:9999/api/v2/spc-stats/francia",
 					"host": [
-						"http://localhost/api/v2/spc-stats"
+						"https://localhost:9999/api/v2/spc-stats"
 					],
 					"path": [
 						"francia"
@@ -534,7 +534,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost/api/v2/spc-stats/",
+			"name": "https://localhost:9999/api/v2/spc-stats/",
 			"event": [
 				{
 					"listen": "test",
@@ -562,9 +562,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost/api/v2/spc-stats/",
+					"raw": "https://localhost:9999/api/v2/spc-stats/",
 					"host": [
-						"http://localhost/api/v2/spc-stats"
+						"https://localhost:9999/api/v2/spc-stats"
 					],
 					"path": [
 						""
@@ -574,7 +574,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost/api/v2/spc-stats/",
+			"name": "https://localhost:9999/api/v2/spc-stats/",
 			"event": [
 				{
 					"listen": "test",
@@ -604,9 +604,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost/api/v2/spc-stats/",
+					"raw": "https://localhost:9999/api/v2/spc-stats/",
 					"host": [
-						"http://localhost/api/v2/spc-stats"
+						"https://localhost:9999/api/v2/spc-stats"
 					],
 					"path": [
 						""
