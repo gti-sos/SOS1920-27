@@ -1,5 +1,5 @@
 {
-  "name": "sos1920-27",
+  "name": "sos1920-l09",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,9 +14,9 @@
     "@rollup/plugin-node-resolve": "^7.0.0",
     "rollup": "^1.20.0",
     "rollup-plugin-livereload": "^1.0.0",
-    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-svelte": "^5.2.2",
     "rollup-plugin-terser": "^5.1.2",
-    "svelte": "^3.0.0"
+    "svelte": "^3.22.3"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +26,7 @@
     "nedb": "^1.8.0",
     "newman": "^5.0.0",
     "svelte-spa-router": "^2.1.0",
-    "sveltestrap": "^3.3.3"
+    "sveltestrap": "^3.3.3",
+    "travis": "^0.1.1"
   }
 }
