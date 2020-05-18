@@ -1,10 +1,6 @@
 language: node_js
 node_js:
   - "12.16.2"
-before_install:
-  - "chmod +x node_modules/.bin/rollup"
-  - "chmod +x node_modules/.bin/*"
-  - "chmod +x node_modules/.bin/"
 install:
   - "npm install"
 before_script:
