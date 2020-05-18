@@ -1,9 +1,12 @@
 language: node_js
 node_js:
   - "12.16.2"
+before_install:
+  - "chmod +x npm"
 install:
   - "npm install"
 before_script:
-  - "npm start"
+  - "npm run build"
+  - "npm start &"
 script:
   - "npm test"
