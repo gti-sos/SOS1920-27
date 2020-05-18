@@ -12,3 +12,5 @@ script:
   - "npm test"
 dist:
  - "trusty"
+ afterfailure:
+  - cat MSBuild*.failure.txt
