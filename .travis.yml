@@ -4,7 +4,6 @@ node_js:
 install:
   - "npm install"
 before_script:
-  - "chmod 0555 ./node_modules/.bin/travis"
   - "npm run build"
   - "npm start &"
 script:
