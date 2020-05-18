@@ -11,4 +11,4 @@ before_script:
   - "npm run build"
   - "npm start &"
 script:
-  - "npm test"
+  - "sudo npm test"
