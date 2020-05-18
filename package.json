@@ -28,5 +28,9 @@
     "svelte-spa-router": "^2.1.0",
     "sveltestrap": "^3.3.3",
     "travis": "^0.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gti-sos/SOS1920-27.git"
   }
 }
