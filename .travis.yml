@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "12.16.2"
 before_install:
-  - "chmod +x npm"
+  - "chmod +x"
 install:
   - "npm install"
 before_script:
