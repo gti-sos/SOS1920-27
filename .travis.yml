@@ -3,12 +3,6 @@ node_js:
   - "12.16.2"
 install:
   - "npm install"
-before_script:
-  - "npm run build"
-  - "npm start &"
 script:
   - "npm test"
-dist:
- - "trusty"
- afterfailure:
-  - cat MSBuild*.failure.txt
+
