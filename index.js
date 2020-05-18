@@ -22,7 +22,7 @@ lqStatsv2(app);
 povertyStatsV1(app);
 povertyStatsV2(app);
 
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 9999;
 
 app.use("/", express.static("./public"));
 
