@@ -9,6 +9,7 @@
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
     import { Alert } from "sveltestrap";
+
     //Para busquedas
     import { UncontrolledCollapse, Collapse, CardBody, Card } from "sveltestrap";
     let isOpen = false;
@@ -18,6 +19,9 @@
     let visible = false;
     let color = "danger";
     
+    //apexcharts
+    import ApexCharts from 'apexcharts';
+
     let page = 1;
     let totaldata=12;
     let spc = [];
@@ -267,6 +271,7 @@
         }
     }
 
+    //grafico highchart
     async function loadGraphs() {
         let MyData = [];
 
@@ -385,22 +390,29 @@
         });
 
     };
-
+    
 
 </script>
 
 <svelte:head>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> <!--este es de apexcharts-->
+    <script src="apex.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js" on:load="{loadGraphs}"></script>
 </svelte:head>
 <main>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> <!--este es de apexcharts-->
+    <script src="apex.js"></script>
     <h1>SPC Manager</h1>
-
+    
 
     
-    <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
+    <Button color="primary" href="#/gui1SPCGraphs">
+        Buscar spc
+      </Button>
+      <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
         Buscar spc
       </Button>
       
@@ -495,7 +507,9 @@
     <br>
     <br>
     <Button outline color="secondary" on:click="{pop}">Volver</Button>
-    <div id="container" style="height: 1000; min-width: 310px; max-width: 800px; margin: 100px"></div>
+    <div id="container" style="height: 1000; min-width: 310px; max-width: 800px; margin: 100px">
+        <div id="chart"></div></div>
+    
 
 </main>
 

@@ -6,6 +6,7 @@
 	import Home from './Home.svelte';
 
 	import GUI1SPC from './GUI1SPC/Home.svelte';
+	import GUI1SPCGraphs from './GUI1SPC/Graphs.svelte';
 	import EditSpc from './GUI1SPC/EditSpc.svelte';
 
 	import GUI2POVERTY from './GUI2POVERTY/Home.svelte';
@@ -18,6 +19,7 @@
 		"/" : Home,
 		"/public/index.html" : Home,
 		"/gui1spc": GUI1SPC,
+		"/gui1SPCGraphs": GUI1SPCGraphs,
 		"/spc-stats/:suicideCountry/:suicideYear": EditSpc,
 		"/gui2poverty": GUI2POVERTY,
 		"/poverty-stats/:country/:year":EditPoverty,
