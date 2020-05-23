@@ -1,5 +1,5 @@
 ## SOS1920-27
-
+[![Build Status](https://travis-ci.com/gti-sos/SOS1920-27.svg?branch=master)](https://travis-ci.com/gti-sos/SOS1920-27)
 - **Team**
   - [Belén Domínguez Domínguez](https://github.com/sensatte)
   - [Juan Luis Aguilera Rivero](https://github.com/juanluidos)
