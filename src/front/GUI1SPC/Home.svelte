@@ -10,14 +10,14 @@
     import Button from "sveltestrap/src/Button.svelte";
     import { Alert } from "sveltestrap";
     //Para busquedas
-    import { Collapse, CardBody, Card } from "sveltestrap";
+    import { UncontrolledCollapse, Collapse, CardBody, Card } from "sveltestrap";
     let isOpen = false;
     let busquedas = "/api/v2/spc-stats?";
 
     //ALERTAS
     let visible = false;
     let color = "danger";
- 
+    
     let page = 1;
     let totaldata=12;
     let spc = [];
@@ -52,11 +52,12 @@
  
         console.log("Fetching spc...");
         const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
- 
+        loadGraphs();
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
             spc = json;
+            
             console.log("Received " + spc.length + " spc.");
         } else {
             errorMSG= res.status + ": " + res.statusText;
@@ -70,7 +71,7 @@
         console.log("Fetching spc...");
         await fetch("/api/v2/spc-stats/loadInitialData");
         const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
-
+        loadGraphs();
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
@@ -95,11 +96,13 @@
             }
         }).then(function (res) {
             getSPC();
+            
             visible = true;
             if (res.status==200) {
                 totaldata++;
                 color = "success";
                 errorMSG = newSpc.country +" creado correctamente";
+                loadGraphs();
                 console.log("Inserted "+newSpc.country +" spc.");            
             }else if (res.status== 400) {
                 color = "danger";
@@ -125,6 +128,7 @@
         }).then(function (res) {
             visible = true;
             getSPC();      
+            loadGraphs();
             if (res.status==200) {
                 totaldata--;
                 color = "success";
@@ -148,6 +152,7 @@
             method: "DELETE"
         }).then(function (res) {
             getSPC();
+            loadGraphs();
             visible = true;
             if (res.status==200) {
                 totaldata=0;
@@ -261,14 +266,144 @@
             console.log("ERROR!");
         }
     }
+
+    async function loadGraphs() {
+        let MyData = [];
+
+        const resData = await fetch("/api/v2/spc-stats");
+        MyData = await resData.json();
+
+        var euro = MyData.filter(function (el) {
+                return el.continent == "europe" && el.year==2013;
+            }).map((dato)=> {     
+            return {
+                "name": dato.country,
+                "value": dato.both_sex
+                };
+        });
+
+        var asia = MyData.filter(function (el) {
+                return el.continent == "asia" && el.year==2013;
+            }).map((dato)=> {     
+            return {
+                "name": dato.country,
+                "value": dato.both_sex
+                };
+        });
+
+        var africa = MyData.filter(function (el) {
+                return el.continent == "africa" && el.year==2013;
+            }).map((dato)=> {     
+            return {
+                "name": dato.country,
+                "value": dato.both_sex
+                };
+        });
+
+        var south = MyData.filter(function (el) {
+                return el.continent == "south america" && el.year==2013;
+            }).map((dato)=> {     
+            return {
+                "name": dato.country,
+                "value": dato.both_sex
+                };
+        });
+
+        var north = MyData.filter(function (el) {
+                return el.continent == "north america" && el.year==2013;
+            }).map((dato)=> {     
+            return {
+                "name": dato.country,
+                "value": dato.both_sex
+                };
+        });
+
+        var oceania = MyData.filter(function (el) {
+                return el.continent == "oceania" && el.year==2013;
+            }).map((dato)=> {     
+            return {
+                "name": dato.country,
+                "value": dato.both_sex
+                };
+        });
+
+        Highcharts.chart('container', {
+            chart: {
+                type: 'packedbubble',
+                height: '100%'
+            },
+            title: {
+                text: 'Suicides per 100,000 people in 2013 '
+            },
+            tooltip: {
+                useHTML: true,
+                pointFormat: '<b>{point.name}:</b> {point.value}'
+            },
+            plotOptions: {
+                packedbubble: {
+                    minSize: '20%',
+                    maxSize: '100%',
+                    zMin: 0,
+                    zMax: 1000,
+                    layoutAlgorithm: {
+                        gravitationalConstant: 0.05,
+                        splitSeries: true,
+                        seriesInteraction: false,
+                        dragBetweenSeries: true,
+                        parentNodeLimit: true
+                    },
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}',
+                        style: {
+                            color: 'black',
+                            textOutline: 'none',
+                            fontWeight: 'normal'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Europe',
+                data: euro
+            }, {
+                name: 'Africa',
+                data: africa
+            }, {
+                name: 'Oceania',
+                data: oceania
+            }, {
+                name: 'North America',
+                data: north
+            }, {
+                name: 'South America',
+                data: south
+            }, {
+                name: 'Asia',
+                data: asia
+            }]
+        });
+
+    };
+
+
 </script>
- 
+
+<svelte:head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js" on:load="{loadGraphs}"></script>
+</svelte:head>
 <main>
     <h1>SPC Manager</h1>
 
+
+    
     <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
         Buscar spc
       </Button>
+      
       <Collapse {isOpen}>
         <Table bordered responsive>
             <tbody>
@@ -288,7 +423,7 @@
         </Table>
       </Collapse>
 
-    {#await spc}
+      {#await spc}
         Loading spc...
     {:then spc}
     <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
@@ -360,5 +495,43 @@
     <br>
     <br>
     <Button outline color="secondary" on:click="{pop}">Volver</Button>
- 
+    <div id="container" style="height: 1000; min-width: 310px; max-width: 800px; margin: 100px"></div>
+
 </main>
+
+<style>
+    .highcharts-figure, .highcharts-data-table table {
+        min-width: 320px; 
+        max-width: 800px;
+        margin: 1em auto;
+    }
+
+    .highcharts-data-table table {
+        font-family: Verdana, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid #EBEBEB;
+        margin: 10px auto;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+    }
+    .highcharts-data-table caption {
+        padding: 1em 0;
+        font-size: 1.2em;
+        color: #555;
+    }
+    .highcharts-data-table th {
+        font-weight: 600;
+        padding: 0.5em;
+    }
+    .highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+        padding: 0.5em;
+    }
+    .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+        background: #f8f8f8;
+    }
+    .highcharts-data-table tr:hover {
+        background: #f1f7ff;
+    }
+
+</style>
