@@ -21,11 +21,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular-chart.js": "^1.1.1",
     "apexcharts": "^3.19.2",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "nedb": "^1.8.0",
     "newman": "^5.0.0",
+    "plottable": "^3.8.6",
     "svelte-spa-router": "^2.1.0",
     "sveltestrap": "^3.3.3",
     "travis": "^0.1.1"
