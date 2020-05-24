@@ -245,7 +245,107 @@
             console.log("ERROR!");
         }
     }
+
+    async function LoadGraphs(){
+        let MyData = [];
+
+        const resData = await fetch("/api/v2/lq-stats");
+        MyData = await resData.json();
+
+        //xAxis
+        var paises = MyData.filter(function (objeto) {
+                return objeto.year==2016;
+            }).map((dato)=> [dato.country]);
+
+        //yAxis
+
+        var stab = MyData.filter(function(objeto){
+                return objeto.year==2016;
+        }).map((dato)=> [dato.stability]);
+
+        var righ = MyData.filter(function(objeto){
+                return objeto.year==2016;
+        }).map((dato)=> [dato.right]);
+
+        var heal = MyData.filter(function(objeto){
+                return objeto.year==2016;
+        }).map((dato)=> [dato.health]);
+
+        var secu = MyData.filter(function(objeto){
+                return objeto.year==2016;
+        }).map((dato)=> [dato.security]);
+
+        var clima = MyData.filter(function(objeto){
+                return objeto.year==2016;
+        }).map((dato)=> [dato.climate]);
+
+        var cost = MyData.filter(function(objeto){
+                return objeto.year==2016;
+        }).map((dato)=> [dato.costs]);
+
+        var popu = MyData.filter(function(objeto){
+                return objeto.year==2016;
+        }).map((dato)=> [dato.popularity]);
+
+
+        Highcharts.chart('container', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Calidad de vida por países del año 2016'
+            },
+            xAxis: {
+                categories: paises
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: ''
+                }
+            },
+            legend: {
+                reversed: true
+            },
+            plotOptions: {
+                series: {
+                    stacking: 'normal'
+                }
+            },
+            series: [{
+                name: 'Stability',
+                data: stab
+            }, {
+                name: 'Right',
+                data: righ
+            }, {
+                name: 'Health',
+                data: heal
+            }, {
+                name: 'Security',
+                data: secu
+            }, {
+                name: 'Climate',
+                data: clima
+            }, {
+                name: 'Costs',
+                data: cost
+            }, {
+                name: 'Popularity',
+                data: popu
+            }]
+        });
+
+
+};
 </script>
+
+<svelte:head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js" on:load="{LoadGraphs}"></script>
+</svelte:head>
 
 <main>
     <h1>LQ Manager</h1>
@@ -358,5 +458,52 @@
     <br>
     <br>
     <Button outline color="secondary" on:click="{pop}">Volver</Button>
- 
+
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            En esta gráfica veremos la clasificación de los países dependiendo de su calidad de vida en 2016
+        </p>
+    </figure>
 </main>
+
+<style>
+    .highcharts-figure, .highcharts-data-table table {
+        min-width: 310px; 
+        max-width: 800px;
+        margin: 1em auto;
+    }
+
+    #container {
+        height: 400px;
+    }
+
+    .highcharts-data-table table {
+        font-family: Verdana, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid #EBEBEB;
+        margin: 10px auto;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+    }
+    .highcharts-data-table caption {
+        padding: 1em 0;
+        font-size: 1.2em;
+        color: #555;
+    }
+    .highcharts-data-table th {
+        font-weight: 600;
+        padding: 0.5em;
+    }
+    .highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+        padding: 0.5em;
+    }
+    .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+        background: #f8f8f8;
+    }
+    .highcharts-data-table tr:hover {
+        background: #f1f7ff;
+    }
+
+</style>

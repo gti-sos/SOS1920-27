@@ -11342,7 +11342,7 @@ var app = (function () {
     	return block;
     }
 
-    // (254:4) {:then lq}
+    // (354:4) {:then lq}
     function create_then_block$4(ctx) {
     	let t0;
     	let t1;
@@ -11460,7 +11460,11 @@ var app = (function () {
     			create_component(button3.$$.fragment);
     			t6 = space();
     			create_component(button4.$$.fragment);
+<<<<<<< HEAD
     			add_location(div, file$d, 281, 8, 8451);
+=======
+    			add_location(div, file$c, 381, 8, 11371);
+>>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
     		},
     		m: function mount(target, anchor) {
     			mount_component(button0, target, anchor);
@@ -11590,15 +11594,20 @@ var app = (function () {
     		block,
     		id: create_then_block$4.name,
     		type: "then",
-    		source: "(254:4) {:then lq}",
+    		source: "(354:4) {:then lq}",
     		ctx
     	});
 
     	return block;
     }
 
+<<<<<<< HEAD
     // (257:4) <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
     function create_default_slot_13$1(ctx) {
+=======
+    // (357:4) <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
+    function create_default_slot_13(ctx) {
+>>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
     	let t;
 
     	const block = {
@@ -11617,14 +11626,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13$1.name,
     		type: "slot",
-    		source: "(257:4) <Button color=\\\"primary\\\" on:click={() => (isOpen = !isOpen)} class=\\\"mb-3\\\">",
+    		source: "(357:4) <Button color=\\\"primary\\\" on:click={() => (isOpen = !isOpen)} class=\\\"mb-3\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (268:20) <Button outline color="info" on:click="{searchLQ(country, year)}">
+    // (368:20) <Button outline color="info" on:click="{searchLQ(country, year)}">
     function create_default_slot_12$1(ctx) {
     	let t;
 
@@ -11644,14 +11653,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12$1.name,
     		type: "slot",
-    		source: "(268:20) <Button outline color=\\\"info\\\" on:click=\\\"{searchLQ(country, year)}\\\">",
+    		source: "(368:20) <Button outline color=\\\"info\\\" on:click=\\\"{searchLQ(country, year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (271:20) {#if busqueda==true}
+    // (371:20) {#if busqueda==true}
     function create_if_block_1$3(ctx) {
     	let current;
 
@@ -11702,14 +11711,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$3.name,
     		type: "if",
-    		source: "(271:20) {#if busqueda==true}",
+    		source: "(371:20) {#if busqueda==true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (272:20) <Button outline color="info" on:click="{resetLQ}">
+    // (372:20) <Button outline color="info" on:click="{resetLQ}">
     function create_default_slot_11$2(ctx) {
     	let t;
 
@@ -11729,14 +11738,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11$2.name,
     		type: "slot",
-    		source: "(272:20) <Button outline color=\\\"info\\\" on:click=\\\"{resetLQ}\\\">",
+    		source: "(372:20) <Button outline color=\\\"info\\\" on:click=\\\"{resetLQ}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (261:8) <Table responsive>
+    // (361:8) <Table responsive>
     function create_default_slot_10$2(ctx) {
     	let tbody;
     	let tr;
@@ -11778,11 +11787,19 @@ var app = (function () {
     			t3 = space();
     			if (if_block) if_block.c();
     			attr_dev(input0, "type", "text");
+<<<<<<< HEAD
     			add_location(input0, file$d, 265, 29, 7882);
     			attr_dev(input1, "type", "text");
     			add_location(input1, file$d, 265, 78, 7931);
     			add_location(tr, file$d, 263, 16, 7825);
     			add_location(tbody, file$d, 262, 12, 7800);
+=======
+    			add_location(input0, file$c, 365, 29, 10802);
+    			attr_dev(input1, "type", "text");
+    			add_location(input1, file$c, 365, 78, 10851);
+    			add_location(tr, file$c, 363, 16, 10745);
+    			add_location(tbody, file$c, 362, 12, 10720);
+>>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, tbody, anchor);
@@ -11870,14 +11887,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10$2.name,
     		type: "slot",
-    		source: "(261:8) <Table responsive>",
+    		source: "(361:8) <Table responsive>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (260:4) <Collapse {isOpen}>
+    // (360:4) <Collapse {isOpen}>
     function create_default_slot_9$2(ctx) {
     	let current;
 
@@ -11925,14 +11942,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9$2.name,
     		type: "slot",
-    		source: "(260:4) <Collapse {isOpen}>",
+    		source: "(360:4) <Collapse {isOpen}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (284:16) {#if errorMSG}
+    // (384:16) {#if errorMSG}
     function create_if_block$9(ctx) {
     	let t;
 
@@ -11955,14 +11972,14 @@ var app = (function () {
     		block,
     		id: create_if_block$9.name,
     		type: "if",
-    		source: "(284:16) {#if errorMSG}",
+    		source: "(384:16) {#if errorMSG}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (283:12) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
+    // (383:12) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
     function create_default_slot_8$2(ctx) {
     	let if_block_anchor;
     	let if_block = /*errorMSG*/ ctx[4] && create_if_block$9(ctx);
@@ -12000,14 +12017,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8$2.name,
     		type: "slot",
-    		source: "(283:12) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>",
+    		source: "(383:12) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (310:28) <Button outline color="primary" on:click={insertLQ}>
+    // (410:28) <Button outline color="primary" on:click={insertLQ}>
     function create_default_slot_7$2(ctx) {
     	let t;
 
@@ -12027,14 +12044,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7$2.name,
     		type: "slot",
-    		source: "(310:28) <Button outline color=\\\"primary\\\" on:click={insertLQ}>",
+    		source: "(410:28) <Button outline color=\\\"primary\\\" on:click={insertLQ}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (327:28) <Button outline color="danger" on:click="{deleteLQ(lifeq.country, lifeq.year)}">
+    // (427:28) <Button outline color="danger" on:click="{deleteLQ(lifeq.country, lifeq.year)}">
     function create_default_slot_6$2(ctx) {
     	let t;
 
@@ -12054,14 +12071,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$2.name,
     		type: "slot",
-    		source: "(327:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteLQ(lifeq.country, lifeq.year)}\\\">",
+    		source: "(427:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteLQ(lifeq.country, lifeq.year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (326:20) {#each lq as lifeq}
+    // (426:20) {#each lq as lifeq}
     function create_each_block$2(ctx) {
     	let tr;
     	let td0;
@@ -12178,6 +12195,7 @@ var app = (function () {
     			td12 = element("td");
     			t23 = text(t23_value);
     			t24 = space();
+<<<<<<< HEAD
     			add_location(td0, file$d, 326, 24, 10514);
     			add_location(td1, file$d, 327, 24, 10644);
     			attr_dev(a0, "href", a0_href_value = "#/lq-stats/" + /*lifeq*/ ctx[36].country + "/" + /*lifeq*/ ctx[36].year);
@@ -12196,6 +12214,26 @@ var app = (function () {
     			add_location(td11, file$d, 337, 24, 11194);
     			add_location(td12, file$d, 338, 24, 11295);
     			add_location(tr, file$d, 326, 20, 10510);
+=======
+    			add_location(td0, file$c, 426, 24, 13434);
+    			add_location(td1, file$c, 427, 24, 13564);
+    			attr_dev(a0, "href", a0_href_value = "#/lq-stats/" + /*lifeq*/ ctx[36].country + "/" + /*lifeq*/ ctx[36].year);
+    			add_location(a0, file$c, 428, 28, 13615);
+    			add_location(td2, file$c, 428, 24, 13611);
+    			add_location(td3, file$c, 429, 24, 13715);
+    			add_location(td4, file$c, 430, 24, 13767);
+    			add_location(td5, file$c, 431, 24, 13815);
+    			add_location(td6, file$c, 432, 24, 13864);
+    			add_location(td7, file$c, 433, 24, 13915);
+    			add_location(td8, file$c, 434, 24, 13965);
+    			add_location(td9, file$c, 435, 24, 14013);
+    			add_location(td10, file$c, 436, 24, 14066);
+    			attr_dev(a1, "href", a1_href_value = "#/lq-stats/" + /*lifeq*/ ctx[36].country + "/" + /*lifeq*/ ctx[36].year);
+    			add_location(a1, file$c, 437, 28, 14118);
+    			add_location(td11, file$c, 437, 24, 14114);
+    			add_location(td12, file$c, 438, 24, 14215);
+    			add_location(tr, file$c, 426, 20, 13430);
+>>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -12293,14 +12331,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(326:20) {#each lq as lifeq}",
+    		source: "(426:20) {#each lq as lifeq}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (290:8) <Table bordered responsive>
+    // (390:8) <Table bordered responsive>
     function create_default_slot_5$2(ctx) {
     	let thead;
     	let tr0;
@@ -12485,6 +12523,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
+<<<<<<< HEAD
     			add_location(th0, file$d, 291, 24, 8756);
     			add_location(th1, file$d, 292, 24, 8797);
     			add_location(th2, file$d, 293, 24, 8836);
@@ -12527,6 +12566,52 @@ var app = (function () {
     			add_location(td12, file$d, 321, 24, 10313);
     			add_location(tr1, file$d, 309, 20, 9431);
     			add_location(tbody, file$d, 308, 16, 9402);
+=======
+    			add_location(th0, file$c, 391, 24, 11676);
+    			add_location(th1, file$c, 392, 24, 11717);
+    			add_location(th2, file$c, 393, 24, 11756);
+    			add_location(th3, file$c, 394, 24, 11798);
+    			add_location(th4, file$c, 395, 24, 11842);
+    			add_location(th5, file$c, 396, 24, 11882);
+    			add_location(th6, file$c, 397, 24, 11923);
+    			add_location(th7, file$c, 398, 24, 11966);
+    			add_location(th8, file$c, 399, 24, 12008);
+    			add_location(th9, file$c, 400, 24, 12048);
+    			add_location(th10, file$c, 401, 24, 12093);
+    			add_location(th11, file$c, 402, 24, 12133);
+    			add_location(th12, file$c, 403, 24, 12172);
+    			attr_dev(tr0, "class", "svelte-1p6b9xa");
+    			add_location(tr0, file$c, 391, 20, 11672);
+    			attr_dev(thead, "class", "svelte-1p6b9xa");
+    			add_location(thead, file$c, 390, 16, 11643);
+    			add_location(td0, file$c, 409, 24, 12355);
+    			add_location(input0, file$c, 410, 28, 12463);
+    			add_location(td1, file$c, 410, 24, 12459);
+    			add_location(input1, file$c, 411, 28, 12531);
+    			add_location(td2, file$c, 411, 24, 12527);
+    			add_location(input2, file$c, 412, 28, 12602);
+    			add_location(td3, file$c, 412, 24, 12598);
+    			add_location(input3, file$c, 413, 28, 12675);
+    			add_location(td4, file$c, 413, 24, 12671);
+    			add_location(input4, file$c, 414, 28, 12744);
+    			add_location(td5, file$c, 414, 24, 12740);
+    			add_location(input5, file$c, 415, 28, 12814);
+    			add_location(td6, file$c, 415, 24, 12810);
+    			add_location(input6, file$c, 416, 28, 12886);
+    			add_location(td7, file$c, 416, 24, 12882);
+    			add_location(input7, file$c, 417, 28, 12957);
+    			add_location(td8, file$c, 417, 24, 12953);
+    			add_location(input8, file$c, 418, 28, 13026);
+    			add_location(td9, file$c, 418, 24, 13022);
+    			add_location(input9, file$c, 419, 28, 13100);
+    			add_location(td10, file$c, 419, 24, 13096);
+    			add_location(input10, file$c, 420, 28, 13169);
+    			add_location(td11, file$c, 420, 24, 13165);
+    			add_location(input11, file$c, 421, 28, 13237);
+    			add_location(td12, file$c, 421, 24, 13233);
+    			add_location(tr1, file$c, 409, 20, 12351);
+    			add_location(tbody, file$c, 408, 16, 12322);
+>>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -12752,14 +12837,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$2.name,
     		type: "slot",
-    		source: "(290:8) <Table bordered responsive>",
+    		source: "(390:8) <Table bordered responsive>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (345:8) <Button color="primary" on:click="{getLQLoadInitialData}">
+    // (445:8) <Button color="primary" on:click="{getLQLoadInitialData}">
     function create_default_slot_4$2(ctx) {
     	let t;
 
@@ -12779,14 +12864,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$2.name,
     		type: "slot",
-    		source: "(345:8) <Button color=\\\"primary\\\" on:click=\\\"{getLQLoadInitialData}\\\">",
+    		source: "(445:8) <Button color=\\\"primary\\\" on:click=\\\"{getLQLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (348:8) <Button color="danger" on:click="{deleteLQALL}">
+    // (448:8) <Button color="danger" on:click="{deleteLQALL}">
     function create_default_slot_3$5(ctx) {
     	let t;
 
@@ -12806,14 +12891,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$5.name,
     		type: "slot",
-    		source: "(348:8) <Button color=\\\"danger\\\" on:click=\\\"{deleteLQALL}\\\">",
+    		source: "(448:8) <Button color=\\\"danger\\\" on:click=\\\"{deleteLQALL}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (351:8) <Button outline color="success" on:click="{getPreviewPage}">
+    // (451:8) <Button outline color="success" on:click="{getPreviewPage}">
     function create_default_slot_2$5(ctx) {
     	let t;
 
@@ -12833,14 +12918,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$5.name,
     		type: "slot",
-    		source: "(351:8) <Button outline color=\\\"success\\\" on:click=\\\"{getPreviewPage}\\\">",
+    		source: "(451:8) <Button outline color=\\\"success\\\" on:click=\\\"{getPreviewPage}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (354:8) <Button outline color="success" on:click="{getNextPage}">
+    // (454:8) <Button outline color="success" on:click="{getNextPage}">
     function create_default_slot_1$5(ctx) {
     	let t;
 
@@ -12860,14 +12945,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$5.name,
     		type: "slot",
-    		source: "(354:8) <Button outline color=\\\"success\\\" on:click=\\\"{getNextPage}\\\">",
+    		source: "(454:8) <Button outline color=\\\"success\\\" on:click=\\\"{getNextPage}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (252:15)           Loading lq...      {:then lq}
+    // (352:15)           Loading lq...      {:then lq}
     function create_pending_block$4(ctx) {
     	let t;
 
@@ -12890,14 +12975,14 @@ var app = (function () {
     		block,
     		id: create_pending_block$4.name,
     		type: "pending",
-    		source: "(252:15)           Loading lq...      {:then lq}",
+    		source: "(352:15)           Loading lq...      {:then lq}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (360:4) <Button outline color="secondary" on:click="{pop}">
+    // (460:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$6(ctx) {
     	let t;
 
@@ -12917,24 +13002,43 @@ var app = (function () {
     		block,
     		id: create_default_slot$6.name,
     		type: "slot",
-    		source: "(360:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(460:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
+<<<<<<< HEAD
     function create_fragment$f(ctx) {
+=======
+    function create_fragment$e(ctx) {
+    	let script0;
+    	let script0_src_value;
+    	let script1;
+    	let script1_src_value;
+    	let script2;
+    	let script2_src_value;
+    	let script3;
+    	let script3_src_value;
+    	let t0;
+>>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
     	let main;
     	let h1;
-    	let t1;
-    	let promise;
     	let t2;
-    	let br0;
+    	let promise;
     	let t3;
-    	let br1;
+    	let br0;
     	let t4;
+    	let br1;
+    	let t5;
+    	let t6;
+    	let figure;
+    	let div;
+    	let t7;
+    	let p;
     	let current;
+    	let dispose;
 
     	let info = {
     		ctx,
@@ -12963,39 +13067,84 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			script0 = element("script");
+    			script1 = element("script");
+    			script2 = element("script");
+    			script3 = element("script");
+    			t0 = space();
     			main = element("main");
     			h1 = element("h1");
     			h1.textContent = "LQ Manager";
-    			t1 = space();
-    			info.block.c();
     			t2 = space();
-    			br0 = element("br");
+    			info.block.c();
     			t3 = space();
-    			br1 = element("br");
+    			br0 = element("br");
     			t4 = space();
+    			br1 = element("br");
+    			t5 = space();
     			create_component(button.$$.fragment);
+<<<<<<< HEAD
     			add_location(h1, file$d, 250, 4, 7539);
     			add_location(br0, file$d, 357, 4, 11914);
     			add_location(br1, file$d, 358, 4, 11924);
     			add_location(main, file$d, 249, 0, 7527);
+=======
+    			t6 = space();
+    			figure = element("figure");
+    			div = element("div");
+    			t7 = space();
+    			p = element("p");
+    			p.textContent = "En esta gráfica veremos la clasificación de los países dependiendo de su calidad de vida en 2016";
+    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$c, 343, 4, 10099);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$c, 344, 4, 10170);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$c, 345, 4, 10248);
+    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
+    			add_location(script3, file$c, 346, 4, 10328);
+    			add_location(h1, file$c, 350, 4, 10459);
+    			add_location(br0, file$c, 457, 4, 14834);
+    			add_location(br1, file$c, 458, 4, 14844);
+    			attr_dev(div, "id", "container");
+    			attr_dev(div, "class", "svelte-1p6b9xa");
+    			add_location(div, file$c, 462, 8, 14972);
+    			attr_dev(p, "class", "highcharts-description");
+    			add_location(p, file$c, 463, 8, 15008);
+    			attr_dev(figure, "class", "highcharts-figure svelte-1p6b9xa");
+    			add_location(figure, file$c, 461, 4, 14928);
+    			add_location(main, file$c, 349, 0, 10447);
+>>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-    		m: function mount(target, anchor) {
+    		m: function mount(target, anchor, remount) {
+    			append_dev(document.head, script0);
+    			append_dev(document.head, script1);
+    			append_dev(document.head, script2);
+    			append_dev(document.head, script3);
+    			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, h1);
-    			append_dev(main, t1);
+    			append_dev(main, t2);
     			info.block.m(main, info.anchor = null);
     			info.mount = () => main;
-    			info.anchor = t2;
-    			append_dev(main, t2);
-    			append_dev(main, br0);
+    			info.anchor = t3;
     			append_dev(main, t3);
-    			append_dev(main, br1);
+    			append_dev(main, br0);
     			append_dev(main, t4);
+    			append_dev(main, br1);
+    			append_dev(main, t5);
     			mount_component(button, main, null);
+    			append_dev(main, t6);
+    			append_dev(main, figure);
+    			append_dev(figure, div);
+    			append_dev(figure, t7);
+    			append_dev(figure, p);
     			current = true;
+    			if (remount) dispose();
+    			dispose = listen_dev(script3, "load", LoadGraphs, false, false, false);
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
@@ -13031,11 +13180,17 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
+    			detach_dev(script0);
+    			detach_dev(script1);
+    			detach_dev(script2);
+    			detach_dev(script3);
+    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			info.block.d();
     			info.token = null;
     			info = null;
     			destroy_component(button);
+    			dispose();
     		}
     	};
 
@@ -13050,7 +13205,71 @@ var app = (function () {
     	return block;
     }
 
+<<<<<<< HEAD
     function instance$f($$self, $$props, $$invalidate) {
+=======
+    async function LoadGraphs() {
+    	let MyData = [];
+    	const resData = await fetch("/api/v2/lq-stats");
+    	MyData = await resData.json();
+
+    	//xAxis
+    	var paises = MyData.filter(function (objeto) {
+    		return objeto.year == 2016;
+    	}).map(dato => [dato.country]);
+
+    	//yAxis
+    	var stab = MyData.filter(function (objeto) {
+    		return objeto.year == 2016;
+    	}).map(dato => [dato.stability]);
+
+    	var righ = MyData.filter(function (objeto) {
+    		return objeto.year == 2016;
+    	}).map(dato => [dato.right]);
+
+    	var heal = MyData.filter(function (objeto) {
+    		return objeto.year == 2016;
+    	}).map(dato => [dato.health]);
+
+    	var secu = MyData.filter(function (objeto) {
+    		return objeto.year == 2016;
+    	}).map(dato => [dato.security]);
+
+    	var clima = MyData.filter(function (objeto) {
+    		return objeto.year == 2016;
+    	}).map(dato => [dato.climate]);
+
+    	var cost = MyData.filter(function (objeto) {
+    		return objeto.year == 2016;
+    	}).map(dato => [dato.costs]);
+
+    	var popu = MyData.filter(function (objeto) {
+    		return objeto.year == 2016;
+    	}).map(dato => [dato.popularity]);
+
+    	Highcharts.chart("container", {
+    		chart: { type: "bar" },
+    		title: {
+    			text: "Calidad de vida por países del año 2016"
+    		},
+    		xAxis: { categories: paises },
+    		yAxis: { min: 0, title: { text: "" } },
+    		legend: { reversed: true },
+    		plotOptions: { series: { stacking: "normal" } },
+    		series: [
+    			{ name: "Stability", data: stab },
+    			{ name: "Right", data: righ },
+    			{ name: "Health", data: heal },
+    			{ name: "Security", data: secu },
+    			{ name: "Climate", data: clima },
+    			{ name: "Costs", data: cost },
+    			{ name: "Popularity", data: popu }
+    		]
+    	});
+    }
+
+    function instance$e($$self, $$props, $$invalidate) {
+>>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
     	let isOpen = false;
 
     	//ALERTAS
@@ -13283,6 +13502,7 @@ var app = (function () {
     		}
     	}
 
+    	
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -13393,7 +13613,8 @@ var app = (function () {
     		deleteLQ,
     		deleteLQALL,
     		getNextPage,
-    		getPreviewPage
+    		getPreviewPage,
+    		LoadGraphs
     	});
 
     	$$self.$inject_state = $$props => {
