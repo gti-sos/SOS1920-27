@@ -80,22 +80,43 @@
         }
     }
     async function loadGraphs() {
+        let MyData = [];
+
+        const resData = await fetch("/api/v2/spc-stats");
+        MyData = spc;
+
+        var mujeres = MyData.map((dato)=> dato.female_number);
+        var hombres = MyData.map((dato)=> dato.male_number);
+        var paises = MyData.map((dato)=> {
+            return dato.country
+        });
+
         var options = {
-  chart: {
-    type: 'bar'
-  },
-  series: [{
-    name: 'sales',
-    data: [30,40,45,50,49,60,70,91,125]
-  }],
-  xaxis: {
-    categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
-  }
-}
+          series: [{
+          name: 'Hombres',
+          data: hombres
+        }, {
+          name: 'Mujeres',
+          data: mujeres
+        }],
+          chart: {
+          height: 550,
+          type: 'area'
+        },
+        dataLabels: {
+          enabled: true
+        },
+        stroke: {
+          curve: 'smooth'
+        },
+        xaxis: {
+          type: 'category',
+          categories: paises
+        },
+        };
 
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-chart.render();
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
  }
 
 
@@ -114,7 +135,7 @@ chart.render();
     <Button color="danger" on:click="{deleteSPCALL}">
         Borrar todo
     </Button>
-    <div id="chart">
+    <div id="chart" style="text-align: center;">Suicidios por cada 100,000 personas
     </div>
 </main>
 

@@ -153,7 +153,7 @@
                 height: '100%'
             },
             title: {
-                text: 'Suicides per 100,000 people in 2013 '
+                text: 'Suicidios por cada 100,000 personas en 2013 '
             },
             tooltip: {
                 useHTML: true,

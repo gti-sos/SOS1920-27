@@ -7290,25 +7290,25 @@ var app = (function () {
     			t4 = space();
     			div = element("div");
     			if (script0.src !== (script0_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$9, 212, 4, 6277);
+    			add_location(script0, file$9, 212, 4, 6285);
     			if (script1.src !== (script1_src_value = "apex.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$9, 213, 4, 6375);
+    			add_location(script1, file$9, 213, 4, 6383);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$9, 214, 4, 6412);
+    			add_location(script2, file$9, 214, 4, 6420);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$9, 215, 4, 6483);
+    			add_location(script3, file$9, 215, 4, 6491);
     			if (script4.src !== (script4_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script4, "src", script4_src_value);
-    			add_location(script4, file$9, 216, 4, 6559);
+    			add_location(script4, file$9, 216, 4, 6567);
     			if (script5.src !== (script5_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script5, "src", script5_src_value);
-    			add_location(script5, file$9, 217, 4, 6637);
-    			add_location(h1, file$9, 221, 4, 6768);
+    			add_location(script5, file$9, 217, 4, 6645);
+    			add_location(h1, file$9, 221, 4, 6776);
     			attr_dev(div, "id", "container");
     			set_style(div, "height", "1000");
     			set_style(div, "min-width", "310px");
     			set_style(div, "max-width", "800px");
     			set_style(div, "margin", "100px");
-    			add_location(div, file$9, 228, 4, 7003);
-    			add_location(main, file$9, 219, 0, 6754);
+    			add_location(div, file$9, 228, 4, 7011);
+    			add_location(main, file$9, 219, 0, 6762);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7448,7 +7448,7 @@ var app = (function () {
     	Highcharts.chart("container", {
     		chart: { type: "packedbubble", height: "100%" },
     		title: {
-    			text: "Suicides per 100,000 people in 2013 "
+    			text: "Suicidios por cada 100,000 personas en 2013 "
     		},
     		tooltip: {
     			useHTML: true,
@@ -7615,7 +7615,7 @@ var app = (function () {
     const { console: console_1$3, document: document_1 } = globals;
     const file$a = "src\\front\\GUI1SPC\\ApexChart.svelte";
 
-    // (111:4) <Button color="success" on:click="{getSPCLoadInitialData}">
+    // (132:4) <Button color="success" on:click="{getSPCLoadInitialData}">
     function create_default_slot_1$3(ctx) {
     	let t;
 
@@ -7635,14 +7635,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$3.name,
     		type: "slot",
-    		source: "(111:4) <Button color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
+    		source: "(132:4) <Button color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (114:4) <Button color="danger" on:click="{deleteSPCALL}">
+    // (135:4) <Button color="danger" on:click="{deleteSPCALL}">
     function create_default_slot$4(ctx) {
     	let t;
 
@@ -7662,7 +7662,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$4.name,
     		type: "slot",
-    		source: "(114:4) <Button color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
+    		source: "(135:4) <Button color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
     		ctx
     	});
 
@@ -7717,13 +7717,15 @@ var app = (function () {
     			create_component(button1.$$.fragment);
     			t4 = space();
     			div = element("div");
+    			div.textContent = "Suicidios por cada 100,000 personas";
     			if (script.src !== (script_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$a, 105, 4, 2820);
-    			add_location(h1, file$a, 109, 4, 2936);
+    			add_location(script, file$a, 126, 4, 3416);
+    			add_location(h1, file$a, 130, 4, 3532);
     			attr_dev(div, "id", "chart");
+    			set_style(div, "text-align", "center");
     			attr_dev(div, "class", "svelte-jx8xh2");
-    			add_location(div, file$a, 116, 4, 3171);
-    			add_location(main, file$a, 107, 0, 2922);
+    			add_location(div, file$a, 137, 4, 3767);
+    			add_location(main, file$a, 128, 0, 3518);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7857,17 +7859,22 @@ var app = (function () {
     	}
 
     	async function loadGraphs() {
+    		let MyData = [];
+    		const resData = await fetch("/api/v2/spc-stats");
+    		MyData = spc;
+    		var mujeres = MyData.map(dato => dato.female_number);
+    		var hombres = MyData.map(dato => dato.male_number);
+
+    		var paises = MyData.map(dato => {
+    			return dato.country;
+    		});
+
     		var options = {
-    			chart: { type: "bar" },
-    			series: [
-    				{
-    					name: "sales",
-    					data: [30, 40, 45, 50, 49, 60, 70, 91, 125]
-    				}
-    			],
-    			xaxis: {
-    				categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
-    			}
+    			series: [{ name: "Hombres", data: hombres }, { name: "Mujeres", data: mujeres }],
+    			chart: { height: 550, type: "area" },
+    			dataLabels: { enabled: true },
+    			stroke: { curve: "smooth" },
+    			xaxis: { type: "category", categories: paises }
     		};
 
     		var chart = new Et(document.querySelector("#chart"), options);
