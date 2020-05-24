@@ -11809,15 +11809,7 @@ var app = (function () {
     			create_component(button3.$$.fragment);
     			t6 = space();
     			create_component(button4.$$.fragment);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    			add_location(div, file$d, 281, 8, 8451);
-=======
-    			add_location(div, file$c, 381, 8, 11371);
->>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
-=======
-    			add_location(div, file$e, 281, 8, 8451);
->>>>>>> 210cabdf651bc5a7e451e382fce13c44e3679f2a
+    			add_location(div, file$e, 381, 8, 11371);
     		},
     		m: function mount(target, anchor) {
     			mount_component(button0, target, anchor);
@@ -11954,17 +11946,8 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-    // (257:4) <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
-<<<<<<< HEAD
-    function create_default_slot_13$1(ctx) {
-=======
     // (357:4) <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
     function create_default_slot_13(ctx) {
->>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
-=======
-    function create_default_slot_13(ctx) {
->>>>>>> 210cabdf651bc5a7e451e382fce13c44e3679f2a
     	let t;
 
     	const block = {
@@ -11990,13 +11973,8 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
     // (368:20) <Button outline color="info" on:click="{searchLQ(country, year)}">
-    function create_default_slot_12$1(ctx) {
-=======
-    // (268:20) <Button outline color="info" on:click="{searchLQ(country, year)}">
     function create_default_slot_12(ctx) {
->>>>>>> 210cabdf651bc5a7e451e382fce13c44e3679f2a
     	let t;
 
     	const block = {
@@ -12149,27 +12127,11 @@ var app = (function () {
     			t3 = space();
     			if (if_block) if_block.c();
     			attr_dev(input0, "type", "text");
-<<<<<<< HEAD
-<<<<<<< HEAD
-    			add_location(input0, file$d, 265, 29, 7882);
+    			add_location(input0, file$e, 365, 29, 10802);
     			attr_dev(input1, "type", "text");
-    			add_location(input1, file$d, 265, 78, 7931);
-    			add_location(tr, file$d, 263, 16, 7825);
-    			add_location(tbody, file$d, 262, 12, 7800);
-=======
-    			add_location(input0, file$c, 365, 29, 10802);
-    			attr_dev(input1, "type", "text");
-    			add_location(input1, file$c, 365, 78, 10851);
-    			add_location(tr, file$c, 363, 16, 10745);
-    			add_location(tbody, file$c, 362, 12, 10720);
->>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
-=======
-    			add_location(input0, file$e, 265, 29, 7882);
-    			attr_dev(input1, "type", "text");
-    			add_location(input1, file$e, 265, 78, 7931);
-    			add_location(tr, file$e, 263, 16, 7825);
-    			add_location(tbody, file$e, 262, 12, 7800);
->>>>>>> 210cabdf651bc5a7e451e382fce13c44e3679f2a
+    			add_location(input1, file$e, 365, 78, 10851);
+    			add_location(tr, file$e, 363, 16, 10745);
+    			add_location(tbody, file$e, 362, 12, 10720);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, tbody, anchor);
@@ -12565,57 +12527,24 @@ var app = (function () {
     			td12 = element("td");
     			t23 = text(t23_value);
     			t24 = space();
-<<<<<<< HEAD
-<<<<<<< HEAD
-    			add_location(td0, file$d, 326, 24, 10514);
-    			add_location(td1, file$d, 327, 24, 10644);
-=======
-    			add_location(td0, file$e, 326, 24, 10514);
-    			add_location(td1, file$e, 327, 24, 10644);
->>>>>>> 210cabdf651bc5a7e451e382fce13c44e3679f2a
+    			add_location(td0, file$e, 426, 24, 13434);
+    			add_location(td1, file$e, 427, 24, 13564);
     			attr_dev(a0, "href", a0_href_value = "#/lq-stats/" + /*lifeq*/ ctx[36].country + "/" + /*lifeq*/ ctx[36].year);
-    			add_location(a0, file$e, 328, 28, 10695);
-    			add_location(td2, file$e, 328, 24, 10691);
-    			add_location(td3, file$e, 329, 24, 10795);
-    			add_location(td4, file$e, 330, 24, 10847);
-    			add_location(td5, file$e, 331, 24, 10895);
-    			add_location(td6, file$e, 332, 24, 10944);
-    			add_location(td7, file$e, 333, 24, 10995);
-    			add_location(td8, file$e, 334, 24, 11045);
-    			add_location(td9, file$e, 335, 24, 11093);
-    			add_location(td10, file$e, 336, 24, 11146);
+    			add_location(a0, file$e, 428, 28, 13615);
+    			add_location(td2, file$e, 428, 24, 13611);
+    			add_location(td3, file$e, 429, 24, 13715);
+    			add_location(td4, file$e, 430, 24, 13767);
+    			add_location(td5, file$e, 431, 24, 13815);
+    			add_location(td6, file$e, 432, 24, 13864);
+    			add_location(td7, file$e, 433, 24, 13915);
+    			add_location(td8, file$e, 434, 24, 13965);
+    			add_location(td9, file$e, 435, 24, 14013);
+    			add_location(td10, file$e, 436, 24, 14066);
     			attr_dev(a1, "href", a1_href_value = "#/lq-stats/" + /*lifeq*/ ctx[36].country + "/" + /*lifeq*/ ctx[36].year);
-<<<<<<< HEAD
-    			add_location(a1, file$d, 337, 28, 11198);
-    			add_location(td11, file$d, 337, 24, 11194);
-    			add_location(td12, file$d, 338, 24, 11295);
-    			add_location(tr, file$d, 326, 20, 10510);
-=======
-    			add_location(td0, file$c, 426, 24, 13434);
-    			add_location(td1, file$c, 427, 24, 13564);
-    			attr_dev(a0, "href", a0_href_value = "#/lq-stats/" + /*lifeq*/ ctx[36].country + "/" + /*lifeq*/ ctx[36].year);
-    			add_location(a0, file$c, 428, 28, 13615);
-    			add_location(td2, file$c, 428, 24, 13611);
-    			add_location(td3, file$c, 429, 24, 13715);
-    			add_location(td4, file$c, 430, 24, 13767);
-    			add_location(td5, file$c, 431, 24, 13815);
-    			add_location(td6, file$c, 432, 24, 13864);
-    			add_location(td7, file$c, 433, 24, 13915);
-    			add_location(td8, file$c, 434, 24, 13965);
-    			add_location(td9, file$c, 435, 24, 14013);
-    			add_location(td10, file$c, 436, 24, 14066);
-    			attr_dev(a1, "href", a1_href_value = "#/lq-stats/" + /*lifeq*/ ctx[36].country + "/" + /*lifeq*/ ctx[36].year);
-    			add_location(a1, file$c, 437, 28, 14118);
-    			add_location(td11, file$c, 437, 24, 14114);
-    			add_location(td12, file$c, 438, 24, 14215);
-    			add_location(tr, file$c, 426, 20, 13430);
->>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
-=======
-    			add_location(a1, file$e, 337, 28, 11198);
-    			add_location(td11, file$e, 337, 24, 11194);
-    			add_location(td12, file$e, 338, 24, 11295);
-    			add_location(tr, file$e, 326, 20, 10510);
->>>>>>> 210cabdf651bc5a7e451e382fce13c44e3679f2a
+    			add_location(a1, file$e, 437, 28, 14118);
+    			add_location(td11, file$e, 437, 24, 14114);
+    			add_location(td12, file$e, 438, 24, 14215);
+    			add_location(tr, file$e, 426, 20, 13430);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -12905,140 +12834,50 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    			add_location(th0, file$d, 291, 24, 8756);
-    			add_location(th1, file$d, 292, 24, 8797);
-    			add_location(th2, file$d, 293, 24, 8836);
-    			add_location(th3, file$d, 294, 24, 8878);
-    			add_location(th4, file$d, 295, 24, 8922);
-    			add_location(th5, file$d, 296, 24, 8962);
-    			add_location(th6, file$d, 297, 24, 9003);
-    			add_location(th7, file$d, 298, 24, 9046);
-    			add_location(th8, file$d, 299, 24, 9088);
-    			add_location(th9, file$d, 300, 24, 9128);
-    			add_location(th10, file$d, 301, 24, 9173);
-    			add_location(th11, file$d, 302, 24, 9213);
-    			add_location(th12, file$d, 303, 24, 9252);
-    			add_location(tr0, file$d, 291, 20, 8752);
-    			add_location(thead, file$d, 290, 16, 8723);
-    			add_location(td0, file$d, 309, 24, 9435);
-    			add_location(input0, file$d, 310, 28, 9543);
-    			add_location(td1, file$d, 310, 24, 9539);
-    			add_location(input1, file$d, 311, 28, 9611);
-    			add_location(td2, file$d, 311, 24, 9607);
-    			add_location(input2, file$d, 312, 28, 9682);
-    			add_location(td3, file$d, 312, 24, 9678);
-    			add_location(input3, file$d, 313, 28, 9755);
-    			add_location(td4, file$d, 313, 24, 9751);
-    			add_location(input4, file$d, 314, 28, 9824);
-    			add_location(td5, file$d, 314, 24, 9820);
-    			add_location(input5, file$d, 315, 28, 9894);
-    			add_location(td6, file$d, 315, 24, 9890);
-    			add_location(input6, file$d, 316, 28, 9966);
-    			add_location(td7, file$d, 316, 24, 9962);
-    			add_location(input7, file$d, 317, 28, 10037);
-    			add_location(td8, file$d, 317, 24, 10033);
-    			add_location(input8, file$d, 318, 28, 10106);
-    			add_location(td9, file$d, 318, 24, 10102);
-    			add_location(input9, file$d, 319, 28, 10180);
-    			add_location(td10, file$d, 319, 24, 10176);
-    			add_location(input10, file$d, 320, 28, 10249);
-    			add_location(td11, file$d, 320, 24, 10245);
-    			add_location(input11, file$d, 321, 28, 10317);
-    			add_location(td12, file$d, 321, 24, 10313);
-    			add_location(tr1, file$d, 309, 20, 9431);
-    			add_location(tbody, file$d, 308, 16, 9402);
-=======
-    			add_location(th0, file$c, 391, 24, 11676);
-    			add_location(th1, file$c, 392, 24, 11717);
-    			add_location(th2, file$c, 393, 24, 11756);
-    			add_location(th3, file$c, 394, 24, 11798);
-    			add_location(th4, file$c, 395, 24, 11842);
-    			add_location(th5, file$c, 396, 24, 11882);
-    			add_location(th6, file$c, 397, 24, 11923);
-    			add_location(th7, file$c, 398, 24, 11966);
-    			add_location(th8, file$c, 399, 24, 12008);
-    			add_location(th9, file$c, 400, 24, 12048);
-    			add_location(th10, file$c, 401, 24, 12093);
-    			add_location(th11, file$c, 402, 24, 12133);
-    			add_location(th12, file$c, 403, 24, 12172);
+    			add_location(th0, file$e, 391, 24, 11676);
+    			add_location(th1, file$e, 392, 24, 11717);
+    			add_location(th2, file$e, 393, 24, 11756);
+    			add_location(th3, file$e, 394, 24, 11798);
+    			add_location(th4, file$e, 395, 24, 11842);
+    			add_location(th5, file$e, 396, 24, 11882);
+    			add_location(th6, file$e, 397, 24, 11923);
+    			add_location(th7, file$e, 398, 24, 11966);
+    			add_location(th8, file$e, 399, 24, 12008);
+    			add_location(th9, file$e, 400, 24, 12048);
+    			add_location(th10, file$e, 401, 24, 12093);
+    			add_location(th11, file$e, 402, 24, 12133);
+    			add_location(th12, file$e, 403, 24, 12172);
     			attr_dev(tr0, "class", "svelte-1p6b9xa");
-    			add_location(tr0, file$c, 391, 20, 11672);
+    			add_location(tr0, file$e, 391, 20, 11672);
     			attr_dev(thead, "class", "svelte-1p6b9xa");
-    			add_location(thead, file$c, 390, 16, 11643);
-    			add_location(td0, file$c, 409, 24, 12355);
-    			add_location(input0, file$c, 410, 28, 12463);
-    			add_location(td1, file$c, 410, 24, 12459);
-    			add_location(input1, file$c, 411, 28, 12531);
-    			add_location(td2, file$c, 411, 24, 12527);
-    			add_location(input2, file$c, 412, 28, 12602);
-    			add_location(td3, file$c, 412, 24, 12598);
-    			add_location(input3, file$c, 413, 28, 12675);
-    			add_location(td4, file$c, 413, 24, 12671);
-    			add_location(input4, file$c, 414, 28, 12744);
-    			add_location(td5, file$c, 414, 24, 12740);
-    			add_location(input5, file$c, 415, 28, 12814);
-    			add_location(td6, file$c, 415, 24, 12810);
-    			add_location(input6, file$c, 416, 28, 12886);
-    			add_location(td7, file$c, 416, 24, 12882);
-    			add_location(input7, file$c, 417, 28, 12957);
-    			add_location(td8, file$c, 417, 24, 12953);
-    			add_location(input8, file$c, 418, 28, 13026);
-    			add_location(td9, file$c, 418, 24, 13022);
-    			add_location(input9, file$c, 419, 28, 13100);
-    			add_location(td10, file$c, 419, 24, 13096);
-    			add_location(input10, file$c, 420, 28, 13169);
-    			add_location(td11, file$c, 420, 24, 13165);
-    			add_location(input11, file$c, 421, 28, 13237);
-    			add_location(td12, file$c, 421, 24, 13233);
-    			add_location(tr1, file$c, 409, 20, 12351);
-    			add_location(tbody, file$c, 408, 16, 12322);
->>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
-=======
-    			add_location(th0, file$e, 291, 24, 8756);
-    			add_location(th1, file$e, 292, 24, 8797);
-    			add_location(th2, file$e, 293, 24, 8836);
-    			add_location(th3, file$e, 294, 24, 8878);
-    			add_location(th4, file$e, 295, 24, 8922);
-    			add_location(th5, file$e, 296, 24, 8962);
-    			add_location(th6, file$e, 297, 24, 9003);
-    			add_location(th7, file$e, 298, 24, 9046);
-    			add_location(th8, file$e, 299, 24, 9088);
-    			add_location(th9, file$e, 300, 24, 9128);
-    			add_location(th10, file$e, 301, 24, 9173);
-    			add_location(th11, file$e, 302, 24, 9213);
-    			add_location(th12, file$e, 303, 24, 9252);
-    			add_location(tr0, file$e, 291, 20, 8752);
-    			add_location(thead, file$e, 290, 16, 8723);
-    			add_location(td0, file$e, 309, 24, 9435);
-    			add_location(input0, file$e, 310, 28, 9543);
-    			add_location(td1, file$e, 310, 24, 9539);
-    			add_location(input1, file$e, 311, 28, 9611);
-    			add_location(td2, file$e, 311, 24, 9607);
-    			add_location(input2, file$e, 312, 28, 9682);
-    			add_location(td3, file$e, 312, 24, 9678);
-    			add_location(input3, file$e, 313, 28, 9755);
-    			add_location(td4, file$e, 313, 24, 9751);
-    			add_location(input4, file$e, 314, 28, 9824);
-    			add_location(td5, file$e, 314, 24, 9820);
-    			add_location(input5, file$e, 315, 28, 9894);
-    			add_location(td6, file$e, 315, 24, 9890);
-    			add_location(input6, file$e, 316, 28, 9966);
-    			add_location(td7, file$e, 316, 24, 9962);
-    			add_location(input7, file$e, 317, 28, 10037);
-    			add_location(td8, file$e, 317, 24, 10033);
-    			add_location(input8, file$e, 318, 28, 10106);
-    			add_location(td9, file$e, 318, 24, 10102);
-    			add_location(input9, file$e, 319, 28, 10180);
-    			add_location(td10, file$e, 319, 24, 10176);
-    			add_location(input10, file$e, 320, 28, 10249);
-    			add_location(td11, file$e, 320, 24, 10245);
-    			add_location(input11, file$e, 321, 28, 10317);
-    			add_location(td12, file$e, 321, 24, 10313);
-    			add_location(tr1, file$e, 309, 20, 9431);
-    			add_location(tbody, file$e, 308, 16, 9402);
->>>>>>> 210cabdf651bc5a7e451e382fce13c44e3679f2a
+    			add_location(thead, file$e, 390, 16, 11643);
+    			add_location(td0, file$e, 409, 24, 12355);
+    			add_location(input0, file$e, 410, 28, 12463);
+    			add_location(td1, file$e, 410, 24, 12459);
+    			add_location(input1, file$e, 411, 28, 12531);
+    			add_location(td2, file$e, 411, 24, 12527);
+    			add_location(input2, file$e, 412, 28, 12602);
+    			add_location(td3, file$e, 412, 24, 12598);
+    			add_location(input3, file$e, 413, 28, 12675);
+    			add_location(td4, file$e, 413, 24, 12671);
+    			add_location(input4, file$e, 414, 28, 12744);
+    			add_location(td5, file$e, 414, 24, 12740);
+    			add_location(input5, file$e, 415, 28, 12814);
+    			add_location(td6, file$e, 415, 24, 12810);
+    			add_location(input6, file$e, 416, 28, 12886);
+    			add_location(td7, file$e, 416, 24, 12882);
+    			add_location(input7, file$e, 417, 28, 12957);
+    			add_location(td8, file$e, 417, 24, 12953);
+    			add_location(input8, file$e, 418, 28, 13026);
+    			add_location(td9, file$e, 418, 24, 13022);
+    			add_location(input9, file$e, 419, 28, 13100);
+    			add_location(td10, file$e, 419, 24, 13096);
+    			add_location(input10, file$e, 420, 28, 13169);
+    			add_location(td11, file$e, 420, 24, 13165);
+    			add_location(input11, file$e, 421, 28, 13237);
+    			add_location(td12, file$e, 421, 24, 13233);
+    			add_location(tr1, file$e, 409, 20, 12351);
+    			add_location(tbody, file$e, 408, 16, 12322);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -13352,13 +13191,8 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
     // (454:8) <Button outline color="success" on:click="{getNextPage}">
-    function create_default_slot_1$5(ctx) {
-=======
-    // (354:8) <Button outline color="success" on:click="{getNextPage}">
     function create_default_slot_1$7(ctx) {
->>>>>>> 210cabdf651bc5a7e451e382fce13c44e3679f2a
     	let t;
 
     	const block = {
@@ -13414,13 +13248,8 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
     // (460:4) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$6(ctx) {
-=======
-    // (360:4) <Button outline color="secondary" on:click="{pop}">
     function create_default_slot$8(ctx) {
->>>>>>> 210cabdf651bc5a7e451e382fce13c44e3679f2a
     	let t;
 
     	const block = {
@@ -13446,11 +13275,7 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    function create_fragment$f(ctx) {
-=======
-    function create_fragment$e(ctx) {
+    function create_fragment$g(ctx) {
     	let script0;
     	let script0_src_value;
     	let script1;
@@ -13460,10 +13285,6 @@ var app = (function () {
     	let script3;
     	let script3_src_value;
     	let t0;
->>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
-=======
-    function create_fragment$g(ctx) {
->>>>>>> 210cabdf651bc5a7e451e382fce13c44e3679f2a
     	let main;
     	let h1;
     	let t2;
@@ -13524,13 +13345,6 @@ var app = (function () {
     			br1 = element("br");
     			t5 = space();
     			create_component(button.$$.fragment);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    			add_location(h1, file$d, 250, 4, 7539);
-    			add_location(br0, file$d, 357, 4, 11914);
-    			add_location(br1, file$d, 358, 4, 11924);
-    			add_location(main, file$d, 249, 0, 7527);
-=======
     			t6 = space();
     			figure = element("figure");
     			div = element("div");
@@ -13538,31 +13352,24 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "En esta gráfica veremos la clasificación de los países dependiendo de su calidad de vida en 2016";
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$c, 343, 4, 10099);
+    			add_location(script0, file$e, 343, 4, 10099);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$c, 344, 4, 10170);
+    			add_location(script1, file$e, 344, 4, 10170);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$c, 345, 4, 10248);
+    			add_location(script2, file$e, 345, 4, 10248);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$c, 346, 4, 10328);
-    			add_location(h1, file$c, 350, 4, 10459);
-    			add_location(br0, file$c, 457, 4, 14834);
-    			add_location(br1, file$c, 458, 4, 14844);
+    			add_location(script3, file$e, 346, 4, 10328);
+    			add_location(h1, file$e, 350, 4, 10459);
+    			add_location(br0, file$e, 457, 4, 14834);
+    			add_location(br1, file$e, 458, 4, 14844);
     			attr_dev(div, "id", "container");
     			attr_dev(div, "class", "svelte-1p6b9xa");
-    			add_location(div, file$c, 462, 8, 14972);
+    			add_location(div, file$e, 462, 8, 14972);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$c, 463, 8, 15008);
+    			add_location(p, file$e, 463, 8, 15008);
     			attr_dev(figure, "class", "highcharts-figure svelte-1p6b9xa");
-    			add_location(figure, file$c, 461, 4, 14928);
-    			add_location(main, file$c, 349, 0, 10447);
->>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
-=======
-    			add_location(h1, file$e, 250, 4, 7539);
-    			add_location(br0, file$e, 357, 4, 11914);
-    			add_location(br1, file$e, 358, 4, 11924);
-    			add_location(main, file$e, 249, 0, 7527);
->>>>>>> 210cabdf651bc5a7e451e382fce13c44e3679f2a
+    			add_location(figure, file$e, 461, 4, 14928);
+    			add_location(main, file$e, 349, 0, 10447);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13653,10 +13460,6 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    function instance$f($$self, $$props, $$invalidate) {
-=======
     async function LoadGraphs() {
     	let MyData = [];
     	const resData = await fetch("/api/v2/lq-stats");
@@ -13717,11 +13520,7 @@ var app = (function () {
     	});
     }
 
-    function instance$e($$self, $$props, $$invalidate) {
->>>>>>> 0ef9affad69e6d4cadc17a54c71e2d3bc55a9585
-=======
     function instance$g($$self, $$props, $$invalidate) {
->>>>>>> 210cabdf651bc5a7e451e382fce13c44e3679f2a
     	let isOpen = false;
 
     	//ALERTAS
