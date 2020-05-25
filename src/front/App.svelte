@@ -18,7 +18,7 @@
 	
 	import GUI3LQ from './GUI3LQ/Home.svelte';
 	import GUI3LQHighChart from './GUI3LQ/HighChart.svelte';
-	import GUI3LQApexChart from './'
+	import GUI3LQApexChart from './GUI3LQ/ApexChart.svelte';
 	import EditLq from './GUI3LQ/EditLq.svelte';
 	import GUI3SPCIntegrations from './GUI3LQ/Integrations.svelte'; //integraciones
 
@@ -38,7 +38,8 @@
 		"/integrations/gui2integrations": GUI2SPCIntegrations,
 
 		"/gui3lq": GUI3LQ,
-		"/gui3"
+		"/gui3LQHighChart": GUI3LQHighChart,
+		"/gui3LQApexChart": GUI3LQApexChart,
 		"/lq-stats/:lqCountry/:lqYear":EditLq,
 		"/integrations/gui3integrations": GUI3SPCIntegrations,
 
