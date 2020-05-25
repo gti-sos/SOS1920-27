@@ -21,52 +21,68 @@
         }
         return array;
     }
+    
 
     async function loadGraphs(){
 
         let MyData = [];
+        let continent=[];
 
         const resData = await fetch("/api/v2/poverty-stats");
         MyData = await resData.json();
         
         ordenarAsc(MyData,"year");
-        console.log(MyData);
+        
        
+        var year = MyData.map((dato)=> {   
+             return dato.year;
+        });
 
+       year= year.filter(function(valor, indiceActual, arreglo) {
+            let indiceAlBuscar = arreglo.indexOf(valor);
+            if (indiceActual === indiceAlBuscar) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+
+        console.log(year);
         var euro = MyData.filter(function (el) {
                 return el.continent == "europe";
             }).map((dato)=> {     
-             return dato.under_320;
+             return parseFloat(dato.under_320);
         });
+        
 
         var asia = MyData.filter(function (el) {
                 return el.continent == "asia";
             }).map((dato)=> {     
-                return dato.under_320;
+                return parseFloat(dato.under_320);
         });
 
         var africa = MyData.filter(function (el) {
                 return el.continent == "africa";
             }).map((dato)=> {     
-                return dato.under_320;
+                return parseFloat(dato.under_320);
         });
 
         var south = MyData.filter(function (el) {
                 return el.continent == "south america";
             }).map((dato)=> {     
-                return dato.under_320;
+                return parseFloat(dato.under_320);
         });
 
         var north = MyData.filter(function (el) {
                 return el.continent == "north america";
             }).map((dato)=> {     
-                return dato.under_320;
+                return parseFloat(dato.under_320);
         });
 
         var oceania = MyData.filter(function (el) {
                 return el.continent == "oceania";
             }).map((dato)=> {     
-                return dato.under_320;
+                return parseFloat(dato.under_320);
         });
        
         Highcharts.chart('container', {
@@ -78,8 +94,7 @@
             },
             
             xAxis: {
-                categories: ['2014', '2015',
-                    '2016', '2017']
+                categories: year
             },
             yAxis: {
                 title: {
