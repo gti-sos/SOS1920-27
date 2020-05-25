@@ -12047,11 +12047,7 @@ var app = (function () {
     			create_component(button3.$$.fragment);
     			t6 = space();
     			create_component(button4.$$.fragment);
-<<<<<<< HEAD
-    			add_location(div, file$e, 381, 8, 11371);
-=======
     			add_location(div, file$f, 381, 8, 11371);
->>>>>>> 194db9f715b0a0bd8f524288becce46430bb66ae
     		},
     		m: function mount(target, anchor) {
     			mount_component(button0, target, anchor);
@@ -12369,19 +12365,11 @@ var app = (function () {
     			t3 = space();
     			if (if_block) if_block.c();
     			attr_dev(input0, "type", "text");
-<<<<<<< HEAD
-    			add_location(input0, file$e, 365, 29, 10802);
-    			attr_dev(input1, "type", "text");
-    			add_location(input1, file$e, 365, 78, 10851);
-    			add_location(tr, file$e, 363, 16, 10745);
-    			add_location(tbody, file$e, 362, 12, 10720);
-=======
     			add_location(input0, file$f, 365, 29, 10802);
     			attr_dev(input1, "type", "text");
     			add_location(input1, file$f, 365, 78, 10851);
     			add_location(tr, file$f, 363, 16, 10745);
     			add_location(tbody, file$f, 362, 12, 10720);
->>>>>>> 194db9f715b0a0bd8f524288becce46430bb66ae
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, tbody, anchor);
@@ -12777,26 +12765,6 @@ var app = (function () {
     			td12 = element("td");
     			t23 = text(t23_value);
     			t24 = space();
-<<<<<<< HEAD
-    			add_location(td0, file$e, 426, 24, 13434);
-    			add_location(td1, file$e, 427, 24, 13564);
-    			attr_dev(a0, "href", a0_href_value = "#/lq-stats/" + /*lifeq*/ ctx[36].country + "/" + /*lifeq*/ ctx[36].year);
-    			add_location(a0, file$e, 428, 28, 13615);
-    			add_location(td2, file$e, 428, 24, 13611);
-    			add_location(td3, file$e, 429, 24, 13715);
-    			add_location(td4, file$e, 430, 24, 13767);
-    			add_location(td5, file$e, 431, 24, 13815);
-    			add_location(td6, file$e, 432, 24, 13864);
-    			add_location(td7, file$e, 433, 24, 13915);
-    			add_location(td8, file$e, 434, 24, 13965);
-    			add_location(td9, file$e, 435, 24, 14013);
-    			add_location(td10, file$e, 436, 24, 14066);
-    			attr_dev(a1, "href", a1_href_value = "#/lq-stats/" + /*lifeq*/ ctx[36].country + "/" + /*lifeq*/ ctx[36].year);
-    			add_location(a1, file$e, 437, 28, 14118);
-    			add_location(td11, file$e, 437, 24, 14114);
-    			add_location(td12, file$e, 438, 24, 14215);
-    			add_location(tr, file$e, 426, 20, 13430);
-=======
     			add_location(td0, file$f, 426, 24, 13434);
     			add_location(td1, file$f, 427, 24, 13564);
     			attr_dev(a0, "href", a0_href_value = "#/lq-stats/" + /*lifeq*/ ctx[36].country + "/" + /*lifeq*/ ctx[36].year);
@@ -12815,7 +12783,6 @@ var app = (function () {
     			add_location(td11, file$f, 437, 24, 14114);
     			add_location(td12, file$f, 438, 24, 14215);
     			add_location(tr, file$f, 426, 20, 13430);
->>>>>>> 194db9f715b0a0bd8f524288becce46430bb66ae
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -13105,52 +13072,6 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-<<<<<<< HEAD
-    			add_location(th0, file$e, 391, 24, 11676);
-    			add_location(th1, file$e, 392, 24, 11717);
-    			add_location(th2, file$e, 393, 24, 11756);
-    			add_location(th3, file$e, 394, 24, 11798);
-    			add_location(th4, file$e, 395, 24, 11842);
-    			add_location(th5, file$e, 396, 24, 11882);
-    			add_location(th6, file$e, 397, 24, 11923);
-    			add_location(th7, file$e, 398, 24, 11966);
-    			add_location(th8, file$e, 399, 24, 12008);
-    			add_location(th9, file$e, 400, 24, 12048);
-    			add_location(th10, file$e, 401, 24, 12093);
-    			add_location(th11, file$e, 402, 24, 12133);
-    			add_location(th12, file$e, 403, 24, 12172);
-    			attr_dev(tr0, "class", "svelte-1p6b9xa");
-    			add_location(tr0, file$e, 391, 20, 11672);
-    			attr_dev(thead, "class", "svelte-1p6b9xa");
-    			add_location(thead, file$e, 390, 16, 11643);
-    			add_location(td0, file$e, 409, 24, 12355);
-    			add_location(input0, file$e, 410, 28, 12463);
-    			add_location(td1, file$e, 410, 24, 12459);
-    			add_location(input1, file$e, 411, 28, 12531);
-    			add_location(td2, file$e, 411, 24, 12527);
-    			add_location(input2, file$e, 412, 28, 12602);
-    			add_location(td3, file$e, 412, 24, 12598);
-    			add_location(input3, file$e, 413, 28, 12675);
-    			add_location(td4, file$e, 413, 24, 12671);
-    			add_location(input4, file$e, 414, 28, 12744);
-    			add_location(td5, file$e, 414, 24, 12740);
-    			add_location(input5, file$e, 415, 28, 12814);
-    			add_location(td6, file$e, 415, 24, 12810);
-    			add_location(input6, file$e, 416, 28, 12886);
-    			add_location(td7, file$e, 416, 24, 12882);
-    			add_location(input7, file$e, 417, 28, 12957);
-    			add_location(td8, file$e, 417, 24, 12953);
-    			add_location(input8, file$e, 418, 28, 13026);
-    			add_location(td9, file$e, 418, 24, 13022);
-    			add_location(input9, file$e, 419, 28, 13100);
-    			add_location(td10, file$e, 419, 24, 13096);
-    			add_location(input10, file$e, 420, 28, 13169);
-    			add_location(td11, file$e, 420, 24, 13165);
-    			add_location(input11, file$e, 421, 28, 13237);
-    			add_location(td12, file$e, 421, 24, 13233);
-    			add_location(tr1, file$e, 409, 20, 12351);
-    			add_location(tbody, file$e, 408, 16, 12322);
-=======
     			add_location(th0, file$f, 391, 24, 11676);
     			add_location(th1, file$f, 392, 24, 11717);
     			add_location(th2, file$f, 393, 24, 11756);
@@ -13195,7 +13116,6 @@ var app = (function () {
     			add_location(td12, file$f, 421, 24, 13233);
     			add_location(tr1, file$f, 409, 20, 12351);
     			add_location(tbody, file$f, 408, 16, 12322);
->>>>>>> 194db9f715b0a0bd8f524288becce46430bb66ae
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -13593,11 +13513,7 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
-    function create_fragment$g(ctx) {
-=======
     function create_fragment$h(ctx) {
->>>>>>> 194db9f715b0a0bd8f524288becce46430bb66ae
     	let script0;
     	let script0_src_value;
     	let script1;
@@ -13674,26 +13590,6 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "En esta gráfica veremos la clasificación de los países dependiendo de su calidad de vida en 2016";
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-<<<<<<< HEAD
-    			add_location(script0, file$e, 343, 4, 10099);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$e, 344, 4, 10170);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$e, 345, 4, 10248);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$e, 346, 4, 10328);
-    			add_location(h1, file$e, 350, 4, 10459);
-    			add_location(br0, file$e, 457, 4, 14834);
-    			add_location(br1, file$e, 458, 4, 14844);
-    			attr_dev(div, "id", "container");
-    			attr_dev(div, "class", "svelte-1p6b9xa");
-    			add_location(div, file$e, 462, 8, 14972);
-    			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$e, 463, 8, 15008);
-    			attr_dev(figure, "class", "highcharts-figure svelte-1p6b9xa");
-    			add_location(figure, file$e, 461, 4, 14928);
-    			add_location(main, file$e, 349, 0, 10447);
-=======
     			add_location(script0, file$f, 343, 4, 10099);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
     			add_location(script1, file$f, 344, 4, 10170);
@@ -13712,7 +13608,6 @@ var app = (function () {
     			attr_dev(figure, "class", "highcharts-figure svelte-1p6b9xa");
     			add_location(figure, file$f, 461, 4, 14928);
     			add_location(main, file$f, 349, 0, 10447);
->>>>>>> 194db9f715b0a0bd8f524288becce46430bb66ae
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13863,11 +13758,7 @@ var app = (function () {
     	});
     }
 
-<<<<<<< HEAD
-    function instance$g($$self, $$props, $$invalidate) {
-=======
     function instance$h($$self, $$props, $$invalidate) {
->>>>>>> 194db9f715b0a0bd8f524288becce46430bb66ae
     	let isOpen = false;
 
     	//ALERTAS
