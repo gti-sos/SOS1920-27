@@ -12,24 +12,23 @@
 
 	import GUI2POVERTY from './GUI2POVERTY/Home.svelte';
 	import EditPoverty from './GUI2POVERTY/EditPoverty.svelte';
-	//import GUI2PovertyHighChart from "./GUI2POVERTY/HighChart.svelte";"gui2povertyHighChart": GUI2POVERTYChart,
-	//import GUI2POVERTYChart from './GUI2POVERTY/Highchart.svelte';
+	import GUI2POVERTYChart from './GUI2POVERTY/Highchart.svelte';
 
 	import GUI3LQ from './GUI3LQ/Home.svelte';
 	import EditLq from './GUI3LQ/EditLq.svelte';
 	
 	const routes = {
 		"/" : Home,
-		"/public/index.html" : Home,
+		"/public/index.html": Home,
 		"/gui1spc": GUI1SPC,
 		"/gui1SPCHighChart": GUI1SPCHighChart,
 		"/gui1SPCApexChart": GUI1SPCApexChart,
 		"/spc-stats/:suicideCountry/:suicideYear": EditSpc,
 		"/gui2poverty": GUI2POVERTY,
-		"/poverty-stats/:country/:year":EditPoverty,
-		
+		"/poverty-stats/:country/:year": EditPoverty,
+		"/gui2povertyHighChart": GUI2POVERTYChart,
 		"/gui3lq": GUI3LQ,
-		"/lq-stats/:lqCountry/:lqYear":EditLq,
+		"/lq-stats/:lqCountry/:lqYear": EditLq,
 		"*": NotFound
 	};
 </script>
