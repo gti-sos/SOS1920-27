@@ -8,7 +8,10 @@ const lqStatsv2 = require("./src/back/lqAPI/v2");
 const povertyStatsV1 = require("./src/back/povertyAPI/v1");
 const povertyStatsV2 = require("./src/back/povertyAPI/v2");
 
+var cors = require('cors');
 var app = express();
+
+app.use(cors());
 
 app.use(bodyParser.json());
 
