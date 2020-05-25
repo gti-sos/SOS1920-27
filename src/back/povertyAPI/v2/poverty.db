@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {"country":"sri lanka","under_190":0.008,"under_320":0.109,"under_550":0.405,"year":2015,"continent":"asia","_id":"4FfAex64Fxyq5gxm"}
 {"country":"benin","under_190":0.495,"under_320":0.792,"under_550":0.906,"year":2016,"continent":"africa","_id":"4vQNaMJxmcJQEPm0"}
 {"country":"samoa","under_190":0.011,"under_320":0.096,"under_550":0.339,"year":2016,"continent":"oceania","_id":"59cj2OyZaFtPmFey"}
@@ -22,3 +23,29 @@
 {"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2017,"continent":"oceania","_id":"ulVOFXwY4Gpiftm5"}
 {"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"uqQVxXZEWVxirI8Q"}
 {"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2016,"continent":"south america","_id":"y5tCXQYKhPwvuiH8"}
+=======
+{"country":"armenia","under_190":0.014,"under_320":0.123,"under_550":0.5,"year":2017,"continent":"europe","_id":"0q8tCLO2TxuUOclg"}
+{"country":"sierra leone","under_190":0.522,"under_320":0.333,"under_550":0.657,"year":2015,"continent":"africa","_id":"4L20OfUdujT1MXbr"}
+{"country":"suriname","under_190":0.234,"under_320":0.428,"under_550":0.559,"year":2017,"continent":"north america","_id":"7MWS9gmIBbq9JP5c"}
+{"country":"bangladesh","under_190":0.148,"under_320":0.089,"under_550":0.115,"year":2016,"continent":"asia","_id":"7njYgqdCDArOWVyM"}
+{"country":"algeria","under_190":0.005,"under_320":0.379,"under_550":0.492,"year":2014,"continent":"africa","_id":"9sUrADBZBVZd9pUt"}
+{"country":"angola","under_190":0.301,"under_320":0.557,"under_550":0.794,"year":2015,"continent":"south america","_id":"BNrSwboQaCkW3q4H"}
+{"country":"belgium","under_190":0.001,"under_320":0.002,"under_550":0.002,"year":2014,"continent":"europe","_id":"C7oqSGhXwtM6ehwy"}
+{"country":"sri lanka","under_190":0.008,"under_320":0.109,"under_550":0.405,"year":2015,"continent":"asia","_id":"DSGUFdE2yugHnr5V"}
+{"country":"peru","under_190":0.034,"under_320":0.098,"under_550":0.239,"year":2016,"continent":"north america","_id":"KhP5eROzw6WN8STU"}
+{"country":"samoa","under_190":0.011,"under_320":0.096,"under_550":0.339,"year":2016,"continent":"oceania","_id":"LHQ7XPT5NbbHuPOn"}
+{"country":"solomon islands","under_190":0.251,"under_320":0.118,"under_550":0.327,"year":2015,"continent":"oceania","_id":"Ow3LlgRqmZq27BjC"}
+{"country":"venezuela","under_190":0.102,"under_320":0.178,"under_550":0.356,"year":2014,"continent":"south america","_id":"PRLxw5riejyJnZgp"}
+{"country":"austria","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2015,"continent":"europe","_id":"PjL84m5L9BfbLvCS"}
+{"country":"belize","under_190":0.139,"under_320":0.241,"under_550":0.53,"year":2014,"continent":"north america","_id":"PrbpV4G6cPAatG9Z"}
+{"country":"vanuatu","under_190":0.131,"under_320":0.392,"under_550":0.723,"year":2014,"continent":"oceania","_id":"WewV8k1TUpBCmjKW"}
+{"country":"belarus","under_190":0.003,"under_320":0.006,"under_550":0.008,"year":2016,"continent":"europe","_id":"gMS0tmjGatlFcmXk"}
+{"country":"rwanda","under_190":0.555,"under_320":0.827,"under_550":0.916,"year":2017,"continent":"africa","_id":"iUqF4Nq5O6zBIEOA"}
+{"country":"bolivia","under_190":0.058,"under_320":0.118,"under_550":0.247,"year":2016,"continent":"south america","_id":"ii4YYNX4ywqSli3A"}
+{"country":"paraguay","under_190":0.012,"under_320":0.056,"under_550":0.186,"year":2015,"continent":"north america","_id":"oIn4DWaQCT1DXa7H"}
+{"country":"benin","under_190":0.495,"under_320":0.792,"under_550":0.906,"year":2016,"continent":"africa","_id":"oSwywWAtiXcwtj0u"}
+{"country":"australia","under_190":0.007,"under_320":0.01,"under_550":0.012,"year":2017,"continent":"oceania","_id":"qhgGd5xCKyMa6BC5"}
+{"country":"argentina","under_190":0.004,"under_320":0.02,"under_550":0.071,"year":2017,"continent":"south america","_id":"rrDTSk6BTQlJXSvH"}
+{"country":"syria","under_190":0.017,"under_320":0.523,"under_550":0.504,"year":2014,"continent":"asia","_id":"tvohO6cBFaBsYPBy"}
+{"country":"bhutan","under_190":0.015,"under_320":0.052,"under_550":0.386,"year":2017,"continent":"asia","_id":"v0XiUQKKI1nP3pgc"}
+>>>>>>> 6a6796be8db7d3f2513bfc7466c25a008491a508
