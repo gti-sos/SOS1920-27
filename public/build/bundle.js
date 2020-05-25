@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 (function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.head.appendChild(r) })(window.document);
 var app = (function () {
@@ -8885,7 +8883,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("11111111111111111");
+    			t = text("11111111111111111g");
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15537,4 +15535,3 @@ var app = (function () {
 
 }());
 //# sourceMappingURL=bundle.js.map
->>>>>>> 6a6796be8db7d3f2513bfc7466c25a008491a508
