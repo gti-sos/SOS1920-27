@@ -16,43 +16,35 @@ module.exports = function (app) {
     
     var poverty_statsInit = [   
 		{ 
-			country:"albania",
-			under_190: 0.011,
-			under_320:0.077,
-			under_550:0.391,
-			year:2012,
-			continent:"europe"
-		},
-		{ 
-			country:"algeria",
-			under_190: 0.005,
-			under_320:0.039,
-			under_550:0.292,
-			year:2011,
-			continent:"africa"	
-		},
-		{ 
-			country:"angola",
-			under_190: 0.301,
-			under_320:0.557,
-			under_550:0.794,
-			year:2008,
-			continent:"south america"	
-		},
-		{ 
-			country:"argentina",
-			under_190: 0.004,
-			under_320:0.02,
-			under_550:0.071,
-			year:2017,
-			continent:"south america"	
+			country:"austria",
+			under_190: 0.007,
+			under_320: 0.01,
+			under_550: 0.012,
+			year: 2015, //2014
+			continent:"europe"	
 		},
 		{ 
 			country:"armenia",
 			under_190: 0.014,
 			under_320:0.123,
 			under_550:0.5,
-			year:2017,
+			year:2017,//2017
+			continent:"europe"	
+		}, 
+		{ 
+			country:"belarus",
+			under_190: 0.003,
+			under_320: 0.006,
+			under_550: 0.008,
+			year: 2016, //2017
+			continent:"europe"	
+		},
+		{ 
+			country:"belgium",
+			under_190: 0.001,
+			under_320: 0.002,
+			under_550: 0.002,
+			year: 2014,//2015
 			continent:"europe"	
 		}, //5
 		{ 
@@ -60,71 +52,125 @@ module.exports = function (app) {
 			under_190: 0.007,
 			under_320: 0.01,
 			under_550: 0.012,
-			year: 2014,
+			year: 2017, //2014
 			continent:"oceania"	
-		}, 
-		{ 
-			country:"austria",
-			under_190: 0.007,
-			under_320: 0.007,
-			under_550: 0.009,
-			year: 2015,
-			continent:"europe"	
-		}, 
-		{ 
-			country:"azerbaijan",
-			under_190: 0,
-			under_320: 0,
-			under_550: 0.082,
-			year: 2005,
-			continent:"europe"	
-		}, 
-		{ 
-			country:"bangladesh",
-			under_190: 0.148,
-			under_320: 0.529,
-			under_550: 0.845,
-			year: 2016,
-			continent:"asia"	
-		}, 
-		{ 
-			country:"belarus",
-			under_190: 0,
-			under_320: 0,
-			under_550: 0.008,
-			year: 2017,
-			continent:"europe"	
+		},{ 
+			country:"samoa",
+			under_190: 0.011,
+			under_320: 0.096,
+			under_550: 0.339,
+			year: 2016,//2013
+			continent:"oceania"	
+		},{ 
+			country:"solomon islands",
+			under_190: 0.251,
+			under_320: 0.118,
+			under_550: 0.327,
+			year: 2015,//2013
+			continent:"oceania"	
+		},{ 
+			country:"vanuatu",
+			under_190: 0.131,
+			under_320: 0.392,
+			under_550: 0.723,
+			year: 2014,//2010
+			continent:"oceania"	
 		}, //10
-		{ 
-			country:"belgium",
-			under_190: 0,
-			under_320: 0.002,
-			under_550: 0.002,
-			year: 2015,
-			continent:"europe"	
-		}, 
+		 
 		{ 
 			country:"belize",
 			under_190: 0.139,
-			under_320: 0.281,
+			under_320: 0.241,
 			under_550: 0.53,
-			year: 1999,
+			year: 2014, //1999
+			continent:"north america"	
+		}, 
+		{ 
+			country:"paraguay",
+			under_190: 0.012,
+			under_320: 0.056,
+			under_550: 0.186,
+			year: 2015,//2017
+			continent:"north america"	
+		}, 
+		{ 
+			country:"peru",
+			under_190: 0.034,
+			under_320: 0.098,
+			under_550: 0.239,
+			year: 2016,
+			continent:"north america"	
+		}, 
+		{ 
+			country:"suriname",
+			under_190: 0.234,
+			under_320: 0.428,
+			under_550: 0.559,
+			year: 2017,//2017
 			continent:"north america"	
 		}, 
 		{ 
 			country:"benin",
 			under_190: 0.495,
-			under_320: 0.762,
+			under_320: 0.792,
 			under_550: 0.906,
-			year: 2015,
+			year: 2016,//2015
+			continent:"africa"	
+		},
+		{ 
+			country:"algeria",
+			under_190: 0.005,
+			under_320:0.379,
+			under_550:0.492,
+			year:2014,//2011
+			continent:"africa"	
+		}, 
+		{ 
+			country:"rwanda",
+			under_190: 0.555,
+			under_320: 0.827,
+			under_550: 0.916,
+			year: 2017,//2016
+			continent:"africa"	
+		}, 
+		{ 
+			country:"sierra leone",
+			under_190: 0.522,
+			under_320: 0.333,
+			under_550: 0.657,
+			year: 2015,//2011
 			continent:"africa"	
 		}, 
 		{ 
 			country:"bhutan",
 			under_190: 0.015,
-			under_320: 0.12,
+			under_320: 0.052,
 			under_550: 0.386,
-			year: 2017,
+			year: 2017,//2017
+			continent:"asia"	
+		}, 
+		{ 
+			country:"bangladesh",
+			under_190: 0.148,
+			under_320: 0.089,
+			under_550: 0.115,
+			year: 2016,//2016
+			continent:"asia"	
+		}, 
+		{ 
+			country:"sri lanka",
+			under_190: 0.008,
+			under_320: 0.109,
+			under_550: 0.405,
+			year: 2015,//2016
+			continent:"asia"	
+		}, 
+		{ 
+			country:"syria",
+			under_190: 0.017,
+			under_320: 0.523,
+			under_550: 0.504,
+			year: 2014,//2004
 			continent:"asia"	
 		}, 
 		{ 
@@ -132,7 +178,31 @@ module.exports = function (app) {
 			under_190: 0.058,
 			under_320: 0.118,
 			under_550: 0.247,
-			year: 2017,
+			year: 2016,//2017
+			continent:"south america"	
+		}, 
+		{ 
+			country:"venezuela",
+			under_190: 0.102,
+			under_320: 0.178,
+			under_550: 0.356,
+			year: 2014,//2006
+			continent:"south america"	
+		},
+		{ 
+			country:"angola",
+			under_190: 0.301,
+			under_320:0.557,
+			under_550:0.794,
+			year:2015, //2008
+			continent:"south america"	
+		},
+		{ 
+			country:"argentina",
+			under_190: 0.004,
+			under_320:0.02,
+			under_550:0.071,
+			year:2017,//2017
 			continent:"south america"	
 		}
 	];
