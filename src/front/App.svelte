@@ -13,7 +13,7 @@
 	import GUI2POVERTY from './GUI2POVERTY/Home.svelte';
 	import EditPoverty from './GUI2POVERTY/EditPoverty.svelte';
 	//import GUI2PovertyHighChart from "./GUI2POVERTY/HighChart.svelte";
-	import GUI2POVERTYChart from './GUI2POVERTY/HighChart.svelte';
+	import GUI2POVERTYChart from './GUI2POVERTY/Highchart.svelte';
 
 	import GUI3LQ from './GUI3LQ/Home.svelte';
 	import EditLq from './GUI3LQ/EditLq.svelte';
