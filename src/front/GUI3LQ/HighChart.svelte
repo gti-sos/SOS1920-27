@@ -3,9 +3,6 @@
         onMount
     } from "svelte";
     import{
-        pop
-    } from "svelte-spa-router";
-    import{
         Alert
     } from "sveltestrap";
 
@@ -23,7 +20,7 @@
     async function getLQ() {
         console.log("Fetching lq...");
         const res = await fetch("api/v2/lq-stats?limit=10&offset=1");
-
+        LoadGraphs();
         if(res.ok){
             console.log("Ok");
             const json = await res.json();
@@ -41,7 +38,7 @@
         console.log("Fetching lq...");
         await fetch("/api/v2/lq-stats/loadInitialData")
         const res = await fetch("/api/v2/lq-stats?limit=10&offset="+1);
-        
+        LoadGraphs();
 
         if (res.ok){
             console.log("Ok");
@@ -60,7 +57,7 @@
         const res = await fetch("/api/v2/lq-stats", {
             method: "DELETE"
         }).then(function (res){
-            getLQ();
+            LoadGraphs();
             visible = true;
             if(res.status==200){
                 totaldata=0;
@@ -193,7 +190,7 @@
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
-            En esta gráfica veremos la clasificación de los países dependiendo de su calidad de vida en 2016
+            En esta gráfica veremos la clasificación de los países dependiendo de su calidad de vida en 2016 basándonos en algunos datos de dichos países, como puede ser su popularidad, clima, seguridad, etc.
         </p>
     </figure>
 </main>

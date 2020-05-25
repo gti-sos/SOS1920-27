@@ -12049,7 +12049,7 @@ var app = (function () {
     	return block;
     }
 
-    // (354:4) {:then lq}
+    // (254:4) {:then lq}
     function create_then_block$4(ctx) {
     	let t0;
     	let t1;
@@ -12065,7 +12065,7 @@ var app = (function () {
     			props: {
     				color: "primary",
     				class: "mb-3",
-    				$$slots: { default: [create_default_slot_13] },
+    				$$slots: { default: [create_default_slot_12] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -12076,7 +12076,7 @@ var app = (function () {
     	const collapse = new Collapse({
     			props: {
     				isOpen: /*isOpen*/ ctx[0],
-    				$$slots: { default: [create_default_slot_9$2] },
+    				$$slots: { default: [create_default_slot_8$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -12087,7 +12087,7 @@ var app = (function () {
     				color: /*color*/ ctx[2],
     				isOpen: /*visible*/ ctx[1],
     				toggle: /*func*/ ctx[23],
-    				$$slots: { default: [create_default_slot_8$2] },
+    				$$slots: { default: [create_default_slot_7$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -12097,7 +12097,7 @@ var app = (function () {
     			props: {
     				bordered: true,
     				responsive: true,
-    				$$slots: { default: [create_default_slot_5$2] },
+    				$$slots: { default: [create_default_slot_4$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -12106,7 +12106,7 @@ var app = (function () {
     	const button1 = new Button({
     			props: {
     				color: "primary",
-    				$$slots: { default: [create_default_slot_4$2] },
+    				$$slots: { default: [create_default_slot_3$5] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -12117,7 +12117,7 @@ var app = (function () {
     	const button2 = new Button({
     			props: {
     				color: "danger",
-    				$$slots: { default: [create_default_slot_3$5] },
+    				$$slots: { default: [create_default_slot_2$5] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -12129,7 +12129,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "success",
-    				$$slots: { default: [create_default_slot_2$5] },
+    				$$slots: { default: [create_default_slot_1$7] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -12141,7 +12141,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "success",
-    				$$slots: { default: [create_default_slot_1$7] },
+    				$$slots: { default: [create_default_slot$8] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -12167,7 +12167,7 @@ var app = (function () {
     			create_component(button3.$$.fragment);
     			t6 = space();
     			create_component(button4.$$.fragment);
-    			add_location(div, file$f, 381, 8, 11371);
+    			add_location(div, file$f, 281, 8, 8451);
     		},
     		m: function mount(target, anchor) {
     			mount_component(button0, target, anchor);
@@ -12297,15 +12297,15 @@ var app = (function () {
     		block,
     		id: create_then_block$4.name,
     		type: "then",
-    		source: "(354:4) {:then lq}",
+    		source: "(254:4) {:then lq}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (357:4) <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
-    function create_default_slot_13(ctx) {
+    // (257:4) <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
+    function create_default_slot_12(ctx) {
     	let t;
 
     	const block = {
@@ -12322,17 +12322,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_13.name,
+    		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(357:4) <Button color=\\\"primary\\\" on:click={() => (isOpen = !isOpen)} class=\\\"mb-3\\\">",
+    		source: "(257:4) <Button color=\\\"primary\\\" on:click={() => (isOpen = !isOpen)} class=\\\"mb-3\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (368:20) <Button outline color="info" on:click="{searchLQ(country, year)}">
-    function create_default_slot_12(ctx) {
+    // (268:20) <Button outline color="info" on:click="{searchLQ(country, year)}">
+    function create_default_slot_11$2(ctx) {
     	let t;
 
     	const block = {
@@ -12349,16 +12349,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_12.name,
+    		id: create_default_slot_11$2.name,
     		type: "slot",
-    		source: "(368:20) <Button outline color=\\\"info\\\" on:click=\\\"{searchLQ(country, year)}\\\">",
+    		source: "(268:20) <Button outline color=\\\"info\\\" on:click=\\\"{searchLQ(country, year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (371:20) {#if busqueda==true}
+    // (271:20) {#if busqueda==true}
     function create_if_block_1$3(ctx) {
     	let current;
 
@@ -12366,7 +12366,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "info",
-    				$$slots: { default: [create_default_slot_11$2] },
+    				$$slots: { default: [create_default_slot_10$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -12409,15 +12409,15 @@ var app = (function () {
     		block,
     		id: create_if_block_1$3.name,
     		type: "if",
-    		source: "(371:20) {#if busqueda==true}",
+    		source: "(271:20) {#if busqueda==true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (372:20) <Button outline color="info" on:click="{resetLQ}">
-    function create_default_slot_11$2(ctx) {
+    // (272:20) <Button outline color="info" on:click="{resetLQ}">
+    function create_default_slot_10$2(ctx) {
     	let t;
 
     	const block = {
@@ -12434,17 +12434,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_11$2.name,
+    		id: create_default_slot_10$2.name,
     		type: "slot",
-    		source: "(372:20) <Button outline color=\\\"info\\\" on:click=\\\"{resetLQ}\\\">",
+    		source: "(272:20) <Button outline color=\\\"info\\\" on:click=\\\"{resetLQ}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (361:8) <Table responsive>
-    function create_default_slot_10$2(ctx) {
+    // (261:8) <Table responsive>
+    function create_default_slot_9$2(ctx) {
     	let tbody;
     	let tr;
     	let t0;
@@ -12460,7 +12460,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "info",
-    				$$slots: { default: [create_default_slot_12] },
+    				$$slots: { default: [create_default_slot_11$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -12485,11 +12485,11 @@ var app = (function () {
     			t3 = space();
     			if (if_block) if_block.c();
     			attr_dev(input0, "type", "text");
-    			add_location(input0, file$f, 365, 29, 10802);
+    			add_location(input0, file$f, 265, 29, 7882);
     			attr_dev(input1, "type", "text");
-    			add_location(input1, file$f, 365, 78, 10851);
-    			add_location(tr, file$f, 363, 16, 10745);
-    			add_location(tbody, file$f, 362, 12, 10720);
+    			add_location(input1, file$f, 265, 78, 7931);
+    			add_location(tr, file$f, 263, 16, 7825);
+    			add_location(tbody, file$f, 262, 12, 7800);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, tbody, anchor);
@@ -12575,23 +12575,23 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_10$2.name,
+    		id: create_default_slot_9$2.name,
     		type: "slot",
-    		source: "(361:8) <Table responsive>",
+    		source: "(261:8) <Table responsive>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (360:4) <Collapse {isOpen}>
-    function create_default_slot_9$2(ctx) {
+    // (260:4) <Collapse {isOpen}>
+    function create_default_slot_8$2(ctx) {
     	let current;
 
     	const table = new Table({
     			props: {
     				responsive: true,
-    				$$slots: { default: [create_default_slot_10$2] },
+    				$$slots: { default: [create_default_slot_9$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -12630,16 +12630,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_9$2.name,
+    		id: create_default_slot_8$2.name,
     		type: "slot",
-    		source: "(360:4) <Collapse {isOpen}>",
+    		source: "(260:4) <Collapse {isOpen}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (384:16) {#if errorMSG}
+    // (284:16) {#if errorMSG}
     function create_if_block$9(ctx) {
     	let t;
 
@@ -12662,15 +12662,15 @@ var app = (function () {
     		block,
     		id: create_if_block$9.name,
     		type: "if",
-    		source: "(384:16) {#if errorMSG}",
+    		source: "(284:16) {#if errorMSG}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (383:12) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
-    function create_default_slot_8$2(ctx) {
+    // (283:12) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
+    function create_default_slot_7$2(ctx) {
     	let if_block_anchor;
     	let if_block = /*errorMSG*/ ctx[4] && create_if_block$9(ctx);
 
@@ -12705,17 +12705,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_8$2.name,
+    		id: create_default_slot_7$2.name,
     		type: "slot",
-    		source: "(383:12) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>",
+    		source: "(283:12) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (410:28) <Button outline color="primary" on:click={insertLQ}>
-    function create_default_slot_7$2(ctx) {
+    // (310:28) <Button outline color="primary" on:click={insertLQ}>
+    function create_default_slot_6$2(ctx) {
     	let t;
 
     	const block = {
@@ -12732,17 +12732,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_7$2.name,
+    		id: create_default_slot_6$2.name,
     		type: "slot",
-    		source: "(410:28) <Button outline color=\\\"primary\\\" on:click={insertLQ}>",
+    		source: "(310:28) <Button outline color=\\\"primary\\\" on:click={insertLQ}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (427:28) <Button outline color="danger" on:click="{deleteLQ(lifeq.country, lifeq.year)}">
-    function create_default_slot_6$2(ctx) {
+    // (327:28) <Button outline color="danger" on:click="{deleteLQ(lifeq.country, lifeq.year)}">
+    function create_default_slot_5$2(ctx) {
     	let t;
 
     	const block = {
@@ -12759,16 +12759,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_6$2.name,
+    		id: create_default_slot_5$2.name,
     		type: "slot",
-    		source: "(427:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteLQ(lifeq.country, lifeq.year)}\\\">",
+    		source: "(327:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteLQ(lifeq.country, lifeq.year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (426:20) {#each lq as lifeq}
+    // (326:20) {#each lq as lifeq}
     function create_each_block$2(ctx) {
     	let tr;
     	let td0;
@@ -12831,7 +12831,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "danger",
-    				$$slots: { default: [create_default_slot_6$2] },
+    				$$slots: { default: [create_default_slot_5$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -12885,24 +12885,24 @@ var app = (function () {
     			td12 = element("td");
     			t23 = text(t23_value);
     			t24 = space();
-    			add_location(td0, file$f, 426, 24, 13434);
-    			add_location(td1, file$f, 427, 24, 13564);
+    			add_location(td0, file$f, 326, 24, 10514);
+    			add_location(td1, file$f, 327, 24, 10644);
     			attr_dev(a0, "href", a0_href_value = "#/lq-stats/" + /*lifeq*/ ctx[36].country + "/" + /*lifeq*/ ctx[36].year);
-    			add_location(a0, file$f, 428, 28, 13615);
-    			add_location(td2, file$f, 428, 24, 13611);
-    			add_location(td3, file$f, 429, 24, 13715);
-    			add_location(td4, file$f, 430, 24, 13767);
-    			add_location(td5, file$f, 431, 24, 13815);
-    			add_location(td6, file$f, 432, 24, 13864);
-    			add_location(td7, file$f, 433, 24, 13915);
-    			add_location(td8, file$f, 434, 24, 13965);
-    			add_location(td9, file$f, 435, 24, 14013);
-    			add_location(td10, file$f, 436, 24, 14066);
+    			add_location(a0, file$f, 328, 28, 10695);
+    			add_location(td2, file$f, 328, 24, 10691);
+    			add_location(td3, file$f, 329, 24, 10795);
+    			add_location(td4, file$f, 330, 24, 10847);
+    			add_location(td5, file$f, 331, 24, 10895);
+    			add_location(td6, file$f, 332, 24, 10944);
+    			add_location(td7, file$f, 333, 24, 10995);
+    			add_location(td8, file$f, 334, 24, 11045);
+    			add_location(td9, file$f, 335, 24, 11093);
+    			add_location(td10, file$f, 336, 24, 11146);
     			attr_dev(a1, "href", a1_href_value = "#/lq-stats/" + /*lifeq*/ ctx[36].country + "/" + /*lifeq*/ ctx[36].year);
-    			add_location(a1, file$f, 437, 28, 14118);
-    			add_location(td11, file$f, 437, 24, 14114);
-    			add_location(td12, file$f, 438, 24, 14215);
-    			add_location(tr, file$f, 426, 20, 13430);
+    			add_location(a1, file$f, 337, 28, 11198);
+    			add_location(td11, file$f, 337, 24, 11194);
+    			add_location(td12, file$f, 338, 24, 11295);
+    			add_location(tr, file$f, 326, 20, 10510);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -13000,15 +13000,15 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(426:20) {#each lq as lifeq}",
+    		source: "(326:20) {#each lq as lifeq}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (390:8) <Table bordered responsive>
-    function create_default_slot_5$2(ctx) {
+    // (290:8) <Table bordered responsive>
+    function create_default_slot_4$2(ctx) {
     	let thead;
     	let tr0;
     	let th0;
@@ -13084,7 +13084,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "primary",
-    				$$slots: { default: [create_default_slot_7$2] },
+    				$$slots: { default: [create_default_slot_6$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -13192,50 +13192,48 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$f, 391, 24, 11676);
-    			add_location(th1, file$f, 392, 24, 11717);
-    			add_location(th2, file$f, 393, 24, 11756);
-    			add_location(th3, file$f, 394, 24, 11798);
-    			add_location(th4, file$f, 395, 24, 11842);
-    			add_location(th5, file$f, 396, 24, 11882);
-    			add_location(th6, file$f, 397, 24, 11923);
-    			add_location(th7, file$f, 398, 24, 11966);
-    			add_location(th8, file$f, 399, 24, 12008);
-    			add_location(th9, file$f, 400, 24, 12048);
-    			add_location(th10, file$f, 401, 24, 12093);
-    			add_location(th11, file$f, 402, 24, 12133);
-    			add_location(th12, file$f, 403, 24, 12172);
-    			attr_dev(tr0, "class", "svelte-1p6b9xa");
-    			add_location(tr0, file$f, 391, 20, 11672);
-    			attr_dev(thead, "class", "svelte-1p6b9xa");
-    			add_location(thead, file$f, 390, 16, 11643);
-    			add_location(td0, file$f, 409, 24, 12355);
-    			add_location(input0, file$f, 410, 28, 12463);
-    			add_location(td1, file$f, 410, 24, 12459);
-    			add_location(input1, file$f, 411, 28, 12531);
-    			add_location(td2, file$f, 411, 24, 12527);
-    			add_location(input2, file$f, 412, 28, 12602);
-    			add_location(td3, file$f, 412, 24, 12598);
-    			add_location(input3, file$f, 413, 28, 12675);
-    			add_location(td4, file$f, 413, 24, 12671);
-    			add_location(input4, file$f, 414, 28, 12744);
-    			add_location(td5, file$f, 414, 24, 12740);
-    			add_location(input5, file$f, 415, 28, 12814);
-    			add_location(td6, file$f, 415, 24, 12810);
-    			add_location(input6, file$f, 416, 28, 12886);
-    			add_location(td7, file$f, 416, 24, 12882);
-    			add_location(input7, file$f, 417, 28, 12957);
-    			add_location(td8, file$f, 417, 24, 12953);
-    			add_location(input8, file$f, 418, 28, 13026);
-    			add_location(td9, file$f, 418, 24, 13022);
-    			add_location(input9, file$f, 419, 28, 13100);
-    			add_location(td10, file$f, 419, 24, 13096);
-    			add_location(input10, file$f, 420, 28, 13169);
-    			add_location(td11, file$f, 420, 24, 13165);
-    			add_location(input11, file$f, 421, 28, 13237);
-    			add_location(td12, file$f, 421, 24, 13233);
-    			add_location(tr1, file$f, 409, 20, 12351);
-    			add_location(tbody, file$f, 408, 16, 12322);
+    			add_location(th0, file$f, 291, 24, 8756);
+    			add_location(th1, file$f, 292, 24, 8797);
+    			add_location(th2, file$f, 293, 24, 8836);
+    			add_location(th3, file$f, 294, 24, 8878);
+    			add_location(th4, file$f, 295, 24, 8922);
+    			add_location(th5, file$f, 296, 24, 8962);
+    			add_location(th6, file$f, 297, 24, 9003);
+    			add_location(th7, file$f, 298, 24, 9046);
+    			add_location(th8, file$f, 299, 24, 9088);
+    			add_location(th9, file$f, 300, 24, 9128);
+    			add_location(th10, file$f, 301, 24, 9173);
+    			add_location(th11, file$f, 302, 24, 9213);
+    			add_location(th12, file$f, 303, 24, 9252);
+    			add_location(tr0, file$f, 291, 20, 8752);
+    			add_location(thead, file$f, 290, 16, 8723);
+    			add_location(td0, file$f, 309, 24, 9435);
+    			add_location(input0, file$f, 310, 28, 9543);
+    			add_location(td1, file$f, 310, 24, 9539);
+    			add_location(input1, file$f, 311, 28, 9611);
+    			add_location(td2, file$f, 311, 24, 9607);
+    			add_location(input2, file$f, 312, 28, 9682);
+    			add_location(td3, file$f, 312, 24, 9678);
+    			add_location(input3, file$f, 313, 28, 9755);
+    			add_location(td4, file$f, 313, 24, 9751);
+    			add_location(input4, file$f, 314, 28, 9824);
+    			add_location(td5, file$f, 314, 24, 9820);
+    			add_location(input5, file$f, 315, 28, 9894);
+    			add_location(td6, file$f, 315, 24, 9890);
+    			add_location(input6, file$f, 316, 28, 9966);
+    			add_location(td7, file$f, 316, 24, 9962);
+    			add_location(input7, file$f, 317, 28, 10037);
+    			add_location(td8, file$f, 317, 24, 10033);
+    			add_location(input8, file$f, 318, 28, 10106);
+    			add_location(td9, file$f, 318, 24, 10102);
+    			add_location(input9, file$f, 319, 28, 10180);
+    			add_location(td10, file$f, 319, 24, 10176);
+    			add_location(input10, file$f, 320, 28, 10249);
+    			add_location(td11, file$f, 320, 24, 10245);
+    			add_location(input11, file$f, 321, 28, 10317);
+    			add_location(td12, file$f, 321, 24, 10313);
+    			add_location(tr1, file$f, 309, 20, 9431);
+    			add_location(tbody, file$f, 308, 16, 9402);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -13459,17 +13457,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_5$2.name,
+    		id: create_default_slot_4$2.name,
     		type: "slot",
-    		source: "(390:8) <Table bordered responsive>",
+    		source: "(290:8) <Table bordered responsive>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (445:8) <Button color="primary" on:click="{getLQLoadInitialData}">
-    function create_default_slot_4$2(ctx) {
+    // (345:8) <Button color="primary" on:click="{getLQLoadInitialData}">
+    function create_default_slot_3$5(ctx) {
     	let t;
 
     	const block = {
@@ -13486,17 +13484,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_4$2.name,
+    		id: create_default_slot_3$5.name,
     		type: "slot",
-    		source: "(445:8) <Button color=\\\"primary\\\" on:click=\\\"{getLQLoadInitialData}\\\">",
+    		source: "(345:8) <Button color=\\\"primary\\\" on:click=\\\"{getLQLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (448:8) <Button color="danger" on:click="{deleteLQALL}">
-    function create_default_slot_3$5(ctx) {
+    // (348:8) <Button color="danger" on:click="{deleteLQALL}">
+    function create_default_slot_2$5(ctx) {
     	let t;
 
     	const block = {
@@ -13513,17 +13511,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_3$5.name,
+    		id: create_default_slot_2$5.name,
     		type: "slot",
-    		source: "(448:8) <Button color=\\\"danger\\\" on:click=\\\"{deleteLQALL}\\\">",
+    		source: "(348:8) <Button color=\\\"danger\\\" on:click=\\\"{deleteLQALL}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (451:8) <Button outline color="success" on:click="{getPreviewPage}">
-    function create_default_slot_2$5(ctx) {
+    // (351:8) <Button outline color="success" on:click="{getPreviewPage}">
+    function create_default_slot_1$7(ctx) {
     	let t;
 
     	const block = {
@@ -13540,17 +13538,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_2$5.name,
+    		id: create_default_slot_1$7.name,
     		type: "slot",
-    		source: "(451:8) <Button outline color=\\\"success\\\" on:click=\\\"{getPreviewPage}\\\">",
+    		source: "(351:8) <Button outline color=\\\"success\\\" on:click=\\\"{getPreviewPage}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (454:8) <Button outline color="success" on:click="{getNextPage}">
-    function create_default_slot_1$7(ctx) {
+    // (354:8) <Button outline color="success" on:click="{getNextPage}">
+    function create_default_slot$8(ctx) {
     	let t;
 
     	const block = {
@@ -13567,16 +13565,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_1$7.name,
+    		id: create_default_slot$8.name,
     		type: "slot",
-    		source: "(454:8) <Button outline color=\\\"success\\\" on:click=\\\"{getNextPage}\\\">",
+    		source: "(354:8) <Button outline color=\\\"success\\\" on:click=\\\"{getNextPage}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (352:15)           Loading lq...      {:then lq}
+    // (252:15)           Loading lq...      {:then lq}
     function create_pending_block$4(ctx) {
     	let t;
 
@@ -13599,34 +13597,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$4.name,
     		type: "pending",
-    		source: "(352:15)           Loading lq...      {:then lq}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (460:4) <Button outline color="secondary" on:click="{pop}">
-    function create_default_slot$8(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Volver");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot$8.name,
-    		type: "slot",
-    		source: "(460:4) <Button outline color=\\\"secondary\\\" on:click=\\\"{pop}\\\">",
+    		source: "(252:15)           Loading lq...      {:then lq}",
     		ctx
     	});
 
@@ -13634,31 +13605,15 @@ var app = (function () {
     }
 
     function create_fragment$j(ctx) {
-    	let script0;
-    	let script0_src_value;
-    	let script1;
-    	let script1_src_value;
-    	let script2;
-    	let script2_src_value;
-    	let script3;
-    	let script3_src_value;
-    	let t0;
     	let main;
     	let h1;
-    	let t2;
+    	let t1;
     	let promise;
-    	let t3;
+    	let t2;
     	let br0;
-    	let t4;
+    	let t3;
     	let br1;
-    	let t5;
-    	let t6;
-    	let figure;
-    	let div;
-    	let t7;
-    	let p;
     	let current;
-    	let dispose;
 
     	let info = {
     		ctx,
@@ -13673,91 +13628,37 @@ var app = (function () {
 
     	handle_promise(promise = /*lq*/ ctx[8], info);
 
-    	const button = new Button({
-    			props: {
-    				outline: true,
-    				color: "secondary",
-    				$$slots: { default: [create_default_slot$8] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	button.$on("click", pop);
-
     	const block = {
     		c: function create() {
-    			script0 = element("script");
-    			script1 = element("script");
-    			script2 = element("script");
-    			script3 = element("script");
-    			t0 = space();
     			main = element("main");
     			h1 = element("h1");
     			h1.textContent = "LQ Manager";
-    			t2 = space();
+    			t1 = space();
     			info.block.c();
-    			t3 = space();
+    			t2 = space();
     			br0 = element("br");
-    			t4 = space();
+    			t3 = space();
     			br1 = element("br");
-    			t5 = space();
-    			create_component(button.$$.fragment);
-    			t6 = space();
-    			figure = element("figure");
-    			div = element("div");
-    			t7 = space();
-    			p = element("p");
-    			p.textContent = "En esta gráfica veremos la clasificación de los países dependiendo de su calidad de vida en 2016";
-    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$f, 343, 4, 10099);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$f, 344, 4, 10170);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$f, 345, 4, 10248);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$f, 346, 4, 10328);
-    			add_location(h1, file$f, 350, 4, 10459);
-    			add_location(br0, file$f, 457, 4, 14834);
-    			add_location(br1, file$f, 458, 4, 14844);
-    			attr_dev(div, "id", "container");
-    			attr_dev(div, "class", "svelte-1p6b9xa");
-    			add_location(div, file$f, 462, 8, 14972);
-    			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$f, 463, 8, 15008);
-    			attr_dev(figure, "class", "highcharts-figure svelte-1p6b9xa");
-    			add_location(figure, file$f, 461, 4, 14928);
-    			add_location(main, file$f, 349, 0, 10447);
+    			add_location(h1, file$f, 250, 4, 7539);
+    			add_location(br0, file$f, 357, 4, 11914);
+    			add_location(br1, file$f, 358, 4, 11924);
+    			add_location(main, file$f, 249, 0, 7527);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-    		m: function mount(target, anchor, remount) {
-    			append_dev(document.head, script0);
-    			append_dev(document.head, script1);
-    			append_dev(document.head, script2);
-    			append_dev(document.head, script3);
-    			insert_dev(target, t0, anchor);
+    		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, h1);
-    			append_dev(main, t2);
+    			append_dev(main, t1);
     			info.block.m(main, info.anchor = null);
     			info.mount = () => main;
-    			info.anchor = t3;
-    			append_dev(main, t3);
+    			info.anchor = t2;
+    			append_dev(main, t2);
     			append_dev(main, br0);
-    			append_dev(main, t4);
+    			append_dev(main, t3);
     			append_dev(main, br1);
-    			append_dev(main, t5);
-    			mount_component(button, main, null);
-    			append_dev(main, t6);
-    			append_dev(main, figure);
-    			append_dev(figure, div);
-    			append_dev(figure, t7);
-    			append_dev(figure, p);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", LoadGraphs, false, false, false);
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
@@ -13768,19 +13669,10 @@ var app = (function () {
     				child_ctx[8] = info.resolved;
     				info.block.p(child_ctx, dirty);
     			}
-
-    			const button_changes = {};
-
-    			if (dirty[1] & /*$$scope*/ 256) {
-    				button_changes.$$scope = { dirty, ctx };
-    			}
-
-    			button.$set(button_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(info.block);
-    			transition_in(button.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -13789,21 +13681,13 @@ var app = (function () {
     				transition_out(block);
     			}
 
-    			transition_out(button.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			detach_dev(script0);
-    			detach_dev(script1);
-    			detach_dev(script2);
-    			detach_dev(script3);
-    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			info.block.d();
     			info.token = null;
     			info = null;
-    			destroy_component(button);
-    			dispose();
     		}
     	};
 
@@ -13816,66 +13700,6 @@ var app = (function () {
     	});
 
     	return block;
-    }
-
-    async function LoadGraphs() {
-    	let MyData = [];
-    	const resData = await fetch("/api/v2/lq-stats");
-    	MyData = await resData.json();
-
-    	//xAxis
-    	var paises = MyData.filter(function (objeto) {
-    		return objeto.year == 2016;
-    	}).map(dato => [dato.country]);
-
-    	//yAxis
-    	var stab = MyData.filter(function (objeto) {
-    		return objeto.year == 2016;
-    	}).map(dato => [dato.stability]);
-
-    	var righ = MyData.filter(function (objeto) {
-    		return objeto.year == 2016;
-    	}).map(dato => [dato.right]);
-
-    	var heal = MyData.filter(function (objeto) {
-    		return objeto.year == 2016;
-    	}).map(dato => [dato.health]);
-
-    	var secu = MyData.filter(function (objeto) {
-    		return objeto.year == 2016;
-    	}).map(dato => [dato.security]);
-
-    	var clima = MyData.filter(function (objeto) {
-    		return objeto.year == 2016;
-    	}).map(dato => [dato.climate]);
-
-    	var cost = MyData.filter(function (objeto) {
-    		return objeto.year == 2016;
-    	}).map(dato => [dato.costs]);
-
-    	var popu = MyData.filter(function (objeto) {
-    		return objeto.year == 2016;
-    	}).map(dato => [dato.popularity]);
-
-    	Highcharts.chart("container", {
-    		chart: { type: "bar" },
-    		title: {
-    			text: "Calidad de vida por países del año 2016"
-    		},
-    		xAxis: { categories: paises },
-    		yAxis: { min: 0, title: { text: "" } },
-    		legend: { reversed: true },
-    		plotOptions: { series: { stacking: "normal" } },
-    		series: [
-    			{ name: "Stability", data: stab },
-    			{ name: "Right", data: righ },
-    			{ name: "Health", data: heal },
-    			{ name: "Security", data: secu },
-    			{ name: "Climate", data: clima },
-    			{ name: "Costs", data: cost },
-    			{ name: "Popularity", data: popu }
-    		]
-    	});
     }
 
     function instance$j($$self, $$props, $$invalidate) {
@@ -14111,7 +13935,6 @@ var app = (function () {
     		}
     	}
 
-    	
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -14222,8 +14045,7 @@ var app = (function () {
     		deleteLQ,
     		deleteLQALL,
     		getNextPage,
-    		getPreviewPage,
-    		LoadGraphs
+    		getPreviewPage
     	});
 
     	$$self.$inject_state = $$props => {
@@ -14303,7 +14125,7 @@ var app = (function () {
     const { console: console_1$9 } = globals;
     const file$g = "src\\front\\GUI3LQ\\HighChart.svelte";
 
-    // (187:4) <Button color="primary" on:click="{getLQLoadInitialData}">
+    // (184:4) <Button color="primary" on:click="{getLQLoadInitialData}">
     function create_default_slot_1$8(ctx) {
     	let t;
 
@@ -14323,14 +14145,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$8.name,
     		type: "slot",
-    		source: "(187:4) <Button color=\\\"primary\\\" on:click=\\\"{getLQLoadInitialData}\\\">",
+    		source: "(184:4) <Button color=\\\"primary\\\" on:click=\\\"{getLQLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (190:4) <Button color="danger" on:click="{deleteLQALL}">
+    // (187:4) <Button color="danger" on:click="{deleteLQALL}">
     function create_default_slot$9(ctx) {
     	let t;
 
@@ -14350,7 +14172,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$9.name,
     		type: "slot",
-    		source: "(190:4) <Button color=\\\"danger\\\" on:click=\\\"{deleteLQALL}\\\">",
+    		source: "(187:4) <Button color=\\\"danger\\\" on:click=\\\"{deleteLQALL}\\\">",
     		ctx
     	});
 
@@ -14420,24 +14242,24 @@ var app = (function () {
     			div = element("div");
     			t5 = space();
     			p = element("p");
-    			p.textContent = "En esta gráfica veremos la clasificación de los países dependiendo de su calidad de vida en 2016";
+    			p.textContent = "En esta gráfica veremos la clasificación de los países dependiendo de su calidad de vida en 2016 basándonos en algunos datos de dichos países, como puede ser su popularidad, clima, seguridad, etc.";
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$g, 178, 4, 4879);
+    			add_location(script0, file$g, 175, 4, 4859);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$g, 179, 4, 4950);
+    			add_location(script1, file$g, 176, 4, 4930);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$g, 180, 4, 5028);
+    			add_location(script2, file$g, 177, 4, 5008);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$g, 181, 4, 5108);
-    			add_location(h1, file$g, 185, 4, 5239);
+    			add_location(script3, file$g, 178, 4, 5088);
+    			add_location(h1, file$g, 182, 4, 5219);
     			attr_dev(div, "id", "container");
     			attr_dev(div, "class", "svelte-1p6b9xa");
-    			add_location(div, file$g, 193, 8, 5515);
+    			add_location(div, file$g, 190, 8, 5495);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$g, 194, 8, 5551);
+    			add_location(p, file$g, 191, 8, 5531);
     			attr_dev(figure, "class", "highcharts-figure svelte-1p6b9xa");
-    			add_location(figure, file$g, 192, 4, 5471);
-    			add_location(main, file$g, 184, 0, 5227);
+    			add_location(figure, file$g, 189, 4, 5451);
+    			add_location(main, file$g, 181, 0, 5207);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14461,7 +14283,7 @@ var app = (function () {
     			append_dev(figure, p);
     			current = true;
     			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", LoadGraphs$1, false, false, false);
+    			dispose = listen_dev(script3, "load", LoadGraphs, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button0_changes = {};
@@ -14514,7 +14336,7 @@ var app = (function () {
     	return block;
     }
 
-    async function LoadGraphs$1() {
+    async function LoadGraphs() {
     	let MyData = [];
     	const resData = await fetch("/api/v2/lq-stats");
     	MyData = await resData.json();
@@ -14584,6 +14406,7 @@ var app = (function () {
     	async function getLQ() {
     		console.log("Fetching lq...");
     		const res = await fetch("api/v2/lq-stats?limit=10&offset=1");
+    		LoadGraphs();
 
     		if (res.ok) {
     			console.log("Ok");
@@ -14601,6 +14424,7 @@ var app = (function () {
     		console.log("Fetching lq...");
     		await fetch("/api/v2/lq-stats/loadInitialData");
     		const res = await fetch("/api/v2/lq-stats?limit=10&offset=" + 1);
+    		LoadGraphs();
 
     		if (res.ok) {
     			console.log("Ok");
@@ -14617,7 +14441,7 @@ var app = (function () {
     	//DELETE ALL
     	async function deleteLQALL() {
     		const res = await fetch("/api/v2/lq-stats", { method: "DELETE" }).then(function (res) {
-    			getLQ();
+    			LoadGraphs();
     			visible = true;
 
     			if (res.status == 200) {
@@ -14649,7 +14473,6 @@ var app = (function () {
 
     	$$self.$capture_state = () => ({
     		onMount,
-    		pop,
     		Alert,
     		Table,
     		Button,
@@ -14659,7 +14482,7 @@ var app = (function () {
     		getLQ,
     		getLQLoadInitialData,
     		deleteLQALL,
-    		LoadGraphs: LoadGraphs$1
+    		LoadGraphs
     	});
 
     	$$self.$inject_state = $$props => {
@@ -14691,33 +14514,48 @@ var app = (function () {
 
     /* src\front\GUI3LQ\ApexChart.svelte generated by Svelte v3.22.3 */
 
-    const { console: console_1$a } = globals;
+    const { console: console_1$a, document: document_1$1 } = globals;
     const file$h = "src\\front\\GUI3LQ\\ApexChart.svelte";
 
     function create_fragment$l(ctx) {
+    	let script;
+    	let script_src_value;
+    	let t;
     	let main;
     	let div;
+    	let dispose;
 
     	const block = {
     		c: function create() {
+    			script = element("script");
+    			t = space();
     			main = element("main");
     			div = element("div");
-    			attr_dev(div, "id", "chart-container");
-    			add_location(div, file$h, 576, 4, 16114);
-    			add_location(main, file$h, 575, 0, 16102);
+    			if (script.src !== (script_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script, "src", script_src_value);
+    			add_location(script, file$h, 157, 4, 4284);
+    			attr_dev(div, "id", "chart");
+    			add_location(div, file$h, 161, 0, 4396);
+    			add_location(main, file$h, 160, 0, 4388);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-    		m: function mount(target, anchor) {
+    		m: function mount(target, anchor, remount) {
+    			append_dev(document_1$1.head, script);
+    			insert_dev(target, t, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, div);
+    			if (remount) dispose();
+    			dispose = listen_dev(script, "load", /*loadGraphs*/ ctx[0], false, false, false);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
+    			detach_dev(script);
+    			if (detaching) detach_dev(t);
     			if (detaching) detach_dev(main);
+    			dispose();
     		}
     	};
 
@@ -14732,264 +14570,9 @@ var app = (function () {
     	return block;
     }
 
-    async function loadGraphs$3() {
-
-    	const dataSource = {
-    		chart: {
-    			caption: "Average Annual Population Growth",
-    			subcaption: "Click on a continent to see trend from 1955-2015",
-    			numbersuffix: "%",
-    			includevalueinlabels: "1",
-    			labelsepchar: ": ",
-    			entityfillhovercolor: "#FFF9C4",
-    			theme: "fusion"
-    		},
-    		colorrange: {
-    			minvalue: "0",
-    			code: "#FFE0B2",
-    			gradient: "1",
-    			color: [
-    				{
-    					minvalue: "0.5",
-    					maxvalue: "1.0",
-    					color: "#FFD74D"
-    				},
-    				{
-    					minvalue: "1.0",
-    					maxvalue: "2.0",
-    					color: "#FB8C00"
-    				},
-    				{
-    					minvalue: "2.0",
-    					maxvalue: "3.0",
-    					color: "#E65100"
-    				}
-    			]
-    		},
-    		data: [
-    			{
-    				id: "NA",
-    				value: ".82",
-    				showlabel: "1",
-    				link: "newchart-json-NAM"
-    			},
-    			{
-    				id: "SA",
-    				value: "2.04",
-    				showlabel: "1",
-    				link: "newchart-json-SAM"
-    			},
-    			{
-    				id: "AS",
-    				value: "1.78",
-    				showlabel: "1",
-    				link: "newchart-json-ASI"
-    			},
-    			{
-    				id: "EU",
-    				value: ".40",
-    				showlabel: "1",
-    				link: "newchart-json-EUP"
-    			},
-    			{
-    				id: "AF",
-    				value: "2.58",
-    				showlabel: "1",
-    				link: "newchart-json-AFC"
-    			},
-    			{
-    				id: "AU",
-    				value: "1.30",
-    				showlabel: "1",
-    				link: "newchart-json-AUS"
-    			}
-    		],
-    		linkeddata: [
-    			{
-    				id: "NAM",
-    				linkedchart: {
-    					chart: {
-    						caption: "Average Annual Population Growth - North America",
-    						subcaption: "1955 - 2015",
-    						yaxisname: "Growth",
-    						numbersuffix: "%",
-    						palettecolors: "FFD74D",
-    						theme: "fusion"
-    					},
-    					data: [
-    						{ label: "1955", value: "1.5078" },
-    						{ label: "1960", value: "1.5502" },
-    						{ label: "1965", value: "1.3121" },
-    						{ label: "1970", value: "0.8648" },
-    						{ label: "1975", value: "0.6402" },
-    						{ label: "1980", value: "0.62" },
-    						{ label: "1985", value: "0.6748" },
-    						{ label: "1990", value: "0.6882" },
-    						{ label: "1995", value: "0.6804" },
-    						{ label: "2000", value: "0.5627" },
-    						{ label: "2005", value: "0.5373" },
-    						{ label: "2010", value: "0.5536" },
-    						{ label: "2015", value: "0.4291" }
-    					]
-    				}
-    			},
-    			{
-    				id: "SAM",
-    				linkedchart: {
-    					chart: {
-    						caption: "Average Annual Population Growth - South America",
-    						subcaption: "1955 - 2015",
-    						yaxisname: "Growth",
-    						numbersuffix: "%",
-    						palettecolors: "E65100",
-    						theme: "fusion"
-    					},
-    					data: [
-    						{ label: "1955", value: "2.6275" },
-    						{ label: "1960", value: "2.6995" },
-    						{ label: "1965", value: "2.757" },
-    						{ label: "1970", value: "2.5376" },
-    						{ label: "1975", value: "2.3431" },
-    						{ label: "1980", value: "2.3261" },
-    						{ label: "1985", value: "2.2036" },
-    						{ label: "1990", value: "1.9611" },
-    						{ label: "1995", value: "1.7184" },
-    						{ label: "2000", value: "1.5965" },
-    						{ label: "2005", value: "1.4482" },
-    						{ label: "2010", value: "1.2031" },
-    						{ label: "2015", value: "1.0698" }
-    					]
-    				}
-    			},
-    			{
-    				id: "ASI",
-    				linkedchart: {
-    					chart: {
-    						caption: "Average Annual Population Growth - Asia",
-    						subcaption: "1955 - 2015",
-    						yaxisname: "Growth",
-    						numbersuffix: "%",
-    						theme: "fusion",
-    						palettecolors: "FB8C00"
-    					},
-    					data: [
-    						{ label: "1955", value: "1.9075" },
-    						{ label: "1960", value: "1.8842" },
-    						{ label: "1965", value: "2.1082" },
-    						{ label: "1970", value: "2.4554" },
-    						{ label: "1975", value: "2.3036" },
-    						{ label: "1980", value: "1.9889" },
-    						{ label: "1985", value: "1.9683" },
-    						{ label: "1990", value: "2.0176" },
-    						{ label: "1995", value: "1.6823" },
-    						{ label: "2000", value: "1.3682" },
-    						{ label: "2005", value: "1.2435" },
-    						{ label: "2010", value: "1.1661" },
-    						{ label: "2015", value: "1.0731" }
-    					]
-    				}
-    			},
-    			{
-    				id: "EUP",
-    				linkedchart: {
-    					chart: {
-    						caption: "Average Annual Population Growth - Europe",
-    						subcaption: "1955 - 2015",
-    						yaxisname: "Growth",
-    						numbersuffix: "%",
-    						theme: "fusion",
-    						palettecolors: "FFE0B2"
-    					},
-    					data: [
-    						{ label: "1955", value: "1.026" },
-    						{ label: "1960", value: "1.0652" },
-    						{ label: "1965", value: "0.9381" },
-    						{ label: "1970", value: "0.6925" },
-    						{ label: "1975", value: "0.54" },
-    						{ label: "1980", value: "0.4218" },
-    						{ label: "1985", value: "0.354" },
-    						{ label: "1990", value: "0.2971" },
-    						{ label: "1995", value: "0.0276" },
-    						{ label: "2000", value: "-0.1301" },
-    						{ label: "2005", value: "-0.1558" },
-    						{ label: "2010", value: "-0.0576" },
-    						{ label: "2015", value: "-0.0292" }
-    					]
-    				}
-    			},
-    			{
-    				id: "AFC",
-    				linkedchart: {
-    					chart: {
-    						caption: "Average Annual Population Growth - Africa",
-    						subcaption: "1955 - 2015",
-    						yaxisname: "Growth",
-    						numbersuffix: "%",
-    						theme: "fusion",
-    						palettecolors: "E65100"
-    					},
-    					data: [
-    						{ label: "1955", value: "2.1242" },
-    						{ label: "1960", value: "2.338" },
-    						{ label: "1965", value: "2.5075" },
-    						{ label: "1970", value: "2.5947" },
-    						{ label: "1975", value: "2.7175" },
-    						{ label: "1980", value: "2.8398" },
-    						{ label: "1985", value: "2.8857" },
-    						{ label: "1990", value: "2.8243" },
-    						{ label: "1995", value: "2.6172" },
-    						{ label: "2000", value: "2.5072" },
-    						{ label: "2005", value: "2.4853" },
-    						{ label: "2010", value: "2.5593" },
-    						{ label: "2015", value: "2.6001" }
-    					]
-    				}
-    			},
-    			{
-    				id: "AUS",
-    				linkedchart: {
-    					chart: {
-    						caption: "Average Annual Population Growth - Oceania",
-    						subcaption: "1955 - 2015",
-    						yaxisname: "Growth",
-    						numbersuffix: "%",
-    						theme: "fusion",
-    						palettecolors: "FB8C00"
-    					},
-    					data: [
-    						{ label: "1955", value: "1.511" },
-    						{ label: "1960", value: "1.6045" },
-    						{ label: "1965", value: "1.5578" },
-    						{ label: "1970", value: "1.455" },
-    						{ label: "1975", value: "1.4727" },
-    						{ label: "1980", value: "1.2404" },
-    						{ label: "1985", value: "1.2398" },
-    						{ label: "1990", value: "1.1853" },
-    						{ label: "1995", value: "1.2006" },
-    						{ label: "2000", value: "1.1244" },
-    						{ label: "2005", value: "1.0724" },
-    						{ label: "2010", value: "1.1255" },
-    						{ label: "2015", value: "1.0397" }
-    					]
-    				}
-    			}
-    		]
-    	};
-
-    	FusionCharts.ready(function () {
-    		var myChart = new FusionCharts({
-    				type: "world",
-    				renderAt: "chart-container",
-    				width: "100%",
-    				height: "100%",
-    				dataFormat: "json",
-    				dataSource
-    			}).render();
-    	});
-    }
-
     function instance$l($$self, $$props, $$invalidate) {
     	let isOpen = false;
+    	let lq = [];
 
     	//ALERTAS
     	let visible = false;
@@ -15055,6 +14638,62 @@ var app = (function () {
     		});
     	}
 
+    	//grafica
+    	async function loadGraphs() {
+    		let MyData = [];
+    		const resData = await fetch("/api/v2/lq-stats");
+    		MyData = lq;
+    		var continentes = MyData.map(dato => dato.continent);
+
+    		//for()
+    		var options = {
+    			series: [76, 67, 61, 90],
+    			chart: { height: 390, type: "radialBar" },
+    			plotOptions: {
+    				radialBar: {
+    					offsetY: 0,
+    					startAngle: 0,
+    					endAngle: 270,
+    					hollow: {
+    						margin: 5,
+    						size: "30%",
+    						background: "transparent",
+    						image: undefined
+    					},
+    					dataLabels: {
+    						name: { show: true },
+    						value: { show: true }
+    					}
+    				}
+    			},
+    			colors: ["#1ab7ea", "#0084ff", "#39539E", "#0077B5"],
+    			labels: ["oceania", "africa", "asia", "europe", "north america", "south america"],
+    			legend: {
+    				show: true,
+    				floating: true,
+    				fontSize: "16px",
+    				position: "left",
+    				offsetX: 160,
+    				offsetY: 15,
+    				labels: { useSeriesColors: true },
+    				markers: { size: 0 },
+    				formatter(seriesName, opts) {
+    					return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex];
+    				},
+    				itemMargin: { vertical: 3 }
+    			},
+    			responsive: [
+    				{
+    					breakpoint: 480,
+    					options: { legend: { show: false } }
+    				}
+    			]
+    		};
+
+    		var chart = new ApexCharts(document.querySelector("#chart"), options);
+    		chart.render();
+    	}
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -15074,17 +14713,19 @@ var app = (function () {
     		CardBody,
     		Card,
     		isOpen,
+    		lq,
     		visible,
     		color,
     		errorMSG,
     		getLQ,
     		getLQLoadInitialData,
     		deleteLQALL,
-    		loadGraphs: loadGraphs$3
+    		loadGraphs
     	});
 
     	$$self.$inject_state = $$props => {
     		if ("isOpen" in $$props) isOpen = $$props.isOpen;
+    		if ("lq" in $$props) lq = $$props.lq;
     		if ("visible" in $$props) visible = $$props.visible;
     		if ("color" in $$props) color = $$props.color;
     		if ("errorMSG" in $$props) errorMSG = $$props.errorMSG;
@@ -15094,7 +14735,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [];
+    	return [loadGraphs];
     }
 
     class ApexChart$1 extends SvelteComponentDev {

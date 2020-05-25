@@ -1,12 +1,12 @@
-{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"0xF5MunmWNVUKeQZ"}
-{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"3iSfVJr0EBQUWn3s"}
-{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"5CHQDo1t9K9wQNaT"}
-{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"9b1zVND8BkXbJnqb"}
-{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"F8pSfJCrlGZcxq2k"}
-{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"To0dOFXspCzMeS4H"}
-{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"VRT0rWe4EZp7BqC3"}
-{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"bCw7r0CbelQDj9CD"}
-{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"dd2l8104nGuuiui6"}
-{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"qtiQQ67Ct53iG97A"}
-{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"sXaxSJpKPQXpXAEt"}
-{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"yEundkxkK697i1jT"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"5AlVd88kUPHkQ9I3"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"5GjX3wC38lXe2H3H"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"6OJSb0QAj2KJjZMy"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"9Tx2b3ZtbsEoVP3A"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"FxLZvmAjrBi4HhIq"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"OYObE7Rzm8JmSYQU"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"etBRHQv5w9XARTvG"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"nAUmwH4RvyBwPUp6"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"nlNX9CwChJuXStNE"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"tG6ypPT3JHwVrgQl"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"ygQaOXukX8xWOpfZ"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"zspOW3YTukvwzmJS"}
