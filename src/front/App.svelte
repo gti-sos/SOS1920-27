@@ -13,10 +13,12 @@
 
 	import GUI2POVERTY from './GUI2POVERTY/Home.svelte';
 	import EditPoverty from './GUI2POVERTY/EditPoverty.svelte';
-	import GUI2PovertyHighChart from "./GUI2POVERTY/HighChart.svelte";
+	import GUI2PovertyHighChart from "./GUI2POVERTY/Highchart.svelte";
 	import GUI2SPCIntegrations from './GUI2POVERTY/Integrations.svelte'; //integraciones
 	
 	import GUI3LQ from './GUI3LQ/Home.svelte';
+	import GUI3LQHighChart from './GUI3LQ/HighChart.svelte';
+	import GUI3LQApexChart from './'
 	import EditLq from './GUI3LQ/EditLq.svelte';
 	import GUI3SPCIntegrations from './GUI3LQ/Integrations.svelte'; //integraciones
 
@@ -36,6 +38,7 @@
 		"/integrations/gui2integrations": GUI2SPCIntegrations,
 
 		"/gui3lq": GUI3LQ,
+		"/gui3"
 		"/lq-stats/:lqCountry/:lqYear":EditLq,
 		"/integrations/gui3integrations": GUI3SPCIntegrations,
 
