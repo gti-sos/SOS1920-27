@@ -13,6 +13,7 @@
 	import GUI2POVERTY from './GUI2POVERTY/Home.svelte';
 	import EditPoverty from './GUI2POVERTY/EditPoverty.svelte';
 	import GUI2POVERTYChart from './GUI2POVERTY/Highchart.svelte';
+	import GUI2POVERTYApexChart from './GUI2POVERTY/ApexChart.svelte';
 
 	import GUI3LQ from './GUI3LQ/Home.svelte';
 	import EditLq from './GUI3LQ/EditLq.svelte';
@@ -27,6 +28,7 @@
 		"/gui2poverty": GUI2POVERTY,
 		"/poverty-stats/:country/:year": EditPoverty,
 		"/gui2povertyHighChart": GUI2POVERTYChart,
+		"/gui2povertyApexChart": GUI2POVERTYApexChart,
 		"/gui3lq": GUI3LQ,
 		"/lq-stats/:lqCountry/:lqYear": EditLq,
 		"*": NotFound

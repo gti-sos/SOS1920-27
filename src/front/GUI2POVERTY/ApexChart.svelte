@@ -1,116 +1,99 @@
+
 <script>
-    import FusionCharts from 'fusioncharts';
-    import Charts from 'fusioncharts/fusioncharts.charts';
-    import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
-    import SvelteFC, { fcRoot } from 'svelte-fusioncharts';
+  import {
+      onMount
+   } from "svelte";
+   import {
+        pop
+    } from "svelte-spa-router";
+
+    function filtro(array,cont, year){
+      var res=array.filter((el)=>{
+      return el.continent=="europe" && el.year=="2017";
+      });
+
+      return res;
+    }
+
+    async function loadGraphs(){
+
+      let MyData=[];
+      const resData = await fetch("/api/v2/poverty-stats");
+      MyData = await resData.json();
     
-    // Always set FusionCharts as the first parameter
-    fcRoot(FusionCharts, Charts, FusionTheme);
-    
-    const dataSource = {
-      "chart": {
-        "caption": "App Publishing Trend",
-        "subcaption": "2012-2016",
-        "xaxisname": "Years",
-        "yaxisname": "Total number of apps in store",
-        "formatnumberscale": "1",
-        "plottooltext": "<b>$dataValue</b> apps were available on <b>$seriesName</b> in $label",
-        "theme": "fusion"
-      },
-      "categories": [
-        {
-          "category": [
-            {
-              "label": "2012"
-            },
-            {
-              "label": "2013"
-            },
-            {
-              "label": "2014"
-            },
-            {
-              "label": "2015"
-            },
-            {
-              "label": "2016"
-            }
-          ]
-        }
-      ],
-      "dataset": [
-        {
-          "seriesname": "iOS App Store",
-          "data": [
-            {
-              "value": "125000"
-            },
-            {
-              "value": "300000"
-            },
-            {
-              "value": "480000"
-            },
-            {
-              "value": "800000"
-            },
-            {
-              "value": "1100000"
-            }
-          ]
+ 
+      
+      var euro = MyData.filter((el)=>{
+        return el.continent=="europe" && el.year=="2017";
+      }).map((dato)=>{
+        return parseFloat(dato.under_320);
+      })[0];
+      var asia = MyData.filter((el)=>{
+      return el.continent=="asia" && el.year=="2017";
+      }).map((dato)=>{
+        return parseFloat(dato.under_320);
+      })[0];
+      var oceania =MyData.filter((el)=>{
+      return el.continent=="oceania" && el.year=="2017";
+      }).map((dato)=>{
+        return parseFloat(dato.under_320);
+      })[0];
+      var africa =MyData.filter((el)=>{
+      return el.continent=="africa" && el.year=="2017";
+      }).map((dato)=>{
+        return parseFloat(dato.under_320);
+      })[0];
+      var south =MyData.filter((el)=>{
+      return el.continent=="south america" && el.year=="2017";
+      }).map((dato)=>{
+        return parseFloat(dato.under_320);
+      })[0];
+      var north =MyData.filter((el)=>{
+      return el.continent=="north america" && el.year=="2017";
+      }).map((dato)=>{
+        return parseFloat(dato.under_320);
+      })[0];
+
+      console.log(euro);
+
+      var options = {
+          series: [euro,asia,oceania,africa,south,north],
+          chart: {
+          type: 'donut',
         },
-        {
-          "seriesname": "Google Play Store",
-          "data": [
-            {
-              "value": "70000"
-            },
-            {
-              "value": "150000"
-            },
-            {
-              "value": "350000"
-            },
-            {
-              "value": "600000"
-            },
-            {
-              "value": "1400000"
+        labels:["europa","asia","oceania","africa","south america","north america"],
+          responsive: [{
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200
+              },
+              legend: {
+                position: 'bottom'
+              }
             }
-          ]
-        },
-        {
-          "seriesname": "Amazon AppStore",
-          "data": [
-            {
-              "value": "10000"
-            },
-            {
-              "value": "100000"
-            },
-            {
-              "value": "300000"
-            },
-            {
-              "value": "600000"
-            },
-            {
-              "value": "900000"
-            }
-          ]
-        }
-      ]
-    };
+          }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+  }
+
     
-    const chartConfigs = {
-       type: 'mscolumn3d',
-       width: 600,
-       height: 400,
-       dataFormat: 'json',
-       dataSource
-    };
-    </script>
+  </script>
+  
+<svelte:head>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"on:load="{loadGraphs}"></script>
+</svelte:head>
 
 <main>
-    <SvelteFC {...chartConfigs} />
+  <h1>Porcentaje de pobreza inferior del 3.2 por continente en 2017</h1>
+  <div id="chart">
+  </div>
 </main>
+
+<style>
+  #chart{
+    width: 90%;
+  }
+</style>
