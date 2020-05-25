@@ -27,7 +27,7 @@
 		"/spc-stats/:suicideCountry/:suicideYear": EditSpc,
 		"/gui2poverty": GUI2POVERTY,
 		"/poverty-stats/:country/:year":EditPoverty,
-		"gui2povertyHighChart/": GUI2POVERTYChart,
+		"gui2povertyHighChart": GUI2POVERTYChart,
 		"/gui3lq": GUI3LQ,
 		"/lq-stats/:lqCountry/:lqYear":EditLq,
 		"*": NotFound
