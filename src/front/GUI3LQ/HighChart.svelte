@@ -55,6 +55,30 @@
         }
     }
 
+    //DELETE ALL
+    async function deleteLQALL(){
+        const res = await fetch("/api/v2/lq-stats", {
+            method: "DELETE"
+        }).then(function (res){
+            getLQ();
+            visible = true;
+            if(res.status==200){
+                totaldata=0;
+                color = "sucess";
+                errorMSG = "Objetos borrados correctamente";
+                console.log("Deleted all lq.");
+            } else if(res.status==400){
+                color = "danger";
+                errorMSG = "Ha ocurrido un fallo";
+                console.log("BAD REQUST");
+            } else{
+                color = "danger";
+                errorMSG = res.status + ": " + res.statusText;
+                console.log("ERROR!");
+            }
+        });
+    }
+
     //gráfica
     async function LoadGraphs(){
         let MyData = [];
