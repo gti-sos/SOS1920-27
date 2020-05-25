@@ -86,11 +86,34 @@
         const resData = await fetch("/api/v2/lq-stats");
         MyData = lq;
 
-        var continentes = MyData.map((dato)=> dato.continent);
-        
-        //for()
+        //var continentes = MyData.map((dato)=> dato.continent);
+
+        var oce = MyData.filter((objeto)=>{
+            return objeto.continent=="oceania" && objeto.year=="2016";
+        }).reduce((a,b) => a + b.total, 0);
+
+        var afri = MyData.filter((objeto)=>{
+            return objeto.continent=="africa" && objeto.year=="2016";
+        }).reduce((a,b) => a + b.total, 0);
+
+        var asi = MyData.filter((objeto)=>{
+            return objeto.continent=="asia" && objeto.year=="2016";
+        }).reduce((a,b) => a + b.total, 0);
+
+        var euro = MyData.filter((objeto)=>{
+            return objeto.continent=="europe" && objeto.year=="2016";
+        }).reduce((a,b) => a + b.total, 0);
+
+//        var norte = MyData.filter((objeto)=>{
+//            return objeto.continent=="north america" && objeto.year=="2016";
+//        }).reduce((a,b) => a + b.total, 0);
+
+//        var asi = MyData.filter((objeto)=>{
+//            return objeto.continent=="south america" && objeto.year=="2016";
+//        }).reduce((a,b) => a + b.total, 0); 
+
         var options = {
-          series: [76, 67, 61, 90],
+          series: [oce, afri, asi, euro, 90, 90],
           chart: {
           height: 390,
           type: 'radialBar',

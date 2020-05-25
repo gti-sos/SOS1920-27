@@ -43,7 +43,7 @@ module.exports = function (app) {
 					popularity: 92,
 					total: 79,
 					year: 2016,
-					continent: "africa"	
+					continent:"africa"	
 				},
 				{ 
 					rank: 3,
