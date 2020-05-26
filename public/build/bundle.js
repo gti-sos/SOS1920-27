@@ -12064,7 +12064,6 @@ var app = (function () {
     	return array;
     }
 
-<<<<<<< HEAD
     function eliminar(array, elemento) {
     	var resultado = [];
 
@@ -12077,10 +12076,7 @@ var app = (function () {
     	return resultado;
     }
 
-    async function loadGraphs$2() {
-=======
     async function loadGraphs$1() {
->>>>>>> b29720413eaaae2d6a5becbea1b332fc68317375
     	let MyData = [];
     	const resData = await fetch("/api/v2/poverty-stats");
     	MyData = await resData.json();
@@ -12281,12 +12277,8 @@ var app = (function () {
     		Table,
     		Alert,
     		ordenarAsc,
-<<<<<<< HEAD
     		eliminar,
-    		loadGraphs: loadGraphs$2
-=======
     		loadGraphs: loadGraphs$1
->>>>>>> b29720413eaaae2d6a5becbea1b332fc68317375
     	});
 
     	return [];
@@ -12349,7 +12341,7 @@ var app = (function () {
     			append_dev(main, t2);
     			append_dev(main, div);
     			if (remount) dispose();
-    			dispose = listen_dev(script, "load", loadGraphs$3, false, false, false);
+    			dispose = listen_dev(script, "load", loadGraphs$2, false, false, false);
     		},
     		p: noop,
     		i: noop,
@@ -12381,7 +12373,7 @@ var app = (function () {
     	return res;
     }
 
-    async function loadGraphs$3() {
+    async function loadGraphs$2() {
     	let MyData = [];
     	const resData = await fetch("/api/v2/poverty-stats");
     	MyData = await resData.json();
@@ -12453,7 +12445,7 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("ApexChart", $$slots, []);
-    	$$self.$capture_state = () => ({ onMount, pop, filtro, loadGraphs: loadGraphs$3 });
+    	$$self.$capture_state = () => ({ onMount, pop, filtro, loadGraphs: loadGraphs$2 });
     	return [];
     }
 
@@ -15067,7 +15059,7 @@ var app = (function () {
     			insert_dev(target, main, anchor);
     			append_dev(main, div);
     			if (remount) dispose();
-    			dispose = listen_dev(script, "load", loadGraphs$4, false, false, false);
+    			dispose = listen_dev(script, "load", loadGraphs$3, false, false, false);
     		},
     		p: noop,
     		i: noop,
@@ -15091,7 +15083,7 @@ var app = (function () {
     	return block;
     }
 
-    async function loadGraphs$4() {
+    async function loadGraphs$3() {
     	let MyData = [];
     	const resData = await fetch("/api/v2/lq-stats");
     	MyData = await resData.json();
@@ -15334,7 +15326,7 @@ var app = (function () {
     		getLQ,
     		getLQLoadInitialData,
     		deleteLQALL,
-    		loadGraphs: loadGraphs$4
+    		loadGraphs: loadGraphs$3
     	});
 
     	$$self.$inject_state = $$props => {
