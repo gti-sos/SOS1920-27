@@ -15048,10 +15048,10 @@ var app = (function () {
     			main = element("main");
     			div = element("div");
     			if (script.src !== (script_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$j, 240, 4, 7067);
+    			add_location(script, file$j, 240, 4, 7039);
     			attr_dev(div, "id", "chart");
-    			add_location(div, file$j, 244, 0, 7179);
-    			add_location(main, file$j, 243, 0, 7171);
+    			add_location(div, file$j, 244, 0, 7151);
+    			add_location(main, file$j, 243, 0, 7143);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15108,7 +15108,7 @@ var app = (function () {
 
     	let media_asia = sumatorio_asia / asi.length;
 
-    	if (media_asia.length == null) {
+    	if (isNaN(media_asia)) {
     		media_asia = "No Hay Datos";
     	}
 
@@ -15123,7 +15123,7 @@ var app = (function () {
 
     	let media_oce = sumatorio_oce / oce.length;
 
-    	if (media_oce.length == null) {
+    	if (isNaN(media_oce)) {
     		media_oce = "No Hay Datos";
     	}
 
@@ -15138,7 +15138,7 @@ var app = (function () {
 
     	let media_eu = sumatorio_eu / eu.length;
 
-    	if (media_eu.length == null) {
+    	if (isNaN(media_eu)) {
     		media_eu = "No Hay Datos";
     	}
 
@@ -15147,13 +15147,13 @@ var app = (function () {
     		return objeto.continent == "africa" && parseInt(objeto.year) == 2016;
     	}).map(dato => dato.total);
 
-    	for (let i = 0; i < eu.length; i++) {
+    	for (let i = 0; i < afri.length; i++) {
     		sumatorio_afri += parseInt(afri[i]);
     	}
 
     	let media_afri = sumatorio_afri / afri.length;
 
-    	if (media_afri.length == null) {
+    	if (isNaN(media_afri)) {
     		media_afri = "No Hay Datos";
     	}
 
@@ -15168,7 +15168,7 @@ var app = (function () {
 
     	let media_sur = sumatorio_sur / sur.length;
 
-    	if (media_sur.length == null) {
+    	if (isNaN(media_sur)) {
     		media_sur = "No Hay Datos";
     	}
 
@@ -15183,7 +15183,7 @@ var app = (function () {
 
     	let media_norte = sumatorio_norte / norte.length;
 
-    	if (media_norte.length == null) {
+    	if (isNaN(media_norte)) {
     		media_norte = "No Hay Datos";
     	}
 
