@@ -115,15 +115,15 @@ module.exports = function (app) {
 				continent: "europe"	
 			},
 			{ 
-				country: "south korea",
-				both_sex: 20.2,
-				male_rank: 11,
-				male_number: 29.6,
-				female_rank: 11,
-				female_number: 11.6,
-				ratio: 2.55,
+				country: "spain",
+				both_sex: 6.1,
+				male_rank: 129,
+				male_number: 9.3,
+				female_rank: 124,
+				female_number: 3.1,
+				ratio: 3,
 				year: 2013,
-				continent: "asia"	
+				continent: "europe"	
 			},
 			{ 
 				country: "uganda",
@@ -202,19 +202,14 @@ module.exports = function (app) {
 			if((limit!=null || offset != null) && countryQuery==null && continenteQuery==null && yearQuery==null && female_rank_Query==null && male_rank_Query==null
 				 && both_sex_Query==null && female_number_Query==null && male_number_Query==null && ratio_Query==null){	//Get /spc_stats Paginacion
 				if (limit!=null && offset != null) {
-					if (limit==1) {
-						res.send(JSON.stringify(spc_stats.slice(startObject,endObject)[0],null,2));
-						console.log("Data: "+JSON.stringify(spc_stats.slice(startObject,endObject)[0],null,2));
-					} else {
+						console.log("Data: "+JSON.stringify(spc_stats.slice(startObject,endObject),null,2));
 						res.send(JSON.stringify(spc_stats.slice(startObject,endObject),null,2));
-					}
+
 					
 				} else if (limit!=null && offset == null){
-					if (limit==1) {
-						res.send(JSON.stringify(spc_stats.slice(0,parseInt(limit))[0],null,2));
-					} else {
+
 						res.send(JSON.stringify(spc_stats.slice(0,parseInt(limit)),null,2));
-					}
+
 
 				} else if(limit==null && offset != null){
 					res.send(JSON.stringify(spc_stats.slice(startObject,spc_stats.length),null,2));

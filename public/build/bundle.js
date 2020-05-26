@@ -8832,7 +8832,7 @@ var app = (function () {
     const { console: console_1$5, document: document_1$1 } = globals;
     const file$c = "src\\front\\GUI1SPC\\Integrations.svelte";
 
-    // (329:4) <Button color="success" on:click="{getSPCLoadInitialData}">
+    // (358:4) <Button outline color="success" on:click="{getSPCLoadInitialData}">
     function create_default_slot_2$3(ctx) {
     	let t;
 
@@ -8852,14 +8852,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$3.name,
     		type: "slot",
-    		source: "(329:4) <Button color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
+    		source: "(358:4) <Button outline color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (332:4) <Button color="danger" on:click="{deleteSPCALL}">
+    // (361:4) <Button outline color="danger" on:click="{deleteSPCALL}">
     function create_default_slot_1$5(ctx) {
     	let t;
 
@@ -8879,14 +8879,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$5.name,
     		type: "slot",
-    		source: "(332:4) <Button color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
+    		source: "(361:4) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (335:4) <Button outline  color="primary" on:click={insertExamplesSPC}>
+    // (364:4) <Button outline  color="primary" on:click={insertExamplesSPC}>
     function create_default_slot$6(ctx) {
     	let t;
 
@@ -8906,7 +8906,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$6.name,
     		type: "slot",
-    		source: "(335:4) <Button outline  color=\\\"primary\\\" on:click={insertExamplesSPC}>",
+    		source: "(364:4) <Button outline  color=\\\"primary\\\" on:click={insertExamplesSPC}>",
     		ctx
     	});
 
@@ -8942,11 +8942,16 @@ var app = (function () {
     	let h32;
     	let t15;
     	let div1;
+    	let t16;
+    	let h33;
+    	let t18;
+    	let div2;
     	let current;
     	let dispose;
 
     	const button0 = new Button({
     			props: {
+    				outline: true,
     				color: "success",
     				$$slots: { default: [create_default_slot_2$3] },
     				$$scope: { ctx }
@@ -8958,6 +8963,7 @@ var app = (function () {
 
     	const button1 = new Button({
     			props: {
+    				outline: true,
     				color: "danger",
     				$$slots: { default: [create_default_slot_1$5] },
     				$$scope: { ctx }
@@ -9014,30 +9020,39 @@ var app = (function () {
     			h32.textContent = "Integración API sos1920-09";
     			t15 = space();
     			div1 = element("div");
+    			t16 = space();
+    			h33 = element("h3");
+    			h33.textContent = "Integración API sos1920-09";
+    			t18 = space();
+    			div2 = element("div");
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$c, 321, 4, 10262);
+    			add_location(script0, file$c, 350, 4, 11275);
     			if (script1.src !== (script1_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$c, 322, 4, 10385);
-    			add_location(h1, file$c, 327, 4, 10482);
-    			add_location(br0, file$c, 335, 4, 10811);
-    			add_location(br1, file$c, 335, 8, 10815);
+    			add_location(script1, file$c, 351, 4, 11414);
+    			add_location(h1, file$c, 356, 4, 11511);
+    			add_location(br0, file$c, 364, 4, 11856);
+    			add_location(br1, file$c, 364, 8, 11860);
     			set_style(h30, "text-align", "center");
-    			add_location(h30, file$c, 338, 4, 10860);
+    			add_location(h30, file$c, 367, 4, 11905);
     			attr_dev(div0, "id", "container");
     			attr_dev(div0, "class", "svelte-11guutf");
-    			add_location(div0, file$c, 340, 8, 10972);
+    			add_location(div0, file$c, 369, 8, 12017);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$c, 341, 8, 11008);
+    			add_location(p, file$c, 370, 8, 12053);
     			attr_dev(figure, "class", "highcharts-figure svelte-11guutf");
-    			add_location(figure, file$c, 339, 4, 10928);
-    			add_location(br2, file$c, 346, 4, 11093);
+    			add_location(figure, file$c, 368, 4, 11973);
+    			add_location(br2, file$c, 375, 4, 12138);
     			set_style(h31, "text-align", "center");
-    			add_location(h31, file$c, 349, 4, 11139);
+    			add_location(h31, file$c, 378, 4, 12184);
     			set_style(h32, "text-align", "center");
-    			add_location(h32, file$c, 352, 4, 11231);
+    			add_location(h32, file$c, 381, 4, 12276);
     			attr_dev(div1, "id", "chart");
-    			add_location(div1, file$c, 353, 4, 11300);
-    			add_location(main, file$c, 325, 0, 10468);
+    			add_location(div1, file$c, 382, 4, 12345);
+    			set_style(h33, "text-align", "center");
+    			add_location(h33, file$c, 386, 4, 12402);
+    			attr_dev(div2, "id", "chart2");
+    			add_location(div2, file$c, 387, 4, 12471);
+    			add_location(main, file$c, 354, 0, 11497);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9072,12 +9087,17 @@ var app = (function () {
     			append_dev(main, h32);
     			append_dev(main, t15);
     			append_dev(main, div1);
+    			append_dev(main, t16);
+    			append_dev(main, h33);
+    			append_dev(main, t18);
+    			append_dev(main, div2);
     			current = true;
     			if (remount) run_all(dispose);
 
     			dispose = [
     				listen_dev(script0, "load", population, false, false, false),
-    				listen_dev(script0, "load", /*vehiculos*/ ctx[3], false, false, false)
+    				listen_dev(script0, "load", /*vehiculos*/ ctx[3], false, false, false),
+    				listen_dev(script0, "load", roads, false, false, false)
     			];
     		},
     		p: function update(ctx, [dirty]) {
@@ -9139,6 +9159,17 @@ var app = (function () {
     	return block;
     }
 
+    function minusMayus(palabra, estado) {
+    	if (estado == true) {
+    		palabra = palabra.charAt(0).toUpperCase() + palabra.slice(1);
+    	} else {
+    		palabra = palabra.charAt(0).toLowerCase() + palabra.slice(1);
+    	}
+
+    	return palabra;
+    }
+
+    //api externa 1
     async function population() {
     	let MyData = [];
     	let listaDensidad = []; //lista de densidad de la api
@@ -9184,6 +9215,30 @@ var app = (function () {
     			}
     		]
     	});
+    }
+
+    //api sos1920-02 bicis
+    async function bicis() {
+    	let dataBicis = []; //guardamos todos los datos de bicis de 2015
+    	const res = await fetch("https://sos1920-02.herokuapp.com/api/v2/evolution-of-cycling-routes?year=2015");
+    	dataBicis = await res.json();
+
+    	//hacemos map para el carril metropolitano
+    	dataBicis.map(dato => dato.metropolitan).sum();
+
+    	console.log(dataBicis);
+    }
+
+    //api sos1920-04 roads kilometros de carretera
+    async function roads() {
+    	let dataRoads = []; //guardamos todos los datos de bicis de 2015
+    	const res2 = await fetch("http://sos1920-04.herokuapp.com/api/v1/roads/");
+    	dataRoads = await res2.json();
+
+    	//hacemos map para el carril metropolitano
+    	dataRoads.map(dato => dato.total);
+
+    	console.log(dataRoads);
     }
 
     function instance$e($$self, $$props, $$invalidate) {
@@ -9251,7 +9306,7 @@ var app = (function () {
 
     	//INSERT EJEMPLOS PARA APIS
     	async function insertExamplesSPC() {
-    		let newExamples = [
+    		var newExamples = [
     			{
     				country: "sweden",
     				both_sex: "11.7",
@@ -9326,14 +9381,14 @@ var app = (function () {
     		var paisesSpc = spc.map(dato => dato.country); //pero tengo que poner en mayus la primera letra o al reves
 
     		for (let index = 0; index < paisesSpc.length; index++) {
-    			paisesSpc[index] = paisesSpc[index].charAt(0).toUpperCase() + paisesSpc[index].slice(1);
+    			paisesSpc[index] = minusMayus(paisesSpc[index], true);
     		}
 
     		intersecMayus = paisesSpc.filter(x => paisesVehicu.includes(x)); //ya tengo los paises que coinciden
 
     		//hago lista para poder tenerlo en minus otra vez y buscar con mi api
     		for (let index = 0; index < intersecMayus.length; index++) {
-    			intersecMinus.push(intersecMayus[index].charAt(0).toLowerCase() + intersecMayus[index].slice(1));
+    			intersecMinus.push(minusMayus(intersecMayus[index], false));
     		}
 
     		//busco los suicidios de cada pais y los coches
@@ -9345,8 +9400,6 @@ var app = (function () {
     			var resSuci = await suicidiosApi.json();
     			listaSuicidios.push(resSuci[0].both_sex * 100000);
     		}
-
-    		console.log(listaSuicidios);
 
     		var options = {
     			series: [
@@ -9426,12 +9479,15 @@ var app = (function () {
     		spc,
     		ApexCharts: Et,
     		errorMSG,
+    		minusMayus,
     		getSPCLoadInitialData,
     		deleteSPCALL,
     		getSPC,
     		insertExamplesSPC,
     		population,
-    		vehiculos
+    		vehiculos,
+    		bicis,
+    		roads
     	});
 
     	$$self.$inject_state = $$props => {
@@ -12578,7 +12634,7 @@ var app = (function () {
 
     /* src\front\GUI2POVERTY\ApexChart.svelte generated by Svelte v3.22.3 */
 
-    const { console: console_1$8, document: document_1$1 } = globals;
+    const { console: console_1$8, document: document_1$2 } = globals;
     const file$g = "src\\front\\GUI2POVERTY\\ApexChart.svelte";
 
     function create_fragment$i(ctx) {
@@ -12612,7 +12668,7 @@ var app = (function () {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor, remount) {
-    			append_dev(document_1$1.head, script);
+    			append_dev(document_1$2.head, script);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, h1);
@@ -12902,7 +12958,7 @@ var app = (function () {
     	const button2 = new Button({
     			props: {
     				color: "danger",
-    				$$slots: { default: [create_default_slot_2$5] },
+    				$$slots: { default: [create_default_slot_2$6] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -12914,11 +12970,7 @@ var app = (function () {
     			props: {
     				outline: true,
     				color: "success",
-<<<<<<< HEAD
     				$$slots: { default: [create_default_slot_1$8] },
-=======
-    				$$slots: { default: [create_default_slot_2$6] },
->>>>>>> 815109c4cf739ae5fc7786d98ce70b4c15632bfc
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -14283,7 +14335,7 @@ var app = (function () {
     }
 
     // (348:8) <Button color="danger" on:click="{deleteLQALL}">
-    function create_default_slot_2$5(ctx) {
+    function create_default_slot_2$6(ctx) {
     	let t;
 
     	const block = {
@@ -14300,7 +14352,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_2$5.name,
+    		id: create_default_slot_2$6.name,
     		type: "slot",
     		source: "(348:8) <Button color=\\\"danger\\\" on:click=\\\"{deleteLQALL}\\\">",
     		ctx
@@ -14309,13 +14361,8 @@ var app = (function () {
     	return block;
     }
 
-<<<<<<< HEAD
     // (351:8) <Button outline color="success" on:click="{getPreviewPage}">
     function create_default_slot_1$8(ctx) {
-=======
-    // (451:8) <Button outline color="success" on:click="{getPreviewPage}">
-    function create_default_slot_2$6(ctx) {
->>>>>>> 815109c4cf739ae5fc7786d98ce70b4c15632bfc
     	let t;
 
     	const block = {
@@ -14332,11 +14379,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-<<<<<<< HEAD
     		id: create_default_slot_1$8.name,
-=======
-    		id: create_default_slot_2$6.name,
->>>>>>> 815109c4cf739ae5fc7786d98ce70b4c15632bfc
     		type: "slot",
     		source: "(351:8) <Button outline color=\\\"success\\\" on:click=\\\"{getPreviewPage}\\\">",
     		ctx
@@ -15318,7 +15361,7 @@ var app = (function () {
 
     /* src\front\GUI3LQ\ApexChart.svelte generated by Svelte v3.22.3 */
 
-    const { console: console_1$b, document: document_1$2 } = globals;
+    const { console: console_1$b, document: document_1$3 } = globals;
     const file$j = "src\\front\\GUI3LQ\\ApexChart.svelte";
 
     function create_fragment$m(ctx) {
@@ -15345,7 +15388,7 @@ var app = (function () {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor, remount) {
-    			append_dev(document_1$2.head, script);
+    			append_dev(document_1$3.head, script);
     			insert_dev(target, t, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, div);

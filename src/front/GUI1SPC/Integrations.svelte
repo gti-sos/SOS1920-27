@@ -19,6 +19,14 @@
     let errorMSG = "";
     onMount(getSPC);
  
+    function minusMayus(palabra, estado) {
+        if (estado==true) {
+                palabra=palabra.charAt(0).toUpperCase() + palabra.slice(1)  
+        } else {
+                palabra=palabra.charAt(0).toLowerCase() + palabra.slice(1)  
+        }
+        return palabra
+    }
 
      //GET INITIALDATA
      async function getSPCLoadInitialData() {
@@ -80,7 +88,7 @@
     
     //INSERT EJEMPLOS PARA APIS
     async function insertExamplesSPC() {
-        let newExamples = [{
+        var newExamples = [{
             country: "sweden",
             both_sex: "11.7",
             male_rank: "69",
@@ -222,17 +230,16 @@
         //busco la interseccion entre mis paises y los suyos
         var paisesVehicu = dataVehiculos.map(dato => dato.country)
         var paisesSpc = spc.map(dato => dato.country) //pero tengo que poner en mayus la primera letra o al reves
-        
+
         for (let index = 0; index < paisesSpc.length; index++) {
-            paisesSpc[index]=paisesSpc[index].charAt(0).toUpperCase() + paisesSpc[index].slice(1)
-            
+            paisesSpc[index]= minusMayus(paisesSpc[index], true)
         }
 
         intersecMayus = paisesSpc.filter(x => paisesVehicu.includes(x)); //ya tengo los paises que coinciden
 
         //hago lista para poder tenerlo en minus otra vez y buscar con mi api
         for (let index = 0; index < intersecMayus.length; index++) {
-            intersecMinus.push(intersecMayus[index].charAt(0).toLowerCase() + intersecMayus[index].slice(1))
+            intersecMinus.push(minusMayus(intersecMayus[index], false))
         }
         //busco los suicidios de cada pais y los coches
         for (let index = 0; index < intersecMayus.length; index++) {
@@ -245,7 +252,6 @@
             listaSuicidios.push(resSuci[0].both_sex*100000);       
         }
 
-        console.log(listaSuicidios)
         var options = {
           series: [{
             name: "Suicidios en un año",
@@ -316,20 +322,43 @@
         chart.render();
     }
       
+    //api sos1920-02 bicis
+    async function bicis(){
+        let dataBicis = []; //guardamos todos los datos de bicis de 2015
+
+        const res = await fetch("https://sos1920-02.herokuapp.com/api/v2/evolution-of-cycling-routes?year=2015");
+        dataBicis = await res.json();
+
+        //hacemos map para el carril metropolitano
+        dataBicis.map(dato=> dato.metropolitan).sum()
+        console.log(dataBicis)
+    }
+
+    //api sos1920-04 roads kilometros de carretera
+    async function roads(){
+        let dataRoads = []; //guardamos todos los datos de bicis de 2015
+
+        const res2 = await fetch("http://sos1920-04.herokuapp.com/api/v1/roads/");
+        dataRoads = await res2.json();
+
+        //hacemos map para el carril metropolitano
+        dataRoads.map(dato=> dato.total)
+        console.log(dataRoads)
+    }
 </script>
 
 <svelte:head>
-    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population} on:load={vehiculos}></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population} on:load={vehiculos} on:load={roads}></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
 </svelte:head>
 <main>
 
     <h1>SPC Manager</h1>
-    <Button color="success" on:click="{getSPCLoadInitialData}">
+    <Button outline color="success" on:click="{getSPCLoadInitialData}">
         Reiniciar ejemplos iniciales
     </Button>
-    <Button color="danger" on:click="{deleteSPCALL}">
+    <Button outline color="danger" on:click="{deleteSPCALL}">
         Borrar todo
     </Button>
     <Button outline  color="primary" on:click={insertExamplesSPC}>Insertar ejemplos</Button>
@@ -354,6 +383,10 @@
     <div id="chart">
     </div>
 
+    <!--api dani-->
+    <h3 style="text-align: center;">Integración API sos1920-09</h3>
+    <div id="chart2">
+    </div>
 
 
 
