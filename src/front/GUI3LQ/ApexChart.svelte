@@ -84,36 +84,96 @@
     async function loadGraphs(){
         let MyData = [];
         const resData = await fetch("/api/v2/lq-stats");
-        MyData = lq;
+        MyData = await resData.json();
+        let sumatorio_asia = 0;
+        let sumatorio_oce = 0;
+        let sumatorio_eu = 0;
+        let sumatorio_afri = 0;
+        let sumatorio_norte = 0;
+        let sumatorio_sur = 0;
 
-        //var continentes = MyData.map((dato)=> dato.continent);
 
-        var oce = MyData.filter((objeto)=>{
-            return objeto.continent=="oceania" && objeto.year=="2016";
-        }).reduce((a,b) => a + b.total, 0);
-
-        var afri = MyData.filter((objeto)=>{
-            return objeto.continent=="africa" && objeto.year=="2016";
-        }).reduce((a,b) => a + b.total, 0);
-
+        //asia
         var asi = MyData.filter((objeto)=>{
-            return objeto.continent=="asia" && objeto.year=="2016";
-        }).reduce((a,b) => a + b.total, 0);
+            return objeto.continent=="asia" && parseInt(objeto.year)==2016;
+        }).map((dato)=> dato.total);
 
-        var euro = MyData.filter((objeto)=>{
-            return objeto.continent=="europe" && objeto.year=="2016";
-        }).reduce((a,b) => a + b.total, 0);
+        for (let i = 0; i < asi.length; i++) {
+          sumatorio_asia+=parseInt(asi[i]);
+        }
+        let media_asia = sumatorio_asia/asi.length;
+        if(media_asia.length==null){
+          media_asia = "No Hay Datos"
+        }
 
-//        var norte = MyData.filter((objeto)=>{
-//            return objeto.continent=="north america" && objeto.year=="2016";
-//        }).reduce((a,b) => a + b.total, 0);
+        //oceania
+        var oce = MyData.filter((objeto)=>{
+            return objeto.continent=="oceania" && parseInt(objeto.year)==2016;
+        }).map((dato)=> dato.total);
 
-//        var asi = MyData.filter((objeto)=>{
-//            return objeto.continent=="south america" && objeto.year=="2016";
-//        }).reduce((a,b) => a + b.total, 0); 
+        for (let i = 0; i < oce.length; i++) {
+          sumatorio_oce+=parseInt(oce[i]);
+        }
+        let media_oce = sumatorio_oce/oce.length;
+        if(media_oce.length==null){
+          media_oce = "No Hay Datos"
+        }
+
+        //europe
+        var eu = MyData.filter((objeto)=>{
+            return objeto.continent=="europe" && parseInt(objeto.year)==2016;
+        }).map((dato)=> dato.total);
+
+        for (let i = 0; i < eu.length; i++) {
+          sumatorio_eu+=parseInt(eu[i]);
+        }
+        let media_eu = sumatorio_eu/eu.length;
+        if(media_eu.length==null){
+          media_eu = "No Hay Datos"
+        }
+
+        //africa
+        var afri = MyData.filter((objeto)=>{
+            return objeto.continent=="africa" && parseInt(objeto.year)==2016;
+        }).map((dato)=> dato.total);
+
+        for (let i = 0; i < eu.length; i++) {
+          sumatorio_afri+=parseInt(afri[i]);
+        }
+        let media_afri = sumatorio_afri/afri.length;
+        if(media_afri.length==null){
+          media_afri = "No Hay Datos"
+        }
+
+        //a sur
+        var sur = MyData.filter((objeto)=>{
+            return objeto.continent=="south america" && parseInt(objeto.year)==2016;
+        }).map((dato)=> dato.total);
+
+        for (let i = 0; i < sur.length; i++) {
+          sumatorio_sur+=parseInt(sur[i]);
+        }
+        let media_sur = sumatorio_sur/sur.length;
+        if(media_sur.length==null){
+          media_sur = "No Hay Datos"
+        }
+        
+        //a norte
+        var norte = MyData.filter((objeto)=>{
+            return objeto.continent=="north america" && parseInt(objeto.year)==2016;
+        }).map((dato)=> dato.total);
+
+        for (let i = 0; i < norte.length; i++) {
+          sumatorio_afri+=parseInt(norte[i]);
+        }
+        let media_norte = sumatorio_norte/norte.length;
+        if(media_norte.length==null){
+          media_norte = "No Hay Datos"
+        }
+
 
         var options = {
-          series: [oce, afri, asi, euro, 90, 90],
+          series: [media_oce, media_afri, media_asia, media_eu, media_norte, media_sur],
           chart: {
           height: 390,
           type: 'radialBar',
@@ -139,7 +199,7 @@
             }
           }
         },
-        colors: ['#1ab7ea', '#0084ff', '#39539E', '#0077B5'],
+        colors: ['#FF5733', '#03FF66', '#03C6FF', '#0077B5','#0331FF','#BA03FF'],
         labels: ['oceania', 'africa', 'asia', 'europe', 'north america', 'south america'],
         legend: {
           show: true,

@@ -14,6 +14,8 @@
     let color = "danger";
 
     let errorMSG = "";
+    let lq =[];
+    let totaldata = 12;
     onMount(getLQ);
 
     //GET

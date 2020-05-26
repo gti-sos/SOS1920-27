@@ -14635,7 +14635,7 @@ var app = (function () {
     const { console: console_1$b } = globals;
     const file$i = "src\\front\\GUI3LQ\\HighChart.svelte";
 
-    // (184:4) <Button color="primary" on:click="{getLQLoadInitialData}">
+    // (186:4) <Button color="primary" on:click="{getLQLoadInitialData}">
     function create_default_slot_1$9(ctx) {
     	let t;
 
@@ -14655,14 +14655,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$9.name,
     		type: "slot",
-    		source: "(184:4) <Button color=\\\"primary\\\" on:click=\\\"{getLQLoadInitialData}\\\">",
+    		source: "(186:4) <Button color=\\\"primary\\\" on:click=\\\"{getLQLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (187:4) <Button color="danger" on:click="{deleteLQALL}">
+    // (189:4) <Button color="danger" on:click="{deleteLQALL}">
     function create_default_slot$a(ctx) {
     	let t;
 
@@ -14682,7 +14682,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$a.name,
     		type: "slot",
-    		source: "(187:4) <Button color=\\\"danger\\\" on:click=\\\"{deleteLQALL}\\\">",
+    		source: "(189:4) <Button color=\\\"danger\\\" on:click=\\\"{deleteLQALL}\\\">",
     		ctx
     	});
 
@@ -14754,22 +14754,22 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "En esta gráfica veremos la clasificación de los países dependiendo de su calidad de vida en 2016 basándonos en algunos datos de dichos países, como puede ser su popularidad, clima, seguridad, etc.";
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$i, 175, 4, 4859);
+    			add_location(script0, file$i, 177, 4, 4901);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$i, 176, 4, 4930);
+    			add_location(script1, file$i, 178, 4, 4972);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$i, 177, 4, 5008);
+    			add_location(script2, file$i, 179, 4, 5050);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$i, 178, 4, 5088);
-    			add_location(h1, file$i, 182, 4, 5219);
+    			add_location(script3, file$i, 180, 4, 5130);
+    			add_location(h1, file$i, 184, 4, 5261);
     			attr_dev(div, "id", "container");
     			attr_dev(div, "class", "svelte-1p6b9xa");
-    			add_location(div, file$i, 190, 8, 5495);
+    			add_location(div, file$i, 192, 8, 5537);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$i, 191, 8, 5531);
+    			add_location(p, file$i, 193, 8, 5573);
     			attr_dev(figure, "class", "highcharts-figure svelte-1p6b9xa");
-    			add_location(figure, file$i, 189, 4, 5451);
-    			add_location(main, file$i, 181, 0, 5207);
+    			add_location(figure, file$i, 191, 4, 5493);
+    			add_location(main, file$i, 183, 0, 5249);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14798,14 +14798,14 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			const button0_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 256) {
     				button0_changes.$$scope = { dirty, ctx };
     			}
 
     			button0.$set(button0_changes);
     			const button1_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 256) {
     				button1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -14910,6 +14910,8 @@ var app = (function () {
     	let visible = false;
     	let color = "danger";
     	let errorMSG = "";
+    	let lq = [];
+    	let totaldata = 12;
     	onMount(getLQ);
 
     	//GET
@@ -14989,6 +14991,8 @@ var app = (function () {
     		visible,
     		color,
     		errorMSG,
+    		lq,
+    		totaldata,
     		getLQ,
     		getLQLoadInitialData,
     		deleteLQALL,
@@ -14999,6 +15003,8 @@ var app = (function () {
     		if ("visible" in $$props) visible = $$props.visible;
     		if ("color" in $$props) color = $$props.color;
     		if ("errorMSG" in $$props) errorMSG = $$props.errorMSG;
+    		if ("lq" in $$props) lq = $$props.lq;
+    		if ("totaldata" in $$props) totaldata = $$props.totaldata;
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -15042,10 +15048,10 @@ var app = (function () {
     			main = element("main");
     			div = element("div");
     			if (script.src !== (script_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$j, 180, 4, 5283);
+    			add_location(script, file$j, 240, 4, 7067);
     			attr_dev(div, "id", "chart");
-    			add_location(div, file$j, 184, 0, 5395);
-    			add_location(main, file$j, 183, 0, 5387);
+    			add_location(div, file$j, 244, 0, 7179);
+    			add_location(main, file$j, 243, 0, 7171);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15056,7 +15062,7 @@ var app = (function () {
     			insert_dev(target, main, anchor);
     			append_dev(main, div);
     			if (remount) dispose();
-    			dispose = listen_dev(script, "load", /*loadGraphs*/ ctx[0], false, false, false);
+    			dispose = listen_dev(script, "load", loadGraphs$4, false, false, false);
     		},
     		p: noop,
     		i: noop,
@@ -15078,6 +15084,155 @@ var app = (function () {
     	});
 
     	return block;
+    }
+
+    async function loadGraphs$4() {
+    	let MyData = [];
+    	const resData = await fetch("/api/v2/lq-stats");
+    	MyData = await resData.json();
+    	let sumatorio_asia = 0;
+    	let sumatorio_oce = 0;
+    	let sumatorio_eu = 0;
+    	let sumatorio_afri = 0;
+    	let sumatorio_norte = 0;
+    	let sumatorio_sur = 0;
+
+    	//asia
+    	var asi = MyData.filter(objeto => {
+    		return objeto.continent == "asia" && parseInt(objeto.year) == 2016;
+    	}).map(dato => dato.total);
+
+    	for (let i = 0; i < asi.length; i++) {
+    		sumatorio_asia += parseInt(asi[i]);
+    	}
+
+    	let media_asia = sumatorio_asia / asi.length;
+
+    	if (media_asia.length == null) {
+    		media_asia = "No Hay Datos";
+    	}
+
+    	//oceania
+    	var oce = MyData.filter(objeto => {
+    		return objeto.continent == "oceania" && parseInt(objeto.year) == 2016;
+    	}).map(dato => dato.total);
+
+    	for (let i = 0; i < oce.length; i++) {
+    		sumatorio_oce += parseInt(oce[i]);
+    	}
+
+    	let media_oce = sumatorio_oce / oce.length;
+
+    	if (media_oce.length == null) {
+    		media_oce = "No Hay Datos";
+    	}
+
+    	//europe
+    	var eu = MyData.filter(objeto => {
+    		return objeto.continent == "europe" && parseInt(objeto.year) == 2016;
+    	}).map(dato => dato.total);
+
+    	for (let i = 0; i < eu.length; i++) {
+    		sumatorio_eu += parseInt(eu[i]);
+    	}
+
+    	let media_eu = sumatorio_eu / eu.length;
+
+    	if (media_eu.length == null) {
+    		media_eu = "No Hay Datos";
+    	}
+
+    	//africa
+    	var afri = MyData.filter(objeto => {
+    		return objeto.continent == "africa" && parseInt(objeto.year) == 2016;
+    	}).map(dato => dato.total);
+
+    	for (let i = 0; i < eu.length; i++) {
+    		sumatorio_afri += parseInt(afri[i]);
+    	}
+
+    	let media_afri = sumatorio_afri / afri.length;
+
+    	if (media_afri.length == null) {
+    		media_afri = "No Hay Datos";
+    	}
+
+    	//a sur
+    	var sur = MyData.filter(objeto => {
+    		return objeto.continent == "south america" && parseInt(objeto.year) == 2016;
+    	}).map(dato => dato.total);
+
+    	for (let i = 0; i < sur.length; i++) {
+    		sumatorio_sur += parseInt(sur[i]);
+    	}
+
+    	let media_sur = sumatorio_sur / sur.length;
+
+    	if (media_sur.length == null) {
+    		media_sur = "No Hay Datos";
+    	}
+
+    	//a norte
+    	var norte = MyData.filter(objeto => {
+    		return objeto.continent == "north america" && parseInt(objeto.year) == 2016;
+    	}).map(dato => dato.total);
+
+    	for (let i = 0; i < norte.length; i++) {
+    		sumatorio_afri += parseInt(norte[i]);
+    	}
+
+    	let media_norte = sumatorio_norte / norte.length;
+
+    	if (media_norte.length == null) {
+    		media_norte = "No Hay Datos";
+    	}
+
+    	var options = {
+    		series: [media_oce, media_afri, media_asia, media_eu, media_norte, media_sur],
+    		chart: { height: 390, type: "radialBar" },
+    		plotOptions: {
+    			radialBar: {
+    				offsetY: 0,
+    				startAngle: 0,
+    				endAngle: 270,
+    				hollow: {
+    					margin: 5,
+    					size: "30%",
+    					background: "transparent",
+    					image: undefined
+    				},
+    				dataLabels: {
+    					name: { show: true },
+    					value: { show: true }
+    				}
+    			}
+    		},
+    		colors: ["#FF5733", "#03FF66", "#03C6FF", "#0077B5", "#0331FF", "#BA03FF"],
+    		labels: ["oceania", "africa", "asia", "europe", "north america", "south america"],
+    		legend: {
+    			show: true,
+    			floating: true,
+    			fontSize: "16px",
+    			position: "left",
+    			offsetX: 160,
+    			offsetY: 15,
+    			labels: { useSeriesColors: true },
+    			markers: { size: 0 },
+    			formatter(seriesName, opts) {
+    				return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex];
+    			},
+    			itemMargin: { vertical: 3 }
+    		},
+    		responsive: [
+    			{
+    				breakpoint: 480,
+    				options: { legend: { show: false } }
+    			}
+    		]
+    	};
+
+    	var chart = new ApexCharts(document.querySelector("#chart"), options);
+    	chart.render();
     }
 
     function instance$m($$self, $$props, $$invalidate) {
@@ -15148,83 +15303,6 @@ var app = (function () {
     		});
     	}
 
-    	//grafica
-    	async function loadGraphs() {
-    		let MyData = [];
-    		const resData = await fetch("/api/v2/lq-stats");
-    		MyData = lq;
-
-    		//var continentes = MyData.map((dato)=> dato.continent);
-    		var oce = MyData.filter(objeto => {
-    			return objeto.continent == "oceania" && objeto.year == "2016";
-    		}).reduce((a, b) => a + b.total, 0);
-
-    		var afri = MyData.filter(objeto => {
-    			return objeto.continent == "africa" && objeto.year == "2016";
-    		}).reduce((a, b) => a + b.total, 0);
-
-    		var asi = MyData.filter(objeto => {
-    			return objeto.continent == "asia" && objeto.year == "2016";
-    		}).reduce((a, b) => a + b.total, 0);
-
-    		var euro = MyData.filter(objeto => {
-    			return objeto.continent == "europe" && objeto.year == "2016";
-    		}).reduce((a, b) => a + b.total, 0);
-
-    		//        var norte = MyData.filter((objeto)=>{
-    		//            return objeto.continent=="north america" && objeto.year=="2016";
-    		//        }).reduce((a,b) => a + b.total, 0);
-    		//        var asi = MyData.filter((objeto)=>{
-    		//            return objeto.continent=="south america" && objeto.year=="2016";
-    		//        }).reduce((a,b) => a + b.total, 0); 
-    		var options = {
-    			series: [oce, afri, asi, euro, 90, 90],
-    			chart: { height: 390, type: "radialBar" },
-    			plotOptions: {
-    				radialBar: {
-    					offsetY: 0,
-    					startAngle: 0,
-    					endAngle: 270,
-    					hollow: {
-    						margin: 5,
-    						size: "30%",
-    						background: "transparent",
-    						image: undefined
-    					},
-    					dataLabels: {
-    						name: { show: true },
-    						value: { show: true }
-    					}
-    				}
-    			},
-    			colors: ["#1ab7ea", "#0084ff", "#39539E", "#0077B5"],
-    			labels: ["oceania", "africa", "asia", "europe", "north america", "south america"],
-    			legend: {
-    				show: true,
-    				floating: true,
-    				fontSize: "16px",
-    				position: "left",
-    				offsetX: 160,
-    				offsetY: 15,
-    				labels: { useSeriesColors: true },
-    				markers: { size: 0 },
-    				formatter(seriesName, opts) {
-    					return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex];
-    				},
-    				itemMargin: { vertical: 3 }
-    			},
-    			responsive: [
-    				{
-    					breakpoint: 480,
-    					options: { legend: { show: false } }
-    				}
-    			]
-    		};
-
-    		var chart = new ApexCharts(document.querySelector("#chart"), options);
-    		chart.render();
-    	}
-
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -15251,7 +15329,7 @@ var app = (function () {
     		getLQ,
     		getLQLoadInitialData,
     		deleteLQALL,
-    		loadGraphs
+    		loadGraphs: loadGraphs$4
     	});
 
     	$$self.$inject_state = $$props => {
@@ -15266,7 +15344,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [loadGraphs];
+    	return [];
     }
 
     class ApexChart$2 extends SvelteComponentDev {
