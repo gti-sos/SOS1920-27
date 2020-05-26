@@ -330,8 +330,10 @@
         dataBicis = await res.json();
 
         //hacemos map para el carril metropolitano
-        dataBicis.map(dato=> dato.metropolitan).sum()
+        dataBicis.map(dato=> dato.metropolitan).reduce((a, b) => a + b, 0)
         console.log(dataBicis)
+
+        var espa = spc.filter(dato => dato.country=="spain")
     }
 
     //api sos1920-04 roads kilometros de carretera
