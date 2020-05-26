@@ -101,7 +101,6 @@
                 totaldata++;
                 color = "success";
                 errorMSG = newSpc.country +" creado correctamente";
-                loadGraphs();
                 console.log("Inserted "+newSpc.country +" spc.");            
             }else if (res.status== 400) {
                 color = "danger";
@@ -271,7 +270,6 @@
 
 <main>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> <!--este es de apexcharts-->
-    <script src="apex.js"></script>
     <h1>SPC Manager</h1>
     
 

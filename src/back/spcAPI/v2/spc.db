@@ -1,109 +1,737 @@
-{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"0h2Ym7CwhKGpGwzY"}
-{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"3w85FCJsIxYaOj5f"}
-{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"7O50AqzO28e1hNqV"}
-{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"8hLXpfYqwUyZm2fi"}
-{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"VtPtU6JXQ2aacOMj"}
-{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"Wpw9PoUudtUGtMHI"}
-{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"ezgUCWmuZFz2wWLw"}
-{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"kjY9exLzQRFLfvQJ"}
-{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"obmaZfKs68hiZIUK"}
-{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"r5meTYyvOgGAQLb1"}
-{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"sxXDdH9Qt3rCpRyN"}
-{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"xeshBwSrDkV84PnI"}
-{"$$deleted":true,"_id":"VtPtU6JXQ2aacOMj"}
-{"$$deleted":true,"_id":"0h2Ym7CwhKGpGwzY"}
-{"$$deleted":true,"_id":"3w85FCJsIxYaOj5f"}
-{"$$deleted":true,"_id":"7O50AqzO28e1hNqV"}
-{"$$deleted":true,"_id":"8hLXpfYqwUyZm2fi"}
-{"$$deleted":true,"_id":"Wpw9PoUudtUGtMHI"}
-{"$$deleted":true,"_id":"ezgUCWmuZFz2wWLw"}
-{"$$deleted":true,"_id":"kjY9exLzQRFLfvQJ"}
-{"$$deleted":true,"_id":"obmaZfKs68hiZIUK"}
-{"$$deleted":true,"_id":"r5meTYyvOgGAQLb1"}
-{"$$deleted":true,"_id":"sxXDdH9Qt3rCpRyN"}
-{"$$deleted":true,"_id":"xeshBwSrDkV84PnI"}
-{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"ywcBwPyZvMwhqUTp"}
-{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"6Af3Vu6LoZ4VG7jZ"}
-{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"A367ZERYlGXLvIfu"}
-{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"ObYlom6Ki1oN7rOa"}
-{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"YBxLO1H6VzFcYDEe"}
-{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"EU0nUh3k25j2rSQS"}
-{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"39Lm4g7KgDB5XWPk"}
-{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"H1e5FjOAUgC78hoH"}
-{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"zjIJ5pJJOIr3NXXu"}
-{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"HKSsUph3ocrYgfVB"}
-{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"eqTlgAdFzuA4dgmL"}
-{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"GPOiNxQ2WbBWawSV"}
-{"$$deleted":true,"_id":"HKSsUph3ocrYgfVB"}
-{"$$deleted":true,"_id":"A367ZERYlGXLvIfu"}
-{"$$deleted":true,"_id":"39Lm4g7KgDB5XWPk"}
-{"$$deleted":true,"_id":"6Af3Vu6LoZ4VG7jZ"}
-{"$$deleted":true,"_id":"EU0nUh3k25j2rSQS"}
-{"$$deleted":true,"_id":"GPOiNxQ2WbBWawSV"}
-{"$$deleted":true,"_id":"H1e5FjOAUgC78hoH"}
-{"$$deleted":true,"_id":"ObYlom6Ki1oN7rOa"}
-{"$$deleted":true,"_id":"YBxLO1H6VzFcYDEe"}
-{"$$deleted":true,"_id":"eqTlgAdFzuA4dgmL"}
-{"$$deleted":true,"_id":"ywcBwPyZvMwhqUTp"}
-{"$$deleted":true,"_id":"zjIJ5pJJOIr3NXXu"}
-{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"69bO2NXCeEW84joO"}
-{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"ksLjNXoTg1VkiyXC"}
-{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"OacD1puLAdUmKZ1x"}
-{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"cu569RddTVLiKhX0"}
-{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"MOQZ0C1WyDhXPjFK"}
-{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"a3RTQ1JWIZZKjdev"}
-{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"W1i4k8u6DjEb7Wlj"}
-{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"OeN3RYMUVMpwlES6"}
-{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"Cb5PF1JPAGAnTbcz"}
-{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"yfZybixl2bAbYuzx"}
-{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"0Hpfs5LyBILNztqp"}
-{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"1jLiAB538sTJzRKe"}
-{"$$deleted":true,"_id":"0Hpfs5LyBILNztqp"}
-{"$$deleted":true,"_id":"1jLiAB538sTJzRKe"}
-{"$$deleted":true,"_id":"69bO2NXCeEW84joO"}
-{"$$deleted":true,"_id":"Cb5PF1JPAGAnTbcz"}
-{"$$deleted":true,"_id":"MOQZ0C1WyDhXPjFK"}
-{"$$deleted":true,"_id":"OacD1puLAdUmKZ1x"}
-{"$$deleted":true,"_id":"OeN3RYMUVMpwlES6"}
-{"$$deleted":true,"_id":"W1i4k8u6DjEb7Wlj"}
-{"$$deleted":true,"_id":"a3RTQ1JWIZZKjdev"}
-{"$$deleted":true,"_id":"cu569RddTVLiKhX0"}
-{"$$deleted":true,"_id":"ksLjNXoTg1VkiyXC"}
-{"$$deleted":true,"_id":"yfZybixl2bAbYuzx"}
-{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"6y4gTV7PHjdlFsyk"}
-{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"Q5YhHxSOHgxnxJpE"}
-{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"xdIOMs8zj8W8W5FO"}
-{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"KlVT6XTtw0WR3CW6"}
-{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"TW8BKnIGlug738t2"}
-{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"38oDsF4mUKTYEEbP"}
-{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"Qjhg4Qzt34ow7Fbo"}
-{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"TDVZbvymrHZP3LfM"}
-{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"1vGhNBPVk1sj02ek"}
-{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"OLVetQsYXCpTNRYb"}
-{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"pSA8pu04jBWTtRro"}
-{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"VTVK9xPTMRZSZgSO"}
-{"$$deleted":true,"_id":"1vGhNBPVk1sj02ek"}
-{"$$deleted":true,"_id":"38oDsF4mUKTYEEbP"}
-{"$$deleted":true,"_id":"6y4gTV7PHjdlFsyk"}
-{"$$deleted":true,"_id":"KlVT6XTtw0WR3CW6"}
-{"$$deleted":true,"_id":"OLVetQsYXCpTNRYb"}
-{"$$deleted":true,"_id":"Q5YhHxSOHgxnxJpE"}
-{"$$deleted":true,"_id":"Qjhg4Qzt34ow7Fbo"}
-{"$$deleted":true,"_id":"TDVZbvymrHZP3LfM"}
-{"$$deleted":true,"_id":"TW8BKnIGlug738t2"}
-{"$$deleted":true,"_id":"VTVK9xPTMRZSZgSO"}
-{"$$deleted":true,"_id":"pSA8pu04jBWTtRro"}
-{"$$deleted":true,"_id":"xdIOMs8zj8W8W5FO"}
-{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"u83zB0aGYfRRIkMj"}
-{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"NtZhVHTD2SmsIAbr"}
-{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"XuYa6YIbtD3L6NW6"}
-{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"6hMqygo2kN9DR4IV"}
-{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"MOpn9OgnkD4thpae"}
-{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"9stK5G1w0cUkxIj2"}
 {"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"4dqyWDRgpWliGk3l"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"6hMqygo2kN9DR4IV"}
 {"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"6qjDp26StRQZ8dd3"}
-{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"Vd3Q3s07QiksHm9x"}
-{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"HCdG25xQlhS9gnH0"}
-{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"WLzOP3CFmwPvtyuE"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"9stK5G1w0cUkxIj2"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"MOpn9OgnkD4thpae"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"NtZhVHTD2SmsIAbr"}
 {"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"Tu3xC8QVkI0eJk8M"}
-{"$$deleted":true,"_id":"HCdG25xQlhS9gnH0"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"Vd3Q3s07QiksHm9x"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"WLzOP3CFmwPvtyuE"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"XuYa6YIbtD3L6NW6"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"u83zB0aGYfRRIkMj"}
+{"$$deleted":true,"_id":"4dqyWDRgpWliGk3l"}
+{"$$deleted":true,"_id":"6hMqygo2kN9DR4IV"}
+{"$$deleted":true,"_id":"6qjDp26StRQZ8dd3"}
+{"$$deleted":true,"_id":"9stK5G1w0cUkxIj2"}
+{"$$deleted":true,"_id":"MOpn9OgnkD4thpae"}
+{"$$deleted":true,"_id":"NtZhVHTD2SmsIAbr"}
+{"$$deleted":true,"_id":"Tu3xC8QVkI0eJk8M"}
+{"$$deleted":true,"_id":"Vd3Q3s07QiksHm9x"}
+{"$$deleted":true,"_id":"WLzOP3CFmwPvtyuE"}
+{"$$deleted":true,"_id":"XuYa6YIbtD3L6NW6"}
+{"$$deleted":true,"_id":"u83zB0aGYfRRIkMj"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"odMJKs5Jf0yKJqrn"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"tYLEsQhHPFcNmi44"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"s2M8uk3KCEKUqb34"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"E5cAB1W0qZwNv2hU"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"nalIDZoFZBGpnDBQ"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"VgrGCFJ4EPyYnL1w"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"jY1caZ5QaXkUiJ4V"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"BC3y4nywTo8SJhz6"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"DxPRekBprb95Wood"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"teMx0oM5xzZ0eSJF"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"RBUgswiEkesJK4nK"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"S6fYQ6nnkBFRp3RK"}
+{"$$deleted":true,"_id":"BC3y4nywTo8SJhz6"}
+{"$$deleted":true,"_id":"DxPRekBprb95Wood"}
+{"$$deleted":true,"_id":"E5cAB1W0qZwNv2hU"}
+{"$$deleted":true,"_id":"RBUgswiEkesJK4nK"}
+{"$$deleted":true,"_id":"S6fYQ6nnkBFRp3RK"}
+{"$$deleted":true,"_id":"VgrGCFJ4EPyYnL1w"}
+{"$$deleted":true,"_id":"jY1caZ5QaXkUiJ4V"}
+{"$$deleted":true,"_id":"nalIDZoFZBGpnDBQ"}
+{"$$deleted":true,"_id":"odMJKs5Jf0yKJqrn"}
+{"$$deleted":true,"_id":"s2M8uk3KCEKUqb34"}
+{"$$deleted":true,"_id":"tYLEsQhHPFcNmi44"}
+{"$$deleted":true,"_id":"teMx0oM5xzZ0eSJF"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"GX7IjuMYlOacX0js"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"92RbYPFyowsSVqxO"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"wiWU2gDZgG7mxJl3"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"z4d01bIpA8ov0pCs"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"wNen6d6mpLGKsAc8"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"4uSHI6VdGnTYW7TO"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"tLxxpQFKbcUap9wh"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"lQfYCJYjD9hFRJ6S"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"q7GT8ILlBtSpeHxE"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"sX0qUVgZVa4RkWCR"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"DyM2par5JL56NYHF"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"GH6cAhfMObe8sUL5"}
+{"$$deleted":true,"_id":"4uSHI6VdGnTYW7TO"}
+{"$$deleted":true,"_id":"92RbYPFyowsSVqxO"}
+{"$$deleted":true,"_id":"DyM2par5JL56NYHF"}
+{"$$deleted":true,"_id":"GH6cAhfMObe8sUL5"}
+{"$$deleted":true,"_id":"GX7IjuMYlOacX0js"}
+{"$$deleted":true,"_id":"lQfYCJYjD9hFRJ6S"}
+{"$$deleted":true,"_id":"q7GT8ILlBtSpeHxE"}
+{"$$deleted":true,"_id":"sX0qUVgZVa4RkWCR"}
+{"$$deleted":true,"_id":"tLxxpQFKbcUap9wh"}
+{"$$deleted":true,"_id":"wNen6d6mpLGKsAc8"}
+{"$$deleted":true,"_id":"wiWU2gDZgG7mxJl3"}
+{"$$deleted":true,"_id":"z4d01bIpA8ov0pCs"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"9b6ekODWJOBVq6rZ"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"ryxNXKp7at4Debtz"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"j9GURPYAHDl22aAr"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"l3gSkpt7MGpU9o2H"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"UgELiWVAYMkLqILC"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"0F3cOr38M52W4J54"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"4d0O3RPdDU73K17F"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"HeP44AToI5FEsQuI"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"AqfdldEBIu1FDbfN"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"iSsV9vw2mB9n9tZE"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"BU7UgMPjX3A8Wodp"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"rVzgNtjMadEiK1rT"}
+{"$$deleted":true,"_id":"0F3cOr38M52W4J54"}
+{"$$deleted":true,"_id":"4d0O3RPdDU73K17F"}
+{"$$deleted":true,"_id":"9b6ekODWJOBVq6rZ"}
+{"$$deleted":true,"_id":"AqfdldEBIu1FDbfN"}
+{"$$deleted":true,"_id":"BU7UgMPjX3A8Wodp"}
+{"$$deleted":true,"_id":"HeP44AToI5FEsQuI"}
+{"$$deleted":true,"_id":"UgELiWVAYMkLqILC"}
+{"$$deleted":true,"_id":"iSsV9vw2mB9n9tZE"}
+{"$$deleted":true,"_id":"j9GURPYAHDl22aAr"}
+{"$$deleted":true,"_id":"l3gSkpt7MGpU9o2H"}
+{"$$deleted":true,"_id":"rVzgNtjMadEiK1rT"}
+{"$$deleted":true,"_id":"ryxNXKp7at4Debtz"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"Uykka3ft42cNSDFA"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"kau6pXcND0aNoAXe"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"9InwI9lxvSE16V50"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"CsunABK4D8p1OZV7"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"w0dAPI8pPtSw7oF2"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"yCdONDO76vWl3ddG"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"LB6tdo10ECxjepRC"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"DLgvkthaigX4HJft"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"J4O0BAdECO1fUglI"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"DX968MGBhYr1Z3T0"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"3j02KkVFv9Dr1HUq"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"92TfpSUyXtz63nfG"}
+{"$$deleted":true,"_id":"Uykka3ft42cNSDFA"}
+{"$$deleted":true,"_id":"DX968MGBhYr1Z3T0"}
+{"country":"asdfghjk","both_sex":"34","male_rank":"5","male_number":"45","female_rank":"45","female_number":"45","ratio":"34","year":"2013","continent":"africa","_id":"QABy7SwYbiAXBU7P"}
+{"$$deleted":true,"_id":"3j02KkVFv9Dr1HUq"}
+{"$$deleted":true,"_id":"92TfpSUyXtz63nfG"}
+{"$$deleted":true,"_id":"9InwI9lxvSE16V50"}
+{"$$deleted":true,"_id":"CsunABK4D8p1OZV7"}
+{"$$deleted":true,"_id":"DLgvkthaigX4HJft"}
+{"$$deleted":true,"_id":"J4O0BAdECO1fUglI"}
+{"$$deleted":true,"_id":"LB6tdo10ECxjepRC"}
+{"$$deleted":true,"_id":"QABy7SwYbiAXBU7P"}
+{"$$deleted":true,"_id":"kau6pXcND0aNoAXe"}
+{"$$deleted":true,"_id":"w0dAPI8pPtSw7oF2"}
+{"$$deleted":true,"_id":"yCdONDO76vWl3ddG"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"oDDHThtUwMVwhcFU"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"gpfJOE2Yg5rZtRUX"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"zwrioR1ZxzNMJfJu"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"uBCYKuoPOveTOURN"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"ugXmwogKBovWTT2n"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"NnbabfmzUUvbqDJm"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"zGccBdupTfvgg9w6"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"yIKeqH70N89GqJNt"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"anEtz3yypRkz6ofM"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"rA6ZZOLMww5hiXlf"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"RWjlBND2qHCvv65W"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"ejzUVTfuXYOQ5Dc7"}
+{"$$deleted":true,"_id":"NnbabfmzUUvbqDJm"}
+{"$$deleted":true,"_id":"RWjlBND2qHCvv65W"}
+{"$$deleted":true,"_id":"anEtz3yypRkz6ofM"}
+{"$$deleted":true,"_id":"ejzUVTfuXYOQ5Dc7"}
+{"$$deleted":true,"_id":"gpfJOE2Yg5rZtRUX"}
+{"$$deleted":true,"_id":"oDDHThtUwMVwhcFU"}
+{"$$deleted":true,"_id":"rA6ZZOLMww5hiXlf"}
+{"$$deleted":true,"_id":"uBCYKuoPOveTOURN"}
+{"$$deleted":true,"_id":"ugXmwogKBovWTT2n"}
+{"$$deleted":true,"_id":"yIKeqH70N89GqJNt"}
+{"$$deleted":true,"_id":"zGccBdupTfvgg9w6"}
+{"$$deleted":true,"_id":"zwrioR1ZxzNMJfJu"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"sxS9ajAsgsc6XzKd"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"GmUJra7JAotATG7B"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"PQcCYYXtwd5oDPra"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"mSSV4JBN06Gz0JV1"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"sDlkDm6U6dyz61hq"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"rZEJ1Ik1PlIuxd8f"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"evBCkrjVEnn3MPE6"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"xhMuEaGp7MQCFb72"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"viGrfavC3lQV3fFh"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"SYvZQve8P1RE1xRo"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"zxNlMShLKBwYbfi9"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"rQMk4J5s9iLqz5LW"}
+{"$$deleted":true,"_id":"GmUJra7JAotATG7B"}
+{"$$deleted":true,"_id":"PQcCYYXtwd5oDPra"}
+{"$$deleted":true,"_id":"SYvZQve8P1RE1xRo"}
+{"$$deleted":true,"_id":"evBCkrjVEnn3MPE6"}
+{"$$deleted":true,"_id":"mSSV4JBN06Gz0JV1"}
+{"$$deleted":true,"_id":"rQMk4J5s9iLqz5LW"}
+{"$$deleted":true,"_id":"rZEJ1Ik1PlIuxd8f"}
+{"$$deleted":true,"_id":"sDlkDm6U6dyz61hq"}
+{"$$deleted":true,"_id":"sxS9ajAsgsc6XzKd"}
+{"$$deleted":true,"_id":"viGrfavC3lQV3fFh"}
+{"$$deleted":true,"_id":"xhMuEaGp7MQCFb72"}
+{"$$deleted":true,"_id":"zxNlMShLKBwYbfi9"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"24Hv2ckBlKHcWnTN"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"wv7fYYGYkz6qPHwt"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"syznrBdi42n0kzCs"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"BrPFPgEpCr3KstrM"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"BoWZuYEPj9eXJETB"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"1Ace8q67Ez09Oa6m"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"FvCZDTvBeyhSJ7Fg"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"x7f8ePfQr6lNMIa8"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"2YuIocJxsQuc2voE"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"PfV10O1QGvjs2I6s"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"py2pj1Bbza4uhJHx"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"xLBeEr7AmgfN7u8M"}
+{"$$deleted":true,"_id":"1Ace8q67Ez09Oa6m"}
+{"$$deleted":true,"_id":"24Hv2ckBlKHcWnTN"}
+{"$$deleted":true,"_id":"2YuIocJxsQuc2voE"}
+{"$$deleted":true,"_id":"BoWZuYEPj9eXJETB"}
+{"$$deleted":true,"_id":"BrPFPgEpCr3KstrM"}
+{"$$deleted":true,"_id":"FvCZDTvBeyhSJ7Fg"}
+{"$$deleted":true,"_id":"PfV10O1QGvjs2I6s"}
+{"$$deleted":true,"_id":"py2pj1Bbza4uhJHx"}
+{"$$deleted":true,"_id":"syznrBdi42n0kzCs"}
+{"$$deleted":true,"_id":"wv7fYYGYkz6qPHwt"}
+{"$$deleted":true,"_id":"x7f8ePfQr6lNMIa8"}
+{"$$deleted":true,"_id":"xLBeEr7AmgfN7u8M"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"cLhqYic1ekszNq0E"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"epf6piaZfDDoGTUL"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"oqs8DSGXx1SqihPv"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"owI5bQ38GmwsOXqi"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"Nk6YlESEY7SiMeW7"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"O4TXfPhylgqtMvVS"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"RGP42xRmMedh8hWj"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"Ueh92Cm9or8H0TqS"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"vrY7apPfPwoKXBc5"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"XVKQgJmhbz7Tege8"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"YpuIpndLkKxPdQIU"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"WptuN0PPeOSupmer"}
+{"$$deleted":true,"_id":"Nk6YlESEY7SiMeW7"}
+{"$$deleted":true,"_id":"O4TXfPhylgqtMvVS"}
+{"$$deleted":true,"_id":"RGP42xRmMedh8hWj"}
+{"$$deleted":true,"_id":"Ueh92Cm9or8H0TqS"}
+{"$$deleted":true,"_id":"WptuN0PPeOSupmer"}
+{"$$deleted":true,"_id":"XVKQgJmhbz7Tege8"}
+{"$$deleted":true,"_id":"YpuIpndLkKxPdQIU"}
+{"$$deleted":true,"_id":"cLhqYic1ekszNq0E"}
+{"$$deleted":true,"_id":"epf6piaZfDDoGTUL"}
+{"$$deleted":true,"_id":"oqs8DSGXx1SqihPv"}
+{"$$deleted":true,"_id":"owI5bQ38GmwsOXqi"}
+{"$$deleted":true,"_id":"vrY7apPfPwoKXBc5"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"FKxj2OJGg1eBENm2"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"K6AZsIEypBIZooXA"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"Db4WCqFyczOyEKkQ"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"cq7pTTmmaDHV42Bt"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"31YNcJZy75M8BrEO"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"Qvy1MgsWERRe9dlY"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"MdzM6G2f1oXdcFWs"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"sf05E3fpLrGGwWEL"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"HrSNAnX6n64sy2zS"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"OkhfHqEKm5AiAb10"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"0wc6fOBargAY3tfV"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"9EqV2tExMxkOSWmK"}
+{"country":"sadasdsa","both_sex":"34","male_rank":"34","male_number":"35","female_rank":"54","female_number":"34","ratio":"23","year":"2013","continent":"africa","_id":"PQKGwW4sHpNnsJPS"}
+{"$$deleted":true,"_id":"OkhfHqEKm5AiAb10"}
+{"$$deleted":true,"_id":"PQKGwW4sHpNnsJPS"}
+{"country":"spain","both_sex":"21","male_rank":"46","male_number":"12","female_rank":"6","female_number":"23","ratio":"54","year":"2013","continent":"europe","_id":"H82LZXzCVyGNZieF"}
+{"$$deleted":true,"_id":"0wc6fOBargAY3tfV"}
+{"$$deleted":true,"_id":"31YNcJZy75M8BrEO"}
+{"$$deleted":true,"_id":"9EqV2tExMxkOSWmK"}
+{"$$deleted":true,"_id":"Db4WCqFyczOyEKkQ"}
+{"$$deleted":true,"_id":"FKxj2OJGg1eBENm2"}
+{"$$deleted":true,"_id":"H82LZXzCVyGNZieF"}
+{"$$deleted":true,"_id":"HrSNAnX6n64sy2zS"}
+{"$$deleted":true,"_id":"K6AZsIEypBIZooXA"}
+{"$$deleted":true,"_id":"MdzM6G2f1oXdcFWs"}
+{"$$deleted":true,"_id":"Qvy1MgsWERRe9dlY"}
+{"$$deleted":true,"_id":"cq7pTTmmaDHV42Bt"}
+{"$$deleted":true,"_id":"sf05E3fpLrGGwWEL"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"LGaNNTKek3kXmYUn"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"Qobapdggc52ekndB"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"KOTXBEpRZwFhdBb7"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"Iez4253J1I00Ruoh"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"98I4hXCJchVa2ccE"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"9Yp9jR4lLxiuTusr"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"vaPDa4MxYZFTGPVx"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"JJ0osWLTPgwEWjS1"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"ea9AbSFZ205XLKtW"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"tReEK5Y2g4yXq7oZ"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"xUZUvCeKsaMxHKCo"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"RghzdXYhvb1d71oU"}
+{"$$deleted":true,"_id":"98I4hXCJchVa2ccE"}
+{"$$deleted":true,"_id":"9Yp9jR4lLxiuTusr"}
+{"$$deleted":true,"_id":"Iez4253J1I00Ruoh"}
+{"$$deleted":true,"_id":"JJ0osWLTPgwEWjS1"}
+{"$$deleted":true,"_id":"KOTXBEpRZwFhdBb7"}
+{"$$deleted":true,"_id":"LGaNNTKek3kXmYUn"}
+{"$$deleted":true,"_id":"Qobapdggc52ekndB"}
+{"$$deleted":true,"_id":"RghzdXYhvb1d71oU"}
+{"$$deleted":true,"_id":"ea9AbSFZ205XLKtW"}
+{"$$deleted":true,"_id":"tReEK5Y2g4yXq7oZ"}
+{"$$deleted":true,"_id":"vaPDa4MxYZFTGPVx"}
+{"$$deleted":true,"_id":"xUZUvCeKsaMxHKCo"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"OhikPs4YwW3baVi9"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"4odbfh06PWHOE4Ct"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"48OmBxl057DxkzhH"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"BezJCQV1eHiQoDt2"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"hgR4yGcHsjpsvGaL"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"zQr4HYN2V6vix7h6"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"12vgpw48RF2zveex"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"C8fyMx2gfJxTC8KZ"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"xRTb7gZ151rN3up3"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"SBI8aC20A7vfSNev"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"n13we3dOZ1rT79i1"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"MugojV305UiS8sa6"}
+{"$$deleted":true,"_id":"12vgpw48RF2zveex"}
+{"$$deleted":true,"_id":"48OmBxl057DxkzhH"}
+{"$$deleted":true,"_id":"4odbfh06PWHOE4Ct"}
+{"$$deleted":true,"_id":"BezJCQV1eHiQoDt2"}
+{"$$deleted":true,"_id":"C8fyMx2gfJxTC8KZ"}
+{"$$deleted":true,"_id":"MugojV305UiS8sa6"}
+{"$$deleted":true,"_id":"OhikPs4YwW3baVi9"}
+{"$$deleted":true,"_id":"SBI8aC20A7vfSNev"}
+{"$$deleted":true,"_id":"hgR4yGcHsjpsvGaL"}
+{"$$deleted":true,"_id":"n13we3dOZ1rT79i1"}
+{"$$deleted":true,"_id":"xRTb7gZ151rN3up3"}
+{"$$deleted":true,"_id":"zQr4HYN2V6vix7h6"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"PHxLAp06aa82nKLN"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"rf12sBltQNSd9LVl"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"VRS5wFFcnfD1CqwC"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"zs7aoSXK7Z0a01Ai"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"aQM4kSoQWtud06CQ"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"3azJ5DGDuZZyMWjv"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"LRCG5T4uwSL4Ija6"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"rE8GYGkbKXmuvZRa"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"0kx5BhQwj87UkvUP"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"sZRvw6xvgYaoU3u3"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"RcqYgADMEWD4YFbH"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"4Eu6E9DvwdGFGRmC"}
+{"$$deleted":true,"_id":"0kx5BhQwj87UkvUP"}
+{"$$deleted":true,"_id":"3azJ5DGDuZZyMWjv"}
+{"$$deleted":true,"_id":"4Eu6E9DvwdGFGRmC"}
+{"$$deleted":true,"_id":"LRCG5T4uwSL4Ija6"}
+{"$$deleted":true,"_id":"PHxLAp06aa82nKLN"}
+{"$$deleted":true,"_id":"RcqYgADMEWD4YFbH"}
+{"$$deleted":true,"_id":"VRS5wFFcnfD1CqwC"}
+{"$$deleted":true,"_id":"aQM4kSoQWtud06CQ"}
+{"$$deleted":true,"_id":"rE8GYGkbKXmuvZRa"}
+{"$$deleted":true,"_id":"rf12sBltQNSd9LVl"}
+{"$$deleted":true,"_id":"sZRvw6xvgYaoU3u3"}
+{"$$deleted":true,"_id":"zs7aoSXK7Z0a01Ai"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"e36sjFMbh8Owa0zp"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"Jh2SEMl1CC7UoLtz"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"TXk7ox139xlDzvQI"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"zxQ4ChXRquq5WGob"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"aGAx0CN3EXgyGIsM"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"AqZLDfLh1bBsEWgO"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"gkKAZiSpaZCV14DX"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"WlbZthUDQe3vjENW"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"nkR8TLo4ULE8wYgW"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"G4t4xgX8CRJnnRDS"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"H9Xlyt1f77OVH1Xc"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"eGQEnEGzGL9mUkGi"}
+{"$$deleted":true,"_id":"AqZLDfLh1bBsEWgO"}
+{"$$deleted":true,"_id":"G4t4xgX8CRJnnRDS"}
+{"$$deleted":true,"_id":"H9Xlyt1f77OVH1Xc"}
+{"$$deleted":true,"_id":"Jh2SEMl1CC7UoLtz"}
+{"$$deleted":true,"_id":"TXk7ox139xlDzvQI"}
+{"$$deleted":true,"_id":"WlbZthUDQe3vjENW"}
+{"$$deleted":true,"_id":"aGAx0CN3EXgyGIsM"}
+{"$$deleted":true,"_id":"e36sjFMbh8Owa0zp"}
+{"$$deleted":true,"_id":"eGQEnEGzGL9mUkGi"}
+{"$$deleted":true,"_id":"gkKAZiSpaZCV14DX"}
+{"$$deleted":true,"_id":"nkR8TLo4ULE8wYgW"}
+{"$$deleted":true,"_id":"zxQ4ChXRquq5WGob"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"EWk8Cr0dOxHMae0W"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"xFfSX0eNXzjJJOAG"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"Yapg2ySjigYjWbi6"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"NO8BvyCkdyBDLIex"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"cPIcxBNA4caNHCBD"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"vcOn3pxvxc9EezL8"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"rHCb6MpMVdt8Udwx"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"OUWAnIolInT0DADy"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"nY4lVfG1CTVcgIYr"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"YzjCf52IctmKiJS1"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"rpKJDgdvZUt1mR2T"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"iTxF4RcYFkO0rxks"}
+{"$$deleted":true,"_id":"EWk8Cr0dOxHMae0W"}
+{"$$deleted":true,"_id":"NO8BvyCkdyBDLIex"}
+{"$$deleted":true,"_id":"OUWAnIolInT0DADy"}
+{"$$deleted":true,"_id":"Yapg2ySjigYjWbi6"}
+{"$$deleted":true,"_id":"YzjCf52IctmKiJS1"}
+{"$$deleted":true,"_id":"cPIcxBNA4caNHCBD"}
+{"$$deleted":true,"_id":"iTxF4RcYFkO0rxks"}
+{"$$deleted":true,"_id":"nY4lVfG1CTVcgIYr"}
+{"$$deleted":true,"_id":"rHCb6MpMVdt8Udwx"}
+{"$$deleted":true,"_id":"rpKJDgdvZUt1mR2T"}
+{"$$deleted":true,"_id":"vcOn3pxvxc9EezL8"}
+{"$$deleted":true,"_id":"xFfSX0eNXzjJJOAG"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"I4ikTO6u3NRGz2fM"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"Ikkp8Bj9XKBCEt6i"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"QytKkd064w31bquI"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"U8eypLOh4Bpz4pzX"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"6tjWErEZcXalVKq7"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"6ckMPedLqMevppIt"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"4H6Rct0lYlXd8qU5"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"TilUxypIGyX2AJNU"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"v7sH69jwHP8dDda6"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"iSUUQH5wc8fJbCmH"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"iymaHjkUa0BmEfmx"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"3QanAhzhHib2L1Bi"}
+{"$$deleted":true,"_id":"3QanAhzhHib2L1Bi"}
+{"$$deleted":true,"_id":"4H6Rct0lYlXd8qU5"}
+{"$$deleted":true,"_id":"6ckMPedLqMevppIt"}
+{"$$deleted":true,"_id":"6tjWErEZcXalVKq7"}
+{"$$deleted":true,"_id":"I4ikTO6u3NRGz2fM"}
+{"$$deleted":true,"_id":"Ikkp8Bj9XKBCEt6i"}
+{"$$deleted":true,"_id":"QytKkd064w31bquI"}
+{"$$deleted":true,"_id":"TilUxypIGyX2AJNU"}
+{"$$deleted":true,"_id":"U8eypLOh4Bpz4pzX"}
+{"$$deleted":true,"_id":"iSUUQH5wc8fJbCmH"}
+{"$$deleted":true,"_id":"iymaHjkUa0BmEfmx"}
+{"$$deleted":true,"_id":"v7sH69jwHP8dDda6"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"eUFZiXQOv57S3NDM"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"q9QnUUwZm1fl0Gf3"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"8gk8ytxvegZq3fi1"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"gcXbrZvbdxvImcj3"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"3tJCcQTJKHyLc0f5"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"1wfIuz57Nda2D7LH"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"HWTQJoKhYMPefpxq"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"Mm8WvWFfcOtBUPyH"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"KiBdPcBvjKaMeDnA"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"XthKKG8k4ZNmgeOh"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"7Be26cScwULqDulm"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"PHJKccq7uIZyv6Cq"}
+{"$$deleted":true,"_id":"1wfIuz57Nda2D7LH"}
+{"$$deleted":true,"_id":"3tJCcQTJKHyLc0f5"}
+{"$$deleted":true,"_id":"7Be26cScwULqDulm"}
+{"$$deleted":true,"_id":"8gk8ytxvegZq3fi1"}
+{"$$deleted":true,"_id":"HWTQJoKhYMPefpxq"}
+{"$$deleted":true,"_id":"KiBdPcBvjKaMeDnA"}
+{"$$deleted":true,"_id":"Mm8WvWFfcOtBUPyH"}
+{"$$deleted":true,"_id":"PHJKccq7uIZyv6Cq"}
+{"$$deleted":true,"_id":"XthKKG8k4ZNmgeOh"}
+{"$$deleted":true,"_id":"eUFZiXQOv57S3NDM"}
+{"$$deleted":true,"_id":"gcXbrZvbdxvImcj3"}
+{"$$deleted":true,"_id":"q9QnUUwZm1fl0Gf3"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"zBMhFl5opM6Devzp"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"yfzfrxIquFiVTbHL"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"c5kO2cCqCWAcojL3"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"32nztZbjAfl6UJ4I"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"DmfiAAMEejan6DVq"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"4l2dEYtysvBvXwi6"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"89M5FDEt0fHk9n3F"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"Bf8R5FAr3cLfSvUQ"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"DYCdrxaTmZh4XLMt"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"hY3b208yJSXjMqfr"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"ECxdgGt5jm0uuTLr"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"eEozOjuHrw0aACre"}
+{"$$deleted":true,"_id":"32nztZbjAfl6UJ4I"}
+{"$$deleted":true,"_id":"4l2dEYtysvBvXwi6"}
+{"$$deleted":true,"_id":"89M5FDEt0fHk9n3F"}
+{"$$deleted":true,"_id":"Bf8R5FAr3cLfSvUQ"}
+{"$$deleted":true,"_id":"DYCdrxaTmZh4XLMt"}
+{"$$deleted":true,"_id":"DmfiAAMEejan6DVq"}
+{"$$deleted":true,"_id":"ECxdgGt5jm0uuTLr"}
+{"$$deleted":true,"_id":"c5kO2cCqCWAcojL3"}
+{"$$deleted":true,"_id":"eEozOjuHrw0aACre"}
+{"$$deleted":true,"_id":"hY3b208yJSXjMqfr"}
+{"$$deleted":true,"_id":"yfzfrxIquFiVTbHL"}
+{"$$deleted":true,"_id":"zBMhFl5opM6Devzp"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"WZSRRB4GyQRzqWzq"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"QLsUCw0WB48oJBDi"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"K0VGkhN4IwXilXOl"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"9IuxZQ2NKC7HjKzR"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"sxY8biodXDhqWOvV"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"s77jCiAeccb0HEDL"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"WMemf2idYzT68wgn"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"HWGwlHZe0pPQ6aOz"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"2TRLz79urjgLTpWg"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"HAIfp7knCs7JAwVt"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"Pfaw8I4uterAp9dK"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"ErJ5dkfllewjnsKy"}
+{"$$deleted":true,"_id":"2TRLz79urjgLTpWg"}
+{"$$deleted":true,"_id":"9IuxZQ2NKC7HjKzR"}
+{"$$deleted":true,"_id":"ErJ5dkfllewjnsKy"}
+{"$$deleted":true,"_id":"HAIfp7knCs7JAwVt"}
+{"$$deleted":true,"_id":"HWGwlHZe0pPQ6aOz"}
+{"$$deleted":true,"_id":"K0VGkhN4IwXilXOl"}
+{"$$deleted":true,"_id":"Pfaw8I4uterAp9dK"}
+{"$$deleted":true,"_id":"QLsUCw0WB48oJBDi"}
+{"$$deleted":true,"_id":"WMemf2idYzT68wgn"}
+{"$$deleted":true,"_id":"WZSRRB4GyQRzqWzq"}
+{"$$deleted":true,"_id":"s77jCiAeccb0HEDL"}
+{"$$deleted":true,"_id":"sxY8biodXDhqWOvV"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"Ee50YLUVJjGkn7ri"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"Kf5PsV11kA3m25BE"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"UhWPkGAzs6pjH8lP"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"9rbttzUpH16eW3TG"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"EWlsx6O5GgyREpVV"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"zJ1genQOKjIVeyWY"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"EQcceQCuHm55K3e8"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"za96WYvzTPX85sSa"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"zA6Rodp7PR1LkcKr"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"y8xl57a1abDfTQV3"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"V84Ec7FvjSBqMkyC"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"Y2rWLiAlSe1jgCqI"}
+{"$$deleted":true,"_id":"9rbttzUpH16eW3TG"}
+{"$$deleted":true,"_id":"EQcceQCuHm55K3e8"}
+{"$$deleted":true,"_id":"EWlsx6O5GgyREpVV"}
+{"$$deleted":true,"_id":"Ee50YLUVJjGkn7ri"}
+{"$$deleted":true,"_id":"Kf5PsV11kA3m25BE"}
+{"$$deleted":true,"_id":"UhWPkGAzs6pjH8lP"}
+{"$$deleted":true,"_id":"V84Ec7FvjSBqMkyC"}
+{"$$deleted":true,"_id":"Y2rWLiAlSe1jgCqI"}
+{"$$deleted":true,"_id":"y8xl57a1abDfTQV3"}
+{"$$deleted":true,"_id":"zA6Rodp7PR1LkcKr"}
+{"$$deleted":true,"_id":"zJ1genQOKjIVeyWY"}
+{"$$deleted":true,"_id":"za96WYvzTPX85sSa"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"d1pjQNTn896ZbMYb"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"1nD7Dn5gwQAd3YBU"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"GfORgb9eT1fJjmAo"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"r0AamUoEaAJI7pRb"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"3E08Zf8L0WnOgXQ9"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"cxntxhx4opkUb7tc"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"qjYcMnX1qzwOMN7i"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"ZUGNLna6kDGni5h4"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"Um4mohTtZSC9kln6"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"GjvFrUKuUFPYdWoX"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"zd6ATUDJLnTIhVnw"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"WTghLGEjvFBqmp4h"}
+{"$$deleted":true,"_id":"1nD7Dn5gwQAd3YBU"}
+{"$$deleted":true,"_id":"3E08Zf8L0WnOgXQ9"}
+{"$$deleted":true,"_id":"GfORgb9eT1fJjmAo"}
+{"$$deleted":true,"_id":"GjvFrUKuUFPYdWoX"}
+{"$$deleted":true,"_id":"Um4mohTtZSC9kln6"}
+{"$$deleted":true,"_id":"WTghLGEjvFBqmp4h"}
+{"$$deleted":true,"_id":"ZUGNLna6kDGni5h4"}
+{"$$deleted":true,"_id":"cxntxhx4opkUb7tc"}
+{"$$deleted":true,"_id":"d1pjQNTn896ZbMYb"}
+{"$$deleted":true,"_id":"qjYcMnX1qzwOMN7i"}
+{"$$deleted":true,"_id":"r0AamUoEaAJI7pRb"}
+{"$$deleted":true,"_id":"zd6ATUDJLnTIhVnw"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"SdcuIqYyjdBHORuF"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"V3lZb3P9vZCmbAB8"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"d4CGpGIAOLwUja33"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"7WnxnqPgdD96zKDJ"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"nlZIBsSD27cELdcG"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"KhiHhCQ1XK8M0yFc"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"NsCNIU86ugKrTNcL"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"UqWb7NwK64YeufNl"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"JFnNEIKMEBWXxK3V"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"10Gq61Ay9TravMDv"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"x1FmxHALc3N3hXvd"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"8xQ0scMi6crBYUmu"}
+{"$$deleted":true,"_id":"10Gq61Ay9TravMDv"}
+{"$$deleted":true,"_id":"7WnxnqPgdD96zKDJ"}
+{"$$deleted":true,"_id":"8xQ0scMi6crBYUmu"}
+{"$$deleted":true,"_id":"JFnNEIKMEBWXxK3V"}
+{"$$deleted":true,"_id":"KhiHhCQ1XK8M0yFc"}
+{"$$deleted":true,"_id":"NsCNIU86ugKrTNcL"}
+{"$$deleted":true,"_id":"SdcuIqYyjdBHORuF"}
+{"$$deleted":true,"_id":"UqWb7NwK64YeufNl"}
+{"$$deleted":true,"_id":"V3lZb3P9vZCmbAB8"}
+{"$$deleted":true,"_id":"d4CGpGIAOLwUja33"}
+{"$$deleted":true,"_id":"nlZIBsSD27cELdcG"}
+{"$$deleted":true,"_id":"x1FmxHALc3N3hXvd"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"uVXY6zGHNpTA4orb"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"tCtBQMcSxw4QUtIj"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"9EasZwpZc40xfhYz"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"dDsc9BPjw7LzM33p"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"Hpowo0YhhYbMzWkA"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"MSwaHHPRmxhVGKob"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"WWoIfgusZNFPaYtb"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"p6bOwePyouA8wO3P"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"J1aGipKwhVHOC1CY"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"I2qNQomI8R6ztxgA"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"2wBVyefvsVyhTZpl"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"19Vcs7jcSKgZp0bP"}
+{"$$deleted":true,"_id":"19Vcs7jcSKgZp0bP"}
+{"$$deleted":true,"_id":"2wBVyefvsVyhTZpl"}
+{"$$deleted":true,"_id":"9EasZwpZc40xfhYz"}
+{"$$deleted":true,"_id":"Hpowo0YhhYbMzWkA"}
+{"$$deleted":true,"_id":"I2qNQomI8R6ztxgA"}
+{"$$deleted":true,"_id":"J1aGipKwhVHOC1CY"}
+{"$$deleted":true,"_id":"MSwaHHPRmxhVGKob"}
+{"$$deleted":true,"_id":"WWoIfgusZNFPaYtb"}
+{"$$deleted":true,"_id":"dDsc9BPjw7LzM33p"}
+{"$$deleted":true,"_id":"p6bOwePyouA8wO3P"}
+{"$$deleted":true,"_id":"tCtBQMcSxw4QUtIj"}
+{"$$deleted":true,"_id":"uVXY6zGHNpTA4orb"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"pDHFyL4ZGa1njbDC"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"XbLJHRVNOTVbGai0"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"lmJQ7RH0iOt89Z9x"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"1sX1Xf6HXmq9Qd7h"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"C1797Hb4DEVJUYcb"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"BO5iu4nAYuy3Yy6y"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"RgQW5iVF58gHaCob"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"rSes40cYVUZW3n3j"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"pFxEdKlH2syZykm7"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"jjCUOWwziBl364r5"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"LGAxhclcMzaCOaEE"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"pbtBZD6VTVc0fQwV"}
+{"$$deleted":true,"_id":"1sX1Xf6HXmq9Qd7h"}
+{"$$deleted":true,"_id":"BO5iu4nAYuy3Yy6y"}
+{"$$deleted":true,"_id":"C1797Hb4DEVJUYcb"}
+{"$$deleted":true,"_id":"LGAxhclcMzaCOaEE"}
+{"$$deleted":true,"_id":"RgQW5iVF58gHaCob"}
+{"$$deleted":true,"_id":"XbLJHRVNOTVbGai0"}
+{"$$deleted":true,"_id":"jjCUOWwziBl364r5"}
+{"$$deleted":true,"_id":"lmJQ7RH0iOt89Z9x"}
+{"$$deleted":true,"_id":"pDHFyL4ZGa1njbDC"}
+{"$$deleted":true,"_id":"pFxEdKlH2syZykm7"}
+{"$$deleted":true,"_id":"pbtBZD6VTVc0fQwV"}
+{"$$deleted":true,"_id":"rSes40cYVUZW3n3j"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"QoKMQUixfOrsLjsB"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"tTtEqrJc348foLxs"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"HUVTF4IScmnNNdxo"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"rygB0nmUdqyloPOZ"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"jef8U0ePfjivkggk"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"JN2CKbw9KQMMlPXu"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"xkn3bc1w2WhN7D5G"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"FVrTW0Hup7kA2zNJ"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"DVTXAiMatIIqVsry"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"4WnNP8VWaaT4bDHc"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"blhRHOhbPWinW2vW"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"IqhQoVy0AaufSCOn"}
+{"$$deleted":true,"_id":"4WnNP8VWaaT4bDHc"}
+{"$$deleted":true,"_id":"DVTXAiMatIIqVsry"}
+{"$$deleted":true,"_id":"FVrTW0Hup7kA2zNJ"}
+{"$$deleted":true,"_id":"HUVTF4IScmnNNdxo"}
+{"$$deleted":true,"_id":"IqhQoVy0AaufSCOn"}
+{"$$deleted":true,"_id":"JN2CKbw9KQMMlPXu"}
+{"$$deleted":true,"_id":"QoKMQUixfOrsLjsB"}
+{"$$deleted":true,"_id":"blhRHOhbPWinW2vW"}
+{"$$deleted":true,"_id":"jef8U0ePfjivkggk"}
+{"$$deleted":true,"_id":"rygB0nmUdqyloPOZ"}
+{"$$deleted":true,"_id":"tTtEqrJc348foLxs"}
+{"$$deleted":true,"_id":"xkn3bc1w2WhN7D5G"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"BKzaCx1SH1MWsyH6"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"jiSzuDEHkwHDuLoN"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"OBAz6jqnpJdvxYId"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"j1klCWPleQtfzhou"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"vfCLtVUwvIwLwXnU"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"49AXGuJmf1yBJ6AQ"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"bzx0PdvfHR3TK1iE"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"iRx6VjTNPV0voHYO"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"cZDzWtpmPRziq7TA"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"ScAtW5kBypbBHIXU"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"rHouk9RHGhE9wda4"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"zq2d2B6nOV1rdvt6"}
+{"$$deleted":true,"_id":"49AXGuJmf1yBJ6AQ"}
+{"$$deleted":true,"_id":"BKzaCx1SH1MWsyH6"}
+{"$$deleted":true,"_id":"OBAz6jqnpJdvxYId"}
+{"$$deleted":true,"_id":"ScAtW5kBypbBHIXU"}
+{"$$deleted":true,"_id":"bzx0PdvfHR3TK1iE"}
+{"$$deleted":true,"_id":"cZDzWtpmPRziq7TA"}
+{"$$deleted":true,"_id":"iRx6VjTNPV0voHYO"}
+{"$$deleted":true,"_id":"j1klCWPleQtfzhou"}
+{"$$deleted":true,"_id":"jiSzuDEHkwHDuLoN"}
+{"$$deleted":true,"_id":"rHouk9RHGhE9wda4"}
+{"$$deleted":true,"_id":"vfCLtVUwvIwLwXnU"}
+{"$$deleted":true,"_id":"zq2d2B6nOV1rdvt6"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"ok6MZTyJKfvtVkFL"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"wXTyU0dnAOJ8YDKp"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"BfXm4OuDmPSF8Bip"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"NAEX6xSGrI0EmfQ2"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"R9ANVYKMHe71YbGW"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"tQbda94bkvNr8Fji"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"s0jBjWzAFyQQeqxZ"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"9pEJ31C1GVYybgbZ"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"zlHvGekFzl02pEdL"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"VEXfFssBhcaT6Qw2"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"DuVW2qgjSoQhbKKV"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"VwxUcN1mKxhUoUUi"}
+{"$$deleted":true,"_id":"9pEJ31C1GVYybgbZ"}
+{"$$deleted":true,"_id":"BfXm4OuDmPSF8Bip"}
+{"$$deleted":true,"_id":"DuVW2qgjSoQhbKKV"}
+{"$$deleted":true,"_id":"NAEX6xSGrI0EmfQ2"}
+{"$$deleted":true,"_id":"R9ANVYKMHe71YbGW"}
+{"$$deleted":true,"_id":"VEXfFssBhcaT6Qw2"}
+{"$$deleted":true,"_id":"VwxUcN1mKxhUoUUi"}
+{"$$deleted":true,"_id":"ok6MZTyJKfvtVkFL"}
+{"$$deleted":true,"_id":"s0jBjWzAFyQQeqxZ"}
+{"$$deleted":true,"_id":"tQbda94bkvNr8Fji"}
+{"$$deleted":true,"_id":"wXTyU0dnAOJ8YDKp"}
+{"$$deleted":true,"_id":"zlHvGekFzl02pEdL"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"OhKacyax1S63pz2t"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"jUXoaTJx7ywhB9au"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"KXX8iDLGbz9mvvuM"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"DOMVfko4VtLVfX35"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"NeHSNsgYRpvxTDFP"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"TawhmHTLJC3yexKj"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"2hBtjDiasX34cSif"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"L2HxYzUOWJDD4UEZ"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"Km2HeJrWM80vKmDz"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"0yylDtFltpbbrvoR"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"MJna15SIW1Pp5A4B"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"oJmHGhnIlQhGmVsy"}
+{"$$deleted":true,"_id":"0yylDtFltpbbrvoR"}
+{"$$deleted":true,"_id":"2hBtjDiasX34cSif"}
+{"$$deleted":true,"_id":"DOMVfko4VtLVfX35"}
+{"$$deleted":true,"_id":"KXX8iDLGbz9mvvuM"}
+{"$$deleted":true,"_id":"Km2HeJrWM80vKmDz"}
+{"$$deleted":true,"_id":"L2HxYzUOWJDD4UEZ"}
+{"$$deleted":true,"_id":"MJna15SIW1Pp5A4B"}
+{"$$deleted":true,"_id":"NeHSNsgYRpvxTDFP"}
+{"$$deleted":true,"_id":"OhKacyax1S63pz2t"}
+{"$$deleted":true,"_id":"TawhmHTLJC3yexKj"}
+{"$$deleted":true,"_id":"jUXoaTJx7ywhB9au"}
+{"$$deleted":true,"_id":"oJmHGhnIlQhGmVsy"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"qD33GBQ0Yw8N4OEU"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"HTXekcl5IZ65tLls"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"vn1cePDj3OQra1sq"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"kJHmgizU7WSrKWhN"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"meAcCRZE69ojLJ7n"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"9RNJIkTGTm5EYxUO"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"vInQckwY0GfSvpzL"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"g8TC9as8WavUg9ik"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"ab7weNh2Nkjm9F2N"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"G9qEpFby0nU3MNvJ"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"KZbcp1LbC1P1m1mI"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"JJu5e8iWMIO0tNjX"}
+{"$$deleted":true,"_id":"9RNJIkTGTm5EYxUO"}
+{"$$deleted":true,"_id":"G9qEpFby0nU3MNvJ"}
+{"$$deleted":true,"_id":"HTXekcl5IZ65tLls"}
+{"$$deleted":true,"_id":"JJu5e8iWMIO0tNjX"}
+{"$$deleted":true,"_id":"KZbcp1LbC1P1m1mI"}
+{"$$deleted":true,"_id":"ab7weNh2Nkjm9F2N"}
+{"$$deleted":true,"_id":"g8TC9as8WavUg9ik"}
+{"$$deleted":true,"_id":"kJHmgizU7WSrKWhN"}
+{"$$deleted":true,"_id":"meAcCRZE69ojLJ7n"}
+{"$$deleted":true,"_id":"qD33GBQ0Yw8N4OEU"}
+{"$$deleted":true,"_id":"vInQckwY0GfSvpzL"}
+{"$$deleted":true,"_id":"vn1cePDj3OQra1sq"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"Q6CwZ4NtffZNnamT"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"SNvKKlSn0EajGjsJ"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"cFdYFLRX70cASJVc"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"RXubIeZ8lGG5x2Ef"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"lDO3L9tsYDXl5QDG"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"TXNDcPM4ggMxbtxW"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"p1GDNrzOIiKDWDVp"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"F79dk04bqA3AMQcC"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"Zlw393e16Lc1DcOl"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"LcY13KcIdB0u4URq"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"G8SUGlDzgcGnIaas"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"WvOmCpd3WJNg0iUb"}
+{"$$deleted":true,"_id":"F79dk04bqA3AMQcC"}
+{"$$deleted":true,"_id":"G8SUGlDzgcGnIaas"}
+{"$$deleted":true,"_id":"LcY13KcIdB0u4URq"}
+{"$$deleted":true,"_id":"Q6CwZ4NtffZNnamT"}
+{"$$deleted":true,"_id":"RXubIeZ8lGG5x2Ef"}
+{"$$deleted":true,"_id":"SNvKKlSn0EajGjsJ"}
+{"$$deleted":true,"_id":"TXNDcPM4ggMxbtxW"}
+{"$$deleted":true,"_id":"WvOmCpd3WJNg0iUb"}
+{"$$deleted":true,"_id":"Zlw393e16Lc1DcOl"}
+{"$$deleted":true,"_id":"cFdYFLRX70cASJVc"}
+{"$$deleted":true,"_id":"lDO3L9tsYDXl5QDG"}
+{"$$deleted":true,"_id":"p1GDNrzOIiKDWDVp"}
+{"country":"guyana","both_sex":30.2,"male_rank":3,"male_number":46.6,"female_rank":5,"female_number":14.2,"ratio":3.28,"year":2013,"continent":"south america","_id":"dndiZNLrzfmVgkos"}
+{"country":"lesotho","both_sex":28.9,"male_rank":25,"male_number":22.7,"female_rank":1,"female_number":32.6,"ratio":0.7,"year":2013,"continent":"africa","_id":"CtlAxAuzLnzDIuhC"}
+{"country":"russia","both_sex":26.5,"male_rank":1,"male_number":48.3,"female_rank":31,"female_number":7.5,"ratio":6.44,"year":2013,"continent":"europe","_id":"ct1U0nrUg12ksYIp"}
+{"country":"lithuania","both_sex":25.7,"male_rank":2,"male_number":47.5,"female_rank":37,"female_number":6.7,"ratio":7.09,"year":2013,"continent":"europe","_id":"gBoRtDYeD1xQNqA6"}
+{"country":"suriname","both_sex":23.2,"male_rank":6,"male_number":36.1,"female_rank":13,"female_number":10.9,"ratio":3.31,"year":2013,"continent":"south america","_id":"TU2c0mJRDK6DNOJF"}
+{"country":"ivory coast","both_sex":23,"male_rank":8,"male_number":32,"female_rank":8,"female_number":13,"ratio":2.46,"year":2013,"continent":"africa","_id":"9rXyPCBGiJdMQJvi"}
+{"country":"kazakhstan","both_sex":22.8,"male_rank":4,"male_number":40.1,"female_rank":28,"female_number":7.7,"ratio":5.21,"year":2013,"continent":"asia","_id":"m796bwyCaZfHsPGt"}
+{"country":"equatorial guinea","both_sex":22,"male_rank":9,"male_number":31.3,"female_rank":15,"female_number":10.8,"ratio":2.9,"year":2013,"continent":"africa","_id":"pbsm6qubkOU7nRF5"}
+{"country":"belarus","both_sex":21.4,"male_rank":5,"male_number":39.3,"female_rank":45,"female_number":6.2,"ratio":6.34,"year":2013,"continent":"europe","_id":"wIylSeG2NGiKLDn0"}
+{"country":"south korea","both_sex":20.2,"male_rank":11,"male_number":29.6,"female_rank":11,"female_number":11.6,"ratio":2.55,"year":2013,"continent":"asia","_id":"Zxl56TfjgOsdv265"}
+{"country":"uganda","both_sex":20,"male_rank":37,"male_number":21.2,"female_rank":2,"female_number":18.7,"ratio":1.13,"year":2013,"continent":"africa","_id":"td1WAbenSO91D5mr"}
+{"country":"cameroon","both_sex":19.5,"male_rank":13,"male_number":26.9,"female_rank":10,"female_number":12.5,"ratio":2.15,"year":2013,"continent":"africa","_id":"HDCyuL5V92GuHdce"}
+{"$$deleted":true,"_id":"Zxl56TfjgOsdv265"}

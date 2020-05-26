@@ -25,13 +25,12 @@
  
         console.log("Fetching spc...");
         await fetch("/api/v2/spc-stats/loadInitialData");
-        const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+        const res = await fetch("/api/v2/spc-stats");
         population();
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
             spc = json;
-            totaldata=12;
             console.log("Received " + spc.length + " spc.");
         } else {
             errorMSG= res.status + ": " + res.statusText;
@@ -47,7 +46,6 @@
             population();
             visible = true;
             if (res.status==200) {
-                totaldata=0;
                 color = "success";
                 errorMSG = "Objetos borrados correctamente";
                 console.log("Deleted all spc.");            
@@ -67,7 +65,7 @@
     async function getSPC() {
  
         console.log("Fetching spc...");
-        const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+        const res = await fetch("/api/v2/spc-stats");
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
@@ -89,17 +87,6 @@
         const resData = await fetch("/api/v2/spc-stats");
         MyData = await resData.json();
         
-        /*const population = await fetch("https://data.opendatasoft.com/api/records/1.0/search/?dataset=worldcitiespop%40public&rows=200");
-        populationApi =  await population.json();
-        
-        var parse = populationApi.records;
-
-        //lista de paises de la api
-        for (let index = 0; index < parse.length; index++) {
-            listaapi.push(parse[index].fields.city);
-            
-        }*/
-
         //mi api
         var ambos = MyData.map((dato)=> dato.both_sex*1000000);
         var paises = MyData.map((dato)=> dato.country);
@@ -110,8 +97,6 @@
             listaDensidad.push(density[0].population);       
         }
 
-console.log(listaDensidad)
-console.log(ambos)
         Highcharts.chart('container', {
             chart: {
                 type: 'column'
@@ -163,9 +148,6 @@ console.log(ambos)
 </script>
 
 <svelte:head>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population}></script>
 </svelte:head>
 <main>
