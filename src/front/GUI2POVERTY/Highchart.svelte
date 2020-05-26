@@ -22,6 +22,15 @@
         return array;
     }
     
+    function eliminar(array, elemento) {
+        var resultado = []
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] !== elemento) {
+            resultado.push(array[i]);
+            }
+        }
+        return resultado;
+    }
 
     async function loadGraphs(){
 
@@ -35,10 +44,10 @@
         
        
         var year = MyData.map((dato)=> {   
-             return dato.year;
+             return parseInt(dato.year);
         });
 
-       year= year.filter(function(valor, indiceActual, arreglo) {
+       year= year.filter(function(valor, indiceActual, arreglo) { //quitar duplicados
             let indiceAlBuscar = arreglo.indexOf(valor);
             if (indiceActual === indiceAlBuscar) {
                 return true;
@@ -47,14 +56,74 @@
             }
         });
 
-        console.log(year);
-        var euro = MyData.filter(function (el) {
-                return el.continent == "europe";
-            }).map((dato)=> {     
-             return parseFloat(dato.under_320);
+        var cont = MyData.map((dato)=> {   
+             return dato.continent;
+        });
+
+       cont= cont.filter(function(valor, indiceActual, arreglo) { //quitar duplicados
+            let indiceAlBuscar = arreglo.indexOf(valor);
+            if (indiceActual === indiceAlBuscar) {
+                return true;
+            } else {
+                return false;
+            }
         });
         
+        // puntos de rellenos desde aqui
+        for(var a=0;a<cont.length;a++){
+            var Point = MyData.filter(function (el) {
+                return el.continent == cont[a]; //recogemos datos de cada continente
+            }).map((dato)=> {     
+             return {'continent':dato.continent,
+                        'year':parseInt(dato.year)};
+        });
+        /*var hash = {};
+        Point=Point.filter(function(current) {
+            var exists = !hash[current.year];
+            hash[current.year] = true;
+            if(!exists){
+               MyData
+               
+            }
+            return exists;
+        });
+*/
+        //console.log(Point);
+        var enc=false;
+        for(var i=0;i<year.length;i++){
+            enc=false;
+            for(var j=0;j<Point.length;j++){    //comprobamos si en cada año, el continente tiene un dato, sino lo rellena por defecto
+                if(year[i]==Point[j]['year']){ 
+                    enc=true;
+                    break;
+                }
+            }
+            
+         //   console.log(Point);
+            if(enc==false){
+                MyData.push({
+                            'country':"none",
+                            'under_190': 0,
+                            'under_320': 0,
+                            'under_550': 0,
+                            'year': year[i], //2014
+                            'continent':cont[a]
+                        });
+            }
+        }
+        }
+        //puntos de rellenos hasta aqui
+        
+        ordenarAsc(MyData,"year");
 
+       // console.log(MyData);
+        //recoger datos por continentes
+        var euro=MyData.filter(function (el) {
+                return el.continent == "europe";
+            }).map((dato)=> {     
+                return parseFloat(dato.under_320);
+        });
+        
         var asia = MyData.filter(function (el) {
                 return el.continent == "asia";
             }).map((dato)=> {     
@@ -84,7 +153,7 @@
             }).map((dato)=> {     
                 return parseFloat(dato.under_320);
         });
-       
+      // console.log(year);
         Highcharts.chart('container', {
             chart: {
                 type: 'spline'
