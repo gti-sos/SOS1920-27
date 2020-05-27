@@ -272,12 +272,66 @@
     //api sos1920-04 roads kilometros de carretera
     async function roads(){
         let dataRoads = []; //guardamos todos los datos de bicis de 2015
+        let dataSui = []
 
         const res2 = await fetch("http://sos1920-04.herokuapp.com/api/v1/roads/");
         dataRoads = await res2.json();
+        
+        
+        
+        var spainSui=spc.filter(x => x.country=="spain").map(x=>x.both_sex)[0]
+        //repito la variable para que se  me quede en una linea recta al menos
+        for (let index = 0; index < dataRoads.length; index++) {
+            dataSui.push(spainSui)    
+        }
 
-        //hacemos map para el carril metropolitano
-        dataRoads.map(dato=> dato.total)
+        var totalRoads = dataRoads.map(dato=> dato.total)//hacemos map para coger el total de distancia
+        var totalProvincia =dataRoads.map(dato=> dato.province)
+
+        var options = {
+                series: [{
+                name: 'Total de carreteras por provincia',
+                type: 'column',
+                data: totalRoads
+                }, {
+                name: 'Nº suicidios por cada 100.000 personas',
+                type: 'line',
+                data: dataSui
+                }],
+                chart: {
+                height: 350,
+                type: 'line',
+                },
+                stroke: {
+                width: [0, 4]
+                },
+                title: {
+                text: 'Relación total distancia de carreteras en España con el número de víctimas de suicidio',
+                align: 'center'
+                },
+                dataLabels: {
+                enabled: false,
+                enabledOnSeries: [1]
+                },
+                labels:totalProvincia,
+                xaxis: {
+                type: 'category'
+                },
+                yaxis: [{
+                title: {
+                    text: 'Total de carreteras por provincia',
+                },
+                
+                }, {
+                opposite: true,
+                title: {
+                    text: 'Nº suicidios por cada 100.000 personas'
+                }
+            }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart3"), options);
+        chart.render();
     } 
     // on:load={roads}
 
@@ -392,13 +446,13 @@
             var chart = new ApexCharts(document.querySelector("#chart2"), options);
             chart.render();
 
-    }// on:load={covid}
-
+    }
+// on:load={covid}
 
 </script>
 
 <svelte:head>
-    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population} on:load={covid}></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={covid} on:load={vehiculos} on:load={roads} on:load={population}></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </svelte:head>
 <main>
@@ -426,21 +480,29 @@
     <!--api externa covid--> 
     <h3 style="text-align: center;">Integración API externa 2</h3>
     <div id="chart2">
-    </div>
+    </div> <br>
 
     <!--api nando-->
     <h3 style="text-align: center;">Integración API sos1920-09</h3>
     <div id="chart">
-    </div>
+    </div> <br>
+
+    <!--api dani-->
+    <h3 style="text-align: center;">Integración API sos1920-04</h3>
+    <div id="chart3">
+    </div> <br>
 
     <!--api dani-->
     <h3 style="text-align: center;">Integración API sos1920-02</h3>
-    <div id="chart3">
-    </div>
-
+    <div id="chart4">
+    </div> <br>
+    
 </main>
 
 <style>
+    h3{
+        text-decoration: underline;
+    }
 .highcharts-figure, .highcharts-data-table table {
     min-width: 310px; 
     max-width: 800px;
@@ -477,5 +539,10 @@
 }
 .highcharts-data-table tr:hover {
     background: #f1f7ff;
+}
+
+div{
+    border: 2px solid LightGray;
+  border-radius: 5px;
 }
 </style>

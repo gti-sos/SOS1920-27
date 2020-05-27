@@ -8832,7 +8832,7 @@ var app = (function () {
     const { console: console_1$5, document: document_1$1 } = globals;
     const file$c = "src\\front\\GUI1SPC\\Integrations.svelte";
 
-    // (407:4) <Button outline color="success" on:click="{getSPCLoadInitialData}">
+    // (461:4) <Button outline color="success" on:click="{getSPCLoadInitialData}">
     function create_default_slot_1$5(ctx) {
     	let t;
 
@@ -8852,14 +8852,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$5.name,
     		type: "slot",
-    		source: "(407:4) <Button outline color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
+    		source: "(461:4) <Button outline color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (410:4) <Button outline color="danger" on:click="{deleteSPCALL}">
+    // (464:4) <Button outline color="danger" on:click="{deleteSPCALL}">
     function create_default_slot$6(ctx) {
     	let t;
 
@@ -8879,7 +8879,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$6.name,
     		type: "slot",
-    		source: "(410:4) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
+    		source: "(464:4) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
     		ctx
     	});
 
@@ -8913,13 +8913,25 @@ var app = (function () {
     	let t12;
     	let div1;
     	let t13;
+    	let br3;
+    	let t14;
     	let h32;
-    	let t15;
-    	let div2;
     	let t16;
-    	let h33;
+    	let div2;
+    	let t17;
+    	let br4;
     	let t18;
+    	let h33;
+    	let t20;
     	let div3;
+    	let t21;
+    	let br5;
+    	let t22;
+    	let h34;
+    	let t24;
+    	let div4;
+    	let t25;
+    	let br6;
     	let current;
     	let dispose;
 
@@ -8978,45 +8990,75 @@ var app = (function () {
     			t12 = space();
     			div1 = element("div");
     			t13 = space();
+    			br3 = element("br");
+    			t14 = space();
     			h32 = element("h3");
     			h32.textContent = "Integración API sos1920-09";
-    			t15 = space();
-    			div2 = element("div");
     			t16 = space();
-    			h33 = element("h3");
-    			h33.textContent = "Integración API sos1920-02";
+    			div2 = element("div");
+    			t17 = space();
+    			br4 = element("br");
     			t18 = space();
+    			h33 = element("h3");
+    			h33.textContent = "Integración API sos1920-04";
+    			t20 = space();
     			div3 = element("div");
+    			t21 = space();
+    			br5 = element("br");
+    			t22 = space();
+    			h34 = element("h3");
+    			h34.textContent = "Integración API sos1920-02";
+    			t24 = space();
+    			div4 = element("div");
+    			t25 = space();
+    			br6 = element("br");
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$c, 400, 4, 12916);
+    			add_location(script0, file$c, 454, 4, 14755);
     			if (script1.src !== (script1_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$c, 401, 4, 13035);
-    			add_location(h1, file$c, 405, 4, 13130);
-    			add_location(br0, file$c, 412, 4, 13381);
-    			add_location(br1, file$c, 412, 8, 13385);
+    			add_location(script1, file$c, 455, 4, 14910);
+    			add_location(h1, file$c, 459, 4, 15005);
+    			add_location(br0, file$c, 466, 4, 15256);
+    			add_location(br1, file$c, 466, 8, 15260);
     			set_style(h30, "text-align", "center");
-    			add_location(h30, file$c, 415, 4, 13430);
+    			attr_dev(h30, "class", "svelte-j6634a");
+    			add_location(h30, file$c, 469, 4, 15305);
     			attr_dev(div0, "id", "container");
-    			attr_dev(div0, "class", "svelte-11guutf");
-    			add_location(div0, file$c, 417, 8, 13542);
+    			attr_dev(div0, "class", "svelte-j6634a");
+    			add_location(div0, file$c, 471, 8, 15417);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$c, 418, 8, 13578);
-    			attr_dev(figure, "class", "highcharts-figure svelte-11guutf");
-    			add_location(figure, file$c, 416, 4, 13498);
-    			add_location(br2, file$c, 423, 4, 13663);
+    			add_location(p, file$c, 472, 8, 15453);
+    			attr_dev(figure, "class", "highcharts-figure svelte-j6634a");
+    			add_location(figure, file$c, 470, 4, 15373);
+    			add_location(br2, file$c, 477, 4, 15538);
     			set_style(h31, "text-align", "center");
-    			add_location(h31, file$c, 426, 4, 13706);
+    			attr_dev(h31, "class", "svelte-j6634a");
+    			add_location(h31, file$c, 480, 4, 15581);
     			attr_dev(div1, "id", "chart2");
-    			add_location(div1, file$c, 427, 4, 13774);
+    			attr_dev(div1, "class", "svelte-j6634a");
+    			add_location(div1, file$c, 481, 4, 15649);
+    			add_location(br3, file$c, 482, 11, 15679);
     			set_style(h32, "text-align", "center");
-    			add_location(h32, file$c, 431, 4, 13833);
+    			attr_dev(h32, "class", "svelte-j6634a");
+    			add_location(h32, file$c, 485, 4, 15713);
     			attr_dev(div2, "id", "chart");
-    			add_location(div2, file$c, 432, 4, 13902);
+    			attr_dev(div2, "class", "svelte-j6634a");
+    			add_location(div2, file$c, 486, 4, 15782);
+    			add_location(br4, file$c, 487, 11, 15811);
     			set_style(h33, "text-align", "center");
-    			add_location(h33, file$c, 436, 4, 13959);
+    			attr_dev(h33, "class", "svelte-j6634a");
+    			add_location(h33, file$c, 490, 4, 15844);
     			attr_dev(div3, "id", "chart3");
-    			add_location(div3, file$c, 437, 4, 14028);
-    			add_location(main, file$c, 403, 0, 13116);
+    			attr_dev(div3, "class", "svelte-j6634a");
+    			add_location(div3, file$c, 491, 4, 15913);
+    			add_location(br5, file$c, 492, 11, 15943);
+    			set_style(h34, "text-align", "center");
+    			attr_dev(h34, "class", "svelte-j6634a");
+    			add_location(h34, file$c, 495, 4, 15976);
+    			attr_dev(div4, "id", "chart4");
+    			attr_dev(div4, "class", "svelte-j6634a");
+    			add_location(div4, file$c, 496, 4, 16045);
+    			add_location(br6, file$c, 497, 11, 16075);
+    			add_location(main, file$c, 457, 0, 14991);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9048,32 +9090,46 @@ var app = (function () {
     			append_dev(main, t12);
     			append_dev(main, div1);
     			append_dev(main, t13);
+    			append_dev(main, br3);
+    			append_dev(main, t14);
     			append_dev(main, h32);
-    			append_dev(main, t15);
-    			append_dev(main, div2);
     			append_dev(main, t16);
-    			append_dev(main, h33);
+    			append_dev(main, div2);
+    			append_dev(main, t17);
+    			append_dev(main, br4);
     			append_dev(main, t18);
+    			append_dev(main, h33);
+    			append_dev(main, t20);
     			append_dev(main, div3);
+    			append_dev(main, t21);
+    			append_dev(main, br5);
+    			append_dev(main, t22);
+    			append_dev(main, h34);
+    			append_dev(main, t24);
+    			append_dev(main, div4);
+    			append_dev(main, t25);
+    			append_dev(main, br6);
     			current = true;
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(script0, "load", population, false, false, false),
-    				listen_dev(script0, "load", /*covid*/ ctx[2], false, false, false)
+    				listen_dev(script0, "load", /*covid*/ ctx[4], false, false, false),
+    				listen_dev(script0, "load", /*vehiculos*/ ctx[2], false, false, false),
+    				listen_dev(script0, "load", /*roads*/ ctx[3], false, false, false),
+    				listen_dev(script0, "load", population, false, false, false)
     			];
     		},
     		p: function update(ctx, [dirty]) {
     			const button0_changes = {};
 
-    			if (dirty & /*$$scope*/ 256) {
+    			if (dirty & /*$$scope*/ 512) {
     				button0_changes.$$scope = { dirty, ctx };
     			}
 
     			button0.$set(button0_changes);
     			const button1_changes = {};
 
-    			if (dirty & /*$$scope*/ 256) {
+    			if (dirty & /*$$scope*/ 512) {
     				button1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9168,16 +9224,6 @@ var app = (function () {
     			}
     		]
     	});
-    }
-
-    //api sos1920-04 roads kilometros de carretera
-    async function roads() {
-    	let dataRoads = []; //guardamos todos los datos de bicis de 2015
-    	const res2 = await fetch("http://sos1920-04.herokuapp.com/api/v1/roads/");
-    	dataRoads = await res2.json();
-
-    	//hacemos map para el carril metropolitano
-    	dataRoads.map(dato => dato.total);
     }
 
     // on:load={roads}
@@ -9361,6 +9407,63 @@ var app = (function () {
     		var espa = spc.filter(dato => dato.country == "spain");
     	} // on:load={hospitalized}
 
+    	//api sos1920-04 roads kilometros de carretera
+    	async function roads() {
+    		let dataRoads = []; //guardamos todos los datos de bicis de 2015
+    		let dataSui = [];
+    		const res2 = await fetch("http://sos1920-04.herokuapp.com/api/v1/roads/");
+    		dataRoads = await res2.json();
+    		var spainSui = spc.filter(x => x.country == "spain").map(x => x.both_sex)[0];
+
+    		//repito la variable para que se  me quede en una linea recta al menos
+    		for (let index = 0; index < dataRoads.length; index++) {
+    			dataSui.push(spainSui);
+    		}
+
+    		var totalRoads = dataRoads.map(dato => dato.total); //hacemos map para coger el total de distancia
+    		var totalProvincia = dataRoads.map(dato => dato.province);
+
+    		var options = {
+    			series: [
+    				{
+    					name: "Total de carreteras por provincia",
+    					type: "column",
+    					data: totalRoads
+    				},
+    				{
+    					name: "Nº suicidios por cada 100.000 personas",
+    					type: "line",
+    					data: dataSui
+    				}
+    			],
+    			chart: { height: 350, type: "line" },
+    			stroke: { width: [0, 4] },
+    			title: {
+    				text: "Relación total distancia de carreteras en España con el número de víctimas de suicidio",
+    				align: "center"
+    			},
+    			dataLabels: { enabled: false, enabledOnSeries: [1] },
+    			labels: totalProvincia,
+    			xaxis: { type: "category" },
+    			yaxis: [
+    				{
+    					title: {
+    						text: "Total de carreteras por provincia"
+    					}
+    				},
+    				{
+    					opposite: true,
+    					title: {
+    						text: "Nº suicidios por cada 100.000 personas"
+    					}
+    				}
+    			]
+    		};
+
+    		var chart = new Et(document.querySelector("#chart3"), options);
+    		chart.render();
+    	}
+
     	// on:load={hospitalized}
     	//api sos1920-02 covid
     	async function covid() {
@@ -9440,7 +9543,7 @@ var app = (function () {
 
     		var chart = new Et(document.querySelector("#chart2"), options);
     		chart.render();
-    	} // on:load={covid}
+    	}
 
     	const writable_props = [];
 
@@ -9481,7 +9584,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [getSPCLoadInitialData, deleteSPCALL, covid];
+    	return [getSPCLoadInitialData, deleteSPCALL, vehiculos, roads, covid];
     }
 
     class Integrations extends SvelteComponentDev {
