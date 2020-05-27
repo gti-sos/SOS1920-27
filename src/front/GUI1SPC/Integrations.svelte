@@ -28,8 +28,8 @@
      async function getSPCLoadInitialData() {
  
         console.log("Fetching spc...");
-        await fetch("/api/v2/spc-stats/loadInitialData");
-        const res = await fetch("/api/v2/spc-stats");
+        await fetch("/api/v3/spc-stats/loadInitialData");
+        const res = await fetch("/api/v3/spc-stats");
         population();
         if (res.ok) {
             console.log("Ok:");
@@ -44,7 +44,7 @@
 
     //DELETE ALL
     async function deleteSPCALL() {
-        const res = await fetch("/api/v2/spc-stats/", {
+        const res = await fetch("/api/v3/spc-stats/", {
             method: "DELETE"
         }).then(function (res) {
             population();
@@ -69,7 +69,7 @@
     async function getSPC() {
  
         console.log("Fetching spc...");
-        const res = await fetch("/api/v2/spc-stats");
+        const res = await fetch("/api/v3/spc-stats");
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
@@ -90,7 +90,7 @@
         let listaDensidad = [];//lista de densidad de la api
         let listaapi = [];//lista de paises de la api
 
-        const resData = await fetch("/api/v2/spc-stats");
+        const resData = await fetch("/api/v3/spc-stats");
         MyData = await resData.json();
         
         //mi api
@@ -180,7 +180,7 @@
             var resVehicu =  await vehiculosApi.json();
             listaVehiculos.push(resVehicu[0]['pev-stock']);       
 
-            const suicidiosApi = await fetch("/api/v2/spc-stats?country=" + intersecMinus[index]);
+            const suicidiosApi = await fetch("/api/v3/spc-stats?country=" + intersecMinus[index]);
             var resSuci =  await suicidiosApi.json();
             listaSuicidios.push(resSuci[0].both_sex*100000);       
         }
@@ -294,7 +294,7 @@
     } 
     // on:load={hospitalized}
 
-    //api sos1920-02 bicis
+    //api sos1920-02 covid
     async function covid(){
         let dataCovid = []; //guardamos todos los datos de bicis de 2015
         let miApi = [];
@@ -303,7 +303,7 @@
         const res = await fetch("https://akashraj.tech/corona/api");
         dataCovid = await res.json();
         
-        const res2 = await fetch("https://sos1920-27.herokuapp.com/api/v2/spc-stats");
+        const res2 = await fetch("https://sos1920-27.herokuapp.com/api/v3/spc-stats");
         miApi = await res2.json();
         
         var paises =  dataCovid.countries_stat

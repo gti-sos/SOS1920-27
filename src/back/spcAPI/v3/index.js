@@ -7,7 +7,7 @@ module.exports = function (app) {
 
     const dbFileName = path.join(__dirname, "spc.db");
 
-    const BASE_API_URL="/api/v2";
+    const BASE_API_URL="/api/v3";
 
     const db = new dataStore({
                 filename: dbFileName,
@@ -146,6 +146,36 @@ module.exports = function (app) {
 				ratio: 2.15,
 				year: 2013,
 				continent: "africa"	
+			},{
+				country: "sweden",
+				both_sex: 11.7,
+				male_rank: 69,
+				male_number: 15.8,
+				female_rank: 32,
+				female_number: 7.4,
+				ratio: 2.14,
+				year: 2013,
+				continent: "europe"
+			},{
+				country: "germany",
+				both_sex: 9.1,
+				male_rank: 90,
+				male_number: 13.6,
+				female_rank: 7,
+				female_number: 4.8,
+				ratio: 2.83,
+				year: 2013,
+				continent: "europe"
+			},{
+				country: "canada",
+				both_sex: 10.4,
+				male_rank: 72,
+				male_number: 15.1,
+				female_rank: 59,
+				female_number: 5.8,
+				ratio: 2.6,
+				year: 2013,
+				continent: "north america"
 			}
 		];
 
@@ -492,6 +522,6 @@ module.exports = function (app) {
 		res.sendStatus(405,"Method Not Allowed");
 	});
 	
-	console.log("SPC v2 OK");
+	console.log("SPC v3 OK");
     
 };

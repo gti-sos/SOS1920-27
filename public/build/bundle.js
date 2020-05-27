@@ -6674,7 +6674,7 @@ var app = (function () {
 
     function instance$a($$self, $$props, $$invalidate) {
     	let isOpen = false;
-    	let busquedas = "/api/v2/spc-stats?";
+    	let busquedas = "/api/v3/spc-stats?";
 
     	//ALERTAS
     	let visible = false;
@@ -6714,7 +6714,7 @@ var app = (function () {
     	//GET
     	async function getSPC() {
     		console.log("Fetching spc...");
-    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+    		const res = await fetch("/api/v3/spc-stats?limit=10&offset=1");
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -6730,8 +6730,8 @@ var app = (function () {
     	//GET INITIALDATA
     	async function getSPCLoadInitialData() {
     		console.log("Fetching spc...");
-    		await fetch("/api/v2/spc-stats/loadInitialData");
-    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+    		await fetch("/api/v3/spc-stats/loadInitialData");
+    		const res = await fetch("/api/v3/spc-stats?limit=10&offset=1");
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -6749,7 +6749,7 @@ var app = (function () {
     	async function insertSPC() {
     		console.log("Inserting spc..." + JSON.stringify(newSpc));
 
-    		const res = await fetch("/api/v2/spc-stats", {
+    		const res = await fetch("/api/v3/spc-stats", {
     			method: "POST",
     			body: JSON.stringify(newSpc),
     			headers: { "Content-Type": "application/json" }
@@ -6779,7 +6779,7 @@ var app = (function () {
 
     	//DELETE SPECIFIC
     	async function deleteSPC(name, year) {
-    		const res = await fetch("/api/v2/spc-stats/" + name + "/" + year, { method: "DELETE" }).then(function (res) {
+    		const res = await fetch("/api/v3/spc-stats/" + name + "/" + year, { method: "DELETE" }).then(function (res) {
     			$$invalidate(1, visible = true);
     			getSPC();
 
@@ -6802,7 +6802,7 @@ var app = (function () {
 
     	//DELETE ALL
     	async function deleteSPCALL() {
-    		const res = await fetch("/api/v2/spc-stats/", { method: "DELETE" }).then(function (res) {
+    		const res = await fetch("/api/v3/spc-stats/", { method: "DELETE" }).then(function (res) {
     			getSPC();
     			$$invalidate(1, visible = true);
 
@@ -6864,7 +6864,7 @@ var app = (function () {
     		}
 
     		const res = await fetch(busquedas);
-    		busquedas = "/api/v2/spc-stats?";
+    		busquedas = "/api/v3/spc-stats?";
 
     		$$invalidate(4, searchSpc = {
     			country: null,
@@ -6903,7 +6903,7 @@ var app = (function () {
     		}
 
     		console.log("Charging page " + page);
-    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=" + page);
+    		const res = await fetch("/api/v3/spc-stats?limit=10&offset=" + page);
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -6923,7 +6923,7 @@ var app = (function () {
     		} else page = 1;
 
     		console.log("Charging page " + page);
-    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=" + page);
+    		const res = await fetch("/api/v3/spc-stats?limit=10&offset=" + page);
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -7343,7 +7343,7 @@ var app = (function () {
 
     async function loadGraphs() {
     	let MyData = [];
-    	const resData = await fetch("/api/v2/spc-stats");
+    	const resData = await fetch("/api/v3/spc-stats");
     	MyData = await resData.json();
 
     	var euro = MyData.filter(function (el) {
@@ -7454,8 +7454,8 @@ var app = (function () {
     	//GET INITIALDATA
     	async function getSPCLoadInitialData() {
     		console.log("Fetching spc...");
-    		await fetch("/api/v2/spc-stats/loadInitialData");
-    		const res = await fetch("/api/v2/spc-stats");
+    		await fetch("/api/v3/spc-stats/loadInitialData");
+    		const res = await fetch("/api/v3/spc-stats");
     		loadGraphs();
 
     		if (res.ok) {
@@ -7471,7 +7471,7 @@ var app = (function () {
 
     	//DELETE ALL
     	async function deleteSPCALL() {
-    		const res = await fetch("/api/v2/spc-stats/", { method: "DELETE" }).then(function (res) {
+    		const res = await fetch("/api/v3/spc-stats/", { method: "DELETE" }).then(function (res) {
     			loadGraphs();
     			visible = true;
 
@@ -7494,7 +7494,7 @@ var app = (function () {
     	//GET
     	async function getSPC() {
     		console.log("Fetching spc...");
-    		const res = await fetch("/api/v2/spc-stats");
+    		const res = await fetch("/api/v3/spc-stats");
     		loadGraphs();
 
     		if (res.ok) {
@@ -7756,8 +7756,8 @@ var app = (function () {
     	//GET INITIALDATA
     	async function getSPCLoadInitialData() {
     		console.log("Fetching spc...");
-    		await fetch("/api/v2/spc-stats/loadInitialData");
-    		const res = await fetch("/api/v2/spc-stats");
+    		await fetch("/api/v3/spc-stats/loadInitialData");
+    		const res = await fetch("/api/v3/spc-stats");
     		loadGraphs();
 
     		if (res.ok) {
@@ -7773,7 +7773,7 @@ var app = (function () {
 
     	//DELETE ALL
     	async function deleteSPCALL() {
-    		const res = await fetch("/api/v2/spc-stats/", { method: "DELETE" }).then(function (res) {
+    		const res = await fetch("/api/v3/spc-stats/", { method: "DELETE" }).then(function (res) {
     			loadGraphs();
     			visible = true;
 
@@ -7796,7 +7796,7 @@ var app = (function () {
     	//GET
     	async function getSPC() {
     		console.log("Fetching spc...");
-    		const res = await fetch("/api/v2/spc-stats");
+    		const res = await fetch("/api/v3/spc-stats");
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -7811,7 +7811,7 @@ var app = (function () {
 
     	async function loadGraphs() {
     		let MyData = [];
-    		const resData = await fetch("/api/v2/spc-stats");
+    		const resData = await fetch("/api/v3/spc-stats");
     		MyData = spc;
     		var mujeres = MyData.map(dato => dato.female_number);
     		var hombres = MyData.map(dato => dato.male_number);
@@ -8619,7 +8619,7 @@ var app = (function () {
     	//GET
     	async function getSPC1() {
     		console.log("Fetching spc...");
-    		const res = await fetch("/api/v2/spc-stats/" + params.suicideCountry + "/" + params.suicideYear);
+    		const res = await fetch("/api/v3/spc-stats/" + params.suicideCountry + "/" + params.suicideYear);
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -8645,7 +8645,7 @@ var app = (function () {
     	async function updateSpc() {
     		console.log("Updating spc..." + JSON.stringify(params.suicideCountry));
 
-    		const res = await fetch("/api/v2/spc-stats/" + params.suicideCountry + "/" + params.suicideYear, {
+    		const res = await fetch("/api/v3/spc-stats/" + params.suicideCountry + "/" + params.suicideYear, {
     			method: "PUT",
     			body: JSON.stringify({
     				country: updatedCountry,
@@ -9126,7 +9126,7 @@ var app = (function () {
     async function population() {
     	let MyData = [];
     	let listaDensidad = []; //lista de densidad de la api
-    	const resData = await fetch("/api/v2/spc-stats");
+    	const resData = await fetch("/api/v3/spc-stats");
     	MyData = await resData.json();
 
     	//mi api
@@ -9201,8 +9201,8 @@ var app = (function () {
     	//GET INITIALDATA
     	async function getSPCLoadInitialData() {
     		console.log("Fetching spc...");
-    		await fetch("/api/v2/spc-stats/loadInitialData");
-    		const res = await fetch("/api/v2/spc-stats");
+    		await fetch("/api/v3/spc-stats/loadInitialData");
+    		const res = await fetch("/api/v3/spc-stats");
     		population();
 
     		if (res.ok) {
@@ -9218,7 +9218,7 @@ var app = (function () {
 
     	//DELETE ALL
     	async function deleteSPCALL() {
-    		const res = await fetch("/api/v2/spc-stats/", { method: "DELETE" }).then(function (res) {
+    		const res = await fetch("/api/v3/spc-stats/", { method: "DELETE" }).then(function (res) {
     			population();
     			visible = true;
 
@@ -9241,7 +9241,7 @@ var app = (function () {
     	//GET
     	async function getSPC() {
     		console.log("Fetching spc...");
-    		const res = await fetch("/api/v2/spc-stats");
+    		const res = await fetch("/api/v3/spc-stats");
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -9285,7 +9285,7 @@ var app = (function () {
     			const vehiculosApi = await fetch("https://sos1920-09.herokuapp.com/api/v3/plugin-vehicles-stats?country=" + intersecMayus[index]);
     			var resVehicu = await vehiculosApi.json();
     			listaVehiculos.push(resVehicu[0]["pev-stock"]);
-    			const suicidiosApi = await fetch("/api/v2/spc-stats?country=" + intersecMinus[index]);
+    			const suicidiosApi = await fetch("/api/v3/spc-stats?country=" + intersecMinus[index]);
     			var resSuci = await suicidiosApi.json();
     			listaSuicidios.push(resSuci[0].both_sex * 100000);
     		}
@@ -9362,14 +9362,14 @@ var app = (function () {
     	} // on:load={hospitalized}
 
     	// on:load={hospitalized}
-    	//api sos1920-02 bicis
+    	//api sos1920-02 covid
     	async function covid() {
     		let dataCovid = []; //guardamos todos los datos de bicis de 2015
     		let miApi = [];
     		let miApiMayus = [];
     		const res = await fetch("https://akashraj.tech/corona/api");
     		dataCovid = await res.json();
-    		const res2 = await fetch("https://sos1920-27.herokuapp.com/api/v2/spc-stats");
+    		const res2 = await fetch("https://sos1920-27.herokuapp.com/api/v3/spc-stats");
     		miApi = await res2.json();
     		var paises = dataCovid.countries_stat;
     		var nombrePai = paises.map(x => x.country_name);
