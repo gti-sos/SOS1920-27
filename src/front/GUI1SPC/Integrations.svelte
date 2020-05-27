@@ -9,10 +9,6 @@
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
     import { Alert } from "sveltestrap";
-
-    //ALERTAS
-    let visible = false;
-    let color = "danger";
     
     let spc = [];
     import ApexCharts from 'apexcharts';
@@ -86,69 +82,6 @@
         }
     }
     
-    //INSERT EJEMPLOS PARA APIS
-    async function insertExamplesSPC() {
-        var newExamples = [{
-            country: "sweden",
-            both_sex: "11.7",
-            male_rank: "69",
-            male_number: "15.8",
-            female_rank: "32",
-            female_number: "7.4",
-            ratio: "2.14",
-            year: "2013",
-            continent: "europe"
-        },{
-            country: "germany",
-            both_sex: "9.1",
-            male_rank: "90",
-            male_number: "13.6",
-            female_rank: "79",
-            female_number: "4.8",
-            ratio: "2.83",
-            year: "2013",
-            continent: "europe"
-        },{
-            country: "canada",
-            both_sex: "10.4",
-            male_rank: "72",
-            male_number: "15.1",
-            female_rank: "59",
-            female_number: "5.8",
-            ratio: "2.6",
-            year: "2013",
-            continent: "north america"
-        }
-        ];
-
-        for (let index = 0; index < newExamples.length; index++) {
-            console.log("Inserting examples spc..." + JSON.stringify(newExamples[index]));
-            const res = await fetch("/api/v2/spc-stats", {
-                method: "POST",
-                body: JSON.stringify(newExamples[index]),
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            }).then(function (res) {
-                
-                visible = true;
-                if (res.status==200) {
-                    console.log("Inserted "+newExamples[index].country +" spc.");            
-                }else if (res.status== 400) {
-                    console.log("BAD REQUEST");            
-                }else if (res.status==409) {
-                    console.log("This data already exits");            
-                } else {
-                    console.log("BAD REQUEST");
-                }
-            });
-
-        }
-    
-    }
-
-
-
 
     //api externa 1
     async function population() {
@@ -321,6 +254,7 @@
         var chart = new ApexCharts(document.querySelector("#chart"), options);
         chart.render();
     }
+    // on:load={vehiculos}
       
     //api sos1920-02 bicis
     async function bicis(){
@@ -331,10 +265,9 @@
 
         //hacemos map para el carril metropolitano
         dataBicis.map(dato=> dato.metropolitan).reduce((a, b) => a + b, 0)
-        console.log(dataBicis)
 
         var espa = spc.filter(dato => dato.country=="spain")
-    }
+    }// on:load={hospitalized}
 
     //api sos1920-04 roads kilometros de carretera
     async function roads(){
@@ -345,14 +278,128 @@
 
         //hacemos map para el carril metropolitano
         dataRoads.map(dato=> dato.total)
-        console.log(dataRoads)
-    }
+    } 
+    // on:load={roads}
+
+        //api sos1920-04 roads kilometros de carretera
+        async function hospitalized(){
+        let dataHospi = []; //guardamos todos los datos de bicis de 2015
+
+        const res3 = await fetch("https://sos1920-06.herokuapp.com/api/v1/not-hospitalized-stats?year=2014");
+        dataHospi = await res3.json();
+
+        //hacemos map para el carril metropolitano
+        dataHospi.map(dato=>  dato.total).reduce((a, b) => a + b, 0)
+        console.log(dataHospi)
+    } 
+    // on:load={hospitalized}
+
+    //api sos1920-02 bicis
+    async function covid(){
+        let dataCovid = []; //guardamos todos los datos de bicis de 2015
+        let miApi = [];
+        let miApiMayus = []
+
+        const res = await fetch("https://akashraj.tech/corona/api");
+        dataCovid = await res.json();
+        
+        const res2 = await fetch("https://sos1920-27.herokuapp.com/api/v2/spc-stats");
+        miApi = await res2.json();
+        
+        var paises =  dataCovid.countries_stat
+        var nombrePai = paises.map(x => x.country_name)
+        
+        for (let index = 0; index < miApi.length; index++) {
+            miApiMayus.push(minusMayus(miApi[index].country, true))
+            
+        }
+        var inters = nombrePai.filter(x => miApiMayus.includes(x));
+
+        var estadisdeath = [] //deaths_per_1m_population
+        var estadiscases = [] //total_cases_per_1m_population
+
+        var suici = []
+        for (let index = 0; index < paises.length; index++) {
+                if (inters.includes(paises[index].country_name)) {
+                    var punto1= paises[index].deaths_per_1m_population.replace(",", ".")
+                    estadisdeath.push(punto1)
+                    for (let j = 0; j < miApi.length; j++) { //para no hacer mil llamadas a mi api
+                        if (miApi[j].country==minusMayus(paises[index].country_name)) {
+                            suici.push(miApi[j].both_sex)
+                        }
+                        
+                    }
+            }
+            
+        }
+
+        var options = {
+            series: [{
+            name: 'Muertes por cada millón de habitantes',
+            data: estadisdeath
+            }, {
+            name: 'Suicidios por cada 100.000 habitantes',
+            data: suici
+            }],
+            chart: {
+            type: 'bar',
+            height: 350,
+            stacked: true,
+            },
+            plotOptions: {
+            bar: {
+                horizontal: true,
+            },
+            },
+            stroke: {
+            width: 1,
+            colors: ['#fff']
+            },
+            title: {
+            text: 'Casos de suicidio frente a coronavirus',
+            align: 'center'
+            },
+            xaxis: {
+            categories: inters,
+            labels: {
+                formatter: function (val) {
+                return val
+                }
+            }
+            },
+            yaxis: {
+            title: {
+                text: undefined
+            },
+            },
+            tooltip: {
+            y: {
+                formatter: function (val) {
+                return val
+                }
+            }
+            },
+            fill: {
+            opacity: 1
+            },
+            legend: {
+            position: 'top',
+            horizontalAlign: 'left',
+            offsetX: 40
+            }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#chart2"), options);
+            chart.render();
+
+    }// on:load={covid}
+
+
 </script>
 
 <svelte:head>
-    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population} on:load={vehiculos} on:load={roads}></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population} on:load={covid}></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-
 </svelte:head>
 <main>
 
@@ -363,7 +410,6 @@
     <Button outline color="danger" on:click="{deleteSPCALL}">
         Borrar todo
     </Button>
-    <Button outline  color="primary" on:click={insertExamplesSPC}>Insertar ejemplos</Button>
     <br><br>
 
     <!--api externa densidad-->
@@ -377,8 +423,10 @@
 
     <br>
 
-    <!--api externa densidad--> 
+    <!--api externa covid--> 
     <h3 style="text-align: center;">Integración API externa 2</h3>
+    <div id="chart2">
+    </div>
 
     <!--api nando-->
     <h3 style="text-align: center;">Integración API sos1920-09</h3>
@@ -386,11 +434,9 @@
     </div>
 
     <!--api dani-->
-    <h3 style="text-align: center;">Integración API sos1920-09</h3>
-    <div id="chart2">
+    <h3 style="text-align: center;">Integración API sos1920-02</h3>
+    <div id="chart3">
     </div>
-
-
 
 </main>
 
