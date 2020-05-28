@@ -21,16 +21,7 @@
         }
         return array;
     }
-    
-    function eliminar(array, elemento) {
-        var resultado = []
-        for (var i = 0; i < array.length; i++) {
-            if (array[i] !== elemento) {
-            resultado.push(array[i]);
-            }
-        }
-        return resultado;
-    }
+
 
     async function loadGraphs(){
 
