@@ -16742,6 +16742,14 @@ var app = (function () {
     	let h32;
     	let t10;
     	let a2;
+    	let t12;
+    	let h33;
+    	let t13;
+    	let a3;
+    	let t15;
+    	let h34;
+    	let t16;
+    	let a4;
     	let dispose;
 
     	const block = {
@@ -16770,6 +16778,16 @@ var app = (function () {
     			t10 = text("API sos1920-09 - ");
     			a2 = element("a");
     			a2.textContent = "Link EndPoint";
+    			t12 = space();
+    			h33 = element("h3");
+    			t13 = text("API sos1920-12 - ");
+    			a3 = element("a");
+    			a3.textContent = "Link EndPoint";
+    			t15 = space();
+    			h34 = element("h3");
+    			t16 = text("API sos1920-04 - ");
+    			a4 = element("a");
+    			a4.textContent = "Link EndPoint";
     			if (script0.src !== (script0_src_value = "https://code.jquery.com/jquery-3.1.1.min.js")) attr_dev(script0, "src", script0_src_value);
     			add_location(script0, file$l, 198, 4, 5106);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script1, "src", script1_src_value);
@@ -16790,6 +16808,12 @@ var app = (function () {
     			attr_dev(a2, "href", "http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats");
     			add_location(a2, file$l, 213, 21, 5839);
     			add_location(h32, file$l, 213, 0, 5818);
+    			attr_dev(a3, "href", "https://sos1920-12.herokuapp.com/api/v2/overdose-deaths");
+    			add_location(a3, file$l, 215, 21, 5959);
+    			add_location(h33, file$l, 215, 0, 5938);
+    			attr_dev(a4, "href", "https://sos1920-04.herokuapp.com/api/v1/vehicles");
+    			add_location(a4, file$l, 217, 21, 6072);
+    			add_location(h34, file$l, 217, 0, 6051);
     			add_location(main, file$l, 202, 0, 5293);
     		},
     		l: function claim(nodes) {
@@ -16816,6 +16840,14 @@ var app = (function () {
     			append_dev(main, h32);
     			append_dev(h32, t10);
     			append_dev(h32, a2);
+    			append_dev(main, t12);
+    			append_dev(main, h33);
+    			append_dev(h33, t13);
+    			append_dev(h33, a3);
+    			append_dev(main, t15);
+    			append_dev(main, h34);
+    			append_dev(h34, t16);
+    			append_dev(h34, a4);
     			if (remount) dispose();
     			dispose = listen_dev(script1, "load", coronavirus, false, false, false);
     		},
