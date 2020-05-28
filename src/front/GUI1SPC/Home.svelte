@@ -13,7 +13,7 @@
     //Para busquedas
     import { UncontrolledCollapse, Collapse, CardBody, Card } from "sveltestrap";
     let isOpen = false;
-    let busquedas = "/api/v2/spc-stats?";
+    let busquedas = "/api/v3/spc-stats?";
 
     //ALERTAS
     let visible = false;
@@ -53,7 +53,7 @@
     async function getSPC() {
  
         console.log("Fetching spc...");
-        const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+        const res = await fetch("/api/v3/spc-stats?limit=10&offset=1");
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
@@ -70,8 +70,8 @@
     async function getSPCLoadInitialData() {
  
         console.log("Fetching spc...");
-        await fetch("/api/v2/spc-stats/loadInitialData");
-        const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+        await fetch("/api/v3/spc-stats/loadInitialData");
+        const res = await fetch("/api/v3/spc-stats?limit=10&offset=1");
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
@@ -88,7 +88,7 @@
     async function insertSPC() {
  
         console.log("Inserting spc..." + JSON.stringify(newSpc));
-        const res = await fetch("/api/v2/spc-stats", {
+        const res = await fetch("/api/v3/spc-stats", {
             method: "POST",
             body: JSON.stringify(newSpc),
             headers: {
@@ -101,7 +101,6 @@
                 totaldata++;
                 color = "success";
                 errorMSG = newSpc.country +" creado correctamente";
-                loadGraphs();
                 console.log("Inserted "+newSpc.country +" spc.");            
             }else if (res.status== 400) {
                 color = "danger";
@@ -122,7 +121,7 @@
 
     //DELETE SPECIFIC
     async function deleteSPC(name, year) {
-        const res = await fetch("/api/v2/spc-stats/" + name + "/" + year, {
+        const res = await fetch("/api/v3/spc-stats/" + name + "/" + year, {
             method: "DELETE"
         }).then(function (res) {
             visible = true;
@@ -146,7 +145,7 @@
 
     //DELETE ALL
     async function deleteSPCALL() {
-        const res = await fetch("/api/v2/spc-stats/", {
+        const res = await fetch("/api/v3/spc-stats/", {
             method: "DELETE"
         }).then(function (res) {
             getSPC();
@@ -195,7 +194,7 @@
         }
 
         const res = await fetch(busquedas);
-        busquedas="/api/v2/spc-stats?";
+        busquedas="/api/v3/spc-stats?";
         searchSpc = {
             country: null,
             both_sex: null,
@@ -231,7 +230,7 @@
             page+=10
         }
         console.log("Charging page " +page);
-        const res = await fetch("/api/v2/spc-stats?limit=10&offset="+page);
+        const res = await fetch("/api/v3/spc-stats?limit=10&offset="+page);
 
         if (res.ok) {
             console.log("Ok:");
@@ -251,7 +250,7 @@
             page-=10; 
         } else page = 1
         console.log("Charging page " +page);
-        const res = await fetch("/api/v2/spc-stats?limit=10&offset="+page);
+        const res = await fetch("/api/v3/spc-stats?limit=10&offset="+page);
 
         if (res.ok) {
             console.log("Ok:");
@@ -271,7 +270,6 @@
 
 <main>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> <!--este es de apexcharts-->
-    <script src="apex.js"></script>
     <h1>SPC Manager</h1>
     
 

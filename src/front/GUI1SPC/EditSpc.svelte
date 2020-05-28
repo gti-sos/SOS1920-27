@@ -32,7 +32,7 @@
     async function getSPC1() {
  
         console.log("Fetching spc...");
-        const res = await fetch("/api/v2/spc-stats/"+params.suicideCountry+"/"+params.suicideYear);
+        const res = await fetch("/api/v3/spc-stats/"+params.suicideCountry+"/"+params.suicideYear);
 
         if (res.ok) {
             console.log("Ok:");
@@ -60,7 +60,7 @@
      async function updateSpc() {
         console.log("Updating spc..." + JSON.stringify(params.suicideCountry));
  
-        const res = await fetch("/api/v2/spc-stats/"+params.suicideCountry+"/"+params.suicideYear, {
+        const res = await fetch("/api/v3/spc-stats/"+params.suicideCountry+"/"+params.suicideYear, {
             method: "PUT",
             body: JSON.stringify({
                 country: updatedCountry,

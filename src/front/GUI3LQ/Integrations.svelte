@@ -78,6 +78,7 @@
         });
     }
 
+<<<<<<< HEAD
  //   async function
 
 
@@ -89,3 +90,9 @@
     pene
     
 </main>
+=======
+</script>
+
+<main>pene
+</main> 
+>>>>>>> adb45f1ebd6b880ea671cc5db7143153ef864abb

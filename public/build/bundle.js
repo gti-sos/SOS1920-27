@@ -5116,7 +5116,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (278:6) <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
+    // (276:6) <Button color="primary" on:click={() => (isOpen = !isOpen)} class="mb-3">
     function create_default_slot_11(ctx) {
     	let t;
 
@@ -5136,14 +5136,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(278:6) <Button color=\\\"primary\\\" on:click={() => (isOpen = !isOpen)} class=\\\"mb-3\\\">",
+    		source: "(276:6) <Button color=\\\"primary\\\" on:click={() => (isOpen = !isOpen)} class=\\\"mb-3\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (295:25) <Button outline  color="primary" on:click={searchSPC}>
+    // (293:25) <Button outline  color="primary" on:click={searchSPC}>
     function create_default_slot_10(ctx) {
     	let t;
 
@@ -5163,14 +5163,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(295:25) <Button outline  color=\\\"primary\\\" on:click={searchSPC}>",
+    		source: "(293:25) <Button outline  color=\\\"primary\\\" on:click={searchSPC}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (283:8) <Table bordered responsive>
+    // (281:8) <Table bordered responsive>
     function create_default_slot_9(ctx) {
     	let tbody;
     	let tr;
@@ -5251,35 +5251,35 @@ var app = (function () {
     			td9 = element("td");
     			create_component(button.$$.fragment);
     			attr_dev(input0, "placeholder", "País");
-    			add_location(input0, file$8, 285, 24, 8965);
-    			add_location(td0, file$8, 285, 20, 8961);
+    			add_location(input0, file$8, 283, 24, 8897);
+    			add_location(td0, file$8, 283, 20, 8893);
     			attr_dev(input1, "placeholder", "Ambos sexos");
-    			add_location(input1, file$8, 286, 24, 9055);
-    			add_location(td1, file$8, 286, 20, 9051);
+    			add_location(input1, file$8, 284, 24, 8987);
+    			add_location(td1, file$8, 284, 20, 8983);
     			attr_dev(input2, "placeholder", "Ranking hombres");
-    			add_location(input2, file$8, 287, 24, 9153);
-    			add_location(td2, file$8, 287, 20, 9149);
+    			add_location(input2, file$8, 285, 24, 9085);
+    			add_location(td2, file$8, 285, 20, 9081);
     			attr_dev(input3, "placeholder", "Número hombres (en miles)");
-    			add_location(input3, file$8, 288, 24, 9256);
-    			add_location(td3, file$8, 288, 20, 9252);
+    			add_location(input3, file$8, 286, 24, 9188);
+    			add_location(td3, file$8, 286, 20, 9184);
     			attr_dev(input4, "placeholder", "Ranking mujeres");
-    			add_location(input4, file$8, 289, 24, 9371);
-    			add_location(td4, file$8, 289, 20, 9367);
+    			add_location(input4, file$8, 287, 24, 9303);
+    			add_location(td4, file$8, 287, 20, 9299);
     			attr_dev(input5, "placeholder", "Número mujeres (en miles)");
-    			add_location(input5, file$8, 290, 24, 9476);
-    			add_location(td5, file$8, 290, 20, 9472);
+    			add_location(input5, file$8, 288, 24, 9408);
+    			add_location(td5, file$8, 288, 20, 9404);
     			attr_dev(input6, "placeholder", "Ratio");
-    			add_location(input6, file$8, 291, 24, 9593);
-    			add_location(td6, file$8, 291, 20, 9589);
+    			add_location(input6, file$8, 289, 24, 9525);
+    			add_location(td6, file$8, 289, 20, 9521);
     			attr_dev(input7, "placeholder", "Año");
-    			add_location(input7, file$8, 292, 24, 9682);
-    			add_location(td7, file$8, 292, 20, 9678);
+    			add_location(input7, file$8, 290, 24, 9614);
+    			add_location(td7, file$8, 290, 20, 9610);
     			attr_dev(input8, "placeholder", "Continente");
-    			add_location(input8, file$8, 293, 24, 9768);
-    			add_location(td8, file$8, 293, 20, 9764);
-    			add_location(td9, file$8, 294, 20, 9862);
-    			add_location(tr, file$8, 284, 16, 8935);
-    			add_location(tbody, file$8, 283, 12, 8910);
+    			add_location(input8, file$8, 291, 24, 9700);
+    			add_location(td8, file$8, 291, 20, 9696);
+    			add_location(td9, file$8, 292, 20, 9794);
+    			add_location(tr, file$8, 282, 16, 8867);
+    			add_location(tbody, file$8, 281, 12, 8842);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, tbody, anchor);
@@ -5402,14 +5402,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(283:8) <Table bordered responsive>",
+    		source: "(281:8) <Table bordered responsive>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (282:6) <Collapse {isOpen}>
+    // (280:6) <Collapse {isOpen}>
     function create_default_slot_8(ctx) {
     	let current;
 
@@ -5458,7 +5458,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(282:6) <Collapse {isOpen}>",
+    		source: "(280:6) <Collapse {isOpen}>",
     		ctx
     	});
 
@@ -5487,7 +5487,7 @@ var app = (function () {
     	return block;
     }
 
-    // (303:4) {:then spc}
+    // (301:4) {:then spc}
     function create_then_block(ctx) {
     	let t0;
     	let t1;
@@ -5676,14 +5676,14 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(303:4) {:then spc}",
+    		source: "(301:4) {:then spc}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (305:8) {#if errorMSG}
+    // (303:8) {#if errorMSG}
     function create_if_block$5(ctx) {
     	let t;
 
@@ -5706,14 +5706,14 @@ var app = (function () {
     		block,
     		id: create_if_block$5.name,
     		type: "if",
-    		source: "(305:8) {#if errorMSG}",
+    		source: "(303:8) {#if errorMSG}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (304:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
+    // (302:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>
     function create_default_slot_7(ctx) {
     	let if_block_anchor;
     	let if_block = /*errorMSG*/ ctx[5] && create_if_block$5(ctx);
@@ -5751,14 +5751,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(304:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>",
+    		source: "(302:4) <Alert color={color} isOpen={visible} toggle={() => (visible = false)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (335:25) <Button outline  color="primary" on:click={insertSPC}>
+    // (333:25) <Button outline  color="primary" on:click={insertSPC}>
     function create_default_slot_6(ctx) {
     	let t;
 
@@ -5778,14 +5778,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(335:25) <Button outline  color=\\\"primary\\\" on:click={insertSPC}>",
+    		source: "(333:25) <Button outline  color=\\\"primary\\\" on:click={insertSPC}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (349:28) <Button outline color="danger" on:click="{deleteSPC(suicide.country, suicide.year)}">
+    // (347:28) <Button outline color="danger" on:click="{deleteSPC(suicide.country, suicide.year)}">
     function create_default_slot_5(ctx) {
     	let t;
 
@@ -5805,14 +5805,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(349:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPC(suicide.country, suicide.year)}\\\">",
+    		source: "(347:28) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPC(suicide.country, suicide.year)}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (338:16) {#each spc as suicide}
+    // (336:16) {#each spc as suicide}
     function create_each_block(ctx) {
     	let tr;
     	let td0;
@@ -5906,18 +5906,18 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t18 = space();
     			attr_dev(a, "href", a_href_value = "#/spc-stats/" + /*suicide*/ ctx[38].country + "/" + /*suicide*/ ctx[38].year);
-    			add_location(a, file$8, 339, 28, 11655);
-    			add_location(td0, file$8, 339, 24, 11651);
-    			add_location(td1, file$8, 340, 24, 11762);
-    			add_location(td2, file$8, 341, 24, 11815);
-    			add_location(td3, file$8, 342, 24, 11869);
-    			add_location(td4, file$8, 343, 24, 11925);
-    			add_location(td5, file$8, 344, 24, 11981);
-    			add_location(td6, file$8, 345, 24, 12039);
-    			add_location(td7, file$8, 346, 24, 12089);
-    			add_location(td8, file$8, 347, 24, 12138);
-    			add_location(td9, file$8, 348, 24, 12192);
-    			add_location(tr, file$8, 338, 20, 11621);
+    			add_location(a, file$8, 337, 28, 11587);
+    			add_location(td0, file$8, 337, 24, 11583);
+    			add_location(td1, file$8, 338, 24, 11694);
+    			add_location(td2, file$8, 339, 24, 11747);
+    			add_location(td3, file$8, 340, 24, 11801);
+    			add_location(td4, file$8, 341, 24, 11857);
+    			add_location(td5, file$8, 342, 24, 11913);
+    			add_location(td6, file$8, 343, 24, 11971);
+    			add_location(td7, file$8, 344, 24, 12021);
+    			add_location(td8, file$8, 345, 24, 12070);
+    			add_location(td9, file$8, 346, 24, 12124);
+    			add_location(tr, file$8, 336, 20, 11553);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -5997,14 +5997,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(338:16) {#each spc as suicide}",
+    		source: "(336:16) {#each spc as suicide}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (309:8) <Table bordered responsive>
+    // (307:8) <Table bordered responsive>
     function create_default_slot_4(ctx) {
     	let thead;
     	let tr0;
@@ -6156,39 +6156,39 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$8, 311, 20, 10343);
-    			add_location(th1, file$8, 312, 20, 10381);
-    			add_location(th2, file$8, 313, 20, 10420);
-    			add_location(th3, file$8, 314, 20, 10460);
-    			add_location(th4, file$8, 315, 20, 10502);
-    			add_location(th5, file$8, 316, 20, 10544);
-    			add_location(th6, file$8, 317, 20, 10588);
-    			add_location(th7, file$8, 318, 20, 10624);
-    			add_location(th8, file$8, 319, 20, 10659);
-    			add_location(th9, file$8, 320, 20, 10699);
-    			add_location(tr0, file$8, 310, 16, 10317);
-    			add_location(thead, file$8, 309, 12, 10292);
-    			add_location(input0, file$8, 325, 24, 10829);
-    			add_location(td0, file$8, 325, 20, 10825);
-    			add_location(input1, file$8, 326, 24, 10897);
-    			add_location(td1, file$8, 326, 20, 10893);
-    			add_location(input2, file$8, 327, 24, 10966);
-    			add_location(td2, file$8, 327, 20, 10962);
-    			add_location(input3, file$8, 328, 24, 11036);
-    			add_location(td3, file$8, 328, 20, 11032);
-    			add_location(input4, file$8, 329, 24, 11108);
-    			add_location(td4, file$8, 329, 20, 11104);
-    			add_location(input5, file$8, 330, 24, 11180);
-    			add_location(td5, file$8, 330, 20, 11176);
-    			add_location(input6, file$8, 331, 24, 11254);
-    			add_location(td6, file$8, 331, 20, 11250);
-    			add_location(input7, file$8, 332, 24, 11320);
-    			add_location(td7, file$8, 332, 20, 11316);
-    			add_location(input8, file$8, 333, 24, 11385);
-    			add_location(td8, file$8, 333, 20, 11381);
-    			add_location(td9, file$8, 334, 20, 11451);
-    			add_location(tr1, file$8, 324, 16, 10799);
-    			add_location(tbody, file$8, 323, 12, 10774);
+    			add_location(th0, file$8, 309, 20, 10275);
+    			add_location(th1, file$8, 310, 20, 10313);
+    			add_location(th2, file$8, 311, 20, 10352);
+    			add_location(th3, file$8, 312, 20, 10392);
+    			add_location(th4, file$8, 313, 20, 10434);
+    			add_location(th5, file$8, 314, 20, 10476);
+    			add_location(th6, file$8, 315, 20, 10520);
+    			add_location(th7, file$8, 316, 20, 10556);
+    			add_location(th8, file$8, 317, 20, 10591);
+    			add_location(th9, file$8, 318, 20, 10631);
+    			add_location(tr0, file$8, 308, 16, 10249);
+    			add_location(thead, file$8, 307, 12, 10224);
+    			add_location(input0, file$8, 323, 24, 10761);
+    			add_location(td0, file$8, 323, 20, 10757);
+    			add_location(input1, file$8, 324, 24, 10829);
+    			add_location(td1, file$8, 324, 20, 10825);
+    			add_location(input2, file$8, 325, 24, 10898);
+    			add_location(td2, file$8, 325, 20, 10894);
+    			add_location(input3, file$8, 326, 24, 10968);
+    			add_location(td3, file$8, 326, 20, 10964);
+    			add_location(input4, file$8, 327, 24, 11040);
+    			add_location(td4, file$8, 327, 20, 11036);
+    			add_location(input5, file$8, 328, 24, 11112);
+    			add_location(td5, file$8, 328, 20, 11108);
+    			add_location(input6, file$8, 329, 24, 11186);
+    			add_location(td6, file$8, 329, 20, 11182);
+    			add_location(input7, file$8, 330, 24, 11252);
+    			add_location(td7, file$8, 330, 20, 11248);
+    			add_location(input8, file$8, 331, 24, 11317);
+    			add_location(td8, file$8, 331, 20, 11313);
+    			add_location(td9, file$8, 332, 20, 11383);
+    			add_location(tr1, file$8, 322, 16, 10731);
+    			add_location(tbody, file$8, 321, 12, 10706);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, thead, anchor);
@@ -6381,14 +6381,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(309:8) <Table bordered responsive>",
+    		source: "(307:8) <Table bordered responsive>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (354:10) <Button color="success" on:click="{getSPCLoadInitialData}">
+    // (352:10) <Button color="success" on:click="{getSPCLoadInitialData}">
     function create_default_slot_3$1(ctx) {
     	let t;
 
@@ -6408,14 +6408,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$1.name,
     		type: "slot",
-    		source: "(354:10) <Button color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
+    		source: "(352:10) <Button color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (357:8) <Button color="danger" on:click="{deleteSPCALL}">
+    // (355:8) <Button color="danger" on:click="{deleteSPCALL}">
     function create_default_slot_2$1(ctx) {
     	let t;
 
@@ -6435,14 +6435,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(357:8) <Button color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
+    		source: "(355:8) <Button color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (360:8) <Button outline color="primary" on:click="{getPreviewPage}">
+    // (358:8) <Button outline color="primary" on:click="{getPreviewPage}">
     function create_default_slot_1$1(ctx) {
     	let t;
 
@@ -6462,14 +6462,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(360:8) <Button outline color=\\\"primary\\\" on:click=\\\"{getPreviewPage}\\\">",
+    		source: "(358:8) <Button outline color=\\\"primary\\\" on:click=\\\"{getPreviewPage}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (363:8) <Button outline color="primary" on:click="{getNextPage}">
+    // (361:8) <Button outline color="primary" on:click="{getNextPage}">
     function create_default_slot$2(ctx) {
     	let t;
 
@@ -6489,14 +6489,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(363:8) <Button outline color=\\\"primary\\\" on:click=\\\"{getNextPage}\\\">",
+    		source: "(361:8) <Button outline color=\\\"primary\\\" on:click=\\\"{getNextPage}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (301:18)           Loading spc...      {:then spc}
+    // (299:18)           Loading spc...      {:then spc}
     function create_pending_block(ctx) {
     	let t;
 
@@ -6519,7 +6519,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(301:18)           Loading spc...      {:then spc}",
+    		source: "(299:18)           Loading spc...      {:then spc}",
     		ctx
     	});
 
@@ -6528,16 +6528,13 @@ var app = (function () {
 
     function create_fragment$a(ctx) {
     	let main;
-    	let script0;
-    	let script0_src_value;
+    	let script;
+    	let script_src_value;
     	let t0;
-    	let script1;
-    	let script1_src_value;
-    	let t1;
     	let h1;
+    	let t2;
     	let t3;
     	let t4;
-    	let t5;
     	let promise;
     	let current;
 
@@ -6578,40 +6575,34 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			main = element("main");
-    			script0 = element("script");
+    			script = element("script");
     			t0 = space();
-    			script1 = element("script");
-    			t1 = space();
     			h1 = element("h1");
     			h1.textContent = "SPC Manager";
-    			t3 = space();
+    			t2 = space();
     			create_component(button.$$.fragment);
-    			t4 = space();
+    			t3 = space();
     			create_component(collapse.$$.fragment);
-    			t5 = space();
+    			t4 = space();
     			info.block.c();
-    			if (script0.src !== (script0_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$8, 272, 4, 8543);
-    			if (script1.src !== (script1_src_value = "apex.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$8, 273, 4, 8641);
-    			add_location(h1, file$8, 274, 4, 8678);
-    			add_location(main, file$8, 271, 0, 8531);
+    			if (script.src !== (script_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script, "src", script_src_value);
+    			add_location(script, file$8, 271, 4, 8512);
+    			add_location(h1, file$8, 272, 4, 8610);
+    			add_location(main, file$8, 270, 0, 8500);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, script0);
+    			append_dev(main, script);
     			append_dev(main, t0);
-    			append_dev(main, script1);
-    			append_dev(main, t1);
     			append_dev(main, h1);
-    			append_dev(main, t3);
+    			append_dev(main, t2);
     			mount_component(button, main, null);
-    			append_dev(main, t4);
+    			append_dev(main, t3);
     			mount_component(collapse, main, null);
-    			append_dev(main, t5);
+    			append_dev(main, t4);
     			info.block.m(main, info.anchor = null);
     			info.mount = () => main;
     			info.anchor = null;
@@ -6683,7 +6674,7 @@ var app = (function () {
 
     function instance$a($$self, $$props, $$invalidate) {
     	let isOpen = false;
-    	let busquedas = "/api/v2/spc-stats?";
+    	let busquedas = "/api/v3/spc-stats?";
 
     	//ALERTAS
     	let visible = false;
@@ -6723,7 +6714,7 @@ var app = (function () {
     	//GET
     	async function getSPC() {
     		console.log("Fetching spc...");
-    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+    		const res = await fetch("/api/v3/spc-stats?limit=10&offset=1");
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -6739,8 +6730,8 @@ var app = (function () {
     	//GET INITIALDATA
     	async function getSPCLoadInitialData() {
     		console.log("Fetching spc...");
-    		await fetch("/api/v2/spc-stats/loadInitialData");
-    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+    		await fetch("/api/v3/spc-stats/loadInitialData");
+    		const res = await fetch("/api/v3/spc-stats?limit=10&offset=1");
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -6758,7 +6749,7 @@ var app = (function () {
     	async function insertSPC() {
     		console.log("Inserting spc..." + JSON.stringify(newSpc));
 
-    		const res = await fetch("/api/v2/spc-stats", {
+    		const res = await fetch("/api/v3/spc-stats", {
     			method: "POST",
     			body: JSON.stringify(newSpc),
     			headers: { "Content-Type": "application/json" }
@@ -6769,7 +6760,6 @@ var app = (function () {
     				totaldata++;
     				$$invalidate(2, color = "success");
     				$$invalidate(5, errorMSG = newSpc.country + " creado correctamente");
-    				loadGraphs();
     				console.log("Inserted " + newSpc.country + " spc.");
     			} else if (res.status == 400) {
     				$$invalidate(2, color = "danger");
@@ -6789,7 +6779,7 @@ var app = (function () {
 
     	//DELETE SPECIFIC
     	async function deleteSPC(name, year) {
-    		const res = await fetch("/api/v2/spc-stats/" + name + "/" + year, { method: "DELETE" }).then(function (res) {
+    		const res = await fetch("/api/v3/spc-stats/" + name + "/" + year, { method: "DELETE" }).then(function (res) {
     			$$invalidate(1, visible = true);
     			getSPC();
 
@@ -6812,7 +6802,7 @@ var app = (function () {
 
     	//DELETE ALL
     	async function deleteSPCALL() {
-    		const res = await fetch("/api/v2/spc-stats/", { method: "DELETE" }).then(function (res) {
+    		const res = await fetch("/api/v3/spc-stats/", { method: "DELETE" }).then(function (res) {
     			getSPC();
     			$$invalidate(1, visible = true);
 
@@ -6874,7 +6864,7 @@ var app = (function () {
     		}
 
     		const res = await fetch(busquedas);
-    		busquedas = "/api/v2/spc-stats?";
+    		busquedas = "/api/v3/spc-stats?";
 
     		$$invalidate(4, searchSpc = {
     			country: null,
@@ -6913,7 +6903,7 @@ var app = (function () {
     		}
 
     		console.log("Charging page " + page);
-    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=" + page);
+    		const res = await fetch("/api/v3/spc-stats?limit=10&offset=" + page);
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -6933,7 +6923,7 @@ var app = (function () {
     		} else page = 1;
 
     		console.log("Charging page " + page);
-    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=" + page);
+    		const res = await fetch("/api/v3/spc-stats?limit=10&offset=" + page);
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -7172,7 +7162,7 @@ var app = (function () {
 
     const file$9 = "src\\front\\GUI1SPC\\HighChart.svelte";
 
-    // (223:4) <Button color="success" on:click="{getSPCLoadInitialData}">
+    // (216:4) <Button color="success" on:click="{getSPCLoadInitialData}">
     function create_default_slot_1$2(ctx) {
     	let t;
 
@@ -7192,14 +7182,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(223:4) <Button color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
+    		source: "(216:4) <Button color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (226:4) <Button color="danger" on:click="{deleteSPCALL}">
+    // (219:4) <Button color="danger" on:click="{deleteSPCALL}">
     function create_default_slot$3(ctx) {
     	let t;
 
@@ -7219,7 +7209,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(226:4) <Button color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
+    		source: "(219:4) <Button color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
     		ctx
     	});
 
@@ -7227,18 +7217,8 @@ var app = (function () {
     }
 
     function create_fragment$b(ctx) {
-    	let script0;
-    	let script0_src_value;
-    	let script1;
-    	let script1_src_value;
-    	let script2;
-    	let script2_src_value;
-    	let script3;
-    	let script3_src_value;
-    	let script4;
-    	let script4_src_value;
-    	let script5;
-    	let script5_src_value;
+    	let script;
+    	let script_src_value;
     	let t0;
     	let main;
     	let h1;
@@ -7273,12 +7253,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			script0 = element("script");
-    			script1 = element("script");
-    			script2 = element("script");
-    			script3 = element("script");
-    			script4 = element("script");
-    			script5 = element("script");
+    			script = element("script");
     			t0 = space();
     			main = element("main");
     			h1 = element("h1");
@@ -7289,37 +7264,22 @@ var app = (function () {
     			create_component(button1.$$.fragment);
     			t4 = space();
     			div = element("div");
-    			if (script0.src !== (script0_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$9, 212, 4, 6285);
-    			if (script1.src !== (script1_src_value = "apex.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$9, 213, 4, 6383);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$9, 214, 4, 6420);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/highcharts-more.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$9, 215, 4, 6491);
-    			if (script4.src !== (script4_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script4, "src", script4_src_value);
-    			add_location(script4, file$9, 216, 4, 6567);
-    			if (script5.src !== (script5_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script5, "src", script5_src_value);
-    			add_location(script5, file$9, 217, 4, 6645);
-    			add_location(h1, file$9, 221, 4, 6776);
+    			if (script.src !== (script_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script, "src", script_src_value);
+    			add_location(script, file$9, 210, 4, 6312);
+    			add_location(h1, file$9, 214, 4, 6443);
     			attr_dev(div, "id", "container");
     			set_style(div, "height", "1000");
     			set_style(div, "min-width", "310px");
     			set_style(div, "max-width", "800px");
     			set_style(div, "margin", "100px");
-    			add_location(div, file$9, 228, 4, 7011);
-    			add_location(main, file$9, 219, 0, 6762);
+    			add_location(div, file$9, 221, 4, 6678);
+    			add_location(main, file$9, 212, 0, 6429);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor, remount) {
-    			append_dev(document.head, script0);
-    			append_dev(document.head, script1);
-    			append_dev(document.head, script2);
-    			append_dev(document.head, script3);
-    			append_dev(document.head, script4);
-    			append_dev(document.head, script5);
+    			append_dev(document.head, script);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, h1);
@@ -7331,7 +7291,7 @@ var app = (function () {
     			append_dev(main, div);
     			current = true;
     			if (remount) dispose();
-    			dispose = listen_dev(script5, "load", loadGraphs$1, false, false, false);
+    			dispose = listen_dev(script, "load", loadGraphs, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button0_changes = {};
@@ -7361,12 +7321,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			detach_dev(script0);
-    			detach_dev(script1);
-    			detach_dev(script2);
-    			detach_dev(script3);
-    			detach_dev(script4);
-    			detach_dev(script5);
+    			detach_dev(script);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button0);
@@ -7386,62 +7341,62 @@ var app = (function () {
     	return block;
     }
 
-    async function loadGraphs$1() {
+    async function loadGraphs() {
     	let MyData = [];
-    	const resData = await fetch("/api/v2/spc-stats");
+    	const resData = await fetch("/api/v3/spc-stats");
     	MyData = await resData.json();
 
     	var euro = MyData.filter(function (el) {
-    		return el.continent == "europe" && el.year == 2013;
+    		return el.continent == "europe" && parseInt(el.year) == 2013;
     	}).map(dato => {
     		return {
     			"name": dato.country,
-    			"value": dato.both_sex
+    			"value": parseInt(dato.both_sex)
     		};
     	});
 
     	var asia = MyData.filter(function (el) {
-    		return el.continent == "asia" && el.year == 2013;
+    		return el.continent == "asia" && parseInt(el.year) == 2013;
     	}).map(dato => {
     		return {
     			"name": dato.country,
-    			"value": dato.both_sex
+    			"value": parseInt(dato.both_sex)
     		};
     	});
 
     	var africa = MyData.filter(function (el) {
-    		return el.continent == "africa" && el.year == 2013;
+    		return el.continent == "africa" && parseInt(el.year) == 2013;
     	}).map(dato => {
     		return {
     			"name": dato.country,
-    			"value": dato.both_sex
+    			"value": parseInt(dato.both_sex)
     		};
     	});
 
     	var south = MyData.filter(function (el) {
-    		return el.continent == "south america" && el.year == 2013;
+    		return el.continent == "south america" && parseInt(el.year) == 2013;
     	}).map(dato => {
     		return {
     			"name": dato.country,
-    			"value": dato.both_sex
+    			"value": parseInt(dato.both_sex)
     		};
     	});
 
     	var north = MyData.filter(function (el) {
-    		return el.continent == "north america" && el.year == 2013;
+    		return el.continent == "north america" && parseInt(el.year) == 2013;
     	}).map(dato => {
     		return {
     			"name": dato.country,
-    			"value": dato.both_sex
+    			"value": parseInt(dato.both_sex)
     		};
     	});
 
     	var oceania = MyData.filter(function (el) {
-    		return el.continent == "oceania" && el.year == 2013;
+    		return el.continent == "oceania" && parseInt(el.year) == 2013;
     	}).map(dato => {
     		return {
     			"name": dato.country,
-    			"value": dato.both_sex
+    			"value": parseInt(dato.both_sex)
     		};
     	});
 
@@ -7499,15 +7454,14 @@ var app = (function () {
     	//GET INITIALDATA
     	async function getSPCLoadInitialData() {
     		console.log("Fetching spc...");
-    		await fetch("/api/v2/spc-stats/loadInitialData");
-    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
-    		loadGraphs$1();
+    		await fetch("/api/v3/spc-stats/loadInitialData");
+    		const res = await fetch("/api/v3/spc-stats");
+    		loadGraphs();
 
     		if (res.ok) {
     			console.log("Ok:");
     			const json = await res.json();
     			spc = json;
-    			totaldata = 12;
     			console.log("Received " + spc.length + " spc.");
     		} else {
     			errorMSG = res.status + ": " + res.statusText;
@@ -7517,12 +7471,11 @@ var app = (function () {
 
     	//DELETE ALL
     	async function deleteSPCALL() {
-    		const res = await fetch("/api/v2/spc-stats/", { method: "DELETE" }).then(function (res) {
-    			loadGraphs$1();
+    		const res = await fetch("/api/v3/spc-stats/", { method: "DELETE" }).then(function (res) {
+    			loadGraphs();
     			visible = true;
 
     			if (res.status == 200) {
-    				totaldata = 0;
     				color = "success";
     				errorMSG = "Objetos borrados correctamente";
     				console.log("Deleted all spc.");
@@ -7541,8 +7494,8 @@ var app = (function () {
     	//GET
     	async function getSPC() {
     		console.log("Fetching spc...");
-    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
-    		loadGraphs$1();
+    		const res = await fetch("/api/v3/spc-stats");
+    		loadGraphs();
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -7579,7 +7532,7 @@ var app = (function () {
     		getSPCLoadInitialData,
     		deleteSPCALL,
     		getSPC,
-    		loadGraphs: loadGraphs$1
+    		loadGraphs
     	});
 
     	$$self.$inject_state = $$props => {
@@ -7615,7 +7568,7 @@ var app = (function () {
     const { console: console_1$3, document: document_1 } = globals;
     const file$a = "src\\front\\GUI1SPC\\ApexChart.svelte";
 
-    // (132:4) <Button color="success" on:click="{getSPCLoadInitialData}">
+    // (130:4) <Button color="success" on:click="{getSPCLoadInitialData}">
     function create_default_slot_1$3(ctx) {
     	let t;
 
@@ -7635,14 +7588,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$3.name,
     		type: "slot",
-    		source: "(132:4) <Button color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
+    		source: "(130:4) <Button color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (135:4) <Button color="danger" on:click="{deleteSPCALL}">
+    // (133:4) <Button color="danger" on:click="{deleteSPCALL}">
     function create_default_slot$4(ctx) {
     	let t;
 
@@ -7662,7 +7615,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$4.name,
     		type: "slot",
-    		source: "(135:4) <Button color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
+    		source: "(133:4) <Button color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
     		ctx
     	});
 
@@ -7719,13 +7672,13 @@ var app = (function () {
     			div = element("div");
     			div.textContent = "Suicidios por cada 100,000 personas";
     			if (script.src !== (script_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$a, 126, 4, 3416);
-    			add_location(h1, file$a, 130, 4, 3532);
+    			add_location(script, file$a, 124, 4, 3323);
+    			add_location(h1, file$a, 128, 4, 3439);
     			attr_dev(div, "id", "chart");
     			set_style(div, "text-align", "center");
     			attr_dev(div, "class", "svelte-jx8xh2");
-    			add_location(div, file$a, 137, 4, 3767);
-    			add_location(main, file$a, 128, 0, 3518);
+    			add_location(div, file$a, 135, 4, 3674);
+    			add_location(main, file$a, 126, 0, 3425);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7803,15 +7756,14 @@ var app = (function () {
     	//GET INITIALDATA
     	async function getSPCLoadInitialData() {
     		console.log("Fetching spc...");
-    		await fetch("/api/v2/spc-stats/loadInitialData");
-    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+    		await fetch("/api/v3/spc-stats/loadInitialData");
+    		const res = await fetch("/api/v3/spc-stats");
     		loadGraphs();
 
     		if (res.ok) {
     			console.log("Ok:");
     			const json = await res.json();
     			spc = json;
-    			totaldata = 12;
     			console.log("Received " + spc.length + " spc.");
     		} else {
     			errorMSG = res.status + ": " + res.statusText;
@@ -7821,12 +7773,11 @@ var app = (function () {
 
     	//DELETE ALL
     	async function deleteSPCALL() {
-    		const res = await fetch("/api/v2/spc-stats/", { method: "DELETE" }).then(function (res) {
+    		const res = await fetch("/api/v3/spc-stats/", { method: "DELETE" }).then(function (res) {
     			loadGraphs();
     			visible = true;
 
     			if (res.status == 200) {
-    				totaldata = 0;
     				color = "success";
     				errorMSG = "Objetos borrados correctamente";
     				console.log("Deleted all spc.");
@@ -7845,7 +7796,7 @@ var app = (function () {
     	//GET
     	async function getSPC() {
     		console.log("Fetching spc...");
-    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+    		const res = await fetch("/api/v3/spc-stats");
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -7860,7 +7811,7 @@ var app = (function () {
 
     	async function loadGraphs() {
     		let MyData = [];
-    		const resData = await fetch("/api/v2/spc-stats");
+    		const resData = await fetch("/api/v3/spc-stats");
     		MyData = spc;
     		var mujeres = MyData.map(dato => dato.female_number);
     		var hombres = MyData.map(dato => dato.male_number);
@@ -8668,7 +8619,7 @@ var app = (function () {
     	//GET
     	async function getSPC1() {
     		console.log("Fetching spc...");
-    		const res = await fetch("/api/v2/spc-stats/" + params.suicideCountry + "/" + params.suicideYear);
+    		const res = await fetch("/api/v3/spc-stats/" + params.suicideCountry + "/" + params.suicideYear);
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -8694,7 +8645,7 @@ var app = (function () {
     	async function updateSpc() {
     		console.log("Updating spc..." + JSON.stringify(params.suicideCountry));
 
-    		const res = await fetch("/api/v2/spc-stats/" + params.suicideCountry + "/" + params.suicideYear, {
+    		const res = await fetch("/api/v3/spc-stats/" + params.suicideCountry + "/" + params.suicideYear, {
     			method: "PUT",
     			body: JSON.stringify({
     				country: updatedCountry,
@@ -8878,10 +8829,10 @@ var app = (function () {
 
     /* src\front\GUI1SPC\Integrations.svelte generated by Svelte v3.22.3 */
 
-    const { console: console_1$5 } = globals;
+    const { console: console_1$5, document: document_1$1 } = globals;
     const file$c = "src\\front\\GUI1SPC\\Integrations.svelte";
 
-    // (174:4) <Button color="success" on:click="{getSPCLoadInitialData}">
+    // (407:4) <Button outline color="success" on:click="{getSPCLoadInitialData}">
     function create_default_slot_1$5(ctx) {
     	let t;
 
@@ -8901,14 +8852,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$5.name,
     		type: "slot",
-    		source: "(174:4) <Button color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
+    		source: "(407:4) <Button outline color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (177:4) <Button color="danger" on:click="{deleteSPCALL}">
+    // (410:4) <Button outline color="danger" on:click="{deleteSPCALL}">
     function create_default_slot$6(ctx) {
     	let t;
 
@@ -8928,7 +8879,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$6.name,
     		type: "slot",
-    		source: "(177:4) <Button color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
+    		source: "(410:4) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
     		ctx
     	});
 
@@ -8940,25 +8891,41 @@ var app = (function () {
     	let script0_src_value;
     	let script1;
     	let script1_src_value;
-    	let script2;
-    	let script2_src_value;
-    	let script3;
-    	let script3_src_value;
     	let t0;
     	let main;
     	let h1;
     	let t2;
     	let t3;
     	let t4;
-    	let figure;
-    	let div;
+    	let br0;
+    	let br1;
     	let t5;
+    	let h30;
+    	let t7;
+    	let figure;
+    	let div0;
+    	let t8;
     	let p;
+    	let t9;
+    	let br2;
+    	let t10;
+    	let h31;
+    	let t12;
+    	let div1;
+    	let t13;
+    	let h32;
+    	let t15;
+    	let div2;
+    	let t16;
+    	let h33;
+    	let t18;
+    	let div3;
     	let current;
     	let dispose;
 
     	const button0 = new Button({
     			props: {
+    				outline: true,
     				color: "success",
     				$$slots: { default: [create_default_slot_1$5] },
     				$$scope: { ctx }
@@ -8970,6 +8937,7 @@ var app = (function () {
 
     	const button1 = new Button({
     			props: {
+    				outline: true,
     				color: "danger",
     				$$slots: { default: [create_default_slot$6] },
     				$$scope: { ctx }
@@ -8983,8 +8951,6 @@ var app = (function () {
     		c: function create() {
     			script0 = element("script");
     			script1 = element("script");
-    			script2 = element("script");
-    			script3 = element("script");
     			t0 = space();
     			main = element("main");
     			h1 = element("h1");
@@ -8994,37 +8960,70 @@ var app = (function () {
     			t3 = space();
     			create_component(button1.$$.fragment);
     			t4 = space();
-    			figure = element("figure");
-    			div = element("div");
+    			br0 = element("br");
+    			br1 = element("br");
     			t5 = space();
+    			h30 = element("h3");
+    			h30.textContent = "Integración API externa 1";
+    			t7 = space();
+    			figure = element("figure");
+    			div0 = element("div");
+    			t8 = space();
     			p = element("p");
-    			p.textContent = "A basic column chart compares rainfall values between four cities.\r\n            Tokyo has the overall highest amount of rainfall, followed by New York.\r\n            The chart is making use of the axis crosshair feature, to highlight\r\n            months as they are hovered over.";
-    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$c, 165, 4, 5113);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$c, 166, 4, 5184);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$c, 167, 4, 5262);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$c, 168, 4, 5342);
-    			add_location(h1, file$c, 172, 4, 5471);
-    			attr_dev(div, "id", "container");
-    			attr_dev(div, "class", "svelte-11guutf");
-    			add_location(div, file$c, 181, 8, 5752);
+    			t9 = space();
+    			br2 = element("br");
+    			t10 = space();
+    			h31 = element("h3");
+    			h31.textContent = "Integración API externa 2";
+    			t12 = space();
+    			div1 = element("div");
+    			t13 = space();
+    			h32 = element("h3");
+    			h32.textContent = "Integración API sos1920-09";
+    			t15 = space();
+    			div2 = element("div");
+    			t16 = space();
+    			h33 = element("h3");
+    			h33.textContent = "Integración API sos1920-02";
+    			t18 = space();
+    			div3 = element("div");
+    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$c, 400, 4, 12916);
+    			if (script1.src !== (script1_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$c, 401, 4, 13035);
+    			add_location(h1, file$c, 405, 4, 13130);
+    			add_location(br0, file$c, 412, 4, 13381);
+    			add_location(br1, file$c, 412, 8, 13385);
+    			set_style(h30, "text-align", "center");
+    			add_location(h30, file$c, 415, 4, 13430);
+    			attr_dev(div0, "id", "container");
+    			attr_dev(div0, "class", "svelte-11guutf");
+    			add_location(div0, file$c, 417, 8, 13542);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$c, 182, 8, 5788);
+    			add_location(p, file$c, 418, 8, 13578);
     			attr_dev(figure, "class", "highcharts-figure svelte-11guutf");
-    			add_location(figure, file$c, 180, 4, 5708);
-    			add_location(main, file$c, 170, 0, 5457);
+    			add_location(figure, file$c, 416, 4, 13498);
+    			add_location(br2, file$c, 423, 4, 13663);
+    			set_style(h31, "text-align", "center");
+    			add_location(h31, file$c, 426, 4, 13706);
+    			attr_dev(div1, "id", "chart2");
+    			add_location(div1, file$c, 427, 4, 13774);
+    			set_style(h32, "text-align", "center");
+    			add_location(h32, file$c, 431, 4, 13833);
+    			attr_dev(div2, "id", "chart");
+    			add_location(div2, file$c, 432, 4, 13902);
+    			set_style(h33, "text-align", "center");
+    			add_location(h33, file$c, 436, 4, 13959);
+    			attr_dev(div3, "id", "chart3");
+    			add_location(div3, file$c, 437, 4, 14028);
+    			add_location(main, file$c, 403, 0, 13116);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor, remount) {
-    			append_dev(document.head, script0);
-    			append_dev(document.head, script1);
-    			append_dev(document.head, script2);
-    			append_dev(document.head, script3);
+    			append_dev(document_1$1.head, script0);
+    			append_dev(document_1$1.head, script1);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, h1);
@@ -9033,25 +9032,48 @@ var app = (function () {
     			append_dev(main, t3);
     			mount_component(button1, main, null);
     			append_dev(main, t4);
+    			append_dev(main, br0);
+    			append_dev(main, br1);
+    			append_dev(main, t5);
+    			append_dev(main, h30);
+    			append_dev(main, t7);
     			append_dev(main, figure);
-    			append_dev(figure, div);
-    			append_dev(figure, t5);
+    			append_dev(figure, div0);
+    			append_dev(figure, t8);
     			append_dev(figure, p);
+    			append_dev(main, t9);
+    			append_dev(main, br2);
+    			append_dev(main, t10);
+    			append_dev(main, h31);
+    			append_dev(main, t12);
+    			append_dev(main, div1);
+    			append_dev(main, t13);
+    			append_dev(main, h32);
+    			append_dev(main, t15);
+    			append_dev(main, div2);
+    			append_dev(main, t16);
+    			append_dev(main, h33);
+    			append_dev(main, t18);
+    			append_dev(main, div3);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", population, false, false, false);
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(script0, "load", population, false, false, false),
+    				listen_dev(script0, "load", /*covid*/ ctx[2], false, false, false)
+    			];
     		},
     		p: function update(ctx, [dirty]) {
     			const button0_changes = {};
 
-    			if (dirty & /*$$scope*/ 128) {
+    			if (dirty & /*$$scope*/ 256) {
     				button0_changes.$$scope = { dirty, ctx };
     			}
 
     			button0.$set(button0_changes);
     			const button1_changes = {};
 
-    			if (dirty & /*$$scope*/ 128) {
+    			if (dirty & /*$$scope*/ 256) {
     				button1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9071,13 +9093,11 @@ var app = (function () {
     		d: function destroy(detaching) {
     			detach_dev(script0);
     			detach_dev(script1);
-    			detach_dev(script2);
-    			detach_dev(script3);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			destroy_component(button0);
     			destroy_component(button1);
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -9092,22 +9112,23 @@ var app = (function () {
     	return block;
     }
 
+    function minusMayus(palabra, estado) {
+    	if (estado == true) {
+    		palabra = palabra.charAt(0).toUpperCase() + palabra.slice(1);
+    	} else {
+    		palabra = palabra.charAt(0).toLowerCase() + palabra.slice(1);
+    	}
+
+    	return palabra;
+    }
+
+    //api externa 1
     async function population() {
     	let MyData = [];
     	let listaDensidad = []; //lista de densidad de la api
-    	const resData = await fetch("/api/v2/spc-stats");
+    	const resData = await fetch("/api/v3/spc-stats");
     	MyData = await resData.json();
 
-    	/*const population = await fetch("https://data.opendatasoft.com/api/records/1.0/search/?dataset=worldcitiespop%40public&rows=200");
-    populationApi =  await population.json();
-
-    var parse = populationApi.records;
-
-    //lista de paises de la api
-    for (let index = 0; index < parse.length; index++) {
-        listaapi.push(parse[index].fields.city);
-        
-    }*/
     	//mi api
     	var ambos = MyData.map(dato => dato.both_sex * 1000000);
 
@@ -9119,15 +9140,14 @@ var app = (function () {
     		listaDensidad.push(density[0].population);
     	}
 
-    	console.log(listaDensidad);
-    	console.log(ambos);
-
     	Highcharts.chart("container", {
     		chart: { type: "column" },
     		title: {
     			text: "Porcentaje de suicidios respecto a densidad de un país"
     		},
-    		subtitle: { text: "Source: data.opendatasoft.com/" },
+    		subtitle: {
+    			text: "Source: https://restcountries.eu/rest/v2/all"
+    		},
     		xAxis: { categories: paises, crosshair: true },
     		yAxis: { min: 0, title: { text: "Rainfall (mm)" } },
     		tooltip: {
@@ -9150,9 +9170,30 @@ var app = (function () {
     	});
     }
 
+    //api sos1920-04 roads kilometros de carretera
+    async function roads() {
+    	let dataRoads = []; //guardamos todos los datos de bicis de 2015
+    	const res2 = await fetch("http://sos1920-04.herokuapp.com/api/v1/roads/");
+    	dataRoads = await res2.json();
+
+    	//hacemos map para el carril metropolitano
+    	dataRoads.map(dato => dato.total);
+    }
+
+    // on:load={roads}
+    //api sos1920-04 roads kilometros de carretera
+    async function hospitalized() {
+    	let dataHospi = []; //guardamos todos los datos de bicis de 2015
+    	const res3 = await fetch("https://sos1920-06.herokuapp.com/api/v1/not-hospitalized-stats?year=2014");
+    	dataHospi = await res3.json();
+
+    	//hacemos map para el carril metropolitano
+    	dataHospi.map(dato => dato.total).reduce((a, b) => a + b, 0);
+
+    	console.log(dataHospi);
+    }
+
     function instance$e($$self, $$props, $$invalidate) {
-    	let visible = false;
-    	let color = "danger";
     	let spc = [];
     	let errorMSG = "";
     	onMount(getSPC);
@@ -9160,15 +9201,14 @@ var app = (function () {
     	//GET INITIALDATA
     	async function getSPCLoadInitialData() {
     		console.log("Fetching spc...");
-    		await fetch("/api/v2/spc-stats/loadInitialData");
-    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+    		await fetch("/api/v3/spc-stats/loadInitialData");
+    		const res = await fetch("/api/v3/spc-stats");
     		population();
 
     		if (res.ok) {
     			console.log("Ok:");
     			const json = await res.json();
     			spc = json;
-    			totaldata = 12;
     			console.log("Received " + spc.length + " spc.");
     		} else {
     			errorMSG = res.status + ": " + res.statusText;
@@ -9178,12 +9218,11 @@ var app = (function () {
 
     	//DELETE ALL
     	async function deleteSPCALL() {
-    		const res = await fetch("/api/v2/spc-stats/", { method: "DELETE" }).then(function (res) {
+    		const res = await fetch("/api/v3/spc-stats/", { method: "DELETE" }).then(function (res) {
     			population();
     			visible = true;
 
     			if (res.status == 200) {
-    				totaldata = 0;
     				color = "success";
     				errorMSG = "Objetos borrados correctamente";
     				console.log("Deleted all spc.");
@@ -9202,7 +9241,7 @@ var app = (function () {
     	//GET
     	async function getSPC() {
     		console.log("Fetching spc...");
-    		const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+    		const res = await fetch("/api/v3/spc-stats");
 
     		if (res.ok) {
     			console.log("Ok:");
@@ -9214,6 +9253,194 @@ var app = (function () {
     			console.log("ERROR!");
     		}
     	}
+
+    	//api sos1920-09 (nando)
+    	async function vehiculos() {
+    		let dataVehiculos = []; //guardamos todos los vehiculos
+    		let intersecMayus = []; //interseccion entre spc y vehiculos en mayus
+    		let intersecMinus = []; //igual en minus
+    		let listaVehiculos = []; //guardamos las variables que querempos
+    		let listaSuicidios = [];
+    		const res = await fetch("https://sos1920-09.herokuapp.com/api/v3/plugin-vehicles-stats/");
+    		dataVehiculos = await res.json();
+
+    		//busco la interseccion entre mis paises y los suyos
+    		var paisesVehicu = dataVehiculos.map(dato => dato.country);
+
+    		var paisesSpc = spc.map(dato => dato.country); //pero tengo que poner en mayus la primera letra o al reves
+
+    		for (let index = 0; index < paisesSpc.length; index++) {
+    			paisesSpc[index] = minusMayus(paisesSpc[index], true);
+    		}
+
+    		intersecMayus = paisesSpc.filter(x => paisesVehicu.includes(x)); //ya tengo los paises que coinciden
+
+    		//hago lista para poder tenerlo en minus otra vez y buscar con mi api
+    		for (let index = 0; index < intersecMayus.length; index++) {
+    			intersecMinus.push(minusMayus(intersecMayus[index], false));
+    		}
+
+    		//busco los suicidios de cada pais y los coches
+    		for (let index = 0; index < intersecMayus.length; index++) {
+    			const vehiculosApi = await fetch("https://sos1920-09.herokuapp.com/api/v3/plugin-vehicles-stats?country=" + intersecMayus[index]);
+    			var resVehicu = await vehiculosApi.json();
+    			listaVehiculos.push(resVehicu[0]["pev-stock"]);
+    			const suicidiosApi = await fetch("/api/v3/spc-stats?country=" + intersecMinus[index]);
+    			var resSuci = await suicidiosApi.json();
+    			listaSuicidios.push(resSuci[0].both_sex * 100000);
+    		}
+
+    		var options = {
+    			series: [
+    				{
+    					name: "Suicidios en un año",
+    					data: listaSuicidios
+    				},
+    				{
+    					name: "Coches vendidos en un año",
+    					data: listaVehiculos
+    				}
+    			],
+    			chart: {
+    				height: 350,
+    				type: "line",
+    				zoom: { enabled: false }
+    			},
+    			dataLabels: { enabled: false },
+    			stroke: {
+    				width: [5, 7, 5],
+    				curve: "smooth",
+    				dashArray: [0, 8, 5]
+    			},
+    			title: {
+    				text: "Relación venta de coche entre suicidios",
+    				align: "center"
+    			},
+    			legend: {
+    				tooltipHoverFormatter(val, opts) {
+    					return val + " - " + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + "";
+    				}
+    			},
+    			markers: { size: 0, hover: { sizeOffset: 6 } },
+    			xaxis: { categories: intersecMayus },
+    			tooltip: {
+    				y: [
+    					{
+    						title: {
+    							formatter(val) {
+    								return val;
+    							}
+    						}
+    					},
+    					{
+    						title: {
+    							formatter(val) {
+    								return val;
+    							}
+    						}
+    					}
+    				]
+    			},
+    			grid: { borderColor: "#f1f1f1" }
+    		};
+
+    		var chart = new Et(document.querySelector("#chart"), options);
+    		chart.render();
+    	}
+
+    	// on:load={vehiculos}
+    	//api sos1920-02 bicis
+    	async function bicis() {
+    		let dataBicis = []; //guardamos todos los datos de bicis de 2015
+    		const res = await fetch("https://sos1920-02.herokuapp.com/api/v2/evolution-of-cycling-routes?year=2015");
+    		dataBicis = await res.json();
+
+    		//hacemos map para el carril metropolitano
+    		dataBicis.map(dato => dato.metropolitan).reduce((a, b) => a + b, 0);
+
+    		var espa = spc.filter(dato => dato.country == "spain");
+    	} // on:load={hospitalized}
+
+    	// on:load={hospitalized}
+    	//api sos1920-02 covid
+    	async function covid() {
+    		let dataCovid = []; //guardamos todos los datos de bicis de 2015
+    		let miApi = [];
+    		let miApiMayus = [];
+    		const res = await fetch("https://akashraj.tech/corona/api");
+    		dataCovid = await res.json();
+    		const res2 = await fetch("https://sos1920-27.herokuapp.com/api/v3/spc-stats");
+    		miApi = await res2.json();
+    		var paises = dataCovid.countries_stat;
+    		var nombrePai = paises.map(x => x.country_name);
+
+    		for (let index = 0; index < miApi.length; index++) {
+    			miApiMayus.push(minusMayus(miApi[index].country, true));
+    		}
+
+    		var inters = nombrePai.filter(x => miApiMayus.includes(x));
+    		var estadisdeath = []; //deaths_per_1m_population
+    		var suici = [];
+
+    		for (let index = 0; index < paises.length; index++) {
+    			if (inters.includes(paises[index].country_name)) {
+    				var punto1 = paises[index].deaths_per_1m_population.replace(",", ".");
+    				estadisdeath.push(punto1);
+
+    				for (let j = 0; j < miApi.length; j++) {
+    					//para no hacer mil llamadas a mi api
+    					if (miApi[j].country == minusMayus(paises[index].country_name)) {
+    						suici.push(miApi[j].both_sex);
+    					}
+    				}
+    			}
+    		}
+
+    		var options = {
+    			series: [
+    				{
+    					name: "Muertes por cada millón de habitantes",
+    					data: estadisdeath
+    				},
+    				{
+    					name: "Suicidios por cada 100.000 habitantes",
+    					data: suici
+    				}
+    			],
+    			chart: { type: "bar", height: 350, stacked: true },
+    			plotOptions: { bar: { horizontal: true } },
+    			stroke: { width: 1, colors: ["#fff"] },
+    			title: {
+    				text: "Casos de suicidio frente a coronavirus",
+    				align: "center"
+    			},
+    			xaxis: {
+    				categories: inters,
+    				labels: {
+    					formatter(val) {
+    						return val;
+    					}
+    				}
+    			},
+    			yaxis: { title: { text: undefined } },
+    			tooltip: {
+    				y: {
+    					formatter(val) {
+    						return val;
+    					}
+    				}
+    			},
+    			fill: { opacity: 1 },
+    			legend: {
+    				position: "top",
+    				horizontalAlign: "left",
+    				offsetX: 40
+    			}
+    		};
+
+    		var chart = new Et(document.querySelector("#chart2"), options);
+    		chart.render();
+    	} // on:load={covid}
 
     	const writable_props = [];
 
@@ -9230,20 +9457,22 @@ var app = (function () {
     		Table,
     		Button,
     		Alert,
-    		visible,
-    		color,
     		spc,
     		ApexCharts: Et,
     		errorMSG,
+    		minusMayus,
     		getSPCLoadInitialData,
     		deleteSPCALL,
     		getSPC,
-    		population
+    		population,
+    		vehiculos,
+    		bicis,
+    		roads,
+    		hospitalized,
+    		covid
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("visible" in $$props) visible = $$props.visible;
-    		if ("color" in $$props) color = $$props.color;
     		if ("spc" in $$props) spc = $$props.spc;
     		if ("errorMSG" in $$props) errorMSG = $$props.errorMSG;
     	};
@@ -9252,7 +9481,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [getSPCLoadInitialData, deleteSPCALL];
+    	return [getSPCLoadInitialData, deleteSPCALL, covid];
     }
 
     class Integrations extends SvelteComponentDev {
@@ -12052,8 +12281,6 @@ var app = (function () {
     }
 
     /* src\front\GUI2POVERTY\Highchart.svelte generated by Svelte v3.22.3 */
-
-    const { console: console_1$8 } = globals;
     const file$f = "src\\front\\GUI2POVERTY\\Highchart.svelte";
 
     function create_fragment$h(ctx) {
@@ -12082,18 +12309,18 @@ var app = (function () {
     			figure = element("figure");
     			div = element("div");
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$f, 175, 4, 4666);
+    			add_location(script0, file$f, 244, 4, 7046);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/series-label.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$f, 176, 4, 4737);
+    			add_location(script1, file$f, 245, 4, 7117);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$f, 177, 4, 4818);
+    			add_location(script2, file$f, 246, 4, 7198);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$f, 178, 4, 4896);
+    			add_location(script3, file$f, 247, 4, 7276);
     			attr_dev(div, "id", "container");
-    			add_location(div, file$f, 184, 8, 5074);
+    			add_location(div, file$f, 253, 8, 7454);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$f, 183, 4, 5030);
-    			add_location(main, file$f, 181, 0, 5012);
+    			add_location(figure, file$f, 252, 4, 7410);
+    			add_location(main, file$f, 250, 0, 7392);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12108,7 +12335,7 @@ var app = (function () {
     			append_dev(main, figure);
     			append_dev(figure, div);
     			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", loadGraphs$2, false, false, false);
+    			dispose = listen_dev(script3, "load", loadGraphs$1, false, false, false);
     		},
     		p: noop,
     		i: noop,
@@ -12151,17 +12378,30 @@ var app = (function () {
     	return array;
     }
 
-    async function loadGraphs$2() {
+    function eliminar(array, elemento) {
+    	var resultado = [];
+
+    	for (var i = 0; i < array.length; i++) {
+    		if (array[i] !== elemento) {
+    			resultado.push(array[i]);
+    		}
+    	}
+
+    	return resultado;
+    }
+
+    async function loadGraphs$1() {
     	let MyData = [];
     	const resData = await fetch("/api/v2/poverty-stats");
     	MyData = await resData.json();
     	ordenarAsc(MyData, "year");
 
     	var year = MyData.map(dato => {
-    		return dato.year;
+    		return parseInt(dato.year);
     	});
 
     	year = year.filter(function (valor, indiceActual, arreglo) {
+    		//quitar duplicados
     		let indiceAlBuscar = arreglo.indexOf(valor);
 
     		if (indiceActual === indiceAlBuscar) {
@@ -12171,8 +12411,76 @@ var app = (function () {
     		}
     	});
 
-    	console.log(year);
+    	var cont = MyData.map(dato => {
+    		return dato.continent;
+    	});
 
+    	cont = cont.filter(function (valor, indiceActual, arreglo) {
+    		//quitar duplicados
+    		let indiceAlBuscar = arreglo.indexOf(valor);
+
+    		if (indiceActual === indiceAlBuscar) {
+    			return true;
+    		} else {
+    			return false;
+    		}
+    	});
+
+    	// puntos de rellenos desde aqui
+    	for (var a = 0; a < cont.length; a++) {
+    		var Point = MyData.filter(function (el) {
+    			return el.continent == cont[a]; //recogemos datos de cada continente
+    		}).map(dato => {
+    			return {
+    				"continent": dato.continent,
+    				"year": parseInt(dato.year)
+    			};
+    		});
+
+    		/*var hash = {};
+    Point=Point.filter(function(current) {
+        var exists = !hash[current.year];
+        hash[current.year] = true;
+        if(!exists){
+           MyData
+           
+        }
+        return exists;
+    });
+    */
+    		//console.log(Point);
+    		var enc = false;
+
+    		for (var i = 0; i < year.length; i++) {
+    			enc = false;
+
+    			for (var j = 0; j < Point.length; j++) {
+    				//comprobamos si en cada año, el continente tiene un dato, sino lo rellena por defecto
+    				if (year[i] == Point[j]["year"]) {
+    					enc = true;
+    					break;
+    				}
+    			}
+
+    			//   console.log(Point);
+    			if (enc == false) {
+    				MyData.push({
+    					"country": "none",
+    					"under_190": 0,
+    					"under_320": 0,
+    					"under_550": 0,
+    					"year": year[i], //2014
+    					"continent": cont[a]
+    				});
+    			}
+    		}
+    	}
+
+    	//puntos de rellenos hasta aqui
+    	ordenarAsc(MyData, "year");
+
+    	// console.log(MyData);
+    	//recoger datos por continentes
     	var euro = MyData.filter(function (el) {
     		return el.continent == "europe";
     	}).map(dato => {
@@ -12209,6 +12517,7 @@ var app = (function () {
     		return parseFloat(dato.under_320);
     	});
 
+    	// console.log(year);
     	Highcharts.chart("container", {
     		chart: { type: "spline" },
     		title: { text: "Indice de pobreza inferior a 5.5" },
@@ -12270,7 +12579,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$8.warn(`<Highchart> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Highchart> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -12282,7 +12591,8 @@ var app = (function () {
     		Table,
     		Alert,
     		ordenarAsc,
-    		loadGraphs: loadGraphs$2
+    		eliminar,
+    		loadGraphs: loadGraphs$1
     	});
 
     	return [];
@@ -12304,7 +12614,7 @@ var app = (function () {
 
     /* src\front\GUI2POVERTY\ApexChart.svelte generated by Svelte v3.22.3 */
 
-    const { console: console_1$9, document: document_1$1 } = globals;
+    const { console: console_1$8, document: document_1$2 } = globals;
     const file$g = "src\\front\\GUI2POVERTY\\ApexChart.svelte";
 
     function create_fragment$i(ctx) {
@@ -12327,25 +12637,25 @@ var app = (function () {
     			t2 = space();
     			div = element("div");
     			if (script.src !== (script_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$g, 85, 2, 2240);
-    			add_location(h1, file$g, 89, 2, 2355);
+    			add_location(script, file$g, 85, 2, 2276);
+    			add_location(h1, file$g, 89, 2, 2391);
     			attr_dev(div, "id", "chart");
-    			attr_dev(div, "class", "svelte-51zg3d");
-    			add_location(div, file$g, 90, 2, 2429);
-    			add_location(main, file$g, 88, 0, 2345);
+    			attr_dev(div, "class", "svelte-c7jnis");
+    			add_location(div, file$g, 90, 2, 2465);
+    			add_location(main, file$g, 88, 0, 2381);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor, remount) {
-    			append_dev(document_1$1.head, script);
+    			append_dev(document_1$2.head, script);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, h1);
     			append_dev(main, t2);
     			append_dev(main, div);
     			if (remount) dispose();
-    			dispose = listen_dev(script, "load", loadGraphs$3, false, false, false);
+    			dispose = listen_dev(script, "load", loadGraphs$2, false, false, false);
     		},
     		p: noop,
     		i: noop,
@@ -12377,11 +12687,12 @@ var app = (function () {
     	return res;
     }
 
-    async function loadGraphs$3() {
+    async function loadGraphs$2() {
     	let MyData = [];
     	const resData = await fetch("/api/v2/poverty-stats");
     	MyData = await resData.json();
 
+    	//recoger datos por continentes
     	var euro = MyData.filter(el => {
     		return el.continent == "europe" && el.year == "2017";
     	}).map(dato => {
@@ -12443,12 +12754,12 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$9.warn(`<ApexChart> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$8.warn(`<ApexChart> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("ApexChart", $$slots, []);
-    	$$self.$capture_state = () => ({ onMount, pop, filtro, loadGraphs: loadGraphs$3 });
+    	$$self.$capture_state = () => ({ onMount, pop, filtro, loadGraphs: loadGraphs$2 });
     	return [];
     }
 
@@ -12528,7 +12839,7 @@ var app = (function () {
 
     /* src\front\GUI3LQ\Home.svelte generated by Svelte v3.22.3 */
 
-    const { console: console_1$a } = globals;
+    const { console: console_1$9 } = globals;
     const file$h = "src\\front\\GUI3LQ\\Home.svelte";
 
     function get_each_context$2(ctx, list, i) {
@@ -14448,7 +14759,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$a.warn(`<Home> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$9.warn(`<Home> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -14632,7 +14943,7 @@ var app = (function () {
 
     /* src\front\GUI3LQ\HighChart.svelte generated by Svelte v3.22.3 */
 
-    const { console: console_1$b } = globals;
+    const { console: console_1$a } = globals;
     const file$i = "src\\front\\GUI3LQ\\HighChart.svelte";
 
     // (186:4) <Button color="primary" on:click="{getLQLoadInitialData}">
@@ -14977,7 +15288,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$b.warn(`<HighChart> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$a.warn(`<HighChart> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -15030,7 +15341,7 @@ var app = (function () {
 
     /* src\front\GUI3LQ\ApexChart.svelte generated by Svelte v3.22.3 */
 
-    const { console: console_1$c, document: document_1$2 } = globals;
+    const { console: console_1$b, document: document_1$3 } = globals;
     const file$j = "src\\front\\GUI3LQ\\ApexChart.svelte";
 
     function create_fragment$m(ctx) {
@@ -15057,12 +15368,12 @@ var app = (function () {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor, remount) {
-    			append_dev(document_1$2.head, script);
+    			append_dev(document_1$3.head, script);
     			insert_dev(target, t, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, div);
     			if (remount) dispose();
-    			dispose = listen_dev(script, "load", loadGraphs$4, false, false, false);
+    			dispose = listen_dev(script, "load", loadGraphs$3, false, false, false);
     		},
     		p: noop,
     		i: noop,
@@ -15086,7 +15397,7 @@ var app = (function () {
     	return block;
     }
 
-    async function loadGraphs$4() {
+    async function loadGraphs$3() {
     	let MyData = [];
     	const resData = await fetch("/api/v2/lq-stats");
     	MyData = await resData.json();
@@ -15306,7 +15617,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$c.warn(`<ApexChart> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$b.warn(`<ApexChart> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -15329,7 +15640,7 @@ var app = (function () {
     		getLQ,
     		getLQLoadInitialData,
     		deleteLQALL,
-    		loadGraphs: loadGraphs$4
+    		loadGraphs: loadGraphs$3
     	});
 
     	$$self.$inject_state = $$props => {
@@ -15363,7 +15674,7 @@ var app = (function () {
 
     /* src\front\GUI3LQ\EditLq.svelte generated by Svelte v3.22.3 */
 
-    const { console: console_1$d } = globals;
+    const { console: console_1$c } = globals;
     const file$k = "src\\front\\GUI3LQ\\EditLq.svelte";
 
     // (1:0) <script>      import {          onMount      }
@@ -16245,7 +16556,7 @@ var app = (function () {
     	const writable_props = ["params"];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$d.warn(`<EditLq> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$c.warn(`<EditLq> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -16415,7 +16726,11 @@ var app = (function () {
 
     /* src\front\GUI3LQ\Integrations.svelte generated by Svelte v3.22.3 */
 
+<<<<<<< HEAD
     const { console: console_1$e } = globals;
+=======
+    const { console: console_1$d } = globals;
+>>>>>>> adb45f1ebd6b880ea671cc5db7143153ef864abb
     const file$l = "src\\front\\GUI3LQ\\Integrations.svelte";
 
     function create_fragment$o(ctx) {
@@ -16425,7 +16740,11 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			main.textContent = "pene";
+<<<<<<< HEAD
     			add_location(main, file$l, 87, 0, 2344);
+=======
+    			add_location(main, file$l, 83, 0, 2316);
+>>>>>>> adb45f1ebd6b880ea671cc5db7143153ef864abb
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -16522,7 +16841,11 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
+<<<<<<< HEAD
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$e.warn(`<Integrations> was created with unknown prop '${key}'`);
+=======
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$d.warn(`<Integrations> was created with unknown prop '${key}'`);
+>>>>>>> adb45f1ebd6b880ea671cc5db7143153ef864abb
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -16588,7 +16911,11 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			create_component(router.$$.fragment);
+<<<<<<< HEAD
     			add_location(main, file$m, 51, 0, 1850);
+=======
+    			add_location(main, file$m, 51, 0, 1852);
+>>>>>>> adb45f1ebd6b880ea671cc5db7143153ef864abb
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

@@ -1,17 +1,17 @@
 {
 	"info": {
-		"_postman_id": "58c11dbf-c895-4d8d-abea-9f4efcf7a7e1",
-		"name": "SOS1920-27-spc-stats-v2",
+		"_postman_id": "141d87c1-84db-4132-b16a-ac4c5f81da90",
+		"name": "SOS1920-27-spc-stats-v3",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "http://localhost:8000/api/v2/spc-stats",
+			"name": "http://localhost:8000/api/v3/spc-stats",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "43e277b6-d3da-41ce-b0a7-18e3d05840d3",
+						"id": "eac2c227-70f6-40fd-a7cf-3cde2b8fecd3",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -25,29 +25,29 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/v2/spc-stats",
+					"raw": "http://localhost:8000/api/v3/spc-stats",
 					"host": [
-						"http://localhost:8000/api/v2/spc-stats"
+						"http://localhost:8000/api/v3/spc-stats"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/v2/spc-stats/loadInitialData",
+			"name": "http://localhost:8000/api/v3/spc-stats/loadInitialData",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "f3ef5c2c-49d5-4197-a575-d777f98c3ed4",
+						"id": "ad6c7046-edaf-4e88-857a-8d0ca321b329",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
 							"",
-							"pm.test(\"Hay 12 datos\", function () {",
+							"pm.test(\"Hay 15 datos\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData).to.have.lengthOf(12);",
+							"    pm.expect(jsonData).to.have.lengthOf(15);",
 							"});",
 							""
 						],
@@ -71,9 +71,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/v2/spc-stats/loadInitialData",
+					"raw": "http://localhost:8000/api/v3/spc-stats/loadInitialData",
 					"host": [
-						"http://localhost:8000/api/v2/spc-stats"
+						"http://localhost:8000/api/v3/spc-stats"
 					],
 					"path": [
 						"loadInitialData"
@@ -83,12 +83,12 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/v2/spc-stats Ya iniciada",
+			"name": "http://localhost:8000/api/v3/spc-stats Ya iniciada",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "43e277b6-d3da-41ce-b0a7-18e3d05840d3",
+						"id": "1c01e984-93c2-49bc-b766-a70f99710024",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -105,21 +105,21 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/v2/spc-stats",
+					"raw": "http://localhost:8000/api/v3/spc-stats",
 					"host": [
-						"http://localhost:8000/api/v2/spc-stats"
+						"http://localhost:8000/api/v3/spc-stats"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/v2/spc-stats con limit y offset",
+			"name": "http://localhost:8000/api/v3/spc-stats con limit y offset",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "43e277b6-d3da-41ce-b0a7-18e3d05840d3",
+						"id": "c019fb13-dc8a-494a-85e1-e0e671b7798a",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -137,9 +137,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/v2/spc-stats?limit=3&offset=1",
+					"raw": "http://localhost:8000/api/v3/spc-stats?limit=3&offset=1",
 					"host": [
-						"http://localhost:8000/api/v2/spc-stats"
+						"http://localhost:8000/api/v3/spc-stats"
 					],
 					"query": [
 						{
@@ -156,12 +156,12 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/v2/spc-stats/ busqueda both_sex",
+			"name": "http://localhost:8000/api/v3/spc-stats/ busqueda both_sex",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "f3ef5c2c-49d5-4197-a575-d777f98c3ed4",
+						"id": "198eeee0-d946-41ac-8e8a-c1c6c46e830c",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -191,9 +191,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/v2/spc-stats?both_sex=20",
+					"raw": "http://localhost:8000/api/v3/spc-stats?both_sex=20",
 					"host": [
-						"http://localhost:8000/api/v2/spc-stats"
+						"http://localhost:8000/api/v3/spc-stats"
 					],
 					"query": [
 						{
@@ -206,12 +206,12 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/v2/spc-stats/ busqueda continent year female_rank",
+			"name": "http://localhost:8000/api/v3/spc-stats/ busqueda continent year female_rank",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "f3ef5c2c-49d5-4197-a575-d777f98c3ed4",
+						"id": "fd19b8a2-78fe-4bb8-a1b1-363d8938a397",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -241,9 +241,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/v2/spc-stats?continent=europe&year=2013&female_rank=37",
+					"raw": "http://localhost:8000/api/v3/spc-stats?continent=europe&year=2013&female_rank=37",
 					"host": [
-						"http://localhost:8000/api/v2/spc-stats"
+						"http://localhost:8000/api/v3/spc-stats"
 					],
 					"query": [
 						{
@@ -264,12 +264,12 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/v2/spc-stats/",
+			"name": "http://localhost:8000/api/v3/spc-stats/",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "655b61b6-9a94-46fc-96a7-002aea1eae17",
+						"id": "413bb317-d385-4b30-a094-a3f710ac8cd1",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -297,9 +297,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/v2/spc-stats/",
+					"raw": "http://localhost:8000/api/v3/spc-stats/",
 					"host": [
-						"http://localhost:8000/api/v2/spc-stats"
+						"http://localhost:8000/api/v3/spc-stats"
 					],
 					"path": [
 						""
@@ -309,12 +309,12 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/v2/spc-stats/guyana",
+			"name": "http://localhost:8000/api/v3/spc-stats/guyana",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "7b326409-5ea0-4891-8860-1108deeb466e",
+						"id": "d41519d6-05c5-492a-990f-1d9a40370d6b",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -328,9 +328,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/v2/spc-stats/guyana",
+					"raw": "http://localhost:8000/api/v3/spc-stats/guyana",
 					"host": [
-						"http://localhost:8000/api/v2/spc-stats"
+						"http://localhost:8000/api/v3/spc-stats"
 					],
 					"path": [
 						"guyana"
@@ -340,12 +340,12 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/v2/spc-stats/francia/2013",
+			"name": "http://localhost:8000/api/v3/spc-stats/francia/2013",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "43e277b6-d3da-41ce-b0a7-18e3d05840d3",
+						"id": "e1a634b2-7bfb-4505-9375-0690e04bdf19",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -359,9 +359,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/v2/spc-stats/francia/2013",
+					"raw": "http://localhost:8000/api/v3/spc-stats/francia/2013",
 					"host": [
-						"http://localhost:8000/api/v2/spc-stats"
+						"http://localhost:8000/api/v3/spc-stats"
 					],
 					"path": [
 						"francia",
@@ -372,12 +372,12 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/v2/spc-stats/francia/2013",
+			"name": "http://localhost:8000/api/v3/spc-stats/francia/2013",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "03d58256-cba5-454f-bf8d-4cf958532ed8",
+						"id": "9a34c30f-c0da-4fe9-a553-34a0e8964a8b",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {",
 							"    pm.response.to.have.status(201);",
@@ -400,9 +400,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/v2/spc-stats/francia/2013",
+					"raw": "http://localhost:8000/api/v3/spc-stats/francia/2013",
 					"host": [
-						"http://localhost:8000/api/v2/spc-stats"
+						"http://localhost:8000/api/v3/spc-stats"
 					],
 					"path": [
 						"francia",
@@ -413,12 +413,12 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/v2/spc-stats/guyana/2013",
+			"name": "http://localhost:8000/api/v3/spc-stats/guyana/2013",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "f550c748-18e7-41b9-be80-d1f6c5f3a7bd",
+						"id": "4ecb0285-7e88-43cf-af20-8534ad24491e",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -441,9 +441,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/v2/spc-stats/guyana/2013",
+					"raw": "http://localhost:8000/api/v3/spc-stats/guyana/2013",
 					"host": [
-						"http://localhost:8000/api/v2/spc-stats"
+						"http://localhost:8000/api/v3/spc-stats"
 					],
 					"path": [
 						"guyana",
@@ -454,12 +454,12 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/v2/spc-stats/francia",
+			"name": "http://localhost:8000/api/v3/spc-stats/francia",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "f550c748-18e7-41b9-be80-d1f6c5f3a7bd",
+						"id": "6807fc8d-d3f2-43f2-8e6e-1507cf36f5f9",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -482,9 +482,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/v2/spc-stats/francia",
+					"raw": "http://localhost:8000/api/v3/spc-stats/francia",
 					"host": [
-						"http://localhost:8000/api/v2/spc-stats"
+						"http://localhost:8000/api/v3/spc-stats"
 					],
 					"path": [
 						"francia"
@@ -494,12 +494,12 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/v2/spc-stats/francia",
+			"name": "http://localhost:8000/api/v3/spc-stats/francia",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "394ed669-3d87-4e27-84ef-4f05c29c6882",
+						"id": "ab3cbf91-6ff3-40da-8d4d-c4e46abcb207",
 						"exec": [
 							"pm.test(\"Status code is 405\", function () {",
 							"    pm.response.to.have.status(405);",
@@ -522,9 +522,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/v2/spc-stats/francia",
+					"raw": "http://localhost:8000/api/v3/spc-stats/francia",
 					"host": [
-						"http://localhost:8000/api/v2/spc-stats"
+						"http://localhost:8000/api/v3/spc-stats"
 					],
 					"path": [
 						"francia"
@@ -534,12 +534,12 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/v2/spc-stats/",
+			"name": "http://localhost:8000/api/v3/spc-stats/",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "a0cc6247-51a9-4b76-8407-ef7d0bcd2af7",
+						"id": "02de19f4-fab0-4e60-9c29-ff546c918434",
 						"exec": [
 							"pm.test(\"Status code is 405\", function () {",
 							"    pm.response.to.have.status(405);",
@@ -562,9 +562,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/v2/spc-stats/",
+					"raw": "http://localhost:8000/api/v3/spc-stats/",
 					"host": [
-						"http://localhost:8000/api/v2/spc-stats"
+						"http://localhost:8000/api/v3/spc-stats"
 					],
 					"path": [
 						""
@@ -574,12 +574,12 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8000/api/v2/spc-stats/",
+			"name": "http://localhost:8000/api/v3/spc-stats/",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "c5e0fcc8-2197-4022-b3b6-d6ba11aae4f8",
+						"id": "11a86c47-827e-41e2-ba51-f2ab757850fb",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -604,9 +604,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/v2/spc-stats/",
+					"raw": "http://localhost:8000/api/v3/spc-stats/",
 					"host": [
-						"http://localhost:8000/api/v2/spc-stats"
+						"http://localhost:8000/api/v3/spc-stats"
 					],
 					"path": [
 						""

@@ -21,7 +21,7 @@
       const resData = await fetch("/api/v2/poverty-stats");
       MyData = await resData.json();
     
- 
+      //recoger datos por continentes
       
       var euro = MyData.filter((el)=>{
         return el.continent=="europe" && el.year=="2017";
@@ -94,6 +94,6 @@
 
 <style>
   #chart{
-    width: 90%;
+    width: 80%;
   }
 </style>

@@ -24,14 +24,13 @@
      async function getSPCLoadInitialData() {
  
         console.log("Fetching spc...");
-        await fetch("/api/v2/spc-stats/loadInitialData");
-        const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+        await fetch("/api/v3/spc-stats/loadInitialData");
+        const res = await fetch("/api/v3/spc-stats");
         loadGraphs();
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
             spc = json;
-            totaldata=12;
             console.log("Received " + spc.length + " spc.");
         } else {
             errorMSG= res.status + ": " + res.statusText;
@@ -41,13 +40,12 @@
 
     //DELETE ALL
     async function deleteSPCALL() {
-        const res = await fetch("/api/v2/spc-stats/", {
+        const res = await fetch("/api/v3/spc-stats/", {
             method: "DELETE"
         }).then(function (res) {
             loadGraphs();
             visible = true;
             if (res.status==200) {
-                totaldata=0;
                 color = "success";
                 errorMSG = "Objetos borrados correctamente";
                 console.log("Deleted all spc.");            
@@ -67,7 +65,7 @@
     async function getSPC() {
  
         console.log("Fetching spc...");
-        const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+        const res = await fetch("/api/v3/spc-stats");
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
@@ -82,7 +80,7 @@
     async function loadGraphs() {
         let MyData = [];
 
-        const resData = await fetch("/api/v2/spc-stats");
+        const resData = await fetch("/api/v3/spc-stats");
         MyData = spc;
 
         var mujeres = MyData.map((dato)=> dato.female_number);

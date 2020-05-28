@@ -28,14 +28,13 @@
      async function getSPCLoadInitialData() {
  
         console.log("Fetching spc...");
-        await fetch("/api/v2/spc-stats/loadInitialData");
-        const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+        await fetch("/api/v3/spc-stats/loadInitialData");
+        const res = await fetch("/api/v3/spc-stats");
         loadGraphs();
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
             spc = json;
-            totaldata=12;
             console.log("Received " + spc.length + " spc.");
         } else {
             errorMSG= res.status + ": " + res.statusText;
@@ -45,13 +44,12 @@
 
     //DELETE ALL
     async function deleteSPCALL() {
-        const res = await fetch("/api/v2/spc-stats/", {
+        const res = await fetch("/api/v3/spc-stats/", {
             method: "DELETE"
         }).then(function (res) {
             loadGraphs();
             visible = true;
             if (res.status==200) {
-                totaldata=0;
                 color = "success";
                 errorMSG = "Objetos borrados correctamente";
                 console.log("Deleted all spc.");            
@@ -71,7 +69,7 @@
     async function getSPC() {
  
         console.log("Fetching spc...");
-        const res = await fetch("/api/v2/spc-stats?limit=10&offset=1");
+        const res = await fetch("/api/v3/spc-stats");
         loadGraphs();
         if (res.ok) {
             console.log("Ok:");
@@ -90,60 +88,60 @@
     async function loadGraphs() {
         let MyData = [];
 
-        const resData = await fetch("/api/v2/spc-stats");
+        const resData = await fetch("/api/v3/spc-stats");
         MyData = await resData.json();
 
         var euro = MyData.filter(function (el) {
-                return el.continent == "europe" && el.year==2013;
+                return el.continent == "europe" && parseInt(el.year)==2013;
             }).map((dato)=> {     
             return {
                 "name": dato.country,
-                "value": dato.both_sex
+                "value": parseInt(dato.both_sex)
                 };
         });
 
         var asia = MyData.filter(function (el) {
-                return el.continent == "asia" && el.year==2013;
+                return el.continent == "asia" && parseInt(el.year)==2013;
             }).map((dato)=> {     
             return {
                 "name": dato.country,
-                "value": dato.both_sex
+                "value": parseInt(dato.both_sex)
                 };
         });
 
         var africa = MyData.filter(function (el) {
-                return el.continent == "africa" && el.year==2013;
+                return el.continent == "africa" && parseInt(el.year)==2013;
             }).map((dato)=> {     
             return {
                 "name": dato.country,
-                "value": dato.both_sex
+                "value": parseInt(dato.both_sex)
                 };
         });
 
         var south = MyData.filter(function (el) {
-                return el.continent == "south america" && el.year==2013;
+                return el.continent == "south america" && parseInt(el.year)==2013;
             }).map((dato)=> {     
             return {
                 "name": dato.country,
-                "value": dato.both_sex
+                "value": parseInt(dato.both_sex)
                 };
         });
 
         var north = MyData.filter(function (el) {
-                return el.continent == "north america" && el.year==2013;
+                return el.continent == "north america" && parseInt(el.year)==2013;
             }).map((dato)=> {     
             return {
                 "name": dato.country,
-                "value": dato.both_sex
+                "value": parseInt(dato.both_sex)
                 };
         });
 
         var oceania = MyData.filter(function (el) {
-                return el.continent == "oceania" && el.year==2013;
+                return el.continent == "oceania" && parseInt(el.year)==2013;
             }).map((dato)=> {     
             return {
                 "name": dato.country,
-                "value": dato.both_sex
+                "value": parseInt(dato.both_sex)
                 };
         });
 
@@ -210,11 +208,6 @@
 </script>
 
 <svelte:head>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> <!--este es de apexcharts-->
-    <script src="apex.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js" on:load="{loadGraphs}"></script>
 </svelte:head>
 <main>

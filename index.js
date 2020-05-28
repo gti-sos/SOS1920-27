@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 
 const spcStatsv1 = require("./src/back/spcAPI/v1");
 const spcStatsv2 = require("./src/back/spcAPI/v2");
+const spcStatsv3 = require("./src/back/spcAPI/v3");
 const lqStatsv1 = require("./src/back/lqAPI/v1");
 const lqStatsv2 = require("./src/back/lqAPI/v2");
 const povertyStatsV1 = require("./src/back/povertyAPI/v1");
@@ -15,7 +16,7 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
-
+spcStatsv3(app);
 spcStatsv2(app);
 spcStatsv1(app);
 
