@@ -24,8 +24,8 @@
      async function getSPCLoadInitialData() {
  
         console.log("Fetching spc...");
-        await fetch("/api/v2/spc-stats/loadInitialData");
-        const res = await fetch("/api/v2/spc-stats");
+        await fetch("/api/v3/spc-stats/loadInitialData");
+        const res = await fetch("/api/v3/spc-stats");
         loadGraphs();
         if (res.ok) {
             console.log("Ok:");
@@ -40,7 +40,7 @@
 
     //DELETE ALL
     async function deleteSPCALL() {
-        const res = await fetch("/api/v2/spc-stats/", {
+        const res = await fetch("/api/v3/spc-stats/", {
             method: "DELETE"
         }).then(function (res) {
             loadGraphs();
@@ -65,7 +65,7 @@
     async function getSPC() {
  
         console.log("Fetching spc...");
-        const res = await fetch("/api/v2/spc-stats");
+        const res = await fetch("/api/v3/spc-stats");
         if (res.ok) {
             console.log("Ok:");
             const json = await res.json();
@@ -80,7 +80,7 @@
     async function loadGraphs() {
         let MyData = [];
 
-        const resData = await fetch("/api/v2/spc-stats");
+        const resData = await fetch("/api/v3/spc-stats");
         MyData = spc;
 
         var mujeres = MyData.map((dato)=> dato.female_number);
