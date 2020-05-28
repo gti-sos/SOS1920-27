@@ -14946,7 +14946,7 @@ var app = (function () {
     const { console: console_1$a } = globals;
     const file$i = "src\\front\\GUI3LQ\\HighChart.svelte";
 
-    // (186:4) <Button color="primary" on:click="{getLQLoadInitialData}">
+    // (183:4) <Button color="primary" on:click="{getLQLoadInitialData}">
     function create_default_slot_1$9(ctx) {
     	let t;
 
@@ -14966,14 +14966,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$9.name,
     		type: "slot",
-    		source: "(186:4) <Button color=\\\"primary\\\" on:click=\\\"{getLQLoadInitialData}\\\">",
+    		source: "(183:4) <Button color=\\\"primary\\\" on:click=\\\"{getLQLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (189:4) <Button color="danger" on:click="{deleteLQALL}">
+    // (186:4) <Button color="danger" on:click="{deleteLQALL}">
     function create_default_slot$a(ctx) {
     	let t;
 
@@ -14993,7 +14993,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$a.name,
     		type: "slot",
-    		source: "(189:4) <Button color=\\\"danger\\\" on:click=\\\"{deleteLQALL}\\\">",
+    		source: "(186:4) <Button color=\\\"danger\\\" on:click=\\\"{deleteLQALL}\\\">",
     		ctx
     	});
 
@@ -15065,22 +15065,22 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "En esta gráfica veremos la clasificación de los países dependiendo de su calidad de vida en 2016 basándonos en algunos datos de dichos países, como puede ser su popularidad, clima, seguridad, etc.";
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$i, 177, 4, 4901);
+    			add_location(script0, file$i, 174, 4, 4817);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$i, 178, 4, 4972);
+    			add_location(script1, file$i, 175, 4, 4888);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$i, 179, 4, 5050);
+    			add_location(script2, file$i, 176, 4, 4966);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$i, 180, 4, 5130);
-    			add_location(h1, file$i, 184, 4, 5261);
+    			add_location(script3, file$i, 177, 4, 5046);
+    			add_location(h1, file$i, 181, 4, 5177);
     			attr_dev(div, "id", "container");
     			attr_dev(div, "class", "svelte-1p6b9xa");
-    			add_location(div, file$i, 192, 8, 5537);
+    			add_location(div, file$i, 189, 8, 5453);
     			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$i, 193, 8, 5573);
+    			add_location(p, file$i, 190, 8, 5489);
     			attr_dev(figure, "class", "highcharts-figure svelte-1p6b9xa");
-    			add_location(figure, file$i, 191, 4, 5493);
-    			add_location(main, file$i, 183, 0, 5249);
+    			add_location(figure, file$i, 188, 4, 5409);
+    			add_location(main, file$i, 180, 0, 5165);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15104,19 +15104,19 @@ var app = (function () {
     			append_dev(figure, p);
     			current = true;
     			if (remount) dispose();
-    			dispose = listen_dev(script3, "load", LoadGraphs$1, false, false, false);
+    			dispose = listen_dev(script3, "load", LoadGraphs, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button0_changes = {};
 
-    			if (dirty & /*$$scope*/ 256) {
+    			if (dirty & /*$$scope*/ 128) {
     				button0_changes.$$scope = { dirty, ctx };
     			}
 
     			button0.$set(button0_changes);
     			const button1_changes = {};
 
-    			if (dirty & /*$$scope*/ 256) {
+    			if (dirty & /*$$scope*/ 128) {
     				button1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -15157,7 +15157,7 @@ var app = (function () {
     	return block;
     }
 
-    async function LoadGraphs$1() {
+    async function LoadGraphs() {
     	let MyData = [];
     	const resData = await fetch("/api/v2/lq-stats");
     	MyData = await resData.json();
@@ -15222,14 +15222,13 @@ var app = (function () {
     	let color = "danger";
     	let errorMSG = "";
     	let lq = [];
-    	let totaldata = 12;
     	onMount(getLQ);
 
     	//GET
     	async function getLQ() {
     		console.log("Fetching lq...");
     		const res = await fetch("api/v2/lq-stats?limit=10&offset=1");
-    		LoadGraphs$1();
+    		LoadGraphs();
 
     		if (res.ok) {
     			console.log("Ok");
@@ -15247,13 +15246,12 @@ var app = (function () {
     		console.log("Fetching lq...");
     		await fetch("/api/v2/lq-stats/loadInitialData");
     		const res = await fetch("/api/v2/lq-stats?limit=10&offset=" + 1);
-    		LoadGraphs$1();
+    		LoadGraphs();
 
     		if (res.ok) {
     			console.log("Ok");
     			const json = await res.json();
     			lq = json;
-    			totaldata = 12;
     			console.log("Received " + lq.length + " lq.");
     		} else {
     			errorMSG = res.status + ": " + res.statusText;
@@ -15264,11 +15262,10 @@ var app = (function () {
     	//DELETE ALL
     	async function deleteLQALL() {
     		const res = await fetch("/api/v2/lq-stats", { method: "DELETE" }).then(function (res) {
-    			LoadGraphs$1();
+    			LoadGraphs();
     			visible = true;
 
     			if (res.status == 200) {
-    				totaldata = 0;
     				color = "sucess";
     				errorMSG = "Objetos borrados correctamente";
     				console.log("Deleted all lq.");
@@ -15303,11 +15300,10 @@ var app = (function () {
     		color,
     		errorMSG,
     		lq,
-    		totaldata,
     		getLQ,
     		getLQLoadInitialData,
     		deleteLQALL,
-    		LoadGraphs: LoadGraphs$1
+    		LoadGraphs
     	});
 
     	$$self.$inject_state = $$props => {
@@ -15315,7 +15311,6 @@ var app = (function () {
     		if ("color" in $$props) color = $$props.color;
     		if ("errorMSG" in $$props) errorMSG = $$props.errorMSG;
     		if ("lq" in $$props) lq = $$props.lq;
-    		if ("totaldata" in $$props) totaldata = $$props.totaldata;
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -15359,10 +15354,10 @@ var app = (function () {
     			main = element("main");
     			div = element("div");
     			if (script.src !== (script_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$j, 240, 4, 7039);
+    			add_location(script, file$j, 237, 4, 6955);
     			attr_dev(div, "id", "chart");
-    			add_location(div, file$j, 244, 0, 7151);
-    			add_location(main, file$j, 243, 0, 7143);
+    			add_location(div, file$j, 241, 0, 7067);
+    			add_location(main, file$j, 240, 0, 7059);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15547,7 +15542,6 @@ var app = (function () {
     }
 
     function instance$m($$self, $$props, $$invalidate) {
-    	let isOpen = false;
     	let lq = [];
 
     	//ALERTAS
@@ -15583,7 +15577,6 @@ var app = (function () {
     			console.log("Ok");
     			const json = await res.json();
     			lq = json;
-    			totaldata = 12;
     			console.log("Received " + lq.length + " lq.");
     		} else {
     			errorMSG = res.status + ": " + res.statusText;
@@ -15598,7 +15591,6 @@ var app = (function () {
     			visible = true;
 
     			if (res.status == 200) {
-    				totaldata = 0;
     				color = "sucess";
     				errorMSG = "Objetos borrados correctamente";
     				console.log("Deleted all lq.");
@@ -15632,7 +15624,6 @@ var app = (function () {
     		Collapse,
     		CardBody,
     		Card,
-    		isOpen,
     		lq,
     		visible,
     		color,
@@ -15644,7 +15635,6 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("isOpen" in $$props) isOpen = $$props.isOpen;
     		if ("lq" in $$props) lq = $$props.lq;
     		if ("visible" in $$props) visible = $$props.visible;
     		if ("color" in $$props) color = $$props.color;
@@ -16726,37 +16716,118 @@ var app = (function () {
 
     /* src\front\GUI3LQ\Integrations.svelte generated by Svelte v3.22.3 */
 
-<<<<<<< HEAD
-    const { console: console_1$e } = globals;
-=======
     const { console: console_1$d } = globals;
->>>>>>> adb45f1ebd6b880ea671cc5db7143153ef864abb
     const file$l = "src\\front\\GUI3LQ\\Integrations.svelte";
 
     function create_fragment$o(ctx) {
+    	let script0;
+    	let script0_src_value;
+    	let script1;
+    	let script1_src_value;
+    	let t0;
     	let main;
+    	let h30;
+    	let t1;
+    	let a0;
+    	let t3;
+    	let figure;
+    	let div;
+    	let t4;
+    	let p;
+    	let t6;
+    	let h31;
+    	let t7;
+    	let a1;
+    	let t9;
+    	let h32;
+    	let t10;
+    	let a2;
+    	let dispose;
 
     	const block = {
     		c: function create() {
+    			script0 = element("script");
+    			script1 = element("script");
+    			t0 = space();
     			main = element("main");
-    			main.textContent = "pene";
-<<<<<<< HEAD
-    			add_location(main, file$l, 87, 0, 2344);
-=======
-    			add_location(main, file$l, 83, 0, 2316);
->>>>>>> adb45f1ebd6b880ea671cc5db7143153ef864abb
+    			h30 = element("h3");
+    			t1 = text("API Externa 1 - ");
+    			a0 = element("a");
+    			a0.textContent = "Link EndPoint";
+    			t3 = space();
+    			figure = element("figure");
+    			div = element("div");
+    			t4 = space();
+    			p = element("p");
+    			p.textContent = "En esta gráfica podemos ver la comparación del nivel de salud de cada país respecto a los casos confirmados por la nueva pandemia mundial, el Covid-19";
+    			t6 = space();
+    			h31 = element("h3");
+    			t7 = text("API Externa 2 - ");
+    			a1 = element("a");
+    			a1.textContent = "Link EndPoint";
+    			t9 = space();
+    			h32 = element("h3");
+    			t10 = text("API sos1920-09 - ");
+    			a2 = element("a");
+    			a2.textContent = "Link EndPoint";
+    			if (script0.src !== (script0_src_value = "https://code.jquery.com/jquery-3.1.1.min.js")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$l, 198, 4, 5106);
+    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$l, 199, 0, 5175);
+    			attr_dev(a0, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
+    			add_location(a0, file$l, 203, 24, 5325);
+    			add_location(h30, file$l, 203, 4, 5305);
+    			attr_dev(div, "id", "container");
+    			attr_dev(div, "class", "svelte-cmumb");
+    			add_location(div, file$l, 205, 2, 5460);
+    			attr_dev(p, "class", "highcharts-description");
+    			add_location(p, file$l, 206, 2, 5490);
+    			attr_dev(figure, "class", "highcharts-figure svelte-cmumb");
+    			add_location(figure, file$l, 204, 4, 5422);
+    			attr_dev(a1, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
+    			add_location(a1, file$l, 211, 20, 5723);
+    			add_location(h31, file$l, 211, 0, 5703);
+    			attr_dev(a2, "href", "http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats");
+    			add_location(a2, file$l, 213, 21, 5839);
+    			add_location(h32, file$l, 213, 0, 5818);
+    			add_location(main, file$l, 202, 0, 5293);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
-    		m: function mount(target, anchor) {
+    		m: function mount(target, anchor, remount) {
+    			append_dev(document.head, script0);
+    			append_dev(document.head, script1);
+    			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
+    			append_dev(main, h30);
+    			append_dev(h30, t1);
+    			append_dev(h30, a0);
+    			append_dev(main, t3);
+    			append_dev(main, figure);
+    			append_dev(figure, div);
+    			append_dev(figure, t4);
+    			append_dev(figure, p);
+    			append_dev(main, t6);
+    			append_dev(main, h31);
+    			append_dev(h31, t7);
+    			append_dev(h31, a1);
+    			append_dev(main, t9);
+    			append_dev(main, h32);
+    			append_dev(h32, t10);
+    			append_dev(h32, a2);
+    			if (remount) dispose();
+    			dispose = listen_dev(script1, "load", coronavirus, false, false, false);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
+    			detach_dev(script0);
+    			detach_dev(script1);
+    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
+    			dispose();
     		}
     	};
 
@@ -16771,19 +16842,113 @@ var app = (function () {
     	return block;
     }
 
+    function toMinus(palabra) {
+    	palabra = palabra.charAt(0).toLowerCase() + palabra.slice(1);
+    	return palabra;
+    }
+
+    //api externa 1 (coronavirus)
+    async function coronavirus() {
+    	let covid = [];
+    	let lifeq = [];
+    	let lista_comun = [];
+    	const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats");
+    	lifeq = await res1.json();
+    	const res2 = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations");
+    	covid = await res2.json();
+    	var paises = covid.locations.map(dato => dato.country);
+    	var pruieba = covid.locations.map(dato => dato.country);
+    	var misPaises = lifeq.map(dato => dato.country);
+    	var salud = [];
+
+    	//para tener los países comunes
+    	for (let i = 0; i < misPaises.length; i++) {
+    		for (let j = 0; j < paises.length; j++) {
+    			if (misPaises[i].localeCompare(toMinus(paises[j])) == 0) {
+    				lista_comun.push(misPaises[i]);
+    			}
+    		}
+    	}
+
+    	let conjunto = new Set(lista_comun);
+    	let lista_final = Array.from(conjunto);
+    	let lista = [];
+
+    	//coger los casos confirmados de covid por cada pais
+    	for (let index = 0; index < lista_final.length; index++) {
+    		var llamada = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations?country=" + lista_final[index]);
+    		var datos = await llamada.json();
+    		lista.push(datos.latest.confirmed);
+    	}
+
+    	console.log(lista);
+
+    	//coger salud paises comunes
+    	for (let index = 0; index < lifeq.length; index++) {
+    		if (lista_final.includes(lifeq[index].country)) {
+    			salud.push(lifeq[index].health);
+    		}
+    	}
+
+    	//grafica
+    	Highcharts.chart("container", {
+    		chart: { type: "column" },
+    		title: {
+    			text: "Comparación del nivel de salud de cada país respecto a los casos confirmados por Covid-19"
+    		},
+    		xAxis: { categories: lista_final },
+    		yAxis: [
+    			{
+    				min: 0,
+    				title: { text: "Nivel de Salud" }
+    			},
+    			{
+    				title: { text: "Casos confirmados por covid" },
+    				opposite: true
+    			}
+    		],
+    		legend: { shadow: false },
+    		tooltip: { shared: true },
+    		plotOptions: {
+    			column: {
+    				grouping: false,
+    				shadow: false,
+    				borderWidth: 0
+    			}
+    		},
+    		series: [
+    			{
+    				name: "Nivel de Salud",
+    				color: "rgba(165,170,217,1)",
+    				data: salud,
+    				pointPadding: 0.3,
+    				pointPlacement: -0.2
+    			},
+    			{
+    				name: "Casos confirmados por covid",
+    				color: "rgba(248,161,63,1)",
+    				data: lista,
+    				tooltip: { valuePrefix: "", valueSuffix: " " },
+    				pointPadding: 0.3,
+    				pointPlacement: 0.2,
+    				yAxis: 1
+    			}
+    		]
+    	});
+    }
+
     function instance$o($$self, $$props, $$invalidate) {
     	let visible = false;
     	let color = "danger";
     	let errorMSG = "";
     	let lq = [];
-    	let totaldata = 12;
     	onMount(getLQ);
+    	console.log(toMinus("Hola"));
 
     	//GET
     	async function getLQ() {
     		console.log("Fetching lq...");
     		const res = await fetch("api/v2/lq-stats?limit=10&offset=1");
-    		LoadGraphs();
 
     		if (res.ok) {
     			console.log("Ok");
@@ -16801,13 +16966,11 @@ var app = (function () {
     		console.log("Fetching lq...");
     		await fetch("/api/v2/lq-stats/loadInitialData");
     		const res = await fetch("/api/v2/lq-stats?limit=10&offset=" + 1);
-    		LoadGraphs();
 
     		if (res.ok) {
     			console.log("Ok");
     			const json = await res.json();
     			lq = json;
-    			totaldata = 12;
     			console.log("Received " + lq.length + " lq.");
     		} else {
     			errorMSG = res.status + ": " + res.statusText;
@@ -16818,11 +16981,9 @@ var app = (function () {
     	//DELETE ALL
     	async function deleteLQALL() {
     		const res = await fetch("/api/v2/lq-stats", { method: "DELETE" }).then(function (res) {
-    			LoadGraphs();
     			visible = true;
 
     			if (res.status == 200) {
-    				totaldata = 0;
     				color = "sucess";
     				errorMSG = "Objetos borrados correctamente";
     				console.log("Deleted all lq.");
@@ -16841,11 +17002,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-<<<<<<< HEAD
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$e.warn(`<Integrations> was created with unknown prop '${key}'`);
-=======
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$d.warn(`<Integrations> was created with unknown prop '${key}'`);
->>>>>>> adb45f1ebd6b880ea671cc5db7143153ef864abb
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -16860,10 +17017,11 @@ var app = (function () {
     		color,
     		errorMSG,
     		lq,
-    		totaldata,
+    		toMinus,
     		getLQ,
     		getLQLoadInitialData,
-    		deleteLQALL
+    		deleteLQALL,
+    		coronavirus
     	});
 
     	$$self.$inject_state = $$props => {
@@ -16871,7 +17029,6 @@ var app = (function () {
     		if ("color" in $$props) color = $$props.color;
     		if ("errorMSG" in $$props) errorMSG = $$props.errorMSG;
     		if ("lq" in $$props) lq = $$props.lq;
-    		if ("totaldata" in $$props) totaldata = $$props.totaldata;
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -16911,11 +17068,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			create_component(router.$$.fragment);
-<<<<<<< HEAD
     			add_location(main, file$m, 51, 0, 1850);
-=======
-    			add_location(main, file$m, 51, 0, 1852);
->>>>>>> adb45f1ebd6b880ea671cc5db7143153ef864abb
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

@@ -12,7 +12,6 @@
     import Table from "sveltestrap/src/Table.svelte";
     import Button from "sveltestrap/src/Button.svelte";
     import { Collapse, CardBody, Card } from "sveltestrap";
-    let isOpen = false;
     let lq =[];
     //ALERTAS
     let visible = false;
@@ -49,7 +48,6 @@
             console.log("Ok");
             const json = await res.json();
             lq = json;
-            totaldata = 12;
             console.log("Received " + lq.length + " lq.");
         } else {
             errorMSG = res.status + ": " + res.statusText;
@@ -65,7 +63,6 @@
             getLQ();
             visible = true;
             if(res.status==200){
-                totaldata=0;
                 color = "sucess";
                 errorMSG = "Objetos borrados correctamente";
                 console.log("Deleted all lq.");
