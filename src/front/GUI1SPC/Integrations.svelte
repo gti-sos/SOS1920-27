@@ -15,6 +15,9 @@
     let errorMSG = "";
     onMount(getSPC);
  
+    //densidad de españa
+    var denspain = 0;
+
     function minusMayus(palabra, estado) {
         if (estado==true) {
                 palabra=palabra.charAt(0).toUpperCase() + palabra.slice(1)  
@@ -94,13 +97,14 @@
         MyData = await resData.json();
         
         //mi api
-        var ambos = MyData.map((dato)=> dato.both_sex*1000000);
+        var ambos = [];
         var paises = MyData.map((dato)=> dato.country);
 
         for (let index = 0; index < paises.length; index++) {
             const densityApi = await fetch("https://restcountries.eu/rest/v2/name/" + paises[index]);
             var density =  await densityApi.json();
             listaDensidad.push(density[0].population);       
+            ambos.push(MyData[index].both_sex*density[0].population/100); //deberia ser entre 100000 pero si no apena se ve
         }
 
         Highcharts.chart('container', {
@@ -182,7 +186,10 @@
 
             const suicidiosApi = await fetch("/api/v3/spc-stats?country=" + intersecMinus[index]);
             var resSuci =  await suicidiosApi.json();
-            listaSuicidios.push(resSuci[0].both_sex*100000);       
+
+            const densityApi = await fetch("https://restcountries.eu/rest/v2/name/" + intersecMinus[index]);
+            var density =  await densityApi.json();
+            listaSuicidios.push(parseInt(resSuci[0].both_sex*density[0].population/10000)); //entre 10000 para que se vea bien      
         }
 
         var options = {
@@ -259,42 +266,289 @@
     //api sos1920-02 bicis
     async function bicis(){
         let dataBicis = []; //guardamos todos los datos de bicis de 2015
-
+        let listaDonut = []
         const res = await fetch("https://sos1920-02.herokuapp.com/api/v2/evolution-of-cycling-routes?year=2015");
         dataBicis = await res.json();
 
         //hacemos map para el carril metropolitano
-        dataBicis.map(dato=> dato.metropolitan).reduce((a, b) => a + b, 0)
+        listaDonut.push(parseInt(dataBicis.map(dato=> dato.metropolitan).reduce((a, b) => a + b, 0)))
+        listaDonut.push(parseInt(dataBicis.map(dato=> dato.urban).reduce((a, b) => a + b, 0)))
+        listaDonut.push(parseInt(dataBicis.map(dato=> dato.rest).reduce((a, b) => a + b, 0)))
 
         var espa = spc.filter(dato => dato.country=="spain")
-    }// on:load={hospitalized}
+
+        const densityApi = await fetch("https://restcountries.eu/rest/v2/name/spain");
+        var density =  await densityApi.json();
+        
+        //meto en variable españa para no llamar mil veces
+        denspain = density[0].population
+
+        listaDonut.push(parseInt(espa.map(x=>x.both_sex)[0]*denspain/100000))
+
+        var options = {
+          series: listaDonut,
+          chart: {
+          width: '70%',
+          type: 'pie',
+        },
+        grid: {
+          padding: {
+            left: 300,
+            right: 0
+          }
+        },
+        labels: ["Carril Metropolitano", "Carril Urbano", "Carril Otros", "Suicidios"],
+        theme: {
+          monochrome: {
+            enabled: false
+          }
+        },
+        plotOptions: {
+          pie: {
+            dataLabels: {
+              offset: -5
+            }
+          }
+        },
+        title: {
+          text: "",
+          align: 'right'
+        },
+        dataLabels: {
+          formatter(val, opts) {
+            const name = opts.w.globals.labels[opts.seriesIndex]
+            return [name, val.toFixed(1) + '%']
+          }
+        },
+        legend: {
+          show: false
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart4"), options);
+        chart.render();    }// on:load={bicis}
 
     //api sos1920-04 roads kilometros de carretera
     async function roads(){
         let dataRoads = []; //guardamos todos los datos de bicis de 2015
+        let dataSui = []
 
         const res2 = await fetch("http://sos1920-04.herokuapp.com/api/v1/roads/");
         dataRoads = await res2.json();
+        
+        const densityApi = await fetch("https://restcountries.eu/rest/v2/name/spain");
+        var density =  await densityApi.json();
+        
+        var spainSui=parseInt(spc.filter(x => x.country=="spain").map(x=>x.both_sex)[0]*denspain/100000)
+        //repito la variable para que se  me quede en una linea recta al menos
+        for (let index = 0; index < dataRoads.length; index++) {
+            dataSui.push(spainSui)    
+        }
 
-        //hacemos map para el carril metropolitano
-        dataRoads.map(dato=> dato.total)
+        var totalRoads = dataRoads.map(dato=> dato.total)//hacemos map para coger el total de distancia
+        var totalProvincia =dataRoads.map(dato=> dato.province)
+
+        var options = {
+                series: [{
+                name: 'Total de carreteras por provincia',
+                type: 'column',
+                data: totalRoads
+                }, {
+                name: 'Nº suicidios en un año',
+                type: 'line',
+                data: dataSui
+                }],
+                chart: {
+                height: 350,
+                type: 'line',
+                },
+                stroke: {
+                width: [0, 4]
+                },
+                title: {
+                text: 'Relación total distancia de carreteras en España con el número de víctimas de suicidio',
+                align: 'center'
+                },
+                dataLabels: {
+                enabled: false,
+                enabledOnSeries: [1]
+                },
+                labels:totalProvincia,
+                xaxis: {
+                type: 'category'
+                },
+                yaxis: [{
+                title: {
+                    text: 'Total de carreteras por provincia',
+                },
+                
+                }, {
+                opposite: true,
+                title: {
+                    text: 'Nº suicidios en un año'
+                }
+            }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart3"), options);
+        chart.render();
     } 
     // on:load={roads}
 
-        //api sos1920-04 roads kilometros de carretera
-        async function hospitalized(){
-        let dataHospi = []; //guardamos todos los datos de bicis de 2015
+    //api sos1920-06 roads kilometros de carretera
+    async function hospitalized(){
+    let dataHospi = []; //guardamos todos los datos de bicis de 2015
 
-        const res3 = await fetch("https://sos1920-06.herokuapp.com/api/v1/not-hospitalized-stats?year=2014");
-        dataHospi = await res3.json();
+    const res3 = await fetch("/api/v2/not-hospitalized-stats"+"?year=2014");
+    dataHospi = await res3.json();
+    
+    var interHospi = []
+    var urbanHospi = []
+    //hacemos map para el interurban y urban
+    for (let index = 0; index < spc.length; index++) {
+      if (spc[index].country=="spain") {
+        interHospi.push(dataHospi.map(dato=>  dato.interurban).reduce((a, b) => a + b, 0))
+        urbanHospi.push(dataHospi.map(dato=>  dato.urban).reduce((a, b) => a + b, 0))
+      } else {
+        interHospi.push(0)
+        urbanHospi.push(0)
 
-        //hacemos map para el carril metropolitano
-        dataHospi.map(dato=>  dato.total).reduce((a, b) => a + b, 0)
-        console.log(dataHospi)
-    } 
+      }      
+    }
+    
+
+    var paises = spc.map(dato=>  dato.country)
+    var suici = spc.map(dato=>  dato.both_sex)
+    var suiciXdensidad = []
+    for (let index = 0; index < paises.length; index++) {
+        const densityApi = await fetch("https://restcountries.eu/rest/v2/name/" + paises[index]);
+        var density =  await densityApi.json();
+        suiciXdensidad.push(parseInt(suici[index]*denspain/100000));           
+    }
+    var suici = spc.map(dato=>  dato.both_sex)
+
+    var options = {
+      series: [{
+      name: 'No hospitalizados interurbanos',
+      type: 'column',
+      data: interHospi
+    }, {
+      name: 'No hospitalizados urbanos',
+      type: 'column',
+      data: urbanHospi
+    }, {
+      name: 'Suicidios en un año',
+      type: 'line',
+      data: suiciXdensidad
+    }],
+      chart: {
+      height: 350,
+      type: 'line',
+      stacked: false
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      width: [1, 1, 4]
+    },
+    title: {
+      text: 'Relación entre suicidios y personas no hospitalizadas',
+      align: 'center',
+      offsetX: 0
+    },
+    xaxis: {
+      categories: paises,
+    },
+    yaxis: [
+      {
+        axisTicks: {
+          show: true,
+        },
+        axisBorder: {
+          show: true,
+          color: '#008FFB'
+        },
+        labels: {
+          style: {
+            colors: '#008FFB',
+          }
+        },
+        title: {
+          text: "No hospitalizados interurbanos",
+          style: {
+            color: '#008FFB',
+          }
+        },
+        tooltip: {
+          enabled: true
+        }
+      },
+      {
+        seriesName: 'Income',
+        opposite: false,
+        axisTicks: {
+          show: true,
+        },
+        axisBorder: {
+          show: true,
+          color: '#00E396'
+        },
+        labels: {
+          style: {
+            colors: '#00E396',
+          }
+        },
+        title: {
+          text: "No hospitalizados urbanos",
+          style: {
+            color: '#00E396',
+          }
+        },
+      },
+      {
+        seriesName: 'Revenue',
+        opposite: true,
+        axisTicks: {
+          show: true,
+        },
+        axisBorder: {
+          show: true,
+          color: '#FEB019'
+        },
+        labels: {
+          style: {
+            colors: '#FEB019',
+          },
+        },
+        title: {
+          text: "Suicidios en un año",
+          style: {
+            color: '#FEB019',
+          }
+        }
+      },
+    ],
+    tooltip: {
+      fixed: {
+        enabled: true,
+        position: 'topLeft', // topRight, topLeft, bottomRight, bottomLeft
+        offsetY: 30,
+        offsetX: 60
+      },
+    },
+    legend: {
+      horizontalAlign: 'left',
+      offsetX: 40
+    }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart5"), options);
+    chart.render();
+} 
     // on:load={hospitalized}
 
-    //api sos1920-02 covid
+    //api  covid
     async function covid(){
         let dataCovid = []; //guardamos todos los datos de bicis de 2015
         let miApi = [];
@@ -321,11 +575,13 @@
         var suici = []
         for (let index = 0; index < paises.length; index++) {
                 if (inters.includes(paises[index].country_name)) {
-                    var punto1= paises[index].deaths_per_1m_population.replace(",", ".")
-                    estadisdeath.push(punto1)
+                    var punto1= paises[index].deaths_per_1m_population.replace(",", ".")                    
                     for (let j = 0; j < miApi.length; j++) { //para no hacer mil llamadas a mi api
                         if (miApi[j].country==minusMayus(paises[index].country_name)) {
-                            suici.push(miApi[j].both_sex)
+                          const densityApi = await fetch("https://restcountries.eu/rest/v2/name/" + miApi[j].country);
+                          var density =  await densityApi.json();
+                          suici.push(parseInt(miApi[j].both_sex*density[0].population/100000))
+                          estadisdeath.push(parseInt(punto1*density[0].population/1000000))
                         }
                         
                     }
@@ -338,7 +594,7 @@
             name: 'Muertes por cada millón de habitantes',
             data: estadisdeath
             }, {
-            name: 'Suicidios por cada 100.000 habitantes',
+            name: 'Suicidios en un año',
             data: suici
             }],
             chart: {
@@ -392,13 +648,14 @@
             var chart = new ApexCharts(document.querySelector("#chart2"), options);
             chart.render();
 
-    }// on:load={covid}
-
+    }
+    // on:load={covid}
 
 </script>
 
 <svelte:head>
-    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population} on:load={covid}></script>
+    <!--<script src="https://code.highcharts.com/modules/accessibility.js" on:load={hospitalized} on:load={covid} on:load={vehiculos} on:load={roads} on:load={population}></script>-->
+    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population} on:load={bicis} on:load={hospitalized} on:load={covid} on:load={vehiculos} on:load={roads}></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </svelte:head>
 <main>
@@ -413,34 +670,52 @@
     <br><br>
 
     <!--api externa densidad-->
+    <div class="contenedor">
     <h3 style="text-align: center;">Integración API externa 1</h3>
     <figure class="highcharts-figure">
         <div id="container"></div>
-        <p class="highcharts-description">
-            
-        </p>
+        <p class="highcharts-description"></p>
     </figure>
-
+    </div>
     <br>
 
     <!--api externa covid--> 
+    <div class="contenedor">
     <h3 style="text-align: center;">Integración API externa 2</h3>
     <div id="chart2">
-    </div>
+    </div></div> <br>
 
     <!--api nando-->
+    <div class="contenedor">
     <h3 style="text-align: center;">Integración API sos1920-09</h3>
     <div id="chart">
-    </div>
+    </div></div> <br>
 
     <!--api dani-->
-    <h3 style="text-align: center;">Integración API sos1920-02</h3>
+    <div class="contenedor">
+    <h3 style="text-align: center;">Integración API sos1920-04</h3>
     <div id="chart3">
-    </div>
+    </div></div> <br>
 
+    <!--api ana-->
+    <div class="contenedor">
+    <h3 style="text-align: center;">Integración API sos1920-02</h3>
+    <p style="text-align: center;"><b>Distancia de carriles bicis en España en relación al número de suicidios en un año</b></p>
+    <div id="chart4">
+    </div></div> <br>
+
+    <!--api juan-->
+    <div class="contenedor">
+      <h3 style="text-align: center;">Integración API sos1920-06</h3>
+      <div id="chart5">
+      </div></div> <br>
+    
 </main>
 
 <style>
+    h3{
+        text-decoration: underline;
+    }
 .highcharts-figure, .highcharts-data-table table {
     min-width: 310px; 
     max-width: 800px;
@@ -477,5 +752,11 @@
 }
 .highcharts-data-table tr:hover {
     background: #f1f7ff;
+}
+
+.contenedor{
+    border: 2px solid LightGray;
+  border-radius: 5px;
+  padding-top: 2%;
 }
 </style>

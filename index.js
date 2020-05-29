@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const request = require("request")
 
 const spcStatsv1 = require("./src/back/spcAPI/v1");
 const spcStatsv2 = require("./src/back/spcAPI/v2");
@@ -10,6 +11,7 @@ const povertyStatsV1 = require("./src/back/povertyAPI/v1");
 const povertyStatsV2 = require("./src/back/povertyAPI/v2");
 
 var cors = require('cors');
+
 var app = express();
 
 app.use(cors());

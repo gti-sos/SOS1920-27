@@ -8832,7 +8832,7 @@ var app = (function () {
     const { console: console_1$5, document: document_1$1 } = globals;
     const file$c = "src\\front\\GUI1SPC\\Integrations.svelte";
 
-    // (407:4) <Button outline color="success" on:click="{getSPCLoadInitialData}">
+    // (664:4) <Button outline color="success" on:click="{getSPCLoadInitialData}">
     function create_default_slot_1$5(ctx) {
     	let t;
 
@@ -8852,14 +8852,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$5.name,
     		type: "slot",
-    		source: "(407:4) <Button outline color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
+    		source: "(664:4) <Button outline color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (410:4) <Button outline color="danger" on:click="{deleteSPCALL}">
+    // (667:4) <Button outline color="danger" on:click="{deleteSPCALL}">
     function create_default_slot$6(ctx) {
     	let t;
 
@@ -8879,7 +8879,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$6.name,
     		type: "slot",
-    		source: "(410:4) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
+    		source: "(667:4) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
     		ctx
     	});
 
@@ -8900,26 +8900,53 @@ var app = (function () {
     	let br0;
     	let br1;
     	let t5;
+    	let div1;
     	let h30;
     	let t7;
     	let figure;
     	let div0;
     	let t8;
-    	let p;
+    	let p0;
     	let t9;
     	let br2;
     	let t10;
+    	let div3;
     	let h31;
     	let t12;
-    	let div1;
-    	let t13;
-    	let h32;
-    	let t15;
     	let div2;
+    	let t13;
+    	let br3;
+    	let t14;
+    	let div5;
+    	let h32;
     	let t16;
-    	let h33;
+    	let div4;
+    	let t17;
+    	let br4;
     	let t18;
-    	let div3;
+    	let div7;
+    	let h33;
+    	let t20;
+    	let div6;
+    	let t21;
+    	let br5;
+    	let t22;
+    	let div9;
+    	let h34;
+    	let t24;
+    	let p1;
+    	let b;
+    	let t26;
+    	let div8;
+    	let t27;
+    	let br6;
+    	let t28;
+    	let div11;
+    	let h35;
+    	let t30;
+    	let div10;
+    	let t31;
+    	let br7;
     	let current;
     	let dispose;
 
@@ -8963,60 +8990,124 @@ var app = (function () {
     			br0 = element("br");
     			br1 = element("br");
     			t5 = space();
+    			div1 = element("div");
     			h30 = element("h3");
     			h30.textContent = "Integración API externa 1";
     			t7 = space();
     			figure = element("figure");
     			div0 = element("div");
     			t8 = space();
-    			p = element("p");
+    			p0 = element("p");
     			t9 = space();
     			br2 = element("br");
     			t10 = space();
+    			div3 = element("div");
     			h31 = element("h3");
     			h31.textContent = "Integración API externa 2";
     			t12 = space();
-    			div1 = element("div");
+    			div2 = element("div");
     			t13 = space();
+    			br3 = element("br");
+    			t14 = space();
+    			div5 = element("div");
     			h32 = element("h3");
     			h32.textContent = "Integración API sos1920-09";
-    			t15 = space();
-    			div2 = element("div");
     			t16 = space();
-    			h33 = element("h3");
-    			h33.textContent = "Integración API sos1920-02";
+    			div4 = element("div");
+    			t17 = space();
+    			br4 = element("br");
     			t18 = space();
-    			div3 = element("div");
+    			div7 = element("div");
+    			h33 = element("h3");
+    			h33.textContent = "Integración API sos1920-04";
+    			t20 = space();
+    			div6 = element("div");
+    			t21 = space();
+    			br5 = element("br");
+    			t22 = space();
+    			div9 = element("div");
+    			h34 = element("h3");
+    			h34.textContent = "Integración API sos1920-02";
+    			t24 = space();
+    			p1 = element("p");
+    			b = element("b");
+    			b.textContent = "Distancia de carriles bicis en España en relación al número de suicidios en un año";
+    			t26 = space();
+    			div8 = element("div");
+    			t27 = space();
+    			br6 = element("br");
+    			t28 = space();
+    			div11 = element("div");
+    			h35 = element("h3");
+    			h35.textContent = "Integración API sos1920-06";
+    			t30 = space();
+    			div10 = element("div");
+    			t31 = space();
+    			br7 = element("br");
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$c, 400, 4, 12916);
+    			add_location(script0, file$c, 657, 4, 20482);
     			if (script1.src !== (script1_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$c, 401, 4, 13035);
-    			add_location(h1, file$c, 405, 4, 13130);
-    			add_location(br0, file$c, 412, 4, 13381);
-    			add_location(br1, file$c, 412, 8, 13385);
+    			add_location(script1, file$c, 658, 4, 20676);
+    			add_location(h1, file$c, 662, 4, 20771);
+    			add_location(br0, file$c, 669, 4, 21022);
+    			add_location(br1, file$c, 669, 8, 21026);
     			set_style(h30, "text-align", "center");
-    			add_location(h30, file$c, 415, 4, 13430);
+    			attr_dev(h30, "class", "svelte-weft4y");
+    			add_location(h30, file$c, 673, 4, 21101);
     			attr_dev(div0, "id", "container");
-    			attr_dev(div0, "class", "svelte-11guutf");
-    			add_location(div0, file$c, 417, 8, 13542);
-    			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$c, 418, 8, 13578);
-    			attr_dev(figure, "class", "highcharts-figure svelte-11guutf");
-    			add_location(figure, file$c, 416, 4, 13498);
-    			add_location(br2, file$c, 423, 4, 13663);
+    			attr_dev(div0, "class", "svelte-weft4y");
+    			add_location(div0, file$c, 675, 8, 21213);
+    			attr_dev(p0, "class", "highcharts-description");
+    			add_location(p0, file$c, 676, 8, 21249);
+    			attr_dev(figure, "class", "highcharts-figure svelte-weft4y");
+    			add_location(figure, file$c, 674, 4, 21169);
+    			attr_dev(div1, "class", "contenedor svelte-weft4y");
+    			add_location(div1, file$c, 672, 4, 21071);
+    			add_location(br2, file$c, 679, 4, 21320);
     			set_style(h31, "text-align", "center");
-    			add_location(h31, file$c, 426, 4, 13706);
-    			attr_dev(div1, "id", "chart2");
-    			add_location(div1, file$c, 427, 4, 13774);
+    			attr_dev(h31, "class", "svelte-weft4y");
+    			add_location(h31, file$c, 683, 4, 21393);
+    			attr_dev(div2, "id", "chart2");
+    			add_location(div2, file$c, 684, 4, 21461);
+    			attr_dev(div3, "class", "contenedor svelte-weft4y");
+    			add_location(div3, file$c, 682, 4, 21363);
+    			add_location(br3, file$c, 685, 17, 21497);
     			set_style(h32, "text-align", "center");
-    			add_location(h32, file$c, 431, 4, 13833);
-    			attr_dev(div2, "id", "chart");
-    			add_location(div2, file$c, 432, 4, 13902);
+    			attr_dev(h32, "class", "svelte-weft4y");
+    			add_location(h32, file$c, 689, 4, 21561);
+    			attr_dev(div4, "id", "chart");
+    			add_location(div4, file$c, 690, 4, 21630);
+    			attr_dev(div5, "class", "contenedor svelte-weft4y");
+    			add_location(div5, file$c, 688, 4, 21531);
+    			add_location(br4, file$c, 691, 17, 21665);
     			set_style(h33, "text-align", "center");
-    			add_location(h33, file$c, 436, 4, 13959);
-    			attr_dev(div3, "id", "chart3");
-    			add_location(div3, file$c, 437, 4, 14028);
-    			add_location(main, file$c, 403, 0, 13116);
+    			attr_dev(h33, "class", "svelte-weft4y");
+    			add_location(h33, file$c, 695, 4, 21728);
+    			attr_dev(div6, "id", "chart3");
+    			add_location(div6, file$c, 696, 4, 21797);
+    			attr_dev(div7, "class", "contenedor svelte-weft4y");
+    			add_location(div7, file$c, 694, 4, 21698);
+    			add_location(br5, file$c, 697, 17, 21833);
+    			set_style(h34, "text-align", "center");
+    			attr_dev(h34, "class", "svelte-weft4y");
+    			add_location(h34, file$c, 701, 4, 21895);
+    			add_location(b, file$c, 702, 35, 21995);
+    			set_style(p1, "text-align", "center");
+    			add_location(p1, file$c, 702, 4, 21964);
+    			attr_dev(div8, "id", "chart4");
+    			add_location(div8, file$c, 703, 4, 22094);
+    			attr_dev(div9, "class", "contenedor svelte-weft4y");
+    			add_location(div9, file$c, 700, 4, 21865);
+    			add_location(br6, file$c, 704, 17, 22130);
+    			set_style(h35, "text-align", "center");
+    			attr_dev(h35, "class", "svelte-weft4y");
+    			add_location(h35, file$c, 708, 6, 22195);
+    			attr_dev(div10, "id", "chart5");
+    			add_location(div10, file$c, 709, 6, 22266);
+    			attr_dev(div11, "class", "contenedor svelte-weft4y");
+    			add_location(div11, file$c, 707, 4, 22163);
+    			add_location(br7, file$c, 710, 19, 22304);
+    			add_location(main, file$c, 660, 0, 20757);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9035,45 +9126,76 @@ var app = (function () {
     			append_dev(main, br0);
     			append_dev(main, br1);
     			append_dev(main, t5);
-    			append_dev(main, h30);
-    			append_dev(main, t7);
-    			append_dev(main, figure);
+    			append_dev(main, div1);
+    			append_dev(div1, h30);
+    			append_dev(div1, t7);
+    			append_dev(div1, figure);
     			append_dev(figure, div0);
     			append_dev(figure, t8);
-    			append_dev(figure, p);
+    			append_dev(figure, p0);
     			append_dev(main, t9);
     			append_dev(main, br2);
     			append_dev(main, t10);
-    			append_dev(main, h31);
-    			append_dev(main, t12);
-    			append_dev(main, div1);
-    			append_dev(main, t13);
-    			append_dev(main, h32);
-    			append_dev(main, t15);
-    			append_dev(main, div2);
-    			append_dev(main, t16);
-    			append_dev(main, h33);
-    			append_dev(main, t18);
     			append_dev(main, div3);
+    			append_dev(div3, h31);
+    			append_dev(div3, t12);
+    			append_dev(div3, div2);
+    			append_dev(main, t13);
+    			append_dev(main, br3);
+    			append_dev(main, t14);
+    			append_dev(main, div5);
+    			append_dev(div5, h32);
+    			append_dev(div5, t16);
+    			append_dev(div5, div4);
+    			append_dev(main, t17);
+    			append_dev(main, br4);
+    			append_dev(main, t18);
+    			append_dev(main, div7);
+    			append_dev(div7, h33);
+    			append_dev(div7, t20);
+    			append_dev(div7, div6);
+    			append_dev(main, t21);
+    			append_dev(main, br5);
+    			append_dev(main, t22);
+    			append_dev(main, div9);
+    			append_dev(div9, h34);
+    			append_dev(div9, t24);
+    			append_dev(div9, p1);
+    			append_dev(p1, b);
+    			append_dev(div9, t26);
+    			append_dev(div9, div8);
+    			append_dev(main, t27);
+    			append_dev(main, br6);
+    			append_dev(main, t28);
+    			append_dev(main, div11);
+    			append_dev(div11, h35);
+    			append_dev(div11, t30);
+    			append_dev(div11, div10);
+    			append_dev(main, t31);
+    			append_dev(main, br7);
     			current = true;
     			if (remount) run_all(dispose);
 
     			dispose = [
     				listen_dev(script0, "load", population, false, false, false),
-    				listen_dev(script0, "load", /*covid*/ ctx[2], false, false, false)
+    				listen_dev(script0, "load", /*bicis*/ ctx[3], false, false, false),
+    				listen_dev(script0, "load", /*hospitalized*/ ctx[5], false, false, false),
+    				listen_dev(script0, "load", /*covid*/ ctx[6], false, false, false),
+    				listen_dev(script0, "load", /*vehiculos*/ ctx[2], false, false, false),
+    				listen_dev(script0, "load", /*roads*/ ctx[4], false, false, false)
     			];
     		},
     		p: function update(ctx, [dirty]) {
     			const button0_changes = {};
 
-    			if (dirty & /*$$scope*/ 256) {
+    			if (dirty & /*$$scope*/ 2048) {
     				button0_changes.$$scope = { dirty, ctx };
     			}
 
     			button0.$set(button0_changes);
     			const button1_changes = {};
 
-    			if (dirty & /*$$scope*/ 256) {
+    			if (dirty & /*$$scope*/ 2048) {
     				button1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9130,7 +9252,7 @@ var app = (function () {
     	MyData = await resData.json();
 
     	//mi api
-    	var ambos = MyData.map(dato => dato.both_sex * 1000000);
+    	var ambos = [];
 
     	var paises = MyData.map(dato => dato.country);
 
@@ -9138,6 +9260,7 @@ var app = (function () {
     		const densityApi = await fetch("https://restcountries.eu/rest/v2/name/" + paises[index]);
     		var density = await densityApi.json();
     		listaDensidad.push(density[0].population);
+    		ambos.push(MyData[index].both_sex * density[0].population / 100); //deberia ser entre 100000 pero si no apena se ve
     	}
 
     	Highcharts.chart("container", {
@@ -9170,33 +9293,13 @@ var app = (function () {
     	});
     }
 
-    //api sos1920-04 roads kilometros de carretera
-    async function roads() {
-    	let dataRoads = []; //guardamos todos los datos de bicis de 2015
-    	const res2 = await fetch("http://sos1920-04.herokuapp.com/api/v1/roads/");
-    	dataRoads = await res2.json();
-
-    	//hacemos map para el carril metropolitano
-    	dataRoads.map(dato => dato.total);
-    }
-
-    // on:load={roads}
-    //api sos1920-04 roads kilometros de carretera
-    async function hospitalized() {
-    	let dataHospi = []; //guardamos todos los datos de bicis de 2015
-    	const res3 = await fetch("https://sos1920-06.herokuapp.com/api/v1/not-hospitalized-stats?year=2014");
-    	dataHospi = await res3.json();
-
-    	//hacemos map para el carril metropolitano
-    	dataHospi.map(dato => dato.total).reduce((a, b) => a + b, 0);
-
-    	console.log(dataHospi);
-    }
-
     function instance$e($$self, $$props, $$invalidate) {
     	let spc = [];
     	let errorMSG = "";
     	onMount(getSPC);
+
+    	//densidad de españa
+    	var denspain = 0;
 
     	//GET INITIALDATA
     	async function getSPCLoadInitialData() {
@@ -9287,7 +9390,9 @@ var app = (function () {
     			listaVehiculos.push(resVehicu[0]["pev-stock"]);
     			const suicidiosApi = await fetch("/api/v3/spc-stats?country=" + intersecMinus[index]);
     			var resSuci = await suicidiosApi.json();
-    			listaSuicidios.push(resSuci[0].both_sex * 100000);
+    			const densityApi = await fetch("https://restcountries.eu/rest/v2/name/" + intersecMinus[index]);
+    			var density = await densityApi.json();
+    			listaSuicidios.push(parseInt(resSuci[0].both_sex * density[0].population / 10000)); //entre 10000 para que se vea bien      
     		}
 
     		var options = {
@@ -9352,17 +9457,216 @@ var app = (function () {
     	//api sos1920-02 bicis
     	async function bicis() {
     		let dataBicis = []; //guardamos todos los datos de bicis de 2015
+    		let listaDonut = [];
     		const res = await fetch("https://sos1920-02.herokuapp.com/api/v2/evolution-of-cycling-routes?year=2015");
     		dataBicis = await res.json();
 
     		//hacemos map para el carril metropolitano
-    		dataBicis.map(dato => dato.metropolitan).reduce((a, b) => a + b, 0);
+    		listaDonut.push(parseInt(dataBicis.map(dato => dato.metropolitan).reduce((a, b) => a + b, 0)));
 
+    		listaDonut.push(parseInt(dataBicis.map(dato => dato.urban).reduce((a, b) => a + b, 0)));
+    		listaDonut.push(parseInt(dataBicis.map(dato => dato.rest).reduce((a, b) => a + b, 0)));
     		var espa = spc.filter(dato => dato.country == "spain");
-    	} // on:load={hospitalized}
+    		const densityApi = await fetch("https://restcountries.eu/rest/v2/name/spain");
+    		var density = await densityApi.json();
+
+    		//meto en variable españa para no llamar mil veces
+    		denspain = density[0].population;
+
+    		listaDonut.push(parseInt(espa.map(x => x.both_sex)[0] * denspain / 100000));
+
+    		var options = {
+    			series: listaDonut,
+    			chart: { width: "70%", type: "pie" },
+    			grid: { padding: { left: 300, right: 0 } },
+    			labels: ["Carril Metropolitano", "Carril Urbano", "Carril Otros", "Suicidios"],
+    			theme: { monochrome: { enabled: false } },
+    			plotOptions: { pie: { dataLabels: { offset: -5 } } },
+    			title: { text: "", align: "right" },
+    			dataLabels: {
+    				formatter(val, opts) {
+    					const name = opts.w.globals.labels[opts.seriesIndex];
+    					return [name, val.toFixed(1) + "%"];
+    				}
+    			},
+    			legend: { show: false }
+    		};
+
+    		var chart = new Et(document.querySelector("#chart4"), options);
+    		chart.render();
+    	} // on:load={bicis}
+
+    	//api sos1920-04 roads kilometros de carretera
+    	async function roads() {
+    		let dataRoads = []; //guardamos todos los datos de bicis de 2015
+    		let dataSui = [];
+    		const res2 = await fetch("http://sos1920-04.herokuapp.com/api/v1/roads/");
+    		dataRoads = await res2.json();
+    		const densityApi = await fetch("https://restcountries.eu/rest/v2/name/spain");
+    		var density = await densityApi.json();
+    		var spainSui = parseInt(spc.filter(x => x.country == "spain").map(x => x.both_sex)[0] * denspain / 100000);
+
+    		//repito la variable para que se  me quede en una linea recta al menos
+    		for (let index = 0; index < dataRoads.length; index++) {
+    			dataSui.push(spainSui);
+    		}
+
+    		var totalRoads = dataRoads.map(dato => dato.total); //hacemos map para coger el total de distancia
+    		var totalProvincia = dataRoads.map(dato => dato.province);
+
+    		var options = {
+    			series: [
+    				{
+    					name: "Total de carreteras por provincia",
+    					type: "column",
+    					data: totalRoads
+    				},
+    				{
+    					name: "Nº suicidios en un año",
+    					type: "line",
+    					data: dataSui
+    				}
+    			],
+    			chart: { height: 350, type: "line" },
+    			stroke: { width: [0, 4] },
+    			title: {
+    				text: "Relación total distancia de carreteras en España con el número de víctimas de suicidio",
+    				align: "center"
+    			},
+    			dataLabels: { enabled: false, enabledOnSeries: [1] },
+    			labels: totalProvincia,
+    			xaxis: { type: "category" },
+    			yaxis: [
+    				{
+    					title: {
+    						text: "Total de carreteras por provincia"
+    					}
+    				},
+    				{
+    					opposite: true,
+    					title: { text: "Nº suicidios en un año" }
+    				}
+    			]
+    		};
+
+    		var chart = new Et(document.querySelector("#chart3"), options);
+    		chart.render();
+    	}
+
+    	// on:load={roads}
+    	//api sos1920-06 roads kilometros de carretera
+    	async function hospitalized() {
+    		let dataHospi = []; //guardamos todos los datos de bicis de 2015
+    		const res3 = await fetch("/api/v2/not-hospitalized-stats" + "?year=2014");
+    		dataHospi = await res3.json();
+    		var interHospi = [];
+    		var urbanHospi = [];
+
+    		//hacemos map para el interurban y urban
+    		for (let index = 0; index < spc.length; index++) {
+    			if (spc[index].country == "spain") {
+    				interHospi.push(dataHospi.map(dato => dato.interurban).reduce((a, b) => a + b, 0));
+    				urbanHospi.push(dataHospi.map(dato => dato.urban).reduce((a, b) => a + b, 0));
+    			} else {
+    				interHospi.push(0);
+    				urbanHospi.push(0);
+    			}
+    		}
+
+    		var paises = spc.map(dato => dato.country);
+    		var suici = spc.map(dato => dato.both_sex);
+    		var suiciXdensidad = [];
+
+    		for (let index = 0; index < paises.length; index++) {
+    			const densityApi = await fetch("https://restcountries.eu/rest/v2/name/" + paises[index]);
+    			var density = await densityApi.json();
+    			suiciXdensidad.push(parseInt(suici[index] * denspain / 100000));
+    		}
+
+    		var suici = spc.map(dato => dato.both_sex);
+
+    		var options = {
+    			series: [
+    				{
+    					name: "No hospitalizados interurbanos",
+    					type: "column",
+    					data: interHospi
+    				},
+    				{
+    					name: "No hospitalizados urbanos",
+    					type: "column",
+    					data: urbanHospi
+    				},
+    				{
+    					name: "Suicidios en un año",
+    					type: "line",
+    					data: suiciXdensidad
+    				}
+    			],
+    			chart: {
+    				height: 350,
+    				type: "line",
+    				stacked: false
+    			},
+    			dataLabels: { enabled: false },
+    			stroke: { width: [1, 1, 4] },
+    			title: {
+    				text: "Relación entre suicidios y personas no hospitalizadas",
+    				align: "center",
+    				offsetX: 0
+    			},
+    			xaxis: { categories: paises },
+    			yaxis: [
+    				{
+    					axisTicks: { show: true },
+    					axisBorder: { show: true, color: "#008FFB" },
+    					labels: { style: { colors: "#008FFB" } },
+    					title: {
+    						text: "No hospitalizados interurbanos",
+    						style: { color: "#008FFB" }
+    					},
+    					tooltip: { enabled: true }
+    				},
+    				{
+    					seriesName: "Income",
+    					opposite: false,
+    					axisTicks: { show: true },
+    					axisBorder: { show: true, color: "#00E396" },
+    					labels: { style: { colors: "#00E396" } },
+    					title: {
+    						text: "No hospitalizados urbanos",
+    						style: { color: "#00E396" }
+    					}
+    				},
+    				{
+    					seriesName: "Revenue",
+    					opposite: true,
+    					axisTicks: { show: true },
+    					axisBorder: { show: true, color: "#FEB019" },
+    					labels: { style: { colors: "#FEB019" } },
+    					title: {
+    						text: "Suicidios en un año",
+    						style: { color: "#FEB019" }
+    					}
+    				}
+    			],
+    			tooltip: {
+    				fixed: {
+    					enabled: true,
+    					position: "topLeft", // topRight, topLeft, bottomRight, bottomLeft
+    					offsetY: 30,
+    					offsetX: 60
+    				}
+    			},
+    			legend: { horizontalAlign: "left", offsetX: 40 }
+    		};
+
+    		var chart = new Et(document.querySelector("#chart5"), options);
+    		chart.render();
+    	}
 
     	// on:load={hospitalized}
-    	//api sos1920-02 covid
+    	//api  covid
     	async function covid() {
     		let dataCovid = []; //guardamos todos los datos de bicis de 2015
     		let miApi = [];
@@ -9385,12 +9689,14 @@ var app = (function () {
     		for (let index = 0; index < paises.length; index++) {
     			if (inters.includes(paises[index].country_name)) {
     				var punto1 = paises[index].deaths_per_1m_population.replace(",", ".");
-    				estadisdeath.push(punto1);
 
     				for (let j = 0; j < miApi.length; j++) {
     					//para no hacer mil llamadas a mi api
     					if (miApi[j].country == minusMayus(paises[index].country_name)) {
-    						suici.push(miApi[j].both_sex);
+    						const densityApi = await fetch("https://restcountries.eu/rest/v2/name/" + miApi[j].country);
+    						var density = await densityApi.json();
+    						suici.push(parseInt(miApi[j].both_sex * density[0].population / 100000));
+    						estadisdeath.push(parseInt(punto1 * density[0].population / 1000000));
     					}
     				}
     			}
@@ -9402,10 +9708,7 @@ var app = (function () {
     					name: "Muertes por cada millón de habitantes",
     					data: estadisdeath
     				},
-    				{
-    					name: "Suicidios por cada 100.000 habitantes",
-    					data: suici
-    				}
+    				{ name: "Suicidios en un año", data: suici }
     			],
     			chart: { type: "bar", height: 350, stacked: true },
     			plotOptions: { bar: { horizontal: true } },
@@ -9440,7 +9743,7 @@ var app = (function () {
 
     		var chart = new Et(document.querySelector("#chart2"), options);
     		chart.render();
-    	} // on:load={covid}
+    	}
 
     	const writable_props = [];
 
@@ -9460,6 +9763,7 @@ var app = (function () {
     		spc,
     		ApexCharts: Et,
     		errorMSG,
+    		denspain,
     		minusMayus,
     		getSPCLoadInitialData,
     		deleteSPCALL,
@@ -9475,13 +9779,22 @@ var app = (function () {
     	$$self.$inject_state = $$props => {
     		if ("spc" in $$props) spc = $$props.spc;
     		if ("errorMSG" in $$props) errorMSG = $$props.errorMSG;
+    		if ("denspain" in $$props) denspain = $$props.denspain;
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [getSPCLoadInitialData, deleteSPCALL, covid];
+    	return [
+    		getSPCLoadInitialData,
+    		deleteSPCALL,
+    		vehiculos,
+    		bicis,
+    		roads,
+    		hospitalized,
+    		covid
+    	];
     }
 
     class Integrations extends SvelteComponentDev {
