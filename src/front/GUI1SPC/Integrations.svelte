@@ -651,11 +651,68 @@
     }
     // on:load={covid}
 
+    //api  airQuality
+    async function airQuality(){
+        let dataAirQuality = [];
+        let miApi = [];
+        let air = []
+        let paisesFinal = [] //paises que coinciden
+
+        const suicidiosApi2 = await fetch("/api/v3/spc-stats?");
+        miApi =  await suicidiosApi2.json();
+
+        var paises = miApi.map(x => x.country)
+        var suici = miApi.map(x => x.both_sex)      
+        for (let index = 0; index < paises.length; index++) {
+            const resAir = await fetch("https://api.waqi.info/feed/"+paises[index]+"/?token=3c7df8258ed0ff3424b1bb3053c7c7d50dfbefe3");
+            dataAirQuality = await resAir.json();
+
+            if (dataAirQuality.status=="ok") {
+              air.push(dataAirQuality.data.aqi)
+            }
+            else air.push(null)
+        }
+
+        var options = {
+          series: [{
+          name: 'Nº suicidios por cada 100.000 habitantes',
+          data: suici
+        }, {
+          name: 'Calidad de aire (a mayor, peor calidad)',
+          data: air
+        }],
+          chart: {
+          height: 350,
+          type: 'line',
+          zoom: {
+            enabled: false
+          },
+          animations: {
+            enabled: false
+          }
+        },
+        stroke: {
+          width: [5,5],
+          curve: 'straight'
+        },
+        labels: paises,
+        title: {
+          text: 'Relación calidad del aire y número de suicidios por país',
+          align: "center"
+        },
+        xaxis: {
+        },
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart6"), options);
+        chart.render();
+    }
+    // on:load={airQuality}
 </script>
 
 <svelte:head>
-    <!--<script src="https://code.highcharts.com/modules/accessibility.js" on:load={hospitalized} on:load={covid} on:load={vehiculos} on:load={roads} on:load={population}></script>-->
-    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population} on:load={bicis} on:load={hospitalized} on:load={covid} on:load={vehiculos} on:load={roads}></script>
+    <!--<script src="https://code.highcharts.com/modules/accessibility.js" on:load={population} on:load={airQuality} on:load={bicis} on:load={hospitalized} on:load={covid} on:load={vehiculos} on:load={roads}></script>-->
+    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population}></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </svelte:head>
 <main>
@@ -670,21 +727,28 @@
     <br><br>
 
     <!--api externa densidad-->
-    <div class="contenedor">
-    <h3 style="text-align: center;">Integración API externa 1</h3>
+    <div style="text-align: center;" class="contenedor">
+    <h3>Integración API externa 1</h3>
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description"></p>
-    </figure>
+    </figure><p>Fuente: <a href="https://restcountries.eu/rest/v2/all">https://restcountries.eu/rest/v2/all</a></p>
     </div>
     <br>
 
     <!--api externa covid--> 
-    <div class="contenedor">
-    <h3 style="text-align: center;">Integración API externa 2</h3>
+    <div style="text-align: center;" class="contenedor">
+    <h3>Integración API externa 2</h3>
     <div id="chart2">
-    </div></div> <br>
+    </div><p>Fuente: <a href="https://akashraj.tech/corona/">https://akashraj.tech/corona/</a></p></div> <br>
 
+    <!--api externa covid--> 
+    <div style="text-align: center;" class="contenedor">
+      <h3>Integración API externa 3</h3>
+      
+      <div id="chart6">
+    </div><p>Fuente: <a href="https://waqi.info/#/c/42.276/15.734/5.4z">https://waqi.info/#/c/42.276/15.734/5.4z</a></p></div> <br>
+      
     <!--api nando-->
     <div class="contenedor">
     <h3 style="text-align: center;">Integración API sos1920-09</h3>
