@@ -17037,16 +17037,18 @@ var app = (function () {
     	let script0_src_value;
     	let script1;
     	let script1_src_value;
+    	let script2;
+    	let script2_src_value;
     	let t0;
     	let main;
     	let h30;
     	let t1;
     	let a0;
     	let t3;
-    	let figure;
-    	let div;
+    	let figure0;
+    	let div0;
     	let t4;
-    	let p;
+    	let p0;
     	let t6;
     	let h31;
     	let t7;
@@ -17056,12 +17058,17 @@ var app = (function () {
     	let t10;
     	let a2;
     	let t12;
-    	let h33;
+    	let figure1;
+    	let div1;
     	let t13;
-    	let a3;
+    	let p1;
     	let t15;
-    	let h34;
+    	let h33;
     	let t16;
+    	let a3;
+    	let t18;
+    	let h34;
+    	let t19;
     	let a4;
     	let dispose;
 
@@ -17069,6 +17076,7 @@ var app = (function () {
     		c: function create() {
     			script0 = element("script");
     			script1 = element("script");
+    			script2 = element("script");
     			t0 = space();
     			main = element("main");
     			h30 = element("h3");
@@ -17076,11 +17084,11 @@ var app = (function () {
     			a0 = element("a");
     			a0.textContent = "Link EndPoint";
     			t3 = space();
-    			figure = element("figure");
-    			div = element("div");
+    			figure0 = element("figure");
+    			div0 = element("div");
     			t4 = space();
-    			p = element("p");
-    			p.textContent = "En esta gráfica podemos ver la comparación del nivel de salud de cada país respecto a los casos confirmados por la nueva pandemia mundial, el Covid-19";
+    			p0 = element("p");
+    			p0.textContent = "En esta gráfica podemos ver la compar npación del nivel de salud de cada país respecto a los casos confirmados por la nueva pandemia mundial, el Covid-19";
     			t6 = space();
     			h31 = element("h3");
     			t7 = text("API Externa 2 - ");
@@ -17092,42 +17100,57 @@ var app = (function () {
     			a2 = element("a");
     			a2.textContent = "Link EndPoint";
     			t12 = space();
+    			figure1 = element("figure");
+    			div1 = element("div");
+    			t13 = space();
+    			p1 = element("p");
+    			p1.textContent = "A basic column chart compares rainfall values between four cities.\r\n      Tokyo has the overall highest amount of rainfall, followed by New York.\r\n      The chart is making use of the axis crosshair feature, to highlight\r\n      months as they are hovered over.";
+    			t15 = space();
     			h33 = element("h3");
-    			t13 = text("API sos1920-12 - ");
+    			t16 = text("API sos1920-12 - ");
     			a3 = element("a");
     			a3.textContent = "Link EndPoint";
-    			t15 = space();
+    			t18 = space();
     			h34 = element("h3");
-    			t16 = text("API sos1920-04 - ");
+    			t19 = text("API sos1920-04 - ");
     			a4 = element("a");
     			a4.textContent = "Link EndPoint";
     			if (script0.src !== (script0_src_value = "https://code.jquery.com/jquery-3.1.1.min.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$l, 198, 4, 5106);
+    			add_location(script0, file$l, 279, 4, 7196);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$l, 199, 0, 5175);
+    			add_location(script1, file$l, 280, 0, 7265);
+    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
+    			add_location(script2, file$l, 281, 0, 7365);
     			attr_dev(a0, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a0, file$l, 203, 24, 5325);
-    			add_location(h30, file$l, 203, 4, 5305);
-    			attr_dev(div, "id", "container");
-    			attr_dev(div, "class", "svelte-cmumb");
-    			add_location(div, file$l, 205, 2, 5460);
-    			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$l, 206, 2, 5490);
-    			attr_dev(figure, "class", "highcharts-figure svelte-cmumb");
-    			add_location(figure, file$l, 204, 4, 5422);
+    			add_location(a0, file$l, 286, 24, 7515);
+    			add_location(h30, file$l, 286, 4, 7495);
+    			attr_dev(div0, "id", "container1");
+    			attr_dev(div0, "class", "svelte-1b1hm1m");
+    			add_location(div0, file$l, 288, 2, 7650);
+    			attr_dev(p0, "class", "highcharts-description");
+    			add_location(p0, file$l, 289, 2, 7681);
+    			attr_dev(figure0, "class", "highcharts-figure svelte-1b1hm1m");
+    			add_location(figure0, file$l, 287, 4, 7612);
     			attr_dev(a1, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a1, file$l, 211, 20, 5723);
-    			add_location(h31, file$l, 211, 0, 5703);
+    			add_location(a1, file$l, 294, 20, 7917);
+    			add_location(h31, file$l, 294, 0, 7897);
     			attr_dev(a2, "href", "http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats");
-    			add_location(a2, file$l, 213, 21, 5839);
-    			add_location(h32, file$l, 213, 0, 5818);
+    			add_location(a2, file$l, 296, 21, 8033);
+    			add_location(h32, file$l, 296, 0, 8012);
+    			attr_dev(div1, "id", "container2");
+    			attr_dev(div1, "class", "svelte-1b1hm1m");
+    			add_location(div1, file$l, 299, 2, 8170);
+    			attr_dev(p1, "class", "highcharts-description");
+    			add_location(p1, file$l, 300, 2, 8201);
+    			attr_dev(figure1, "class", "highcharts-figure svelte-1b1hm1m");
+    			add_location(figure1, file$l, 298, 0, 8132);
     			attr_dev(a3, "href", "https://sos1920-12.herokuapp.com/api/v2/overdose-deaths");
-    			add_location(a3, file$l, 215, 21, 5959);
-    			add_location(h33, file$l, 215, 0, 5938);
+    			add_location(a3, file$l, 308, 21, 8547);
+    			add_location(h33, file$l, 308, 0, 8526);
     			attr_dev(a4, "href", "https://sos1920-04.herokuapp.com/api/v1/vehicles");
-    			add_location(a4, file$l, 217, 21, 6072);
-    			add_location(h34, file$l, 217, 0, 6051);
-    			add_location(main, file$l, 202, 0, 5293);
+    			add_location(a4, file$l, 310, 21, 8660);
+    			add_location(h34, file$l, 310, 0, 8639);
+    			add_location(main, file$l, 285, 0, 7483);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -17135,16 +17158,17 @@ var app = (function () {
     		m: function mount(target, anchor, remount) {
     			append_dev(document.head, script0);
     			append_dev(document.head, script1);
+    			append_dev(document.head, script2);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, h30);
     			append_dev(h30, t1);
     			append_dev(h30, a0);
     			append_dev(main, t3);
-    			append_dev(main, figure);
-    			append_dev(figure, div);
-    			append_dev(figure, t4);
-    			append_dev(figure, p);
+    			append_dev(main, figure0);
+    			append_dev(figure0, div0);
+    			append_dev(figure0, t4);
+    			append_dev(figure0, p0);
     			append_dev(main, t6);
     			append_dev(main, h31);
     			append_dev(h31, t7);
@@ -17154,15 +17178,24 @@ var app = (function () {
     			append_dev(h32, t10);
     			append_dev(h32, a2);
     			append_dev(main, t12);
-    			append_dev(main, h33);
-    			append_dev(h33, t13);
-    			append_dev(h33, a3);
+    			append_dev(main, figure1);
+    			append_dev(figure1, div1);
+    			append_dev(figure1, t13);
+    			append_dev(figure1, p1);
     			append_dev(main, t15);
+    			append_dev(main, h33);
+    			append_dev(h33, t16);
+    			append_dev(h33, a3);
+    			append_dev(main, t18);
     			append_dev(main, h34);
-    			append_dev(h34, t16);
+    			append_dev(h34, t19);
     			append_dev(h34, a4);
-    			if (remount) dispose();
-    			dispose = listen_dev(script1, "load", coronavirus, false, false, false);
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(script1, "load", coronavirus, false, false, false),
+    				listen_dev(script2, "load", renewable, false, false, false)
+    			];
     		},
     		p: noop,
     		i: noop,
@@ -17170,9 +17203,10 @@ var app = (function () {
     		d: function destroy(detaching) {
     			detach_dev(script0);
     			detach_dev(script1);
+    			detach_dev(script2);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -17199,7 +17233,7 @@ var app = (function () {
     	let lista_comun = [];
     	const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats");
     	lifeq = await res1.json();
-    	const res2 = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations");
+    	const res2 = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations", { mode: "cors" });
     	covid = await res2.json();
     	var paises = covid.locations.map(dato => dato.country);
     	var pruieba = covid.locations.map(dato => dato.country);
@@ -17219,9 +17253,9 @@ var app = (function () {
     	let lista_final = Array.from(conjunto);
     	let lista = [];
 
-    	//coger los casos confirmados de covid por cada pais
+    	//coger los casos confirmados de covid por cada pais de la lista comun final
     	for (let index = 0; index < lista_final.length; index++) {
-    		var llamada = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations?country=" + lista_final[index]);
+    		var llamada = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations?country=" + lista_final[index], { mode: "cors" });
     		var datos = await llamada.json();
     		lista.push(datos.latest.confirmed);
     	}
@@ -17236,7 +17270,7 @@ var app = (function () {
     	}
 
     	//grafica
-    	Highcharts.chart("container", {
+    	Highcharts.chart("container1", {
     		chart: { type: "column" },
     		title: {
     			text: "Comparación del nivel de salud de cada país respecto a los casos confirmados por Covid-19"
@@ -17282,13 +17316,89 @@ var app = (function () {
     	});
     }
 
+    //api externa 2
+    //api sos 1920-09 renewable-sources-stats
+    async function renewable() {
+    	let lifeq = [];
+    	let renovables = [];
+    	const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats");
+    	lifeq = await res1.json();
+    	const res2 = await fetch("https://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats", { mode: "cors" });
+    	renovables = await res2.json();
+
+    	//grafica
+    	Highcharts.chart("container2", {
+    		chart: { type: "column" },
+    		title: { text: "Monthly Average Rainfall" },
+    		subtitle: { text: "Source: WorldClimate.com" },
+    		xAxis: {
+    			categories: [
+    				"Jan",
+    				"Feb",
+    				"Mar",
+    				"Apr",
+    				"May",
+    				"Jun",
+    				"Jul",
+    				"Aug",
+    				"Sep",
+    				"Oct",
+    				"Nov",
+    				"Dec"
+    			],
+    			crosshair: true
+    		},
+    		yAxis: { min: 0, title: { text: "Rainfall (mm)" } },
+    		tooltip: {
+    			headerFormat: "<span style=\"font-size:10px\">{point.key}</span><table>",
+    			pointFormat: "<tr><td style=\"color:{series.color};padding:0\">{series.name}: </td>" + "<td style=\"padding:0\"><b>{point.y:.1f} mm</b></td></tr>",
+    			footerFormat: "</table>",
+    			shared: true,
+    			useHTML: true
+    		},
+    		plotOptions: {
+    			column: { pointPadding: 0.2, borderWidth: 0 }
+    		},
+    		series: [
+    			{
+    				name: "Tokyo",
+    				data: [
+    					49.9,
+    					71.5,
+    					106.4,
+    					129.2,
+    					144,
+    					176,
+    					135.6,
+    					148.5,
+    					216.4,
+    					194.1,
+    					95.6,
+    					54.4
+    				]
+    			},
+    			{
+    				name: "New York",
+    				data: [83.6, 78.8, 98.5, 93.4, 106, 84.5, 105, 104.3, 91.2, 83.5, 106.6, 92.3]
+    			},
+    			{
+    				name: "London",
+    				data: [48.9, 38.8, 39.3, 41.4, 47, 48.3, 59, 59.6, 52.4, 65.2, 59.3, 51.2]
+    			},
+    			{
+    				name: "Berlin",
+    				data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
+    			}
+    		]
+    	});
+    }
+
     function instance$o($$self, $$props, $$invalidate) {
     	let visible = false;
     	let color = "danger";
     	let errorMSG = "";
     	let lq = [];
     	onMount(getLQ);
-    	console.log(toMinus("Hola"));
 
     	//GET
     	async function getLQ() {
@@ -17366,7 +17476,8 @@ var app = (function () {
     		getLQ,
     		getLQLoadInitialData,
     		deleteLQALL,
-    		coronavirus
+    		coronavirus,
+    		renewable
     	});
 
     	$$self.$inject_state = $$props => {
