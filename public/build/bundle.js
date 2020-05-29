@@ -12780,17 +12780,24 @@ var app = (function () {
     	let script3_src_value;
     	let script4;
     	let script4_src_value;
+    	let script5;
+    	let script5_src_value;
     	let t0;
     	let main;
     	let div0;
     	let h10;
     	let t2;
-    	let h3;
+    	let h30;
     	let t4;
-    	let figure;
+    	let div1;
     	let h11;
     	let t6;
-    	let div1;
+    	let h31;
+    	let t8;
+    	let figure;
+    	let h12;
+    	let t10;
+    	let div2;
     	let dispose;
 
     	const block = {
@@ -12800,40 +12807,54 @@ var app = (function () {
     			script2 = element("script");
     			script3 = element("script");
     			script4 = element("script");
+    			script5 = element("script");
     			t0 = space();
     			main = element("main");
     			div0 = element("div");
     			h10 = element("h1");
     			h10.textContent = "API 1";
     			t2 = space();
-    			h3 = element("h3");
-    			h3.textContent = "indice de pobreza y consumo de alcohol por millón";
+    			h30 = element("h3");
+    			h30.textContent = "indice de pobreza y consumo de cannabis por millón";
     			t4 = space();
-    			figure = element("figure");
+    			div1 = element("div");
     			h11 = element("h1");
     			h11.textContent = "API 2";
     			t6 = space();
-    			div1 = element("div");
+    			h31 = element("h3");
+    			h31.textContent = "indice de pobreza y consumo de alcohol por millón";
+    			t8 = space();
+    			figure = element("figure");
+    			h12 = element("h1");
+    			h12.textContent = "API 3";
+    			t10 = space();
+    			div2 = element("div");
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$h, 276, 4, 6932);
+    			add_location(script0, file$h, 428, 4, 10724);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$h, 277, 4, 7003);
+    			add_location(script1, file$h, 429, 4, 10795);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$h, 278, 4, 7081);
+    			add_location(script2, file$h, 430, 4, 10873);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$h, 279, 4, 7161);
+    			add_location(script3, file$h, 431, 4, 10953);
     			if (script4.src !== (script4_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script4, "src", script4_src_value);
-    			add_location(script4, file$h, 280, 4, 7260);
-    			add_location(h10, file$h, 288, 8, 7407);
-    			add_location(h3, file$h, 289, 8, 7431);
-    			attr_dev(div0, "id", "chart");
-    			add_location(div0, file$h, 287, 4, 7381);
-    			add_location(h11, file$h, 292, 8, 7551);
-    			attr_dev(div1, "id", "container");
-    			add_location(div1, file$h, 293, 8, 7575);
+    			add_location(script4, file$h, 432, 4, 11052);
+    			if (script5.src !== (script5_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script5, "src", script5_src_value);
+    			add_location(script5, file$h, 433, 4, 11137);
+    			add_location(h10, file$h, 441, 8, 11285);
+    			add_location(h30, file$h, 442, 8, 11309);
+    			attr_dev(div0, "id", "chart2");
+    			add_location(div0, file$h, 440, 4, 11258);
+    			add_location(h11, file$h, 445, 8, 11412);
+    			add_location(h31, file$h, 446, 8, 11436);
+    			attr_dev(div1, "id", "chart");
+    			add_location(div1, file$h, 444, 4, 11386);
+    			add_location(h12, file$h, 449, 8, 11556);
+    			attr_dev(div2, "id", "container");
+    			add_location(div2, file$h, 450, 8, 11580);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$h, 291, 4, 7507);
-    			add_location(main, file$h, 285, 0, 7363);
+    			add_location(figure, file$h, 448, 4, 11512);
+    			add_location(main, file$h, 438, 0, 11240);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12844,22 +12865,29 @@ var app = (function () {
     			append_dev(document_1$3.head, script2);
     			append_dev(document_1$3.head, script3);
     			append_dev(document_1$3.head, script4);
+    			append_dev(document_1$3.head, script5);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, div0);
     			append_dev(div0, h10);
     			append_dev(div0, t2);
-    			append_dev(div0, h3);
+    			append_dev(div0, h30);
     			append_dev(main, t4);
+    			append_dev(main, div1);
+    			append_dev(div1, h11);
+    			append_dev(div1, t6);
+    			append_dev(div1, h31);
+    			append_dev(main, t8);
     			append_dev(main, figure);
-    			append_dev(figure, h11);
-    			append_dev(figure, t6);
-    			append_dev(figure, div1);
+    			append_dev(figure, h12);
+    			append_dev(figure, t10);
+    			append_dev(figure, div2);
     			if (remount) run_all(dispose);
 
     			dispose = [
     				listen_dev(script3, "load", api1, false, false, false),
-    				listen_dev(script4, "load", api2, false, false, false)
+    				listen_dev(script4, "load", api2, false, false, false),
+    				listen_dev(script5, "load", api3, false, false, false)
     			];
     		},
     		p: noop,
@@ -12871,6 +12899,7 @@ var app = (function () {
     			detach_dev(script2);
     			detach_dev(script3);
     			detach_dev(script4);
+    			detach_dev(script5);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			run_all(dispose);
@@ -12914,8 +12943,6 @@ var app = (function () {
     	const resData2 = await fetch("http://sos1920-22.herokuapp.com/api/v1/swim-stats");
     	swim = await resData2.json();
 
-    	// const resData4 = await fetch('http://sos1920-12.herokuapp.com/#/drug-offences');
-    	//drug = await resData4.json();
     	//ajustar tamaño poverty con swim
     	var tams = [];
 
@@ -12963,9 +12990,10 @@ var app = (function () {
     	});
 
     	var dataSwim = swim.map(dato => {
-    		return parseInt(dato.year);
+    		return parseFloat(dato.position / dato.time);
     	});
 
+    	//console.log(dataSwim);
     	var dataPoverty = [];
 
     	dataSwim.forEach(el => {
@@ -12977,7 +13005,7 @@ var app = (function () {
     	});
 
     	poverty.forEach(dato => {
-    		dataPoverty.push(dato.year);
+    		dataPoverty.push(dato.under_320);
     	});
 
     	//console.log(dataSwim);
@@ -13002,7 +13030,7 @@ var app = (function () {
     			lineColor: "black",
     			lineWidth: 2,
     			title: false,
-    			tickInterval: 500
+    			tickInterval: 0.5
     		},
     		plotOptions: { area: { fillOpacity: 0.5 } },
     		credits: { enabled: false },
@@ -13041,7 +13069,7 @@ var app = (function () {
     		yearAux.push(y);
     	});
 
-    	console.log(year);
+    	//console.log(year);
     	var res = [];
 
     	for (var y = 0; y < yearAux.length; y++) {
@@ -13055,14 +13083,14 @@ var app = (function () {
 
     	
     	imports = res;
-    	console.log(imports);
 
+    	//console.log(imports);
     	//seleccionamos un valor por año
     	year.forEach(y => {
     		yearAux.push(y);
     	});
 
-    	console.log(year);
+    	//console.log(year);
     	var res = [];
 
     	for (var y = 0; y < yearAux.length; y++) {
@@ -13076,8 +13104,10 @@ var app = (function () {
 
     	
     	poverty = res;
-    	console.log(poverty);
+
+    	//console.log(poverty);
     	var datosPoverty = [];
+
     	var datosAlcohol = [];
 
     	imports.forEach(a => {
@@ -13089,8 +13119,7 @@ var app = (function () {
     		return res;
     	});
 
-    	console.log(datosPoverty);
-
+    	//console.log(datosPoverty);
     	var options = {
     		series: [
     			{ name: "poverty", data: datosPoverty },
@@ -13126,6 +13155,143 @@ var app = (function () {
     	chart.render();
     }
 
+    async function api3() {
+    	var drug = [];
+    	var poverty = [];
+    	const resData = await fetch("/api/v2/poverty-stats");
+    	poverty = await resData.json();
+    	const resData4 = await fetch("http://sos1920-12.herokuapp.com/api/v1/drug_offences");
+    	drug = await resData4.json();
+    	console.log(poverty);
+    	ordenarAsc$1(poverty, "year");
+
+    	var year = poverty.map(dato => {
+    		return parseInt(dato.year);
+    	});
+
+    	year = year.filter(function (valor, indiceActual, arreglo) {
+    		//quitar duplicados
+    		let indiceAlBuscar = arreglo.indexOf(valor);
+
+    		if (indiceActual === indiceAlBuscar) {
+    			return true;
+    		} else {
+    			return false;
+    		}
+    	});
+
+    	//seleccionamos un valor por año
+    	var yearAux = [];
+
+    	year.forEach(y => {
+    		yearAux.push(y);
+    	});
+
+    	console.log(yearAux);
+    	var res = [];
+
+    	for (var i = 0; i < drug.length; i++) {
+    		for (var y = 0; y < yearAux.length; y++) {
+    			if (yearAux[y] == drug[i].year) {
+    				res.push(drug[i]);
+    				yearAux.splice(y, 1);
+    				console.log(yearAux);
+    				break;
+    			}
+    		}
+    	}
+
+    	
+
+    	drug = res.map(dato => {
+    		return parseFloat(dato.cannabis_offences) / 1000000;
+    	});
+
+    	//seleccionamos un valor por año
+    	yearAux = [];
+
+    	year.forEach(y => {
+    		yearAux.push(y);
+    	});
+
+    	console.log(yearAux);
+
+    	poverty = poverty.filter(function (p) {
+    		return p.continent == "europe";
+    	});
+
+    	var res = [];
+
+    	for (var i = 0; i < poverty.length; i++) {
+    		for (var y = 0; y < poverty.length; y++) {
+    			if (yearAux[y] == poverty[i].year) {
+    				res.push(poverty[i]);
+    				yearAux.splice(y, 1);
+
+    				//console.log(yearAux);
+    				break;
+    			}
+    		}
+    	}
+
+    	
+
+    	poverty = poverty.map(p => {
+    		return parseFloat(p.under_550);
+    	});
+
+    	console.log(poverty);
+
+    	var options = {
+    		series: [{ name: "Drug", data: drug }, { name: "Poverty", data: poverty }],
+    		chart: {
+    			height: 350,
+    			type: "line",
+    			dropShadow: {
+    				enabled: true,
+    				color: "#000",
+    				top: 18,
+    				left: 7,
+    				blur: 10,
+    				opacity: 0.2
+    			},
+    			toolbar: { show: false }
+    		},
+    		colors: ["#77B6EA", "#545454"],
+    		dataLabels: { enabled: true },
+    		stroke: { curve: "smooth" },
+    		title: {
+    			text: "Consumo de cannabis y pobreza en Europa",
+    			align: "left"
+    		},
+    		grid: {
+    			borderColor: "#e7e7e7",
+    			row: {
+    				colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+    				opacity: 0.5
+    			}
+    		},
+    		markers: { size: 1 },
+    		xaxis: { categories: year, title: { text: "Año" } },
+    		yaxis: {
+    			title: { text: "Indice" },
+    			tickAmount: 2,
+    			min: 0,
+    			max: 1
+    		},
+    		legend: {
+    			position: "top",
+    			horizontalAlign: "right",
+    			floating: true,
+    			offsetY: -25,
+    			offsetX: -5
+    		}
+    	};
+
+    	var chart = new ApexCharts(document.querySelector("#chart2"), options);
+    	chart.render();
+    }
+
     function instance$j($$self, $$props, $$invalidate) {
     	const writable_props = [];
 
@@ -13135,7 +13301,7 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Integrations", $$slots, []);
-    	$$self.$capture_state = () => ({ ordenarAsc: ordenarAsc$1, api1, api2 });
+    	$$self.$capture_state = () => ({ ordenarAsc: ordenarAsc$1, api1, api2, api3 });
     	return [];
     }
 
