@@ -15,7 +15,6 @@
 
     let errorMSG = "";
     let lq =[];
-    let totaldata = 12;
     onMount(getLQ);
 
     //GET
@@ -46,7 +45,6 @@
             console.log("Ok");
             const json = await res.json();
             lq = json;
-            totaldata = 12;
             console.log("Received " + lq.length + " lq.");
         } else {
             errorMSG = res.status + ": " + res.statusText;
@@ -62,7 +60,6 @@
             LoadGraphs();
             visible = true;
             if(res.status==200){
-                totaldata=0;
                 color = "sucess";
                 errorMSG = "Objetos borrados correctamente";
                 console.log("Deleted all lq.");

@@ -3,11 +3,15 @@ module.exports = function (app) {
     
     const dataStore = require("nedb")
     const path = require("path");
-
+	const request = require("request")
 
     const dbFileName = path.join(__dirname, "spc.db");
 
     const BASE_API_URL="/api/v3";
+
+	//Proxy Belen
+	var proxyBelen = "/api/v2/not-hospitalized-stats"
+	var urlProxyBelen = "https://sos1920-06.herokuapp.com"
 
     const db = new dataStore({
                 filename: dbFileName,
@@ -178,6 +182,14 @@ module.exports = function (app) {
 				continent: "north america"
 			}
 		];
+
+
+	//Proxy belen
+	app.use(proxyBelen, function(req, res){
+		var url = urlProxyBelen + req.baseUrl + req.url;
+		console.log("piped: " + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res)
+	})
 
 	//PARA RANGOS
 	function between(x, min, max) {

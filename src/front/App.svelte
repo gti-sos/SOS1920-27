@@ -21,7 +21,7 @@
 	import GUI3LQHighChart from './GUI3LQ/HighChart.svelte';
 	import GUI3LQApexChart from './GUI3LQ/ApexChart.svelte';
 	import EditLq from './GUI3LQ/EditLq.svelte';
-	import GUI3SPCIntegrations from './GUI3LQ/Integrations.svelte'; //integraciones
+	import GUI3LQIntegrations from './GUI3LQ/Integrations.svelte'; //integraciones
 
 	const routes = {
 		"/" : Home,
@@ -43,7 +43,7 @@
 		"/gui3LQHighChart": GUI3LQHighChart,
 		"/gui3LQApexChart": GUI3LQApexChart,
 		"/lq-stats/:lqCountry/:lqYear":EditLq,
-		"/integrations/gui3integrations": GUI3SPCIntegrations,
+		"/integrations/gui3integrations": GUI3LQIntegrations,
 
 		"*": NotFound
 	};
