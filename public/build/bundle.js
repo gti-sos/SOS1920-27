@@ -18072,84 +18072,46 @@ var app = (function () {
     			a4 = element("a");
     			a4.textContent = "Link EndPoint";
     			if (script0.src !== (script0_src_value = "https://code.jquery.com/jquery-3.1.1.min.js")) attr_dev(script0, "src", script0_src_value);
-<<<<<<< HEAD
-    			add_location(script0, file$n, 304, 4, 8087);
+    			add_location(script0, file$n, 413, 4, 10767);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$n, 305, 0, 8156);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$n, 306, 0, 8256);
+    			add_location(script1, file$n, 414, 0, 10836);
     			attr_dev(a0, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a0, file$n, 311, 24, 8406);
-    			add_location(h30, file$n, 311, 4, 8386);
-    			attr_dev(div0, "id", "container1");
-    			attr_dev(div0, "class", "svelte-1b1hm1m");
-    			add_location(div0, file$n, 313, 2, 8541);
-    			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$n, 314, 2, 8572);
-    			attr_dev(figure0, "class", "highcharts-figure svelte-1b1hm1m");
-    			add_location(figure0, file$n, 312, 4, 8503);
-    			attr_dev(a1, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a1, file$n, 319, 20, 8808);
-    			add_location(h31, file$n, 319, 0, 8788);
-    			attr_dev(a2, "href", "http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats");
-    			add_location(a2, file$n, 321, 21, 8924);
-    			add_location(h32, file$n, 321, 0, 8903);
-    			attr_dev(div1, "id", "container2");
-    			attr_dev(div1, "class", "svelte-1b1hm1m");
-    			add_location(div1, file$n, 324, 2, 9061);
-    			attr_dev(p1, "class", "highcharts-description");
-    			add_location(p1, file$n, 325, 2, 9092);
-    			attr_dev(figure1, "class", "highcharts-figure svelte-1b1hm1m");
-    			add_location(figure1, file$n, 323, 0, 9023);
-    			attr_dev(a3, "href", "https://sos1920-12.herokuapp.com/api/v2/overdose-deaths");
-    			add_location(a3, file$n, 330, 21, 9327);
-    			add_location(h33, file$n, 330, 0, 9306);
-    			attr_dev(a4, "href", "https://sos1920-04.herokuapp.com/api/v1/vehicles");
-    			add_location(a4, file$n, 332, 21, 9440);
-    			add_location(h34, file$n, 332, 0, 9419);
-    			add_location(main, file$n, 310, 0, 8374);
-=======
-    			add_location(script0, file$m, 413, 4, 10767);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$m, 414, 0, 10836);
-    			attr_dev(a0, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a0, file$m, 419, 24, 11031);
-    			add_location(h30, file$m, 419, 4, 11011);
+    			add_location(a0, file$n, 419, 24, 11031);
+    			add_location(h30, file$n, 419, 4, 11011);
     			attr_dev(div0, "id", "container1");
     			attr_dev(div0, "class", "svelte-oxtp3y");
-    			add_location(div0, file$m, 421, 2, 11166);
+    			add_location(div0, file$n, 421, 2, 11166);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$m, 422, 2, 11197);
+    			add_location(p0, file$n, 422, 2, 11197);
     			attr_dev(figure0, "class", "highcharts-figure svelte-oxtp3y");
-    			add_location(figure0, file$m, 420, 4, 11128);
+    			add_location(figure0, file$n, 420, 4, 11128);
     			attr_dev(a1, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a1, file$m, 427, 20, 11430);
-    			add_location(h31, file$m, 427, 0, 11410);
+    			add_location(a1, file$n, 427, 20, 11430);
+    			add_location(h31, file$n, 427, 0, 11410);
     			attr_dev(a2, "href", "http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats");
-    			add_location(a2, file$m, 429, 21, 11546);
-    			add_location(h32, file$m, 429, 0, 11525);
+    			add_location(a2, file$n, 429, 21, 11546);
+    			add_location(h32, file$n, 429, 0, 11525);
     			attr_dev(div1, "id", "container2");
     			attr_dev(div1, "class", "svelte-oxtp3y");
-    			add_location(div1, file$m, 432, 2, 11683);
+    			add_location(div1, file$n, 432, 2, 11683);
     			attr_dev(p1, "class", "highcharts-description");
-    			add_location(p1, file$m, 433, 2, 11714);
+    			add_location(p1, file$n, 433, 2, 11714);
     			attr_dev(figure1, "class", "highcharts-figure svelte-oxtp3y");
-    			add_location(figure1, file$m, 431, 0, 11645);
+    			add_location(figure1, file$n, 431, 0, 11645);
     			attr_dev(a3, "href", "https://sos1920-12.herokuapp.com/api/v2/overdose-deaths");
-    			add_location(a3, file$m, 438, 21, 11949);
-    			add_location(h33, file$m, 438, 0, 11928);
+    			add_location(a3, file$n, 438, 21, 11949);
+    			add_location(h33, file$n, 438, 0, 11928);
     			attr_dev(div2, "id", "container3");
     			attr_dev(div2, "class", "svelte-oxtp3y");
-    			add_location(div2, file$m, 440, 2, 12077);
+    			add_location(div2, file$n, 440, 2, 12077);
     			attr_dev(p2, "class", "highcharts-description");
-    			add_location(p2, file$m, 441, 2, 12108);
+    			add_location(p2, file$n, 441, 2, 12108);
     			attr_dev(figure2, "class", "highcharts-figure svelte-oxtp3y");
-    			add_location(figure2, file$m, 439, 0, 12039);
+    			add_location(figure2, file$n, 439, 0, 12039);
     			attr_dev(a4, "href", "https://sos1920-04.herokuapp.com/api/v1/vehicles");
-    			add_location(a4, file$m, 448, 21, 12358);
-    			add_location(h34, file$m, 448, 0, 12337);
-    			add_location(main, file$m, 418, 0, 10999);
->>>>>>> 5721e2c2ae3778a07b4ee1b9e5314e2c5474df51
+    			add_location(a4, file$n, 448, 21, 12358);
+    			add_location(h34, file$n, 448, 0, 12337);
+    			add_location(main, file$n, 418, 0, 10999);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -18399,9 +18361,6 @@ var app = (function () {
     	});
     }
 
-<<<<<<< HEAD
-    function instance$q($$self, $$props, $$invalidate) {
-=======
     async function overdose() {
     	let lifeq = [];
     	let kills = [];
@@ -18491,8 +18450,7 @@ var app = (function () {
     	});
     }
 
-    function instance$o($$self, $$props, $$invalidate) {
->>>>>>> 5721e2c2ae3778a07b4ee1b9e5314e2c5474df51
+    function instance$q($$self, $$props, $$invalidate) {
     	let visible = false;
     	let color = "danger";
     	let errorMSG = "";
