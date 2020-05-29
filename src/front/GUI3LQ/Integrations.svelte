@@ -217,7 +217,6 @@
 
 <h3>API sos1920-04 - <a href="https://sos1920-04.herokuapp.com/api/v1/vehicles">Link EndPoint</a></h3>
 
-
 </main>
 
 
