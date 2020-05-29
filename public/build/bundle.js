@@ -17519,8 +17519,6 @@ var app = (function () {
     	let script0_src_value;
     	let script1;
     	let script1_src_value;
-    	let script2;
-    	let script2_src_value;
     	let t0;
     	let main;
     	let h30;
@@ -17549,8 +17547,13 @@ var app = (function () {
     	let t16;
     	let a3;
     	let t18;
-    	let h34;
+    	let figure2;
+    	let div2;
     	let t19;
+    	let p2;
+    	let t21;
+    	let h34;
+    	let t22;
     	let a4;
     	let dispose;
 
@@ -17558,7 +17561,6 @@ var app = (function () {
     		c: function create() {
     			script0 = element("script");
     			script1 = element("script");
-    			script2 = element("script");
     			t0 = space();
     			main = element("main");
     			h30 = element("h3");
@@ -17570,7 +17572,7 @@ var app = (function () {
     			div0 = element("div");
     			t4 = space();
     			p0 = element("p");
-    			p0.textContent = "En esta gráfica podemos ver la compar npación del nivel de salud de cada país respecto a los casos confirmados por la nueva pandemia mundial, el Covid-19";
+    			p0.textContent = "En esta gráfica podemos ver la comparación del nivel de salud de cada país respecto a los casos confirmados por la nueva pandemia mundial, el Covid-19";
     			t6 = space();
     			h31 = element("h3");
     			t7 = text("API Externa 2 - ");
@@ -17593,46 +17595,57 @@ var app = (function () {
     			a3 = element("a");
     			a3.textContent = "Link EndPoint";
     			t18 = space();
+    			figure2 = element("figure");
+    			div2 = element("div");
+    			t19 = space();
+    			p2 = element("p");
+    			p2.textContent = "En esta gráfica podemos ver la comparación del número de muertes por sobredosis de cada país respecto a su calidad de vida (la calidad de vida está en porcentaje)";
+    			t21 = space();
     			h34 = element("h3");
-    			t19 = text("API sos1920-04 - ");
+    			t22 = text("API sos1920-04 - ");
     			a4 = element("a");
     			a4.textContent = "Link EndPoint";
     			if (script0.src !== (script0_src_value = "https://code.jquery.com/jquery-3.1.1.min.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$m, 304, 4, 8087);
+    			add_location(script0, file$m, 413, 4, 10767);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$m, 305, 0, 8156);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$m, 306, 0, 8256);
+    			add_location(script1, file$m, 414, 0, 10836);
     			attr_dev(a0, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a0, file$m, 311, 24, 8406);
-    			add_location(h30, file$m, 311, 4, 8386);
+    			add_location(a0, file$m, 419, 24, 11031);
+    			add_location(h30, file$m, 419, 4, 11011);
     			attr_dev(div0, "id", "container1");
-    			attr_dev(div0, "class", "svelte-1b1hm1m");
-    			add_location(div0, file$m, 313, 2, 8541);
+    			attr_dev(div0, "class", "svelte-oxtp3y");
+    			add_location(div0, file$m, 421, 2, 11166);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$m, 314, 2, 8572);
-    			attr_dev(figure0, "class", "highcharts-figure svelte-1b1hm1m");
-    			add_location(figure0, file$m, 312, 4, 8503);
+    			add_location(p0, file$m, 422, 2, 11197);
+    			attr_dev(figure0, "class", "highcharts-figure svelte-oxtp3y");
+    			add_location(figure0, file$m, 420, 4, 11128);
     			attr_dev(a1, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a1, file$m, 319, 20, 8808);
-    			add_location(h31, file$m, 319, 0, 8788);
+    			add_location(a1, file$m, 427, 20, 11430);
+    			add_location(h31, file$m, 427, 0, 11410);
     			attr_dev(a2, "href", "http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats");
-    			add_location(a2, file$m, 321, 21, 8924);
-    			add_location(h32, file$m, 321, 0, 8903);
+    			add_location(a2, file$m, 429, 21, 11546);
+    			add_location(h32, file$m, 429, 0, 11525);
     			attr_dev(div1, "id", "container2");
-    			attr_dev(div1, "class", "svelte-1b1hm1m");
-    			add_location(div1, file$m, 324, 2, 9061);
+    			attr_dev(div1, "class", "svelte-oxtp3y");
+    			add_location(div1, file$m, 432, 2, 11683);
     			attr_dev(p1, "class", "highcharts-description");
-    			add_location(p1, file$m, 325, 2, 9092);
-    			attr_dev(figure1, "class", "highcharts-figure svelte-1b1hm1m");
-    			add_location(figure1, file$m, 323, 0, 9023);
+    			add_location(p1, file$m, 433, 2, 11714);
+    			attr_dev(figure1, "class", "highcharts-figure svelte-oxtp3y");
+    			add_location(figure1, file$m, 431, 0, 11645);
     			attr_dev(a3, "href", "https://sos1920-12.herokuapp.com/api/v2/overdose-deaths");
-    			add_location(a3, file$m, 330, 21, 9327);
-    			add_location(h33, file$m, 330, 0, 9306);
+    			add_location(a3, file$m, 438, 21, 11949);
+    			add_location(h33, file$m, 438, 0, 11928);
+    			attr_dev(div2, "id", "container3");
+    			attr_dev(div2, "class", "svelte-oxtp3y");
+    			add_location(div2, file$m, 440, 2, 12077);
+    			attr_dev(p2, "class", "highcharts-description");
+    			add_location(p2, file$m, 441, 2, 12108);
+    			attr_dev(figure2, "class", "highcharts-figure svelte-oxtp3y");
+    			add_location(figure2, file$m, 439, 0, 12039);
     			attr_dev(a4, "href", "https://sos1920-04.herokuapp.com/api/v1/vehicles");
-    			add_location(a4, file$m, 332, 21, 9440);
-    			add_location(h34, file$m, 332, 0, 9419);
-    			add_location(main, file$m, 310, 0, 8374);
+    			add_location(a4, file$m, 448, 21, 12358);
+    			add_location(h34, file$m, 448, 0, 12337);
+    			add_location(main, file$m, 418, 0, 10999);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -17640,7 +17653,6 @@ var app = (function () {
     		m: function mount(target, anchor, remount) {
     			append_dev(document.head, script0);
     			append_dev(document.head, script1);
-    			append_dev(document.head, script2);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, h30);
@@ -17669,14 +17681,20 @@ var app = (function () {
     			append_dev(h33, t16);
     			append_dev(h33, a3);
     			append_dev(main, t18);
+    			append_dev(main, figure2);
+    			append_dev(figure2, div2);
+    			append_dev(figure2, t19);
+    			append_dev(figure2, p2);
+    			append_dev(main, t21);
     			append_dev(main, h34);
-    			append_dev(h34, t19);
+    			append_dev(h34, t22);
     			append_dev(h34, a4);
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(script1, "load", coronavirus, false, false, false),
-    				listen_dev(script2, "load", renewable, false, false, false)
+    				listen_dev(script1, "load", renewable, false, false, false),
+    				listen_dev(script1, "load", overdose, false, false, false),
+    				listen_dev(script1, "load", coronavirus, false, false, false)
     			];
     		},
     		p: noop,
@@ -17685,7 +17703,6 @@ var app = (function () {
     		d: function destroy(detaching) {
     			detach_dev(script0);
     			detach_dev(script1);
-    			detach_dev(script2);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			run_all(dispose);
@@ -17830,7 +17847,7 @@ var app = (function () {
     	let lista_final = Array.from(conjunto);
     	console.log(nivel_total);
 
-    	//coger salud paises comunes
+    	//coger valor total paises comunes
     	for (let index = 0; index < lifeq.length; index++) {
     		if (lista_final.includes(lifeq[index].country)) {
     			nivel_total.push(lifeq[index].total);
@@ -17873,6 +17890,95 @@ var app = (function () {
     			{
     				name: "Porcentaje de uso de energías renovables",
     				data: lista
+    			}
+    		]
+    	});
+    }
+
+    async function overdose() {
+    	let lifeq = [];
+    	let kills = [];
+    	let lista_comun = [];
+    	let nivel_total = [];
+    	let lista = [];
+    	const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats");
+    	lifeq = await res1.json();
+    	const res2 = await fetch("https://sos1920-12.herokuapp.com/api/v2/overdose-deaths", { mode: "cors" });
+    	kills = await res2.json();
+    	var misPaises = lifeq.map(dato => dato.country);
+    	var paises = kills.map(dato => dato.country);
+
+    	//para tener los países comunes
+    	for (let i = 0; i < misPaises.length; i++) {
+    		for (let j = 0; j < paises.length; j++) {
+    			if (misPaises[i].localeCompare(toMinus(paises[j])) == 0) {
+    				lista_comun.push(misPaises[i]);
+    			}
+    		}
+    	}
+
+    	let conjunto = new Set(lista_comun);
+    	let lista_final = Array.from(conjunto);
+
+    	//coger valor del total paises comunes
+    	for (let index = 0; index < lifeq.length; index++) {
+    		if (lista_final.includes(lifeq[index].country)) {
+    			nivel_total.push(lifeq[index].total);
+    		}
+    	}
+
+    	//coger los porcentajes de uso de energias renovables por cada pais de la lista comun final
+    	for (let index = 0; index < lista_final.length; index++) {
+    		var llamada = await fetch("https://sos1920-12.herokuapp.com/api/v2/overdose-deaths?country=" + toMayusc(lista_final[index]) + "&year=2016", { mode: "cors" });
+    		var datos = await llamada.json();
+    		lista.push(datos[0].death_total);
+    	}
+
+    	console.log(lista);
+
+    	//grafica
+    	Highcharts.chart("container3", {
+    		chart: { type: "bar" },
+    		title: {
+    			text: "Historic World Population by Region"
+    		},
+    		subtitle: { text: "" },
+    		xAxis: {
+    			categories: lista_final,
+    			title: { text: null }
+    		},
+    		yAxis: {
+    			min: 0,
+    			title: {
+    				text: "Personas muertas por sobredosis",
+    				align: "high"
+    			},
+    			labels: { overflow: "justify" }
+    		},
+    		tooltip: { valueSuffix: "" },
+    		plotOptions: { bar: { dataLabels: { enabled: true } } },
+    		legend: {
+    			layout: "vertical",
+    			align: "right",
+    			verticalAlign: "top",
+    			x: -40,
+    			y: 80,
+    			floating: true,
+    			borderWidth: 1,
+    			backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || "#FFFFFF",
+    			shadow: true
+    		},
+    		credits: { enabled: false },
+    		series: [
+    			{
+    				name: "Calidad de vida",
+    				data: nivel_total,
+    				color: "#5BA961"
+    			},
+    			{
+    				name: "Muertes por sobredosis",
+    				data: lista,
+    				color: "#9572C2"
     			}
     		]
     	});
@@ -17963,7 +18069,8 @@ var app = (function () {
     		getLQLoadInitialData,
     		deleteLQALL,
     		coronavirus,
-    		renewable
+    		renewable,
+    		overdose
     	});
 
     	$$self.$inject_state = $$props => {
