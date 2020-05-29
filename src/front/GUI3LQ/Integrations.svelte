@@ -228,7 +228,7 @@
 
     console.log(nivel_total)
 
-    //coger salud paises comunes
+    //coger valor total paises comunes
     for (let index = 0; index < lifeq.length; index++) {
         if (lista_final.includes(lifeq[index].country)) {
             nivel_total.push(lifeq[index].total)
@@ -299,12 +299,120 @@
 
   }
 
+  async function overdose(){
+    let lifeq=[]
+    let kills=[]
+    let lista_comun = [];
+    let nivel_total = [];
+    let lista = [];
+    const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats")
+    lifeq = await res1.json();
+    const res2 = await fetch("https://sos1920-12.herokuapp.com/api/v2/overdose-deaths",{mode:'cors'});
+    kills = await res2.json();
+
+    var misPaises = lifeq.map(dato=> dato.country);
+    var paises = kills.map(dato=>dato.country);
+
+    //para tener los países comunes
+    for (let i = 0; i < misPaises.length; i++) {
+        for (let j = 0; j < paises.length; j++) {
+            if(misPaises[i].localeCompare(toMinus(paises[j])) == 0){
+                lista_comun.push(misPaises[i])
+            }
+            
+        }
+        
+    }
+    let conjunto = new Set(lista_comun);
+
+    let lista_final = Array.from(conjunto);
+
+
+    //coger valor del total paises comunes
+    for (let index = 0; index < lifeq.length; index++) {
+        if (lista_final.includes(lifeq[index].country)) {
+            nivel_total.push(lifeq[index].total)
+        }
+        
+    }
+
+    //coger los porcentajes de uso de energias renovables por cada pais de la lista comun final
+    for (let index = 0; index < lista_final.length; index++) {
+        var llamada = await fetch("https://sos1920-12.herokuapp.com/api/v2/overdose-deaths?country="+toMayusc(lista_final[index])+"&year=2016",{mode:'cors'});
+        var datos = await llamada.json();
+        lista.push(datos[0].death_total)
+        
+
+ 
+    }       console.log(lista)
+
+    //grafica
+    Highcharts.chart('container3', {
+  chart: {
+    type: 'bar'
+  },
+  title: {
+    text: 'Historic World Population by Region'
+  },
+  subtitle: {
+    text: ''
+  },
+  xAxis: {
+    categories: lista_final,
+    title: {
+      text: null
+    }
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Personas muertas por sobredosis',
+      align: 'high'
+    },
+    labels: {
+      overflow: 'justify'
+    }
+  },
+  tooltip: {
+    valueSuffix: ''
+  },
+  plotOptions: {
+    bar: {
+      dataLabels: {
+        enabled: true
+      }
+    }
+  },
+  legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'top',
+    x: -40,
+    y: 80,
+    floating: true,
+    borderWidth: 1,
+    backgroundColor:
+      Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+    shadow: true
+  },
+  credits: {
+    enabled: false
+  },
+  series: [{
+    name: 'Calidad de vida',
+    data: nivel_total, color:'#5BA961'
+  }, {
+    name: 'Muertes por sobredosis',
+    data: lista, color:'#9572C2'
+  }]
+});
+  }
+
 </script>
 
 <svelte:head>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js" on:load="{coronavirus}"></script>
-<script src="https://code.highcharts.com/modules/export-data.js" on:load="{renewable}"></script>
+<script src="https://code.highcharts.com/modules/export-data.js" on:load="{renewable}" on:load="{overdose}" on:load="{coronavirus}"></script>
 
 </svelte:head>
 
@@ -313,7 +421,7 @@
     <figure class="highcharts-figure">
   <div id="container1"></div>
   <p class="highcharts-description">
-    En esta gráfica podemos ver la compar npación del nivel de salud de cada país respecto a los casos confirmados por la nueva pandemia mundial, el Covid-19
+    En esta gráfica podemos ver la comparación del nivel de salud de cada país respecto a los casos confirmados por la nueva pandemia mundial, el Covid-19
   </p>
 </figure>
 
@@ -329,6 +437,14 @@
 </figure>
 
 <h3>API sos1920-12 - <a href="https://sos1920-12.herokuapp.com/api/v2/overdose-deaths">Link EndPoint</a></h3>
+<figure class="highcharts-figure">
+  <div id="container3"></div>
+  <p class="highcharts-description">
+    En esta gráfica podemos ver la comparación del número de muertes por sobredosis de cada país respecto a su calidad de vida (la calidad de vida está en porcentaje)
+  </p>
+</figure>
+
+
 
 <h3>API sos1920-04 - <a href="https://sos1920-04.herokuapp.com/api/v1/vehicles">Link EndPoint</a></h3>
 
@@ -349,6 +465,11 @@
 #container2 {
   height: 400px;
 }
+
+#container3 {
+  height: 400px;
+}
+
 
 .highcharts-data-table table {
 	font-family: Verdana, sans-serif;
