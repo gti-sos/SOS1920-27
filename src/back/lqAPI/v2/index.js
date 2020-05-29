@@ -12,7 +12,18 @@ module.exports = function (app) {
     const db = new dataStore({
                 filename: dbFileName,
                 autoload: true
-                });
+				});
+				
+	//Proxy Juanlu
+    var proxyJuanlu = "v2/locations"
+	var urlProxyJuanlu = "https://coronavirus-tracker-api.herokuapp.com/"
+	
+	//Proxy Juanlu
+    app.use(proxyJuanlu, function(req, res){
+        var url = urlProxyJuanlu + req.baseUrl + req.url;
+        console.log("piped: " + req.baseUrl + req.url);
+        req.pipe(request(url)).pipe(res)
+    })
 
     
     var ejemplos_lq = [

@@ -17586,7 +17586,7 @@ var app = (function () {
     			div1 = element("div");
     			t13 = space();
     			p1 = element("p");
-    			p1.textContent = "A basic column chart compares rainfall values between four cities.\r\n      Tokyo has the overall highest amount of rainfall, followed by New York.\r\n      The chart is making use of the axis crosshair feature, to highlight\r\n      months as they are hovered over.";
+    			p1.textContent = "En esta gráfica podemos ver la comparación del porcentaje de uso de energías renovables de cada país respecto a su calidad de vida, ambos en porcentaje";
     			t15 = space();
     			h33 = element("h3");
     			t16 = text("API sos1920-12 - ");
@@ -17598,70 +17598,41 @@ var app = (function () {
     			a4 = element("a");
     			a4.textContent = "Link EndPoint";
     			if (script0.src !== (script0_src_value = "https://code.jquery.com/jquery-3.1.1.min.js")) attr_dev(script0, "src", script0_src_value);
-<<<<<<< HEAD
-    			add_location(script0, file$l, 279, 4, 7196);
+    			add_location(script0, file$m, 304, 4, 8087);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$l, 280, 0, 7265);
+    			add_location(script1, file$m, 305, 0, 8156);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$l, 281, 0, 7365);
+    			add_location(script2, file$m, 306, 0, 8256);
     			attr_dev(a0, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a0, file$l, 286, 24, 7515);
-    			add_location(h30, file$l, 286, 4, 7495);
+    			add_location(a0, file$m, 311, 24, 8406);
+    			add_location(h30, file$m, 311, 4, 8386);
     			attr_dev(div0, "id", "container1");
     			attr_dev(div0, "class", "svelte-1b1hm1m");
-    			add_location(div0, file$l, 288, 2, 7650);
+    			add_location(div0, file$m, 313, 2, 8541);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$l, 289, 2, 7681);
+    			add_location(p0, file$m, 314, 2, 8572);
     			attr_dev(figure0, "class", "highcharts-figure svelte-1b1hm1m");
-    			add_location(figure0, file$l, 287, 4, 7612);
+    			add_location(figure0, file$m, 312, 4, 8503);
     			attr_dev(a1, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a1, file$l, 294, 20, 7917);
-    			add_location(h31, file$l, 294, 0, 7897);
+    			add_location(a1, file$m, 319, 20, 8808);
+    			add_location(h31, file$m, 319, 0, 8788);
     			attr_dev(a2, "href", "http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats");
-    			add_location(a2, file$l, 296, 21, 8033);
-    			add_location(h32, file$l, 296, 0, 8012);
+    			add_location(a2, file$m, 321, 21, 8924);
+    			add_location(h32, file$m, 321, 0, 8903);
     			attr_dev(div1, "id", "container2");
     			attr_dev(div1, "class", "svelte-1b1hm1m");
-    			add_location(div1, file$l, 299, 2, 8170);
+    			add_location(div1, file$m, 324, 2, 9061);
     			attr_dev(p1, "class", "highcharts-description");
-    			add_location(p1, file$l, 300, 2, 8201);
+    			add_location(p1, file$m, 325, 2, 9092);
     			attr_dev(figure1, "class", "highcharts-figure svelte-1b1hm1m");
-    			add_location(figure1, file$l, 298, 0, 8132);
+    			add_location(figure1, file$m, 323, 0, 9023);
     			attr_dev(a3, "href", "https://sos1920-12.herokuapp.com/api/v2/overdose-deaths");
-    			add_location(a3, file$l, 308, 21, 8547);
-    			add_location(h33, file$l, 308, 0, 8526);
+    			add_location(a3, file$m, 330, 21, 9327);
+    			add_location(h33, file$m, 330, 0, 9306);
     			attr_dev(a4, "href", "https://sos1920-04.herokuapp.com/api/v1/vehicles");
-    			add_location(a4, file$l, 310, 21, 8660);
-    			add_location(h34, file$l, 310, 0, 8639);
-    			add_location(main, file$l, 285, 0, 7483);
-=======
-    			add_location(script0, file$m, 198, 4, 5106);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$m, 199, 0, 5175);
-    			attr_dev(a0, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a0, file$m, 203, 24, 5325);
-    			add_location(h30, file$m, 203, 4, 5305);
-    			attr_dev(div, "id", "container");
-    			attr_dev(div, "class", "svelte-cmumb");
-    			add_location(div, file$m, 205, 2, 5460);
-    			attr_dev(p, "class", "highcharts-description");
-    			add_location(p, file$m, 206, 2, 5490);
-    			attr_dev(figure, "class", "highcharts-figure svelte-cmumb");
-    			add_location(figure, file$m, 204, 4, 5422);
-    			attr_dev(a1, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a1, file$m, 211, 20, 5723);
-    			add_location(h31, file$m, 211, 0, 5703);
-    			attr_dev(a2, "href", "http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats");
-    			add_location(a2, file$m, 213, 21, 5839);
-    			add_location(h32, file$m, 213, 0, 5818);
-    			attr_dev(a3, "href", "https://sos1920-12.herokuapp.com/api/v2/overdose-deaths");
-    			add_location(a3, file$m, 215, 21, 5959);
-    			add_location(h33, file$m, 215, 0, 5938);
-    			attr_dev(a4, "href", "https://sos1920-04.herokuapp.com/api/v1/vehicles");
-    			add_location(a4, file$m, 217, 21, 6072);
-    			add_location(h34, file$m, 217, 0, 6051);
-    			add_location(main, file$m, 202, 0, 5293);
->>>>>>> 98c7772cf0892e3e7c9ec99e02fa9992b2761d83
+    			add_location(a4, file$m, 332, 21, 9440);
+    			add_location(h34, file$m, 332, 0, 9419);
+    			add_location(main, file$m, 310, 0, 8374);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -17737,6 +17708,12 @@ var app = (function () {
     	return palabra;
     }
 
+    //funcion transofrmar a mayuscula
+    function toMayusc(palabra) {
+    	palabra = palabra.charAt(0).toUpperCase() + palabra.slice(1);
+    	return palabra;
+    }
+
     //api externa 1 (coronavirus)
     async function coronavirus() {
     	let covid = [];
@@ -17770,8 +17747,6 @@ var app = (function () {
     		var datos = await llamada.json();
     		lista.push(datos.latest.confirmed);
     	}
-
-    	console.log(lista);
 
     	//coger salud paises comunes
     	for (let index = 0; index < lifeq.length; index++) {
@@ -17832,37 +17807,57 @@ var app = (function () {
     async function renewable() {
     	let lifeq = [];
     	let renovables = [];
+    	let lista_comun = [];
+    	let nivel_total = [];
+    	let lista = [];
     	const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats");
     	lifeq = await res1.json();
     	const res2 = await fetch("https://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats", { mode: "cors" });
     	renovables = await res2.json();
+    	var misPaises = lifeq.map(dato => dato.country);
+    	var paises = renovables.map(dato => dato.country);
+
+    	//para tener los países comunes
+    	for (let i = 0; i < misPaises.length; i++) {
+    		for (let j = 0; j < paises.length; j++) {
+    			if (misPaises[i].localeCompare(toMinus(paises[j])) == 0) {
+    				lista_comun.push(misPaises[i]);
+    			}
+    		}
+    	}
+
+    	let conjunto = new Set(lista_comun);
+    	let lista_final = Array.from(conjunto);
+    	console.log(nivel_total);
+
+    	//coger salud paises comunes
+    	for (let index = 0; index < lifeq.length; index++) {
+    		if (lista_final.includes(lifeq[index].country)) {
+    			nivel_total.push(lifeq[index].total);
+    		}
+    	}
+
+    	//coger los porcentajes de uso de energias renovables por cada pais de la lista comun final
+    	for (let index = 0; index < lista_final.length; index++) {
+    		var llamada = await fetch("https://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats?country=" + toMayusc(lista_final[index]), { mode: "cors" });
+    		var datos = await llamada.json();
+    		lista.push(datos[0]["percentage-re-total"]);
+    	}
+
+    	console.log(lista);
 
     	//grafica
     	Highcharts.chart("container2", {
     		chart: { type: "column" },
-    		title: { text: "Monthly Average Rainfall" },
-    		subtitle: { text: "Source: WorldClimate.com" },
-    		xAxis: {
-    			categories: [
-    				"Jan",
-    				"Feb",
-    				"Mar",
-    				"Apr",
-    				"May",
-    				"Jun",
-    				"Jul",
-    				"Aug",
-    				"Sep",
-    				"Oct",
-    				"Nov",
-    				"Dec"
-    			],
-    			crosshair: true
+    		title: {
+    			text: "Comparación del porcentaje de uso de energías renovables de cada país respecto a su calidad de vida"
     		},
-    		yAxis: { min: 0, title: { text: "Rainfall (mm)" } },
+    		subtitle: { text: "" },
+    		xAxis: { categories: lista_final, crosshair: true },
+    		yAxis: { min: 0, title: { text: "Porcentaje %" } },
     		tooltip: {
     			headerFormat: "<span style=\"font-size:10px\">{point.key}</span><table>",
-    			pointFormat: "<tr><td style=\"color:{series.color};padding:0\">{series.name}: </td>" + "<td style=\"padding:0\"><b>{point.y:.1f} mm</b></td></tr>",
+    			pointFormat: "<tr><td style=\"color:{series.color};padding:0\">{series.name}: </td>" + "<td style=\"padding:0\"><b>{point.y:.1f} %</b></td></tr>",
     			footerFormat: "</table>",
     			shared: true,
     			useHTML: true
@@ -17872,33 +17867,12 @@ var app = (function () {
     		},
     		series: [
     			{
-    				name: "Tokyo",
-    				data: [
-    					49.9,
-    					71.5,
-    					106.4,
-    					129.2,
-    					144,
-    					176,
-    					135.6,
-    					148.5,
-    					216.4,
-    					194.1,
-    					95.6,
-    					54.4
-    				]
+    				name: "Nivel calidad de vida",
+    				data: nivel_total
     			},
     			{
-    				name: "New York",
-    				data: [83.6, 78.8, 98.5, 93.4, 106, 84.5, 105, 104.3, 91.2, 83.5, 106.6, 92.3]
-    			},
-    			{
-    				name: "London",
-    				data: [48.9, 38.8, 39.3, 41.4, 47, 48.3, 59, 59.6, 52.4, 65.2, 59.3, 51.2]
-    			},
-    			{
-    				name: "Berlin",
-    				data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
+    				name: "Porcentaje de uso de energías renovables",
+    				data: lista
     			}
     		]
     	});
@@ -17984,6 +17958,7 @@ var app = (function () {
     		errorMSG,
     		lq,
     		toMinus,
+    		toMayusc,
     		getLQ,
     		getLQLoadInitialData,
     		deleteLQALL,

@@ -23,6 +23,12 @@
         return palabra;
     }
 
+    //funcion transofrmar a mayuscula
+    function toMayusc(palabra) {
+        palabra=palabra.charAt(0).toUpperCase() + palabra.slice(1);
+        return palabra;
+    }
+
     //GET
     async function getLQ() {
         console.log("Fetching lq...");
@@ -103,7 +109,6 @@
         for (let j = 0; j < paises.length; j++) {
             if(misPaises[i].localeCompare(toMinus(paises[j])) == 0){
                 lista_comun.push(misPaises[i])
-                confirmados.push()
             }
             
         }
@@ -121,7 +126,6 @@
         lista.push(datos.latest.confirmed)
         
     }
-    console.log(lista)
 
     //coger salud paises comunes
     for (let index = 0; index < lifeq.length; index++) {
@@ -196,11 +200,53 @@
   async function renewable(){
   let lifeq=[]
   let renovables=[]
+  let lista_comun = [];
+  let nivel_total = [];
+  let lista=[];
     
     const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats")
     lifeq = await res1.json();
     const res2 = await fetch("https://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats",{mode:'cors'});
     renovables = await res2.json();
+
+    var misPaises = lifeq.map(dato=> dato.country);
+    var paises = renovables.map(dato=>dato.country);
+
+    //para tener los países comunes
+    for (let i = 0; i < misPaises.length; i++) {
+        for (let j = 0; j < paises.length; j++) {
+            if(misPaises[i].localeCompare(toMinus(paises[j])) == 0){
+                lista_comun.push(misPaises[i])
+            }
+            
+        }
+        
+    }
+    let conjunto = new Set(lista_comun);
+
+    let lista_final = Array.from(conjunto);
+
+    console.log(nivel_total)
+
+    //coger salud paises comunes
+    for (let index = 0; index < lifeq.length; index++) {
+        if (lista_final.includes(lifeq[index].country)) {
+            nivel_total.push(lifeq[index].total)
+        }
+        
+    }
+
+    //coger los porcentajes de uso de energias renovables por cada pais de la lista comun final
+    for (let index = 0; index < lista_final.length; index++) {
+        var llamada = await fetch("https://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats?country="+toMayusc(lista_final[index]),{mode:'cors'});
+        var datos = await llamada.json();
+        lista.push(datos[0]["percentage-re-total"])
+        
+
+ 
+    }       console.log(lista)
+
+
 
 
     //grafica
@@ -210,38 +256,25 @@
         type: 'column'
     },
     title: {
-        text: 'Monthly Average Rainfall'
+        text: 'Comparación del porcentaje de uso de energías renovables de cada país respecto a su calidad de vida'
     },
     subtitle: {
-        text: 'Source: WorldClimate.com'
+        text: ''
     },
     xAxis: {
-        categories: [
-            'Jan',
-            'Feb',
-            'Mar',
-            'Apr',
-            'May',
-            'Jun',
-            'Jul',
-            'Aug',
-            'Sep',
-            'Oct',
-            'Nov',
-            'Dec'
-        ],
+        categories: lista_final,
         crosshair: true
     },
     yAxis: {
         min: 0,
         title: {
-            text: 'Rainfall (mm)'
+            text: 'Porcentaje %'
         }
     },
     tooltip: {
         headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
         pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
         footerFormat: '</table>',
         shared: true,
         useHTML: true
@@ -253,20 +286,12 @@
         }
     },
     series: [{
-        name: 'Tokyo',
-        data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+        name: 'Nivel calidad de vida',
+        data: nivel_total
 
     }, {
-        name: 'New York',
-        data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
-
-    }, {
-        name: 'London',
-        data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
-
-    }, {
-        name: 'Berlin',
-        data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
+        name: 'Porcentaje de uso de energías renovables',
+        data: lista
 
     }]
 });
@@ -299,10 +324,7 @@
 <figure class="highcharts-figure">
   <div id="container2"></div>
   <p class="highcharts-description">
-      A basic column chart compares rainfall values between four cities.
-      Tokyo has the overall highest amount of rainfall, followed by New York.
-      The chart is making use of the axis crosshair feature, to highlight
-      months as they are hovered over.
+    En esta gráfica podemos ver la comparación del porcentaje de uso de energías renovables de cada país respecto a su calidad de vida, ambos en porcentaje
   </p>
 </figure>
 
