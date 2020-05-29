@@ -13143,31 +13143,31 @@ var app = (function () {
     			t10 = space();
     			div2 = element("div");
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$h, 428, 4, 10724);
+    			add_location(script0, file$h, 428, 4, 10726);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$h, 429, 4, 10795);
+    			add_location(script1, file$h, 429, 4, 10797);
     			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$h, 430, 4, 10873);
+    			add_location(script2, file$h, 430, 4, 10875);
     			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$h, 431, 4, 10953);
+    			add_location(script3, file$h, 431, 4, 10955);
     			if (script4.src !== (script4_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script4, "src", script4_src_value);
-    			add_location(script4, file$h, 432, 4, 11052);
+    			add_location(script4, file$h, 432, 4, 11054);
     			if (script5.src !== (script5_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script5, "src", script5_src_value);
-    			add_location(script5, file$h, 433, 4, 11137);
-    			add_location(h10, file$h, 441, 8, 11285);
-    			add_location(h30, file$h, 442, 8, 11309);
+    			add_location(script5, file$h, 433, 4, 11139);
+    			add_location(h10, file$h, 441, 8, 11287);
+    			add_location(h30, file$h, 442, 8, 11311);
     			attr_dev(div0, "id", "chart2");
-    			add_location(div0, file$h, 440, 4, 11258);
-    			add_location(h11, file$h, 445, 8, 11412);
-    			add_location(h31, file$h, 446, 8, 11436);
+    			add_location(div0, file$h, 440, 4, 11260);
+    			add_location(h11, file$h, 445, 8, 11414);
+    			add_location(h31, file$h, 446, 8, 11438);
     			attr_dev(div1, "id", "chart");
-    			add_location(div1, file$h, 444, 4, 11386);
-    			add_location(h12, file$h, 449, 8, 11556);
+    			add_location(div1, file$h, 444, 4, 11388);
+    			add_location(h12, file$h, 449, 8, 11558);
     			attr_dev(div2, "id", "container");
-    			add_location(div2, file$h, 450, 8, 11580);
+    			add_location(div2, file$h, 450, 8, 11582);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$h, 448, 4, 11512);
-    			add_location(main, file$h, 438, 0, 11240);
+    			add_location(figure, file$h, 448, 4, 11514);
+    			add_location(main, file$h, 438, 0, 11242);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13253,7 +13253,7 @@ var app = (function () {
     	var swim = [];
     	const resData = await fetch("/api/v2/poverty-stats");
     	poverty = await resData.json();
-    	const resData2 = await fetch("http://sos1920-22.herokuapp.com/api/v1/swim-stats");
+    	const resData2 = await fetch("https://sos1920-22.herokuapp.com/api/v1/swim-stats");
     	swim = await resData2.json();
 
     	//ajustar tamaño poverty con swim
@@ -13473,7 +13473,7 @@ var app = (function () {
     	var poverty = [];
     	const resData = await fetch("/api/v2/poverty-stats");
     	poverty = await resData.json();
-    	const resData4 = await fetch("http://sos1920-12.herokuapp.com/api/v1/drug_offences");
+    	const resData4 = await fetch("https://sos1920-12.herokuapp.com/api/v1/drug_offences");
     	drug = await resData4.json();
     	console.log(poverty);
     	ordenarAsc$1(poverty, "year");

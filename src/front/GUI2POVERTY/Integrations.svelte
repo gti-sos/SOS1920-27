@@ -23,7 +23,7 @@ function ordenarAsc(array, key) {
         const resData = await fetch('/api/v2/poverty-stats');
         poverty = await resData.json();
         
-        const resData2 = await fetch('http://sos1920-22.herokuapp.com/api/v1/swim-stats');
+        const resData2 = await fetch('https://sos1920-22.herokuapp.com/api/v1/swim-stats');
         swim = await resData2.json();
 
         //ajustar tamaño poverty con swim
@@ -276,7 +276,7 @@ function ordenarAsc(array, key) {
     const resData = await fetch('/api/v2/poverty-stats');
     poverty = await resData.json();
 
-    const resData4 = await fetch('http://sos1920-12.herokuapp.com/api/v1/drug_offences');
+    const resData4 = await fetch('https://sos1920-12.herokuapp.com/api/v1/drug_offences');
     drug = await resData4.json();
 
     console.log(poverty);
