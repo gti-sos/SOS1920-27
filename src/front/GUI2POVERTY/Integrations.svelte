@@ -1,1 +1,454 @@
-11111111111111111
+<script>
+
+function ordenarAsc(array, key) {
+       var arrayAux=[];
+        for(var i=0; i < array.length-1;i++){
+            for (let j = i+1; j < array.length; j++) {
+                if(array[i][key] > array[j][key]){
+                    arrayAux = array[i];
+                    array[i]=array[j];
+                    array[j]=arrayAux;
+                }
+            }
+        }
+        return array;
+    }
+
+    async function api1(){
+        //recoger datos de apis
+        var poverty=[];
+        var swim=[];
+
+
+        const resData = await fetch('/api/v2/poverty-stats');
+        poverty = await resData.json();
+        
+        const resData2 = await fetch('https://sos1920-22.herokuapp.com/api/v1/swim-stats');
+        swim = await resData2.json();
+
+        //ajustar tamaño poverty con swim
+        var tams=[];
+        var menor=poverty.length;
+
+        tams.push(poverty.length);
+        tams.push(swim.length);
+        
+        tams.forEach((t)=>{
+            if(menor>t){
+                menor=t;
+            }
+        });
+
+        var aux=[];
+        var cont=menor;
+        if(poverty.length!=menor){
+            poverty.forEach((c)=>{
+                if(cont>0){
+                    aux.push(c);
+                    cont--;
+                }
+            });
+            poverty=aux;
+            aux=[];
+        }else if(swim.length!=menor){
+            poverty.forEach((c)=>{
+                if(cont>0){
+                    aux.push(c);
+                    cont--;
+                }
+            });
+            swim=aux;
+            aux=[];
+        }
+        
+        var cat = swim.map((dato)=>{
+            return dato.country;
+        });
+
+        poverty.forEach((el)=>{
+            cat.push(el.country);
+        });
+        
+        var dataSwim = swim.map((dato)=>{
+            return parseFloat(dato.position/dato.time);
+        });
+        //console.log(dataSwim);
+        
+        var dataPoverty=[];
+        dataSwim.forEach((el)=>{
+            dataPoverty.push(0);
+        });
+        poverty.forEach((el)=>{
+            dataSwim.push(0);
+        });
+
+        poverty.forEach((dato)=>{
+            dataPoverty.push(dato.under_320);
+        });
+
+        //console.log(dataSwim);
+        //console.log(dataPoverty);
+        
+        //Grafica
+        
+        Highcharts.chart('container', {
+            chart: {
+                type: 'area'
+            },
+            title: {
+                text: 'natacion y pobreza'
+            },
+            subtitle: {
+                
+                align: 'right',
+                verticalAlign: 'bottom'
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                verticalAlign: 'top',
+                x: 100,
+                y: 70,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor:
+                    Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF'
+            },
+            xAxis: {
+                categories: cat
+            },
+            yAxis: {
+            lineColor: 'black',
+            lineWidth: 2,
+            title: false,
+            tickInterval: 0.5,
+        },
+            plotOptions: {
+                area: {
+                    fillOpacity: 0.5
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: 'swim',
+                data: dataSwim
+            }, {
+                name: 'poverty',
+                data: dataPoverty
+            }]
+        });    
+    }  
+
+   async function api2(){
+
+    var poverty=[];
+    var imports=[];
+
+    const resData = await fetch('/api/v2/poverty-stats');
+    poverty = await resData.json();
+
+    const resData2 = await fetch('https://sos1920-07.herokuapp.com/api/v2/imports');
+    imports = await resData2.json();
+
+    ordenarAsc(poverty,'year');
+    var year = poverty.map((dato)=> {   
+             return parseInt(dato.year);
+        });
+
+       year= year.filter(function(valor, indiceActual, arreglo) { //quitar duplicados
+            let indiceAlBuscar = arreglo.indexOf(valor);
+            if (indiceActual === indiceAlBuscar) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+        //seleccionamos un valor por año
+        var yearAux=[];
+        year.forEach((y)=>{
+            yearAux.push(y);
+        });
+        
+        //console.log(year);
+        var res=[];
+        for(var y=0;y<yearAux.length;y++){
+            imports.forEach((i)=>{
+                if(i.year==yearAux[y] && i.gdawaste!=0){
+                    
+                    res.push(i);
+                    yearAux.splice(y,1);
+                }
+        });
+    };
+    imports=res;
+    //console.log(imports);
+
+    //seleccionamos un valor por año
+    year.forEach((y)=>{
+            yearAux.push(y);
+        });
+        
+        //console.log(year);
+        var res=[];
+        for(var y=0;y<yearAux.length;y++){
+            poverty.forEach((i)=>{
+                if(i.year==yearAux[y]){
+                    
+                    res.push(i);
+                    yearAux.splice(y,1);
+                }
+        });
+    };
+    poverty=res;
+    //console.log(poverty);
+    var datosPoverty=[];
+    var datosAlcohol=[];
+    var pos=0;
+
+    imports.forEach((a)=>{
+            datosAlcohol.push(parseInt(a.gdaethylalcohol)/1000000);
+    });
+
+   datosPoverty=poverty.map((p)=>{
+       var res=p.under_550;
+       pos++;
+        return res;
+   });
+    //console.log(datosPoverty);
+
+
+    var options = {
+          series: [{
+          name: 'poverty',
+          data: datosPoverty
+        }, {
+          name: 'alcohol',
+          data: datosAlcohol
+        }],
+          chart: {
+          type: 'bar',
+          height: 350
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: '55%',
+            endingShape: 'rounded'
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          show: true,
+          width: 2,
+          colors: ['transparent']
+        },
+        xaxis: {
+          categories: year,
+        },
+        yaxis: {
+          
+        },
+        fill: {
+          opacity: 1
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return val + " por millón"
+            }
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+   }
+
+   async function api3(){
+
+    var drug=[];
+    var poverty=[];
+
+    const resData = await fetch('/api/v2/poverty-stats');
+    poverty = await resData.json();
+
+    const resData4 = await fetch('https://sos1920-12.herokuapp.com/api/v1/drug_offences');
+    drug = await resData4.json();
+
+    console.log(poverty);
+
+    ordenarAsc(poverty,'year');
+    var year = poverty.map((dato)=> {   
+             return parseInt(dato.year);
+        });
+
+       year= year.filter(function(valor, indiceActual, arreglo) { //quitar duplicados
+            let indiceAlBuscar = arreglo.indexOf(valor);
+            if (indiceActual === indiceAlBuscar) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+        //seleccionamos un valor por año
+        var yearAux=[];
+        year.forEach((y)=>{
+            yearAux.push(y);
+        });
+
+        console.log(yearAux);
+
+        var res=[];
+        for(var i=0;i<drug.length;i++){
+            for(var y=0;y<yearAux.length;y++){
+                if(yearAux[y]==drug[i].year){
+                    res.push(drug[i]);
+                    yearAux.splice(y,1);
+                    console.log(yearAux);
+                    break;
+                }
+            }
+        };
+        drug=res.map((dato)=>{
+            return parseFloat(dato.cannabis_offences)/1000000;
+        });
+
+        //seleccionamos un valor por año
+        yearAux=[];
+        year.forEach((y)=>{
+            yearAux.push(y);
+        });
+
+        console.log(yearAux);
+
+
+        poverty=poverty.filter(function (p) {
+                return p.continent == "europe";
+            });
+        var res=[];
+        for(var i=0;i<poverty.length;i++){
+            for(var y=0;y<poverty.length;y++){
+                if(yearAux[y]==poverty[i].year){
+                    res.push(poverty[i]);
+                    yearAux.splice(y,1);
+                    //console.log(yearAux);
+                    break;
+                }
+            }
+        };
+        
+        poverty=poverty.map((p)=>{
+            return parseFloat(p.under_550);
+        });
+
+        console.log(poverty);
+
+    var options = {
+          series: [
+          {
+            name: "Drug",
+            data: drug
+          },
+          {
+            name: "Poverty",
+            data: poverty
+          }
+        ],
+          chart: {
+          height: 350,
+          type: 'line',
+          dropShadow: {
+            enabled: true,
+            color: '#000',
+            top: 18,
+            left: 7,
+            blur: 10,
+            opacity: 0.2
+          },
+          toolbar: {
+            show: false
+          }
+        },
+        colors: ['#77B6EA', '#545454'],
+        dataLabels: {
+          enabled: true,
+        },
+        stroke: {
+          curve: 'smooth'
+        },
+        title: {
+          text: 'Consumo de cannabis y pobreza en Europa',
+          align: 'left'
+        },
+        grid: {
+          borderColor: '#e7e7e7',
+          row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
+        markers: {
+          size: 1
+        },
+        xaxis: {
+          categories: year,
+          title: {
+            text: 'Año'
+          }
+        },
+        yaxis: {
+          title: {
+            text: 'Indice'
+          },
+          tickAmount: 2,
+          min: 0,
+          max: 1
+        },
+        legend: {
+          position: 'top',
+          horizontalAlign: 'right',
+          floating: true,
+          offsetY: -25,
+          offsetX: -5
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart2"), options);
+        chart.render();
+
+   }
+
+  //  datos();
+</script>
+
+<svelte:head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js" on:load="{api1}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"on:load="{api2}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"on:load="{api3}"></script>
+</svelte:head>
+
+
+
+<main>
+    
+    <div id="chart2">
+        <h1>API 1</h1>
+        <h3>indice de pobreza y consumo de cannabis por millón</h3>
+    </div>
+    <div id="chart">
+        <h1>API 2</h1>
+        <h3>indice de pobreza y consumo de alcohol por millón</h3>
+    </div>
+    <figure class="highcharts-figure">
+        <h1>API 3</h1>
+        <div id="container"></div>
+    </figure>
+    
+</main>
