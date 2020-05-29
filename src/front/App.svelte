@@ -4,6 +4,8 @@
 	import NotFound from './NotFound.svelte';
 
 	import Home from './Home.svelte';
+	import About from './About.svelte';
+	import Analytics from './Analytics.svelte';
 
 	import GUI1SPC from './GUI1SPC/Home.svelte';
 	import GUI1SPCHighChart from './GUI1SPC/HighChart.svelte';
@@ -26,6 +28,8 @@
 	const routes = {
 		"/" : Home,
 		"/public/index.html" : Home,
+		"/about" : About,
+		"/analytics" : Analytics,
 		
 		"/gui1spc": GUI1SPC,
 		"/gui1SPCHighChart": GUI1SPCHighChart,
