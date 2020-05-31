@@ -333,7 +333,7 @@
         let dataRoads = []; //guardamos todos los datos de bicis de 2015
         let dataSui = []
 
-        const res2 = await fetch("http://sos1920-04.herokuapp.com/api/v1/roads/");
+        const res2 = await fetch("https://sos1920-04.herokuapp.com/api/v1/roads/");
         dataRoads = await res2.json();
         
         const densityApi = await fetch("https://restcountries.eu/rest/v2/name/spain");
