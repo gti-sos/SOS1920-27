@@ -520,7 +520,7 @@ function ordenarAsc(array, key) {
                 };
         });
         
-        const resData1 = await fetch('http://localhost:8000/api/v2/poverty-stats');
+        const resData1 = await fetch('/api/v2/poverty-stats');
         poverty = await resData1.json();
 
         //recogemos datos de cada pais
