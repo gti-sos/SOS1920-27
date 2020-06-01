@@ -9,7 +9,7 @@
 
 	import GUI1SPC from './GUI1SPC/Home.svelte';
 	import GUI1SPCHighChart from './GUI1SPC/HighChart.svelte';
-	import GUI1SPCApexChart from './GUI1SPC/ApexChart.svelte';
+	import GUI1SPCChartist from './GUI1SPC/Chartist.svelte';
 	import EditSpc from './GUI1SPC/EditSpc.svelte';
 	import GUI1SPCIntegrations from './GUI1SPC/Integrations.svelte'; //integraciones
 
@@ -33,7 +33,7 @@
 		
 		"/gui1spc": GUI1SPC,
 		"/gui1SPCHighChart": GUI1SPCHighChart,
-		"/gui1SPCApexChart": GUI1SPCApexChart,
+		"/gui1SPCChartist": GUI1SPCChartist,
 		"/spc-stats/:suicideCountry/:suicideYear": EditSpc,
 		"/integrations/gui1integrations": GUI1SPCIntegrations,
 
