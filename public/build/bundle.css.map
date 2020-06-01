@@ -4,7 +4,7 @@
   "sources": [
     "..\\..\\Chartist.svelte",
     "..\\..\\Integrations.svelte",
-    "..\\..\\ApexChart.svelte",
+    "..\\..\\ChartJS.svelte",
     "..\\..\\ApexChart.svelte",
     "..\\..\\HighChart.svelte",
     "..\\..\\Integrations.svelte"

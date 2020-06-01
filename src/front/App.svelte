@@ -16,7 +16,7 @@
 	import GUI2POVERTY from './GUI2POVERTY/Home.svelte';
 	import EditPoverty from './GUI2POVERTY/EditPoverty.svelte';
 	import GUI2PovertyHighChart from "./GUI2POVERTY/Highchart.svelte";
-	import GUI2PovertyApexChart from './GUI2POVERTY/ApexChart.svelte';
+	import GUI2PovertyChartJS from './GUI2POVERTY/ChartJS.svelte';
 	import GUI2PovertyIntegrations from './GUI2POVERTY/Integrations.svelte'; //integraciones
 	
 	import GUI3LQ from './GUI3LQ/Home.svelte';
@@ -41,7 +41,7 @@
 		"/gui2povertyHighChart": GUI2PovertyHighChart,
 		"/poverty-stats/:country/:year":EditPoverty,
 		"/integrations/gui2integrations": GUI2PovertyIntegrations,
-		"/gui2povertyApexChart":GUI2PovertyApexChart,
+		"/gui2povertyChartJS":GUI2PovertyChartJS,
 
 		"/gui3lq": GUI3LQ,
 		"/gui3LQHighChart": GUI3LQHighChart,
