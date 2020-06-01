@@ -55,45 +55,47 @@
       })[0];
 
       console.log(euro);
+      
+      /////////////////////
 
-      var options = {
-          series: [euro,asia,oceania,africa,south,north],
-          chart: {
-          type: 'donut',
-        },
-        labels:["europa","asia","oceania","africa","south america","north america"],
-          responsive: [{
-            breakpoint: 480,
-            options: {
-              chart: {
-                width: 200
-              },
-              legend: {
-                position: 'bottom'
-              }
-            }
-          }]
-        };
+      var ctx = document.getElementById('myChart').getContext('2d');
+     var data = {
+    datasets: [{
+        data: [euro,asia,oceania,africa,south,north],
+        backgroundColor: [
+        'rgba(255, 0, 0)',
+        'rgba(62, 255, 0)',
+        'rgba(255, 255, 0)',
+        'rgba(0, 0, 255)',
+        'rgba(255, 0, 255)',
+        'rgba(0, 0, 0)'
+        ]
+    }],
+    labels: ["europa","asia","oceania","africa","south america","north america"]
+};
+      var myDoughnutChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: data
+        
 
-        var chart = new ApexCharts(document.querySelector("#chart"), options);
-        chart.render();
-  }
+        });
+      /////////////////////
+
+    }
 
     
   </script>
   
 <svelte:head>
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"on:load="{loadGraphs}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0" on:load="{loadGraphs}"></script>
 </svelte:head>
+
+
 
 <main>
   <h1>Porcentaje de pobreza inferior del 3.2 por continente en 2017</h1>
-  <div id="chart">
-  </div>
 </main>
-
+<canvas id="myChart"></canvas>
 <style>
-  #chart{
-    width: 80%;
-  }
-</style>
+
+  </style>

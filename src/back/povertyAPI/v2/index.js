@@ -9,6 +9,10 @@ module.exports = function (app) {
 
     const BASE_API_URL="/api/v2";
 
+	// Proxy Pere
+    // var proxyPere = "/api/v2/not-hospitalized-stats"
+    // var urlProxyPere = "https://sos1920-06.herokuapp.com/"
+
     const db = new dataStore({
                 filename: dbFileName,
                 autoload: true

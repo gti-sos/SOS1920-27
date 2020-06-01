@@ -12924,7 +12924,7 @@ var app = (function () {
     	let main;
     	let h1;
     	let t2;
-    	let div;
+    	let canvas;
     	let dispose;
 
     	const block = {
@@ -12935,14 +12935,13 @@ var app = (function () {
     			h1 = element("h1");
     			h1.textContent = "Porcentaje de pobreza inferior del 3.2 por continente en 2017";
     			t2 = space();
-    			div = element("div");
-    			if (script.src !== (script_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$g, 85, 2, 2276);
-    			add_location(h1, file$g, 89, 2, 2391);
-    			attr_dev(div, "id", "chart");
-    			attr_dev(div, "class", "svelte-c7jnis");
-    			add_location(div, file$g, 90, 2, 2465);
-    			add_location(main, file$g, 88, 0, 2381);
+    			canvas = element("canvas");
+    			if (script.src !== (script_src_value = "https://cdn.jsdelivr.net/npm/chart.js@2.8.0")) attr_dev(script, "src", script_src_value);
+    			add_location(script, file$g, 89, 2, 2328);
+    			add_location(h1, file$g, 95, 2, 2452);
+    			add_location(main, file$g, 94, 0, 2442);
+    			attr_dev(canvas, "id", "myChart");
+    			add_location(canvas, file$g, 97, 0, 2533);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12952,8 +12951,8 @@ var app = (function () {
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, h1);
-    			append_dev(main, t2);
-    			append_dev(main, div);
+    			insert_dev(target, t2, anchor);
+    			insert_dev(target, canvas, anchor);
     			if (remount) dispose();
     			dispose = listen_dev(script, "load", loadGraphs$2, false, false, false);
     		},
@@ -12964,6 +12963,8 @@ var app = (function () {
     			detach_dev(script);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
+    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(canvas);
     			dispose();
     		}
     	};
@@ -13031,24 +13032,28 @@ var app = (function () {
 
     	console.log(euro);
 
-    	var options = {
-    		series: [euro, asia, oceania, africa, south, north],
-    		chart: { type: "donut" },
-    		labels: ["europa", "asia", "oceania", "africa", "south america", "north america"],
-    		responsive: [
+    	/////////////////////
+    	var ctx = document.getElementById("myChart").getContext("2d");
+
+    	var data = {
+    		datasets: [
     			{
-    				breakpoint: 480,
-    				options: {
-    					chart: { width: 200 },
-    					legend: { position: "bottom" }
-    				}
+    				data: [euro, asia, oceania, africa, south, north],
+    				backgroundColor: [
+    					"rgba(255, 0, 0)",
+    					"rgba(62, 255, 0)",
+    					"rgba(255, 255, 0)",
+    					"rgba(0, 0, 255)",
+    					"rgba(255, 0, 255)",
+    					"rgba(0, 0, 0)"
+    				]
     			}
-    		]
+    		],
+    		labels: ["europa", "asia", "oceania", "africa", "south america", "north america"]
     	};
 
-    	var chart = new ApexCharts(document.querySelector("#chart"), options);
-    	chart.render();
-    }
+    	var myDoughnutChart = new Chart(ctx, { type: "doughnut", data });
+    } /////////////////////
 
     function instance$i($$self, $$props, $$invalidate) {
     	const writable_props = [];
@@ -13087,87 +13092,93 @@ var app = (function () {
     	let script0_src_value;
     	let script1;
     	let script1_src_value;
-    	let script2;
-    	let script2_src_value;
-    	let script3;
-    	let script3_src_value;
-    	let script4;
-    	let script4_src_value;
-    	let script5;
-    	let script5_src_value;
     	let t0;
     	let main;
     	let div0;
     	let h10;
     	let t2;
-    	let h30;
-    	let t4;
     	let div1;
     	let h11;
+    	let t4;
+    	let h30;
     	let t6;
-    	let h31;
-    	let t8;
-    	let figure;
-    	let h12;
-    	let t10;
     	let div2;
+    	let h12;
+    	let t8;
+    	let h31;
+    	let t10;
+    	let div3;
+    	let h13;
+    	let t12;
+    	let h32;
+    	let t14;
+    	let figure;
+    	let h14;
+    	let t16;
+    	let div4;
     	let dispose;
 
     	const block = {
     		c: function create() {
     			script0 = element("script");
     			script1 = element("script");
-    			script2 = element("script");
-    			script3 = element("script");
-    			script4 = element("script");
-    			script5 = element("script");
     			t0 = space();
     			main = element("main");
     			div0 = element("div");
     			h10 = element("h1");
-    			h10.textContent = "API 1";
+    			h10.textContent = "API Externa 1";
     			t2 = space();
-    			h30 = element("h3");
-    			h30.textContent = "indice de pobreza y consumo de cannabis por millón";
-    			t4 = space();
     			div1 = element("div");
     			h11 = element("h1");
-    			h11.textContent = "API 2";
+    			h11.textContent = "API 1";
+    			t4 = space();
+    			h30 = element("h3");
+    			h30.textContent = "indice de pobreza y consumo de cannabis por millón";
     			t6 = space();
+    			div2 = element("div");
+    			h12 = element("h1");
+    			h12.textContent = "API 2";
+    			t8 = space();
     			h31 = element("h3");
     			h31.textContent = "indice de pobreza y consumo de alcohol por millón";
-    			t8 = space();
-    			figure = element("figure");
-    			h12 = element("h1");
-    			h12.textContent = "API 3";
     			t10 = space();
-    			div2 = element("div");
-    			if (script0.src !== (script0_src_value = "https://code.highcharts.com/highcharts.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$h, 428, 4, 10726);
-    			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/exporting.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$h, 429, 4, 10797);
-    			if (script2.src !== (script2_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$h, 430, 4, 10875);
-    			if (script3.src !== (script3_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script3, "src", script3_src_value);
-    			add_location(script3, file$h, 431, 4, 10955);
-    			if (script4.src !== (script4_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script4, "src", script4_src_value);
-    			add_location(script4, file$h, 432, 4, 11054);
-    			if (script5.src !== (script5_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script5, "src", script5_src_value);
-    			add_location(script5, file$h, 433, 4, 11139);
-    			add_location(h10, file$h, 441, 8, 11287);
-    			add_location(h30, file$h, 442, 8, 11311);
-    			attr_dev(div0, "id", "chart2");
-    			add_location(div0, file$h, 440, 4, 11260);
-    			add_location(h11, file$h, 445, 8, 11414);
-    			add_location(h31, file$h, 446, 8, 11438);
-    			attr_dev(div1, "id", "chart");
-    			add_location(div1, file$h, 444, 4, 11388);
-    			add_location(h12, file$h, 449, 8, 11558);
-    			attr_dev(div2, "id", "container");
-    			add_location(div2, file$h, 450, 8, 11582);
+    			div3 = element("div");
+    			h13 = element("h1");
+    			h13.textContent = "API 3";
+    			t12 = space();
+    			h32 = element("h3");
+    			h32.textContent = "Media de pobreza y accidentes de trafico en 2015";
+    			t14 = space();
+    			figure = element("figure");
+    			h14 = element("h1");
+    			h14.textContent = "API 4";
+    			t16 = space();
+    			div4 = element("div");
+    			if (script0.src !== (script0_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script0, "src", script0_src_value);
+    			add_location(script0, file$h, 610, 4, 15731);
+    			if (script1.src !== (script1_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script1, "src", script1_src_value);
+    			add_location(script1, file$h, 611, 4, 15834);
+    			add_location(h10, file$h, 619, 8, 16021);
+    			attr_dev(div0, "id", "chartex1");
+    			add_location(div0, file$h, 618, 4, 15992);
+    			add_location(h11, file$h, 624, 8, 16100);
+    			add_location(h30, file$h, 625, 8, 16124);
+    			attr_dev(div1, "id", "chart2");
+    			add_location(div1, file$h, 623, 4, 16073);
+    			add_location(h12, file$h, 628, 8, 16227);
+    			add_location(h31, file$h, 629, 8, 16251);
+    			attr_dev(div2, "id", "chart");
+    			add_location(div2, file$h, 627, 4, 16201);
+    			add_location(h13, file$h, 632, 8, 16354);
+    			add_location(h32, file$h, 633, 8, 16378);
+    			attr_dev(div3, "id", "chart4");
+    			add_location(div3, file$h, 631, 4, 16327);
+    			add_location(h14, file$h, 636, 8, 16497);
+    			attr_dev(div4, "id", "container");
+    			add_location(div4, file$h, 637, 8, 16521);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$h, 448, 4, 11514);
-    			add_location(main, file$h, 438, 0, 11242);
+    			add_location(figure, file$h, 635, 4, 16453);
+    			add_location(main, file$h, 616, 0, 15978);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13175,32 +13186,38 @@ var app = (function () {
     		m: function mount(target, anchor, remount) {
     			append_dev(document_1$3.head, script0);
     			append_dev(document_1$3.head, script1);
-    			append_dev(document_1$3.head, script2);
-    			append_dev(document_1$3.head, script3);
-    			append_dev(document_1$3.head, script4);
-    			append_dev(document_1$3.head, script5);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, div0);
     			append_dev(div0, h10);
-    			append_dev(div0, t2);
-    			append_dev(div0, h30);
-    			append_dev(main, t4);
+    			append_dev(main, t2);
     			append_dev(main, div1);
     			append_dev(div1, h11);
-    			append_dev(div1, t6);
-    			append_dev(div1, h31);
-    			append_dev(main, t8);
+    			append_dev(div1, t4);
+    			append_dev(div1, h30);
+    			append_dev(main, t6);
+    			append_dev(main, div2);
+    			append_dev(div2, h12);
+    			append_dev(div2, t8);
+    			append_dev(div2, h31);
+    			append_dev(main, t10);
+    			append_dev(main, div3);
+    			append_dev(div3, h13);
+    			append_dev(div3, t12);
+    			append_dev(div3, h32);
+    			append_dev(main, t14);
     			append_dev(main, figure);
-    			append_dev(figure, h12);
-    			append_dev(figure, t10);
-    			append_dev(figure, div2);
+    			append_dev(figure, h14);
+    			append_dev(figure, t16);
+    			append_dev(figure, div4);
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(script3, "load", api1, false, false, false),
-    				listen_dev(script4, "load", api2, false, false, false),
-    				listen_dev(script5, "load", api3, false, false, false)
+    				listen_dev(script0, "load", api1, false, false, false),
+    				listen_dev(script0, "load", api2, false, false, false),
+    				listen_dev(script1, "load", api3, false, false, false),
+    				listen_dev(script1, "load", api4, false, false, false),
+    				listen_dev(script1, "load", apiExterna1, false, false, false)
     			];
     		},
     		p: noop,
@@ -13209,10 +13226,6 @@ var app = (function () {
     		d: function destroy(detaching) {
     			detach_dev(script0);
     			detach_dev(script1);
-    			detach_dev(script2);
-    			detach_dev(script3);
-    			detach_dev(script4);
-    			detach_dev(script5);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			run_all(dispose);
@@ -13247,108 +13260,144 @@ var app = (function () {
     }
 
     async function api1() {
-    	//recoger datos de apis
+    	var drug = [];
     	var poverty = [];
-
-    	var swim = [];
     	const resData = await fetch("/api/v2/poverty-stats");
     	poverty = await resData.json();
-    	const resData2 = await fetch("https://sos1920-22.herokuapp.com/api/v1/swim-stats");
-    	swim = await resData2.json();
+    	const resData4 = await fetch("https://sos1920-12.herokuapp.com/api/v1/drug_offences");
+    	drug = await resData4.json();
 
-    	//ajustar tamaño poverty con swim
-    	var tams = [];
+    	//console.log(poverty);
+    	ordenarAsc$1(poverty, "year");
 
-    	var menor = poverty.length;
-    	tams.push(poverty.length);
-    	tams.push(swim.length);
+    	ordenarAsc$1(drug, "year");
+    	var year = []; //eje x
 
-    	tams.forEach(t => {
-    		if (menor > t) {
-    			menor = t;
+    	poverty.forEach(dato => {
+    		//cargamos los años de poverty   
+    		year.push(parseInt(dato.year));
+    	});
+
+    	year = year.filter(function (valor, indiceActual, arreglo) {
+    		//quitar duplicados
+    		let indiceAlBuscar = arreglo.indexOf(valor);
+
+    		if (indiceActual === indiceAlBuscar) {
+    			return true;
+    		} else {
+    			return false;
     		}
     	});
 
-    	var aux = [];
-    	var cont = menor;
+    	//seleccionamos un valor por año
+    	//variable auxiliar para ir borrando cada vez que se seleccione un año
+    	var yearAux = [];
 
-    	if (poverty.length != menor) {
-    		poverty.forEach(c => {
-    			if (cont > 0) {
-    				aux.push(c);
-    				cont--;
+    	year.forEach(y => {
+    		yearAux.push(y);
+    	});
+
+    	var res = [];
+
+    	for (var i = 0; i < drug.length; i++) {
+    		for (var y = 0; y < yearAux.length; y++) {
+    			if (yearAux[y] == drug[i].year) {
+    				res.push(drug[i]);
+    				yearAux.splice(y, 1);
+
+    				//console.log(yearAux);
+    				break;
     			}
-    		});
-
-    		poverty = aux;
-    		aux = [];
-    	} else if (swim.length != menor) {
-    		poverty.forEach(c => {
-    			if (cont > 0) {
-    				aux.push(c);
-    				cont--;
-    			}
-    		});
-
-    		swim = aux;
-    		aux = [];
+    		}
     	}
 
-    	var cat = swim.map(dato => {
-    		return dato.country;
+    	
+
+    	drug = res.map(dato => {
+    		return parseFloat(dato.cannabis_offences) / 1000000;
     	});
 
-    	poverty.forEach(el => {
-    		cat.push(el.country);
+    	//seleccionamos un valor por año
+    	yearAux = [];
+
+    	year.forEach(y => {
+    		yearAux.push(y);
     	});
 
-    	var dataSwim = swim.map(dato => {
-    		return parseFloat(dato.position / dato.time);
+    	poverty = poverty.filter(function (p) {
+    		return p.continent == "europe";
     	});
 
-    	//console.log(dataSwim);
-    	var dataPoverty = [];
+    	var res = [];
 
-    	dataSwim.forEach(el => {
-    		dataPoverty.push(0);
+    	for (var i = 0; i < poverty.length; i++) {
+    		for (var y = 0; y < poverty.length; y++) {
+    			if (yearAux[y] == poverty[i].year) {
+    				res.push(poverty[i]);
+    				yearAux.splice(y, 1);
+
+    				//console.log(yearAux);
+    				break;
+    			}
+    		}
+    	}
+
+    	
+
+    	poverty = poverty.map(p => {
+    		return parseFloat(p.under_550);
     	});
 
-    	poverty.forEach(el => {
-    		dataSwim.push(0);
-    	});
+    	console.log(poverty);
 
-    	poverty.forEach(dato => {
-    		dataPoverty.push(dato.under_320);
-    	});
-
-    	//console.log(dataSwim);
-    	//console.log(dataPoverty);
-    	//Grafica
-    	Highcharts.chart("container", {
-    		chart: { type: "area" },
-    		title: { text: "natacion y pobreza" },
-    		subtitle: { align: "right", verticalAlign: "bottom" },
+    	var options = {
+    		series: [{ name: "Drug", data: drug }, { name: "Poverty", data: poverty }],
+    		chart: {
+    			height: 350,
+    			type: "line",
+    			dropShadow: {
+    				enabled: true,
+    				color: "#000",
+    				top: 18,
+    				left: 7,
+    				blur: 10,
+    				opacity: 0.2
+    			},
+    			toolbar: { show: false }
+    		},
+    		colors: ["#77B6EA", "#545454"],
+    		dataLabels: { enabled: true },
+    		stroke: { curve: "smooth" },
+    		title: {
+    			text: "Consumo de cannabis y pobreza en Europa",
+    			align: "left"
+    		},
+    		grid: {
+    			borderColor: "#e7e7e7",
+    			row: {
+    				colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+    				opacity: 0.5
+    			}
+    		},
+    		markers: { size: 1 },
+    		xaxis: { categories: year, title: { text: "Año" } },
+    		yaxis: {
+    			title: { text: "Indice" },
+    			tickAmount: 2,
+    			min: 0,
+    			max: 1
+    		},
     		legend: {
-    			layout: "vertical",
-    			align: "left",
-    			verticalAlign: "top",
-    			x: 100,
-    			y: 70,
+    			position: "top",
+    			horizontalAlign: "right",
     			floating: true,
-    			borderWidth: 1,
-    			backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || "#FFFFFF"
-    		},
-    		xAxis: { categories: cat },
-    		yAxis: {
-    			lineColor: "black",
-    			lineWidth: 2,
-    			title: false,
-    			tickInterval: 0.5
-    		},
-    		plotOptions: { area: { fillOpacity: 0.5 } },
-    		credits: { enabled: false },
-    		series: [{ name: "swim", data: dataSwim }, { name: "poverty", data: dataPoverty }]
-    	});
+    			offsetY: -25,
+    			offsetX: -5
+    		}
+    	};
+
+    	var chart = new ApexCharts(document.querySelector("#chart2"), options);
+    	chart.render();
     }
 
     async function api2() {
@@ -13469,139 +13518,266 @@ var app = (function () {
     }
 
     async function api3() {
-    	var drug = [];
+    	var traffic = [];
     	var poverty = [];
     	const resData = await fetch("/api/v2/poverty-stats");
     	poverty = await resData.json();
-    	const resData4 = await fetch("https://sos1920-12.herokuapp.com/api/v1/drug_offences");
-    	drug = await resData4.json();
-    	console.log(poverty);
-    	ordenarAsc$1(poverty, "year");
+    	const resData4 = await fetch("https://sos1920-02.herokuapp.com/api/v2/traffic-accidents");
+    	traffic = await resData4.json();
 
-    	var year = poverty.map(dato => {
-    		return parseInt(dato.year);
+    	var dataPoverty = poverty.filter(p => {
+    		//media poverty 2015
+    		return parseInt(p.year) == 2015;
+    	}).map(p => {
+    		return p.under_550;
     	});
 
-    	year = year.filter(function (valor, indiceActual, arreglo) {
-    		//quitar duplicados
-    		let indiceAlBuscar = arreglo.indexOf(valor);
+    	var mediaPoverty = 0;
 
-    		if (indiceActual === indiceAlBuscar) {
-    			return true;
-    		} else {
-    			return false;
-    		}
-    	});
-
-    	//seleccionamos un valor por año
-    	var yearAux = [];
-
-    	year.forEach(y => {
-    		yearAux.push(y);
-    	});
-
-    	console.log(yearAux);
-    	var res = [];
-
-    	for (var i = 0; i < drug.length; i++) {
-    		for (var y = 0; y < yearAux.length; y++) {
-    			if (yearAux[y] == drug[i].year) {
-    				res.push(drug[i]);
-    				yearAux.splice(y, 1);
-    				console.log(yearAux);
-    				break;
-    			}
-    		}
+    	for (var i = 0; i < dataPoverty.length; i++) {
+    		mediaPoverty += dataPoverty[i];
     	}
 
-    	
+    	mediaPoverty = mediaPoverty / dataPoverty.length;
+    	console.log(dataPoverty);
+    	console.log(mediaPoverty);
 
-    	drug = res.map(dato => {
-    		return parseFloat(dato.cannabis_offences) / 1000000;
+    	var dataTaffic = traffic.filter(t => {
+    		//media traffic 2015
+    		return parseInt(t.year) == 2015;
+    	}).map(t => {
+    		return t.trafficaccidentvictim / t.injured;
     	});
 
-    	//seleccionamos un valor por año
-    	yearAux = [];
+    	var mediaTraffic = 0;
 
-    	year.forEach(y => {
-    		yearAux.push(y);
-    	});
-
-    	console.log(yearAux);
-
-    	poverty = poverty.filter(function (p) {
-    		return p.continent == "europe";
-    	});
-
-    	var res = [];
-
-    	for (var i = 0; i < poverty.length; i++) {
-    		for (var y = 0; y < poverty.length; y++) {
-    			if (yearAux[y] == poverty[i].year) {
-    				res.push(poverty[i]);
-    				yearAux.splice(y, 1);
-
-    				//console.log(yearAux);
-    				break;
-    			}
-    		}
+    	for (var i = 0; i < dataTaffic.length; i++) {
+    		mediaTraffic += dataTaffic[i];
     	}
 
-    	
-
-    	poverty = poverty.map(p => {
-    		return parseFloat(p.under_550);
-    	});
-
-    	console.log(poverty);
+    	mediaTraffic = mediaTraffic / dataTaffic.length;
+    	console.log(dataTaffic);
+    	console.log(mediaTraffic);
 
     	var options = {
-    		series: [{ name: "Drug", data: drug }, { name: "Poverty", data: poverty }],
-    		chart: {
-    			height: 350,
-    			type: "line",
-    			dropShadow: {
-    				enabled: true,
-    				color: "#000",
-    				top: 18,
-    				left: 7,
-    				blur: 10,
-    				opacity: 0.2
-    			},
-    			toolbar: { show: false }
-    		},
-    		colors: ["#77B6EA", "#545454"],
-    		dataLabels: { enabled: true },
-    		stroke: { curve: "smooth" },
-    		title: {
-    			text: "Consumo de cannabis y pobreza en Europa",
-    			align: "left"
-    		},
-    		grid: {
-    			borderColor: "#e7e7e7",
-    			row: {
-    				colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
-    				opacity: 0.5
+    		series: [mediaPoverty, mediaTraffic],
+    		chart: { width: 380, type: "pie" },
+    		labels: ["Pobreza", "Accidente de Trafico"],
+    		responsive: [
+    			{
+    				breakpoint: 480,
+    				options: {
+    					chart: { width: 200 },
+    					legend: { position: "bottom" }
+    				}
     			}
-    		},
-    		markers: { size: 1 },
-    		xaxis: { categories: year, title: { text: "Año" } },
-    		yaxis: {
-    			title: { text: "Indice" },
-    			tickAmount: 2,
-    			min: 0,
-    			max: 1
-    		},
-    		legend: {
-    			position: "top",
-    			horizontalAlign: "right",
-    			floating: true,
-    			offsetY: -25,
-    			offsetX: -5
-    		}
+    		]
     	};
 
-    	var chart = new ApexCharts(document.querySelector("#chart2"), options);
+    	var chart = new ApexCharts(document.querySelector("#chart4"), options);
+    	chart.render();
+    }
+
+    async function api4() {
+    	//recoger datos de apis
+    	var poverty = [];
+
+    	var swim = [];
+    	const resData = await fetch("/api/v2/poverty-stats");
+    	poverty = await resData.json();
+    	const resData2 = await fetch("https://sos1920-22.herokuapp.com/api/v1/swim-stats");
+    	swim = await resData2.json();
+
+    	//ajustar tamaño poverty con swim
+    	var tams = [];
+
+    	var menor = poverty.length;
+    	tams.push(poverty.length);
+    	tams.push(swim.length);
+
+    	tams.forEach(t => {
+    		if (menor > t) {
+    			menor = t;
+    		}
+    	});
+
+    	var aux = [];
+    	var cont = menor;
+
+    	if (poverty.length != menor) {
+    		poverty.forEach(c => {
+    			if (cont > 0) {
+    				aux.push(c);
+    				cont--;
+    			}
+    		});
+
+    		poverty = aux;
+    		aux = [];
+    	} else if (swim.length != menor) {
+    		poverty.forEach(c => {
+    			if (cont > 0) {
+    				aux.push(c);
+    				cont--;
+    			}
+    		});
+
+    		swim = aux;
+    		aux = [];
+    	}
+
+    	var cat = swim.map(dato => {
+    		return dato.country;
+    	});
+
+    	poverty.forEach(el => {
+    		cat.push(el.country);
+    	});
+
+    	var dataSwim = swim.map(dato => {
+    		return parseFloat(dato.position / dato.time);
+    	});
+
+    	//console.log(dataSwim);
+    	var dataPoverty = [];
+
+    	dataSwim.forEach(el => {
+    		dataPoverty.push(0);
+    	});
+
+    	poverty.forEach(el => {
+    		dataSwim.push(0);
+    	});
+
+    	poverty.forEach(dato => {
+    		dataPoverty.push(dato.under_320);
+    	});
+
+    	//console.log(dataSwim);
+    	//console.log(dataPoverty);
+    	//Grafica
+    	Highcharts.chart("container", {
+    		chart: { type: "area" },
+    		title: { text: "natacion y pobreza" },
+    		subtitle: { align: "right", verticalAlign: "bottom" },
+    		legend: {
+    			layout: "vertical",
+    			align: "left",
+    			verticalAlign: "top",
+    			x: 100,
+    			y: 70,
+    			floating: true,
+    			borderWidth: 1,
+    			backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || "#FFFFFF"
+    		},
+    		xAxis: { categories: cat },
+    		yAxis: {
+    			lineColor: "black",
+    			lineWidth: 2,
+    			title: false,
+    			tickInterval: 0.5
+    		},
+    		plotOptions: { area: { fillOpacity: 0.5 } },
+    		credits: { enabled: false },
+    		series: [{ name: "swim", data: dataSwim }, { name: "poverty", data: dataPoverty }]
+    	});
+    }
+
+    async function apiExterna1() {
+    	var corona = [];
+    	var poverty = [];
+    	const resData = await fetch("https://coronavirus-19-api.herokuapp.com/countries");
+    	corona = await resData.json();
+
+    	corona = corona.map(c => {
+    		//cambiamos el formato de pais a minusculas
+    		return {
+    			"country": c.country.toLowerCase(),
+    			"cases": c.cases,
+    			"todayCases": c.todayCases,
+    			"deaths": c.deaths,
+    			"todayDeaths": c.todayDeaths,
+    			"recovered": c.recovered,
+    			"active": c.active,
+    			"critical": c.critical,
+    			"casesPerOneMillion": c.casesPerOneMillion,
+    			"deathsPerOneMillion": c.deathsPerOneMillion,
+    			"totalTests": c.totalTests,
+    			"testsPerOneMillion": c.testsPerOneMillion
+    		};
+    	});
+
+    	const resData1 = await fetch("http://localhost:8000/api/v2/poverty-stats");
+    	poverty = await resData1.json();
+
+    	//recogemos datos de cada pais
+    	var resCorona = [];
+
+    	var resPoverty = [];
+
+    	poverty.forEach(p => {
+    		corona.forEach(c => {
+    			if (p.country == c.country) {
+    				resCorona.push(c);
+    				resPoverty.push(p);
+    			}
+    		});
+    	});
+
+    	ordenarAsc$1(resCorona, "country");
+    	ordenarAsc$1(resPoverty, "country");
+
+    	var countries = resPoverty.map(p => {
+    		return p.country;
+    	});
+
+    	var dataTest = resCorona.map(c => {
+    		return c.testsPerOneMillion;
+    	});
+
+    	var dataPoverty = resPoverty.map(p => {
+    		return p.under_550;
+    	});
+
+    	console.log(resCorona);
+    	console.log(resPoverty);
+    	console.log(countries);
+    	console.log(dataTest);
+    	console.log(dataPoverty);
+
+    	var options = {
+    		series: [
+    			{
+    				name: "Tests por millón",
+    				type: "column",
+    				data: dataTest
+    			},
+    			{
+    				name: "Indice de pobreza",
+    				type: "line",
+    				data: dataPoverty
+    			}
+    		],
+    		chart: { height: 350, type: "line" },
+    		stroke: { width: [0, 4] },
+    		title: {
+    			text: "Relación tests realizados por indice de pobreza"
+    		},
+    		dataLabels: { enabled: true, enabledOnSeries: [1] },
+    		labels: countries,
+    		xaxis: { type: "country" },
+    		yaxis: [
+    			{
+    				title: { text: "Test realizados por millón" }
+    			},
+    			{
+    				opposite: true,
+    				title: { text: "Indice de pobreza" }
+    			}
+    		]
+    	};
+
+    	var chart = new ApexCharts(document.querySelector("#chartex1"), options);
     	chart.render();
     }
 
@@ -13614,7 +13790,16 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Integrations", $$slots, []);
-    	$$self.$capture_state = () => ({ ordenarAsc: ordenarAsc$1, api1, api2, api3 });
+
+    	$$self.$capture_state = () => ({
+    		ordenarAsc: ordenarAsc$1,
+    		api1,
+    		api2,
+    		api3,
+    		api4,
+    		apiExterna1
+    	});
+
     	return [];
     }
 
