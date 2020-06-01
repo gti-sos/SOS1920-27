@@ -121,7 +121,7 @@
     let lista = [];
     //coger los casos confirmados de covid por cada pais de la lista comun final
     for (let index = 0; index < lista_final.length; index++) {
-        var llamada = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations?country="+lista_final[index],{mode:'cors'});
+        var llamada = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations?country="+lista_final[index]);
         var datos = await llamada.json();
         lista.push(datos.latest.confirmed)
         
@@ -298,7 +298,7 @@
 
 
   }
-
+  //api sos 1920-12 overdose-deaths
   async function overdose(){
     let lifeq=[]
     let kills=[]
@@ -352,7 +352,7 @@
     type: 'bar'
   },
   title: {
-    text: 'Historic World Population by Region'
+    text: 'Comparación del número de muertes por sobredosis de cada país respecto a su calidad de vida'
   },
   subtitle: {
     text: ''
@@ -408,11 +408,83 @@
 });
   }
 
+    //api sos 1920-04 vehicles
+
+    async function vehicles(){
+    let lifeq=[]
+    let vehiculos=[]
+    let suma=0
+    const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats")
+    lifeq = await res1.json();
+    const res2 = await fetch("https://sos1920-04.herokuapp.com/api/v1/vehicles");
+    vehiculos = await res2.json();
+
+    var misPaises = lifeq.map(dato=> dato.country);
+    var spain = vehiculos.map(dato=>dato.total);
+
+
+//suma todo el trafico de españa
+    for (let index = 0; index < vehiculos.length; index++) {
+      suma += spain[index];      
+    }
+    suma/10000
+//guarda el valor del clima y salud de españa
+
+var clima = lifeq.filter(x=> x.country=="spain").map(dato=> dato.climate)[0] * 10000;
+var salud = lifeq.filter(x=> x.country=="spain").map(dato=> dato.health)[0] * 10000;
+console.log(salud)
+
+// Build the chart
+Highcharts.chart('container4', {
+  chart: {
+    plotBackgroundColor: null,
+    plotBorderWidth: null,
+    plotShadow: false,
+    type: 'pie'
+  },
+  title: {
+    text: 'Comparación del total del tráfico español respecto a su nivel de clima y salud'
+  },
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+  },
+  accessibility: {
+    point: {
+      valueSuffix: '%'
+    }
+  },
+  plotOptions: {
+    pie: {
+      allowPointSelect: true,
+      cursor: 'pointer',
+      dataLabels: {
+        enabled: true
+      },
+      showInLegend: true
+    }
+  },
+  series: [{
+    name: 'Cantidad',
+    colorByPoint: true,
+    data: [{
+      name: 'Número total del tráfico español ÷10000',
+      y: suma
+    }, {
+      name: 'Nivel de Salud español x10000',
+      y: salud
+    }, {
+      name: 'Nivel del Clima español x10000',
+      y: clima
+    }]
+  }]
+});
+
+    }
 </script>
 
 <svelte:head>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js" on:load="{renewable}" on:load="{overdose}" on:load="{coronavirus}"></script>
+<script src="https://code.highcharts.com/modules/export-data.js" on:load="{renewable}" on:load="{overdose}" on:load="{coronavirus}" on:load="{vehicles}"></script>
 
 </svelte:head>
 
@@ -447,6 +519,12 @@
 
 
 <h3>API sos1920-04 - <a href="https://sos1920-04.herokuapp.com/api/v1/vehicles">Link EndPoint</a></h3>
+<figure class="highcharts-figure">
+  <div id="container4"></div>
+  <p class="highcharts-description">
+    En esta gráfica podemos ver la cantidad de tráfico en España (dividido por 10.000) junto al nivel del clima y salud del estado español (multiplicados por 10.000)
+  </p>
+</figure>
 
 </main>
 
@@ -470,6 +548,9 @@
   height: 400px;
 }
 
+#container4 {
+  height: 400px;
+}
 
 .highcharts-data-table table {
 	font-family: Verdana, sans-serif;
@@ -498,4 +579,7 @@
 .highcharts-data-table tr:hover {
   background: #f1f7ff;
 }
+
+
+
 </style>
