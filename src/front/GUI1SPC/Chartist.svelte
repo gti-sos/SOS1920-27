@@ -89,7 +89,7 @@
             return dato.country
         });
 
-        var options = {
+        /*var options = {
           series: [{
           name: 'Hombres',
           data: hombres
@@ -114,8 +114,35 @@
         };
 
         var chart = new ApexCharts(document.querySelector("#chart"), options);
-        chart.render();
+        chart.render();*/
+
+        var chart = new Chartist.Line('.ct-chart', {
+            labels: paises,
+            series: [
+            hombres,[],
+            mujeres]
+            }, {
+            low: 0,
+            showArea: true,
+            showPoint: true,
+            fullWidth: true
+            });
+
+            chart.on('draw', function(data) {
+            if(data.type === 'line' || data.type === 'area') {
+                data.element.animate({
+                d: {
+                    begin: 300 * data.index,
+                    dur: 800,
+                    from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                    to: data.path.clone().stringify(),
+                    easing: Chartist.Svg.Easing.easeOutQuint
+                }
+                });
+            }
+        });
  }
+
 
 
       
@@ -132,13 +159,64 @@
     </Button>
     <Button color="danger" on:click="{deleteSPCALL}">
         Borrar todo
-    </Button>
-    <div id="chart" style="text-align: center;">Suicidios por cada 100,000 personas
+    </Button> <br> <br>
+    
+    <div class='my-legend'>
+        <h2 style="text-align: center;">Número de suicidios por cada 100,000 personas</h2>
+        <div class='legend-scale'>
+          <ul class='legend-labels'>
+            <li><span style='background:rgb(212, 124, 124);'></span>Hombres</li>
+            <li><span style='background:rgb(213, 238, 102);'></span>Mujeres</li>
+          </ul>
+        </div>
+        </div>
+        <br><br>
+    <div style="width: 100%; align-content: flex-start;" class="ct-chart ct-perfect-fourth">
     </div>
+
 </main>
 
+
+
+
+
 <style>
- 
+    .legend-scale{
+        padding-left: 45%;
+    }
+  .my-legend .legend-scale ul {
+    
+
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .my-legend .legend-scale ul li {
+    display: block;
+    float: left;
+    width: 50px;
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 80%;
+    list-style: none;
+    }
+  .my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 15px;
+    width: 50px;
+    }
+  .my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+  .my-legend a {
+    color: #777;
+    }
+
+
  @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 body {

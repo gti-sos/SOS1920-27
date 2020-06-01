@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request")
+const Chartist = require("chartist")
 
 const spcStatsv1 = require("./src/back/spcAPI/v1");
 const spcStatsv2 = require("./src/back/spcAPI/v2");

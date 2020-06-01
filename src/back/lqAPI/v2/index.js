@@ -12,7 +12,20 @@ module.exports = function (app) {
     const db = new dataStore({
                 filename: dbFileName,
                 autoload: true
-                });
+				});
+				
+
+				
+	//Proxy Juanlu
+    var proxyJuanlu = "/api/v2/overdose-deaths"
+	var urlProxyJuanlu = "https://sos1920-12.herokuapp.com"
+	
+	//Proxy Juanlu
+    app.use(proxyJuanlu, function(req, res){
+        var url = urlProxyJuanlu + req.baseUrl + req.url;
+        console.log("piped: " + req.baseUrl + req.url);
+        req.pipe(request(url)).pipe(res)
+    })
 
     
     var ejemplos_lq = [
