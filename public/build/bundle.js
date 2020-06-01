@@ -16726,31 +16726,67 @@ var app = (function () {
     function create_fragment$o(ctx) {
     	let script;
     	let script_src_value;
-    	let t;
+    	let t0;
     	let main;
-    	let div;
+    	let div0;
+    	let t1;
+    	let div1;
+    	let h3;
+    	let p0;
+    	let t3;
+    	let div2;
+    	let h6;
+    	let p1;
     	let dispose;
 
     	const block = {
     		c: function create() {
     			script = element("script");
-    			t = space();
+    			t0 = space();
     			main = element("main");
-    			div = element("div");
+    			div0 = element("div");
+    			t1 = space();
+    			div1 = element("div");
+    			h3 = element("h3");
+    			p0 = element("p");
+    			p0.textContent = "Media de la calidad de vida según el continente";
+    			t3 = space();
+    			div2 = element("div");
+    			h6 = element("h6");
+    			p1 = element("p");
+    			p1.textContent = "Aquellos datos con valor 0 significan que aún no existen datos de cualquier country de ese continente y por tanto no se podrá realizar la media";
     			if (script.src !== (script_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$l, 237, 4, 6955);
-    			attr_dev(div, "id", "chart");
-    			add_location(div, file$l, 241, 0, 7067);
-    			add_location(main, file$l, 240, 0, 7059);
+    			add_location(script, file$k, 237, 4, 6877);
+    			attr_dev(div0, "id", "chart");
+    			add_location(div0, file$k, 242, 0, 6991);
+    			add_location(p0, file$k, 245, 4, 7045);
+    			add_location(h3, file$k, 244, 2, 7035);
+    			attr_dev(div1, "id", "inner");
+    			attr_dev(div1, "class", "svelte-s8d2om");
+    			add_location(div1, file$k, 243, 0, 7015);
+    			add_location(p1, file$k, 253, 4, 7164);
+    			add_location(h6, file$k, 252, 2, 7154);
+    			attr_dev(div2, "id", "outer");
+    			attr_dev(div2, "class", "svelte-s8d2om");
+    			add_location(div2, file$k, 251, 0, 7134);
+    			add_location(main, file$k, 240, 0, 6981);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor, remount) {
-    			append_dev(document_1$3.head, script);
-    			insert_dev(target, t, anchor);
+    			append_dev(document_1$4.head, script);
+    			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
-    			append_dev(main, div);
+    			append_dev(main, div0);
+    			append_dev(main, t1);
+    			append_dev(main, div1);
+    			append_dev(div1, h3);
+    			append_dev(h3, p0);
+    			append_dev(main, t3);
+    			append_dev(main, div2);
+    			append_dev(div2, h6);
+    			append_dev(h6, p1);
     			if (remount) dispose();
     			dispose = listen_dev(script, "load", loadGraphs$3, false, false, false);
     		},
@@ -16759,7 +16795,7 @@ var app = (function () {
     		o: noop,
     		d: function destroy(detaching) {
     			detach_dev(script);
-    			if (detaching) detach_dev(t);
+    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(main);
     			dispose();
     		}
@@ -16799,7 +16835,7 @@ var app = (function () {
     	let media_asia = sumatorio_asia / asi.length;
 
     	if (isNaN(media_asia)) {
-    		media_asia = "No Hay Datos";
+    		media_asia = 0;
     	}
 
     	//oceania
@@ -16814,7 +16850,7 @@ var app = (function () {
     	let media_oce = sumatorio_oce / oce.length;
 
     	if (isNaN(media_oce)) {
-    		media_oce = "No Hay Datos";
+    		media_oce = 0;
     	}
 
     	//europe
@@ -16829,7 +16865,7 @@ var app = (function () {
     	let media_eu = sumatorio_eu / eu.length;
 
     	if (isNaN(media_eu)) {
-    		media_eu = "No Hay Datos";
+    		media_eu = 0;
     	}
 
     	//africa
@@ -16844,7 +16880,7 @@ var app = (function () {
     	let media_afri = sumatorio_afri / afri.length;
 
     	if (isNaN(media_afri)) {
-    		media_afri = "No Hay Datos";
+    		media_afri = 0;
     	}
 
     	//a sur
@@ -16859,7 +16895,7 @@ var app = (function () {
     	let media_sur = sumatorio_sur / sur.length;
 
     	if (isNaN(media_sur)) {
-    		media_sur = "No Hay Datos";
+    		media_sur = 0;
     	}
 
     	//a norte
@@ -16874,7 +16910,7 @@ var app = (function () {
     	let media_norte = sumatorio_norte / norte.length;
 
     	if (isNaN(media_norte)) {
-    		media_norte = "No Hay Datos";
+    		media_norte = 0;
     	}
 
     	var options = {
@@ -18144,6 +18180,11 @@ var app = (function () {
     	let h34;
     	let t22;
     	let a4;
+    	let t24;
+    	let figure3;
+    	let div3;
+    	let t25;
+    	let p3;
     	let dispose;
 
     	const block = {
@@ -18194,47 +18235,60 @@ var app = (function () {
     			t22 = text("API sos1920-04 - ");
     			a4 = element("a");
     			a4.textContent = "Link EndPoint";
+    			t24 = space();
+    			figure3 = element("figure");
+    			div3 = element("div");
+    			t25 = space();
+    			p3 = element("p");
+    			p3.textContent = "En esta gráfica podemos ver la cantidad de tráfico en España (dividido por 10.000) junto al nivel del clima y salud del estado español (multiplicados por 10.000)";
     			if (script0.src !== (script0_src_value = "https://code.jquery.com/jquery-3.1.1.min.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$n, 413, 4, 10767);
+    			add_location(script0, file$m, 485, 4, 12646);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$n, 414, 0, 10836);
+    			add_location(script1, file$m, 486, 0, 12715);
     			attr_dev(a0, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a0, file$n, 419, 24, 11031);
-    			add_location(h30, file$n, 419, 4, 11011);
+    			add_location(a0, file$m, 491, 24, 12931);
+    			add_location(h30, file$m, 491, 4, 12911);
     			attr_dev(div0, "id", "container1");
-    			attr_dev(div0, "class", "svelte-oxtp3y");
-    			add_location(div0, file$n, 421, 2, 11166);
+    			attr_dev(div0, "class", "svelte-1i6qtyu");
+    			add_location(div0, file$m, 493, 2, 13066);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$n, 422, 2, 11197);
-    			attr_dev(figure0, "class", "highcharts-figure svelte-oxtp3y");
-    			add_location(figure0, file$n, 420, 4, 11128);
+    			add_location(p0, file$m, 494, 2, 13097);
+    			attr_dev(figure0, "class", "highcharts-figure svelte-1i6qtyu");
+    			add_location(figure0, file$m, 492, 4, 13028);
     			attr_dev(a1, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a1, file$n, 427, 20, 11430);
-    			add_location(h31, file$n, 427, 0, 11410);
+    			add_location(a1, file$m, 499, 20, 13330);
+    			add_location(h31, file$m, 499, 0, 13310);
     			attr_dev(a2, "href", "http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats");
-    			add_location(a2, file$n, 429, 21, 11546);
-    			add_location(h32, file$n, 429, 0, 11525);
+    			add_location(a2, file$m, 501, 21, 13446);
+    			add_location(h32, file$m, 501, 0, 13425);
     			attr_dev(div1, "id", "container2");
-    			attr_dev(div1, "class", "svelte-oxtp3y");
-    			add_location(div1, file$n, 432, 2, 11683);
+    			attr_dev(div1, "class", "svelte-1i6qtyu");
+    			add_location(div1, file$m, 504, 2, 13583);
     			attr_dev(p1, "class", "highcharts-description");
-    			add_location(p1, file$n, 433, 2, 11714);
-    			attr_dev(figure1, "class", "highcharts-figure svelte-oxtp3y");
-    			add_location(figure1, file$n, 431, 0, 11645);
+    			add_location(p1, file$m, 505, 2, 13614);
+    			attr_dev(figure1, "class", "highcharts-figure svelte-1i6qtyu");
+    			add_location(figure1, file$m, 503, 0, 13545);
     			attr_dev(a3, "href", "https://sos1920-12.herokuapp.com/api/v2/overdose-deaths");
-    			add_location(a3, file$n, 438, 21, 11949);
-    			add_location(h33, file$n, 438, 0, 11928);
+    			add_location(a3, file$m, 510, 21, 13849);
+    			add_location(h33, file$m, 510, 0, 13828);
     			attr_dev(div2, "id", "container3");
-    			attr_dev(div2, "class", "svelte-oxtp3y");
-    			add_location(div2, file$n, 440, 2, 12077);
+    			attr_dev(div2, "class", "svelte-1i6qtyu");
+    			add_location(div2, file$m, 512, 2, 13977);
     			attr_dev(p2, "class", "highcharts-description");
-    			add_location(p2, file$n, 441, 2, 12108);
-    			attr_dev(figure2, "class", "highcharts-figure svelte-oxtp3y");
-    			add_location(figure2, file$n, 439, 0, 12039);
+    			add_location(p2, file$m, 513, 2, 14008);
+    			attr_dev(figure2, "class", "highcharts-figure svelte-1i6qtyu");
+    			add_location(figure2, file$m, 511, 0, 13939);
     			attr_dev(a4, "href", "https://sos1920-04.herokuapp.com/api/v1/vehicles");
-    			add_location(a4, file$n, 448, 21, 12358);
-    			add_location(h34, file$n, 448, 0, 12337);
-    			add_location(main, file$n, 418, 0, 10999);
+    			add_location(a4, file$m, 520, 21, 14258);
+    			add_location(h34, file$m, 520, 0, 14237);
+    			attr_dev(div3, "id", "container4");
+    			attr_dev(div3, "class", "svelte-1i6qtyu");
+    			add_location(div3, file$m, 522, 2, 14379);
+    			attr_dev(p3, "class", "highcharts-description");
+    			add_location(p3, file$m, 523, 2, 14410);
+    			attr_dev(figure3, "class", "highcharts-figure svelte-1i6qtyu");
+    			add_location(figure3, file$m, 521, 0, 14341);
+    			add_location(main, file$m, 490, 0, 12899);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -18278,12 +18332,18 @@ var app = (function () {
     			append_dev(main, h34);
     			append_dev(h34, t22);
     			append_dev(h34, a4);
+    			append_dev(main, t24);
+    			append_dev(main, figure3);
+    			append_dev(figure3, div3);
+    			append_dev(figure3, t25);
+    			append_dev(figure3, p3);
     			if (remount) run_all(dispose);
 
     			dispose = [
     				listen_dev(script1, "load", renewable, false, false, false),
     				listen_dev(script1, "load", overdose, false, false, false),
-    				listen_dev(script1, "load", coronavirus, false, false, false)
+    				listen_dev(script1, "load", coronavirus, false, false, false),
+    				listen_dev(script1, "load", vehicles, false, false, false)
     			];
     		},
     		p: noop,
@@ -18349,7 +18409,7 @@ var app = (function () {
 
     	//coger los casos confirmados de covid por cada pais de la lista comun final
     	for (let index = 0; index < lista_final.length; index++) {
-    		var llamada = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations?country=" + lista_final[index], { mode: "cors" });
+    		var llamada = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations?country=" + lista_final[index]);
     		var datos = await llamada.json();
     		lista.push(datos.latest.confirmed);
     	}
@@ -18484,6 +18544,7 @@ var app = (function () {
     	});
     }
 
+    //api sos 1920-12 overdose-deaths
     async function overdose() {
     	let lifeq = [];
     	let kills = [];
@@ -18529,7 +18590,7 @@ var app = (function () {
     	Highcharts.chart("container3", {
     		chart: { type: "bar" },
     		title: {
-    			text: "Historic World Population by Region"
+    			text: "Comparación del número de muertes por sobredosis de cada país respecto a su calidad de vida"
     		},
     		subtitle: { text: "" },
     		xAxis: {
@@ -18573,7 +18634,76 @@ var app = (function () {
     	});
     }
 
-    function instance$q($$self, $$props, $$invalidate) {
+    //api sos 1920-04 vehicles
+    async function vehicles() {
+    	let lifeq = [];
+    	let vehiculos = [];
+    	let suma = 0;
+    	const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats");
+    	lifeq = await res1.json();
+    	const res2 = await fetch("https://sos1920-04.herokuapp.com/api/v1/vehicles");
+    	vehiculos = await res2.json();
+    	var misPaises = lifeq.map(dato => dato.country);
+    	var spain = vehiculos.map(dato => dato.total);
+
+    	//suma todo el trafico de españa
+    	for (let index = 0; index < vehiculos.length; index++) {
+    		suma += spain[index];
+    	}
+
+    	//guarda el valor del clima y salud de españa
+    	var clima = lifeq.filter(x => x.country == "spain").map(dato => dato.climate)[0] * 10000;
+
+    	var salud = lifeq.filter(x => x.country == "spain").map(dato => dato.health)[0] * 10000;
+    	console.log(salud);
+
+    	// Build the chart
+    	Highcharts.chart("container4", {
+    		chart: {
+    			plotBackgroundColor: null,
+    			plotBorderWidth: null,
+    			plotShadow: false,
+    			type: "pie"
+    		},
+    		title: {
+    			text: "Comparación del total del tráfico español respecto a su nivel de clima y salud"
+    		},
+    		tooltip: {
+    			pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>"
+    		},
+    		accessibility: { point: { valueSuffix: "%" } },
+    		plotOptions: {
+    			pie: {
+    				allowPointSelect: true,
+    				cursor: "pointer",
+    				dataLabels: { enabled: true },
+    				showInLegend: true
+    			}
+    		},
+    		series: [
+    			{
+    				name: "Cantidad",
+    				colorByPoint: true,
+    				data: [
+    					{
+    						name: "Número total del tráfico español ÷10000",
+    						y: suma
+    					},
+    					{
+    						name: "Nivel de Salud español x10000",
+    						y: salud
+    					},
+    					{
+    						name: "Nivel del Clima español x10000",
+    						y: clima
+    					}
+    				]
+    			}
+    		]
+    	});
+    }
+
+    function instance$o($$self, $$props, $$invalidate) {
     	let visible = false;
     	let color = "danger";
     	let errorMSG = "";
@@ -18659,7 +18789,8 @@ var app = (function () {
     		deleteLQALL,
     		coronavirus,
     		renewable,
-    		overdose
+    		overdose,
+    		vehicles
     	});
 
     	$$self.$inject_state = $$props => {

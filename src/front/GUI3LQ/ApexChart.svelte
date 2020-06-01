@@ -100,7 +100,7 @@
         }
         let media_asia = sumatorio_asia/asi.length;
         if(isNaN(media_asia)){
-          media_asia = "No Hay Datos";
+          media_asia = 0;
         }
 
         //oceania
@@ -113,7 +113,7 @@
         }
         let media_oce = sumatorio_oce/oce.length;
         if(isNaN(media_oce)){
-          media_oce = "No Hay Datos";
+          media_oce = 0;
         }
 
         //europe
@@ -126,7 +126,7 @@
         }
         let media_eu = sumatorio_eu/eu.length;
         if(isNaN(media_eu)){
-          media_eu = "No Hay Datos";
+          media_eu = 0;
         }
 
         //africa
@@ -139,7 +139,7 @@
         }
         let media_afri = sumatorio_afri/afri.length;
         if(isNaN(media_afri)){
-          media_afri = "No Hay Datos";
+          media_afri = 0;
         }
 
         //a sur
@@ -152,7 +152,7 @@
         }
         let media_sur = sumatorio_sur/sur.length;
         if(isNaN(media_sur)){
-          media_sur = "No Hay Datos";
+          media_sur = 0;
         }
         
         //a norte
@@ -165,7 +165,7 @@
         }
         let media_norte = sumatorio_norte/norte.length;
         if(isNaN(media_norte)){
-          media_norte = "No Hay Datos";
+          media_norte = 0;
         }
 
 
@@ -239,5 +239,33 @@
 </svelte:head>
 
 <main>
+
 <div id="chart"></div>
+<div id="inner">
+  <h3>
+    <p>
+      Media de la calidad de vida según el continente
+    </p>
+  </h3>
+</div>
+
+<div id="outer">
+  <h6>
+    <p>
+      Aquellos datos con valor 0 significan que aún no existen datos de cualquier country de ese continente y por tanto no se podrá realizar la media
+    </p>
+  </h6>
+</div>
 </main>
+
+<style>
+  #inner {
+  display: table;
+  margin: 0 auto;
+}
+
+#outer {
+  display: table;
+  margin: 0 auto;
+}
+</style>

@@ -14,9 +14,11 @@ module.exports = function (app) {
                 autoload: true
 				});
 				
+
+				
 	//Proxy Juanlu
-    var proxyJuanlu = "v2/locations"
-	var urlProxyJuanlu = "https://coronavirus-tracker-api.herokuapp.com/"
+    var proxyJuanlu = "/api/v2/overdose-deaths"
+	var urlProxyJuanlu = "https://sos1920-12.herokuapp.com"
 	
 	//Proxy Juanlu
     app.use(proxyJuanlu, function(req, res){
