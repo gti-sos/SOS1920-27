@@ -95,7 +95,7 @@
 
     const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats")
     lifeq = await res1.json();
-    const res2 = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations",{mode:'cors'});
+    const res2 = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations");
     covid = await res2.json();
 
     var paises = covid.locations.map(dato=> dato.country);
@@ -194,6 +194,32 @@
     }
 
   //api externa 2
+  
+
+  
+  async function apiexterna2(){
+    let datos = [];
+
+    const res = await fetch("https://restcountries-v1.p.rapidapi.com/all", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "restcountries-v1.p.rapidapi.com",
+		"x-rapidapi-key": "0f1c9a6651mshcc6fb880746f7d2p18a345jsna7eda5bbbed3"
+    }
+    
+});
+  datos = await res.json();
+  console.log(datos)
+
+
+
+
+
+  }
+
+
+
+
 
   //api sos 1920-09 renewable-sources-stats
 
@@ -206,7 +232,7 @@
     
     const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats")
     lifeq = await res1.json();
-    const res2 = await fetch("https://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats",{mode:'cors'});
+    const res2 = await fetch("https://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats");
     renovables = await res2.json();
 
     var misPaises = lifeq.map(dato=> dato.country);
@@ -238,7 +264,7 @@
 
     //coger los porcentajes de uso de energias renovables por cada pais de la lista comun final
     for (let index = 0; index < lista_final.length; index++) {
-        var llamada = await fetch("https://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats?country="+toMayusc(lista_final[index]),{mode:'cors'});
+        var llamada = await fetch("https://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats?country="+toMayusc(lista_final[index]));
         var datos = await llamada.json();
         lista.push(datos[0]["percentage-re-total"])
         
@@ -307,7 +333,7 @@
     let lista = [];
     const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats")
     lifeq = await res1.json();
-    const res2 = await fetch("https://sos1920-12.herokuapp.com/api/v2/overdose-deaths",{mode:'cors'});
+    const res2 = await fetch("https://sos1920-12.herokuapp.com/api/v2/overdose-deaths");
     kills = await res2.json();
 
     var misPaises = lifeq.map(dato=> dato.country);
@@ -338,7 +364,7 @@
 
     //coger los porcentajes de uso de energias renovables por cada pais de la lista comun final
     for (let index = 0; index < lista_final.length; index++) {
-        var llamada = await fetch("https://sos1920-12.herokuapp.com/api/v2/overdose-deaths?country="+toMayusc(lista_final[index])+"&year=2016",{mode:'cors'});
+        var llamada = await fetch("https://sos1920-12.herokuapp.com/api/v2/overdose-deaths?country="+toMayusc(lista_final[index])+"&year=2016");
         var datos = await llamada.json();
         lista.push(datos[0].death_total)
         
@@ -484,7 +510,7 @@ Highcharts.chart('container4', {
 
 <svelte:head>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js" on:load="{renewable}" on:load="{overdose}" on:load="{coronavirus}" on:load="{vehicles}"></script>
+<script src="https://code.highcharts.com/modules/export-data.js" on:load="{renewable}" on:load="{overdose}" on:load="{coronavirus}" on:load="{vehicles}" on:load="{apiexterna2}"></script>
 
 </svelte:head>
 

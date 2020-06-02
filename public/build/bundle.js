@@ -18591,53 +18591,53 @@ var app = (function () {
     			p3 = element("p");
     			p3.textContent = "En esta gráfica podemos ver la cantidad de tráfico en España (dividido por 10.000) junto al nivel del clima y salud del estado español (multiplicados por 10.000)";
     			if (script0.src !== (script0_src_value = "https://code.jquery.com/jquery-3.1.1.min.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$o, 485, 4, 12646);
+    			add_location(script0, file$o, 511, 4, 12977);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$o, 486, 0, 12715);
+    			add_location(script1, file$o, 512, 0, 13046);
     			attr_dev(a0, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a0, file$o, 491, 24, 12931);
-    			add_location(h30, file$o, 491, 4, 12911);
+    			add_location(a0, file$o, 517, 24, 13286);
+    			add_location(h30, file$o, 517, 4, 13266);
     			attr_dev(div0, "id", "container1");
     			attr_dev(div0, "class", "svelte-1i6qtyu");
-    			add_location(div0, file$o, 493, 2, 13066);
+    			add_location(div0, file$o, 519, 2, 13421);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$o, 494, 2, 13097);
+    			add_location(p0, file$o, 520, 2, 13452);
     			attr_dev(figure0, "class", "highcharts-figure svelte-1i6qtyu");
-    			add_location(figure0, file$o, 492, 4, 13028);
+    			add_location(figure0, file$o, 518, 4, 13383);
     			attr_dev(a1, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a1, file$o, 499, 20, 13330);
-    			add_location(h31, file$o, 499, 0, 13310);
+    			add_location(a1, file$o, 525, 20, 13685);
+    			add_location(h31, file$o, 525, 0, 13665);
     			attr_dev(a2, "href", "http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats");
-    			add_location(a2, file$o, 501, 21, 13446);
-    			add_location(h32, file$o, 501, 0, 13425);
+    			add_location(a2, file$o, 527, 21, 13801);
+    			add_location(h32, file$o, 527, 0, 13780);
     			attr_dev(div1, "id", "container2");
     			attr_dev(div1, "class", "svelte-1i6qtyu");
-    			add_location(div1, file$o, 504, 2, 13583);
+    			add_location(div1, file$o, 530, 2, 13938);
     			attr_dev(p1, "class", "highcharts-description");
-    			add_location(p1, file$o, 505, 2, 13614);
+    			add_location(p1, file$o, 531, 2, 13969);
     			attr_dev(figure1, "class", "highcharts-figure svelte-1i6qtyu");
-    			add_location(figure1, file$o, 503, 0, 13545);
+    			add_location(figure1, file$o, 529, 0, 13900);
     			attr_dev(a3, "href", "https://sos1920-12.herokuapp.com/api/v2/overdose-deaths");
-    			add_location(a3, file$o, 510, 21, 13849);
-    			add_location(h33, file$o, 510, 0, 13828);
+    			add_location(a3, file$o, 536, 21, 14204);
+    			add_location(h33, file$o, 536, 0, 14183);
     			attr_dev(div2, "id", "container3");
     			attr_dev(div2, "class", "svelte-1i6qtyu");
-    			add_location(div2, file$o, 512, 2, 13977);
+    			add_location(div2, file$o, 538, 2, 14332);
     			attr_dev(p2, "class", "highcharts-description");
-    			add_location(p2, file$o, 513, 2, 14008);
+    			add_location(p2, file$o, 539, 2, 14363);
     			attr_dev(figure2, "class", "highcharts-figure svelte-1i6qtyu");
-    			add_location(figure2, file$o, 511, 0, 13939);
+    			add_location(figure2, file$o, 537, 0, 14294);
     			attr_dev(a4, "href", "https://sos1920-04.herokuapp.com/api/v1/vehicles");
-    			add_location(a4, file$o, 520, 21, 14258);
-    			add_location(h34, file$o, 520, 0, 14237);
+    			add_location(a4, file$o, 546, 21, 14613);
+    			add_location(h34, file$o, 546, 0, 14592);
     			attr_dev(div3, "id", "container4");
     			attr_dev(div3, "class", "svelte-1i6qtyu");
-    			add_location(div3, file$o, 522, 2, 14379);
+    			add_location(div3, file$o, 548, 2, 14734);
     			attr_dev(p3, "class", "highcharts-description");
-    			add_location(p3, file$o, 523, 2, 14410);
+    			add_location(p3, file$o, 549, 2, 14765);
     			attr_dev(figure3, "class", "highcharts-figure svelte-1i6qtyu");
-    			add_location(figure3, file$o, 521, 0, 14341);
-    			add_location(main, file$o, 490, 0, 12899);
+    			add_location(figure3, file$o, 547, 0, 14696);
+    			add_location(main, file$o, 516, 0, 13254);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -18692,7 +18692,8 @@ var app = (function () {
     				listen_dev(script1, "load", renewable, false, false, false),
     				listen_dev(script1, "load", overdose, false, false, false),
     				listen_dev(script1, "load", coronavirus, false, false, false),
-    				listen_dev(script1, "load", vehicles, false, false, false)
+    				listen_dev(script1, "load", vehicles, false, false, false),
+    				listen_dev(script1, "load", apiexterna2, false, false, false)
     			];
     		},
     		p: noop,
@@ -18736,7 +18737,7 @@ var app = (function () {
     	let lista_comun = [];
     	const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats");
     	lifeq = await res1.json();
-    	const res2 = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations", { mode: "cors" });
+    	const res2 = await fetch("https://coronavirus-tracker-api.herokuapp.com/v2/locations");
     	covid = await res2.json();
     	var paises = covid.locations.map(dato => dato.country);
     	var pruieba = covid.locations.map(dato => dato.country);
@@ -18818,6 +18819,21 @@ var app = (function () {
     }
 
     //api externa 2
+    async function apiexterna2() {
+    	let datos = [];
+
+    	const res = await fetch("https://restcountries-v1.p.rapidapi.com/all", {
+    		"method": "GET",
+    		"headers": {
+    			"x-rapidapi-host": "restcountries-v1.p.rapidapi.com",
+    			"x-rapidapi-key": "0f1c9a6651mshcc6fb880746f7d2p18a345jsna7eda5bbbed3"
+    		}
+    	});
+
+    	datos = await res.json();
+    	console.log(datos);
+    }
+
     //api sos 1920-09 renewable-sources-stats
     async function renewable() {
     	let lifeq = [];
@@ -18827,7 +18843,7 @@ var app = (function () {
     	let lista = [];
     	const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats");
     	lifeq = await res1.json();
-    	const res2 = await fetch("https://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats", { mode: "cors" });
+    	const res2 = await fetch("https://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats");
     	renovables = await res2.json();
     	var misPaises = lifeq.map(dato => dato.country);
     	var paises = renovables.map(dato => dato.country);
@@ -18854,7 +18870,7 @@ var app = (function () {
 
     	//coger los porcentajes de uso de energias renovables por cada pais de la lista comun final
     	for (let index = 0; index < lista_final.length; index++) {
-    		var llamada = await fetch("https://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats?country=" + toMayusc(lista_final[index]), { mode: "cors" });
+    		var llamada = await fetch("https://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats?country=" + toMayusc(lista_final[index]));
     		var datos = await llamada.json();
     		lista.push(datos[0]["percentage-re-total"]);
     	}
@@ -18902,7 +18918,7 @@ var app = (function () {
     	let lista = [];
     	const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats");
     	lifeq = await res1.json();
-    	const res2 = await fetch("https://sos1920-12.herokuapp.com/api/v2/overdose-deaths", { mode: "cors" });
+    	const res2 = await fetch("https://sos1920-12.herokuapp.com/api/v2/overdose-deaths");
     	kills = await res2.json();
     	var misPaises = lifeq.map(dato => dato.country);
     	var paises = kills.map(dato => dato.country);
@@ -18928,7 +18944,7 @@ var app = (function () {
 
     	//coger los porcentajes de uso de energias renovables por cada pais de la lista comun final
     	for (let index = 0; index < lista_final.length; index++) {
-    		var llamada = await fetch("https://sos1920-12.herokuapp.com/api/v2/overdose-deaths?country=" + toMayusc(lista_final[index]) + "&year=2016", { mode: "cors" });
+    		var llamada = await fetch("https://sos1920-12.herokuapp.com/api/v2/overdose-deaths?country=" + toMayusc(lista_final[index]) + "&year=2016");
     		var datos = await llamada.json();
     		lista.push(datos[0].death_total);
     	}
@@ -19137,6 +19153,7 @@ var app = (function () {
     		getLQLoadInitialData,
     		deleteLQALL,
     		coronavirus,
+    		apiexterna2,
     		renewable,
     		overdose,
     		vehicles
