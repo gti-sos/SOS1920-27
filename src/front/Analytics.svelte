@@ -65,13 +65,8 @@
             tam++;
           }
         });
-        povertyUnder550.push(acum/tam);
+        povertyUnder550.push((acum/tam).toFixed(2));
       });
-
-        // console.log(poverty);
-        // console.log(Regions);
-        // console.log(povertyUnder550);
-
 
         //api belen
         let spc = [];
@@ -88,22 +83,19 @@
         tam1=0;
         spc.forEach((s)=>{
           if(r==s.continent){
-            acum1+=s.ratio;
+            acum1+=s.both_sex;
             tam1++; 
             
           }
         });
         if(tam1>0){
-            spcRatio.push((acum1/tam1)); 
+            spcRatio.push((acum1/tam1).toFixed(2)); 
           }else{
             spcRatio.push(0);
           }
       });
-        // console.log(spc);
-        // console.log(spcRatio);
 
-
-        //api juanlu
+      //api juanlu
         let lq = []
         let lqRatio = []
         const resC = await fetch('/api/v2/lq-stats');
@@ -124,7 +116,7 @@
           
         });
         if(tam2>0){
-            lqRatio.push((acum2/tam2)/100);   
+            lqRatio.push(parseInt((acum2/tam2)));   
           }else{
             lqRatio.push(0);
           }
@@ -161,7 +153,7 @@
         },
         
         fill: {
-          opacity: [0.85, 0.25, 1],
+          opacity: [0.85, 0.50, 0.85],
           gradient: {
             inverseColors: false,
             shade: 'light',
@@ -178,12 +170,70 @@
         xaxis: {
           type: 'category'
         },
-        yaxis: {
-          title: {
-            text: '',
+        yaxis: [{
+            axisTicks: {
+              show: true,
+            },
+            axisBorder: {
+              show: true,
+              color: '#008FFB'
+            },
+            labels: {
+              style: {
+                colors: '#008FFB',
+              }
+            },
+            title: {
+              style: {
+                color: '#008FFB',
+              }
+            },
+            tooltip: {
+              enabled: true
+            }
           },
-          min: 0
-        },
+          {
+            seriesName: 'Income',
+            opposite: true,
+            axisTicks: {
+              show: true,
+            },
+            axisBorder: {
+              show: true,
+              color: '#00E396'
+            },
+            labels: {
+              style: {
+                colors: '#00E396',
+              }
+            },
+            title: {
+              style: {
+                color: '#00E396',
+              }
+            },
+          },
+          {
+            seriesName: 'Revenue',
+            opposite: true,
+            axisTicks: {
+              show: true,
+            },
+            axisBorder: {
+              show: true,
+              color: '#FEB019'
+            },
+            labels: {
+              style: {
+                colors: '#FEB019',
+              },
+            },
+            title: {
+              style: {
+                color: '#FEB019',
+              }
+            }
+          },],
         tooltip: {
           shared: true,
           intersect: false,
@@ -216,7 +266,7 @@
         <h3 style="text-align: center;">Integración conjunta del grupo SOS1920-27</h3>
         <div id="chart"></div>
         <div>
-          <p style="text-align: center;">En esta gráfica podemos ver la comparación del valor en tanto por uno del nivel de calidad de vida y del ratio de nivel de pobreza, además del ratio de suicidios (no se en que proporcion belen nota)</p>
+          <p style="text-align: center;">En esta gráfica podemos ver la comparación del valor en tanto por uno del nivel de calidad de vida y del ratio de nivel de pobreza, además del número de suicidios por cada 100.000 habitantes</p>
         </div>
       </div> 
 
