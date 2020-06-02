@@ -5440,20 +5440,20 @@ var app = (function () {
     			t3 = space();
     			div1 = element("div");
     			p = element("p");
-    			p.textContent = "En esta gráfica podemos ver la comparación del valor en tanto por uno del nivel de calidad de vida y del ratio de nivel de pobreza, además del ratio de suicidios (no se en que proporcion belen nota)";
+    			p.textContent = "En esta gráfica podemos ver la comparación del valor en tanto por uno del nivel de calidad de vida y del ratio de nivel de pobreza, además del número de suicidios por cada 100.000 habitantes";
     			if (script.src !== (script_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$9, 210, 4, 4987);
+    			add_location(script, file$9, 260, 4, 6224);
     			set_style(h3, "text-align", "center");
-    			add_location(h3, file$9, 215, 8, 5141);
+    			add_location(h3, file$9, 265, 8, 6378);
     			attr_dev(div0, "id", "chart");
     			attr_dev(div0, "class", "svelte-1pj5p2q");
-    			add_location(div0, file$9, 216, 8, 5229);
+    			add_location(div0, file$9, 266, 8, 6466);
     			set_style(p, "text-align", "center");
-    			add_location(p, file$9, 218, 10, 5278);
-    			add_location(div1, file$9, 217, 8, 5261);
+    			add_location(p, file$9, 268, 10, 6515);
+    			add_location(div1, file$9, 267, 8, 6498);
     			attr_dev(div2, "class", "contenedor");
-    			add_location(div2, file$9, 214, 4, 5107);
-    			add_location(main, file$9, 212, 0, 5089);
+    			add_location(div2, file$9, 264, 4, 6344);
+    			add_location(main, file$9, 262, 0, 6326);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5556,12 +5556,9 @@ var app = (function () {
     				}
     			});
 
-    			povertyUnder550.push(acum / tam);
+    			povertyUnder550.push((acum / tam).toFixed(2));
     		});
 
-    		// console.log(poverty);
-    		// console.log(Regions);
-    		// console.log(povertyUnder550);
     		//api belen
     		let spc = [];
 
@@ -5580,20 +5577,18 @@ var app = (function () {
 
     			spc.forEach(s => {
     				if (r == s.continent) {
-    					acum1 += s.ratio;
+    					acum1 += s.both_sex;
     					tam1++;
     				}
     			});
 
     			if (tam1 > 0) {
-    				spcRatio.push(acum1 / tam1);
+    				spcRatio.push((acum1 / tam1).toFixed(2));
     			} else {
     				spcRatio.push(0);
     			}
     		});
 
-    		// console.log(spc);
-    		// console.log(spcRatio);
     		//api juanlu
     		let lq = [];
 
@@ -5618,7 +5613,7 @@ var app = (function () {
     			});
 
     			if (tam2 > 0) {
-    				lqRatio.push(acum2 / tam2 / 100);
+    				lqRatio.push(parseInt(acum2 / tam2));
     			} else {
     				lqRatio.push(0);
     			}
@@ -5651,7 +5646,7 @@ var app = (function () {
     			stroke: { width: [0, 2, 5], curve: "smooth" },
     			plotOptions: { bar: { columnWidth: "80%" } },
     			fill: {
-    				opacity: [0.85, 0.25, 1],
+    				opacity: [0.85, 0.5, 0.85],
     				gradient: {
     					inverseColors: false,
     					shade: "light",
@@ -5664,7 +5659,31 @@ var app = (function () {
     			labels: Regions,
     			markers: { size: 0 },
     			xaxis: { type: "category" },
-    			yaxis: { title: { text: "" }, min: 0 },
+    			yaxis: [
+    				{
+    					axisTicks: { show: true },
+    					axisBorder: { show: true, color: "#008FFB" },
+    					labels: { style: { colors: "#008FFB" } },
+    					title: { style: { color: "#008FFB" } },
+    					tooltip: { enabled: true }
+    				},
+    				{
+    					seriesName: "Income",
+    					opposite: true,
+    					axisTicks: { show: true },
+    					axisBorder: { show: true, color: "#00E396" },
+    					labels: { style: { colors: "#00E396" } },
+    					title: { style: { color: "#00E396" } }
+    				},
+    				{
+    					seriesName: "Revenue",
+    					opposite: true,
+    					axisTicks: { show: true },
+    					axisBorder: { show: true, color: "#FEB019" },
+    					labels: { style: { colors: "#FEB019" } },
+    					title: { style: { color: "#FEB019" } }
+    				}
+    			],
     			tooltip: {
     				shared: true,
     				intersect: false,
@@ -9566,7 +9585,7 @@ var app = (function () {
     const { console: console_1$5, document: document_1$1 } = globals;
     const file$e = "src\\front\\GUI1SPC\\Integrations.svelte";
 
-    // (721:4) <Button outline color="success" on:click="{getSPCLoadInitialData}">
+    // (726:4) <Button outline color="success" on:click="{getSPCLoadInitialData}">
     function create_default_slot_1$5(ctx) {
     	let t;
 
@@ -9586,14 +9605,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$5.name,
     		type: "slot",
-    		source: "(721:4) <Button outline color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
+    		source: "(726:4) <Button outline color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (724:4) <Button outline color="danger" on:click="{deleteSPCALL}">
+    // (729:4) <Button outline color="danger" on:click="{deleteSPCALL}">
     function create_default_slot$6(ctx) {
     	let t;
 
@@ -9613,7 +9632,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$6.name,
     		type: "slot",
-    		source: "(724:4) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
+    		source: "(729:4) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
     		ctx
     	});
 
@@ -9817,86 +9836,86 @@ var app = (function () {
     			t42 = space();
     			br8 = element("br");
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$e, 714, 4, 22217);
+    			add_location(script0, file$e, 719, 4, 22348);
     			if (script1.src !== (script1_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$e, 715, 4, 22432);
-    			add_location(h1, file$e, 719, 4, 22527);
-    			add_location(br0, file$e, 726, 4, 22778);
-    			add_location(br1, file$e, 726, 8, 22782);
+    			add_location(script1, file$e, 720, 4, 22563);
+    			add_location(h1, file$e, 724, 4, 22658);
+    			add_location(br0, file$e, 731, 4, 22909);
+    			add_location(br1, file$e, 731, 8, 22913);
     			attr_dev(h30, "class", "svelte-weft4y");
-    			add_location(h30, file$e, 730, 4, 22885);
+    			add_location(h30, file$e, 735, 4, 23016);
     			attr_dev(div0, "id", "container");
     			attr_dev(div0, "class", "svelte-weft4y");
-    			add_location(div0, file$e, 732, 8, 22969);
+    			add_location(div0, file$e, 737, 8, 23100);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$e, 733, 8, 23005);
+    			add_location(p0, file$e, 738, 8, 23136);
     			attr_dev(figure, "class", "highcharts-figure svelte-weft4y");
-    			add_location(figure, file$e, 731, 4, 22925);
+    			add_location(figure, file$e, 736, 4, 23056);
     			attr_dev(a0, "href", "https://restcountries.eu/rest/v2/all");
-    			add_location(a0, file$e, 734, 24, 23069);
-    			add_location(p1, file$e, 734, 13, 23058);
+    			add_location(a0, file$e, 739, 24, 23200);
+    			add_location(p1, file$e, 739, 13, 23189);
     			set_style(div1, "text-align", "center");
     			attr_dev(div1, "class", "contenedor svelte-weft4y");
-    			add_location(div1, file$e, 729, 4, 22827);
-    			add_location(br2, file$e, 736, 4, 23178);
+    			add_location(div1, file$e, 734, 4, 22958);
+    			add_location(br2, file$e, 741, 4, 23309);
     			attr_dev(h31, "class", "svelte-weft4y");
-    			add_location(h31, file$e, 740, 4, 23279);
+    			add_location(h31, file$e, 745, 4, 23410);
     			attr_dev(div2, "id", "chart2");
-    			add_location(div2, file$e, 741, 4, 23319);
+    			add_location(div2, file$e, 746, 4, 23450);
     			attr_dev(a1, "href", "https://akashraj.tech/corona/");
-    			add_location(a1, file$e, 742, 21, 23359);
-    			add_location(p2, file$e, 742, 10, 23348);
+    			add_location(a1, file$e, 747, 21, 23490);
+    			add_location(p2, file$e, 747, 10, 23479);
     			set_style(div3, "text-align", "center");
     			attr_dev(div3, "class", "contenedor svelte-weft4y");
-    			add_location(div3, file$e, 739, 4, 23221);
-    			add_location(br3, file$e, 742, 105, 23443);
+    			add_location(div3, file$e, 744, 4, 23352);
+    			add_location(br3, file$e, 747, 105, 23574);
     			attr_dev(h32, "class", "svelte-weft4y");
-    			add_location(h32, file$e, 746, 6, 23546);
+    			add_location(h32, file$e, 751, 6, 23677);
     			attr_dev(div4, "id", "chart6");
-    			add_location(div4, file$e, 748, 6, 23596);
+    			add_location(div4, file$e, 753, 6, 23727);
     			attr_dev(a2, "href", "https://waqi.info/#/c/42.276/15.734/5.4z");
-    			add_location(a2, file$e, 749, 21, 23636);
-    			add_location(p3, file$e, 749, 10, 23625);
+    			add_location(a2, file$e, 754, 21, 23767);
+    			add_location(p3, file$e, 754, 10, 23756);
     			set_style(div5, "text-align", "center");
     			attr_dev(div5, "class", "contenedor svelte-weft4y");
-    			add_location(div5, file$e, 745, 4, 23486);
-    			add_location(br4, file$e, 749, 127, 23742);
+    			add_location(div5, file$e, 750, 4, 23617);
+    			add_location(br4, file$e, 754, 127, 23873);
     			set_style(h33, "text-align", "center");
     			attr_dev(h33, "class", "svelte-weft4y");
-    			add_location(h33, file$e, 753, 4, 23812);
+    			add_location(h33, file$e, 758, 4, 23943);
     			attr_dev(div6, "id", "chart");
-    			add_location(div6, file$e, 754, 4, 23881);
+    			add_location(div6, file$e, 759, 4, 24012);
     			attr_dev(div7, "class", "contenedor svelte-weft4y");
-    			add_location(div7, file$e, 752, 4, 23782);
-    			add_location(br5, file$e, 755, 17, 23916);
+    			add_location(div7, file$e, 757, 4, 23913);
+    			add_location(br5, file$e, 760, 17, 24047);
     			set_style(h34, "text-align", "center");
     			attr_dev(h34, "class", "svelte-weft4y");
-    			add_location(h34, file$e, 759, 4, 23979);
+    			add_location(h34, file$e, 764, 4, 24110);
     			attr_dev(div8, "id", "chart3");
-    			add_location(div8, file$e, 760, 4, 24048);
+    			add_location(div8, file$e, 765, 4, 24179);
     			attr_dev(div9, "class", "contenedor svelte-weft4y");
-    			add_location(div9, file$e, 758, 4, 23949);
-    			add_location(br6, file$e, 761, 17, 24084);
+    			add_location(div9, file$e, 763, 4, 24080);
+    			add_location(br6, file$e, 766, 17, 24215);
     			set_style(h35, "text-align", "center");
     			attr_dev(h35, "class", "svelte-weft4y");
-    			add_location(h35, file$e, 765, 4, 24146);
-    			add_location(b, file$e, 766, 35, 24246);
+    			add_location(h35, file$e, 770, 4, 24277);
+    			add_location(b, file$e, 771, 35, 24377);
     			set_style(p4, "text-align", "center");
-    			add_location(p4, file$e, 766, 4, 24215);
+    			add_location(p4, file$e, 771, 4, 24346);
     			attr_dev(div10, "id", "chart4");
-    			add_location(div10, file$e, 767, 4, 24345);
+    			add_location(div10, file$e, 772, 4, 24476);
     			attr_dev(div11, "class", "contenedor svelte-weft4y");
-    			add_location(div11, file$e, 764, 4, 24116);
-    			add_location(br7, file$e, 768, 17, 24381);
+    			add_location(div11, file$e, 769, 4, 24247);
+    			add_location(br7, file$e, 773, 17, 24512);
     			set_style(h36, "text-align", "center");
     			attr_dev(h36, "class", "svelte-weft4y");
-    			add_location(h36, file$e, 772, 6, 24446);
+    			add_location(h36, file$e, 777, 6, 24577);
     			attr_dev(div12, "id", "chart5");
-    			add_location(div12, file$e, 773, 6, 24517);
+    			add_location(div12, file$e, 778, 6, 24648);
     			attr_dev(div13, "class", "contenedor svelte-weft4y");
-    			add_location(div13, file$e, 771, 4, 24414);
-    			add_location(br8, file$e, 774, 19, 24555);
-    			add_location(main, file$e, 717, 0, 22513);
+    			add_location(div13, file$e, 776, 4, 24545);
+    			add_location(br8, file$e, 779, 19, 24686);
+    			add_location(main, file$e, 722, 0, 22644);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10307,11 +10326,14 @@ var app = (function () {
     	async function roads() {
     		let dataRoads = []; //guardamos todos los datos de bicis de 2015
     		let dataSui = [];
+    		let MyData = [];
+    		const resData = await fetch("/api/v3/spc-stats");
+    		MyData = await resData.json();
     		const res2 = await fetch("https://sos1920-04.herokuapp.com/api/v1/roads/");
     		dataRoads = await res2.json();
     		const densityApi = await fetch("https://restcountries.eu/rest/v2/name/spain");
     		var density = await densityApi.json();
-    		var spainSui = parseInt(spc.filter(x => x.country == "spain").map(x => x.both_sex)[0] * denspain / 100000);
+    		var spainSui = parseInt(MyData.filter(x => x.country == "spain").map(x => x.both_sex)[0] * denspain / 100000);
 
     		//repito la variable para que se  me quede en una linea recta al menos
     		for (let index = 0; index < dataRoads.length; index++) {
@@ -10519,7 +10541,7 @@ var app = (function () {
     			],
     			chart: { type: "bar", height: 350, stacked: true },
     			plotOptions: { bar: { horizontal: true } },
-    			stroke: { width: 1, colors: ["#fff"] },
+    			stroke: { width: 0, colors: ["#fff"] },
     			title: {
     				text: "Casos de suicidio frente a coronavirus",
     				align: "center"
