@@ -13,30 +13,92 @@
     import ApexCharts from 'apexcharts';
     let errorMSG = "";
 
+    function ordenarAsc(array, key) {
+       var arrayAux=[];
+        for(var i=0; i < array.length-1;i++){
+            for (let j = i+1; j < array.length; j++) {
+                if(array[i][key] > array[j][key]){
+                    arrayAux = array[i];
+                    array[i]=array[j];
+                    array[j]=arrayAux;
+                }
+            }
+        }
+        return array;
+    }
+
     async function loadGraphs() {
+        
+        //api pere
+        let poverty = [];
+        let Regions=[];
+        let povertyUnder550=[];
+
+        const resData = await fetch('/api/v2/poverty-stats');
+        poverty = await resData.json();
+
+        //instertar continentes
+        ordenarAsc(poverty,'continent');
+
+        Regions = poverty.map((p)=>{
+          return p.continent;
+        });
+
+        Regions= Regions.filter(function(valor, indiceActual, arreglo) { //quitar duplicados
+            let indiceAlBuscar = arreglo.indexOf(valor);
+            if (indiceActual === indiceAlBuscar) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+
+        //pobreza media de cada continente
+        var acum=0;
+        var tam=0;
+        Regions.forEach((r)=>{
+        acum=0;
+        poverty.forEach((p)=>{
+          if(r==p.continent){
+            acum+=p.under_550;
+            tam++;
+          }
+        });
+        povertyUnder550.push(acum/tam);
+      });
+
+        // console.log(poverty);
+        // console.log(Regions);
+        // console.log(povertyUnder550);
+
+
         //api belen
         let spc = [];
         let spcRatio = [];
-        let spcCountry = [];
 
         const resB = await fetch("/api/v3/spc-stats");
         spc = await resB.json();
 
 
-        spcRatio = spc.map((dato)=> dato.ratio);
-        spcCountry = spc.map((dato)=> dato.country);
+        //ratio medio de cada continente
+        var acum1=0;
+        var tam1=0;
+        Regions.forEach((r)=>{
+        acum1=0;
+        spc.forEach((s)=>{
+          if(r==s.continent){
+            acum1+=s.ratio;
+            tam1++; 
+            
+          }
+        });
+        spcRatio.push(acum1/tam1);
+      });
+      ///
         console.log(spc);
-
-
-        //api pere
-
+        console.log(spcRatio);
 
         //api juanlu
-
-
-
-
-        //interseccion paises
 
 
 
@@ -50,11 +112,11 @@
         }, {
           name: 'TEAM B',
           type: 'area',
-          data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
+          data: []
         }, {
-          name: 'TEAM C',
+          name: 'Indice de pobreza medio inferior a 5.5',
           type: 'line',
-          data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
+          data: povertyUnder550
         }],
           chart: {
           height: 550,
@@ -82,7 +144,7 @@
             stops: [0, 100, 100, 100]
           }
         },
-        labels: spcCountry,
+        labels: Regions,
         markers: {
           size: 0
         },
@@ -101,7 +163,7 @@
           y: {
             formatter: function (y) {
               if (typeof y !== "undefined") {
-                return y.toFixed(0) + " ";
+                return y.toFixed(4) + " ";
               }
               return y;
         

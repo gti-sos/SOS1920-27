@@ -2,16 +2,18 @@ module.exports = function (app) {
     console.log("Registering poverty API....");
     
     const dataStore = require("nedb")
-    const path = require("path");
+	const path = require("path");
+	const request = require("request");
 
 
     const dbFileName = path.join(__dirname, "poverty.db");
 
     const BASE_API_URL="/api/v2";
 
-	// Proxy Pere
-    // var proxyPere = "/api/v2/not-hospitalized-stats"
-    // var urlProxyPere = "https://sos1920-06.herokuapp.com/"
+	//Proxy Pere
+    var proxy = "/api/v1/drug_offences"
+    var urlProxy = "https://sos1920-12.herokuapp.com"
+	
 
     const db = new dataStore({
                 filename: dbFileName,
@@ -210,7 +212,12 @@ module.exports = function (app) {
 			continent:"south america"	
 		}
 	];
-
+	//Proxy Pere
+		app.use(proxy, function(req, res){
+			var url = urlProxy + req.baseUrl + req.url;
+			console.log("piped: " + req.baseUrl + req.url);
+			req.pipe(request(url)).pipe(res)
+		})
     //LOADINITIALDATA
     app.get(BASE_API_URL+"/poverty-stats/loadInitialData",(req,res) =>{
 			db.remove({},{multi:true}, function (err, doc){});

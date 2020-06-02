@@ -63,12 +63,12 @@
     datasets: [{
         data: [euro,asia,oceania,africa,south,north],
         backgroundColor: [
-        'rgba(255, 0, 0)',
-        'rgba(62, 255, 0)',
-        'rgba(255, 255, 0)',
-        'rgba(0, 0, 255)',
-        'rgba(255, 0, 255)',
-        'rgba(0, 0, 0)'
+        'rgba(255, 30, 30)',
+        'rgba(62, 255, 30)',
+        'rgba(255, 255, 30)',
+        'rgba(30, 30, 255)',
+        'rgba(255, 30, 255)',
+        'rgba(20, 20, 20)'
         ]
     }],
     labels: ["europa","asia","oceania","africa","south america","north america"]
