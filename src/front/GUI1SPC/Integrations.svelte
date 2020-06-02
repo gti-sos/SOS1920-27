@@ -786,7 +786,7 @@
 </main>
 
 <style>
-#content,#enter-button,#exit-button{display: none;}
+
     h3{
         text-decoration: underline;
     }
