@@ -783,19 +783,7 @@
       <div id="chart5">
       </div></div> <br>
 
-      <style>#content,#enter-button,#exit-button{display: none;}</style>
-				<div class="container">
-					<p>Login with Google</p>
-					<Button color="success" id="enter-button">Log In</Button>
-					<Button color="danger" id="exit-button">Log Out</Button>
-					<br />
-					<div id="content">
-					  <div class="row">
-						<div id="channel-data" class="col s12"></div>
-					  </div>
-					</div>
-				  </div>
-    
+ 
 </main>
 
 <style>
