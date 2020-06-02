@@ -55,7 +55,6 @@
             console.log("Ok");
             const json = await res.json();
             lq = json;
-            console.log("Received " + lq.length + " lq.");
         } else {
             errorMSG = res.status + ": " + res.statusText;
             console.log("ERROR!");
@@ -200,7 +199,7 @@
     let datos_externa = [];
     let lifeq = [];
     let lista_comun = [];
-    let total = [];
+    let coste = [];
 
     const res1 = await fetch("https://restcountries-v1.p.rapidapi.com/all", {
 	"method": "GET",
@@ -217,7 +216,6 @@
 
   var misPaises = lifeq.map(dato=> dato.country);
   var paises = datos_externa.map(datos=>datos.name)
-  console.log(datos_externa)
 
     //para tener los países comunes
     for (let i = 0; i < misPaises.length; i++) {
@@ -225,7 +223,6 @@
             if(misPaises[i].localeCompare(toMinus(paises[j])) == 0){
                 lista_comun.push(misPaises[i])
             }
-            
         }
         
     }
@@ -246,13 +243,13 @@ for (let index = 0; index < lista_final.length; index++) {
     
 });
     var datos = await llamada.json();
-    lista.push(datos.map(x =>x.area)[0]/10000)
+    lista.push(datos.map(x =>x.gini)[0])
     
-}    console.log(lista_final)
-    //coger calidad de vida total de los paises comunes
+}
+    //coger nivel de coste de los paises comunes
     for (let index = 0; index < lifeq.length; index++) {
         if (lista_final.includes(lifeq[index].country)) {
-            total.push(lifeq[index].total)
+            coste.push(lifeq[index].costs)
         }
         
     }
@@ -261,10 +258,10 @@ var options = {
           series: [
           {
             name: "Calidad de vida",
-            data: total
+            data: coste
           },
           {
-            name: "Área de la región",
+            name: "Gini",
             data: lista
           }
         ],
@@ -291,7 +288,7 @@ var options = {
           curve: 'smooth'
         },
         title: {
-          text: 'Comparación nivel de vida del país junto a su área territorial dividido por',
+          text: 'Comparación nivel económico del país junto a su coeficiente de Gini (medida de desigualdad de ingresos)',
           align: 'left'
         },
         grid: {
@@ -305,7 +302,7 @@ var options = {
           size: 1
         },
         xaxis: {
-          categories: misPaises,
+          categories: lista_final,
           title: {
             text: 'Países'
           }
@@ -334,7 +331,7 @@ var options = {
   //api externa 3
 
   async function apiexterna3(){
-    let covid = [];
+    let datos_externa = [];
     let lifeq = [];
     let lista_comun = [];
     let confirmados = [];
@@ -342,12 +339,11 @@ var options = {
     const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats")
     lifeq = await res1.json();
     const res2 = await fetch("https://sos1920-27.herokuapp.com/v1/Country/getCountries");
-    covid = await res2.json();
+    datos_externa = await res2.json();
 
-    var paises = covid.locations.map(dato=> dato.country);
-
+    var paises = datos_externa.Response.map(x=>x.Name);
     var misPaises = lifeq.map(dato=> dato.country);
-    var salud = [];
+    var total = [];
 
     //para tener los países comunes
     for (let i = 0; i < misPaises.length; i++) {
@@ -364,33 +360,30 @@ var options = {
     let lista_final = Array.from(conjunto);
 
     let lista = [];
-    //coger los casos confirmados de covid por cada pais de la lista comun final
+    //
     for (let index = 0; index < lista_final.length; index++) {
-        var llamada = await fetch("https://countryapi.gear.host/v1/Country/getCountries?pName="+lista_final[index]);
+        var llamada = await fetch("https://sos1920-27.herokuapp.com/v1/Country/getCountries?pName="+lista_final[index]);
         var datos = await llamada.json();
-        lista.push(datos.latest.confirmed)
+        lista.push(datos.Response.map(x=>x.NumericCode))
         
     }
 
-    //coger salud paises comunes
+    //coger calidad total paises comunes
     for (let index = 0; index < lifeq.length; index++) {
         if (lista_final.includes(lifeq[index].country)) {
-            salud.push(lifeq[index].health)
+            total.push(lifeq[index].total)
         }
         
     }
     var options = {
-          series: [{
-            name: "Session Duration",
-            data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+          series: [
+          {
+            name: "Calidad de vida",
+            data: total
           },
           {
-            name: "Page Views",
-            data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
-          },
-          {
-            name: 'Total Visits',
-            data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+            name: 'Código Numérico del país',
+            data: lista
           }
         ],
           chart: {
@@ -404,12 +397,12 @@ var options = {
           enabled: false
         },
         stroke: {
-          width: [5, 7, 5],
+          width: [5, 7],
           curve: 'straight',
           dashArray: [0, 8, 5]
         },
         title: {
-          text: 'Page Statistics',
+          text: 'Comparación calidad de vida de un país con su código numérico',
           align: 'left'
         },
         legend: {
@@ -424,7 +417,7 @@ var options = {
           }
         },
         xaxis: {
-          categories: misPaises,
+          categories: lista_final,
         },
         tooltip: {
           y: [
@@ -462,7 +455,10 @@ var options = {
   }
 
 
+  //api externa 4
 
+
+  
 
   //api sos 1920-09 renewable-sources-stats
 
@@ -495,8 +491,6 @@ var options = {
 
     let lista_final = Array.from(conjunto);
 
-    console.log(nivel_total)
-
     //coger valor total paises comunes
     for (let index = 0; index < lifeq.length; index++) {
         if (lista_final.includes(lifeq[index].country)) {
@@ -513,7 +507,7 @@ var options = {
         
 
  
-    }       console.log(lista)
+    }
 
 
 
@@ -613,7 +607,7 @@ var options = {
         
 
  
-    }       console.log(lista)
+    }
 
     //grafica
     Highcharts.chart('container3', {
@@ -677,9 +671,17 @@ var options = {
 });
   }
 
+ //GET LoadInitialDataIsabel
+  async function getLQLoadInitialDataIsabel() {
+
+console.log("Fetching vehicles...");
+await fetch("https://sos1920-04.herokuapp.com/api/v1/vehicles/loadinitialdata")
+}
+
     //api sos 1920-04 vehicles
 
     async function vehicles(){
+    getLQLoadInitialDataIsabel()
     let lifeq=[]
     let vehiculos=[]
     let suma=0
@@ -696,12 +698,11 @@ var options = {
     for (let index = 0; index < vehiculos.length; index++) {
       suma += spain[index];      
     }
-    suma/10000
+    suma/100000
 //guarda el valor del clima y salud de españa
 
-var clima = lifeq.filter(x=> x.country=="spain").map(dato=> dato.climate)[0] * 10000;
-var salud = lifeq.filter(x=> x.country=="spain").map(dato=> dato.health)[0] * 10000;
-console.log(salud)
+var clima = lifeq.filter(x=> x.country=="spain").map(dato=> dato.climate)[0] * 100000;
+var salud = lifeq.filter(x=> x.country=="spain").map(dato=> dato.health)[0] * 100000;
 
 // Build the chart
 Highcharts.chart('container4', {
@@ -736,13 +737,13 @@ Highcharts.chart('container4', {
     name: 'Cantidad',
     colorByPoint: true,
     data: [{
-      name: 'Número total del tráfico español ÷10000',
+      name: 'Número total del tráfico español ÷10.0000',
       y: suma
     }, {
-      name: 'Nivel de Salud español x10000',
+      name: 'Nivel de Salud español x10.0000',
       y: salud
     }, {
-      name: 'Nivel del Clima español x10000',
+      name: 'Nivel del Clima español x10.0000',
       y: clima
     }]
   }]
@@ -767,15 +768,22 @@ Highcharts.chart('container4', {
   </p>
 </figure>
 
-<h3>API Externa 2 - <a href="https://coronavirus-tracker-api.herokuapp.com/v2/locations">Link EndPoint</a></h3>
+<h3>API Externa 2 - <a href="https://restcountries-v1.p.rapidapi.com/all">Link EndPoint</a></h3>
 
     
   <div id="chart1"></div>
 
-  <h3>API Externa 3 - <a href="http://countryapi.gear.host/v1/Country/getCountries">Link EndPoint</a></h3>
+<h3>API Externa 3 - <a href="http://countryapi.gear.host/v1/Country/getCountries">Link EndPoint</a></h3>
 
     
   <div id="chart2"></div>
+
+
+<h3>API Externa 4 - <a href="http://countryapi.gear.host/v1/Country/getCountries">Link EndPoint</a></h3>
+
+    
+  <div id="chart3"></div>
+
 
 
 <h3>API sos1920-09 - <a href="http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats">Link EndPoint</a></h3>
