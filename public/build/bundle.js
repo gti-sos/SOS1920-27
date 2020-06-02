@@ -5440,20 +5440,20 @@ var app = (function () {
     			t3 = space();
     			div1 = element("div");
     			p = element("p");
-    			p.textContent = "En esta gráfica podemos ver la comparación del valor en tanto por uno del nivel de calidad de vida y del ratio de nivel de pobreza, además del ratio de suicidios (no se en que proporcion belen nota)";
+    			p.textContent = "En esta gráfica podemos ver la comparación del valor en tanto por uno del nivel de calidad de vida y del ratio de nivel de pobreza, además del número de suicidios por cada 100.000 habitantes";
     			if (script.src !== (script_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$9, 210, 4, 4987);
+    			add_location(script, file$9, 260, 4, 6224);
     			set_style(h3, "text-align", "center");
-    			add_location(h3, file$9, 215, 8, 5141);
+    			add_location(h3, file$9, 265, 8, 6378);
     			attr_dev(div0, "id", "chart");
     			attr_dev(div0, "class", "svelte-1pj5p2q");
-    			add_location(div0, file$9, 216, 8, 5229);
+    			add_location(div0, file$9, 266, 8, 6466);
     			set_style(p, "text-align", "center");
-    			add_location(p, file$9, 218, 10, 5278);
-    			add_location(div1, file$9, 217, 8, 5261);
+    			add_location(p, file$9, 268, 10, 6515);
+    			add_location(div1, file$9, 267, 8, 6498);
     			attr_dev(div2, "class", "contenedor");
-    			add_location(div2, file$9, 214, 4, 5107);
-    			add_location(main, file$9, 212, 0, 5089);
+    			add_location(div2, file$9, 264, 4, 6344);
+    			add_location(main, file$9, 262, 0, 6326);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5556,12 +5556,9 @@ var app = (function () {
     				}
     			});
 
-    			povertyUnder550.push(acum / tam);
+    			povertyUnder550.push((acum / tam).toFixed(2));
     		});
 
-    		// console.log(poverty);
-    		// console.log(Regions);
-    		// console.log(povertyUnder550);
     		//api belen
     		let spc = [];
 
@@ -5580,20 +5577,18 @@ var app = (function () {
 
     			spc.forEach(s => {
     				if (r == s.continent) {
-    					acum1 += s.ratio;
+    					acum1 += s.both_sex;
     					tam1++;
     				}
     			});
 
     			if (tam1 > 0) {
-    				spcRatio.push(acum1 / tam1);
+    				spcRatio.push((acum1 / tam1).toFixed(2));
     			} else {
     				spcRatio.push(0);
     			}
     		});
 
-    		// console.log(spc);
-    		// console.log(spcRatio);
     		//api juanlu
     		let lq = [];
 
@@ -5618,7 +5613,7 @@ var app = (function () {
     			});
 
     			if (tam2 > 0) {
-    				lqRatio.push(acum2 / tam2 / 100);
+    				lqRatio.push(parseInt(acum2 / tam2));
     			} else {
     				lqRatio.push(0);
     			}
@@ -5651,7 +5646,7 @@ var app = (function () {
     			stroke: { width: [0, 2, 5], curve: "smooth" },
     			plotOptions: { bar: { columnWidth: "80%" } },
     			fill: {
-    				opacity: [0.85, 0.25, 1],
+    				opacity: [0.85, 0.5, 0.85],
     				gradient: {
     					inverseColors: false,
     					shade: "light",
@@ -5664,7 +5659,31 @@ var app = (function () {
     			labels: Regions,
     			markers: { size: 0 },
     			xaxis: { type: "category" },
-    			yaxis: { title: { text: "" }, min: 0 },
+    			yaxis: [
+    				{
+    					axisTicks: { show: true },
+    					axisBorder: { show: true, color: "#008FFB" },
+    					labels: { style: { colors: "#008FFB" } },
+    					title: { style: { color: "#008FFB" } },
+    					tooltip: { enabled: true }
+    				},
+    				{
+    					seriesName: "Income",
+    					opposite: true,
+    					axisTicks: { show: true },
+    					axisBorder: { show: true, color: "#00E396" },
+    					labels: { style: { colors: "#00E396" } },
+    					title: { style: { color: "#00E396" } }
+    				},
+    				{
+    					seriesName: "Revenue",
+    					opposite: true,
+    					axisTicks: { show: true },
+    					axisBorder: { show: true, color: "#FEB019" },
+    					labels: { style: { colors: "#FEB019" } },
+    					title: { style: { color: "#FEB019" } }
+    				}
+    			],
     			tooltip: {
     				shared: true,
     				intersect: false,
@@ -9566,7 +9585,7 @@ var app = (function () {
     const { console: console_1$5, document: document_1$1 } = globals;
     const file$e = "src\\front\\GUI1SPC\\Integrations.svelte";
 
-    // (721:4) <Button outline color="success" on:click="{getSPCLoadInitialData}">
+    // (730:4) <Button outline color="success" on:click="{getSPCLoadInitialData}">
     function create_default_slot_1$5(ctx) {
     	let t;
 
@@ -9586,14 +9605,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$5.name,
     		type: "slot",
-    		source: "(721:4) <Button outline color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
+    		source: "(730:4) <Button outline color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (724:4) <Button outline color="danger" on:click="{deleteSPCALL}">
+    // (733:4) <Button outline color="danger" on:click="{deleteSPCALL}">
     function create_default_slot$6(ctx) {
     	let t;
 
@@ -9613,7 +9632,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$6.name,
     		type: "slot",
-    		source: "(724:4) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
+    		source: "(733:4) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
     		ctx
     	});
 
@@ -9634,70 +9653,83 @@ var app = (function () {
     	let br0;
     	let br1;
     	let t5;
-    	let div1;
-    	let h30;
-    	let t7;
-    	let figure;
-    	let div0;
-    	let t8;
-    	let p0;
-    	let t9;
-    	let p1;
-    	let t10;
-    	let a0;
-    	let t12;
-    	let br2;
-    	let t13;
     	let div3;
-    	let h31;
-    	let t15;
+    	let p0;
+    	let t7;
+    	let button2;
+    	let t9;
+    	let button3;
+    	let t11;
+    	let br2;
+    	let t12;
     	let div2;
-    	let p2;
-    	let t16;
-    	let a1;
-    	let t18;
-    	let br3;
-    	let t19;
+    	let div1;
+    	let div0;
+    	let t13;
     	let div5;
-    	let h32;
-    	let t21;
+    	let h30;
+    	let t15;
+    	let figure;
     	let div4;
-    	let p3;
-    	let t22;
-    	let a2;
-    	let t24;
-    	let br4;
-    	let t25;
+    	let t16;
+    	let p1;
+    	let t17;
+    	let p2;
+    	let t18;
+    	let a0;
+    	let t20;
+    	let br3;
+    	let t21;
     	let div7;
-    	let h33;
-    	let t27;
+    	let h31;
+    	let t23;
     	let div6;
-    	let t28;
-    	let br5;
-    	let t29;
+    	let p3;
+    	let t24;
+    	let a1;
+    	let t26;
+    	let br4;
+    	let t27;
     	let div9;
-    	let h34;
-    	let t31;
+    	let h32;
+    	let t29;
     	let div8;
+    	let p4;
+    	let t30;
+    	let a2;
     	let t32;
-    	let br6;
+    	let br5;
     	let t33;
     	let div11;
-    	let h35;
+    	let h33;
     	let t35;
-    	let p4;
-    	let b;
-    	let t37;
     	let div10;
-    	let t38;
-    	let br7;
-    	let t39;
+    	let t36;
+    	let br6;
+    	let t37;
     	let div13;
-    	let h36;
-    	let t41;
+    	let h34;
+    	let t39;
     	let div12;
-    	let t42;
+    	let t40;
+    	let br7;
+    	let t41;
+    	let div15;
+    	let h35;
+    	let t43;
+    	let p5;
+    	let b;
+    	let t45;
+    	let div14;
+    	let t46;
     	let br8;
+    	let t47;
+    	let div17;
+    	let h36;
+    	let t49;
+    	let div16;
+    	let t50;
+    	let br9;
     	let current;
     	let dispose;
 
@@ -9741,162 +9773,196 @@ var app = (function () {
     			br0 = element("br");
     			br1 = element("br");
     			t5 = space();
+    			div3 = element("div");
+    			p0 = element("p");
+    			p0.textContent = "Login with Google";
+    			t7 = space();
+    			button2 = element("button");
+    			button2.textContent = "Log In";
+    			t9 = space();
+    			button3 = element("button");
+    			button3.textContent = "Log Out";
+    			t11 = space();
+    			br2 = element("br");
+    			t12 = space();
+    			div2 = element("div");
     			div1 = element("div");
+    			div0 = element("div");
+    			t13 = space();
+    			div5 = element("div");
     			h30 = element("h3");
     			h30.textContent = "Integración API externa 1";
-    			t7 = space();
+    			t15 = space();
     			figure = element("figure");
-    			div0 = element("div");
-    			t8 = space();
-    			p0 = element("p");
-    			t9 = space();
+    			div4 = element("div");
+    			t16 = space();
     			p1 = element("p");
-    			t10 = text("Fuente: ");
+    			t17 = space();
+    			p2 = element("p");
+    			t18 = text("Fuente: ");
     			a0 = element("a");
     			a0.textContent = "https://restcountries.eu/rest/v2/all";
-    			t12 = space();
-    			br2 = element("br");
-    			t13 = space();
-    			div3 = element("div");
+    			t20 = space();
+    			br3 = element("br");
+    			t21 = space();
+    			div7 = element("div");
     			h31 = element("h3");
     			h31.textContent = "Integración API externa 2";
-    			t15 = space();
-    			div2 = element("div");
-    			p2 = element("p");
-    			t16 = text("Fuente: ");
+    			t23 = space();
+    			div6 = element("div");
+    			p3 = element("p");
+    			t24 = text("Fuente: ");
     			a1 = element("a");
     			a1.textContent = "https://akashraj.tech/corona/";
-    			t18 = space();
-    			br3 = element("br");
-    			t19 = space();
-    			div5 = element("div");
+    			t26 = space();
+    			br4 = element("br");
+    			t27 = space();
+    			div9 = element("div");
     			h32 = element("h3");
     			h32.textContent = "Integración API externa 3";
-    			t21 = space();
-    			div4 = element("div");
-    			p3 = element("p");
-    			t22 = text("Fuente: ");
+    			t29 = space();
+    			div8 = element("div");
+    			p4 = element("p");
+    			t30 = text("Fuente: ");
     			a2 = element("a");
     			a2.textContent = "https://waqi.info/#/c/42.276/15.734/5.4z";
-    			t24 = space();
-    			br4 = element("br");
-    			t25 = space();
-    			div7 = element("div");
-    			h33 = element("h3");
-    			h33.textContent = "Integración API sos1920-09";
-    			t27 = space();
-    			div6 = element("div");
-    			t28 = space();
-    			br5 = element("br");
-    			t29 = space();
-    			div9 = element("div");
-    			h34 = element("h3");
-    			h34.textContent = "Integración API sos1920-04";
-    			t31 = space();
-    			div8 = element("div");
     			t32 = space();
-    			br6 = element("br");
+    			br5 = element("br");
     			t33 = space();
     			div11 = element("div");
+    			h33 = element("h3");
+    			h33.textContent = "Integración API sos1920-09";
+    			t35 = space();
+    			div10 = element("div");
+    			t36 = space();
+    			br6 = element("br");
+    			t37 = space();
+    			div13 = element("div");
+    			h34 = element("h3");
+    			h34.textContent = "Integración API sos1920-04";
+    			t39 = space();
+    			div12 = element("div");
+    			t40 = space();
+    			br7 = element("br");
+    			t41 = space();
+    			div15 = element("div");
     			h35 = element("h3");
     			h35.textContent = "Integración API sos1920-02";
-    			t35 = space();
-    			p4 = element("p");
+    			t43 = space();
+    			p5 = element("p");
     			b = element("b");
     			b.textContent = "Distancia de carriles bicis en España en relación al número de suicidios en un año";
-    			t37 = space();
-    			div10 = element("div");
-    			t38 = space();
-    			br7 = element("br");
-    			t39 = space();
-    			div13 = element("div");
+    			t45 = space();
+    			div14 = element("div");
+    			t46 = space();
+    			br8 = element("br");
+    			t47 = space();
+    			div17 = element("div");
     			h36 = element("h3");
     			h36.textContent = "Integración API sos1920-06";
-    			t41 = space();
-    			div12 = element("div");
-    			t42 = space();
-    			br8 = element("br");
+    			t49 = space();
+    			div16 = element("div");
+    			t50 = space();
+    			br9 = element("br");
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$e, 714, 4, 22217);
+    			add_location(script0, file$e, 720, 4, 22350);
     			if (script1.src !== (script1_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$e, 715, 4, 22432);
-    			add_location(h1, file$e, 719, 4, 22527);
-    			add_location(br0, file$e, 726, 4, 22778);
-    			add_location(br1, file$e, 726, 8, 22782);
-    			attr_dev(h30, "class", "svelte-weft4y");
-    			add_location(h30, file$e, 730, 4, 22885);
-    			attr_dev(div0, "id", "container");
-    			attr_dev(div0, "class", "svelte-weft4y");
-    			add_location(div0, file$e, 732, 8, 22969);
-    			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$e, 733, 8, 23005);
-    			attr_dev(figure, "class", "highcharts-figure svelte-weft4y");
-    			add_location(figure, file$e, 731, 4, 22925);
+    			add_location(script1, file$e, 721, 4, 22453);
+    			add_location(h1, file$e, 728, 6, 22579);
+    			add_location(br0, file$e, 735, 4, 22830);
+    			add_location(br1, file$e, 735, 8, 22834);
+    			add_location(p0, file$e, 738, 6, 22877);
+    			attr_dev(button2, "class", "btn green svelte-ezuarg");
+    			attr_dev(button2, "id", "enter-button");
+    			add_location(button2, file$e, 739, 6, 22909);
+    			attr_dev(button3, "class", "btn green svelte-ezuarg");
+    			attr_dev(button3, "id", "exit-button");
+    			add_location(button3, file$e, 740, 6, 22976);
+    			add_location(br2, file$e, 741, 6, 23043);
+    			attr_dev(div0, "id", "channel-data");
+    			attr_dev(div0, "class", "col s12");
+    			add_location(div0, file$e, 744, 10, 23114);
+    			attr_dev(div1, "class", "row");
+    			add_location(div1, file$e, 743, 8, 23085);
+    			attr_dev(div2, "id", "content");
+    			attr_dev(div2, "class", "svelte-ezuarg");
+    			add_location(div2, file$e, 742, 6, 23057);
+    			attr_dev(div3, "class", "container");
+    			add_location(div3, file$e, 737, 4, 22846);
+    			attr_dev(h30, "class", "svelte-ezuarg");
+    			add_location(h30, file$e, 751, 4, 23300);
+    			attr_dev(div4, "id", "container");
+    			attr_dev(div4, "class", "svelte-ezuarg");
+    			add_location(div4, file$e, 753, 8, 23384);
+    			attr_dev(p1, "class", "highcharts-description");
+    			add_location(p1, file$e, 754, 8, 23420);
+    			attr_dev(figure, "class", "highcharts-figure svelte-ezuarg");
+    			add_location(figure, file$e, 752, 4, 23340);
     			attr_dev(a0, "href", "https://restcountries.eu/rest/v2/all");
-    			add_location(a0, file$e, 734, 24, 23069);
-    			add_location(p1, file$e, 734, 13, 23058);
-    			set_style(div1, "text-align", "center");
-    			attr_dev(div1, "class", "contenedor svelte-weft4y");
-    			add_location(div1, file$e, 729, 4, 22827);
-    			add_location(br2, file$e, 736, 4, 23178);
-    			attr_dev(h31, "class", "svelte-weft4y");
-    			add_location(h31, file$e, 740, 4, 23279);
-    			attr_dev(div2, "id", "chart2");
-    			add_location(div2, file$e, 741, 4, 23319);
-    			attr_dev(a1, "href", "https://akashraj.tech/corona/");
-    			add_location(a1, file$e, 742, 21, 23359);
-    			add_location(p2, file$e, 742, 10, 23348);
-    			set_style(div3, "text-align", "center");
-    			attr_dev(div3, "class", "contenedor svelte-weft4y");
-    			add_location(div3, file$e, 739, 4, 23221);
-    			add_location(br3, file$e, 742, 105, 23443);
-    			attr_dev(h32, "class", "svelte-weft4y");
-    			add_location(h32, file$e, 746, 6, 23546);
-    			attr_dev(div4, "id", "chart6");
-    			add_location(div4, file$e, 748, 6, 23596);
-    			attr_dev(a2, "href", "https://waqi.info/#/c/42.276/15.734/5.4z");
-    			add_location(a2, file$e, 749, 21, 23636);
-    			add_location(p3, file$e, 749, 10, 23625);
+    			add_location(a0, file$e, 755, 24, 23484);
+    			add_location(p2, file$e, 755, 13, 23473);
     			set_style(div5, "text-align", "center");
-    			attr_dev(div5, "class", "contenedor svelte-weft4y");
-    			add_location(div5, file$e, 745, 4, 23486);
-    			add_location(br4, file$e, 749, 127, 23742);
+    			attr_dev(div5, "class", "contenedor svelte-ezuarg");
+    			add_location(div5, file$e, 750, 4, 23242);
+    			add_location(br3, file$e, 757, 4, 23593);
+    			attr_dev(h31, "class", "svelte-ezuarg");
+    			add_location(h31, file$e, 761, 4, 23694);
+    			attr_dev(div6, "id", "chart2");
+    			add_location(div6, file$e, 762, 4, 23734);
+    			attr_dev(a1, "href", "https://akashraj.tech/corona/");
+    			add_location(a1, file$e, 763, 21, 23774);
+    			add_location(p3, file$e, 763, 10, 23763);
+    			set_style(div7, "text-align", "center");
+    			attr_dev(div7, "class", "contenedor svelte-ezuarg");
+    			add_location(div7, file$e, 760, 4, 23636);
+    			add_location(br4, file$e, 763, 105, 23858);
+    			attr_dev(h32, "class", "svelte-ezuarg");
+    			add_location(h32, file$e, 767, 6, 23961);
+    			attr_dev(div8, "id", "chart6");
+    			add_location(div8, file$e, 769, 6, 24011);
+    			attr_dev(a2, "href", "https://waqi.info/#/c/42.276/15.734/5.4z");
+    			add_location(a2, file$e, 770, 21, 24051);
+    			add_location(p4, file$e, 770, 10, 24040);
+    			set_style(div9, "text-align", "center");
+    			attr_dev(div9, "class", "contenedor svelte-ezuarg");
+    			add_location(div9, file$e, 766, 4, 23901);
+    			add_location(br5, file$e, 770, 127, 24157);
     			set_style(h33, "text-align", "center");
-    			attr_dev(h33, "class", "svelte-weft4y");
-    			add_location(h33, file$e, 753, 4, 23812);
-    			attr_dev(div6, "id", "chart");
-    			add_location(div6, file$e, 754, 4, 23881);
-    			attr_dev(div7, "class", "contenedor svelte-weft4y");
-    			add_location(div7, file$e, 752, 4, 23782);
-    			add_location(br5, file$e, 755, 17, 23916);
+    			attr_dev(h33, "class", "svelte-ezuarg");
+    			add_location(h33, file$e, 774, 4, 24227);
+    			attr_dev(div10, "id", "chart");
+    			add_location(div10, file$e, 775, 4, 24296);
+    			attr_dev(div11, "class", "contenedor svelte-ezuarg");
+    			add_location(div11, file$e, 773, 4, 24197);
+    			add_location(br6, file$e, 776, 17, 24331);
     			set_style(h34, "text-align", "center");
-    			attr_dev(h34, "class", "svelte-weft4y");
-    			add_location(h34, file$e, 759, 4, 23979);
-    			attr_dev(div8, "id", "chart3");
-    			add_location(div8, file$e, 760, 4, 24048);
-    			attr_dev(div9, "class", "contenedor svelte-weft4y");
-    			add_location(div9, file$e, 758, 4, 23949);
-    			add_location(br6, file$e, 761, 17, 24084);
+    			attr_dev(h34, "class", "svelte-ezuarg");
+    			add_location(h34, file$e, 780, 4, 24394);
+    			attr_dev(div12, "id", "chart3");
+    			add_location(div12, file$e, 781, 4, 24463);
+    			attr_dev(div13, "class", "contenedor svelte-ezuarg");
+    			add_location(div13, file$e, 779, 4, 24364);
+    			add_location(br7, file$e, 782, 17, 24499);
     			set_style(h35, "text-align", "center");
-    			attr_dev(h35, "class", "svelte-weft4y");
-    			add_location(h35, file$e, 765, 4, 24146);
-    			add_location(b, file$e, 766, 35, 24246);
-    			set_style(p4, "text-align", "center");
-    			add_location(p4, file$e, 766, 4, 24215);
-    			attr_dev(div10, "id", "chart4");
-    			add_location(div10, file$e, 767, 4, 24345);
-    			attr_dev(div11, "class", "contenedor svelte-weft4y");
-    			add_location(div11, file$e, 764, 4, 24116);
-    			add_location(br7, file$e, 768, 17, 24381);
+    			attr_dev(h35, "class", "svelte-ezuarg");
+    			add_location(h35, file$e, 786, 4, 24561);
+    			add_location(b, file$e, 787, 35, 24661);
+    			set_style(p5, "text-align", "center");
+    			add_location(p5, file$e, 787, 4, 24630);
+    			attr_dev(div14, "id", "chart4");
+    			add_location(div14, file$e, 788, 4, 24760);
+    			attr_dev(div15, "class", "contenedor svelte-ezuarg");
+    			add_location(div15, file$e, 785, 4, 24531);
+    			add_location(br8, file$e, 789, 17, 24796);
     			set_style(h36, "text-align", "center");
-    			attr_dev(h36, "class", "svelte-weft4y");
-    			add_location(h36, file$e, 772, 6, 24446);
-    			attr_dev(div12, "id", "chart5");
-    			add_location(div12, file$e, 773, 6, 24517);
-    			attr_dev(div13, "class", "contenedor svelte-weft4y");
-    			add_location(div13, file$e, 771, 4, 24414);
-    			add_location(br8, file$e, 774, 19, 24555);
-    			add_location(main, file$e, 717, 0, 22513);
+    			attr_dev(h36, "class", "svelte-ezuarg");
+    			add_location(h36, file$e, 793, 6, 24861);
+    			attr_dev(div16, "id", "chart5");
+    			add_location(div16, file$e, 794, 6, 24932);
+    			attr_dev(div17, "class", "contenedor svelte-ezuarg");
+    			add_location(div17, file$e, 792, 4, 24829);
+    			add_location(br9, file$e, 795, 19, 24970);
+    			add_location(main, file$e, 727, 0, 22565);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9915,82 +9981,86 @@ var app = (function () {
     			append_dev(main, br0);
     			append_dev(main, br1);
     			append_dev(main, t5);
-    			append_dev(main, div1);
-    			append_dev(div1, h30);
-    			append_dev(div1, t7);
-    			append_dev(div1, figure);
-    			append_dev(figure, div0);
-    			append_dev(figure, t8);
-    			append_dev(figure, p0);
-    			append_dev(figure, t9);
-    			append_dev(div1, p1);
-    			append_dev(p1, t10);
-    			append_dev(p1, a0);
-    			append_dev(main, t12);
-    			append_dev(main, br2);
-    			append_dev(main, t13);
     			append_dev(main, div3);
-    			append_dev(div3, h31);
-    			append_dev(div3, t15);
+    			append_dev(div3, p0);
+    			append_dev(div3, t7);
+    			append_dev(div3, button2);
+    			append_dev(div3, t9);
+    			append_dev(div3, button3);
+    			append_dev(div3, t11);
+    			append_dev(div3, br2);
+    			append_dev(div3, t12);
     			append_dev(div3, div2);
-    			append_dev(div3, p2);
-    			append_dev(p2, t16);
-    			append_dev(p2, a1);
-    			append_dev(main, t18);
-    			append_dev(main, br3);
-    			append_dev(main, t19);
+    			append_dev(div2, div1);
+    			append_dev(div1, div0);
+    			append_dev(main, t13);
     			append_dev(main, div5);
-    			append_dev(div5, h32);
-    			append_dev(div5, t21);
-    			append_dev(div5, div4);
-    			append_dev(div5, p3);
-    			append_dev(p3, t22);
-    			append_dev(p3, a2);
-    			append_dev(main, t24);
-    			append_dev(main, br4);
-    			append_dev(main, t25);
+    			append_dev(div5, h30);
+    			append_dev(div5, t15);
+    			append_dev(div5, figure);
+    			append_dev(figure, div4);
+    			append_dev(figure, t16);
+    			append_dev(figure, p1);
+    			append_dev(figure, t17);
+    			append_dev(div5, p2);
+    			append_dev(p2, t18);
+    			append_dev(p2, a0);
+    			append_dev(main, t20);
+    			append_dev(main, br3);
+    			append_dev(main, t21);
     			append_dev(main, div7);
-    			append_dev(div7, h33);
-    			append_dev(div7, t27);
+    			append_dev(div7, h31);
+    			append_dev(div7, t23);
     			append_dev(div7, div6);
-    			append_dev(main, t28);
-    			append_dev(main, br5);
-    			append_dev(main, t29);
+    			append_dev(div7, p3);
+    			append_dev(p3, t24);
+    			append_dev(p3, a1);
+    			append_dev(main, t26);
+    			append_dev(main, br4);
+    			append_dev(main, t27);
     			append_dev(main, div9);
-    			append_dev(div9, h34);
-    			append_dev(div9, t31);
+    			append_dev(div9, h32);
+    			append_dev(div9, t29);
     			append_dev(div9, div8);
+    			append_dev(div9, p4);
+    			append_dev(p4, t30);
+    			append_dev(p4, a2);
     			append_dev(main, t32);
-    			append_dev(main, br6);
+    			append_dev(main, br5);
     			append_dev(main, t33);
     			append_dev(main, div11);
-    			append_dev(div11, h35);
+    			append_dev(div11, h33);
     			append_dev(div11, t35);
-    			append_dev(div11, p4);
-    			append_dev(p4, b);
-    			append_dev(div11, t37);
     			append_dev(div11, div10);
-    			append_dev(main, t38);
-    			append_dev(main, br7);
-    			append_dev(main, t39);
+    			append_dev(main, t36);
+    			append_dev(main, br6);
+    			append_dev(main, t37);
     			append_dev(main, div13);
-    			append_dev(div13, h36);
-    			append_dev(div13, t41);
+    			append_dev(div13, h34);
+    			append_dev(div13, t39);
     			append_dev(div13, div12);
-    			append_dev(main, t42);
+    			append_dev(main, t40);
+    			append_dev(main, br7);
+    			append_dev(main, t41);
+    			append_dev(main, div15);
+    			append_dev(div15, h35);
+    			append_dev(div15, t43);
+    			append_dev(div15, p5);
+    			append_dev(p5, b);
+    			append_dev(div15, t45);
+    			append_dev(div15, div14);
+    			append_dev(main, t46);
     			append_dev(main, br8);
+    			append_dev(main, t47);
+    			append_dev(main, div17);
+    			append_dev(div17, h36);
+    			append_dev(div17, t49);
+    			append_dev(div17, div16);
+    			append_dev(main, t50);
+    			append_dev(main, br9);
     			current = true;
-    			if (remount) run_all(dispose);
-
-    			dispose = [
-    				listen_dev(script0, "load", population, false, false, false),
-    				listen_dev(script0, "load", /*airQuality*/ ctx[7], false, false, false),
-    				listen_dev(script0, "load", /*bicis*/ ctx[3], false, false, false),
-    				listen_dev(script0, "load", /*hospitalized*/ ctx[5], false, false, false),
-    				listen_dev(script0, "load", /*covid*/ ctx[6], false, false, false),
-    				listen_dev(script0, "load", /*vehiculos*/ ctx[2], false, false, false),
-    				listen_dev(script0, "load", /*roads*/ ctx[4], false, false, false)
-    			];
+    			if (remount) dispose();
+    			dispose = listen_dev(script0, "load", population, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			const button0_changes = {};
@@ -10026,7 +10096,7 @@ var app = (function () {
     			if (detaching) detach_dev(main);
     			destroy_component(button0);
     			destroy_component(button1);
-    			run_all(dispose);
+    			dispose();
     		}
     	};
 
@@ -10307,11 +10377,14 @@ var app = (function () {
     	async function roads() {
     		let dataRoads = []; //guardamos todos los datos de bicis de 2015
     		let dataSui = [];
+    		let MyData = [];
+    		const resData = await fetch("/api/v3/spc-stats");
+    		MyData = await resData.json();
     		const res2 = await fetch("https://sos1920-04.herokuapp.com/api/v1/roads/");
     		dataRoads = await res2.json();
     		const densityApi = await fetch("https://restcountries.eu/rest/v2/name/spain");
     		var density = await densityApi.json();
-    		var spainSui = parseInt(spc.filter(x => x.country == "spain").map(x => x.both_sex)[0] * denspain / 100000);
+    		var spainSui = parseInt(MyData.filter(x => x.country == "spain").map(x => x.both_sex)[0] * denspain / 100000);
 
     		//repito la variable para que se  me quede en una linea recta al menos
     		for (let index = 0; index < dataRoads.length; index++) {
@@ -10519,7 +10592,7 @@ var app = (function () {
     			],
     			chart: { type: "bar", height: 350, stacked: true },
     			plotOptions: { bar: { horizontal: true } },
-    			stroke: { width: 1, colors: ["#fff"] },
+    			stroke: { width: 0, colors: ["#fff"] },
     			title: {
     				text: "Casos de suicidio frente a coronavirus",
     				align: "center"
@@ -10644,16 +10717,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [
-    		getSPCLoadInitialData,
-    		deleteSPCALL,
-    		vehiculos,
-    		bicis,
-    		roads,
-    		hospitalized,
-    		covid,
-    		airQuality
-    	];
+    	return [getSPCLoadInitialData, deleteSPCALL];
     }
 
     class Integrations extends SvelteComponentDev {

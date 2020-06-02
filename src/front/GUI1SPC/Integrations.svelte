@@ -332,6 +332,11 @@
     async function roads(){
         let dataRoads = []; //guardamos todos los datos de bicis de 2015
         let dataSui = []
+        let MyData = []
+
+        const resData = await fetch("/api/v3/spc-stats");
+        MyData = await resData.json();
+
 
         const res2 = await fetch("https://sos1920-04.herokuapp.com/api/v1/roads/");
         dataRoads = await res2.json();
@@ -339,7 +344,7 @@
         const densityApi = await fetch("https://restcountries.eu/rest/v2/name/spain");
         var density =  await densityApi.json();
         
-        var spainSui=parseInt(spc.filter(x => x.country=="spain").map(x=>x.both_sex)[0]*denspain/100000)
+        var spainSui=parseInt(MyData.filter(x => x.country=="spain").map(x=>x.both_sex)[0]*denspain/100000)
         //repito la variable para que se  me quede en una linea recta al menos
         for (let index = 0; index < dataRoads.length; index++) {
             dataSui.push(spainSui)    
@@ -608,7 +613,7 @@
             },
             },
             stroke: {
-            width: 1,
+            width: 0,
             colors: ['#fff']
             },
             title: {
@@ -708,16 +713,20 @@
         chart.render();
     }
     // on:load={airQuality}
+
 </script>
 
 <svelte:head>
     <!--<script src="https://code.highcharts.com/modules/accessibility.js" on:load={population} on:load={airQuality} on:load={bicis} on:load={hospitalized} on:load={covid} on:load={vehiculos} on:load={roads}></script>-->
-    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population} on:load={airQuality} on:load={bicis} on:load={hospitalized} on:load={covid} on:load={vehiculos} on:load={roads}></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population}></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- youtbe -->
+    
+
 </svelte:head>
 <main>
-
-    <h1>SPC Manager</h1>
+      <h1>SPC Manager</h1>
     <Button outline color="success" on:click="{getSPCLoadInitialData}">
         Reiniciar ejemplos iniciales
     </Button>
@@ -725,6 +734,18 @@
         Borrar todo
     </Button>
     <br><br>
+
+    <div class="container">
+      <p>Login with Google</p>
+      <button class="btn green" id="enter-button">Log In</button>
+      <button class="btn green" id="exit-button">Log Out</button>
+      <br />
+      <div id="content">
+        <div class="row">
+          <div id="channel-data" class="col s12"></div>
+        </div>
+      </div>
+    </div>
 
     <!--api externa densidad-->
     <div style="text-align: center;" class="contenedor">
@@ -777,6 +798,7 @@
 </main>
 
 <style>
+#content,#enter-button,#exit-button{display: none;}
     h3{
         text-decoration: underline;
     }
