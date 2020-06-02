@@ -735,18 +735,6 @@
     </Button>
     <br><br>
 
-    <div class="container">
-      <p>Login with Google</p>
-      <button class="btn green" id="enter-button">Log In</button>
-      <button class="btn green" id="exit-button">Log Out</button>
-      <br />
-      <div id="content">
-        <div class="row">
-          <div id="channel-data" class="col s12"></div>
-        </div>
-      </div>
-    </div>
-
     <!--api externa densidad-->
     <div style="text-align: center;" class="contenedor">
     <h3>Integración API externa 1</h3>
