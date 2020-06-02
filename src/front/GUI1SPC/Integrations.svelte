@@ -718,7 +718,7 @@
 
 <svelte:head>
     <!--<script src="https://code.highcharts.com/modules/accessibility.js" on:load={population} on:load={airQuality} on:load={bicis} on:load={hospitalized} on:load={covid} on:load={vehiculos} on:load={roads}></script>-->
-    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population}></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population} on:load={airQuality} on:load={bicis} on:load={hospitalized} on:load={covid} on:load={vehiculos} on:load={roads}></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
     <!-- youtbe -->
