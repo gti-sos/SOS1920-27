@@ -93,10 +93,14 @@
             
           }
         });
-        spcRatio.push(acum1/tam1);
+        if(tam1>0){
+            spcRatio.push((acum1/tam1)); 
+          }else{
+            spcRatio.push(0);
+          }
       });
-        console.log(spc);
-        console.log(spcRatio);
+        // console.log(spc);
+        // console.log(spcRatio);
 
 
         //api juanlu
@@ -116,18 +120,16 @@
           if(r==s.continent){
             acum2+=s.total;
             tam2++; 
-            
           }
-
+          
         });
-
-        if(isNaN(acum2)){
-          lqRatio.push(0);
-        }else{
-          lqRatio.push((acum2/tam2)/100);
-        }
-        console.log(tam2+ " " +r)
+        if(tam2>0){
+            lqRatio.push((acum2/tam2)/100);   
+          }else{
+            lqRatio.push(0);
+          }
       })
+      // console.log(lqRatio);
 
         var options = {
           series: [{
