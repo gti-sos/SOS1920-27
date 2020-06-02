@@ -99,7 +99,7 @@ function ordenarAsc(array, key) {
             return parseFloat(p.under_550);
         });
 
-        console.log(poverty);
+        // console.log(poverty);
 
     var options = {
           series: [
@@ -326,8 +326,8 @@ function ordenarAsc(array, key) {
         mediaPoverty=mediaPoverty/dataPoverty.length;
 
 
-        console.log(dataPoverty);
-        console.log(mediaPoverty);
+        // console.log(dataPoverty);
+        // console.log(mediaPoverty);
 
         var dataTaffic=traffic.filter((t)=>{ //media traffic 2015
             return parseInt(t.year)==2015;
@@ -341,8 +341,8 @@ function ordenarAsc(array, key) {
         mediaTraffic=mediaTraffic/dataTaffic.length;
 
 
-        console.log(dataTaffic);
-        console.log(mediaTraffic);
+        // console.log(dataTaffic);
+        // console.log(mediaTraffic);
 
         var options = {
           series: [mediaPoverty,mediaTraffic],
@@ -551,11 +551,11 @@ function ordenarAsc(array, key) {
             return p.under_550;
         });
 
-        console.log(resCorona);
-        console.log(resPoverty);
-        console.log(countries);
-        console.log(dataTest);
-        console.log(dataPoverty);
+        // console.log(resCorona);
+        // console.log(resPoverty);
+        // console.log(countries);
+        // console.log(dataTest);
+        // console.log(dataPoverty);
 
         var options = {
           series: [{
@@ -603,13 +603,155 @@ function ordenarAsc(array, key) {
 
     }
  
+    async function apiExterna2(){
 
-  //  datos();
+      var AreaCountry=[];
+      var poverty=[];
+
+      const resData = await fetch("https://restcountries.eu/rest/v2/?fields=region;area");
+      AreaCountry = await resData.json();
+
+      //modificamos el formato
+      AreaCountry = AreaCountry.map((a)=>{  
+        return {
+                  "region": a.region.toLowerCase(),
+                  "area": a.area
+                };
+      });
+
+      const resData1 = await fetch("/api/v2/poverty-stats"); 
+      poverty = await resData1.json();
+
+      var regions=[];
+
+      //cargamos las regiones
+      poverty.forEach((p)=>{
+        AreaCountry.forEach((a)=>{
+          if(p.continent==a.region){
+            regions.push(p.continent);
+          }
+        });
+      });
+
+      //quitar duplicados
+      regions= regions.filter(function(valor, indiceActual, arreglo) { 
+          let indiceAlBuscar = arreglo.indexOf(valor);
+          if (indiceActual === indiceAlBuscar) {
+              return true;
+          } else {
+              return false;
+          }
+      });
+
+      console.log(regions);
+      
+      //variables para sumar el area de cada region
+      var data =[];
+      var sum=0;
+
+      //en cada posicion de data cargaremos la suma del area de cada region
+      for(var i=0;i<regions.length;i++){
+        sum=0;
+
+        for(var j=0;j<AreaCountry.length;j++){
+
+          if(regions[i]==AreaCountry[j].region){
+            if(AreaCountry[j].area!=null){
+              sum+=AreaCountry[j].area;
+            }
+          }
+
+        }
+
+        //los datos los cargamos en formato dato por millon
+        data.push(sum/1000000);
+      }
+      console.log(data);
+
+      //variables para la media de indice de pobreza
+      var mediaPoverty=[];
+      var sum2=0;
+      var tam=0;
+
+      //cargamos la pobreza media de cada region
+      regions.forEach((r)=>{
+        sum2=0;
+        poverty.forEach((p)=>{
+          if(r==p.continent){
+            sum2+=p.under_550;
+            tam++;
+          }
+        });
+        mediaPoverty.push(sum2/tam);
+      });
+      
+      console.log(mediaPoverty);
+
+      //Grafica
+      var options = {
+          series: [{
+          name: 'Area de cada region',
+          type: 'area',
+          data: data
+        }, {
+          name: 'Indice de pobreza media de cada region',
+          type: 'line',
+          data: mediaPoverty
+        }],
+          chart: {
+          height: 350,
+          type: 'line',
+        },
+        stroke: {
+          curve: 'smooth'
+        },
+        fill: {
+          type:'solid',
+          opacity: [0.35, 1],
+        },
+        labels: regions,
+        markers: {
+          size: 0
+        },
+        yaxis: [
+          {
+            title: {
+              text: 'Area',
+            },
+          },
+          {
+            opposite: true,
+            title: {
+              text: 'Indice de pobreza',
+            },
+          },
+        ],
+        tooltip: {
+          shared: true,
+          intersect: false,
+          y: {
+            formatter: function (y) {
+              if(typeof y !== "undefined") {
+                return  y.toFixed(4);
+              }
+              return y;
+            }
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chartex2"), options);
+        chart.render();
+
+      
+
+    }
+
 </script>
 
 <svelte:head>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts" on:load="{api1}" on:load="{api2}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"on:load="{api3}" on:load="{api4}" on:load="{apiExterna1}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"on:load="{api3}" on:load="{api4}" on:load="{apiExterna1}" on:load="{apiExterna2}"></script>
 </svelte:head>
 
 
@@ -620,7 +762,10 @@ function ordenarAsc(array, key) {
         <h1>API Externa 1</h1>
         
     </div>
-
+    <div id="chartex2">
+            <h1>API Externa 2</h1>
+            
+        </div>
     <div id="chart2">
         <h1>API 1</h1>
         <h3>indice de pobreza y consumo de cannabis por millón</h3>

@@ -13689,22 +13689,25 @@ var app = (function () {
     	let div1;
     	let h11;
     	let t4;
-    	let h30;
-    	let t6;
     	let div2;
     	let h12;
+    	let t6;
+    	let h30;
     	let t8;
-    	let h31;
-    	let t10;
     	let div3;
     	let h13;
+    	let t10;
+    	let h31;
     	let t12;
-    	let h32;
-    	let t14;
-    	let figure;
-    	let h14;
-    	let t16;
     	let div4;
+    	let h14;
+    	let t14;
+    	let h32;
+    	let t16;
+    	let figure;
+    	let h15;
+    	let t18;
+    	let div5;
     	let dispose;
 
     	const block = {
@@ -13719,55 +13722,62 @@ var app = (function () {
     			t2 = space();
     			div1 = element("div");
     			h11 = element("h1");
-    			h11.textContent = "API 1";
+    			h11.textContent = "API Externa 2";
     			t4 = space();
-    			h30 = element("h3");
-    			h30.textContent = "indice de pobreza y consumo de cannabis por millón";
-    			t6 = space();
     			div2 = element("div");
     			h12 = element("h1");
-    			h12.textContent = "API 2";
+    			h12.textContent = "API 1";
+    			t6 = space();
+    			h30 = element("h3");
+    			h30.textContent = "indice de pobreza y consumo de cannabis por millón";
     			t8 = space();
-    			h31 = element("h3");
-    			h31.textContent = "indice de pobreza y consumo de alcohol por millón";
-    			t10 = space();
     			div3 = element("div");
     			h13 = element("h1");
-    			h13.textContent = "API 3";
+    			h13.textContent = "API 2";
+    			t10 = space();
+    			h31 = element("h3");
+    			h31.textContent = "indice de pobreza y consumo de alcohol por millón";
     			t12 = space();
+    			div4 = element("div");
+    			h14 = element("h1");
+    			h14.textContent = "API 3";
+    			t14 = space();
     			h32 = element("h3");
     			h32.textContent = "Media de pobreza y accidentes de trafico en 2015";
-    			t14 = space();
-    			figure = element("figure");
-    			h14 = element("h1");
-    			h14.textContent = "API 4";
     			t16 = space();
-    			div4 = element("div");
+    			figure = element("figure");
+    			h15 = element("h1");
+    			h15.textContent = "API 4";
+    			t18 = space();
+    			div5 = element("div");
     			if (script0.src !== (script0_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$i, 610, 4, 15731);
+    			add_location(script0, file$i, 752, 4, 19185);
     			if (script1.src !== (script1_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$i, 611, 4, 15834);
-    			add_location(h10, file$i, 619, 8, 16021);
+    			add_location(script1, file$i, 753, 4, 19288);
+    			add_location(h10, file$i, 761, 8, 19499);
     			attr_dev(div0, "id", "chartex1");
-    			add_location(div0, file$i, 618, 4, 15992);
-    			add_location(h11, file$i, 624, 8, 16100);
-    			add_location(h30, file$i, 625, 8, 16124);
-    			attr_dev(div1, "id", "chart2");
-    			add_location(div1, file$i, 623, 4, 16073);
-    			add_location(h12, file$i, 628, 8, 16227);
-    			add_location(h31, file$i, 629, 8, 16251);
-    			attr_dev(div2, "id", "chart");
-    			add_location(div2, file$i, 627, 4, 16201);
-    			add_location(h13, file$i, 632, 8, 16354);
-    			add_location(h32, file$i, 633, 8, 16378);
-    			attr_dev(div3, "id", "chart4");
-    			add_location(div3, file$i, 631, 4, 16327);
-    			add_location(h14, file$i, 636, 8, 16497);
-    			attr_dev(div4, "id", "container");
-    			add_location(div4, file$i, 637, 8, 16521);
+    			add_location(div0, file$i, 760, 4, 19470);
+    			add_location(h11, file$i, 765, 12, 19582);
+    			attr_dev(div1, "id", "chartex2");
+    			add_location(div1, file$i, 764, 4, 19549);
+    			add_location(h12, file$i, 769, 8, 19667);
+    			add_location(h30, file$i, 770, 8, 19691);
+    			attr_dev(div2, "id", "chart2");
+    			add_location(div2, file$i, 768, 4, 19640);
+    			add_location(h13, file$i, 773, 8, 19794);
+    			add_location(h31, file$i, 774, 8, 19818);
+    			attr_dev(div3, "id", "chart");
+    			add_location(div3, file$i, 772, 4, 19768);
+    			add_location(h14, file$i, 777, 8, 19921);
+    			add_location(h32, file$i, 778, 8, 19945);
+    			attr_dev(div4, "id", "chart4");
+    			add_location(div4, file$i, 776, 4, 19894);
+    			add_location(h15, file$i, 781, 8, 20064);
+    			attr_dev(div5, "id", "container");
+    			add_location(div5, file$i, 782, 8, 20088);
     			attr_dev(figure, "class", "highcharts-figure");
-    			add_location(figure, file$i, 635, 4, 16453);
-    			add_location(main, file$i, 616, 0, 15978);
+    			add_location(figure, file$i, 780, 4, 20020);
+    			add_location(main, file$i, 758, 0, 19456);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13782,23 +13792,26 @@ var app = (function () {
     			append_dev(main, t2);
     			append_dev(main, div1);
     			append_dev(div1, h11);
-    			append_dev(div1, t4);
-    			append_dev(div1, h30);
-    			append_dev(main, t6);
+    			append_dev(main, t4);
     			append_dev(main, div2);
     			append_dev(div2, h12);
-    			append_dev(div2, t8);
-    			append_dev(div2, h31);
-    			append_dev(main, t10);
+    			append_dev(div2, t6);
+    			append_dev(div2, h30);
+    			append_dev(main, t8);
     			append_dev(main, div3);
     			append_dev(div3, h13);
-    			append_dev(div3, t12);
-    			append_dev(div3, h32);
-    			append_dev(main, t14);
+    			append_dev(div3, t10);
+    			append_dev(div3, h31);
+    			append_dev(main, t12);
+    			append_dev(main, div4);
+    			append_dev(div4, h14);
+    			append_dev(div4, t14);
+    			append_dev(div4, h32);
+    			append_dev(main, t16);
     			append_dev(main, figure);
-    			append_dev(figure, h14);
-    			append_dev(figure, t16);
-    			append_dev(figure, div4);
+    			append_dev(figure, h15);
+    			append_dev(figure, t18);
+    			append_dev(figure, div5);
     			if (remount) run_all(dispose);
 
     			dispose = [
@@ -13806,7 +13819,8 @@ var app = (function () {
     				listen_dev(script0, "load", api2, false, false, false),
     				listen_dev(script1, "load", api3, false, false, false),
     				listen_dev(script1, "load", api4, false, false, false),
-    				listen_dev(script1, "load", apiExterna1, false, false, false)
+    				listen_dev(script1, "load", apiExterna1, false, false, false),
+    				listen_dev(script1, "load", apiExterna2, false, false, false)
     			];
     		},
     		p: noop,
@@ -13937,8 +13951,7 @@ var app = (function () {
     		return parseFloat(p.under_550);
     	});
 
-    	console.log(poverty);
-
+    	// console.log(poverty);
     	var options = {
     		series: [{ name: "Drug", data: drug }, { name: "Poverty", data: poverty }],
     		chart: {
@@ -14128,9 +14141,9 @@ var app = (function () {
     	}
 
     	mediaPoverty = mediaPoverty / dataPoverty.length;
-    	console.log(dataPoverty);
-    	console.log(mediaPoverty);
 
+    	// console.log(dataPoverty);
+    	// console.log(mediaPoverty);
     	var dataTaffic = traffic.filter(t => {
     		//media traffic 2015
     		return parseInt(t.year) == 2015;
@@ -14145,9 +14158,9 @@ var app = (function () {
     	}
 
     	mediaTraffic = mediaTraffic / dataTaffic.length;
-    	console.log(dataTaffic);
-    	console.log(mediaTraffic);
 
+    	// console.log(dataTaffic);
+    	// console.log(mediaTraffic);
     	var options = {
     		series: [mediaPoverty, mediaTraffic],
     		chart: { width: 380, type: "pie" },
@@ -14296,7 +14309,7 @@ var app = (function () {
     		};
     	});
 
-    	const resData1 = await fetch("http://localhost:8000/api/v2/poverty-stats");
+    	const resData1 = await fetch("/api/v2/poverty-stats");
     	poverty = await resData1.json();
 
     	//recogemos datos de cada pais
@@ -14328,12 +14341,11 @@ var app = (function () {
     		return p.under_550;
     	});
 
-    	console.log(resCorona);
-    	console.log(resPoverty);
-    	console.log(countries);
-    	console.log(dataTest);
-    	console.log(dataPoverty);
-
+    	// console.log(resCorona);
+    	// console.log(resPoverty);
+    	// console.log(countries);
+    	// console.log(dataTest);
+    	// console.log(dataPoverty);
     	var options = {
     		series: [
     			{
@@ -14370,6 +14382,136 @@ var app = (function () {
     	chart.render();
     }
 
+    async function apiExterna2() {
+    	var AreaCountry = [];
+    	var poverty = [];
+    	const resData = await fetch("https://restcountries.eu/rest/v2/?fields=region;area");
+    	AreaCountry = await resData.json();
+
+    	//modificamos el formato
+    	AreaCountry = AreaCountry.map(a => {
+    		return {
+    			"region": a.region.toLowerCase(),
+    			"area": a.area
+    		};
+    	});
+
+    	const resData1 = await fetch("/api/v2/poverty-stats");
+    	poverty = await resData1.json();
+    	var regions = [];
+
+    	//cargamos las regiones
+    	poverty.forEach(p => {
+    		AreaCountry.forEach(a => {
+    			if (p.continent == a.region) {
+    				regions.push(p.continent);
+    			}
+    		});
+    	});
+
+    	//quitar duplicados
+    	regions = regions.filter(function (valor, indiceActual, arreglo) {
+    		let indiceAlBuscar = arreglo.indexOf(valor);
+
+    		if (indiceActual === indiceAlBuscar) {
+    			return true;
+    		} else {
+    			return false;
+    		}
+    	});
+
+    	console.log(regions);
+
+    	//variables para sumar el area de cada region
+    	var data = [];
+
+    	var sum = 0;
+
+    	//en cada posicion de data cargaremos la suma del area de cada region
+    	for (var i = 0; i < regions.length; i++) {
+    		sum = 0;
+
+    		for (var j = 0; j < AreaCountry.length; j++) {
+    			if (regions[i] == AreaCountry[j].region) {
+    				if (AreaCountry[j].area != null) {
+    					sum += AreaCountry[j].area;
+    				}
+    			}
+    		}
+
+    		//los datos los cargamos en formato dato por millon
+    		data.push(sum / 1000000);
+    	}
+
+    	console.log(data);
+
+    	//variables para la media de indice de pobreza
+    	var mediaPoverty = [];
+
+    	var sum2 = 0;
+    	var tam = 0;
+
+    	//cargamos la pobreza media de cada region
+    	regions.forEach(r => {
+    		sum2 = 0;
+
+    		poverty.forEach(p => {
+    			if (r == p.continent) {
+    				sum2 += p.under_550;
+    				tam++;
+    			}
+    		});
+
+    		mediaPoverty.push(sum2 / tam);
+    	});
+
+    	console.log(mediaPoverty);
+
+    	//Grafica
+    	var options = {
+    		series: [
+    			{
+    				name: "Area de cada region",
+    				type: "area",
+    				data
+    			},
+    			{
+    				name: "Indice de pobreza media de cada region",
+    				type: "line",
+    				data: mediaPoverty
+    			}
+    		],
+    		chart: { height: 350, type: "line" },
+    		stroke: { curve: "smooth" },
+    		fill: { type: "solid", opacity: [0.35, 1] },
+    		labels: regions,
+    		markers: { size: 0 },
+    		yaxis: [
+    			{ title: { text: "Area" } },
+    			{
+    				opposite: true,
+    				title: { text: "Indice de pobreza" }
+    			}
+    		],
+    		tooltip: {
+    			shared: true,
+    			intersect: false,
+    			y: {
+    				formatter(y) {
+    					if (typeof y !== "undefined") {
+    						return y.toFixed(4);
+    					}
+
+    					return y;
+    				}
+    			}
+    		}
+    	};
+
+    	var chart = new ApexCharts(document.querySelector("#chartex2"), options);
+    	chart.render();
+    }
+
     function instance$l($$self, $$props, $$invalidate) {
     	const writable_props = [];
 
@@ -14386,7 +14528,8 @@ var app = (function () {
     		api2,
     		api3,
     		api4,
-    		apiExterna1
+    		apiExterna1,
+    		apiExterna2
     	});
 
     	return [];
