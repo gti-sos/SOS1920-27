@@ -713,16 +713,20 @@
         chart.render();
     }
     // on:load={airQuality}
+
 </script>
 
 <svelte:head>
     <!--<script src="https://code.highcharts.com/modules/accessibility.js" on:load={population} on:load={airQuality} on:load={bicis} on:load={hospitalized} on:load={covid} on:load={vehiculos} on:load={roads}></script>-->
-    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population} on:load={airQuality} on:load={bicis} on:load={hospitalized} on:load={covid} on:load={vehiculos} on:load={roads}></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js" on:load={population}></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- youtbe -->
+    
+
 </svelte:head>
 <main>
-
-    <h1>SPC Manager</h1>
+      <h1>SPC Manager</h1>
     <Button outline color="success" on:click="{getSPCLoadInitialData}">
         Reiniciar ejemplos iniciales
     </Button>
@@ -730,6 +734,18 @@
         Borrar todo
     </Button>
     <br><br>
+
+    <div class="container">
+      <p>Login with Google</p>
+      <button class="btn green" id="enter-button">Log In</button>
+      <button class="btn green" id="exit-button">Log Out</button>
+      <br />
+      <div id="content">
+        <div class="row">
+          <div id="channel-data" class="col s12"></div>
+        </div>
+      </div>
+    </div>
 
     <!--api externa densidad-->
     <div style="text-align: center;" class="contenedor">
@@ -782,6 +798,7 @@
 </main>
 
 <style>
+#content,#enter-button,#exit-button{display: none;}
     h3{
         text-decoration: underline;
     }

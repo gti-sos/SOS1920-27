@@ -9,9 +9,13 @@ module.exports = function (app) {
 
     const BASE_API_URL="/api/v3";
 
-	//Proxy Belen
+	//Proxy Belen 06
 	var proxyBelen = "/api/v2/not-hospitalized-stats"
 	var urlProxyBelen = "https://sos1920-06.herokuapp.com"
+
+	//proxy youtube
+	var proxyBelen2 = "/api/v2/youtube"
+	var urlProxyBelen2 = "https://youtube-search.p.rapidapi.com"
 
     const db = new dataStore({
                 filename: dbFileName,
