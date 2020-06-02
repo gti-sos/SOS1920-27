@@ -58,6 +58,7 @@
         var tam=0;
         Regions.forEach((r)=>{
         acum=0;
+        tam=0;
         poverty.forEach((p)=>{
           if(r==p.continent){
             acum+=p.under_550;
@@ -84,6 +85,7 @@
         var tam1=0;
         Regions.forEach((r)=>{
         acum1=0;
+        tam1=0;
         spc.forEach((s)=>{
           if(r==s.continent){
             acum1+=s.ratio;
@@ -93,7 +95,6 @@
         });
         spcRatio.push(acum1/tam1);
       });
-      ///
         console.log(spc);
         console.log(spcRatio);
 
@@ -101,7 +102,6 @@
         //api juanlu
         let lq = []
         let lqRatio = []
-        let lqRatioTantoPorUno = 0
         const resC = await fetch('/api/v2/lq-stats');
         lq = await resC.json();
 
@@ -111,24 +111,31 @@
 
         Regions.forEach((r)=>{
         acum2=0;
+        tam2=0;
         lq.forEach((s)=>{
           if(r==s.continent){
             acum2+=s.total;
             tam2++; 
             
           }
+
         });
-        lqRatio.push((acum2/tam2)/100);
-        
+
+        if(isNaN(acum2)){
+          lqRatio.push(0);
+        }else{
+          lqRatio.push((acum2/tam2)/100);
+        }
+        console.log(tam2+ " " +r)
       })
 
         var options = {
           series: [{
-          name: 'Ratio suicidios',
+          name: 'Ratio calidad de vida',
           type: 'column',
           data: lqRatio
         }, {
-          name: 'Ratio calidad de vida',
+          name: 'Ratio de suicidios',
           type: 'area',
           data: spcRatio
         }, {

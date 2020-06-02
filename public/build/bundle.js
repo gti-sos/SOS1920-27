@@ -5442,18 +5442,18 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "En esta gráfica podemos ver la comparación del valor en tanto por uno del nivel de calidad de vida y del ratio de nivel de pobreza, además del ratio de suicidios (no se en que proporcion belen nota)";
     			if (script.src !== (script_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$9, 201, 4, 4776);
+    			add_location(script, file$9, 208, 4, 4895);
     			set_style(h3, "text-align", "center");
-    			add_location(h3, file$9, 206, 8, 4930);
+    			add_location(h3, file$9, 213, 8, 5049);
     			attr_dev(div0, "id", "chart");
     			attr_dev(div0, "class", "svelte-1pj5p2q");
-    			add_location(div0, file$9, 207, 8, 5018);
+    			add_location(div0, file$9, 214, 8, 5137);
     			set_style(p, "text-align", "center");
-    			add_location(p, file$9, 209, 10, 5067);
-    			add_location(div1, file$9, 208, 8, 5050);
+    			add_location(p, file$9, 216, 10, 5186);
+    			add_location(div1, file$9, 215, 8, 5169);
     			attr_dev(div2, "class", "contenedor");
-    			add_location(div2, file$9, 205, 4, 4896);
-    			add_location(main, file$9, 203, 0, 4878);
+    			add_location(div2, file$9, 212, 4, 5015);
+    			add_location(main, file$9, 210, 0, 4997);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5547,6 +5547,7 @@ var app = (function () {
 
     		Regions.forEach(r => {
     			acum = 0;
+    			tam = 0;
 
     			poverty.forEach(p => {
     				if (r == p.continent) {
@@ -5575,6 +5576,7 @@ var app = (function () {
 
     		Regions.forEach(r => {
     			acum1 = 0;
+    			tam1 = 0;
 
     			spc.forEach(s => {
     				if (r == s.continent) {
@@ -5586,9 +5588,7 @@ var app = (function () {
     			spcRatio.push(acum1 / tam1);
     		});
 
-    		///
     		console.log(spc);
-
     		console.log(spcRatio);
 
     		//api juanlu
@@ -5605,6 +5605,7 @@ var app = (function () {
 
     		Regions.forEach(r => {
     			acum2 = 0;
+    			tam2 = 0;
 
     			lq.forEach(s => {
     				if (r == s.continent) {
@@ -5613,18 +5614,24 @@ var app = (function () {
     				}
     			});
 
-    			lqRatio.push(acum2 / tam2 / 100);
+    			if (isNaN(acum2)) {
+    				lqRatio.push(0);
+    			} else {
+    				lqRatio.push(acum2 / tam2 / 100);
+    			}
+
+    			console.log(tam2 + " " + r);
     		});
 
     		var options = {
     			series: [
     				{
-    					name: "Ratio suicidios",
+    					name: "Ratio calidad de vida",
     					type: "column",
     					data: lqRatio
     				},
     				{
-    					name: "Ratio calidad de vida",
+    					name: "Ratio de suicidios",
     					type: "area",
     					data: spcRatio
     				},
