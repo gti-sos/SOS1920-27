@@ -5418,15 +5418,13 @@ var app = (function () {
     	let script_src_value;
     	let t0;
     	let main;
-    	let h1;
-    	let t2;
-    	let div1;
+    	let div2;
     	let h3;
-    	let t4;
-    	let p;
-    	let b;
-    	let t6;
+    	let t2;
     	let div0;
+    	let t3;
+    	let div1;
+    	let p;
     	let dispose;
 
     	const block = {
@@ -5434,32 +5432,28 @@ var app = (function () {
     			script = element("script");
     			t0 = space();
     			main = element("main");
-    			h1 = element("h1");
-    			h1.textContent = "SPC Manager";
-    			t2 = space();
-    			div1 = element("div");
+    			div2 = element("div");
     			h3 = element("h3");
-    			h3.textContent = "Integración API sos1920-02";
-    			t4 = space();
-    			p = element("p");
-    			b = element("b");
-    			b.textContent = "Distancia de carriles bicis en España en relación al número de suicidios en un año";
-    			t6 = space();
+    			h3.textContent = "Integración conjunta del grupo SOS1920-27";
+    			t2 = space();
     			div0 = element("div");
+    			t3 = space();
+    			div1 = element("div");
+    			p = element("p");
+    			p.textContent = "En esta gráfica podemos ver la comparación del valor en tanto por uno del nivel de calidad de vida y del ratio de nivel de pobreza, además del ratio de suicidios (no se en que proporcion belen nota)";
     			if (script.src !== (script_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$9, 183, 4, 4241);
-    			add_location(h1, file$9, 187, 4, 4357);
+    			add_location(script, file$9, 201, 4, 4776);
     			set_style(h3, "text-align", "center");
-    			add_location(h3, file$9, 190, 8, 4423);
-    			add_location(b, file$9, 191, 39, 4527);
-    			set_style(p, "text-align", "center");
-    			add_location(p, file$9, 191, 8, 4496);
+    			add_location(h3, file$9, 206, 8, 4930);
     			attr_dev(div0, "id", "chart");
     			attr_dev(div0, "class", "svelte-1pj5p2q");
-    			add_location(div0, file$9, 192, 8, 4630);
-    			attr_dev(div1, "class", "contenedor");
-    			add_location(div1, file$9, 189, 4, 4389);
-    			add_location(main, file$9, 185, 0, 4343);
+    			add_location(div0, file$9, 207, 8, 5018);
+    			set_style(p, "text-align", "center");
+    			add_location(p, file$9, 209, 10, 5067);
+    			add_location(div1, file$9, 208, 8, 5050);
+    			attr_dev(div2, "class", "contenedor");
+    			add_location(div2, file$9, 205, 4, 4896);
+    			add_location(main, file$9, 203, 0, 4878);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5468,15 +5462,13 @@ var app = (function () {
     			append_dev(document_1.head, script);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
-    			append_dev(main, h1);
-    			append_dev(main, t2);
-    			append_dev(main, div1);
-    			append_dev(div1, h3);
-    			append_dev(div1, t4);
+    			append_dev(main, div2);
+    			append_dev(div2, h3);
+    			append_dev(div2, t2);
+    			append_dev(div2, div0);
+    			append_dev(div2, t3);
+    			append_dev(div2, div1);
     			append_dev(div1, p);
-    			append_dev(p, b);
-    			append_dev(div1, t6);
-    			append_dev(div1, div0);
     			if (remount) dispose();
     			dispose = listen_dev(script, "load", /*loadGraphs*/ ctx[0], false, false, false);
     		},
@@ -5600,16 +5592,44 @@ var app = (function () {
     		console.log(spcRatio);
 
     		//api juanlu
+    		let lq = [];
+
+    		let lqRatio = [];
+    		const resC = await fetch("/api/v2/lq-stats");
+    		lq = await resC.json();
+
+    		//calidad de vida de cada continente
+    		var acum2 = 0;
+
+    		var tam2 = 0;
+
+    		Regions.forEach(r => {
+    			acum2 = 0;
+
+    			lq.forEach(s => {
+    				if (r == s.continent) {
+    					acum2 += s.total;
+    					tam2++;
+    				}
+    			});
+
+    			lqRatio.push(acum2 / tam2 / 100);
+    		});
+
     		var options = {
     			series: [
     				{
     					name: "Ratio suicidios",
     					type: "column",
+    					data: lqRatio
+    				},
+    				{
+    					name: "Ratio calidad de vida",
+    					type: "area",
     					data: spcRatio
     				},
-    				{ name: "TEAM B", type: "area", data: [] },
     				{
-    					name: "Indice de pobreza medio inferior a 5.5",
+    					name: "Ratio de pobreza medio inferior a 5.5",
     					type: "line",
     					data: povertyUnder550
     				}

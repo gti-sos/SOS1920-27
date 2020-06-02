@@ -79,7 +79,6 @@
         const resB = await fetch("/api/v3/spc-stats");
         spc = await resB.json();
 
-
         //ratio medio de cada continente
         var acum1=0;
         var tam1=0;
@@ -98,23 +97,42 @@
         console.log(spc);
         console.log(spcRatio);
 
+
         //api juanlu
+        let lq = []
+        let lqRatio = []
+        let lqRatioTantoPorUno = 0
+        const resC = await fetch('/api/v2/lq-stats');
+        lq = await resC.json();
 
+        //calidad de vida de cada continente
+        var acum2=0;
+        var tam2=0;
 
-
-
+        Regions.forEach((r)=>{
+        acum2=0;
+        lq.forEach((s)=>{
+          if(r==s.continent){
+            acum2+=s.total;
+            tam2++; 
+            
+          }
+        });
+        lqRatio.push((acum2/tam2)/100);
+        
+      })
 
         var options = {
           series: [{
           name: 'Ratio suicidios',
           type: 'column',
+          data: lqRatio
+        }, {
+          name: 'Ratio calidad de vida',
+          type: 'area',
           data: spcRatio
         }, {
-          name: 'TEAM B',
-          type: 'area',
-          data: []
-        }, {
-          name: 'Indice de pobreza medio inferior a 5.5',
+          name: 'Ratio de pobreza medio inferior a 5.5',
           type: 'line',
           data: povertyUnder550
         }],
@@ -184,14 +202,14 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts" on:load={loadGraphs}></script>
 </svelte:head>
 <main>
-
-    <h1>SPC Manager</h1>
     
     <div class="contenedor">
-        <h3 style="text-align: center;">Integración API sos1920-02</h3>
-        <p style="text-align: center;"><b>Distancia de carriles bicis en España en relación al número de suicidios en un año</b></p>
-        <div id="chart">
-        </div></div> 
+        <h3 style="text-align: center;">Integración conjunta del grupo SOS1920-27</h3>
+        <div id="chart"></div>
+        <div>
+          <p style="text-align: center;">En esta gráfica podemos ver la comparación del valor en tanto por uno del nivel de calidad de vida y del ratio de nivel de pobreza, además del ratio de suicidios (no se en que proporcion belen nota)</p>
+        </div>
+      </div> 
 
 </main>
 
