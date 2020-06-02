@@ -99,7 +99,6 @@
     covid = await res2.json();
 
     var paises = covid.locations.map(dato=> dato.country);
-    var pruieba = covid.locations.map(dato=> dato.country);
 
     var misPaises = lifeq.map(dato=> dato.country);
     var salud = [];
@@ -198,9 +197,12 @@
 
   
   async function apiexterna2(){
-    let datos = [];
+    let datos_externa = [];
+    let lifeq = [];
+    let lista_comun = [];
+    let total = [];
 
-    const res = await fetch("https://restcountries-v1.p.rapidapi.com/all", {
+    const res1 = await fetch("https://restcountries-v1.p.rapidapi.com/all", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "restcountries-v1.p.rapidapi.com",
@@ -208,15 +210,256 @@
     }
     
 });
-  datos = await res.json();
-  console.log(datos)
+  datos_externa = await res1.json();
 
+  const res2 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats")
+  lifeq = await res2.json();
 
+  var misPaises = lifeq.map(dato=> dato.country);
+  var paises = datos_externa.map(datos=>datos.name)
+  console.log(datos_externa)
 
+    //para tener los países comunes
+    for (let i = 0; i < misPaises.length; i++) {
+        for (let j = 0; j < paises.length; j++) {
+            if(misPaises[i].localeCompare(toMinus(paises[j])) == 0){
+                lista_comun.push(misPaises[i])
+            }
+            
+        }
+        
+    }
+
+    let conjunto = new Set(lista_comun);
+
+let lista_final = Array.from(conjunto);
+
+let lista = [];
+//
+for (let index = 0; index < lista_final.length; index++) {
+    var llamada = await fetch("https://restcountries-v1.p.rapidapi.com/name/"+toMayusc(lista_final[index]), {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "restcountries-v1.p.rapidapi.com",
+		"x-rapidapi-key": "0f1c9a6651mshcc6fb880746f7d2p18a345jsna7eda5bbbed3"
+    }
+    
+});
+    var datos = await llamada.json();
+    lista.push(datos.map(x =>x.area)[0]/10000)
+    
+}    console.log(lista_final)
+    //coger calidad de vida total de los paises comunes
+    for (let index = 0; index < lifeq.length; index++) {
+        if (lista_final.includes(lifeq[index].country)) {
+            total.push(lifeq[index].total)
+        }
+        
+    }
+
+var options = {
+          series: [
+          {
+            name: "Calidad de vida",
+            data: total
+          },
+          {
+            name: "Área de la región",
+            data: lista
+          }
+        ],
+          chart: {
+          height: 350,
+          type: 'line',
+          dropShadow: {
+            enabled: true,
+            color: '#000',
+            top: 18,
+            left: 7,
+            blur: 10,
+            opacity: 0.2
+          },
+          toolbar: {
+            show: false
+          }
+        },
+        colors: ['#77B6EA', '#545454'],
+        dataLabels: {
+          enabled: true,
+        },
+        stroke: {
+          curve: 'smooth'
+        },
+        title: {
+          text: 'Comparación nivel de vida del país junto a su área territorial dividido por',
+          align: 'left'
+        },
+        grid: {
+          borderColor: '#e7e7e7',
+          row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
+        markers: {
+          size: 1
+        },
+        xaxis: {
+          categories: misPaises,
+          title: {
+            text: 'Países'
+          }
+        },
+        yaxis: {
+          title: {
+            text: ''
+          }
+        },
+        legend: {
+          position: 'top',
+          horizontalAlign: 'right',
+          floating: true,
+          offsetY: -25,
+          offsetX: -5
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart1"), options);
+        chart.render();
 
 
   }
 
+
+  //api externa 3
+
+  async function apiexterna3(){
+    let covid = [];
+    let lifeq = [];
+    let lista_comun = [];
+    let confirmados = [];
+
+    const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats")
+    lifeq = await res1.json();
+    const res2 = await fetch("https://sos1920-27.herokuapp.com/v1/Country/getCountries");
+    covid = await res2.json();
+
+    var paises = covid.locations.map(dato=> dato.country);
+
+    var misPaises = lifeq.map(dato=> dato.country);
+    var salud = [];
+
+    //para tener los países comunes
+    for (let i = 0; i < misPaises.length; i++) {
+        for (let j = 0; j < paises.length; j++) {
+            if(misPaises[i].localeCompare(toMinus(paises[j])) == 0){
+                lista_comun.push(misPaises[i])
+            }
+            
+        }
+        
+    }
+    let conjunto = new Set(lista_comun);
+
+    let lista_final = Array.from(conjunto);
+
+    let lista = [];
+    //coger los casos confirmados de covid por cada pais de la lista comun final
+    for (let index = 0; index < lista_final.length; index++) {
+        var llamada = await fetch("https://countryapi.gear.host/v1/Country/getCountries?pName="+lista_final[index]);
+        var datos = await llamada.json();
+        lista.push(datos.latest.confirmed)
+        
+    }
+
+    //coger salud paises comunes
+    for (let index = 0; index < lifeq.length; index++) {
+        if (lista_final.includes(lifeq[index].country)) {
+            salud.push(lifeq[index].health)
+        }
+        
+    }
+    var options = {
+          series: [{
+            name: "Session Duration",
+            data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+          },
+          {
+            name: "Page Views",
+            data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+          },
+          {
+            name: 'Total Visits',
+            data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+          }
+        ],
+          chart: {
+          height: 350,
+          type: 'line',
+          zoom: {
+            enabled: false
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          width: [5, 7, 5],
+          curve: 'straight',
+          dashArray: [0, 8, 5]
+        },
+        title: {
+          text: 'Page Statistics',
+          align: 'left'
+        },
+        legend: {
+          tooltipHoverFormatter: function(val, opts) {
+            return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
+          }
+        },
+        markers: {
+          size: 0,
+          hover: {
+            sizeOffset: 6
+          }
+        },
+        xaxis: {
+          categories: misPaises,
+        },
+        tooltip: {
+          y: [
+            {
+              title: {
+                formatter: function (val) {
+                  return val + " (mins)"
+                }
+              }
+            },
+            {
+              title: {
+                formatter: function (val) {
+                  return val + " per session"
+                }
+              }
+            },
+            {
+              title: {
+                formatter: function (val) {
+                  return val;
+                }
+              }
+            }
+          ]
+        },
+        grid: {
+          borderColor: '#f1f1f1',
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart2"), options);
+        chart.render();
+
+  }
 
 
 
@@ -510,7 +753,8 @@ Highcharts.chart('container4', {
 
 <svelte:head>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js" on:load="{renewable}" on:load="{overdose}" on:load="{coronavirus}" on:load="{vehicles}" on:load="{apiexterna2}"></script>
+<script src="https://code.highcharts.com/modules/export-data.js" on:load="{renewable}" on:load="{overdose}" on:load="{coronavirus}" on:load="{vehicles}"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"  on:load="{apiexterna2}" on:load="{apiexterna3}"></script>
 
 </svelte:head>
 
@@ -524,6 +768,15 @@ Highcharts.chart('container4', {
 </figure>
 
 <h3>API Externa 2 - <a href="https://coronavirus-tracker-api.herokuapp.com/v2/locations">Link EndPoint</a></h3>
+
+    
+  <div id="chart1"></div>
+
+  <h3>API Externa 3 - <a href="http://countryapi.gear.host/v1/Country/getCountries">Link EndPoint</a></h3>
+
+    
+  <div id="chart2"></div>
+
 
 <h3>API sos1920-09 - <a href="http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats">Link EndPoint</a></h3>
 
@@ -578,6 +831,7 @@ Highcharts.chart('container4', {
   height: 400px;
 }
 
+
 .highcharts-data-table table {
 	font-family: Verdana, sans-serif;
 	border-collapse: collapse;
@@ -605,7 +859,5 @@ Highcharts.chart('container4', {
 .highcharts-data-table tr:hover {
   background: #f1f7ff;
 }
-
-
 
 </style>
