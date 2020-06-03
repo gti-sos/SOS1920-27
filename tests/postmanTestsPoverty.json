@@ -17,7 +17,7 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Hay 15 datos\", function () {\r",
+							"pm.test(\"Hay 24 datos\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData).to.have.lengthOf(24);\r",
 							"});"
