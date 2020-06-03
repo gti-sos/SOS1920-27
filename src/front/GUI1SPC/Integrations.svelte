@@ -125,13 +125,13 @@
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Rainfall (mm)'
+                    text: ''
                 }
             },
             tooltip: {
                 headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
                 pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                    '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                    '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
                 footerFormat: '</table>',
                 shared: true,
                 useHTML: true
@@ -597,7 +597,7 @@
 
         var options = {
             series: [{
-            name: 'Muertes por cada millón de habitantes',
+            name: 'Muertes por cada millón de habitantes por covid-19',
             data: estadisdeath
             }, {
             name: 'Suicidios en un año',
@@ -664,7 +664,7 @@
         let air = []
         let paisesFinal = [] //paises que coinciden
 
-        const suicidiosApi2 = await fetch("/api/v3/spc-stats?");
+        const suicidiosApi2 = await fetch("/api/v3/spc-stats");
         miApi =  await suicidiosApi2.json();
 
         var paises = miApi.map(x => x.country)
@@ -673,7 +673,7 @@
             const resAir = await fetch("https://api.waqi.info/feed/"+paises[index]+"/?token=3c7df8258ed0ff3424b1bb3053c7c7d50dfbefe3");
             dataAirQuality = await resAir.json();
 
-            if (dataAirQuality.status=="ok") {
+            if (dataAirQuality.status=="ok" && dataAirQuality.data.aqi!="-") {
               air.push(dataAirQuality.data.aqi)
             }
             else air.push(null)
