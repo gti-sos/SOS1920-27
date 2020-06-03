@@ -492,6 +492,7 @@ var options = {
         lista.push(datos.population)
         
         
+
     } console.log(datos)
 
     var options = {

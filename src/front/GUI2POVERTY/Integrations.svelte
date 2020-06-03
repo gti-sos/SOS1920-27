@@ -848,6 +848,7 @@
                   position: 'bottom'
                 }
               }
+<<<<<<< HEAD
             }]
             };
   
@@ -870,6 +871,175 @@
   <main>
     <h1>API Externa chiste aleatorios de chuck norris</h1>
     <div id="chiste"></div>
+=======
+              return y;
+            }
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chartex2"), options);
+        chart.render();
+
+      //   const asd = await fetch('https://api.twitter.com/1.1/search/tweets.json?q=poverty', {
+      //     'method':'GET',
+      //       'headers': {
+      //         'Content-Type': 'application/json',
+      //         'Authorization':"Bearer AAAAAAAAAAAAAAAAAAAAADCPEgEAAAAAiBvgx56WIe5VzFJrtytJ5lf9BMM%3D8jWDktFpgRi1YIzWCmBWjP4Ry4bK42XVV8p9AWdCmkesznerqX"
+      //        }
+      //     });
+      
+      // console.log('asdasdasdasd');
+    }
+    async function apiExterna3(){
+        const jokes = await fetch("https://api.chucknorris.io/jokes/random");
+        var joke = await jokes.json();
+        var chiste = document.getElementById('chiste');
+        chiste.innerHTML = joke.value;
+        console.log(joke.value);
+    }
+
+    async function apiExterna4(){
+        const jokes2 = await fetch("https://joke3.p.rapidapi.com/v1/joke",{
+          'method':'GET',
+          'headers':{
+            "x-rapidapi-host": "joke3.p.rapidapi.com",
+            "x-rapidapi-key": "2499b9262cmsh73c0da1a5a197bap189468jsn3435f2f24ddf",
+            "useQueryString": true
+          }
+        });
+        var joke2 = await jokes2.json();
+        var chiste2 = document.getElementById('chiste2');
+        chiste2.innerHTML = joke2.content;
+        console.log(joke2.content);
+    }
+
+    async function apiSong(){
+      return 
+    }
+
+    async function apiExterna5(){
+
+      var poverty =[];
+
+      const povertyData = await fetch('/api/v2/poverty-stats');
+      poverty = await povertyData.json();
+
+      ordenarAsc(poverty,'continent');
+      var countries = poverty.map((p)=>{
+        return p.continent;
+      });
+      
+      countries = countries.filter(function(valor, indiceActual, arreglo) { //quitar duplicados
+            let indiceAlBuscar = arreglo.indexOf(valor);
+            if (indiceActual === indiceAlBuscar) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+
+        let res=[];
+
+        const songs = await fetch("https://searchly.p.rapidapi.com/song/search?query="+countries[0],{
+          'method':'GET',
+            'headers':{
+              "x-rapidapi-host": "searchly.p.rapidapi.com",
+              "x-rapidapi-key": "2499b9262cmsh73c0da1a5a197bap189468jsn3435f2f24ddf",
+              "useQueryString": true
+            }
+        });
+
+        const songs2 = await fetch("https://searchly.p.rapidapi.com/song/search?query="+countries[1],{
+          'method':'GET',
+            'headers':{
+              "x-rapidapi-host": "searchly.p.rapidapi.com",
+              "x-rapidapi-key": "2499b9262cmsh73c0da1a5a197bap189468jsn3435f2f24ddf",
+              "useQueryString": true
+            }
+        });
+
+        var c0 = await songs.json();
+        var c1 = await songs2.json();
+
+
+        res.push(c0.response.results.length);
+        res.push(c1.response.results.length);
+        
+        console.log(res);
+        // console.log(song.response.results);
+        // console.log(poverty);
+        var options = {
+            series: [res[0],res[1]],
+            chart: {
+            width: 380,
+            type: 'pie',
+          },
+          labels: countries,
+          responsive: [{
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200
+              },
+              legend: {
+                position: 'bottom'
+              }
+            }
+          }]
+          };
+
+          var chart = new ApexCharts(document.querySelector("#chart5"), options);
+          chart.render();
+
+    }
+    apiExterna3();
+    apiExterna4();
+    
+</script>
+
+<svelte:head>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts" on:load="{api1}" on:load="{api2}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"on:load="{api3}" on:load="{api4}" on:load="{apiExterna1}" on:load="{apiExterna2}"on:load="{apiExterna5}"></script>
+</svelte:head>
+
+
+
+<main>
+  <h1>API Externa chiste aleatorios de chuck norris</h1>
+  <div id="chiste"></div>
+  
+  <h1>API Externa chiste aleatorios</h1>
+  <div id="chiste2"></div>
+    <div id="chartex1">
+        <h1>API Externa 1</h1>
+        
+    </div>
+    <div id="chartex2">
+            <h1>API Externa 2</h1>
+            
+        </div>
+    <div id="chart2">
+        <h1>API 1</h1>
+        <h3>indice de pobreza y consumo de cannabis por millón</h3>
+    </div>
+    <div id="chart">
+        <h1>API 2</h1>
+        <h3>indice de pobreza y consumo de alcohol por millón</h3>
+    </div>
+    <div id="chart4">
+        <h1>API 3</h1>
+        <h3>Media de pobreza y accidentes de trafico en 2015</h3>
+    </div>
+    <div id="chart5">
+        <h1>API externa 5</h1>
+        
+    </div>
+    <figure class="highcharts-figure">
+        <h1>API 4</h1>
+        <div id="container"></div>
+    </figure>
+>>>>>>> 6d38d82ee215a9e4d9eb5122c4264003dc21532d
     
     <h1>API Externa chiste aleatorios</h1>
     <div id="chiste2"></div>
