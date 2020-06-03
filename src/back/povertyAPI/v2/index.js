@@ -334,8 +334,7 @@ module.exports = function (app) {
 					res.sendStatus(400);
 				}else{
 					if(limit==1){
-						
-						res.send(JSON.stringify(poverty_stats[offset-1],null,2));
+						res.send(JSON.stringify(poverty_stats.slice(0,parseInt(limit)),null,2));
 					}else{
 						res.send(JSON.stringify(poverty_stats.slice(startObject,endObject),null,2));
 					}	
@@ -350,12 +349,9 @@ module.exports = function (app) {
 						}else if(limit!=null){
 									if(limit<=0){
 										res.sendStatus(400);
-									}else if(limit==1){
-
-												res.send(JSON.stringify(poverty_stats[0],null,2));
-											}else{
-												res.send(JSON.stringify(poverty_stats.slice(0,parseInt(limit)),null,2));
-											}
+									}else {
+										res.send(JSON.stringify(poverty_stats.slice(0,parseInt(limit)),null,2));
+									}
 								
 				}
         });

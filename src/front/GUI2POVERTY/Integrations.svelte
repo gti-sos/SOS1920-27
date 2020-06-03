@@ -27,7 +27,7 @@
           drug = await resData4.json();
   
           //console.log(poverty);
-  
+
           ordenarAsc(poverty,'year');
           ordenarAsc(drug,'year');
   
@@ -49,7 +49,7 @@
   
   
           //seleccionamos un valor por año
-  
+
           //variable auxiliar para ir borrando cada vez que se seleccione un año
           var yearAux=[];
           year.forEach((y)=>{
@@ -643,7 +643,7 @@
             }
         });
   
-        console.log(regions);
+        // console.log(regions);
         
         //variables para sumar el area de cada region
         var data =[];
@@ -666,7 +666,7 @@
           //los datos los cargamos en formato dato por millon
           data.push(sum/1000000);
         }
-        console.log(data);
+        // console.log(data);
   
         //variables para la media de indice de pobreza
         var mediaPoverty=[];
@@ -685,7 +685,7 @@
           mediaPoverty.push(sum2/tam);
         });
         
-        console.log(mediaPoverty);
+        // console.log(mediaPoverty);
   
         //Grafica
         var options = {
@@ -758,7 +758,7 @@
           var joke = await jokes.json();
           var chiste = document.getElementById('chiste');
           chiste.innerHTML = joke.value;
-          console.log(joke.value);
+          // console.log(joke.value);
       }
   
       async function apiExterna4(){
@@ -773,7 +773,7 @@
           var joke2 = await jokes2.json();
           var chiste2 = document.getElementById('chiste2');
           chiste2.innerHTML = joke2.content;
-          console.log(joke2.content);
+          // console.log(joke2.content);
       }
   
       async function apiSong(){
@@ -820,24 +820,34 @@
                 "useQueryString": true
               }
           });
+
+          const songs3 = await fetch("https://searchly.p.rapidapi.com/song/search?query="+countries[2],{
+            'method':'GET',
+              'headers':{
+                "x-rapidapi-host": "searchly.p.rapidapi.com",
+                "x-rapidapi-key": "2499b9262cmsh73c0da1a5a197bap189468jsn3435f2f24ddf",
+                "useQueryString": true
+              }
+          });
   
           var c0 = await songs.json();
           var c1 = await songs2.json();
-  
+          var c2 = await songs3.json();
   
           res.push(c0.response.results.length);
           res.push(c1.response.results.length);
-          
+          res.push(c2.response.results.length);
+
           console.log(res);
           // console.log(song.response.results);
           // console.log(poverty);
           var options = {
-              series: [res[0],res[1]],
+              series: [res[0],res[1],res[2]],
               chart: {
               width: 380,
               type: 'pie',
             },
-            labels: [countries[0], countries[1]],
+            labels: [countries[0], countries[1], countries[2]],
             responsive: [{
               breakpoint: 480,
               options: {
@@ -855,9 +865,36 @@
             chart.render();
   
       }
+
+      async function apiExterna6(){
+
+        const gamesData = await  fetch("https://rawg-video-games-database.p.rapidapi.com/games",{
+          method:'GET',
+          headers:{
+            "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
+            "x-rapidapi-key": "2499b9262cmsh73c0da1a5a197bap189468jsn3435f2f24ddf",
+            "useQueryString": true
+          }
+        });
+
+        var games = await gamesData.json();
+        var res=[];
+        
+        games=games.results.map((g)=>{
+          return '<li>'+g.slug+'</li>';
+        });
+        console.log(games);
+        
+        var gamesHtml = document.getElementById('games');
+        games.forEach((g)=>{
+          gamesHtml.innerHTML+=g;
+        });
+
+      }
+
       apiExterna3();
       apiExterna4();
-      
+      apiExterna6();
   </script>
   
   <svelte:head>
@@ -873,33 +910,36 @@
     
     <h1>API Externa chiste aleatorios</h1>
     <div id="chiste2"></div>
-      <div id="chartex1">
-          <h1>API Externa 1</h1>
-          
-      </div>
-      <div id="chartex2">
-              <h1>API Externa 2</h1>
-              
-          </div>
-      <div id="chart2">
-          <h1>API 1</h1>
-          <h3>indice de pobreza y consumo de cannabis por millón</h3>
-      </div>
-      <div id="chart">
-          <h1>API 2</h1>
-          <h3>indice de pobreza y consumo de alcohol por millón</h3>
-      </div>
-      <div id="chart4">
-          <h1>API 3</h1>
-          <h3>Media de pobreza y accidentes de trafico en 2015</h3>
-      </div>
-      <div id="chart5">
-          <h1>API externa 5</h1>
-          
-      </div>
-      <figure class="highcharts-figure">
-          <h1>API 4</h1>
-          <div id="container"></div>
-      </figure>
+      
+    <h1>API Externa 1</h1>
+    <div id="chartex1"></div>
+  
+    <h1>API Externa 2</h1>
+    <div id="chartex2"></div>
+    
+    <h1>API externa 3</h1>
+    <h3>Comparación de canciones que contienen, en el título, el nombre de la región</h3>
+    <div id="chart5"></div>
+
+    <h1>API Externa 4</h1>
+    <h3>Lista de juegos</h3>
+    <div id="games"></div>
+    
+    <h1>API SOS1029-12</h1>
+    <h3>indice de pobreza y consumo de cannabis por millón</h3>
+    <div id="chart2"></div>
+  
+    <h1>API SOS1029-07</h1>
+    <h3>indice de pobreza y consumo de alcohol por millón</h3>
+    <div id="chart"></div>
+  
+    <h1>API SOS1029-02</h1>
+    <h3>Media de pobreza y accidentes de trafico en 2015</h3>
+    <div id="chart4"></div>
+
+    <h1>API SOS1029-22</h1>
+    <figure class="highcharts-figure">
+      <div id="container"></div>
+    </figure>
       
   </main>
