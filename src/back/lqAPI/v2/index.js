@@ -16,16 +16,38 @@ module.exports = function (app) {
 				
 
 				
-	//Proxy Juanlu
-    var proxyJuanlu = "/api/v2/overdose-deaths"
-	var urlProxyJuanlu = "https://sos1920-12.herokuapp.com"
+	//Proxy Juanlu api overdose-deaths
+    var proxyJuanlu1 = "/api/v2/overdose-deaths"
+	var urlProxyJuanlu1 = "https://sos1920-12.herokuapp.com"
 	
 	//Proxy Juanlu
-    app.use(proxyJuanlu, function(req, res){
-        var url = urlProxyJuanlu + req.baseUrl + req.url;
+    app.use(proxyJuanlu1, function(req, res){
+        var url = urlProxyJuanlu1 + req.baseUrl + req.url;
         console.log("piped: " + req.baseUrl + req.url);
         req.pipe(request(url)).pipe(res)
-    })
+	})
+	
+	//Proxy Juanlu api countries
+	var proxyJuanlu2 = "/v1/Country/getCountries"
+	var urlProxyJuanlu2 = "https://countryapi.gear.host"
+		
+	//Proxy Juanlu
+	app.use(proxyJuanlu2, function(req, res){
+		var url = urlProxyJuanlu2 + req.baseUrl + req.url;
+		console.log("piped: " + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res)
+	})
+
+	//Proxy Juanlu api star wars
+	var proxyJuanlu3 = "/planets"
+	var urlProxyJuanlu3 = "https://swapi.dev/api"
+		
+	//Proxy Juanlu
+	app.use(proxyJuanlu3, function(req, res){
+		var url = urlProxyJuanlu3 + req.baseUrl + req.url;
+		console.log("piped: " + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res)
+	})
 
     
     var ejemplos_lq = [

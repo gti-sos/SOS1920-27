@@ -115,6 +115,7 @@
         <Table bordered responsive>
             <thead>
                 <tr>
+                    <th>Actions</th>
                     <th>Country</th>
                     <th>Both_sex</th>
                     <th>Male_rank</th>
@@ -124,11 +125,12 @@
                     <th>Ratio</th>
                     <th>Year</th>
                     <th>Continent</th>
-                    <th>Actions</th>
+                    
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <td> <Button outline  color="primary" on:click={updateSpc}>Actualizar</Button> </td>
                     <td>{updatedCountry}</td>
                     <td><input bind:value="{updatedBothSex}"></td>
                     <td><input bind:value="{updatedMaleRank}"></td>
@@ -137,8 +139,7 @@
                     <td><input bind:value="{updatedFemaleNumber}"></td>
                     <td><input bind:value="{updatedRatio}"></td>
                     <td>{updatedYear}</td>
-                    <td><input bind:value="{updatedContinent}"></td>
-                    <td> <Button outline  color="primary" on:click={updateSpc}>Actualizar</Button> </td>
+                    <td><input bind:value="{updatedContinent}"></td>                    
                 </tr>
              </tbody>
         </Table>

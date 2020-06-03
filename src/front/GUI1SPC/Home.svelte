@@ -281,6 +281,7 @@
         <Table bordered responsive>
             <tbody>
                 <tr>
+                    <td> <Button outline  color="primary" on:click={searchSPC}>Buscar</Button> </td>
                     <td><input placeholder="País" bind:value="{searchSpc.country}"></td>
                     <td><input placeholder="Ambos sexos" bind:value="{searchSpc.both_sex}"></td>
                     <td><input placeholder="Ranking hombres" bind:value="{searchSpc.male_rank}"></td>
@@ -290,7 +291,6 @@
                     <td><input placeholder="Ratio" bind:value="{searchSpc.ratio}"></td>
                     <td><input placeholder="Año" bind:value="{searchSpc.year}"></td>
                     <td><input placeholder="Continente" bind:value="{searchSpc.continent}"></td>
-                    <td> <Button outline  color="primary" on:click={searchSPC}>Buscar</Button> </td>
                 </tr>
             </tbody>
         </Table>
@@ -307,6 +307,7 @@
         <Table bordered responsive>
             <thead>
                 <tr>
+                    <th>Actions</th>
                     <th>Country</th>
                     <th>Both_sex</th>
                     <th>Male_rank</th>
@@ -316,11 +317,12 @@
                     <th>Ratio</th>
                     <th>Year</th>
                     <th>Continent</th>
-                    <th>Actions</th>
+                    
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <td> <Button outline  color="primary" on:click={insertSPC}>Insertar</Button> </td>
                     <td><input bind:value="{newSpc.country}"></td>
                     <td><input bind:value="{newSpc.both_sex}"></td>
                     <td><input bind:value="{newSpc.male_rank}"></td>
@@ -329,12 +331,12 @@
                     <td><input bind:value="{newSpc.female_number}"></td>
                     <td><input bind:value="{newSpc.ratio}"></td>
                     <td><input bind:value="{newSpc.year}"></td>
-                    <td><input bind:value="{newSpc.continent}"></td>
-                    <td> <Button outline  color="primary" on:click={insertSPC}>Insertar</Button> </td>
+                    <td><input bind:value="{newSpc.continent}"></td>          
                 </tr>
  
                 {#each spc as suicide}
                     <tr>
+                        <td><Button outline color="danger" on:click="{deleteSPC(suicide.country, suicide.year)}">Borrar</Button></td>
                         <td><a href="#/spc-stats/{suicide.country}/{suicide.year}">{suicide.country}</a></td>
                         <td>{suicide.both_sex}</td>
                         <td>{suicide.male_rank}</td>
@@ -344,7 +346,7 @@
                         <td>{suicide.ratio}</td>
                         <td>{suicide.year}</td>
                         <td>{suicide.continent}</td>
-                        <td><Button outline color="danger" on:click="{deleteSPC(suicide.country, suicide.year)}">Borrar</Button></td>
+                        
                     </tr>
                 {/each}
             </tbody>

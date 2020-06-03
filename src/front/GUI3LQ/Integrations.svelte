@@ -55,7 +55,6 @@
             console.log("Ok");
             const json = await res.json();
             lq = json;
-            console.log("Received " + lq.length + " lq.");
         } else {
             errorMSG = res.status + ": " + res.statusText;
             console.log("ERROR!");
@@ -99,7 +98,6 @@
     covid = await res2.json();
 
     var paises = covid.locations.map(dato=> dato.country);
-    var pruieba = covid.locations.map(dato=> dato.country);
 
     var misPaises = lifeq.map(dato=> dato.country);
     var salud = [];
@@ -198,9 +196,12 @@
 
   
   async function apiexterna2(){
-    let datos = [];
+    let datos_externa = [];
+    let lifeq = [];
+    let lista_comun = [];
+    let coste = [];
 
-    const res = await fetch("https://restcountries-v1.p.rapidapi.com/all", {
+    const res1 = await fetch("https://restcountries-v1.p.rapidapi.com/all", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "restcountries-v1.p.rapidapi.com",
@@ -208,19 +209,375 @@
     }
     
 });
-  datos = await res.json();
-  console.log(datos)
+  datos_externa = await res1.json();
 
+  const res2 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats")
+  lifeq = await res2.json();
 
+  var misPaises = lifeq.map(dato=> dato.country);
+  var paises = datos_externa.map(datos=>datos.name)
 
+    //para tener los países comunes
+    for (let i = 0; i < misPaises.length; i++) {
+        for (let j = 0; j < paises.length; j++) {
+            if(misPaises[i].localeCompare(toMinus(paises[j])) == 0){
+                lista_comun.push(misPaises[i])
+            }
+        }
+        
+    }
+
+    let conjunto = new Set(lista_comun);
+
+let lista_final = Array.from(conjunto);
+
+let lista = [];
+//
+for (let index = 0; index < lista_final.length; index++) {
+    var llamada = await fetch("https://restcountries-v1.p.rapidapi.com/name/"+toMayusc(lista_final[index]), {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "restcountries-v1.p.rapidapi.com",
+		"x-rapidapi-key": "0f1c9a6651mshcc6fb880746f7d2p18a345jsna7eda5bbbed3"
+    }
+    
+});
+    var datos = await llamada.json();
+    lista.push(datos.map(x =>x.gini)[0])
+    
+}
+    //coger nivel de coste de los paises comunes
+    for (let index = 0; index < lifeq.length; index++) {
+        if (lista_final.includes(lifeq[index].country)) {
+            coste.push(lifeq[index].costs)
+        }
+        
+    }
+
+var options = {
+          series: [
+          {
+            name: "Calidad de vida",
+            data: coste
+          },
+          {
+            name: "Gini",
+            data: lista
+          }
+        ],
+          chart: {
+          height: 350,
+          type: 'line',
+          dropShadow: {
+            enabled: true,
+            color: '#000',
+            top: 18,
+            left: 7,
+            blur: 10,
+            opacity: 0.2
+          },
+          toolbar: {
+            show: false
+          }
+        },
+        colors: ['#77B6EA', '#545454'],
+        dataLabels: {
+          enabled: true,
+        },
+        stroke: {
+          curve: 'smooth'
+        },
+        title: {
+          text: 'Comparación nivel económico del país junto a su coeficiente de Gini (medida de desigualdad de ingresos)',
+          align: 'left'
+        },
+        grid: {
+          borderColor: '#e7e7e7',
+          row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
+        markers: {
+          size: 1
+        },
+        xaxis: {
+          categories: lista_final,
+          title: {
+            text: 'Países'
+          }
+        },
+        yaxis: {
+          title: {
+            text: ''
+          }
+        },
+        legend: {
+          position: 'top',
+          horizontalAlign: 'right',
+          floating: true,
+          offsetY: -25,
+          offsetX: -5
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart1"), options);
+        chart.render();
 
 
   }
 
 
+  //api externa 3
+
+  async function apiexterna3(){
+    let datos_externa = [];
+    let lifeq = [];
+    let lista_comun = [];
+    let confirmados = [];
+
+    const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats")
+    lifeq = await res1.json();
+    const res2 = await fetch("https://sos1920-27.herokuapp.com/v1/Country/getCountries");
+    datos_externa = await res2.json();
+
+    var paises = datos_externa.Response.map(x=>x.Name);
+    var misPaises = lifeq.map(dato=> dato.country);
+    var total = [];
+
+    //para tener los países comunes
+    for (let i = 0; i < misPaises.length; i++) {
+        for (let j = 0; j < paises.length; j++) {
+            if(misPaises[i].localeCompare(toMinus(paises[j])) == 0){
+                lista_comun.push(misPaises[i])
+            }
+            
+        }
+        
+    }
+    let conjunto = new Set(lista_comun);
+
+    let lista_final = Array.from(conjunto);
+
+    let lista = [];
+    //
+    for (let index = 0; index < lista_final.length; index++) {
+        var llamada = await fetch("https://sos1920-27.herokuapp.com/v1/Country/getCountries?pName="+lista_final[index]);
+        var datos = await llamada.json();
+        lista.push(datos.Response.map(x=>x.NumericCode))
+        
+    }
+
+    //coger calidad total paises comunes
+    for (let index = 0; index < lifeq.length; index++) {
+        if (lista_final.includes(lifeq[index].country)) {
+            total.push(lifeq[index].total)
+        }
+        
+    }
+    var options = {
+          series: [
+          {
+            name: "Calidad de vida",
+            data: total
+          },
+          {
+            name: 'Código Numérico del país',
+            data: lista
+          }
+        ],
+          chart: {
+          height: 350,
+          type: 'line',
+          zoom: {
+            enabled: false
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          width: [5, 7],
+          curve: 'straight',
+          dashArray: [0, 8, 5]
+        },
+        title: {
+          text: 'Comparación calidad de vida de un país con su código numérico',
+          align: 'left'
+        },
+        legend: {
+          tooltipHoverFormatter: function(val, opts) {
+            return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
+          }
+        },
+        markers: {
+          size: 0,
+          hover: {
+            sizeOffset: 6
+          }
+        },
+        xaxis: {
+          categories: lista_final,
+        },
+        tooltip: {
+          y: [
+            {
+              title: {
+                formatter: function (val) {
+                  return val + " (mins)"
+                }
+              }
+            },
+            {
+              title: {
+                formatter: function (val) {
+                  return val + " per session"
+                }
+              }
+            },
+            {
+              title: {
+                formatter: function (val) {
+                  return val;
+                }
+              }
+            }
+          ]
+        },
+        grid: {
+          borderColor: '#f1f1f1',
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart2"), options);
+        chart.render();
+
+  }
 
 
+  //api externa 4
+  async function apiexterna4(){
 
+    const res1 = await fetch("https://dad-jokes.p.rapidapi.com/random/jokes",{
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "dad-jokes.p.rapidapi.com",
+	      "x-rapidapi-key": "4e0dba0f71mshbf8f52263d28d18p10d849jsna5743000ad9c"
+      }
+  });
+    var broma =await res1.json();
+
+    var joke = document.getElementById('joke');
+    var joke2 = document.getElementById('joke2');
+
+    joke.innerHTML = broma.setup;
+    joke2.innerHTML = broma.punchline;
+  }
+  //api externa 5
+
+  async function apiexterna5(){
+    let lista =[]
+
+    const res1 = await fetch("https://sos1920-27.herokuapp.com/planets");
+  
+    var star =await res1.json();
+    console.log(star)
+
+    var planetas = star.results.map(x=>x.name)
+
+    //coger el diámetro de cada planeta
+    for (let index = 0; index < planetas.length; index++) {
+        var llamada = await fetch("https://sos1920-27.herokuapp.com/planets/"+(index+1));
+        var datos = await llamada.json();
+        lista.push(datos.population)
+        
+        
+    } console.log(datos)
+
+    var options = {
+          series: [{
+          name: 'Inflation',
+          data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+        }],
+          chart: {
+          height: 350,
+          type: 'bar',
+        },
+        plotOptions: {
+          bar: {
+            dataLabels: {
+              position: 'top', // top, center, bottom
+            },
+          }
+        },
+        dataLabels: {
+          enabled: true,
+          formatter: function (val) {
+            return val + "%";
+          },
+          offsetY: -20,
+          style: {
+            fontSize: '12px',
+            colors: ["#304758"]
+          }
+        },
+        
+        xaxis: {
+          categories: planetas,
+          position: 'top',
+          axisBorder: {
+            show: false
+          },
+          axisTicks: {
+            show: false
+          },
+          crosshairs: {
+            fill: {
+              type: 'gradient',
+              gradient: {
+                colorFrom: '#D8E3F0',
+                colorTo: '#BED1E6',
+                stops: [0, 100],
+                opacityFrom: 0.4,
+                opacityTo: 0.5,
+              }
+            }
+          },
+          tooltip: {
+            enabled: true,
+          }
+        },
+        yaxis: {
+          axisBorder: {
+            show: false
+          },
+          axisTicks: {
+            show: false,
+          },
+          labels: {
+            show: false,
+            formatter: function (val) {
+              return val + "%";
+            }
+          }
+        
+        },
+        title: {
+          text: 'Monthly Inflation in Argentina, 2002',
+          floating: true,
+          offsetY: 330,
+          align: 'center',
+          style: {
+            color: '#444'
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart3"), options);
+        chart.render();
+  }
+  //apiexterna4()
+apiexterna5()
   //api sos 1920-09 renewable-sources-stats
 
   async function renewable(){
@@ -252,8 +609,6 @@
 
     let lista_final = Array.from(conjunto);
 
-    console.log(nivel_total)
-
     //coger valor total paises comunes
     for (let index = 0; index < lifeq.length; index++) {
         if (lista_final.includes(lifeq[index].country)) {
@@ -270,7 +625,7 @@
         
 
  
-    }       console.log(lista)
+    }
 
 
 
@@ -370,7 +725,7 @@
         
 
  
-    }       console.log(lista)
+    }
 
     //grafica
     Highcharts.chart('container3', {
@@ -434,6 +789,13 @@
 });
   }
 
+ //GET LoadInitialDataIsabel
+  async function getLQLoadInitialDataIsabel() {
+
+console.log("Fetching vehicles...");
+await fetch("https://sos1920-04.herokuapp.com/api/v1/vehicles/loadinitialdata")
+}
+
     //api sos 1920-04 vehicles
 
     async function vehicles(){
@@ -453,12 +815,11 @@
     for (let index = 0; index < vehiculos.length; index++) {
       suma += spain[index];      
     }
-    suma/10000
+    suma/100000
 //guarda el valor del clima y salud de españa
 
-var clima = lifeq.filter(x=> x.country=="spain").map(dato=> dato.climate)[0] * 10000;
-var salud = lifeq.filter(x=> x.country=="spain").map(dato=> dato.health)[0] * 10000;
-console.log(salud)
+var clima = lifeq.filter(x=> x.country=="spain").map(dato=> dato.climate)[0] * 100000;
+var salud = lifeq.filter(x=> x.country=="spain").map(dato=> dato.health)[0] * 100000;
 
 // Build the chart
 Highcharts.chart('container4', {
@@ -493,13 +854,13 @@ Highcharts.chart('container4', {
     name: 'Cantidad',
     colorByPoint: true,
     data: [{
-      name: 'Número total del tráfico español ÷10000',
+      name: 'Número total del tráfico español ÷10.0000',
       y: suma
     }, {
-      name: 'Nivel de Salud español x10000',
+      name: 'Nivel de Salud español x10.0000',
       y: salud
     }, {
-      name: 'Nivel del Clima español x10000',
+      name: 'Nivel del Clima español x10.0000',
       y: clima
     }]
   }]
@@ -510,7 +871,8 @@ Highcharts.chart('container4', {
 
 <svelte:head>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js" on:load="{renewable}" on:load="{overdose}" on:load="{coronavirus}" on:load="{vehicles}" on:load="{apiexterna2}"></script>
+<script src="https://code.highcharts.com/modules/export-data.js" on:load="{renewable}" on:load="{overdose}" on:load="{coronavirus}" on:load="{vehicles}"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"  on:load="{apiexterna2}" on:load="{apiexterna3}"></script>
 
 </svelte:head>
 
@@ -523,7 +885,28 @@ Highcharts.chart('container4', {
   </p>
 </figure>
 
-<h3>API Externa 2 - <a href="https://coronavirus-tracker-api.herokuapp.com/v2/locations">Link EndPoint</a></h3>
+<h3>API Externa 2 - <a href="https://restcountries-v1.p.rapidapi.com/all">Link EndPoint</a></h3>
+
+    
+  <div id="chart1"></div>
+
+<h3>API Externa 3 - <a href="http://countryapi.gear.host/v1/Country/getCountries">Link EndPoint</a></h3>
+
+    
+  <div id="chart2"></div>
+
+
+<h3>API Externa 4 - <a href="https://dad-jokes.p.rapidapi.com/random/jokes">Link EndPoint</a></h3>
+
+  <div><h4>Api externa con chistes aleatorios</h4></div>
+  <div id="joke"></div>
+  <div id="joke2"></div>
+
+<h3>API Externa 5 - <a href="https://swapi.dev/">Link EndPoint</a></h3>
+
+  <div><h4>Api externa star wars</h4></div>
+  <div id="chart3"></div>
+
 
 <h3>API sos1920-09 - <a href="http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats">Link EndPoint</a></h3>
 
@@ -605,7 +988,5 @@ Highcharts.chart('container4', {
 .highcharts-data-table tr:hover {
   background: #f1f7ff;
 }
-
-
 
 </style>

@@ -1,0 +1,629 @@
+{
+	"info": {
+		"_postman_id": "3c81e77a-e0f8-4792-a486-db0abb92a359",
+		"name": "SOS1920-27-lq-stats v2",
+		"description": "Pruebas para lq stats",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /lq-stats/loadInitialData",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "12771add-cdee-4352-84b5-9895e782c5bb",
+						"exec": [
+							"pm.test(\"Status code is 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"There are 12 data examples\", function (){",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf(12);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/lq-stats/loadInitialData",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"lq-stats",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /lq-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "52c2866c-a778-42f0-bb99-4ffb2ab1764a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"There is  12 datas\", function (){",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf(12);",
+							"});",
+							"pm.test(\"Check if string is not empty\", function () {",
+							"     pm.expect(pm.response.json()).to.not.be.empty;",
+							"    });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/lq-stats",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"lq-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /lq-stats paginacion",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5b5a9dec-93ef-49f2-b391-01e5dcbe314f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"There are 2 datas\", function (){",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf(2);",
+							"});",
+							"pm.test(\"Check if string is not empty\", function () {",
+							"     pm.expect(pm.response.json()).to.not.be.empty;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/lq-stats?limit=2&offset=3",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"lq-stats"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "offset",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /lq-stats busqueda 1 param \"total\"",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1f0c68d6-df1a-4198-8a4e-221455145588",
+						"exec": [
+							"pm.test(\"Status code is 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"There is only 1 data\", function (){",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf(1);",
+							"});",
+							"pm.test(\"Check if string is not empty\", function () {",
+							"     pm.expect(pm.response.json()).to.not.be.empty;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/lq-stats?country=australia",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"lq-stats"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "australia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /lq-stats busqueda 2 param \"country\" & \"year\"",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0eeb7c63-4293-44ba-8aa4-952705eb702b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"There is only 1 data\", function (){",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf(1);",
+							"});",
+							"pm.test(\"Check if string is not empty\", function () {",
+							"     pm.expect(pm.response.json()).to.not.be.empty;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/lq-stats?country=portugal&year=2016",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"lq-stats"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "portugal"
+						},
+						{
+							"key": "year",
+							"value": "2016"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /lq-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d9739f7b-fc8a-4fb4-9a4c-7715b2eb8348",
+						"exec": [
+							"pm.test(\"Status code is 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"rank\": 21,\n\t\"country\":\"new zealand\",\n\t\"stability\": 92,\n\t\"right\": 100,\n\t\"health\":78,\n\t\"security\": 100,\n\t\"climate\": 40,\n\t\"costs\": 26,\n\t\"popularity\":61,\n\t\"total\":72,\n\t\"year\":2016,\n\t\"continent\": \"oceania\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/lq-stats",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"lq-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /lq-stats/country",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ab528f09-9cab-4eae-8b46-9ecfaa5a884a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"It has property country\", function (){",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.property(\"country\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/lq-stats/australia",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"lq-stats",
+						"australia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /lq-stats/country/year",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e2264c13-ff7b-4b29-9a1e-3b922cfb3515",
+						"exec": [
+							"pm.test(\"Status code is 201\", function (){",
+							"    pm.response.to.have.status(201);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"rank\": 100,\r\n\t\"country\":\"portugal\",\r\n\t\"stability\": 90,\r\n\t\"right\": 100,\r\n\t\"health\":93,\r\n\t\"security\": 100,\r\n\t\"climate\": 25,\r\n\t\"costs\": 45,\r\n\t\"popularity\":70,\r\n\t\"total\":77,\r\n\t\"year\":2016,\r\n\t\"continent\": \"europe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/lq-stats/portugal/2016",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"lq-stats",
+						"portugal",
+						"2016"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /lq-stats/country",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ba885c68-f007-4877-be8a-e44bbecb8cdb",
+						"exec": [
+							"pm.test(\"Status code is 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/lq-stats/portugal",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"lq-stats",
+						"portugal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /lq-stats/country/year",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "506116b7-02bb-4538-af3d-02cdd800174e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/lq-stats/australia/2016",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"lq-stats",
+						"australia",
+						"2016"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /lq-stats/country",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "efb7bc02-37b0-408a-969c-e86e3f952e5a",
+						"exec": [
+							"pm.test(\"Status code is 405\", function (){",
+							"    pm.response.to.have.status(405);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"rank\": 100,\r\n\t\"name\":\"portugal\",\r\n\t\"stability\": 90,\r\n\t\"right\": 100,\r\n\t\"health\":93,\r\n\t\"security\": 100,\r\n\t\"climate\": 25,\r\n\t\"costs\": 45,\r\n\t\"popularity\":70,\r\n\t\"total\":77,\r\n\t\"year\":2016,\r\n\t\"continent\": \"europe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/lq-stats/portugal",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"lq-stats",
+						"portugal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /lq-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e971e518-e4ba-4351-9138-800f1d59af75",
+						"exec": [
+							"pm.test(\"Status code is 405\", function (){",
+							"    pm.response.to.have.status(405);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"rank\": 100,\r\n\t\"country\":\"portugal\",\r\n\t\"stability\": 90,\r\n\t\"right\": 100,\r\n\t\"health\":93,\r\n\t\"security\": 100,\r\n\t\"climate\": 25,\r\n\t\"costs\": 45,\r\n\t\"popularity\":70,\r\n\t\"total\":77,\r\n\t\"year\":2016,\r\n\t\"continent\": \"europe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/lq-stats",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"lq-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /lq-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dabd23b6-949c-4701-917c-a42ed9566e2f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/lq-stats",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"lq-stats"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

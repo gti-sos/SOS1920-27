@@ -5,7 +5,7 @@
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
 
-	<title>Svelte app</title>
+	<title>SOS1920-27</title>
 
 	<link rel='icon' type='image/png' href='/favicon.png'>
 	<link rel='stylesheet' href='/global.css'>
@@ -27,6 +27,13 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 		  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 
+	<!-- youtube -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+	<!-- <script src="script.js"></script> -->
+	<script async defer src="https://apis.google.com/js/api.js"
+    onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+    
 </head>
 
 <body>
@@ -81,14 +88,134 @@
 	
   </header><!-- #header -->
 <br>
-		      <!-- ======= Services Section ======= -->
-			  <section id="services" class="services section-bg" style="min-height: 100%;">
-				<div class="container">
+	<!-- ======= Services Section ======= -->
+	<section id="services" class="services section-bg" style="min-height: 100%;">
+	
+	<div class="container">
 		  
-		  <div id="SvelteApp"></div>
-	  
-				</div>
-			  </section><!-- End Services Section -->
+		  <div id="SvelteApp"></div> 
+
+			<br>
+		  <style>#content,#enter-button,#exit-button{display: none;}</style>
+		  <div class="container">
+			<p>Login with Google</p>
+			<button id="enter-button">Log In</button>
+			<button id="exit-button">Log Out</button>
+			<br />
+			<div id="content">
+			  <div class="row">
+				<div id="channel-data" class="col s12"></div>
+			  </div>
+			</div>
+		  </div>
+	</div>
+	</section><!-- End Services Section -->
 </body>
 
 </html>
+
+<style>
+.button {
+  background-color: rgb(116, 162, 221);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}	
+</style>
+<script>
+	const CLIENT_ID = '663078597971-odm825f626v63o0rdl9e6s0ic3do5sht.apps.googleusercontent.com';
+	const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];
+	const SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
+
+	const authorizeButton = document.getElementById('enter-button');
+	const signoutButton = document.getElementById('exit-button');
+	const content = document.getElementById('content');
+
+	// default youtube channel
+	const defaultChannel = 'googledevelopers';
+
+	// Load auth2 library
+	function handleClientLoad(){
+		gapi.load('client:auth2', initClient);
+	}
+
+	// Init API client library and set up sing in listeners
+	function initClient(){
+		gapi.client.init({
+			discoveryDocs: DISCOVERY_DOCS,
+			clientId: CLIENT_ID,
+			scope: SCOPES
+		}).then(() => {
+			// Listen for sing state changes
+			gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+			// Handle initial sign in state
+			updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+			authorizeButton.onclick = handleAuthClick;
+			signoutButton.onclick = handleSignouClick;
+		});
+	}
+
+	// update UI sign in state changes
+	function updateSigninStatus(isSignedIn){
+		if(isSignedIn){
+			authorizeButton.style.display = 'none';
+			signoutButton.style.display = 'block';
+			content.style.display = 'block';
+			getChannel(defaultChannel);
+		}else{
+			authorizeButton.style.display = 'block';
+			signoutButton.style.display = 'none';
+			content.style.display = 'none';
+		}
+	}
+
+	// Handle Login
+	function handleAuthClick(){
+		gapi.auth2.getAuthInstance().signIn();
+	}
+
+	// Handle Logout
+	function handleSignouClick(){
+		gapi.auth2.getAuthInstance().signOut();
+	}
+
+	// Display channel Data
+	function showChannelData(data){
+		const channelData = document.getElementById('channel-data');
+		channelData.innerHTML = data;
+	}
+
+	// Get channel from API
+	function getChannel(channel){
+		gapi.client.youtube.channels
+		.list({
+			part: 'snippet,contentDetails,statistics',
+			forUsername: channel
+		})
+		.then(response => {
+			console.log(response);
+			const channel = response.result.items[0];
+			
+			const output = `
+				<ul class="collection">
+					<li class="collection-item">Title: ${channel.snippet.title}</li>
+					<li class="collection-item">ID: ${channel.id}</li>
+					<li class="collection-item">Subscribers: ${channel.statistics.subscriberCount}</li>
+					<li class="collection-item">Views: ${channel.statistics.viewCount}</li>
+					<li class="collection-item">Videos: ${channel.statistics.videoCount}</li>
+				</ul>
+				<p>${channel.snippet.description}</p>
+				<hr />
+				<a class="btn red darken-2" target="_blnak" href="https://youtube.com/${channel.snippet.customUrl}">Visit Channel</a>
+			`;
+			showChannelData(output);
+		})
+		.catch(err => alert('No Channel By THat Name'));
+	}
+</script>
