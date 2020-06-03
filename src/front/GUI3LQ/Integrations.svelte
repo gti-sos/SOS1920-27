@@ -681,16 +681,11 @@ await fetch("https://sos1920-04.herokuapp.com/api/v1/vehicles/loadinitialdata")
     //api sos 1920-04 vehicles
 
     async function vehicles(){
+    getLQLoadInitialDataIsabel()
     let lifeq=[]
     let vehiculos=[]
     let suma=0
     const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats")
-    lifeq = await res1.json();
-    if (lifeq = null){
-      getLQLoadInitialDataIsabel()
-    } else{
-      const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats")
-    }
     lifeq = await res1.json();
     const res2 = await fetch("https://sos1920-04.herokuapp.com/api/v1/vehicles");
     vehiculos = await res2.json();
