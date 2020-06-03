@@ -892,9 +892,33 @@
 
       }
 
+      async function apiExterna7(){
+
+        const fraseData = await fetch('https://quoteai.p.rapidapi.com/ai-quotes/0',{
+          method:'GET',
+          headers:{
+            "x-rapidapi-host": "quoteai.p.rapidapi.com",
+            "x-rapidapi-key": "2499b9262cmsh73c0da1a5a197bap189468jsn3435f2f24ddf",
+            "useQueryString": true
+          }
+        });
+
+        var frase = await fraseData.json();
+
+        var fraseHtml=document.getElementById('frase');
+        var autorHtml=document.getElementById('autor');
+
+        fraseHtml.innerHTML=frase.quote;
+        autorHtml.innerHTML='<br>-'+frase.author
+
+        console.log(frase);
+
+      }
+
       apiExterna3();
       apiExterna4();
       apiExterna6();
+      apiExterna7();
   </script>
   
   <svelte:head>
@@ -905,41 +929,88 @@
   
   
   <main>
+    <div id='caja'>
     <h1>API Externa chiste aleatorios de chuck norris</h1>
     <div id="chiste"></div>
+    <div style="text-align: center">fuente: <a href="https://api.chucknorris.io/jokes/random" target="_blank">aqui</a></div>
+    </div><br>
     
+    
+    <div id='caja'>
     <h1>API Externa chiste aleatorios</h1>
     <div id="chiste2"></div>
-      
+    <div style="text-align: center">fuente: <a href="https://joke3.p.rapidapi.com/v1/joke" target="_blank">aqui</a></div>
+    </div><br>
+
+    <div id='caja'>
+    <h1>API Externa frases inspiradoras sobre IA</h1>
+    <div id="frase"></div>
+    <div id='autor'></div>
+    <div style="text-align: center">fuente: <a href="https://quoteai.p.rapidapi.com/ai-quotes/0" target="_blank">aqui</a></div>
+    </div><br>
+
+    <div id='caja'>
     <h1>API Externa 1</h1>
     <div id="chartex1"></div>
-  
+    <div style="text-align: center">fuente: <a href="https://coronavirus-19-api.herokuapp.com/countries" target="_blank">aqui</a></div>
+    </div><br>
+
+    <div id='caja'>
     <h1>API Externa 2</h1>
     <div id="chartex2"></div>
-    
+    <div style="text-align: center">fuente: <a href="https://restcountries.eu/rest/v2/?fields=region;area" target="_blank">aqui</a></div>
+    </div><br>
+
+    <div id='caja'>
     <h1>API externa 3</h1>
     <h3>Comparación de canciones que contienen, en el título, el nombre de la región</h3>
     <div id="chart5"></div>
+    <div style="text-align: center">fuente: <a href="https://searchly.p.rapidapi.com/song/search?query=europe" target="_blank">aqui</a></div>
+    </div><br>
 
+    <div id='caja'>
     <h1>API Externa 4</h1>
-    <h3>Lista de juegos</h3>
+    <h3>Lista de juegos más conocidos</h3>
     <div id="games"></div>
+    <div style="text-align: center">fuente: <a href="https://rawg-video-games-database.p.rapidapi.com/games" target="_blank">aqui</a></div>
+    </div><br>
     
+    <div id='caja'>
     <h1>API SOS1029-12</h1>
     <h3>indice de pobreza y consumo de cannabis por millón</h3>
     <div id="chart2"></div>
-  
+    <div style="text-align: center">fuente: <a href="https://sos1920-12.herokuapp.com/api/v1/drug_offences" target="_blank">aqui</a></div>
+    </div><br>
+
+    <div id='caja'>
     <h1>API SOS1029-07</h1>
     <h3>indice de pobreza y consumo de alcohol por millón</h3>
     <div id="chart"></div>
-  
+    <div style="text-align: center">fuente: <a href="https://sos1920-07.herokuapp.com/api/v2/imports" target="_blank">aqui</a></div>
+    </div><br>
+
+    <div id='caja'>
     <h1>API SOS1029-02</h1>
     <h3>Media de pobreza y accidentes de trafico en 2015</h3>
     <div id="chart4"></div>
+    <div style="text-align: center">fuente: <a href="https://sos1920-02.herokuapp.com/api/v2/traffic-accidents" target="_blank">aqui</a></div>
+    </div><br>
 
+    <div id='caja'>
     <h1>API SOS1029-22</h1>
     <figure class="highcharts-figure">
       <div id="container"></div>
+      <div style="text-align: center">fuente: <a href="https://sos1920-22.herokuapp.com/api/v1/swim-stats" target="_blank">aqui</a></div>
     </figure>
-      
+    </div><br>
+  
   </main>
+
+  <style>
+
+    #caja{
+      padding: 2%;
+      border: 1px solid black;
+    }
+
+  </style>
