@@ -61,8 +61,8 @@ module.exports = function (app) {
 	})
 
 	//Proxy Juanlu api Age of Empire 2
-	var proxyJuanlu5 = "/units"
-	var urlProxyJuanlu5 = "https://age-of-empires-2-api.herokuapp.com/api/v1"
+	var proxyJuanlu5 = "/api/v1/units"
+	var urlProxyJuanlu5 = "https://age-of-empires-2-api.herokuapp.com"
 			
 	//Proxy Juanlu
 		app.use(proxyJuanlu5, function(req, res){
