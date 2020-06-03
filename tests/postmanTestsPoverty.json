@@ -1,0 +1,479 @@
+{
+	"info": {
+		"_postman_id": "1f024644-fd8a-42f3-9157-dc4f7da136a4",
+		"name": "API  Poverty statistics V2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /poverty-stats/loadInitialData",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4873f5b0-098c-4a15-8b7a-5bc7263e42f1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Hay 15 datos\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.lengthOf(24);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/poverty-stats/loadInitialData",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"poverty-stats",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /porverty-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "eb0900d3-1c56-4cb7-b9b3-4019165f7413",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/poverty-stats",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"poverty-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /porverty-stats?limit&offset",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3a36dfed-1b6f-478b-9682-e27f8336ebba",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Hay 3 datos\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf(3);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/poverty-stats?limit=3&offset=2",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"poverty-stats"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "3"
+						},
+						{
+							"key": "offset",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /porverty-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1d74ca24-505f-400f-bc71-fa67df1cb853",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Se ha enviado un dato\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.lengthOf(1);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"country\":\"brasil\",\n\t\"under_190\": 0.03,\n\t\"under_320\":0.34,\n\t\"under_550\":0.067,\n\t\"year\":2016,\n\t\"continent\":\"south america\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/poverty-stats",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"poverty-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /porverty-stats?country&year",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fdcc277b-1f74-4c85-a3d8-0b3989581e2f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check if string is not empty\", function () {",
+							"     pm.expect(pm.response.json()).to.not.be.empty;",
+							"    });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/poverty-stats?country=brasil&year=2016",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"poverty-stats"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "brasil"
+						},
+						{
+							"key": "year",
+							"value": "2016"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /porverty-stats/country",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "90998a11-15b4-4849-a08c-c9d2e3db1d28",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/poverty-stats/brasil",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"poverty-stats",
+						"brasil"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /porverty-stats/country/year",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "93c7a973-9bb0-4694-a59f-6f0ce7550cd5",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"country\":\"brasil\",\n\t\"under_190\": 0.023,\n\t\"under_320\":0.34,\n\t\"under_550\":0.057,\n\t\"year\":2018,\n\t\"continent\":\"south america\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/poverty-stats/brasil/2016",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"poverty-stats",
+						"brasil",
+						"2016"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /porverty-stats/country",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "35c44daf-35e5-4c14-95a9-43b7bd0864fb",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/poverty-stats/brasil",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"poverty-stats",
+						"brasil"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /porverty-stats/country/year",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e8a826c5-e002-4c38-808e-9de3c4a5eb6b",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/poverty-stats/brasil/2016",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"poverty-stats",
+						"brasil",
+						"2016"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /porverty-stats/country",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bfb50fff-abe4-4032-812e-b8d9f158e840",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"country\":\"brasil\",\n\t\"under_190\": 0.023,\n\t\"under_320\":0.34,\n\t\"under_550\":0.057,\n\t\"year\":2018,\n\t\"continent\":\"south america\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/poverty-stats/brasil",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"poverty-stats",
+						"brasil"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /porverty-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4cc5a852-0ae7-4b04-a50f-fb0218faf6b8",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/poverty-stats",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"poverty-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /porverty-stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3607fad6-8abb-4f5b-9cb3-b80a3f0bb738",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/poverty-stats",
+					"host": [
+						"http://localhost:8000"
+					],
+					"path": [
+						"api",
+						"v2",
+						"poverty-stats"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
