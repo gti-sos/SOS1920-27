@@ -307,6 +307,7 @@
         <Table bordered responsive>
             <thead>
                 <tr>
+                    <th>Actions</th>
                     <th>Country</th>
                     <th>Both_sex</th>
                     <th>Male_rank</th>
@@ -316,7 +317,7 @@
                     <th>Ratio</th>
                     <th>Year</th>
                     <th>Continent</th>
-                    <th>Actions</th>
+                    
                 </tr>
             </thead>
             <tbody>
