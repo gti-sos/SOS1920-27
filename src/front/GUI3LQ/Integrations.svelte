@@ -481,7 +481,6 @@ var options = {
     const res1 = await fetch("https://sos1920-27.herokuapp.com/planets");
   
     var star =await res1.json();
-    console.log(star)
 
     var planetas = star.results.map(x=>x.name)
 
@@ -489,16 +488,17 @@ var options = {
     for (let index = 0; index < planetas.length; index++) {
         var llamada = await fetch("https://sos1920-27.herokuapp.com/planets/"+(index+1));
         var datos = await llamada.json();
-        lista.push(datos.population)
-        
-        
-
-    } console.log(datos)
+        if(isNaN(datos.diameter)){
+          lista.push(0)
+        }else{
+          lista.push(datos.diameter)
+        }
+    }
 
     var options = {
           series: [{
-          name: 'Inflation',
-          data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+          name: 'Kilómetros',
+          data: lista
         }],
           chart: {
           height: 350,
@@ -514,7 +514,7 @@ var options = {
         dataLabels: {
           enabled: true,
           formatter: function (val) {
-            return val + "%";
+            return val + "";
           },
           offsetY: -20,
           style: {
@@ -558,13 +558,13 @@ var options = {
           labels: {
             show: false,
             formatter: function (val) {
-              return val + "%";
+              return val + "";
             }
           }
         
         },
         title: {
-          text: 'Monthly Inflation in Argentina, 2002',
+          text: 'Diámetro de los distintos planetas de Star Wars',
           floating: true,
           offsetY: 330,
           align: 'center',
@@ -579,8 +579,44 @@ var options = {
   }
   //apiexterna4()
 apiexterna5()
-  //api sos 1920-09 renewable-sources-stats
+//apiexterna6()
+apiexterna7()
 
+
+  //api externa 6
+  async function apiexterna6(){
+
+    const res1 = await fetch("https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=political&type=single");
+  
+    var broma =await res1.json();
+    
+    var categoria = document.getElementById('categoria');
+    var chiste = document.getElementById('chiste');
+
+    categoria.innerHTML = broma.category
+    chiste.innerHTML = broma.joke
+  }
+
+//apiexterna7
+async function apiexterna7(){
+
+const res1 = await fetch("https://www.potterapi.com/v1/characters",{
+  "method": "GET",
+  "headers": {
+    "X-Auth-Token": "$2a$10$UWohg5XWYD62QzW6NhhdM.6HXfRdUp.IuNWsLrxlc77NdhT27Tpfq",
+    "Content-Type": "application/json"
+  }
+});
+var broma =await res1.json();
+
+var joke = document.getElementById('joke');
+var joke2 = document.getElementById('joke2');
+
+joke.innerHTML = broma.setup;
+joke2.innerHTML = broma.punchline;
+}
+
+  //api sos 1920-09 renewable-sources-stats
   async function renewable(){
   let lifeq=[]
   let renovables=[]
@@ -907,6 +943,12 @@ Highcharts.chart('container4', {
 
   <div><h4>Api externa star wars</h4></div>
   <div id="chart3"></div>
+
+<h3>API Externa 6 - <a href="https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=political&type=single">Link EndPoint</a></h3>
+
+  <div><h4>Api externa bromas de programación</h4></div>
+  <div id="categoria"></div>
+  <div id="chiste"></div>
 
 
 <h3>API sos1920-09 - <a href="http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats">Link EndPoint</a></h3>

@@ -49,6 +49,16 @@ module.exports = function (app) {
 		req.pipe(request(url)).pipe(res)
 	})
 
+	//Proxy Juanlu api harry potter
+	var proxyJuanlu4 = "/v1/characters"
+	var urlProxyJuanlu4 = "https://www.potterapi.com"
+		
+	//Proxy Juanlu
+	app.use(proxyJuanlu4, function(req, res){
+		var url = urlProxyJuanlu4 + req.baseUrl + req.url;
+		console.log("piped: " + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res)
+	})
     
     var ejemplos_lq = [
 
