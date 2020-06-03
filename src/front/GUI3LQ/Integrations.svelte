@@ -456,10 +456,127 @@ var options = {
 
 
   //api externa 4
+  async function apiexterna4(){
 
+    const res1 = await fetch("https://dad-jokes.p.rapidapi.com/random/jokes",{
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "dad-jokes.p.rapidapi.com",
+	      "x-rapidapi-key": "4e0dba0f71mshbf8f52263d28d18p10d849jsna5743000ad9c"
+      }
+  });
+    var broma =await res1.json();
 
+    var joke = document.getElementById('joke');
+    var joke2 = document.getElementById('joke2');
+
+    joke.innerHTML = broma.setup;
+    joke2.innerHTML = broma.punchline;
+  }
+  //api externa 5
+
+  async function apiexterna5(){
+    let lista =[]
+
+    const res1 = await fetch("https://swapi.dev/api/planets");
   
+    var star =await res1.json();
+    console.log(star)
 
+    var planetas = star.results.map(x=>x.name)
+
+    //coger el diámetro de cada planeta
+    for (let index = 0; index < planetas.length; index++) {
+        var llamada = await fetch("https://swapi.dev/api/planets/"+(index+1));
+        var datos = await llamada.json();
+        lista.push(datos.population)
+        
+    } console.log(datos)
+
+    var options = {
+          series: [{
+          name: 'Inflation',
+          data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+        }],
+          chart: {
+          height: 350,
+          type: 'bar',
+        },
+        plotOptions: {
+          bar: {
+            dataLabels: {
+              position: 'top', // top, center, bottom
+            },
+          }
+        },
+        dataLabels: {
+          enabled: true,
+          formatter: function (val) {
+            return val + "%";
+          },
+          offsetY: -20,
+          style: {
+            fontSize: '12px',
+            colors: ["#304758"]
+          }
+        },
+        
+        xaxis: {
+          categories: planetas,
+          position: 'top',
+          axisBorder: {
+            show: false
+          },
+          axisTicks: {
+            show: false
+          },
+          crosshairs: {
+            fill: {
+              type: 'gradient',
+              gradient: {
+                colorFrom: '#D8E3F0',
+                colorTo: '#BED1E6',
+                stops: [0, 100],
+                opacityFrom: 0.4,
+                opacityTo: 0.5,
+              }
+            }
+          },
+          tooltip: {
+            enabled: true,
+          }
+        },
+        yaxis: {
+          axisBorder: {
+            show: false
+          },
+          axisTicks: {
+            show: false,
+          },
+          labels: {
+            show: false,
+            formatter: function (val) {
+              return val + "%";
+            }
+          }
+        
+        },
+        title: {
+          text: 'Monthly Inflation in Argentina, 2002',
+          floating: true,
+          offsetY: 330,
+          align: 'center',
+          style: {
+            color: '#444'
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart3"), options);
+        chart.render();
+  }
+  //apiexterna4()
+apiexterna5()
   //api sos 1920-09 renewable-sources-stats
 
   async function renewable(){
@@ -681,7 +798,6 @@ await fetch("https://sos1920-04.herokuapp.com/api/v1/vehicles/loadinitialdata")
     //api sos 1920-04 vehicles
 
     async function vehicles(){
-    getLQLoadInitialDataIsabel()
     let lifeq=[]
     let vehiculos=[]
     let suma=0
@@ -779,11 +895,16 @@ Highcharts.chart('container4', {
   <div id="chart2"></div>
 
 
-<h3>API Externa 4 - <a href="http://countryapi.gear.host/v1/Country/getCountries">Link EndPoint</a></h3>
+<h3>API Externa 4 - <a href="https://dad-jokes.p.rapidapi.com/random/jokes">Link EndPoint</a></h3>
 
-    
+  <div><h4>Api externa con chistes aleatorios</h4></div>
+  <div id="joke"></div>
+  <div id="joke2"></div>
+
+<h3>API Externa 5 - <a href="https://swapi.dev/">Link EndPoint</a></h3>
+
+  <div><h4>Api externa star wars</h4></div>
   <div id="chart3"></div>
-
 
 
 <h3>API sos1920-09 - <a href="http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats">Link EndPoint</a></h3>
@@ -838,7 +959,6 @@ Highcharts.chart('container4', {
 #container4 {
   height: 400px;
 }
-
 
 .highcharts-data-table table {
 	font-family: Verdana, sans-serif;
