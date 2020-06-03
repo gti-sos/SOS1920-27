@@ -491,6 +491,7 @@ var options = {
         var datos = await llamada.json();
         lista.push(datos.population)
         
+        
     } console.log(datos)
 
     var options = {
