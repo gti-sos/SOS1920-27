@@ -95,11 +95,12 @@
 		  
 		  <div id="SvelteApp"></div> 
 
-		<style>#content,#enter-button,#exit-button{display: none;}</style>
+			<br>
+		  <style>#content,#enter-button,#exit-button{display: none;}</style>
 		  <div class="container">
 			<p>Login with Google</p>
-			<Button color="success" id="enter-button">Log In</Button>
-			<Button color="danger" id="exit-button">Log Out</Button>
+			<button id="enter-button">Log In</button>
+			<button id="exit-button">Log Out</button>
 			<br />
 			<div id="content">
 			  <div class="row">
@@ -113,6 +114,20 @@
 
 </html>
 
+<style>
+.button {
+  background-color: rgb(116, 162, 221);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}	
+</style>
 <script>
 	const CLIENT_ID = '663078597971-odm825f626v63o0rdl9e6s0ic3do5sht.apps.googleusercontent.com';
 	const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];
