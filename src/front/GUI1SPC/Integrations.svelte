@@ -10,6 +10,7 @@
     import Button from "sveltestrap/src/Button.svelte";
     import { Alert } from "sveltestrap";
     
+    
     let spc = [];
     import ApexCharts from 'apexcharts';
     let errorMSG = "";

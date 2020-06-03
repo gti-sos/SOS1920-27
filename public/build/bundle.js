@@ -9585,7 +9585,7 @@ var app = (function () {
     const { console: console_1$5, document: document_1$1 } = globals;
     const file$e = "src\\front\\GUI1SPC\\Integrations.svelte";
 
-    // (730:4) <Button outline color="success" on:click="{getSPCLoadInitialData}">
+    // (731:4) <Button outline color="success" on:click="{getSPCLoadInitialData}">
     function create_default_slot_1$5(ctx) {
     	let t;
 
@@ -9605,14 +9605,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$5.name,
     		type: "slot",
-    		source: "(730:4) <Button outline color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
+    		source: "(731:4) <Button outline color=\\\"success\\\" on:click=\\\"{getSPCLoadInitialData}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (733:4) <Button outline color="danger" on:click="{deleteSPCALL}">
+    // (734:4) <Button outline color="danger" on:click="{deleteSPCALL}">
     function create_default_slot$6(ctx) {
     	let t;
 
@@ -9632,7 +9632,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$6.name,
     		type: "slot",
-    		source: "(733:4) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
+    		source: "(734:4) <Button outline color=\\\"danger\\\" on:click=\\\"{deleteSPCALL}\\\">",
     		ctx
     	});
 
@@ -9836,86 +9836,86 @@ var app = (function () {
     			t42 = space();
     			br8 = element("br");
     			if (script0.src !== (script0_src_value = "https://code.highcharts.com/modules/accessibility.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$e, 720, 4, 22350);
+    			add_location(script0, file$e, 721, 4, 22356);
     			if (script1.src !== (script1_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$e, 721, 4, 22453);
-    			add_location(h1, file$e, 728, 6, 22579);
-    			add_location(br0, file$e, 735, 4, 22830);
-    			add_location(br1, file$e, 735, 8, 22834);
-    			attr_dev(h30, "class", "svelte-ezuarg");
-    			add_location(h30, file$e, 739, 4, 22937);
+    			add_location(script1, file$e, 722, 4, 22571);
+    			add_location(h1, file$e, 729, 6, 22697);
+    			add_location(br0, file$e, 736, 4, 22948);
+    			add_location(br1, file$e, 736, 8, 22952);
+    			attr_dev(h30, "class", "svelte-pwork1");
+    			add_location(h30, file$e, 740, 4, 23055);
     			attr_dev(div0, "id", "container");
-    			attr_dev(div0, "class", "svelte-ezuarg");
-    			add_location(div0, file$e, 741, 8, 23021);
+    			attr_dev(div0, "class", "svelte-pwork1");
+    			add_location(div0, file$e, 742, 8, 23139);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$e, 742, 8, 23057);
-    			attr_dev(figure, "class", "highcharts-figure svelte-ezuarg");
-    			add_location(figure, file$e, 740, 4, 22977);
+    			add_location(p0, file$e, 743, 8, 23175);
+    			attr_dev(figure, "class", "highcharts-figure svelte-pwork1");
+    			add_location(figure, file$e, 741, 4, 23095);
     			attr_dev(a0, "href", "https://restcountries.eu/rest/v2/all");
-    			add_location(a0, file$e, 743, 24, 23121);
-    			add_location(p1, file$e, 743, 13, 23110);
+    			add_location(a0, file$e, 744, 24, 23239);
+    			add_location(p1, file$e, 744, 13, 23228);
     			set_style(div1, "text-align", "center");
-    			attr_dev(div1, "class", "contenedor svelte-ezuarg");
-    			add_location(div1, file$e, 738, 4, 22879);
-    			add_location(br2, file$e, 745, 4, 23230);
-    			attr_dev(h31, "class", "svelte-ezuarg");
-    			add_location(h31, file$e, 749, 4, 23331);
+    			attr_dev(div1, "class", "contenedor svelte-pwork1");
+    			add_location(div1, file$e, 739, 4, 22997);
+    			add_location(br2, file$e, 746, 4, 23348);
+    			attr_dev(h31, "class", "svelte-pwork1");
+    			add_location(h31, file$e, 750, 4, 23449);
     			attr_dev(div2, "id", "chart2");
-    			add_location(div2, file$e, 750, 4, 23371);
+    			add_location(div2, file$e, 751, 4, 23489);
     			attr_dev(a1, "href", "https://akashraj.tech/corona/");
-    			add_location(a1, file$e, 751, 21, 23411);
-    			add_location(p2, file$e, 751, 10, 23400);
+    			add_location(a1, file$e, 752, 21, 23529);
+    			add_location(p2, file$e, 752, 10, 23518);
     			set_style(div3, "text-align", "center");
-    			attr_dev(div3, "class", "contenedor svelte-ezuarg");
-    			add_location(div3, file$e, 748, 4, 23273);
-    			add_location(br3, file$e, 751, 105, 23495);
-    			attr_dev(h32, "class", "svelte-ezuarg");
-    			add_location(h32, file$e, 755, 6, 23598);
+    			attr_dev(div3, "class", "contenedor svelte-pwork1");
+    			add_location(div3, file$e, 749, 4, 23391);
+    			add_location(br3, file$e, 752, 105, 23613);
+    			attr_dev(h32, "class", "svelte-pwork1");
+    			add_location(h32, file$e, 756, 6, 23716);
     			attr_dev(div4, "id", "chart6");
-    			add_location(div4, file$e, 757, 6, 23648);
+    			add_location(div4, file$e, 758, 6, 23766);
     			attr_dev(a2, "href", "https://waqi.info/#/c/42.276/15.734/5.4z");
-    			add_location(a2, file$e, 758, 21, 23688);
-    			add_location(p3, file$e, 758, 10, 23677);
+    			add_location(a2, file$e, 759, 21, 23806);
+    			add_location(p3, file$e, 759, 10, 23795);
     			set_style(div5, "text-align", "center");
-    			attr_dev(div5, "class", "contenedor svelte-ezuarg");
-    			add_location(div5, file$e, 754, 4, 23538);
-    			add_location(br4, file$e, 758, 127, 23794);
+    			attr_dev(div5, "class", "contenedor svelte-pwork1");
+    			add_location(div5, file$e, 755, 4, 23656);
+    			add_location(br4, file$e, 759, 127, 23912);
     			set_style(h33, "text-align", "center");
-    			attr_dev(h33, "class", "svelte-ezuarg");
-    			add_location(h33, file$e, 762, 4, 23864);
+    			attr_dev(h33, "class", "svelte-pwork1");
+    			add_location(h33, file$e, 763, 4, 23982);
     			attr_dev(div6, "id", "chart");
-    			add_location(div6, file$e, 763, 4, 23933);
-    			attr_dev(div7, "class", "contenedor svelte-ezuarg");
-    			add_location(div7, file$e, 761, 4, 23834);
-    			add_location(br5, file$e, 764, 17, 23968);
+    			add_location(div6, file$e, 764, 4, 24051);
+    			attr_dev(div7, "class", "contenedor svelte-pwork1");
+    			add_location(div7, file$e, 762, 4, 23952);
+    			add_location(br5, file$e, 765, 17, 24086);
     			set_style(h34, "text-align", "center");
-    			attr_dev(h34, "class", "svelte-ezuarg");
-    			add_location(h34, file$e, 768, 4, 24031);
+    			attr_dev(h34, "class", "svelte-pwork1");
+    			add_location(h34, file$e, 769, 4, 24149);
     			attr_dev(div8, "id", "chart3");
-    			add_location(div8, file$e, 769, 4, 24100);
-    			attr_dev(div9, "class", "contenedor svelte-ezuarg");
-    			add_location(div9, file$e, 767, 4, 24001);
-    			add_location(br6, file$e, 770, 17, 24136);
+    			add_location(div8, file$e, 770, 4, 24218);
+    			attr_dev(div9, "class", "contenedor svelte-pwork1");
+    			add_location(div9, file$e, 768, 4, 24119);
+    			add_location(br6, file$e, 771, 17, 24254);
     			set_style(h35, "text-align", "center");
-    			attr_dev(h35, "class", "svelte-ezuarg");
-    			add_location(h35, file$e, 774, 4, 24198);
-    			add_location(b, file$e, 775, 35, 24298);
+    			attr_dev(h35, "class", "svelte-pwork1");
+    			add_location(h35, file$e, 775, 4, 24316);
+    			add_location(b, file$e, 776, 35, 24416);
     			set_style(p4, "text-align", "center");
-    			add_location(p4, file$e, 775, 4, 24267);
+    			add_location(p4, file$e, 776, 4, 24385);
     			attr_dev(div10, "id", "chart4");
-    			add_location(div10, file$e, 776, 4, 24397);
-    			attr_dev(div11, "class", "contenedor svelte-ezuarg");
-    			add_location(div11, file$e, 773, 4, 24168);
-    			add_location(br7, file$e, 777, 17, 24433);
+    			add_location(div10, file$e, 777, 4, 24515);
+    			attr_dev(div11, "class", "contenedor svelte-pwork1");
+    			add_location(div11, file$e, 774, 4, 24286);
+    			add_location(br7, file$e, 778, 17, 24551);
     			set_style(h36, "text-align", "center");
-    			attr_dev(h36, "class", "svelte-ezuarg");
-    			add_location(h36, file$e, 781, 6, 24498);
+    			attr_dev(h36, "class", "svelte-pwork1");
+    			add_location(h36, file$e, 782, 6, 24616);
     			attr_dev(div12, "id", "chart5");
-    			add_location(div12, file$e, 782, 6, 24569);
-    			attr_dev(div13, "class", "contenedor svelte-ezuarg");
-    			add_location(div13, file$e, 780, 4, 24466);
-    			add_location(br8, file$e, 783, 19, 24607);
-    			add_location(main, file$e, 727, 0, 22565);
+    			add_location(div12, file$e, 783, 6, 24687);
+    			attr_dev(div13, "class", "contenedor svelte-pwork1");
+    			add_location(div13, file$e, 781, 4, 24584);
+    			add_location(br8, file$e, 784, 19, 24725);
+    			add_location(main, file$e, 728, 0, 22683);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9999,8 +9999,17 @@ var app = (function () {
     			append_dev(main, t42);
     			append_dev(main, br8);
     			current = true;
-    			if (remount) dispose();
-    			dispose = listen_dev(script0, "load", population, false, false, false);
+    			if (remount) run_all(dispose);
+
+    			dispose = [
+    				listen_dev(script0, "load", population, false, false, false),
+    				listen_dev(script0, "load", /*airQuality*/ ctx[7], false, false, false),
+    				listen_dev(script0, "load", /*bicis*/ ctx[3], false, false, false),
+    				listen_dev(script0, "load", /*hospitalized*/ ctx[5], false, false, false),
+    				listen_dev(script0, "load", /*covid*/ ctx[6], false, false, false),
+    				listen_dev(script0, "load", /*vehiculos*/ ctx[2], false, false, false),
+    				listen_dev(script0, "load", /*roads*/ ctx[4], false, false, false)
+    			];
     		},
     		p: function update(ctx, [dirty]) {
     			const button0_changes = {};
@@ -10036,7 +10045,7 @@ var app = (function () {
     			if (detaching) detach_dev(main);
     			destroy_component(button0);
     			destroy_component(button1);
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -10657,7 +10666,16 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [getSPCLoadInitialData, deleteSPCALL];
+    	return [
+    		getSPCLoadInitialData,
+    		deleteSPCALL,
+    		vehiculos,
+    		bicis,
+    		roads,
+    		hospitalized,
+    		covid,
+    		airQuality
+    	];
     }
 
     class Integrations extends SvelteComponentDev {
@@ -18856,67 +18874,67 @@ var app = (function () {
     			p3 = element("p");
     			p3.textContent = "En esta gráfica podemos ver la cantidad de tráfico en España (dividido por 10.000) junto al nivel del clima y salud del estado español (multiplicados por 10.000)";
     			if (script0.src !== (script0_src_value = "https://code.jquery.com/jquery-3.1.1.min.js")) attr_dev(script0, "src", script0_src_value);
-    			add_location(script0, file$o, 755, 4, 19431);
+    			add_location(script0, file$o, 760, 4, 19593);
     			if (script1.src !== (script1_src_value = "https://code.highcharts.com/modules/export-data.js")) attr_dev(script1, "src", script1_src_value);
-    			add_location(script1, file$o, 756, 0, 19500);
+    			add_location(script1, file$o, 761, 0, 19662);
     			if (script2.src !== (script2_src_value = "https://cdn.jsdelivr.net/npm/apexcharts")) attr_dev(script2, "src", script2_src_value);
-    			add_location(script2, file$o, 757, 0, 19664);
+    			add_location(script2, file$o, 762, 0, 19826);
     			attr_dev(a0, "href", "https://coronavirus-tracker-api.herokuapp.com/v2/locations");
-    			add_location(a0, file$o, 762, 24, 19830);
-    			add_location(h30, file$o, 762, 4, 19810);
+    			add_location(a0, file$o, 767, 24, 19992);
+    			add_location(h30, file$o, 767, 4, 19972);
     			attr_dev(div0, "id", "container1");
     			attr_dev(div0, "class", "svelte-g6nkn");
-    			add_location(div0, file$o, 764, 2, 19965);
+    			add_location(div0, file$o, 769, 2, 20127);
     			attr_dev(p0, "class", "highcharts-description");
-    			add_location(p0, file$o, 765, 2, 19996);
+    			add_location(p0, file$o, 770, 2, 20158);
     			attr_dev(figure0, "class", "highcharts-figure svelte-g6nkn");
-    			add_location(figure0, file$o, 763, 4, 19927);
+    			add_location(figure0, file$o, 768, 4, 20089);
     			attr_dev(a1, "href", "https://restcountries-v1.p.rapidapi.com/all");
-    			add_location(a1, file$o, 770, 20, 20229);
-    			add_location(h31, file$o, 770, 0, 20209);
+    			add_location(a1, file$o, 775, 20, 20391);
+    			add_location(h31, file$o, 775, 0, 20371);
     			attr_dev(div1, "id", "chart1");
-    			add_location(div1, file$o, 773, 2, 20317);
+    			add_location(div1, file$o, 778, 2, 20479);
     			attr_dev(a2, "href", "http://countryapi.gear.host/v1/Country/getCountries");
-    			add_location(a2, file$o, 775, 20, 20364);
-    			add_location(h32, file$o, 775, 0, 20344);
+    			add_location(a2, file$o, 780, 20, 20526);
+    			add_location(h32, file$o, 780, 0, 20506);
     			attr_dev(div2, "id", "chart2");
-    			add_location(div2, file$o, 778, 2, 20460);
+    			add_location(div2, file$o, 783, 2, 20622);
     			attr_dev(a3, "href", "http://countryapi.gear.host/v1/Country/getCountries");
-    			add_location(a3, file$o, 781, 20, 20509);
-    			add_location(h33, file$o, 781, 0, 20489);
+    			add_location(a3, file$o, 786, 20, 20671);
+    			add_location(h33, file$o, 786, 0, 20651);
     			attr_dev(div3, "id", "chart3");
-    			add_location(div3, file$o, 784, 2, 20605);
+    			add_location(div3, file$o, 789, 2, 20767);
     			attr_dev(a4, "href", "http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats");
-    			add_location(a4, file$o, 788, 21, 20657);
-    			add_location(h34, file$o, 788, 0, 20636);
+    			add_location(a4, file$o, 793, 21, 20819);
+    			add_location(h34, file$o, 793, 0, 20798);
     			attr_dev(div4, "id", "container2");
     			attr_dev(div4, "class", "svelte-g6nkn");
-    			add_location(div4, file$o, 791, 2, 20794);
+    			add_location(div4, file$o, 796, 2, 20956);
     			attr_dev(p1, "class", "highcharts-description");
-    			add_location(p1, file$o, 792, 2, 20825);
+    			add_location(p1, file$o, 797, 2, 20987);
     			attr_dev(figure1, "class", "highcharts-figure svelte-g6nkn");
-    			add_location(figure1, file$o, 790, 0, 20756);
+    			add_location(figure1, file$o, 795, 0, 20918);
     			attr_dev(a5, "href", "https://sos1920-12.herokuapp.com/api/v2/overdose-deaths");
-    			add_location(a5, file$o, 797, 21, 21060);
-    			add_location(h35, file$o, 797, 0, 21039);
+    			add_location(a5, file$o, 802, 21, 21222);
+    			add_location(h35, file$o, 802, 0, 21201);
     			attr_dev(div5, "id", "container3");
     			attr_dev(div5, "class", "svelte-g6nkn");
-    			add_location(div5, file$o, 799, 2, 21188);
+    			add_location(div5, file$o, 804, 2, 21350);
     			attr_dev(p2, "class", "highcharts-description");
-    			add_location(p2, file$o, 800, 2, 21219);
+    			add_location(p2, file$o, 805, 2, 21381);
     			attr_dev(figure2, "class", "highcharts-figure svelte-g6nkn");
-    			add_location(figure2, file$o, 798, 0, 21150);
+    			add_location(figure2, file$o, 803, 0, 21312);
     			attr_dev(a6, "href", "https://sos1920-04.herokuapp.com/api/v1/vehicles");
-    			add_location(a6, file$o, 807, 21, 21469);
-    			add_location(h36, file$o, 807, 0, 21448);
+    			add_location(a6, file$o, 812, 21, 21631);
+    			add_location(h36, file$o, 812, 0, 21610);
     			attr_dev(div6, "id", "container4");
     			attr_dev(div6, "class", "svelte-g6nkn");
-    			add_location(div6, file$o, 809, 2, 21590);
+    			add_location(div6, file$o, 814, 2, 21752);
     			attr_dev(p3, "class", "highcharts-description");
-    			add_location(p3, file$o, 810, 2, 21621);
+    			add_location(p3, file$o, 815, 2, 21783);
     			attr_dev(figure3, "class", "highcharts-figure svelte-g6nkn");
-    			add_location(figure3, file$o, 808, 0, 21552);
-    			add_location(main, file$o, 761, 0, 19798);
+    			add_location(figure3, file$o, 813, 0, 21714);
+    			add_location(main, file$o, 766, 0, 19960);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -19487,11 +19505,18 @@ var app = (function () {
 
     //api sos 1920-04 vehicles
     async function vehicles() {
-    	getLQLoadInitialDataIsabel();
     	let lifeq = [];
     	let vehiculos = [];
     	let suma = 0;
     	const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats");
+    	lifeq = await res1.json();
+
+    	if (lifeq = null) {
+    		getLQLoadInitialDataIsabel();
+    	} else {
+    		const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v2/lq-stats");
+    	}
+
     	lifeq = await res1.json();
     	const res2 = await fetch("https://sos1920-04.herokuapp.com/api/v1/vehicles");
     	vehiculos = await res2.json();
