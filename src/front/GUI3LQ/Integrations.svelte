@@ -709,7 +709,7 @@ var options = {
     let lista_comun = [];
     let confirmados = [];
 
-    const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v1/units");
+    const res1 = await fetch("https://age-of-empires-2-api.herokuapp.com/api/v1/units");
     aoe = await res1.json();
 
     var unidades = aoe.map(x=>x.name)
