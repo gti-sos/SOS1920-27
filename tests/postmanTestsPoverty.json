@@ -30,9 +30,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/poverty-stats/loadInitialData",
+					"raw": "http://localhost:8000/api/v2/poverty-stats/loadInitialData",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:8000"
 					],
 					"path": [
 						"api",
@@ -64,9 +64,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/poverty-stats",
+					"raw": "http://localhost:8000/api/v2/poverty-stats",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:8000"
 					],
 					"path": [
 						"api",
@@ -102,9 +102,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/poverty-stats?limit=3&offset=2",
+					"raw": "http://localhost:8000/api/v2/poverty-stats?limit=3&offset=2",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:8000"
 					],
 					"path": [
 						"api",
@@ -158,9 +158,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/poverty-stats",
+					"raw": "http://localhost:8000/api/v2/poverty-stats",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:8000"
 					],
 					"path": [
 						"api",
@@ -195,9 +195,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/poverty-stats?country=brasil&year=2016",
+					"raw": "http://localhost:8000/api/v2/poverty-stats?country=brasil&year=2016",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:8000"
 					],
 					"path": [
 						"api",
@@ -238,9 +238,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/poverty-stats/brasil",
+					"raw": "http://localhost:8000/api/v2/poverty-stats/brasil",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:8000"
 					],
 					"path": [
 						"api",
@@ -281,9 +281,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/poverty-stats/brasil/2016",
+					"raw": "http://localhost:8000/api/v2/poverty-stats/brasil/2016",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:8000"
 					],
 					"path": [
 						"api",
@@ -316,9 +316,9 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/poverty-stats/brasil",
+					"raw": "http://localhost:8000/api/v2/poverty-stats/brasil",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:8000"
 					],
 					"path": [
 						"api",
@@ -350,9 +350,9 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/poverty-stats/brasil/2016",
+					"raw": "http://localhost:8000/api/v2/poverty-stats/brasil/2016",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:8000"
 					],
 					"path": [
 						"api",
@@ -394,9 +394,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/poverty-stats/brasil",
+					"raw": "http://localhost:8000/api/v2/poverty-stats/brasil",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:8000"
 					],
 					"path": [
 						"api",
@@ -428,9 +428,9 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/poverty-stats",
+					"raw": "http://localhost:8000/api/v2/poverty-stats",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:8000"
 					],
 					"path": [
 						"api",
@@ -461,9 +461,9 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/api/v2/poverty-stats",
+					"raw": "http://localhost:8000/api/v2/poverty-stats",
 					"host": [
-						"{{BASE_URL}}"
+						"http://localhost:8000"
 					],
 					"path": [
 						"api",
