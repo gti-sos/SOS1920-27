@@ -96,6 +96,7 @@
   <h1>Porcentaje de pobreza inferior del 3.2 por continente en 2017</h1>
 </main>
 <canvas id="myChart"></canvas>
+
 <style>
 
   </style>
