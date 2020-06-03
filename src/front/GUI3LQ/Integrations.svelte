@@ -478,7 +478,7 @@ var options = {
   async function apiexterna5(){
     let lista =[]
 
-    const res1 = await fetch("https://swapi.dev/api/planets");
+    const res1 = await fetch("https://sos1920-27.herokuapp.com/planets");
   
     var star =await res1.json();
     console.log(star)
@@ -487,7 +487,7 @@ var options = {
 
     //coger el diámetro de cada planeta
     for (let index = 0; index < planetas.length; index++) {
-        var llamada = await fetch("https://swapi.dev/api/planets/"+(index+1));
+        var llamada = await fetch("https://sos1920-27.herokuapp.com/planets/"+(index+1));
         var datos = await llamada.json();
         lista.push(datos.population)
         
