@@ -922,7 +922,7 @@
     <div id="chart5"></div>
 
     <h1>API Externa 4</h1>
-    <h3>Lista de juegos</h3>
+    <h3>Lista de juegos más conocidos</h3>
     <div id="games"></div>
     
     <h1>API SOS1029-12</h1>
