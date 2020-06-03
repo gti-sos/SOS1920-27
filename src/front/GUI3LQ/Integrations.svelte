@@ -29,6 +29,24 @@
         return palabra;
     }
 
+    //funcion para contar las veces que se repiten los distintos valores de un array
+    function insertar(arr) {
+    var a = [], b = [], prev;
+
+    arr.sort();
+    for ( var i = 0; i < arr.length; i++ ) {
+        if ( arr[i] !== prev ) {
+            a.push(arr[i]);
+            b.push(1);
+        } else {
+            b[b.length-1]++;
+        }
+        prev = arr[i];
+    }
+
+    return [a, b];
+}
+
     //GET
     async function getLQ() {
         console.log("Fetching lq...");
@@ -60,6 +78,13 @@
             console.log("ERROR!");
         }
     }
+
+ //GET LoadInitialDataIsabel
+  async function getLQLoadInitialDataIsabel() {
+
+      console.log("Fetching vehicles...");
+      await fetch("https://sos1920-04.herokuapp.com/api/v1/vehicles/loadinitialdata")
+}
 
     //DELETE ALL
     async function deleteLQALL(){
@@ -458,20 +483,21 @@ var options = {
   //api externa 4
   async function apiexterna4(){
 
-    const res1 = await fetch("https://dad-jokes.p.rapidapi.com/random/jokes",{
+    const res1 = await fetch("https://quotes21.p.rapidapi.com/quote",{
       "method": "GET",
       "headers": {
-        "x-rapidapi-host": "dad-jokes.p.rapidapi.com",
-	      "x-rapidapi-key": "4e0dba0f71mshbf8f52263d28d18p10d849jsna5743000ad9c"
+        "x-rapidapi-host": "quotes21.p.rapidapi.com",
+	      "x-rapidapi-key": "4e0dba0f71mshbf8f52263d28d18p10d849jsna5743000ad9c",
+	      "useQueryString": true
       }
   });
-    var broma =await res1.json();
+    var frase =await res1.json();
+    
+    var frasee = document.getElementById('frasee');
+    var autor = document.getElementById('autor');
 
-    var joke = document.getElementById('joke');
-    var joke2 = document.getElementById('joke2');
-
-    joke.innerHTML = broma.setup;
-    joke2.innerHTML = broma.punchline;
+    frasee.innerHTML = frase.quote;
+    autor.innerHTML = frase.author;
   }
   //api externa 5
 
@@ -577,11 +603,6 @@ var options = {
         var chart = new ApexCharts(document.querySelector("#chart3"), options);
         chart.render();
   }
-  //apiexterna4()
-apiexterna5()
-//apiexterna6()
-apiexterna7()
-
 
   //api externa 6
   async function apiexterna6(){
@@ -599,22 +620,180 @@ apiexterna7()
 
 //apiexterna7
 async function apiexterna7(){
+  
 
-const res1 = await fetch("https://www.potterapi.com/v1/characters",{
-  "method": "GET",
-  "headers": {
-    "X-Auth-Token": "$2a$10$UWohg5XWYD62QzW6NhhdM.6HXfRdUp.IuNWsLrxlc77NdhT27Tpfq",
-    "Content-Type": "application/json"
-  }
-});
-var broma =await res1.json();
+const res1 = await fetch("https://sos1920-27.herokuapp.com/v1/characters?key=$2a$10$UWohg5XWYD62QzW6NhhdM.6HXfRdUp.IuNWsLrxlc77NdhT27Tpfq");
+var datos =await res1.json();
 
-var joke = document.getElementById('joke');
-var joke2 = document.getElementById('joke2');
+var rol = datos.map(x=>x.role)
 
-joke.innerHTML = broma.setup;
-joke2.innerHTML = broma.punchline;
+var ordenado = insertar(rol)
+
+var options = {
+          series: ordenado[1].slice(0,15),
+          chart: {
+          width: 380,
+          type: 'donut',
+          width: '80%',
+          dropShadow: {
+            enabled: true,
+            color: '#111',
+            top: -1,
+            left: 3,
+            blur: 3,
+            opacity: 0.2
+          }
+        },
+        stroke: {
+          width: 0,
+        },
+        plotOptions: {
+          pie: {
+            donut: {
+              labels: {
+                show: true,
+                total: {
+                  showAlways: true,
+                  show: false
+                }
+              }
+            }
+          }
+        },
+        labels: ordenado[0].slice(0,15),
+        dataLabels: {
+          dropShadow: {
+            blur: 3,
+            opacity: 0.8
+          }
+        },
+        fill: {
+        type: 'pattern',
+          opacity: 1,
+          pattern: {
+            enabled: true,
+            style: [],
+          },
+        },
+        states: {
+          hover: {
+            filter: 'none'
+          }
+        },
+        theme: {
+          palette: 'palette2'
+        },
+        title: {
+          text: "Rol que tenían los primeros 15 personajes de la api en el mundo de Harry Potter"
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart4"), options);
+        chart.render();
+
 }
+  //apiexterna8
+  async function apiexterna8(){
+    let covid = [];
+    let lista_comun = [];
+    let confirmados = [];
+
+    const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v1/units");
+    aoe = await res1.json();
+
+    var unidades = aoe.map(x=>x.name)
+    console.log(unidades)
+
+    var misPaises = lifeq.map(dato=> dato.country);
+    var salud = [];
+
+
+
+    var options = {
+          series: [{
+          name: 'Servings',
+          data: [44, 55, 41, 67, 22, 43, 21, 33, 45, 31, 87, 65, 35]
+        }],
+          annotations: {
+          points: [{
+            x: 'Bananas',
+            seriesIndex: 0,
+            label: {
+              borderColor: '#775DD0',
+              offsetY: 0,
+              style: {
+                color: '#fff',
+                background: '#775DD0',
+              },
+              text: 'Bananas are good',
+            }
+          }]
+        },
+        chart: {
+          height: 350,
+          type: 'bar',
+        },
+        plotOptions: {
+          bar: {
+            columnWidth: '50%',
+            endingShape: 'rounded'  
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          width: 2
+        },
+        
+        grid: {
+          row: {
+            colors: ['#fff', '#f2f2f2']
+          }
+        },
+        xaxis: {
+          labels: {
+            rotate: -45
+          },
+          categories: ['Apples', 'Oranges', 'Strawberries', 'Pineapples', 'Mangoes', 'Bananas',
+            'Blackberries', 'Pears', 'Watermelons', 'Cherries', 'Pomegranates', 'Tangerines', 'Papayas'
+          ],
+          tickPlacement: 'on'
+        },
+        yaxis: {
+          title: {
+            text: 'Servings',
+          },
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shade: 'light',
+            type: "horizontal",
+            shadeIntensity: 0.25,
+            gradientToColors: undefined,
+            inverseColors: true,
+            opacityFrom: 0.85,
+            opacityTo: 0.85,
+            stops: [50, 0, 100]
+          },
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart5"), options);
+        chart.render();
+  }
 
   //api sos 1920-09 renewable-sources-stats
   async function renewable(){
@@ -826,12 +1005,7 @@ joke2.innerHTML = broma.punchline;
 });
   }
 
- //GET LoadInitialDataIsabel
-  async function getLQLoadInitialDataIsabel() {
 
-console.log("Fetching vehicles...");
-await fetch("https://sos1920-04.herokuapp.com/api/v1/vehicles/loadinitialdata")
-}
 
     //api sos 1920-04 vehicles
 
@@ -904,12 +1078,18 @@ Highcharts.chart('container4', {
 });
 
     }
+
+// apiexterna4()
+// apiexterna5()
+// apiexterna6()
+// apiexterna7()
+
 </script>
 
 <svelte:head>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js" on:load="{renewable}" on:load="{overdose}" on:load="{coronavirus}" on:load="{vehicles}"></script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"  on:load="{apiexterna2}" on:load="{apiexterna3}"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"  on:load="{apiexterna2}" on:load="{apiexterna3}" on:load="{apiexterna8}"></script>
 
 </svelte:head>
 
@@ -933,11 +1113,11 @@ Highcharts.chart('container4', {
   <div id="chart2"></div>
 
 
-<h3>API Externa 4 - <a href="https://dad-jokes.p.rapidapi.com/random/jokes">Link EndPoint</a></h3>
+<h3>API Externa 4 - <a href="https://quotes21.p.rapidapi.com/quote">Link EndPoint</a></h3>
 
-  <div><h4>Api externa con chistes aleatorios</h4></div>
-  <div id="joke"></div>
-  <div id="joke2"></div>
+  <div><h4>Api externa sobre citas célebres, junto a su autor</h4></div>
+  <div id="frasee"></div>
+  <div id="autor"></div>
 
 <h3>API Externa 5 - <a href="https://swapi.dev/">Link EndPoint</a></h3>
 
@@ -946,9 +1126,20 @@ Highcharts.chart('container4', {
 
 <h3>API Externa 6 - <a href="https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=political&type=single">Link EndPoint</a></h3>
 
-  <div><h4>Api externa bromas de programación</h4></div>
+  <div><h4>Api externa chistes de programación</h4></div>
   <div id="categoria"></div>
   <div id="chiste"></div>
+
+<h3>API Externa 7 - <a href="https://www.potterapi.com/">Link EndPoint</a></h3>
+
+  <div><h4>Api externa de Harry Potter</h4></div>
+  <div id="chart4"></div>
+
+<h3>API Externa 8 - <a href="https://age-of-empires-2-api.herokuapp.com/api/v1/units">Link EndPoint</a></h3>
+
+  <div><h4>Api externa de Harry Potter</h4></div>
+  <div id="chart5"></div>
+
 
 
 <h3>API sos1920-09 - <a href="http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats">Link EndPoint</a></h3>
@@ -976,6 +1167,14 @@ Highcharts.chart('container4', {
   <p class="highcharts-description">
     En esta gráfica podemos ver la cantidad de tráfico en España (dividido por 10.000) junto al nivel del clima y salud del estado español (multiplicados por 10.000)
   </p>
+  <div>
+    <h6>Si no hay un trozo del gráfico azul, porfavor clicka en el botón para añadir los ejemplos iniciales de la API de vehículos, si ya hay una parte del gráfico en azul
+      sobre el número tráfico total español significa que ya están cargados los datos y no debes darle al botón.
+    </h6>
+    <Button color="primary" on:click="{getLQLoadInitialDataIsabel}">
+    Ejecutar ejemplos iniciales Api de vehículos
+  </Button>
+</div>
 </figure>
 
 </main>

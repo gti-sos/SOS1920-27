@@ -59,6 +59,18 @@ module.exports = function (app) {
 		console.log("piped: " + req.baseUrl + req.url);
 		req.pipe(request(url)).pipe(res)
 	})
+
+	//Proxy Juanlu api Age of Empire 2
+	var proxyJuanlu5 = "/api/v1/units"
+	var urlProxyJuanlu5 = "https://age-of-empires-2-api.herokuapp.com"
+			
+	//Proxy Juanlu
+		app.use(proxyJuanlu5, function(req, res){
+			var url = urlProxyJuanlu5 + req.baseUrl + req.url;
+			console.log("piped: " + req.baseUrl + req.url);
+			req.pipe(request(url)).pipe(res)
+		})
+		
     
     var ejemplos_lq = [
 
