@@ -129,7 +129,7 @@
           type: 'column',
           data: lqRatio
         }, {
-          name: 'Ratio de suicidios',
+          name: 'Nº suicidios por cada 100.000 habitantes',
           type: 'area',
           data: spcRatio
         }, {
