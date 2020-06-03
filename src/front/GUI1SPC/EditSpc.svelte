@@ -129,6 +129,7 @@
             </thead>
             <tbody>
                 <tr>
+                    <td> <Button outline  color="primary" on:click={updateSpc}>Actualizar</Button> </td>
                     <td>{updatedCountry}</td>
                     <td><input bind:value="{updatedBothSex}"></td>
                     <td><input bind:value="{updatedMaleRank}"></td>
@@ -137,8 +138,7 @@
                     <td><input bind:value="{updatedFemaleNumber}"></td>
                     <td><input bind:value="{updatedRatio}"></td>
                     <td>{updatedYear}</td>
-                    <td><input bind:value="{updatedContinent}"></td>
-                    <td> <Button outline  color="primary" on:click={updateSpc}>Actualizar</Button> </td>
+                    <td><input bind:value="{updatedContinent}"></td>                    
                 </tr>
              </tbody>
         </Table>
