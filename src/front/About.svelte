@@ -16,7 +16,7 @@
             <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
               <h4>Suicides rates - Belén Domínguez</h4>
               <iframe title="Suicides rates" width="420" height="315" allowfullscreen
-                src="https://www.youtube.com/watch?v=fKRmUp_O7Ts">
+                src="https://www.youtube.com/embed/fKRmUp_O7Ts">
               </iframe>
             </div>
           </div>
