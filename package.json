@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "test": "npx newman run tests/postmanTestsSPC.json && npx newman run tests/postmanTestsLQ.json",
+    "test": "npx newman run tests/postmanTestsSPC.json && npx newman run tests/postmanTestsLQ.json && npx newman run tests/postmanTestsPoverty.json",
     "start": "node index"
   },
   "devDependencies": {
