@@ -1052,20 +1052,20 @@
     <div id='caja'>
     <h1>API Externa chiste aleatorios</h1>
     <div id="chiste2"></div>
-    <div style="text-align: center">fuente: <a href="https://joke3.p.rapidapi.com/v1/joke" target="_blank">aqui</a></div>
+    <div style="text-align: center">fuente: <a href="https://rapidapi.com/LemmoTresto/api/joke3" target="_blank">aqui</a></div>
     </div><br>
 
     <div id='caja'>
     <h1>API Externa frases inspiradoras sobre IA</h1>
     <div id="frase"></div>
     <div id='autor'></div>
-    <div style="text-align: center">fuente: <a href="https://quoteai.p.rapidapi.com/ai-quotes/0" target="_blank">aqui</a></div>
+    <div style="text-align: center">fuente: <a href="https://rapidapi.com/prakhargupt00/api/quoteai" target="_blank">aqui</a></div>
     </div><br>
 
     <div id='caja'>
       <h1>API Externa habitantes por pais</h1>
       <div id="chartex8"></div>
-      <div style="text-align: center">fuente: <a href="https://world-population.p.rapidapi.com/population" target="_blank">aqui</a></div>
+      <div style="text-align: center">fuente: <a href="https://rapidapi.com/aldair.sr99/api/world-population?endpoint=apiendpoint_4edc9a8e-1609-4dcc-9c83-aefe45b51a5f" target="_blank">aqui</a></div>
       </div><br>
 
     <div id='caja'>
@@ -1084,14 +1084,14 @@
     <h1>API externa 3</h1>
     <h3>Comparación de canciones que contienen, en el título, el nombre de la región</h3>
     <div id="chart5"></div>
-    <div style="text-align: center">fuente: <a href="https://searchly.p.rapidapi.com/song/search?query=europe" target="_blank">aqui</a></div>
+    <div style="text-align: center">fuente: <a href="https://rapidapi.com/AlbertSuarez/api/searchly?endpoint=apiendpoint_8d40a98b-de3e-416c-87b1-284765d36705" target="_blank">aqui</a></div>
     </div><br>
 
     <div id='caja'>
     <h1>API Externa 4</h1>
     <h3>Lista de juegos más conocidos</h3>
     <div id="games"></div>
-    <div style="text-align: center">fuente: <a href="https://rawg-video-games-database.p.rapidapi.com/games" target="_blank">aqui</a></div>
+    <div style="text-align: center">fuente: <a href="https://rapidapi.com/accujazz/api/rawg-video-games-database?endpoint=apiendpoint_e4e2766f-1422-4b88-bd10-22acdb7c9a16" target="_blank">aqui</a></div>
     </div><br>
     
     <div id='caja'>
