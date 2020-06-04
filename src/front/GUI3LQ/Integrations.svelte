@@ -709,14 +709,13 @@ var options = {
     let lista_comun = [];
     let confirmados = [];
 
-    const res1 = await fetch("https://age-of-empires-2-api.herokuapp.com/api/v1/units");
-    aoe = await res1.json();
+    const res1 = await fetch("https://sos1920-27.herokuapp.com/beers?key=20554f70522a94b2822321781ddbda20");
+    cervezas = await res1.json();
 
-    var unidades = aoe.map(x=>x.name)
-    console.log(unidades)
+    var nombre_cerveza = cervezas.map(x=>x.name)
+    console.log(nombre_cerveza)
 
     var misPaises = lifeq.map(dato=> dato.country);
-    var salud = [];
 
 
 
@@ -1089,7 +1088,7 @@ Highcharts.chart('container4', {
 <svelte:head>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js" on:load="{renewable}" on:load="{overdose}" on:load="{coronavirus}" on:load="{vehicles}"></script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"  on:load="{apiexterna2}" on:load="{apiexterna3}" on:load="{apiexterna8}"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"  on:load="{apiexterna2}" on:load="{apiexterna3}"  on:load="{apiexterna4}" on:load="{apiexterna5}" on:load="{apiexterna6}" on:load="{apiexterna7}" on:load="{apiexterna8}"></script>
 
 </svelte:head>
 
@@ -1135,7 +1134,7 @@ Highcharts.chart('container4', {
   <div><h4>Api externa de Harry Potter</h4></div>
   <div id="chart4"></div>
 
-<h3>API Externa 8 - <a href="https://age-of-empires-2-api.herokuapp.com/api/v1/units">Link EndPoint</a></h3>
+<h3>API Externa 8 - <a href="http://api.brewerydb.com/v2/beers?key=20554f70522a94b2822321781ddbda20">Link EndPoint</a></h3>
 
   <div><h4>Api externa de Harry Potter</h4></div>
   <div id="chart5"></div>

@@ -59,6 +59,17 @@ module.exports = function (app) {
 		console.log("piped: " + req.baseUrl + req.url);
 		req.pipe(request(url)).pipe(res)
 	})
+
+	//Proxy Juanlu api cervezas
+	var proxyJuanlu5 = "/beers?key=20554f70522a94b2822321781ddbda20"
+	var urlProxyJuanlu5 = "http://api.brewerydb.com/v2"
+		
+	//Proxy Juanlu
+	app.use(proxyJuanlu5, function(req, res){
+		var url = urlProxyJuanlu5 + req.baseUrl + req.url;
+		console.log("piped: " + req.baseUrl + req.url);
+		req.pipe(request(url)).pipe(res)
+	})
     
     var ejemplos_lq = [
 
