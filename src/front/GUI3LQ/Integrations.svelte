@@ -708,14 +708,6 @@ var options = {
     let covid = [];
     let lista_comun = [];
     let confirmados = [];
-
-    const res1 = await fetch("https://sos1920-27.herokuapp.com/api/v1/units");
-    aoe = await res1.json();
-
-    var unidades = aoe.map(x=>x.name)
-    console.log(unidades)
-
-    var misPaises = lifeq.map(dato=> dato.country);
     var salud = [];
 
 
@@ -1089,7 +1081,7 @@ Highcharts.chart('container4', {
 <svelte:head>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js" on:load="{renewable}" on:load="{overdose}" on:load="{coronavirus}" on:load="{vehicles}"></script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"  on:load="{apiexterna2}" on:load="{apiexterna3}" on:load="{apiexterna8}"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"  on:load="{apiexterna2}" on:load="{apiexterna3}"  on:load="{apiexterna4}" on:load="{apiexterna5}" on:load="{apiexterna6}" on:load="{apiexterna7}" on:load="{apiexterna8}"></script>
 
 </svelte:head>
 

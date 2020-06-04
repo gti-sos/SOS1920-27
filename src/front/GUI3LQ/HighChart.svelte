@@ -83,39 +83,23 @@
         MyData = await resData.json();
 
         //xAxis
-        var paises = MyData.filter(function (objeto) {
-                return objeto.year==2016;
-            }).map((dato)=> [dato.country]);
+        var paises = MyData.map((dato)=> [dato.country]);
 
         //yAxis
 
-        var stab = MyData.filter(function(objeto){
-                return objeto.year==2016;
-        }).map((dato)=> [dato.stability]);
+        var stab = MyData.map((dato)=> [dato.stability]);
 
-        var righ = MyData.filter(function(objeto){
-                return objeto.year==2016;
-        }).map((dato)=> [dato.right]);
+        var righ = MyData.map((dato)=> [dato.right]);
 
-        var heal = MyData.filter(function(objeto){
-                return objeto.year==2016;
-        }).map((dato)=> [dato.health]);
+        var heal = MyData.map((dato)=> [dato.health]);
 
-        var secu = MyData.filter(function(objeto){
-                return objeto.year==2016;
-        }).map((dato)=> [dato.security]);
+        var secu = MyData.map((dato)=> [dato.security]);
 
-        var clima = MyData.filter(function(objeto){
-                return objeto.year==2016;
-        }).map((dato)=> [dato.climate]);
+        var clima = MyData.map((dato)=> [dato.climate]);
 
-        var cost = MyData.filter(function(objeto){
-                return objeto.year==2016;
-        }).map((dato)=> [dato.costs]);
+        var cost = MyData.map((dato)=> [dato.costs]);
 
-        var popu = MyData.filter(function(objeto){
-                return objeto.year==2016;
-        }).map((dato)=> [dato.popularity]);
+        var popu = MyData.map((dato)=> [dato.popularity]);
 
 
         Highcharts.chart('container', {
@@ -123,7 +107,7 @@
                 type: 'bar'
             },
             title: {
-                text: 'Calidad de vida por países del año 2016'
+                text: 'Calidad de vida por países'
             },
             xAxis: {
                 categories: paises
@@ -172,10 +156,7 @@
 
 
 <svelte:head>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js" on:load="{LoadGraphs}"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"on:load="{LoadGraphs}"></script>
 </svelte:head>
 
 <main>
@@ -189,7 +170,7 @@
     <figure class="highcharts-figure">
         <div id="container"></div>
         <p class="highcharts-description">
-            En esta gráfica veremos la clasificación de los países dependiendo de su calidad de vida en 2016 basándonos en algunos datos de dichos países, como puede ser su popularidad, clima, seguridad, etc.
+            En esta gráfica veremos la clasificación de los países dependiendo de su calidad de vida basándonos en algunos datos de dichos países, como puede ser su popularidad, clima, seguridad, etc.
         </p>
     </figure>
 </main>

@@ -1089,7 +1089,7 @@
 
     <div id='caja'>
     <h1>API Externa 4</h1>
-    <h3>Lista de juegos</h3>
+    <h3>Lista de juegos más conocidos</h3>
     <div id="games"></div>
     <div style="text-align: center">fuente: <a href="https://rawg-video-games-database.p.rapidapi.com/games" target="_blank">aqui</a></div>
     </div><br>
