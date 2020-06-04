@@ -1076,6 +1076,7 @@
 
     <div id='caja'>
     <h1>API Externa 2</h1>
+    <h3>Relación de la pobreza en comparación con el area de cada región</h3>
     <div id="chartex2"></div>
     <div style="text-align: center">fuente: <a href="https://restcountries.eu/rest/v2/?fields=region;area" target="_blank">aqui</a></div>
     </div><br>
