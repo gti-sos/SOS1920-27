@@ -838,7 +838,7 @@
           res.push(c1.response.results.length);
           res.push(c2.response.results.length);
 
-          console.log(res);
+          // console.log(res);
           // console.log(song.response.results);
           // console.log(poverty);
           var options = {
@@ -883,7 +883,7 @@
         games=games.results.map((g)=>{
           return '<li>'+g.slug+'</li>';
         });
-        console.log(games);
+        // console.log(games);
         
         var gamesHtml = document.getElementById('games');
         games.forEach((g)=>{
@@ -911,7 +911,129 @@
         fraseHtml.innerHTML=frase.quote;
         autorHtml.innerHTML='<br>-'+frase.author
 
-        console.log(frase);
+        // console.log(frase);
+
+      }
+
+      //funcion auxiliar para api externa 8
+      async function searchPopulation(country){
+        const poblacionData = await fetch('https://world-population.p.rapidapi.com/population?country_name='+country,{
+          method:'GET',
+          headers:{
+            "x-rapidapi-host": "world-population.p.rapidapi.com",
+            "x-rapidapi-key": "2499b9262cmsh73c0da1a5a197bap189468jsn3435f2f24ddf",
+            "useQueryString": true
+          }
+        });
+        var poblacion= await poblacionData.json();
+        return poblacion;
+      }
+
+      async function apiExterna8(){
+
+        
+        var poverty =[];
+
+        const povertyData = await fetch('/api/v2/poverty-stats');
+        poverty = await povertyData.json();
+
+        //mapear para tener la primera letra en mayusculas
+        poverty=poverty.map((p)=>{
+          return {
+            "country": p.country[0].toUpperCase()+p.country.slice(1),     
+            "under_190": p.under_190,
+            "under_320": p.under_320,
+            "under_550": p.under_550,
+            "year": p.year,
+            "continent": p.continent
+          };
+        });
+
+        //eliminamos los paises que no esten en la api para eliminar los codigos 404
+        const paisesApi = await fetch('https://world-population.p.rapidapi.com/allcountriesname',{
+          method:'GET',
+          headers:{
+            "x-rapidapi-host": "world-population.p.rapidapi.com",
+            "x-rapidapi-key": "2499b9262cmsh73c0da1a5a197bap189468jsn3435f2f24ddf",
+            "useQueryString": true
+          }
+        });
+
+        var paisesTotales = await paisesApi.json();
+        paisesTotales = paisesTotales.body.countries.map((p)=>{
+          return p;
+        });
+
+        //eliminamos los que no estan
+        var res=[];
+        poverty.forEach((p)=>{
+          paisesTotales.forEach((pa)=>{
+            if(p.country == pa){
+              res.push(p);
+            }
+          });
+        });
+
+        poverty=res;
+        console.log(poverty);
+        
+        //recolectamos los datos con la funcion auxiliar para hacer varias llamadas
+        var population = [];
+
+        for(var i=0;i<poverty.length;i++){
+          population.push(await searchPopulation(poverty[i].country));
+        }
+
+        var paises = [];
+
+        population.forEach((p)=>{
+          paises.push(p.body.country_name);
+        });
+
+        var data = [];
+
+        population.forEach((p)=>{
+          data.push(p.body.population);
+        });
+
+        
+
+        console.log(paises);
+        console.log(data);
+        
+
+        var options = {
+          series: [{
+            name: "Habitantes",
+            data: data
+        }],
+          chart: {
+          height: 350,
+          type: 'line',
+          zoom: {
+            enabled: false
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'straight'
+        },
+        
+        grid: {
+          row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
+        xaxis: {
+          categories: paises,
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chartex8"), options);
+        chart.render();
 
       }
 
@@ -919,6 +1041,7 @@
       apiExterna4();
       apiExterna6();
       apiExterna7();
+      apiExterna8();
   </script>
   
   <svelte:head>
@@ -948,6 +1071,12 @@
     <div id='autor'></div>
     <div style="text-align: center">fuente: <a href="https://quoteai.p.rapidapi.com/ai-quotes/0" target="_blank">aqui</a></div>
     </div><br>
+
+    <div id='caja'>
+      <h1>API Externa habitantes por pais</h1>
+      <div id="chartex8"></div>
+      <div style="text-align: center">fuente: <a href="https://joke3.p.rapidapi.com/v1/joke" target="_blank">aqui</a></div>
+      </div><br>
 
     <div id='caja'>
     <h1>API Externa 1</h1>

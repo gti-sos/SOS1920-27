@@ -7,14 +7,6 @@
         pop
     } from "svelte-spa-router";
 
-    function filtro(array,cont, year){
-      var res=array.filter((el)=>{
-      return el.continent=="europe" && el.year=="2017";
-      });
-
-      return res;
-    }
-
     async function loadGraphs(){
 
       let MyData=[];
@@ -24,35 +16,59 @@
       //recoger datos por continentes
       
       var euro = MyData.filter((el)=>{
-        return el.continent=="europe" && el.year=="2017";
+        return el.continent=="europe";
       }).map((dato)=>{
-        return parseFloat(dato.under_320);
-      })[0];
+        return parseFloat(dato.under_550);
+      })
+      euro=euro.reduce(function (sum, value) {
+        return sum + value;
+    }, 0) / euro.length;
+
       var asia = MyData.filter((el)=>{
-      return el.continent=="asia" && el.year=="2017";
+      return el.continent=="asia";
       }).map((dato)=>{
-        return parseFloat(dato.under_320);
-      })[0];
+        return parseFloat(dato.under_550);
+      });
+      asia=asia.reduce(function (sum, value) {
+        return sum + value;
+    }, 0) / asia.length;
+
       var oceania =MyData.filter((el)=>{
-      return el.continent=="oceania" && el.year=="2017";
+      return el.continent=="oceania";
       }).map((dato)=>{
-        return parseFloat(dato.under_320);
-      })[0];
+        return parseFloat(dato.under_550);
+      });
+      oceania=oceania.reduce(function (sum, value) {
+        return sum + value;
+    }, 0) / oceania.length;
+
       var africa =MyData.filter((el)=>{
-      return el.continent=="africa" && el.year=="2017";
+      return el.continent=="africa";
       }).map((dato)=>{
-        return parseFloat(dato.under_320);
-      })[0];
+        return parseFloat(dato.under_550);
+      });
+      africa=africa.reduce(function (sum, value) {
+        return sum + value;
+    }, 0) / africa.length;
+
       var south =MyData.filter((el)=>{
-      return el.continent=="south america" && el.year=="2017";
+      return el.continent=="south america";
       }).map((dato)=>{
-        return parseFloat(dato.under_320);
-      })[0];
+        return parseFloat(dato.under_550);
+      });
+      south=south.reduce(function (sum, value) {
+        return sum + value;
+    }, 0) / south.length;
+
+
       var north =MyData.filter((el)=>{
-      return el.continent=="north america" && el.year=="2017";
+      return el.continent=="north america";
       }).map((dato)=>{
-        return parseFloat(dato.under_320);
-      })[0];
+        return parseFloat(dato.under_550);
+      });
+      north=north.reduce(function (sum, value) {
+        return sum + value;
+    }, 0) / north.length;
 
       console.log(euro);
       
@@ -93,7 +109,7 @@
 
 
 <main>
-  <h1>Porcentaje de pobreza inferior del 3.2 por continente en 2017</h1>
+  <h1>Porcentaje de pobreza inferior del 5.5</h1>
 </main>
 <canvas id="myChart"></canvas>
 
