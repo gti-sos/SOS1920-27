@@ -61,8 +61,8 @@ module.exports = function (app) {
 	})
 
 	//Proxy Juanlu api cervezas
-	var proxyJuanlu5 = "/beers?key=20554f70522a94b2822321781ddbda20"
-	var urlProxyJuanlu5 = "http://api.brewerydb.com/v2"
+	var proxyJuanlu5 = "/v2/beers?key=20554f70522a94b2822321781ddbda20"
+	var urlProxyJuanlu5 = "http://api.brewerydb.com"
 		
 	//Proxy Juanlu
 	app.use(proxyJuanlu5, function(req, res){

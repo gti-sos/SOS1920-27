@@ -709,7 +709,7 @@ var options = {
     let lista_comun = [];
     let confirmados = [];
 
-    const res1 = await fetch("https://sos1920-27.herokuapp.com/beers?key=20554f70522a94b2822321781ddbda20");
+    const res1 = await fetch("https://sos1920-27.herokuapp.com/v2/beers?key=20554f70522a94b2822321781ddbda20");
     cervezas = await res1.json();
 
     var nombre_cerveza = cervezas.map(x=>x.name)
