@@ -718,6 +718,18 @@ var options = {
 
  
   }
+    //apiexterna9
+    async function apiexterna9(){
+    let datos=""
+    const res1 = await fetch("https://meowfacts.herokuapp.com")
+    datos = await res1.json();
+
+    var gatito2 = document.getElementById('gatito2')
+
+    gatito2.innerHTML = datos.data[0]
+
+ 
+  }
 
   //api sos 1920-09 renewable-sources-stats
   async function renewable(){
@@ -1003,17 +1015,12 @@ Highcharts.chart('container4', {
 
     }
 
-// apiexterna4()
-// apiexterna5()
-// apiexterna6()
-// apiexterna7()
-
 </script>
 
 <svelte:head>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js" on:load="{renewable}" on:load="{overdose}" on:load="{coronavirus}" on:load="{vehicles}"></script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"  on:load="{apiexterna2}" on:load="{apiexterna3}"  on:load="{apiexterna4}" on:load="{apiexterna5}" on:load="{apiexterna6}" on:load="{apiexterna7}" on:load="{apiexterna8}"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"  on:load="{apiexterna2}" on:load="{apiexterna3}"  on:load="{apiexterna4}" on:load="{apiexterna5}" on:load="{apiexterna6}" on:load="{apiexterna7}" on:load="{apiexterna8}" on:load="{apiexterna9}"></script>
 
 </svelte:head>
 
@@ -1061,8 +1068,13 @@ Highcharts.chart('container4', {
 
 <h3>API Externa 8 - <a href="https://dog.ceo/api/breeds/image/random">Link EndPoint</a></h3>
 
-  <div><h4>Api externa fotos de gatitos random</h4></div>
+  <div><h4>Api externa sobre fotos random de gatitos</h4></div>
   <div id="gatito"></div>
+
+<h3>API Externa 9 - <a href="https://meowfacts.herokuapp.com/">Link EndPoint</a></h3>
+
+  <div><h4>Api externa sobre datos random de gatitos</h4></div>
+  <div id="gatito2"></div>
 
 
 <h3>API sos1920-09 - <a href="http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats">Link EndPoint</a></h3>
