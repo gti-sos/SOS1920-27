@@ -1,19 +1,90 @@
-<script>
-    import {
-        onMount
-    } from "svelte";
-    import {
-        pop
-    } from "svelte-spa-router";
- 
-    import Table from "sveltestrap/src/Table.svelte";
-    import Button from "sveltestrap/src/Button.svelte";
- 
-</script> 
- <main>
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	
+
+	<title>SOS1920-27</title>
+	<meta content="" name="descriptison">
+	<meta content="" name="keywords">
+
+	  <!-- Favicons -->
+	  <link href="/favicon.png" rel="icon">
+
+    <!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+	  <!-- Bootstrap Vendor CSS Files -->
+	  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+	  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+	  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+	  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+	  
+	  <!-- Template Main CSS File -->
+	  <link href="assets/css/style.css" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header-inner-pages">
+
+    <div class="container">
+
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <h1 class="text-light"><a href="index.html" class="scrollto"><span>SOS1920-27</span></a></h1>
+        <!-- <a href="index.html" class="scrollto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+      </div>
+
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+		  <li class="drop-down"><a href="./homeSvelte.html#/gui1spc">Tasas de Suicidios</a>
+			<ul>
+				<li><a href="./homeSvelte.html#/gui1spc">Tabla</a></li>
+				<li><a href="./homeSvelte.html#/gui1SPCHighChart">Gráfica Highchart</a></li>
+				<li><a href="./homeSvelte.html#/gui1SPCChartist">Gráfica Chartist</a></li>
+			  </ul></li>
+		  <li class="drop-down"><a href="./homeSvelte.html#/gui3lq">Calidad de Vida</a>
+			<ul>
+				<li><a href="./homeSvelte.html#/gui3lq">Tabla</a></li>
+				<li><a href="./homeSvelte.html#/gui3LQHighChart">Gráfica Highchart</a></li>
+				<li><a href="./homeSvelte.html#/gui3LQApexChart">Gráfica Apexcharts</a></li>
+			  </ul></li>
+          <li class="drop-down"><a href="./homeSvelte.html#/gui2poverty">Pobreza</a><ul>
+			<li><a href="./homeSvelte.html#/gui2poverty">Tabla</a></li>
+			<li><a href="./homeSvelte.html#/gui2povertyHighChart">Gráfica Highchart</a></li>
+			<li><a href="./homeSvelte.html#/gui2povertyChartJS">Gráfica ChartJS</a></li>
+		  </ul>
+		</li>
+		  <li class="drop-down"><a href="./index.html">Conjunto</a>
+			<ul>
+				<li class="drop-down"><a href="./index.html">Integraciones</a><ul>
+					<li><a href="./homeSvelte.html#/integrations/gui1integrations">Belén</a></li>
+					<li><a href="./homeSvelte.html#/integrations/gui2integrations">José Manuel</a></li>
+					<li><a href="./homeSvelte.html#!/integrations/gui3integrations">Juan Luis</a></li>
+				  </ul></li>
+				<li><a href="./homeSvelte.html#/analytics">Gráfica</a></li>
+				<li><a href="./homeSvelte.html#/about">About</a></li>
+			  </ul>
+		</li>
+        </ul>
+      </nav><!-- .main-nav -->
+
+    </div>
+  </header><!-- #header -->
+
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="clearfix" style="min-width: 100%;">
+  <section id="hero" class="clearfix">
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center">
         <div class="col-md-6 intro-info order-md-first order-last">
@@ -224,5 +295,6 @@
 	  
 			</div>
 		  </section><!-- End Services Section -->
-
-</main>
+    
+</body>
+</html> 
