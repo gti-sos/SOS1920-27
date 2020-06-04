@@ -13,10 +13,6 @@ module.exports = function (app) {
 	//Proxy Pere
     var proxy = "/api/v1/drug_offences"
     var urlProxy = "https://sos1920-12.herokuapp.com"
-	
-	//Proxy twitter
-    var proxyT = "/1.1/search/tweets.json?q=poverty"
-    var urlProxyT = "https://api.twitter.com"
 
     const db = new dataStore({
                 filename: dbFileName,
@@ -221,14 +217,6 @@ module.exports = function (app) {
 			console.log("piped: " + req.baseUrl + req.url);
 			req.pipe(request(url)).pipe(res)
 		})
-
-	//Proxy Twitter
-	app.use(proxyT, function(req, res){
-		var url = req.baseUrl + req.url + urlProxyT;
-		console.log("piped: " + req.baseUrl + req.url);
-		res.header();
-		req.pipe(request(url)).pipe(res)
-	})
 
 
     //LOADINITIALDATA

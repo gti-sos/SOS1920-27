@@ -742,16 +742,6 @@
   
           var chart = new ApexCharts(document.querySelector("#chartex2"), options);
           chart.render();
-  
-        //   const asd = await fetch('https://api.twitter.com/1.1/search/tweets.json?q=poverty', {
-        //     'method':'GET',
-        //       'headers': {
-        //         'Content-Type': 'application/json',
-        //         'Authorization':"Bearer AAAAAAAAAAAAAAAAAAAAADCPEgEAAAAAiBvgx56WIe5VzFJrtytJ5lf9BMM%3D8jWDktFpgRi1YIzWCmBWjP4Ry4bK42XVV8p9AWdCmkesznerqX"
-        //        }
-        //     });
-        
-        // console.log('asdasdasdasd');
       }
       async function apiExterna3(){
           const jokes = await fetch("https://api.chucknorris.io/jokes/random");
