@@ -705,86 +705,18 @@ var options = {
 }
   //apiexterna8
   async function apiexterna8(){
-    let covid = [];
-    let lista_comun = [];
-    let confirmados = [];
-    var salud = [];
+    let datos=""
+    const res1 = await fetch("https://aws.random.cat/meow")
+    datos = await res1.json();
+
+    var gatito = document.getElementById('gatito')
+
+    gatito.innerHTML = '<img src="'+datos.file+'" alt="Gatitos" width="35%">';
 
 
 
-    var options = {
-          series: [{
-          name: 'Servings',
-          data: [44, 55, 41, 67, 22, 43, 21, 33, 45, 31, 87, 65, 35]
-        }],
-          annotations: {
-          points: [{
-            x: 'Bananas',
-            seriesIndex: 0,
-            label: {
-              borderColor: '#775DD0',
-              offsetY: 0,
-              style: {
-                color: '#fff',
-                background: '#775DD0',
-              },
-              text: 'Bananas are good',
-            }
-          }]
-        },
-        chart: {
-          height: 350,
-          type: 'bar',
-        },
-        plotOptions: {
-          bar: {
-            columnWidth: '50%',
-            endingShape: 'rounded'  
-          }
-        },
-        dataLabels: {
-          enabled: false
-        },
-        stroke: {
-          width: 2
-        },
-        
-        grid: {
-          row: {
-            colors: ['#fff', '#f2f2f2']
-          }
-        },
-        xaxis: {
-          labels: {
-            rotate: -45
-          },
-          categories: ['Apples', 'Oranges', 'Strawberries', 'Pineapples', 'Mangoes', 'Bananas',
-            'Blackberries', 'Pears', 'Watermelons', 'Cherries', 'Pomegranates', 'Tangerines', 'Papayas'
-          ],
-          tickPlacement: 'on'
-        },
-        yaxis: {
-          title: {
-            text: 'Servings',
-          },
-        },
-        fill: {
-          type: 'gradient',
-          gradient: {
-            shade: 'light',
-            type: "horizontal",
-            shadeIntensity: 0.25,
-            gradientToColors: undefined,
-            inverseColors: true,
-            opacityFrom: 0.85,
-            opacityTo: 0.85,
-            stops: [50, 0, 100]
-          },
-        }
-        };
 
-        var chart = new ApexCharts(document.querySelector("#chart5"), options);
-        chart.render();
+ 
   }
 
   //api sos 1920-09 renewable-sources-stats
@@ -1127,11 +1059,10 @@ Highcharts.chart('container4', {
   <div><h4>Api externa de Harry Potter</h4></div>
   <div id="chart4"></div>
 
-<h3>API Externa 8 - <a href="https://age-of-empires-2-api.herokuapp.com/api/v1/units">Link EndPoint</a></h3>
+<h3>API Externa 8 - <a href="https://dog.ceo/api/breeds/image/random">Link EndPoint</a></h3>
 
-  <div><h4>Api externa de Harry Potter</h4></div>
-  <div id="chart5"></div>
-
+  <div><h4>Api externa fotos de gatitos random</h4></div>
+  <div id="gatito"></div>
 
 
 <h3>API sos1920-09 - <a href="http://sos1920-09.herokuapp.com/api/v4/renewable-sources-stats">Link EndPoint</a></h3>
