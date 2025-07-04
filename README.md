@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.com/gti-sos/SOS1920-27.svg?branch=master)](https://travis-ci.com/gti-sos/SOS1920-27)
 - **Team**
   - [Belén Domínguez Domínguez](https://github.com/sensatte)
-  - [Juan Luis Aguilera Rivero](https://github.com/juanluidos)
+  - [Juan Luis Aguilera Rivero](https://github.com/juanluDeveloper)
   - [José Manuel Pérez Álvarez](https://github.com/JMPere)
 - **Project description**: Investigating about the relations about suicide rate, life quality and poverty level per country.
 - **Repository**: [gti-sos/SOS1920-27](https://github.com/gti-sos/SOS1920-27)
@@ -20,6 +20,6 @@
 	- [poverty-stats-v1](https://documenter.getpostman.com/view/10838721/SzYT5MmE?version=latest#569d199a-a751-485e-b15f-e77f5152e448)
     [poverty-stats-v2](https://documenter.getpostman.com/view/10838721/Szme3xW4?version=latest)((developed by [José Manuel Pérez Álvarez](https://github.com/JMPere)))	
     - [lq-stats-v1](https://documenter.getpostman.com/view/10696673/SzYT5hPv)
-    [lq-stats-v2](https://documenter.getpostman.com/view/10696673/Szme4dK5) (developed by [Juan Luis Aguilera Rivero](https://github.com/juanluidos))
+    [lq-stats-v2](https://documenter.getpostman.com/view/10696673/Szme4dK5) (developed by [Juan Luis Aguilera Rivero](https://github.com/juanluDeveloper))
 
 	
