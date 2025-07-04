@@ -13,7 +13,7 @@
     - [https://sos1920-27.herokuapp.com/api/v1/poverty-stats](https://sos1920-27.herokuapp.com/api/v1/poverty-stats)
     [https://sos1920-27.herokuapp.com/api/v2/poverty-stats](https://sos1920-27.herokuapp.com/api/v2/poverty-stats) (developed by [José Manuel Pérez Álvarez](https://github.com/JMPere))
     - [https://sos1920-27.herokuapp.com/api/v1/lq-stats](https://sos1920-27.herokuapp.com/api/v1/lq-stats)
-    [https://sos1920-27.herokuapp.com/api/v2/lq-stats](https://sos1920-27.herokuapp.com/api/v2/lq-stats) (developed by [Juan Luis Aguilera Rivero](https://github.com/juanluidos))
+    [https://sos1920-27.herokuapp.com/api/v2/lq-stats](https://sos1920-27.herokuapp.com/api/v2/lq-stats) (developed by [Juan Luis Aguilera Rivero](https://github.com/juanluDeveloper))
 
 -  **Documentación Postman**:
     - [spc-stats-v1](https://documenter.getpostman.com/view/10794870/SzmcbJvH) [spc-stats-v2](https://documenter.getpostman.com/view/10794870/SzYT52HL?version=latest) [spc-stats-v3](https://documenter.getpostman.com/view/10794870/SztBbo6C) (developed by [Belén Domínguez Domínguez](https://github.com/sensatte))
